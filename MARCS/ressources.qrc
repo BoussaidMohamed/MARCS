@@ -1,0 +1,95 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>12.png</file>
+        <file>25.png</file>
+        <file>50.png</file>
+        <file>75.png</file>
+        <file>01810542-photo-logo-autonomie-batterie.jpg</file>
+        <file>7100471-1354879860508.png</file>
+        <file>18518691-graphique-icone-de-l-39-avion-de-decoller-montrant-son-chemin-a-haute-vitesse-cette-illustration-peu.jpg</file>
+        <file>11954231621344997843camera_pictogram_r5d_01.svg.hi.png</file>
+        <file>2026065878948138815.png</file>
+        <file>a-damiers-finition-drapeau-but-icone-7274-128.png</file>
+        <file>arrow-location-down-128.png</file>
+        <file>batterie chargé.png</file>
+        <file>EmergencyStop.png</file>
+        <file>Home (2).png</file>
+        <file>home.png</file>
+        <file>motor-tatra_1.png</file>
+        <file>Sans titre.png</file>
+        <file>Symbols-Warning-icon.png</file>
+        <file>waypoint.png</file>
+        <file>12.png</file>
+        <file>25.png</file>
+        <file>50.png</file>
+        <file>75.png</file>
+        <file>01810542-photo-logo-autonomie-batterie.jpg</file>
+        <file>7100471-1354879860508.png</file>
+        <file>18518691-graphique-icone-de-l-39-avion-de-decoller-montrant-son-chemin-a-haute-vitesse-cette-illustration-peu.jpg</file>
+        <file>11954231621344997843camera_pictogram_r5d_01.svg.hi.png</file>
+        <file>2026065878948138815.png</file>
+        <file>a-damiers-finition-drapeau-but-icone-7274-128.png</file>
+        <file>add_mark.png</file>
+        <file>arrow-location-down-128.png</file>
+        <file>batterie chargé.png</file>
+        <file>drone.png</file>
+        <file>EmergencyStop.png</file>
+        <file>engineOn.png</file>
+        <file>Home (2).png</file>
+        <file>home.png</file>
+        <file>HouseBlack.png</file>
+        <file>motor-tatra_1.png</file>
+        <file>Sans titre.png</file>
+        <file>Symbols-Warning-icon.png</file>
+        <file>takeoff.png</file>
+        <file>waypoint.png</file>
+        <file>0.png</file>
+        <file>Actions network connect.png</file>
+        <file>camera.png</file>
+        <file>crystal-log.png</file>
+        <file>cute_ball_stop.png</file>
+        <file>joystick_256.png</file>
+        <file>Open.png</file>
+        <file>psd-world-map-icon.png</file>
+        <file>replay_icon.png</file>
+        <file>Save-icon.png</file>
+        <file>url1.png</file>
+    </qresource>
+    <qresource prefix="/new/Ressource">
+        <file>01810542-photo-logo-autonomie-batterie.jpg</file>
+        <file>18518691-graphique-icone-de-l-39-avion-de-decoller-montrant-son-chemin-a-haute-vitesse-cette-illustration-peu.jpg</file>
+        <file>0.png</file>
+        <file>12.png</file>
+        <file>25.png</file>
+        <file>50.png</file>
+        <file>75.png</file>
+        <file>7100471-1354879860508.png</file>
+        <file>11954231621344997843camera_pictogram_r5d_01.svg.hi.png</file>
+        <file>2026065878948138815.png</file>
+        <file>Actions network connect.png</file>
+        <file>a-damiers-finition-drapeau-but-icone-7274-128.png</file>
+        <file>add_mark.png</file>
+        <file>arrow-location-down-128.png</file>
+        <file>batterie chargé.png</file>
+        <file>camera.png</file>
+        <file>crystal-log.png</file>
+        <file>cute_ball_stop.png</file>
+        <file>drone.png</file>
+        <file>EmergencyStop.png</file>
+        <file>engineOn.png</file>
+        <file>Home (2).png</file>
+        <file>home.png</file>
+        <file>HouseBlack.png</file>
+        <file>joystick_256.png</file>
+        <file>motor-tatra_1.png</file>
+        <file>Open.png</file>
+        <file>psd-world-map-icon.png</file>
+        <file>replay_icon.png</file>
+        <file>Sans titre.png</file>
+        <file>Save-icon.png</file>
+        <file>Symbols-Warning-icon.png</file>
+        <file>takeoff.png</file>
+        <file>url1.png</file>
+        <file>waypoint.png</file>
+    </qresource>
+</RCC>
