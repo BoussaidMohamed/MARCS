@@ -90,7 +90,6 @@ video::video(QWidget *parent) :
     connect(ui->MarbleWidget_smallView,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(switchToMap()));
     connect(ui->status_button,SIGNAL(clicked()),this,SLOT(afficheList()));
     connect(ui->led_button,SIGNAL(clicked()),this,SLOT(afficheList()));
-
     connect(ui->actionSave_mission,SIGNAL(triggered()),this,SLOT(saveMission()));
     connect(ui->actionClear_mission,SIGNAL(triggered()),this,SLOT(clearMission()));
     connect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
