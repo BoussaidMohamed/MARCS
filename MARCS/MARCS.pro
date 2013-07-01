@@ -31,4 +31,5 @@ win32 {
 }
 
 RESOURCES += \
-    ressources.qrc
+    ressources.qrc \
+    ressource.qrc

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'video.ui'
 **
-** Created: Mon 1. Jul 16:23:10 2013
+** Created: Mon 1. Jul 17:38:17 2013
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -83,13 +83,13 @@ public:
         actionLoad_map = new QAction(video);
         actionLoad_map->setObjectName(QString::fromUtf8("actionLoad_map"));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/new/prefix1/Open.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/new/prefix1/icon/Open.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionLoad_map->setIcon(icon1);
         actionSave_mission = new QAction(video);
         actionSave_mission->setObjectName(QString::fromUtf8("actionSave_mission"));
         actionSave_mission->setEnabled(false);
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/new/prefix1/Save-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/new/prefix1/icon/Save-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave_mission->setIcon(icon2);
         actionLoad_mission = new QAction(video);
         actionLoad_mission->setObjectName(QString::fromUtf8("actionLoad_mission"));
@@ -97,55 +97,55 @@ public:
         actionClose = new QAction(video);
         actionClose->setObjectName(QString::fromUtf8("actionClose"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/new/prefix1/cute_ball_stop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/new/prefix1/icon/cute_ball_stop.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionClose->setIcon(icon3);
         actionConnect_RPA = new QAction(video);
         actionConnect_RPA->setObjectName(QString::fromUtf8("actionConnect_RPA"));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/new/prefix1/Actions network connect.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/icon/Actions network connect.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionConnect_RPA->setIcon(icon4);
         actionController = new QAction(video);
         actionController->setObjectName(QString::fromUtf8("actionController"));
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/new/prefix1/joystick_256.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/icon/joystick_256.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionController->setIcon(icon5);
         actionFlight_plan = new QAction(video);
         actionFlight_plan->setObjectName(QString::fromUtf8("actionFlight_plan"));
         actionFlight_plan->setEnabled(false);
         QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/new/prefix1/psd-world-map-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/icon/psd-world-map-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionFlight_plan->setIcon(icon6);
         actionVideo = new QAction(video);
         actionVideo->setObjectName(QString::fromUtf8("actionVideo"));
         actionVideo->setEnabled(true);
         QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/new/prefix1/camera.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon7.addFile(QString::fromUtf8(":/new/prefix1/icon/camera.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionVideo->setIcon(icon7);
         actionFlight_data = new QAction(video);
         actionFlight_data->setObjectName(QString::fromUtf8("actionFlight_data"));
         QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/new/prefix1/url1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon8.addFile(QString::fromUtf8(":/new/prefix1/icon/url1.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionFlight_data->setIcon(icon8);
         actionLogs = new QAction(video);
         actionLogs->setObjectName(QString::fromUtf8("actionLogs"));
         QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/new/prefix1/crystal-log.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon9.addFile(QString::fromUtf8(":/new/prefix1/icon/crystal-log.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionLogs->setIcon(icon9);
         actionReplay_mission = new QAction(video);
         actionReplay_mission->setObjectName(QString::fromUtf8("actionReplay_mission"));
         QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/new/prefix1/replay_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon10.addFile(QString::fromUtf8(":/new/prefix1/icon/replay_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionReplay_mission->setIcon(icon10);
         actionClear_mission = new QAction(video);
         actionClear_mission->setObjectName(QString::fromUtf8("actionClear_mission"));
         actionClear_mission->setEnabled(false);
         QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/Gnome-edit-clear.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/icon/Gnome-edit-clear.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionClear_mission->setIcon(icon11);
         actionStart_planning = new QAction(video);
         actionStart_planning->setObjectName(QString::fromUtf8("actionStart_planning"));
         QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/Start.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon12.addFile(QString::fromUtf8(":/new/prefix1/icon/Start.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionStart_planning->setIcon(icon12);
         centralwidget = new QWidget(video);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -159,7 +159,7 @@ public:
         excute_button->setEnabled(false);
         excute_button->setGeometry(QRect(640, 450, 151, 61));
         QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/new/prefix1/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon13.addFile(QString::fromUtf8(":/new/prefix1/icon/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
         excute_button->setIcon(icon13);
         excute_button->setIconSize(QSize(61, 151));
         excute_button->setAutoDefault(true);
@@ -167,7 +167,7 @@ public:
         battery_label = new QLabel(centralwidget);
         battery_label->setObjectName(QString::fromUtf8("battery_label"));
         battery_label->setGeometry(QRect(640, 80, 161, 71));
-        battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/0.png")));
+        battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/0.png")));
         battery_label->setScaledContents(true);
         line = new QFrame(centralwidget);
         line->setObjectName(QString::fromUtf8("line"));
@@ -179,7 +179,7 @@ public:
         addMark_button->setEnabled(false);
         addMark_button->setGeometry(QRect(0, 530, 151, 61));
         QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/add_mark.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon14.addFile(QString::fromUtf8(":/new/prefix1/icon/add_mark.png"), QSize(), QIcon::Normal, QIcon::Off);
         addMark_button->setIcon(icon14);
         addMark_button->setIconSize(QSize(61, 50));
         addMark_button->setAutoDefault(true);
@@ -208,7 +208,7 @@ public:
         start_button->setEnabled(false);
         start_button->setGeometry(QRect(640, 370, 151, 61));
         QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon15.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
         start_button->setIcon(icon15);
         start_button->setIconSize(QSize(61, 151));
         start_button->setCheckable(false);
@@ -219,7 +219,7 @@ public:
         goHome_button->setEnabled(false);
         goHome_button->setGeometry(QRect(640, 530, 151, 61));
         QIcon icon16;
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/HouseBlack.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon16.addFile(QString::fromUtf8(":/new/prefix1/icon/HouseBlack.png"), QSize(), QIcon::Normal, QIcon::Off);
         goHome_button->setIcon(icon16);
         goHome_button->setIconSize(QSize(61, 151));
         goHome_button->setAutoDefault(true);
@@ -236,7 +236,7 @@ public:
         snapShoot_button->setEnabled(false);
         snapShoot_button->setGeometry(QRect(160, 530, 151, 61));
         QIcon icon17;
-        icon17.addFile(QString::fromUtf8(":/new/prefix1/11954231621344997843camera_pictogram_r5d_01.svg.hi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon17.addFile(QString::fromUtf8(":/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png"), QSize(), QIcon::Normal, QIcon::Off);
         snapShoot_button->setIcon(icon17);
         snapShoot_button->setIconSize(QSize(61, 50));
         snapShoot_button->setAutoDefault(true);

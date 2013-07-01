@@ -136,10 +136,20 @@ void video::afficheList()
 
 void video::openMission(){
 
-     disconnect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
+   disconnect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
 
     path = QFileDialog::getOpenFileName(this, "Load a mission", "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission", "KML (*.kml)");
     QFileInfo inputFile(path);
+
+    // Access the shared route request (start, destination and parameters)
+    manager = ui->MarbleWidget_plan->model()->routingManager();
+    manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
+    request = manager->routeRequest();
+    request_smallMap = manager_smallMap->routeRequest();
+   // add point to map
+   request->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
+   request_smallMap->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian ));
+
 
            request->clear();
            request_smallMap->clear();

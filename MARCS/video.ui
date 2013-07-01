@@ -29,7 +29,7 @@
    <string>MARCS</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ressources.qrc">
+   <iconset>
     <normaloff>:/new/prefix1/drone.png</normaloff>:/new/prefix1/drone.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -68,8 +68,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/new/prefix1/takeoff.png</normaloff>:/new/prefix1/takeoff.png</iconset>
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/takeoff.png</normaloff>:/new/prefix1/icon/takeoff.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -97,7 +97,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="ressources.qrc">:/new/prefix1/0.png</pixmap>
+     <pixmap resource="ressource.qrc">:/new/prefix1/icon/0.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -135,8 +135,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/new/prefix1/add_mark.png</normaloff>:/new/prefix1/add_mark.png</iconset>
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/add_mark.png</normaloff>:/new/prefix1/icon/add_mark.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -231,8 +231,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/new/prefix1/engineOn.png</normaloff>:/new/prefix1/engineOn.png</iconset>
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/engineOn.png</normaloff>:/new/prefix1/icon/engineOn.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -269,8 +269,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/new/prefix1/HouseBlack.png</normaloff>:/new/prefix1/HouseBlack.png</iconset>
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/HouseBlack.png</normaloff>:/new/prefix1/icon/HouseBlack.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -335,8 +335,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/new/prefix1/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</normaloff>:/new/prefix1/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</iconset>
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</normaloff>:/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -640,8 +640,8 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLoad_map">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Open.png</normaloff>:/new/prefix1/Open.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Open.png</normaloff>:/new/prefix1/icon/Open.png</iconset>
    </property>
    <property name="text">
     <string>Load map</string>
@@ -652,8 +652,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Save-icon.png</normaloff>:/new/prefix1/Save-icon.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Save-icon.png</normaloff>:/new/prefix1/icon/Save-icon.png</iconset>
    </property>
    <property name="text">
     <string>Save mission</string>
@@ -661,8 +661,8 @@
   </action>
   <action name="actionLoad_mission">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Open.png</normaloff>:/new/prefix1/Open.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Open.png</normaloff>:/new/prefix1/icon/Open.png</iconset>
    </property>
    <property name="text">
     <string>Load mission</string>
@@ -670,8 +670,8 @@
   </action>
   <action name="actionClose">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/cute_ball_stop.png</normaloff>:/new/prefix1/cute_ball_stop.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/cute_ball_stop.png</normaloff>:/new/prefix1/icon/cute_ball_stop.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>
@@ -679,8 +679,8 @@
   </action>
   <action name="actionConnect_RPA">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Actions network connect.png</normaloff>:/new/prefix1/Actions network connect.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Actions network connect.png</normaloff>:/new/prefix1/icon/Actions network connect.png</iconset>
    </property>
    <property name="text">
     <string>Connect RPA</string>
@@ -688,8 +688,8 @@
   </action>
   <action name="actionController">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/joystick_256.png</normaloff>:/new/prefix1/joystick_256.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/joystick_256.png</normaloff>:/new/prefix1/icon/joystick_256.png</iconset>
    </property>
    <property name="text">
     <string>Controller</string>
@@ -700,8 +700,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/psd-world-map-icon.png</normaloff>:/new/prefix1/psd-world-map-icon.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/psd-world-map-icon.png</normaloff>:/new/prefix1/icon/psd-world-map-icon.png</iconset>
    </property>
    <property name="text">
     <string>Flight plan</string>
@@ -712,8 +712,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/camera.png</normaloff>:/new/prefix1/camera.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/camera.png</normaloff>:/new/prefix1/icon/camera.png</iconset>
    </property>
    <property name="text">
     <string>Video</string>
@@ -721,8 +721,8 @@
   </action>
   <action name="actionFlight_data">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/url1.png</normaloff>:/new/prefix1/url1.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/url1.png</normaloff>:/new/prefix1/icon/url1.png</iconset>
    </property>
    <property name="text">
     <string>Flight data</string>
@@ -730,8 +730,8 @@
   </action>
   <action name="actionLogs">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/crystal-log.png</normaloff>:/new/prefix1/crystal-log.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/crystal-log.png</normaloff>:/new/prefix1/icon/crystal-log.png</iconset>
    </property>
    <property name="text">
     <string>Log</string>
@@ -739,8 +739,8 @@
   </action>
   <action name="actionReplay_mission">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/replay_icon.png</normaloff>:/new/prefix1/replay_icon.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/replay_icon.png</normaloff>:/new/prefix1/icon/replay_icon.png</iconset>
    </property>
    <property name="text">
     <string>Replay mission</string>
@@ -751,8 +751,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Gnome-edit-clear.png</normaloff>:/new/prefix1/Gnome-edit-clear.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Gnome-edit-clear.png</normaloff>:/new/prefix1/icon/Gnome-edit-clear.png</iconset>
    </property>
    <property name="text">
     <string>Clear mission </string>
@@ -760,8 +760,8 @@
   </action>
   <action name="actionStart_planning">
    <property name="icon">
-    <iconset resource="ressources.qrc">
-     <normaloff>:/new/prefix1/Start.png</normaloff>:/new/prefix1/Start.png</iconset>
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Start.png</normaloff>:/new/prefix1/icon/Start.png</iconset>
    </property>
    <property name="text">
     <string>Start planning</string>
@@ -776,7 +776,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="ressources.qrc"/>
+  <include location="ressource.qrc"/>
  </resources>
  <connections/>
 </ui>

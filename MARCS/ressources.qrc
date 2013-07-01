@@ -18,6 +18,7 @@
         <file>camera.png</file>
         <file>crystal-log.png</file>
         <file>cute_ball_stop.png</file>
+        <file>default_location.png</file>
         <file>drone.png</file>
         <file>EmergencyStop.png</file>
         <file>engineOn.png</file>
@@ -32,10 +33,10 @@
         <file>replay_icon.png</file>
         <file>Sans titre.png</file>
         <file>Save-icon.png</file>
+        <file>Start.png</file>
         <file>Symbols-Warning-icon.png</file>
         <file>takeoff.png</file>
         <file>url1.png</file>
         <file>waypoint.png</file>
-        <file>Start.png</file>
     </qresource>
 </RCC>
