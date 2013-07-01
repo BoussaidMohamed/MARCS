@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'video.ui'
 **
-** Created: Fri 28. Jun 12:08:06 2013
+** Created: Mon 1. Jul 16:23:10 2013
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -45,6 +45,7 @@ public:
     QAction *actionLogs;
     QAction *actionReplay_mission;
     QAction *actionClear_mission;
+    QAction *actionStart_planning;
     QWidget *centralwidget;
     QLCDNumber *valAltitude;
     QPushButton *excute_button;
@@ -86,6 +87,7 @@ public:
         actionLoad_map->setIcon(icon1);
         actionSave_mission = new QAction(video);
         actionSave_mission->setObjectName(QString::fromUtf8("actionSave_mission"));
+        actionSave_mission->setEnabled(false);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/prefix1/Save-icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave_mission->setIcon(icon2);
@@ -136,6 +138,15 @@ public:
         actionReplay_mission->setIcon(icon10);
         actionClear_mission = new QAction(video);
         actionClear_mission->setObjectName(QString::fromUtf8("actionClear_mission"));
+        actionClear_mission->setEnabled(false);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Gnome-edit-clear.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionClear_mission->setIcon(icon11);
+        actionStart_planning = new QAction(video);
+        actionStart_planning->setObjectName(QString::fromUtf8("actionStart_planning"));
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/new/prefix1/Start.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionStart_planning->setIcon(icon12);
         centralwidget = new QWidget(video);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         valAltitude = new QLCDNumber(centralwidget);
@@ -147,9 +158,9 @@ public:
         excute_button->setObjectName(QString::fromUtf8("excute_button"));
         excute_button->setEnabled(false);
         excute_button->setGeometry(QRect(640, 450, 151, 61));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/new/prefix1/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
-        excute_button->setIcon(icon11);
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/new/prefix1/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
+        excute_button->setIcon(icon13);
         excute_button->setIconSize(QSize(61, 151));
         excute_button->setAutoDefault(true);
         excute_button->setDefault(true);
@@ -167,9 +178,9 @@ public:
         addMark_button->setObjectName(QString::fromUtf8("addMark_button"));
         addMark_button->setEnabled(false);
         addMark_button->setGeometry(QRect(0, 530, 151, 61));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/new/prefix1/add_mark.png"), QSize(), QIcon::Normal, QIcon::Off);
-        addMark_button->setIcon(icon12);
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/new/prefix1/add_mark.png"), QSize(), QIcon::Normal, QIcon::Off);
+        addMark_button->setIcon(icon14);
         addMark_button->setIconSize(QSize(61, 50));
         addMark_button->setAutoDefault(true);
         addMark_button->setDefault(true);
@@ -196,9 +207,9 @@ public:
         start_button->setObjectName(QString::fromUtf8("start_button"));
         start_button->setEnabled(false);
         start_button->setGeometry(QRect(640, 370, 151, 61));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/new/prefix1/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
-        start_button->setIcon(icon13);
+        QIcon icon15;
+        icon15.addFile(QString::fromUtf8(":/new/prefix1/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
+        start_button->setIcon(icon15);
         start_button->setIconSize(QSize(61, 151));
         start_button->setCheckable(false);
         start_button->setAutoDefault(true);
@@ -207,9 +218,9 @@ public:
         goHome_button->setObjectName(QString::fromUtf8("goHome_button"));
         goHome_button->setEnabled(false);
         goHome_button->setGeometry(QRect(640, 530, 151, 61));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/new/prefix1/HouseBlack.png"), QSize(), QIcon::Normal, QIcon::Off);
-        goHome_button->setIcon(icon14);
+        QIcon icon16;
+        icon16.addFile(QString::fromUtf8(":/new/prefix1/HouseBlack.png"), QSize(), QIcon::Normal, QIcon::Off);
+        goHome_button->setIcon(icon16);
         goHome_button->setIconSize(QSize(61, 151));
         goHome_button->setAutoDefault(true);
         goHome_button->setDefault(true);
@@ -224,9 +235,9 @@ public:
         snapShoot_button->setObjectName(QString::fromUtf8("snapShoot_button"));
         snapShoot_button->setEnabled(false);
         snapShoot_button->setGeometry(QRect(160, 530, 151, 61));
-        QIcon icon15;
-        icon15.addFile(QString::fromUtf8(":/new/prefix1/11954231621344997843camera_pictogram_r5d_01.svg.hi.png"), QSize(), QIcon::Normal, QIcon::Off);
-        snapShoot_button->setIcon(icon15);
+        QIcon icon17;
+        icon17.addFile(QString::fromUtf8(":/new/prefix1/11954231621344997843camera_pictogram_r5d_01.svg.hi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        snapShoot_button->setIcon(icon17);
         snapShoot_button->setIconSize(QSize(61, 50));
         snapShoot_button->setAutoDefault(true);
         snapShoot_button->setDefault(true);
@@ -331,6 +342,7 @@ public:
         menubar->addAction(menuPost_Flight->menuAction());
         menuPlanning->addAction(actionLoad_map);
         menuPlanning->addSeparator();
+        menuPlanning->addAction(actionStart_planning);
         menuPlanning->addAction(actionSave_mission);
         menuPlanning->addAction(actionLoad_mission);
         menuPlanning->addAction(actionClear_mission);
@@ -364,6 +376,7 @@ public:
         actionLogs->setText(QApplication::translate("video", "Log", 0, QApplication::UnicodeUTF8));
         actionReplay_mission->setText(QApplication::translate("video", "Replay mission", 0, QApplication::UnicodeUTF8));
         actionClear_mission->setText(QApplication::translate("video", "Clear mission ", 0, QApplication::UnicodeUTF8));
+        actionStart_planning->setText(QApplication::translate("video", "Start planning", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         excute_button->setToolTip(QApplication::translate("video", "EXECUTE", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP

@@ -6,28 +6,35 @@ class waypoint
 {
 public:
     waypoint();
-    waypoint (int num , double longitude,double latitude,double altitude, double  hdg, int time,int type);
-    ~waypoint();
+    waypoint (int num , qreal longitude,qreal latitude,double altitude, double  hdg, int time,int type, int numMission);
+  // ~waypoint();
 
-    void setNum ( int num);
-    void setLong ( double longitude);
-    void setLat ( double lat);
+    void setNum ( int n);
+    void setLong ( qreal lon);
+    void setLat ( qreal lat);
     void setAlt ( double alt);
-    void setHdg (double hdg);
-    void setTime ( int t);
-    void setType ( int type);
+    void setHdg (double hd);
+    void setTime ( int ti);
+    void setType ( int ty);
+    void setMission (int numMission);
 
-    int getnum () const ;
-    double getLong() const;
-    double getLat() const;
-    double getAlt() const ;
-    double getHdg() const;
-    double getTime() const ;
-    double getType() const ;
+    int getNum ()  ;
+    int getMission()  ;
+    qreal getLong() ;
+    qreal getLat() ;
+    double getAlt()  ;
+    double getHdg() ;
+    int getTime()  ;
+    int getType()  ;
+
+
 
 public:
-    int num ,time, type ;
-    double longitude, latitude, altitude, hdg ;
+    int numW ;
+    qreal longitudeW, latitudeW ;
+    double  altitudeW, hdgW ;
+    int timeW, typeW , numMissionW ;
+
 
 
 };

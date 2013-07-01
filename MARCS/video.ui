@@ -603,6 +603,7 @@
     </property>
     <addaction name="actionLoad_map"/>
     <addaction name="separator"/>
+    <addaction name="actionStart_planning"/>
     <addaction name="actionSave_mission"/>
     <addaction name="actionLoad_mission"/>
     <addaction name="actionClear_mission"/>
@@ -647,6 +648,9 @@
    </property>
   </action>
   <action name="actionSave_mission">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="ressources.qrc">
      <normaloff>:/new/prefix1/Save-icon.png</normaloff>:/new/prefix1/Save-icon.png</iconset>
@@ -743,8 +747,24 @@
    </property>
   </action>
   <action name="actionClear_mission">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/new/prefix1/Gnome-edit-clear.png</normaloff>:/new/prefix1/Gnome-edit-clear.png</iconset>
+   </property>
    <property name="text">
     <string>Clear mission </string>
+   </property>
+  </action>
+  <action name="actionStart_planning">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/new/prefix1/Start.png</normaloff>:/new/prefix1/Start.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start planning</string>
    </property>
   </action>
  </widget>

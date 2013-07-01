@@ -4,6 +4,9 @@
 #include <MarbleWidget.h>
 #include "GeoDataCoordinates.h"
 
+#include "mission.h"
+#include "waypoint.h"
+
 #include <QMainWindow>
 using namespace Marble;
 namespace Ui {
@@ -29,11 +32,13 @@ public slots:
     void saveMission();
     void addPoint( qreal lon, qreal lat, GeoDataCoordinates::Unit );
     void clearMission();
+    void activateAddingPoint();
     void close();
 
 private:
     Ui::video *ui;
     QString path ;
+
 };
 
 #endif // VIDEO_H

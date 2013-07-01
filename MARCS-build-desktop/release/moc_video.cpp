@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'video.h'
 **
-** Created: Fri 28. Jun 12:08:10 2013
+** Created: Mon 1. Jul 16:23:14 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_video[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -42,6 +42,7 @@ static const uint qt_meta_data_video[] = {
      146,  137,    6,    6, 0x0a,
      193,    6,    6,    6, 0x0a,
      208,    6,    6,    6, 0x0a,
+     230,    6,    6,    6, 0x0a,
 
        0        // eod
 };
@@ -52,7 +53,8 @@ static const char qt_meta_stringdata_video[] = {
     "openNewMap()\0switchToMap()\0afficheList()\0"
     "openMission()\0saveMission()\0lon,lat,\0"
     "addPoint(qreal,qreal,GeoDataCoordinates::Unit)\0"
-    "clearMission()\0close()\0"
+    "clearMission()\0activateAddingPoint()\0"
+    "close()\0"
 };
 
 const QMetaObject video::staticMetaObject = {
@@ -94,10 +96,11 @@ int video::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 7: saveMission(); break;
         case 8: addPoint((*reinterpret_cast< qreal(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2])),(*reinterpret_cast< GeoDataCoordinates::Unit(*)>(_a[3]))); break;
         case 9: clearMission(); break;
-        case 10: close(); break;
+        case 10: activateAddingPoint(); break;
+        case 11: close(); break;
         default: ;
         }
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+    <Folder>
+        <name>Route Request</name>
+        <Placemark>
+            <Point>
+                <coordinates>1.3424122962,43.5817997050</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Point>
+                <coordinates>1.3422441205,43.5805202725</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Point>
+                <coordinates>1.3426646561,43.5796847316</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Point>
+                <coordinates>1.3448873638,43.5795628836</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Point>
+                <coordinates>1.3455602042,43.5803462004</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <Point>
+                <coordinates>1.3454040420,43.5815473002</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+</kml>

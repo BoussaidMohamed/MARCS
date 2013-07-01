@@ -13,11 +13,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     video.cpp \
-    waypoint.cpp
+    waypoint.cpp \
+    mission.cpp
 
 HEADERS  += \
     video.h \
-    waypoint.h
+    waypoint.h \
+    mission.h
 
 FORMS    += \
     video.ui
