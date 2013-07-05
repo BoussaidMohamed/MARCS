@@ -7,7 +7,7 @@ class waypoint
 public:
     waypoint();
     waypoint (int num , qreal longitude,qreal latitude,double altitude, double  hdg, int time,int type, int numMission);
-  // ~waypoint();
+   ~waypoint();
 
     void setNum ( int n);
     void setLong ( qreal lon);

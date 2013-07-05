@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+    <Folder>
+        <name>Route Request</name>
+        <Placemark>
+            <name># 0</name>
+            <Point>
+                <coordinates>1.4399459612,43.6037809903</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+</kml>

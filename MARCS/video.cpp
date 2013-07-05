@@ -30,8 +30,6 @@
 #include <GeoPainter.h>
 #include "mission.h"
 #include "waypoint.h"
-#include <QDateTime>
-#include <vector>
 #include <cstdio>
 #include <sstream>
 
@@ -42,31 +40,25 @@ QListView *m_listView;
 bool affichageList;
 GeoDataPlacemark *place ;
 GeoDataDocument *document ;
+GeoDataCoordinates *tempo;
 RoutingManager* manager ;
 RouteRequest* request;
 RoutingManager* manager_smallMap ;
 RouteRequest* request_smallMap;
-qreal lon0 ;
-qreal lat0 ;
-bool mission = false ;
-bool map = false;
+QList < waypoint* > wpList ;
 QString lastMission;
 QString lastMap;
 int num_waypoint = 0;
 string textNumWaypoint ;
 string temp;
 QString qstr ;
-char * numWpText = new char[32];
-
-
-
+char* numWpText = new char[32];
 
 video::video(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::video)
 {
     affichageList = false ;//etat d'affichage de la liste du log
-
     ui->setupUi(this);
     place =  new GeoDataPlacemark( "" );
     document = new GeoDataDocument();
@@ -100,6 +92,7 @@ video::video(QWidget *parent) :
     connect(ui->actionSave_mission,SIGNAL(triggered()),this,SLOT(saveMission()));
     connect(ui->actionClear_mission,SIGNAL(triggered()),this,SLOT(clearMission()));
     connect(ui->actionStart_planning,SIGNAL(triggered()),this,SLOT(activateAddingPoint()));
+    connect(ui->actionConnect_RPA,SIGNAL(triggered()),this,SLOT(drawMission()));
 
 }
 
@@ -108,18 +101,23 @@ video::~video()
     delete ui;
 }
 
+
+//Delete a mission from the view
 void video::clearMission(){
 
     ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
     ui->actionClear_mission->setEnabled(false);
 
 }
+
+//Activate the adding points on the map
 void video::activateAddingPoint(){
     ui->actionSave_mission->setEnabled(true);
     connect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
     ui->actionStart_planning->setEnabled(false);
 }
 
+//Show the list of logs
 void video::afficheList()
 {
     if (affichageList==false){
@@ -146,38 +144,52 @@ void video::openMission(){
     manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
     request = manager->routeRequest();
     request_smallMap = manager_smallMap->routeRequest();
-   // add point to map
-   request->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
-   request_smallMap->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian ));
+    request->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
+    request_smallMap->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian ));
 
-
-           request->clear();
-           request_smallMap->clear();
-           ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-           ui->MarbleWidget_plan->repaint();
-           ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-           lastMission = inputFile.absoluteFilePath();
-           ui->actionClear_mission->setEnabled(true);
-           lastMission = inputFile.absoluteFilePath();
-           ui->actionStart_planning->setEnabled(true);
-
-
-
-
+    request->clear();
+    request_smallMap->clear();
+    ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+    ui->MarbleWidget_plan->repaint();
+    ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+    lastMission = inputFile.absoluteFilePath();
+    ui->actionClear_mission->setEnabled(true);
+    lastMission = inputFile.absoluteFilePath();
+    ui->actionStart_planning->setEnabled(true);
 }
-//enregister une mission
+//Save a mission
 
 void video::saveMission(){
+    QString  fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission",  "KML files (*.kml)"  );
+    string m ;
+    string nameFile;
+    QString hideFile ;
 
-    QString const fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission",  "KML files (*.kml)"  );
 
-       if ( !fileName.isEmpty() ) {
-           manager->saveRoute(fileName);
+    m = fileName.toUtf8().constData();
+    size_t pos = m.find_last_of("/");
+    if(pos != std::string::npos){
+
+        nameFile.assign(m.begin() + pos + 1, m.end()-4);
+    }
+      else
+    {
+      nameFile = m;
+  }
+    string fileNameTemp = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/" + nameFile +".xml" ;
+    hideFile =  QString::fromStdString(fileNameTemp);
+
+      if ( !fileName.isEmpty() ) {
+          manager->saveRoute(fileName);
 
        }
+
+    myMission.saveMission(wpList,hideFile);
 }
+
 //add waypoint to the Flight Plan
 void video::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
+
 
   sprintf(numWpText,"%d",num_waypoint);
   temp = string(numWpText);
@@ -190,16 +202,17 @@ void video::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
   request = manager->routeRequest();
   request_smallMap = manager_smallMap->routeRequest();
 
+  tempo = new GeoDataCoordinates(lon,lat,0.0,GeoDataCoordinates::Radian);
+
  // add point to map
  request->append( GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ) );
  request->setName(num_waypoint,qstr);
  request_smallMap->append(GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ));
+ wpList.append(new waypoint(num_waypoint,tempo->longitude(GeoDataCoordinates::Degree),tempo->latitude(GeoDataCoordinates::Degree),100.0,90.0,60,1,1));
  num_waypoint++ ;
 }
 
-
-
-//affichage de l'intreface Flight Plan
+//Show the page "Flight Plan"
 void video::openNewWindowMain()
 {
     ui->MarbleWidget_plan->show();
@@ -213,7 +226,7 @@ void video::openNewWindowMain()
 
 }
 
-//affichage de l'interface Flight DATA
+//Show the page "Flight DATA"
 void video::openNewWindowData()
 {
     ui->MarbleWidget_plan->hide();
@@ -227,9 +240,7 @@ void video::openNewWindowData()
 
 }
 
-
-
-//affichage de l'intreface VIDEO
+//Show the page "VIDEO"
 void video::openNewWindowVideo()
 {
     ui->MarbleWidget_plan->hide();
@@ -243,13 +254,13 @@ void video::openNewWindowVideo()
 
 }
 
+//Close the window
 void video::close()
 {
     exit(0);
 }
 
-
-//Load une map avec la format .osm
+//Load a map with the format .osm
 void video::openNewMap()
 
 {
@@ -258,15 +269,11 @@ void video::openNewMap()
 
         ui->MarbleWidget_plan->model()->removeGeoData(lastMap);
         ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-        ui->MarbleWidget_plan->reloadMap();
-        ui->MarbleWidget_plan->repaint();
         ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-        ui->MarbleWidget_smallView->reloadMap();
-        ui->MarbleWidget_smallView->repaint();
         lastMap = inputFile.absoluteFilePath();
 
 }
-//si on click sur la map ( small view ) l'application sera dériger à l'intreface Flight Data
+//Switch Mode ( Flight Plan , Video )
 
 void video::switchToMap()
 {
@@ -279,4 +286,8 @@ void video::switchToMap()
     ui->actionFlight_plan->setEnabled(false);
     ui->actionFlight_data->setEnabled(true);
     ui->actionVideo->setEnabled(true);
+}
+
+void video::drawMission(){
+    myMission.customPaint(wpList);
 }

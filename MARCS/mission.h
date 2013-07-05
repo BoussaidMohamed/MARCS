@@ -1,6 +1,7 @@
 #ifndef MISSION_H
 #define MISSION_H
 #include "waypoint.h"
+#include <QFileDialog>
 #include <QFile>
 
 class mission
@@ -13,7 +14,8 @@ public:
     int getNum();
 
     void setNum(int n);
-    void saveMission(waypoint wp , QFile file);
+    void saveMission(QList < waypoint* > wpList , QString fileName);
+    void customPaint(QList < waypoint* > wpList);
 
 
 

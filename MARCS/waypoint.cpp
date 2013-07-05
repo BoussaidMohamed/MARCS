@@ -4,7 +4,12 @@ waypoint::waypoint()
 {
 
 }
-waypoint::waypoint(int num, double longitude, double latitude, double altitude, double hdg, int time, int type, int numMission) : numW(num) , longitudeW(longitude), latitudeW(latitude), altitudeW(altitude),hdgW(hdg),timeW(time),typeW(type), numMissionW(numMission)
+waypoint::waypoint(int num, qreal longitude, qreal latitude, double altitude, double hdg, int time, int type, int numMission) : numW(num) , longitudeW(longitude), latitudeW(latitude), altitudeW(altitude),hdgW(hdg),timeW(time),typeW(type), numMissionW(numMission)
+{
+
+}
+
+waypoint::~waypoint()
 {
 
 }

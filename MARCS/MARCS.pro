@@ -27,7 +27,9 @@ FORMS    += \
 
 win32 {
     INCLUDEPATH += $$quote(C:\Program Files (x86)\marble\include\marble)
+    INCLUDEPATH += $$quote(C:\Program Files (x86)\tinyxml2\include)
     LIBS += $$quote(C:\Program Files (x86)\marble\libmarblewidget.dll)
+    LIBS += $$quote(C:\Program Files (x86)\tinyxml2\bin\libtinyxml2.dll)
 }
 
 RESOURCES += \
