@@ -1,8 +1,10 @@
 #ifndef MISSION_H
 #define MISSION_H
+#include <GeoPainter.h>
 #include "waypoint.h"
 #include <QFileDialog>
 #include <QFile>
+#include <QXmlStreamReader>
 
 class mission
 {
@@ -15,7 +17,8 @@ public:
 
     void setNum(int n);
     void saveMission(QList < waypoint* > wpList , QString fileName);
-    void customPaint(QList < waypoint* > wpList);
+    QList <waypoint* > loadMission(QList < waypoint* > wpList , QString filename);
+    //void customPaint(GeoPainter* painter);
 
 
 

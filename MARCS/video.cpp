@@ -1,7 +1,10 @@
 #include "video.h"
 #include "ui_video.h"
+#include "mission.h"
+#include "waypoint.h"
 #include <global.h>
 #include <AbstractFloatItem.h>
+#include <QPaintDevice>
 #include <QString>
 #include <QtGlobal>
 #include <QFileDialog>
@@ -19,6 +22,7 @@
 #include <QtGui/QTreeView>
 #include <MarbleWidget.h>
 #include <MarbleModel.h>
+#include <MarbleMap.h>
 #include <GeoPainter.h>
 #include <RouteRequest.h>
 #include <RoutingManager.h>
@@ -28,8 +32,7 @@
 #include <GeoDataTreeModel.h>
 #include <RoutingWidget.h>
 #include <GeoPainter.h>
-#include "mission.h"
-#include "waypoint.h"
+#include <ViewportParams.h>
 #include <cstdio>
 #include <sstream>
 
@@ -45,14 +48,19 @@ RoutingManager* manager ;
 RouteRequest* request;
 RoutingManager* manager_smallMap ;
 RouteRequest* request_smallMap;
-QList < waypoint* > wpList ;
+QList < waypoint* > wpListSave ;
+QList <waypoint* > wpListOpen ;
 QString lastMission;
 QString lastMap;
 int num_waypoint = 0;
 string textNumWaypoint ;
 string temp;
 QString qstr ;
+bool open = false ;
 char* numWpText = new char[32];
+GeoPainter* gp ;
+QString fileOpened ;
+
 
 video::video(QWidget *parent) :
     QMainWindow(parent),
@@ -63,12 +71,14 @@ video::video(QWidget *parent) :
     place =  new GeoDataPlacemark( "" );
     document = new GeoDataDocument();
 
+
     //config marble
     ui->MarbleWidget_smallView->setShowOverviewMap(false);
     ui->MarbleWidget_plan->setShowOverviewMap(false);
     ui->MarbleWidget_smallView->setShowScaleBar(false);
     ui->MarbleWidget_smallView->setShowCompass(false);
     ui->MarbleWidget_smallView->hide();
+
 
     //initialisation de l'intreface
     ui->tableWidget->hide();
@@ -78,6 +88,20 @@ video::video(QWidget *parent) :
     ui->actionVideo->setEnabled(true);
     ui->listLog->hide();
     ui->actionClear_mission->setEnabled(false);
+    ui->label_Alt->hide();
+    ui->label_HDG->hide();
+    ui->label_Num_Waypoint->hide();
+    ui->label_Time->hide();
+    ui->lineEdit_HDG->hide();
+    ui->lineEdit_Alt->hide();
+    ui->timeEdit_Mission->hide();
+    ui->line_2->hide();
+    ui->SaveEdit_button->hide();
+    ui->LoadData_button->hide();
+    ui->comboBox_ListWaypoint->hide();
+    ui->FinishEdit_button_2->hide();
+
+
 
     //signal&&slot de l'application
     connect(ui->actionFlight_plan,SIGNAL(triggered()),this,SLOT(openNewWindowMain()));
@@ -92,7 +116,30 @@ video::video(QWidget *parent) :
     connect(ui->actionSave_mission,SIGNAL(triggered()),this,SLOT(saveMission()));
     connect(ui->actionClear_mission,SIGNAL(triggered()),this,SLOT(clearMission()));
     connect(ui->actionStart_planning,SIGNAL(triggered()),this,SLOT(activateAddingPoint()));
-    connect(ui->actionConnect_RPA,SIGNAL(triggered()),this,SLOT(drawMission()));
+    connect(ui->actionEdit_waypoint,SIGNAL(triggered()),this,SLOT(editWaypoint()));
+
+    QPaintDevice *paintDevice = this;
+   // QPaintEvent *evt ;
+    QImage image;
+    if (!isEnabled())
+    {
+        // If the globe covers fully the screen then we can use the faster
+        // RGB32 as there are no translucent areas involved.
+        QImage::Format imageFormat = ( ui->MarbleWidget_plan->viewport()->mapCoversViewport() )
+                                     ? QImage::Format_RGB32
+                                     : QImage::Format_ARGB32_Premultiplied;
+        // Paint to an intermediate image
+        image = QImage( rect().size(), imageFormat );
+
+        image.fill( Qt::transparent );
+        paintDevice = &image;
+
+    }
+
+
+gp = new GeoPainter ( paintDevice, ui->MarbleWidget_plan->viewport(), ui->MarbleWidget_plan->mapQuality() );
+//ui->MarbleWidget_plan->paint( gp, evt->rect() );
+drawMission();
 
 }
 
@@ -107,6 +154,7 @@ void video::clearMission(){
 
     ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
     ui->actionClear_mission->setEnabled(false);
+    ui->actionSave_mission->setEnabled(false);
 
 }
 
@@ -138,6 +186,25 @@ void video::openMission(){
 
     path = QFileDialog::getOpenFileName(this, "Load a mission", "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission", "KML (*.kml)");
     QFileInfo inputFile(path);
+    QString file ;
+    file = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/testParse.xml";
+
+    string m ;
+    string nameFileOpen;
+
+
+    m = path.toUtf8().constData();
+    size_t pos = m.find_last_of("/");
+    if(pos != std::string::npos){
+
+        nameFileOpen.assign(m.begin() + pos + 1, m.end()-4);
+    }
+      else
+    {
+      nameFileOpen = m;
+  }
+    string fileNameTempOpen = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/" + nameFileOpen +".xml" ;
+    fileOpened =  QString::fromStdString(fileNameTempOpen);
 
     // Access the shared route request (start, destination and parameters)
     manager = ui->MarbleWidget_plan->model()->routingManager();
@@ -156,6 +223,12 @@ void video::openMission(){
     ui->actionClear_mission->setEnabled(true);
     lastMission = inputFile.absoluteFilePath();
     ui->actionStart_planning->setEnabled(true);
+
+     wpListOpen = myMission.loadMission(wpListOpen,fileOpened);
+    ui->actionEdit_waypoint->setEnabled(true);
+    open = true ;
+
+
 }
 //Save a mission
 
@@ -184,8 +257,12 @@ void video::saveMission(){
 
        }
 
-    myMission.saveMission(wpList,hideFile);
+    myMission.saveMission(wpListSave,hideFile);
+
+    ui->actionSave_mission->setEnabled(false);
+
 }
+
 
 //add waypoint to the Flight Plan
 void video::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
@@ -208,8 +285,12 @@ void video::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
  request->append( GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ) );
  request->setName(num_waypoint,qstr);
  request_smallMap->append(GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ));
- wpList.append(new waypoint(num_waypoint,tempo->longitude(GeoDataCoordinates::Degree),tempo->latitude(GeoDataCoordinates::Degree),100.0,90.0,60,1,1));
+ request_smallMap->setName(num_waypoint,qstr);
+ wpListSave.append(new waypoint(num_waypoint,tempo->longitude(GeoDataCoordinates::Degree),tempo->latitude(GeoDataCoordinates::Degree),100.0,90.0,60,1,1));
  num_waypoint++ ;
+
+ ui->actionEdit_waypoint->setEnabled(true);
+ open = false ;
 }
 
 //Show the page "Flight Plan"
@@ -289,5 +370,155 @@ void video::switchToMap()
 }
 
 void video::drawMission(){
-    myMission.customPaint(wpList);
+
+    GeoDataCoordinates France( 2.2, 48.52, 0.0, GeoDataCoordinates::Degree );
+    gp->setPen( QColor( 0, 0, 0 ) );
+    gp->drawText( France, "France" );
+
+    GeoDataCoordinates Canada( -77.02, 48.52, 0.0, GeoDataCoordinates::Degree );
+    gp->setPen( QColor( 0, 0, 0 ) );
+    gp->drawText( Canada, "Canada" );
+
+    //A line from France to Canada without tessellation
+
+    GeoDataLineString shapeNoTessellation( NoTessellation );
+    shapeNoTessellation << France << Canada;
+
+    gp->setPen( oxygenSkyBlue4 );
+    gp->drawPolyline( shapeNoTessellation );
+
+    //The same line, but with tessellation
+
+    GeoDataLineString shapeTessellate( Tessellate );
+    shapeTessellate << France << Canada;
+
+    gp->setPen( oxygenBrickRed4 );
+    gp->drawPolyline( shapeTessellate );
+
+    //Now following the latitude circles
+
+    GeoDataLineString shapeLatitudeCircle( RespectLatitudeCircle | Tessellate );
+    shapeLatitudeCircle << France << Canada;
+
+    gp->setPen( oxygenForestGreen4 );
+    gp->drawPolyline( shapeLatitudeCircle );
 }
+
+void video::editWaypoint(){
+    ui->comboBox_ListWaypoint->show();
+    ui->LoadData_button->show();
+    ui->label_Num_Waypoint->show();
+
+    ui->actionEdit_waypoint->setEnabled(false);
+    ui->comboBox_ListWaypoint->clear();
+
+    if ( open == false){
+
+        for ( int i = 0 ; i < wpListSave.size(); i++){
+            ui->comboBox_ListWaypoint->addItem(QString::number(i+1));
+        }
+    }
+    else {
+        for ( int i = 0 ; i < wpListOpen.size(); i++){
+            ui->comboBox_ListWaypoint->addItem(QString::number(i+1));
+        }
+
+    }
+
+    connect(ui->LoadData_button,SIGNAL(clicked()),this,SLOT(loadData()));
+
+
+}
+
+void video::loadData(){
+    int h ;
+    int m ;
+    int s ;
+
+    ui->label_Alt->show();
+    ui->label_HDG->show();
+    ui->label_Time->show();
+    ui->lineEdit_Alt->show();
+    ui->lineEdit_HDG->show();
+    ui->timeEdit_Mission->show();
+    ui->line_2->show();
+    ui->SaveEdit_button->show();
+    ui->FinishEdit_button_2->show();
+    ui->SaveEdit_button->setEnabled(true);
+
+    if ( open == false){
+        h = wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+        m = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+        s = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+
+       ui->lineEdit_Alt->setText(QString::number(wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getAlt()));
+       ui->lineEdit_HDG->setText(QString::number(wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getHdg()));
+       ui->timeEdit_Mission->setTime(QTime(h,m,s,00));
+
+    }
+
+    else {
+        h = wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+        m = (wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+        s = (wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+
+       ui->lineEdit_Alt->setText(QString::number(wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getAlt()));
+       ui->lineEdit_HDG->setText(QString::number(wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getHdg()));
+       ui->timeEdit_Mission->setTime(QTime(h,m,s,00));
+
+    }
+
+    connect(ui->SaveEdit_button,SIGNAL(clicked()),this,SLOT(saveEditData()));
+    connect(ui->FinishEdit_button_2,SIGNAL(clicked()),this,SLOT(finishEditData()));
+
+   }
+
+void video::saveEditData(){
+    bool ok = false ;
+    QTime tempo = ui->timeEdit_Mission->time();
+    int time = tempo.hour() * 3600 + tempo.minute() * 60 + tempo.second() ;
+
+    if ( open == false){
+
+        wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setAlt(ui->lineEdit_Alt->text().toDouble(&ok));
+        wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setHdg(ui->lineEdit_HDG->text().toDouble(&ok));
+        wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setTime(time);
+
+    }
+
+    else {
+
+
+        wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setAlt(ui->lineEdit_Alt->text().toDouble(&ok));
+        wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setHdg(ui->lineEdit_HDG->text().toDouble(&ok));
+        wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setTime(time);
+        myMission.saveMission(wpListOpen,fileOpened);
+
+    }
+
+
+    ui->SaveEdit_button->setEnabled(false);
+
+}
+
+void video::finishEditData(){
+
+
+    ui->label_Alt->hide();
+    ui->label_HDG->hide();
+    ui->label_Num_Waypoint->hide();
+    ui->label_Time->hide();
+    ui->lineEdit_HDG->hide();
+    ui->lineEdit_Alt->hide();
+    ui->timeEdit_Mission->hide();
+    ui->line_2->hide();
+    ui->SaveEdit_button->hide();
+    ui->LoadData_button->hide();
+    ui->comboBox_ListWaypoint->hide();
+    ui->FinishEdit_button_2->hide();
+    ui->actionEdit_waypoint->setEnabled(true);
+
+
+}
+
+

@@ -38,5 +38,6 @@
         <file>icon/takeoff.png</file>
         <file>icon/url1.png</file>
         <file>icon/waypoint.png</file>
+        <file>icon/Edit.png</file>
     </qresource>
 </RCC>
