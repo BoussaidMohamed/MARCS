@@ -17,7 +17,8 @@ public:
 
     void setNum(int n);
     void saveMission(QList < waypoint* > wpList , QString fileName);
-    QList <waypoint* > loadMission(QList < waypoint* > wpList , QString filename);
+    void saveMissionKml(QList < waypoint* > wpList , QString fileName);
+    QList <waypoint* > loadMission(QString filename);
     //void customPaint(GeoPainter* painter);
 
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'video.ui'
 **
-** Created: Mon 15. Jul 16:15:15 2013
+** Created: Wed 7. Aug 10:58:17 2013
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -66,7 +66,6 @@ public:
     Marble::MarbleWidget *MarbleWidget_plan;
     QTableWidget *tableWidget;
     QListWidget *listLog;
-    QPushButton *LoadData_button;
     QComboBox *comboBox_ListWaypoint;
     QLabel *label_Num_Waypoint;
     QFrame *line_2;
@@ -78,6 +77,9 @@ public:
     QPushButton *SaveEdit_button;
     QTimeEdit *timeEdit_Mission;
     QPushButton *FinishEdit_button_2;
+    QPushButton *Delete_button;
+    QLabel *label;
+    QLabel *Time_left;
     QMenuBar *menubar;
     QMenu *menuPlanning;
     QMenu *menuSettings;
@@ -92,7 +94,7 @@ public:
         video->setWindowModality(Qt::WindowModal);
         video->resize(800, 632);
         video->setMinimumSize(QSize(800, 632));
-        video->setMaximumSize(QSize(800, 632));
+        video->setMaximumSize(QSize(800, 635));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/drone.png"), QSize(), QIcon::Normal, QIcon::Off);
         video->setWindowIcon(icon);
@@ -173,7 +175,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         valAltitude = new QLCDNumber(centralwidget);
         valAltitude->setObjectName(QString::fromUtf8("valAltitude"));
-        valAltitude->setGeometry(QRect(670, 40, 81, 31));
+        valAltitude->setGeometry(QRect(670, 30, 81, 31));
         valAltitude->setSmallDecimalPoint(false);
         valAltitude->setSegmentStyle(QLCDNumber::Flat);
         excute_button = new QPushButton(centralwidget);
@@ -188,7 +190,7 @@ public:
         excute_button->setDefault(true);
         battery_label = new QLabel(centralwidget);
         battery_label->setObjectName(QString::fromUtf8("battery_label"));
-        battery_label->setGeometry(QRect(640, 80, 161, 71));
+        battery_label->setGeometry(QRect(640, 70, 161, 71));
         battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/0.png")));
         battery_label->setScaledContents(true);
         line = new QFrame(centralwidget);
@@ -208,7 +210,7 @@ public:
         addMark_button->setDefault(true);
         label_Altitude = new QLabel(centralwidget);
         label_Altitude->setObjectName(QString::fromUtf8("label_Altitude"));
-        label_Altitude->setGeometry(QRect(640, -10, 141, 61));
+        label_Altitude->setGeometry(QRect(640, -20, 141, 61));
         QFont font;
         font.setPointSize(11);
         font.setBold(true);
@@ -230,7 +232,7 @@ public:
         start_button->setEnabled(false);
         start_button->setGeometry(QRect(640, 370, 151, 61));
         QIcon icon16;
-        icon16.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon16.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOff.png"), QSize(), QIcon::Normal, QIcon::Off);
         start_button->setIcon(icon16);
         start_button->setIconSize(QSize(61, 151));
         start_button->setCheckable(false);
@@ -282,6 +284,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MarbleWidget_plan->sizePolicy().hasHeightForWidth());
         MarbleWidget_plan->setSizePolicy(sizePolicy);
+        MarbleWidget_plan->setCursor(QCursor(Qt::CrossCursor));
         MarbleWidget_plan->setMouseTracking(false);
         MarbleWidget_plan->setProperty("zoom", QVariant(2100));
         MarbleWidget_plan->setProperty("projection", QVariant(0));
@@ -341,9 +344,6 @@ public:
         listLog = new QListWidget(centralwidget);
         listLog->setObjectName(QString::fromUtf8("listLog"));
         listLog->setGeometry(QRect(640, 230, 151, 201));
-        LoadData_button = new QPushButton(centralwidget);
-        LoadData_button->setObjectName(QString::fromUtf8("LoadData_button"));
-        LoadData_button->setGeometry(QRect(160, 568, 75, 23));
         comboBox_ListWaypoint = new QComboBox(centralwidget);
         comboBox_ListWaypoint->setObjectName(QString::fromUtf8("comboBox_ListWaypoint"));
         comboBox_ListWaypoint->setGeometry(QRect(240, 530, 41, 22));
@@ -380,6 +380,15 @@ public:
         FinishEdit_button_2 = new QPushButton(centralwidget);
         FinishEdit_button_2->setObjectName(QString::fromUtf8("FinishEdit_button_2"));
         FinishEdit_button_2->setGeometry(QRect(530, 568, 75, 23));
+        Delete_button = new QPushButton(centralwidget);
+        Delete_button->setObjectName(QString::fromUtf8("Delete_button"));
+        Delete_button->setGeometry(QRect(430, 568, 75, 23));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(650, 140, 71, 21));
+        Time_left = new QLabel(centralwidget);
+        Time_left->setObjectName(QString::fromUtf8("Time_left"));
+        Time_left->setGeometry(QRect(720, 140, 61, 21));
         video->setCentralWidget(centralwidget);
         menubar = new QMenuBar(video);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -403,7 +412,6 @@ public:
         menubar->addAction(menuPost_Flight->menuAction());
         menuPlanning->addAction(actionLoad_map);
         menuPlanning->addSeparator();
-        menuPlanning->addAction(actionStart_planning);
         menuPlanning->addAction(actionLoad_mission);
         menuPlanning->addAction(actionSave_mission);
         menuPlanning->addAction(actionClear_mission);
@@ -496,13 +504,15 @@ public:
         QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QApplication::translate("video", "ETA (min)\n"
 "", 0, QApplication::UnicodeUTF8));
-        LoadData_button->setText(QApplication::translate("video", "Load data", 0, QApplication::UnicodeUTF8));
         label_Num_Waypoint->setText(QApplication::translate("video", "Num waypoint", 0, QApplication::UnicodeUTF8));
         label_Alt->setText(QApplication::translate("video", "Alt  (m ):", 0, QApplication::UnicodeUTF8));
         label_HDG->setText(QApplication::translate("video", "HDG (\302\260) :", 0, QApplication::UnicodeUTF8));
         label_Time->setText(QApplication::translate("video", "Time :", 0, QApplication::UnicodeUTF8));
         SaveEdit_button->setText(QApplication::translate("video", "Save Edition", 0, QApplication::UnicodeUTF8));
         FinishEdit_button_2->setText(QApplication::translate("video", "Finish Edition", 0, QApplication::UnicodeUTF8));
+        Delete_button->setText(QApplication::translate("video", "Delete", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("video", "Time Left : ", 0, QApplication::UnicodeUTF8));
+        Time_left->setText(QApplication::translate("video", "0.0", 0, QApplication::UnicodeUTF8));
         menuPlanning->setTitle(QApplication::translate("video", "Planning", 0, QApplication::UnicodeUTF8));
         menuSettings->setTitle(QApplication::translate("video", "Settings", 0, QApplication::UnicodeUTF8));
         menuDisplay->setTitle(QApplication::translate("video", "Display", 0, QApplication::UnicodeUTF8));

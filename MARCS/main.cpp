@@ -1,10 +1,11 @@
 #include <QtGui/QApplication>
-#include "video.h"
+#include "marcs.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    video w;
+    MARCS w;
+
     w.show();
 
     return a.exec();

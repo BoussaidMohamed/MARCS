@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MARCS</class>
+ <widget class="QMainWindow" name="MARCS">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>632</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>632</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MARCS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ressource.qrc">
+    <normaloff>:/new/prefix1/icon/drone.png</normaloff>:/new/prefix1/icon/drone.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_Altitude">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>-20</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string notr="true">ALTITUDE:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::LogText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>520</y>
+      <width>20</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Time">
+    <property name="geometry">
+     <rect>
+      <x>408</x>
+      <y>530</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="battery_label">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>70</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="ressource.qrc">:/new/prefix1/icon/0.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_ListWaypoint">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>530</y>
+      <width>41</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Marble::MarbleWidget" name="MarbleWidget_plan" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>631</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="cursor">
+     <cursorShape>CrossCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="zoom" stdset="0">
+     <number>2100</number>
+    </property>
+    <property name="mapThemeId" stdset="0">
+     <string>earth/openstreetmap/openstreetmap.dgml</string>
+    </property>
+    <property name="projection" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="longitude" stdset="0">
+     <double>1.400000000000001</double>
+    </property>
+    <property name="latitude" stdset="0">
+     <double>43.600000000000001</double>
+    </property>
+    <property name="showOverviewMap" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showScaleBar" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showCompass" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showGrid" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showClouds" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showAtmosphere" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showPlaces" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showCities" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showTerrain" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showOtherPlaces" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showRelief" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showBorders" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showRivers" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showLakes" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="volatileTileCacheLimit" stdset="0">
+     <uLongLong>200000</uLongLong>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Num_Waypoint">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>530</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Num waypoint</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_HDG">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>530</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HDG (°) :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_left_Min">
+    <property name="geometry">
+     <rect>
+      <x>728</x>
+      <y>140</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>00</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>631</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>90</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>90</number>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>30</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Waypoint                                </string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Longitude</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Latitude</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Altitude (m)
+</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Heading (°)
+</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Distance (m)  
+</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ETA (min)
+</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignLeft|AlignTop</set>
+     </property>
+    </column>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>623</x>
+      <y>0</y>
+      <width>31</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Alt">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>530</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alt  (m ):</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="goHome_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>530</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>GO HOME</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/HouseBlack.png</normaloff>:/new/prefix1/icon/HouseBlack.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>61</width>
+      <height>151</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="Marble::MarbleWidget" name="MarbleWidget_smallView" native="true">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>240</y>
+      <width>141</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>141</width>
+      <height>121</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>The Earth</string>
+    </property>
+    <property name="whatsThis">
+     <string>The Marble widget displays a virtual globe.</string>
+    </property>
+    <property name="zoom" stdset="0">
+     <number>2100</number>
+    </property>
+    <property name="mapThemeId" stdset="0">
+     <string>earth/openstreetmap/openstreetmap.dgml</string>
+    </property>
+    <property name="longitude" stdset="0">
+     <double>1.400000000000000</double>
+    </property>
+    <property name="latitude" stdset="0">
+     <double>43.600000000000001</double>
+    </property>
+    <property name="showOverviewMap" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showScaleBar" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="showCompass" stdset="0">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Time_Left">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Time Left : </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="excute_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>450</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>EXECUTE</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/takeoff.png</normaloff>:/new/prefix1/icon/takeoff.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>61</width>
+      <height>151</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addMark_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>530</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>ADD MARK</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/add_mark.png</normaloff>:/new/prefix1/icon/add_mark.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>61</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>370</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>START MOTOR</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/engineOff.png</normaloff>:/new/prefix1/icon/engineOff.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>61</width>
+      <height>151</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="status_button">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>170</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STATUS</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Delete_button">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>568</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QTimeEdit" name="timeEdit_Mission">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>528</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="FinishEdit_button_2">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>568</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Finish Edition</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listLog">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>230</y>
+      <width>151</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SaveEdit_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>568</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Edition</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="snapShoot_button">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>530</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>SNAPSHOOT</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressource.qrc">
+      <normaloff>:/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</normaloff>:/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>61</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Alt">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>528</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_HDG">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>528</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="led_button">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>190</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_left_point">
+    <property name="geometry">
+     <rect>
+      <x>745</x>
+      <y>140</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_left_Seconde">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>140</y>
+      <width>20</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>00</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>60</y>
+      <width>118</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>20</y>
+      <width>118</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_5">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>20</y>
+      <width>20</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>20</y>
+      <width>20</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Altitude_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>20</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0.0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlanning">
+    <property name="title">
+     <string>Planning</string>
+    </property>
+    <addaction name="actionLoad_map"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_mission"/>
+    <addaction name="actionSave_mission"/>
+    <addaction name="actionClear_mission"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_waypoint"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionConnect_RPA"/>
+    <addaction name="actionController"/>
+   </widget>
+   <widget class="QMenu" name="menuDisplay">
+    <property name="title">
+     <string>Display</string>
+    </property>
+    <addaction name="actionFlight_plan"/>
+    <addaction name="actionVideo"/>
+    <addaction name="actionFlight_data"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuPost_Flight">
+    <property name="title">
+     <string>Post-Flight</string>
+    </property>
+    <addaction name="actionLog"/>
+    <addaction name="actionRaplay_Mission"/>
+   </widget>
+   <addaction name="menuPlanning"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuDisplay"/>
+   <addaction name="menuPost_Flight"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_map">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Open.png</normaloff>:/new/prefix1/icon/Open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Map</string>
+   </property>
+  </action>
+  <action name="actionLoad_mission">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Open.png</normaloff>:/new/prefix1/icon/Open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load Mission</string>
+   </property>
+  </action>
+  <action name="actionSave_mission">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Save-icon.png</normaloff>:/new/prefix1/icon/Save-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Mission</string>
+   </property>
+  </action>
+  <action name="actionClear_mission">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Gnome-edit-clear.png</normaloff>:/new/prefix1/icon/Gnome-edit-clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Mission</string>
+   </property>
+  </action>
+  <action name="actionEdit_waypoint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Edit.png</normaloff>:/new/prefix1/icon/Edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Waypoint</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/cute_ball_stop.png</normaloff>:/new/prefix1/icon/cute_ball_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionConnect_RPA">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/Actions network connect.png</normaloff>:/new/prefix1/icon/Actions network connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect RPA</string>
+   </property>
+  </action>
+  <action name="actionController">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/joystick_256.png</normaloff>:/new/prefix1/icon/joystick_256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Controller</string>
+   </property>
+  </action>
+  <action name="actionFlight_plan">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/psd-world-map-icon.png</normaloff>:/new/prefix1/icon/psd-world-map-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Flight Plan </string>
+   </property>
+  </action>
+  <action name="actionVideo">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/camera.png</normaloff>:/new/prefix1/icon/camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Video</string>
+   </property>
+  </action>
+  <action name="actionFlight_data">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/url1.png</normaloff>:/new/prefix1/icon/url1.png</iconset>
+   </property>
+   <property name="text">
+    <string>Flight Data</string>
+   </property>
+  </action>
+  <action name="actionLog">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/crystal-log.png</normaloff>:/new/prefix1/icon/crystal-log.png</iconset>
+   </property>
+   <property name="text">
+    <string>Log</string>
+   </property>
+  </action>
+  <action name="actionRaplay_Mission">
+   <property name="icon">
+    <iconset resource="ressource.qrc">
+     <normaloff>:/new/prefix1/icon/replay_icon.png</normaloff>:/new/prefix1/icon/replay_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Raplay Mission</string>
+   </property>
+  </action>
+  <action name="actionFollow_RAP">
+   <property name="text">
+    <string>Follow RPA</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Marble::MarbleWidget</class>
+   <extends>QWidget</extends>
+   <header>MarbleWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="ressource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

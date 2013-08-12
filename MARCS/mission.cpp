@@ -1,9 +1,6 @@
 #include "mission.h"
 #include "waypoint.h"
-#include <qdom.h>
 #include <QFile>
-#include <QtXml>
-#include <QDomDocument>
 #include <ctime>
 #include <string.h>
 #include <qxmlstream.h>
@@ -44,7 +41,7 @@ void mission::setNum(int n){
 
 void mission::saveMission(QList < waypoint* > wpList , QString filename){
 
-    time_t now1 = time (0);
+      time_t now1 = time (0);
       struct tm * now2 = localtime( & now1);
       string temp ;
       char* time_mission = new char[32];
@@ -63,7 +60,7 @@ void mission::saveMission(QList < waypoint* > wpList , QString filename){
          xmlWriter.writeStartDocument();
 
          xmlWriter.writeStartElement("Mission");
-         xmlWriter.writeTextElement("Number",qs);
+         xmlWriter.writeTextElement("Mission_Number",qs);
 
          for ( int i = 0 ; i < wpList.size(); i++ ) {
 
@@ -87,9 +84,11 @@ void mission::saveMission(QList < waypoint* > wpList , QString filename){
 }
 
 
-QList <waypoint* > mission::loadMission(QList < waypoint* > wpList , QString filename){
+QList <waypoint* > mission::loadMission( QString filename){
 
-    /* We'll parse the example.xml */
+
+        QList < waypoint* > wpList ;
+    /* We'll parse the filename */
         QFile* file = new QFile(filename);
         int num  ;
         double lon , lat ,alt , hdg ;
@@ -142,7 +141,6 @@ QList <waypoint* > mission::loadMission(QList < waypoint* > wpList , QString fil
                             /* We've found Longitude. */
                             if(xml.name() == "Longitude") {
                                 lon = xml.readElementText().toDouble(&ok);
-                                cout << lon << endl ;
 
                             }
                             /* We've found Latitude. */
@@ -187,13 +185,39 @@ QList <waypoint* > mission::loadMission(QList < waypoint* > wpList , QString fil
         file->close();
         xml.clear();
 
-        for ( int i = 0; i < wpList.size(); i++){
-        //cout << wpList[i]->getNum()<<endl;
-        }
-
-        return wpList;
+       return wpList;
    }
-//void mission::customPaint(GeoPainter* painter) {
+
+void mission::saveMissionKml(QList<waypoint *> wpList, QString fileName){
+
+    QFile file(fileName);
+    file.open(QIODevice::WriteOnly);
+
+    QXmlStreamWriter xmlWriter(&file);
+    xmlWriter.setAutoFormatting(true);
+    xmlWriter.writeStartDocument();
+
+    xmlWriter.writeStartElement("kml");
+    xmlWriter.writeAttribute("xmlns","http://earth.google.com/kml/2.2");
+    xmlWriter.writeStartElement("Folder");
+    xmlWriter.writeTextElement("name","Mission MARCS");
+
+    for ( int i = 0 ; i < wpList.size(); i++ ) {
+
+   xmlWriter.writeStartElement("Placemark");
+   xmlWriter.writeTextElement("name",QString::number(wpList[i]->getNum()));
+   xmlWriter.writeStartElement("Point");
+   xmlWriter.writeTextElement("coordinates",QString::number(wpList[i]->getLong(),'g',6)+","+QString::number(wpList[i]->getLat(),'g',6));
+    xmlWriter.writeEndElement();
+    xmlWriter.writeEndElement();
+    }
+
+    xmlWriter.writeEndElement();
+    xmlWriter.writeEndElement();
+    xmlWriter.writeEndDocument();
+
+    file.close();
 
 
-//}
+}
+
