@@ -178,33 +178,33 @@ void PeripheralController::controlMode()
 
 	if (m_pJoystick->rightStickX < -0.5)
 	{
-		yaw = UAV::getInstance()->getHeading() - 10;
+        yaw = RPA::getInstance()->getHeading() - 10;
 		bSend = true;
 
 		if (yaw < 0)
 		{
-			yaw = UAV::getInstance()->getHeading() - 10 + 360;
+            yaw = RPA::getInstance()->getHeading() - 10 + 360;
 		}
 	}
 	else if (m_pJoystick->rightStickX > 0.5)
 	{	
-		yaw = UAV::getInstance()->getHeading() + 10;
+        yaw = RPA::getInstance()->getHeading() + 10;
 		bSend = true;
 
 		if (yaw > 360)
 		{
-			yaw = UAV::getInstance()->getHeading() + 10 - 360;
+            yaw = RPA::getInstance()->getHeading() + 10 - 360;
 		}
 	}
 
 	if (m_pJoystick->topTrigger < -0.5)
 	{
-		height = UAV::getInstance()->getHeight() + 10;
+        height = RPA::getInstance()->getHeight() + 10;
 		bSend = true;
 	}
 	else if (m_pJoystick->topTrigger > 0.5)
 	{
-		height = UAV::getInstance()->getHeight() - 10;
+        height = RPA::getInstance()->getHeight() - 10;
 		bSend = true;
 	}
 

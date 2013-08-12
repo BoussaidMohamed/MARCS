@@ -117,6 +117,7 @@ private:
     bool open  ;
     bool motorOn;
     int m_map  ;
+    int nbClickMotors;
     char* numWpText;
     string textNumWaypoint ;
     string temp;
@@ -141,7 +142,6 @@ private:
     ComThread* myCom;
     QIcon iconOff;
     QIcon iconOn;
-    int nbClickMotors;
     MissionControl* myMissionControl;
 
 private slots:

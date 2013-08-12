@@ -19,10 +19,10 @@ SOURCES += main.cpp\
     MissionControl.cpp \
     PeripheralController.cpp \
     JoystickGrabber.cpp \
-    UAV.cpp \
     LogReplayControl.cpp \
     LatLongCoord.cpp \
-    marcs.cpp
+    marcs.cpp \
+    RPA.cpp
 QT       += xml
 
 CONFIG += console
@@ -38,10 +38,10 @@ HEADERS  += \
     MissionControl.h \
     PeripheralController.h \
     JoystickGrabber.h \
-    UAV.h \
     LogReplayControl.h \
     LatLongCoord.h \
-    marcs.h
+    marcs.h \
+    RPA.h
 
 FORMS    += \
     marcs.ui

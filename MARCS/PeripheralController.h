@@ -26,7 +26,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QMouseEvent>
 #include "JoystickGrabber.h"
-#include "UAV.h"
+#include "RPA.h"
 
 class PeripheralController : public QObject
 {

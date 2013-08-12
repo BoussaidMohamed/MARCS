@@ -791,8 +791,8 @@ void MARCS::batteryLevel(double p_pValue){
     int dureeDeVie = (((15*60)*(((p_pValue - 9.5) / (12.5 - 9.5)) * 100))/100) ;
     int pourcentage =(((p_pValue - 9.5) / (12.5 - 9.5)) * 100);
 
-    double latUAV= UAV::getInstance()->getCoordinates()->getLatitude();
-    double lonUAV = UAV::getInstance()->getCoordinates()->getLongitude();
+    double latRPA= RPA::getInstance()->getCoordinates()->getLatitude();
+    double lonRPA = RPA::getInstance()->getCoordinates()->getLongitude();
 
 
           if (pourcentage == 100 )
@@ -991,9 +991,9 @@ void MARCS::batteryLevel(double p_pValue){
               }
          }
 
-          if(lonUAV < 200 && latUAV < 200){
+          if(lonRPA < 200 && latRPA < 200){
 
-              createRpaMark(UAV::getInstance()->getHeading(),lonUAV,latUAV,GeoDataCoordinates::Degree);
+              createRpaMark(RPA::getInstance()->getHeading(),lonRPA,latRPA,GeoDataCoordinates::Degree);
           }
           else {
               //rien
@@ -1088,5 +1088,7 @@ void MARCS::createRpaMark(double hdg ,double lon, double lat, GeoDataCoordinates
          ui->MarbleWidget_plan->model()->treeModel()->update();
      }
    number ++ ;
+   qDebug()<<"lat" <<RPA::getInstance()->getCoordinates()->getLatitude();
+   qDebug()<<"lon" <<RPA::getInstance()->getCoordinates()->getLongitude();
 }
 

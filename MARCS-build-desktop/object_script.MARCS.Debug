@@ -8,10 +8,10 @@ INPUT(
 ./debug\MissionControl.o
 ./debug\PeripheralController.o
 ./debug\JoystickGrabber.o
-./debug\UAV.o
 ./debug\LogReplayControl.o
 ./debug\LatLongCoord.o
 ./debug\marcs.o
+./debug\RPA.o
 ./debug\qextserialport.o
 ./debug\qextserialenumerator.o
 ./debug\qextserialport_win.o
@@ -22,9 +22,9 @@ INPUT(
 ./debug\moc_MissionControl.o
 ./debug\moc_PeripheralController.o
 ./debug\moc_JoystickGrabber.o
-./debug\moc_UAV.o
 ./debug\moc_LogReplayControl.o
 ./debug\moc_marcs.o
+./debug\moc_RPA.o
 ./debug\moc_qextserialenumerator.o
 ./debug\qrc_ressource.o
 );

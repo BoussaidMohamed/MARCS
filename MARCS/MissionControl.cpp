@@ -19,9 +19,9 @@ MissionControl::MissionControl()
 	connect(PeripheralController::getInstance(), SIGNAL(controllerConnected()), this, SIGNAL(controllerConnected()));
 
 	connect(CommunicationControl::getInstance(), SIGNAL(geolocation(double, double, double, double)), 
-		UAV::getInstance(), SLOT(geolocation(double, double, double, double)));
-	connect(CommunicationControl::getInstance(), SIGNAL(updateHeading(double)), UAV::getInstance(), SLOT(updateHeading(double)));
-	connect(CommunicationControl::getInstance(), SIGNAL(updateHeight(double)), UAV::getInstance(), SLOT(updateHeight(double)));
+        RPA::getInstance(), SLOT(geolocation(double, double, double, double)));
+    connect(CommunicationControl::getInstance(), SIGNAL(updateHeading(double)), RPA::getInstance(), SLOT(updateHeading(double)));
+    connect(CommunicationControl::getInstance(), SIGNAL(updateHeight(double)), RPA::getInstance(), SLOT(updateHeight(double)));
 	connect(CommunicationControl::getInstance(), SIGNAL(updateGPSQuality(int)), this, SLOT(updateGPS(int)));
 	connect(CommunicationControl::getInstance(), SIGNAL(batteryLevel(double)), this, SLOT(updateBattery(double)));
 	connect(CommunicationControl::getInstance(), SIGNAL(updateStatus(short)), this, SLOT(updateRadiocommand(short)));
@@ -31,7 +31,7 @@ MissionControl::MissionControl()
 	connect(CommunicationControl::getInstance(), SIGNAL(rcData(short, short, short, short, short, short, char)), 
 		this, SLOT(rcData(short, short, short, short, short, short, char)));
 
-	connect(UAV::getInstance(), SIGNAL(positionChanged()), this, SLOT(updateDigression()));
+    connect(RPA::getInstance(), SIGNAL(positionChanged()), this, SLOT(updateDigression()));
 	connect(&m_pWaypointTimer, SIGNAL(timeout()), this, SLOT(sendWaypoint()));
 	connect(&m_pLaunchTimer, SIGNAL(timeout()), this, SIGNAL(sendLaunch()));
 
@@ -87,7 +87,7 @@ void MissionControl::updateGPS(int p_pValue)
 
 void MissionControl::updateDigression()
 {
-	LatLongCoord* p_pPosition = UAV::getInstance()->getCoordinates();
+    LatLongCoord* p_pPosition = RPA::getInstance()->getCoordinates();
 
         //if (m_pPlan->getNextWaypointIndex() < m_pPlan->getWaypointList().size() && m_pPlan->getNextWaypointIndex() > 0)
 	{
@@ -270,47 +270,47 @@ void MissionControl::inFlight(char p_cValue)
 
 void MissionControl::moveForward()
 {
-	emit move(10, 0, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading());
+    emit move(10, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
 }
 
 void MissionControl::moveBackward()
 {
-	emit move(-10, 0, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading());
+    emit move(-10, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
 }
 
 void MissionControl::moveLeft()
 {
-	emit move(0, 10, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading());
+    emit move(0, 10, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
 }
 
 void MissionControl::moveRight()
 {
-	emit move(0, -10, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading());
+    emit move(0, -10, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
 }
 
 void MissionControl::turnLeft()
 {
-	emit move(0, 0, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading() - 10);
+    emit move(0, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading() - 10);
 }
 
 void MissionControl::turnRight()
 {
-	emit move(0, 0, UAV::getInstance()->getAltitude(), UAV::getInstance()->getHeading() + 10);
+    emit move(0, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading() + 10);
 }
 
 void MissionControl::up()
 {
-	emit move(0, 0, UAV::getInstance()->getAltitude() + 10, UAV::getInstance()->getHeading());
+    emit move(0, 0, RPA::getInstance()->getAltitude() + 10, RPA::getInstance()->getHeading());
 }
 
 void MissionControl::down()
 {
-	emit move(0, 0, UAV::getInstance()->getAltitude() - 10, UAV::getInstance()->getHeading());
+    emit move(0, 0, RPA::getInstance()->getAltitude() - 10, RPA::getInstance()->getHeading());
 }
 
 void MissionControl::addMark()
 {
-        //Waypoint* pWaypoint = new Waypoint(UAV::getInstance()->getCoordinates(), UAV::getInstance()->getHeight());
+        //Waypoint* pWaypoint = new Waypoint(RPA::getInstance()->getCoordinates(), RPA::getInstance()->getHeight());
         //pWaypoint->setNumber(MissionControl::getInstance()->getPlan()->getWaypointList().size() +
         //	MissionControl::getInstance()->getPlan()->getMarkList().size() + 1);
         //pWaypoint->setAction(new Action(GOTO));
