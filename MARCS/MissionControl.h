@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file MissionControl.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/06/05 (creation_date)
-* @date 2012/07/20 (latest_modification_date)
-*
-* @brief Mission controller (execution management)
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __MISSIONCONTROL
 #define __MISSIONCONTROL
 

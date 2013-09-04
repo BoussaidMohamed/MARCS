@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file JoystickGrabber.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/04/12 (creation_date)
-* @date 2012/07/19 (latest_modification_date)
-*
-* @brief Game controller (XBox 360 typed) handler
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __JOYSTICKGRABBER
 #define __JOYSTICKGRABBER
 

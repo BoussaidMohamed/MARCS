@@ -1,23 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file ProgramControl.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/06/26 (creation_date)
-* @date 2012/07/20 (latest_modification_date)
-*
-* @brief Program controller (execution management)
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
-
 #ifndef __PERIPHERALCONTROLLER
 #define __PERIPHERALCONTROLLER
 

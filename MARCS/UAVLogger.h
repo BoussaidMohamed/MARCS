@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file UAVLogger.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/06/04 (creation_date)
-* @date 2012/07/19 (latest_modification_date)
-*
-* @brief Write logs in files
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __LOGGER
 #define __LOGGER
 

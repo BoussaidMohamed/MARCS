@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file LatLongCoord.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/06/07 (creation_date)
-* @date 2012/07/19 (latest_modification_date)
-*
-* @brief Latitude / longitude coordinates model
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __LATLONGCOORD
 #define __LATLONGCOORD
 

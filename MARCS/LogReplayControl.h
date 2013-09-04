@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file LogReplayControl.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/08/16 (creation_date)
-* @date 2012/08/16 (latest_modification_date)
-*
-* @brief Log replay controller
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __LOGREPLAYCONTROL
 #define __LOGREPLAYCONTROL
 

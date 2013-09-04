@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file ComThread.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/04/19 (creation_date)
-* @date 2012/07/19 (latest_modification_date)
-*
-* @brief GCS / MUAV communication thread
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __COMTHREAD
 #define __COMTHREAD
 
