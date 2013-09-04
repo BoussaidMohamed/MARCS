@@ -28,6 +28,7 @@ mission::mission(int num): n_mission(num)
 }
 mission::~mission()
 {
+    myMission.~QList();
 
 }
 
@@ -80,6 +81,8 @@ void mission::saveMission(QList < waypoint* > wpList , QString filename){
          xmlWriter.writeEndDocument();
 
          file.close();
+
+         delete[] time_mission;
 
 }
 
@@ -186,6 +189,7 @@ QList <waypoint* > mission::loadMission( QString filename){
         xml.clear();
 
        return wpList;
+       delete file ;
    }
 
 void mission::saveMissionKml(QList<waypoint *> wpList, QString fileName){
@@ -221,3 +225,10 @@ void mission::saveMissionKml(QList<waypoint *> wpList, QString fileName){
 
 }
 
+QList <waypoint*> mission::getWaypointList(){
+    return myMission;
+}
+
+void mission::setWaypointList(QList<waypoint *> mission){
+    myMission = mission;
+}

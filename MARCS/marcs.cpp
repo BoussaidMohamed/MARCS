@@ -1,7 +1,5 @@
 #include "marcs.h"
 #include "ui_marcs.h"
-#include "QGridLayout"
-#include "qextserialenumerator.h"
 
 MARCS::MARCS(QWidget *parent) :
     QMainWindow(parent),
@@ -9,16 +7,39 @@ MARCS::MARCS(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+
     iconOn.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
     iconOff.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOff.png"), QSize(), QIcon::Normal, QIcon::Off);
-    nbClickMotors=0;
-
-    affichageList = false ;//etat d'affichage de la liste du log
+    iconTakeOff.addFile(QString::fromUtf8(":/new/prefix1/icon/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
+    iconLand.addFile(QString::fromUtf8(":/new/prefix1/icon/land.png"), QSize(), QIcon::Normal, QIcon::Off);
 
     place =  new GeoDataPlacemark( "" );
     document = new GeoDataDocument();
+    placemarkRPA = new GeoDataPlacemark( "" );
+    styleArchRPA = new GeoDataStyle();
+    placemarkHome = new GeoDataPlacemark( "" );
+    styleArchHome = new GeoDataStyle();
+    placemarkMark = new GeoDataPlacemark( "" );
+    styleArchMark = new GeoDataStyle();
+
     documentRPA = new GeoDataDocument();
-    myMissionControl= MissionControl::getInstance();
+    documentHome = new GeoDataDocument();
+    documentMark = new GeoDataDocument();
+    myCom = new ComThread();
+    numWpText = new char[32];
+
+    ItemLon = new QTableWidgetItem;
+    ItemLat = new QTableWidgetItem;
+    ItemAlt = new QTableWidgetItem;
+    ItemHdg = new QTableWidgetItem;
+    ItemName = new QTableWidgetItem;
+
+    ItemMarkAlt = new QTableWidgetItem;
+    ItemMarkHdg = new QTableWidgetItem;
+    ItemMarkLat = new QTableWidgetItem;
+    ItemMarkLon = new QTableWidgetItem;
+    ItemMarkNum = new QTableWidgetItem;
 
     m_pComWindow = new QMainWindow();
     layout = new QGridLayout();
@@ -32,30 +53,18 @@ MARCS::MARCS(QWidget *parent) :
     layout->addWidget(m_pValidCom, 1, 0, 1, 2);
     widget->setLayout(layout);
     widget->move(500,500);
+    widget->setMaximumSize(180,100);
+    widget->setMinimumSize(180,100);
 
-    myCom = new ComThread();
-    myComControl=CommunicationControl::getInstance();
-    QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
 
-    foreach (QextPortInfo port, ports) {
-        if (port.portName.at(0).toAscii()=='C'){
-
-           m_pComList->addItem(port.portName);
-
-       }
-    }
-
-    num_waypoint = 0;
-    m_map = 0;
-    numWpText = new char[32];
-    open = false ;
     //config marble
     ui->MarbleWidget_smallView->setShowOverviewMap(false);
     ui->MarbleWidget_plan->setShowOverviewMap(false);
     ui->MarbleWidget_smallView->setShowScaleBar(false);
     ui->MarbleWidget_smallView->setShowCompass(false);
     ui->MarbleWidget_smallView->hide();
-
+    ui->centralwidget->move(300,300);
+    ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
 
     //initialisation de l'intreface
     ui->tableWidget->hide();
@@ -65,13 +74,20 @@ MARCS::MARCS(QWidget *parent) :
     ui->actionVideo->setEnabled(true);
     ui->listLog->hide();
     ui->actionEdit_waypoint->setEnabled(false);
-    //ui->stop_button->hide();
+    ui->tableMarkPoint->hide();
+    ui->tableRPA->hide();
+    ui->labelMark->hide();
+    ui->labelMission->hide();
+    ui->labelRPA->hide();
+    ui->AddToMission_button->hide();
+    ui->NextWaypoint_button->hide();
+    ui->ListLogFinal->hide();
+    ui->ListLogFinal->setStyleSheet("* { background-color: rgb(240,240,240) }");
     showEditWaypoint(false);
-
     //signal&&slot de l'application
     connect(ui->actionClose,SIGNAL(triggered()),this,SLOT(close()));
-    connect(ui->led_button,SIGNAL(clicked()),this,SLOT(afficheList()));
-    connect(ui->status_button,SIGNAL(clicked()),this,SLOT(afficheList()));
+    connect(ui->led_button,SIGNAL(clicked()),this,SLOT(showList()));
+    connect(ui->status_button,SIGNAL(clicked()),this,SLOT(showList()));
     connect(ui->actionLoad_map,SIGNAL(triggered()),this,SLOT(openNewMap()));
     connect(ui->actionSave_mission,SIGNAL(triggered()),this,SLOT(saveMission()));
     connect(ui->actionVideo,SIGNAL(triggered()),this,SLOT(openNewWindowVideo()));
@@ -87,15 +103,19 @@ MARCS::MARCS(QWidget *parent) :
     connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
     connect(this,SIGNAL(clickOn()),this,SLOT(startMotors()));
     connect(this,SIGNAL(clickOff()),this,SLOT(stopMotors()));
+    connect(this,SIGNAL(takeOff()),CommunicationControl::getInstance(),SIGNAL(sendLaunch()));
+    connect(this,SIGNAL(landRPA()),CommunicationControl::getInstance(),SIGNAL(sendLand()));
+    connect(this,SIGNAL(takeOff()),this,SLOT(fly()));
+    connect(this,SIGNAL(landRPA()),this,SLOT(stopFly()));
+    connect(ui->goHome_button,SIGNAL(clicked()),CommunicationControl::getInstance(),SIGNAL(sendHome()));
     connect(CommunicationControl::getInstance(), SIGNAL(updateHeight(double)), this, SLOT(setHeight(double)));
-
     connect(MissionControl::getInstance(), SIGNAL(batteryLevel(double)), this, SLOT(batteryLevel(double)));
-
-
+    connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(GPSLevel(int)));
+    connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(setTableRPA()));
+    connect(this,SIGNAL(next(double,double,double,double)),CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)));
+    connect(ui->actionLog,SIGNAL(triggered()),this,SLOT(showLog()));
 
     paintDevice = this;
-
-
         // If the globe covers fully the screen then we can use the faster
         // RGB32 as there are no translucent areas involved.
         QImage::Format imageFormat = ( ui->MarbleWidget_plan->viewport()->mapCoversViewport() )
@@ -103,19 +123,39 @@ MARCS::MARCS(QWidget *parent) :
                                      : QImage::Format_ARGB32_Premultiplied;
         // Paint to an intermediate image
         image = QImage( ui->MarbleWidget_plan->width(),ui->MarbleWidget_plan->height(), imageFormat );
-
         image.fill( Qt::transparent );
         paintDevice = &image;
 
     gp = new GeoPainter ( paintDevice, ui->MarbleWidget_plan->viewport(), ui->MarbleWidget_plan->mapQuality() );
-    drawMission(gp);
+    home = new waypoint(0,0,0,0,0,0,0,0);
 
-    motorOn = false ;
-    ui->centralwidget->move(300,300);
     number = 0 ;
+    num_add_waypoint = 0 ;
+    num_waypoint = 0;
+    m_map = 0;
+    nbClickMotors=0;
+    n = 0;
+    rowAdd = 0;
 
+    affichageList = false ;//etat d'affichage de la liste du log
+    logShow40 = false ;
+    logShow30 = false ;
+    logShow20 = false ;
+    logShow10 = false ;
+    homeShow = false ;
+    land = false ;
+    open = false ;
+    motorOn = false ;
+    clear_mission = false ;
+    nextIsShowing = false ;
+    takeOffClicked = false ;
+    gps0 = false ;
+    gps1 = false;
+    gps2 = false;
+    gps3 = false;
+    gps4 = false;
+    gps5 = false;
 }
-
 MARCS::~MARCS()
 {
     delete ui;
@@ -124,6 +164,8 @@ MARCS::~MARCS()
     delete place ;
     delete document ;
     delete documentRPA;
+    delete documentHome;
+    delete documentMark;
     delete tempo;
     delete manager ;
     delete request;
@@ -131,30 +173,54 @@ MARCS::~MARCS()
     delete request_smallMap;
     delete[] numWpText;
     delete m_listView;
+    delete ItemAlt;
+    delete ItemHdg;
+    delete ItemLat;
+    delete ItemLon;
+    delete ItemName;
+    delete ItemMarkAlt;
+    delete ItemMarkHdg;
+    delete ItemMarkLat;
+    delete ItemMarkLon;
+    delete ItemMarkNum;
+    delete placemarkRPA ;
+    delete styleArchRPA ;
+    delete placemarkHome;
+    delete styleArchHome;
+    delete placemarkMark ;
+    delete styleArchMark ;
     myMission.~mission();
     image.~QImage();
     wpListOpen.~QList();
     wpListSave.~QList();
+    wpListAdd.~QList();
+    m_mission.~QList();
 }
-
-
-
-
 //Delete a mission from the view
 void MARCS::clearMission(){
 
-    ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
-    ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
-    ui->actionClear_mission->setEnabled(false);
-    ui->actionSave_mission->setEnabled(false);
-    showEditWaypoint(false);
-    ui->actionEdit_waypoint->setEnabled(false);
+
+    int reponse =  QMessageBox::question(this, "Clear Mission", "Do You Want To Clear This Mission?", QMessageBox::Yes | QMessageBox::No);
+
+        if (reponse == QMessageBox::Yes)
+        {
+            ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
+            ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
+            ui->actionClear_mission->setEnabled(false);
+            ui->actionSave_mission->setEnabled(false);
+            showEditWaypoint(false);
+            ui->actionEdit_waypoint->setEnabled(false);
+            ui->tableWidget->clear();
+            clear_mission = true ;
+        }
+        else if (reponse == QMessageBox::No)
+        {
+//rien
+        }
 
 }
-
-
 //Show the list of logs
-void MARCS::afficheList()
+void MARCS::showList()
 {
     if (affichageList==false){
         ui->listLog->show();
@@ -167,14 +233,12 @@ void MARCS::afficheList()
 
 }
 //open a mission
-
 void MARCS::openMission(){
 
-    path = QFileDialog::getOpenFileName(this, "Load a mission", "./FILES/mission/", "KML (*.kml)");
+    path = QFileDialog::getOpenFileName(this, "Load a mission", "./mission/", "KML (*.kml)");
     QFileInfo inputFile(path);
     string m ;
     string nameFileOpen;
-
     //get the path of the file
     m = path.toUtf8().constData();
     //get the file name selected by the user
@@ -187,10 +251,8 @@ void MARCS::openMission(){
     {
       nameFileOpen = m;
   }
-    string fileNameTempOpen = "./FILES/MissionXML/" + nameFileOpen +".xml" ;
+    string fileNameTempOpen = "./MissionXML/" + nameFileOpen +".xml" ;
     fileOpened =  QString::fromStdString(fileNameTempOpen);
-
-
 
     // Access the shared route request (start, destination and parameters)
     manager = ui->MarbleWidget_plan->model()->routingManager();
@@ -215,12 +277,20 @@ void MARCS::openMission(){
     num_waypoint=0;
     showEditWaypoint(false);
     wpListSave.clear();
+    myMission.setWaypointList(wpListOpen);
+    m_mission = myMission.getWaypointList();
+    clear_mission = false ;
+    if (takeOffClicked== true){
+        ui->NextWaypoint_button->show();
+    }
+    else {
+        //rien
+    }
 }
-
 //Save a mission
 void MARCS::saveMission(){
 
-    QString  fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "./FILES/mission/",  "KML files (*.kml)"  );
+    QString  fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "./mission/",  "KML files (*.kml)"  );
     QString hideFile ;
     string m ;
     string nameFile;
@@ -235,20 +305,34 @@ void MARCS::saveMission(){
     {
       nameFile = m;
   }
-    string fileNameTemp =  "./FILES/MissionXML/" + nameFile +".xml" ;
+    string fileNameTemp =  "./MissionXML/" + nameFile +".xml" ;
     hideFile =  QString::fromStdString(fileNameTemp);
 
 
-    myMission.saveMissionKml(wpListSave,fileName);
-    myMission.saveMission(wpListSave,hideFile);
+    if (m_mission.length()==0){
+
+        myMission.saveMissionKml(wpListSave,fileName);
+        myMission.saveMission(wpListSave,hideFile);
+
+    }
+    else {
+
+        myMission.saveMissionKml(myMission.getWaypointList(),fileName);
+        myMission.saveMission(myMission.getWaypointList(),hideFile);
+
+    }
+
     ui->actionSave_mission->setEnabled(false);
     num_waypoint = 0 ;
 
+    QMessageBox::information(this, "Save Mission", "The Mission Was Saved");
+
+
 
 }
-
 //add waypoint to the Flight Plan
 void MARCS::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
+    clear_mission = false ;
 
   sprintf(numWpText,"%d",num_waypoint);
   temp = string(numWpText);
@@ -275,8 +359,8 @@ void MARCS::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
  ui->MarbleWidget_plan->repaint();
  ui->MarbleWidget_plan->repaint();
  open = false ;
+ myMission.setWaypointList(wpListSave);
 }
-
 //Show the page "Flight Plan"
 void MARCS::openNewWindowMain()
 {
@@ -288,24 +372,38 @@ void MARCS::openNewWindowMain()
     ui->actionFlight_plan->setEnabled(false);
     ui->actionFlight_data->setEnabled(true);
     ui->actionVideo->setEnabled(true);
+    ui->tableMarkPoint->hide();
+    ui->tableRPA->hide();
+    ui->labelMark->hide();
+    ui->labelMission->hide();
+    ui->labelRPA->hide();
+    ui->ListLogFinal->hide();
+    ui->actionLog->setEnabled(true);
+    ui->AddToMission_button->hide();
 
 }
-
 //Show the page "Flight DATA"
 void MARCS::openNewWindowData()
 {
     ui->MarbleWidget_plan->hide();
     ui->MarbleWidget_smallView->hide();
     ui->tableWidget->show();
+    ui->tableMarkPoint->show();
+    ui->tableRPA->show();
+    ui->labelMark->show();
+    ui->labelMission->show();
+    ui->labelRPA->show();
     ui->snapShoot_button->hide();
     ui->addMark_button->hide();
     ui->actionFlight_plan->setEnabled(true);
     ui->actionFlight_data->setEnabled(false);
     ui->actionVideo->setEnabled(true);
+    ui->AddToMission_button->show();
+    ui->ListLogFinal->hide();
+    ui->actionLog->setEnabled(true);
     showEditWaypoint(false);
 
 }
-
 //Show the page "VIDEO"
 void MARCS::openNewWindowVideo()
 {
@@ -317,8 +415,39 @@ void MARCS::openNewWindowVideo()
     ui->actionFlight_plan->setEnabled(true);
     ui->actionFlight_data->setEnabled(true);
     ui->actionVideo->setEnabled(false);
+    ui->tableMarkPoint->hide();
+    ui->tableRPA->hide();
+    ui->labelMark->hide();
+    ui->labelMission->hide();
+    ui->labelRPA->hide();
+    ui->ListLogFinal->hide();
+    ui->actionLog->setEnabled(true);
     showEditWaypoint(false);
 
+    ui->AddToMission_button->hide();
+
+}
+
+void MARCS::showLog(){
+    ui->ListLogFinal->show();
+
+    ui->MarbleWidget_plan->hide();
+    ui->MarbleWidget_smallView->hide();
+    ui->tableWidget->hide();
+    ui->snapShoot_button->hide();
+    ui->addMark_button->hide();
+    ui->actionFlight_plan->setEnabled(true);
+    ui->actionFlight_data->setEnabled(true);
+    ui->actionVideo->setEnabled(true);
+    ui->actionLog->setEnabled(false);
+    ui->tableMarkPoint->hide();
+    ui->tableRPA->hide();
+    ui->labelMark->hide();
+    ui->labelMission->hide();
+    ui->labelRPA->hide();
+    showEditWaypoint(false);
+
+    ui->AddToMission_button->hide();
 }
 
 //Close the window
@@ -326,12 +455,10 @@ void MARCS::close()
 {
     exit(0);
 }
-
 //Load a map with the format .osm
 void MARCS::openNewMap()
-
 {
-    path = QFileDialog::getOpenFileName(this, "Load a map","./FILES/map/", "OSM (*.osm)");
+    path = QFileDialog::getOpenFileName(this, "Load a map","./map/", "OSM (*.osm)");
     QFileInfo inputFile(path);
 
     if ( m_map == 0  ) {
@@ -347,7 +474,6 @@ void MARCS::openNewMap()
     }
 }
 //Switch Mode ( Flight Plan , Video )
-
 void MARCS::switchToMap()
 {
 
@@ -360,63 +486,40 @@ void MARCS::switchToMap()
     ui->actionFlight_data->setEnabled(true);
     ui->actionVideo->setEnabled(true);
 }
-
-void MARCS::drawMission(GeoPainter *painter){
-
-    GeoDataCoordinates France( 2.2, 48.52, 0.0, GeoDataCoordinates::Degree );
-        painter->setPen( QColor( 0, 0, 0 ) );
-        painter->drawText( France, "France" );
-
-        GeoDataCoordinates Canada( -77.02, 48.52, 0.0, GeoDataCoordinates::Degree );
-        painter->setPen( QColor( 0, 0, 0 ) );
-        painter->drawText( Canada, "Canada" );
-
-        //A line from France to Canada without tessellation
-
-        GeoDataLineString shapeNoTessellation( NoTessellation );
-        shapeNoTessellation << France << Canada;
-
-        painter->setPen( oxygenSkyBlue4 );
-        painter->drawPolyline( shapeNoTessellation );
-
-        //The same line, but with tessellation
-
-        GeoDataLineString shapeTessellate( Tessellate );
-        shapeTessellate << France << Canada;
-
-        painter->setPen( oxygenBrickRed4 );
-        painter->drawPolyline( shapeTessellate );
-
-        //Now following the latitude circles
-
-        GeoDataLineString shapeLatitudeCircle( RespectLatitudeCircle | Tessellate );
-        shapeLatitudeCircle << France << Canada;
-
-        painter->setPen( oxygenForestGreen4 );
-        painter->drawPolyline( shapeLatitudeCircle );
-}
-
+//Display the edit waypoint zone
 void MARCS::editWaypoint(){
+int i = 0;
+int maxCB = ui->comboBox_ListWaypoint->count();
 
+    if(ui->comboBox_ListWaypoint->count()>0 ){
+        while (i < maxCB)
+            {
+                ui->comboBox_ListWaypoint->removeItem(0);
+                i++;
+            }
+    }
+    else {
+        //rien
+    }
     ui->comboBox_ListWaypoint->show();
-
     ui->label_Num_Waypoint->show();
     ui->actionEdit_waypoint->setEnabled(false);
-    ui->comboBox_ListWaypoint->clear();
-
     if ( open == false){
 
         for ( int i = 0 ; i < wpListSave.size(); i++){
             ui->comboBox_ListWaypoint->addItem(QString::number(i));
         }
     }
+
     else {
         for ( int i = 0 ; i < wpListOpen.size(); i++){
             ui->comboBox_ListWaypoint->addItem(QString::number(i));
         }
     }
-}
+    ui->NextWaypoint_button->hide();
 
+}
+//Get information of each waypoints and show it
 void MARCS::loadData(){
     int h ;
     int m ;
@@ -424,7 +527,7 @@ void MARCS::loadData(){
 
    showEditWaypoint(true);
 
-    if ( open == false){
+     if ( open == false){
         h = wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() / 3600 ;
         m = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
         s = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
@@ -448,10 +551,8 @@ void MARCS::loadData(){
     connect(ui->SaveEdit_button,SIGNAL(clicked()),this,SLOT(saveEditData()));
     connect(ui->FinishEdit_button_2,SIGNAL(clicked()),this,SLOT(finishEditData()));
     ui->SaveEdit_button->setEnabled(true);
-
-
    }
-
+//Save the modification on the XML file
 void MARCS::saveEditData(){
     bool ok = false ;
     QTime tempo = ui->timeEdit_Mission->time();
@@ -477,17 +578,17 @@ void MARCS::saveEditData(){
 ui->SaveEdit_button->setEnabled(false);
 
 }
-
+//Close/hide the edit waypoint zone
 void MARCS::finishEditData(){
 
-
 showEditWaypoint(false);
-
 ui->actionEdit_waypoint->setEnabled(true);
 ui->actionSave_mission->setEnabled(true);
-
+if (nextIsShowing == true){
+    ui->NextWaypoint_button->show();
 }
-
+}
+//Display the edit waypoint zone
 void MARCS::showEditWaypoint(bool show){
 
     if ( show == true ){
@@ -526,8 +627,8 @@ void MARCS::showEditWaypoint(bool show){
     }
 
 }
+//Load information of the waypoint that user chose
 void MARCS::on_comboBox_ListWaypoint_currentIndexChanged(int index)
-
 {
     int h ;
     int m ;
@@ -561,115 +662,123 @@ void MARCS::on_comboBox_ListWaypoint_currentIndexChanged(int index)
     ui->SaveEdit_button->setEnabled(true);
 
 }
-
+//Delete a waypoint from the XML,KML and the Marble view
 void MARCS::on_Delete_button_clicked()
 {
-     int index = ui->comboBox_ListWaypoint->currentIndex() ;
 
+    int index = ui->comboBox_ListWaypoint->currentIndex() ;
 
+    int reponse =  QMessageBox::question(this, "Delete Waypoint", "Do You Want To Delete The Waypoint Number "+QString::number(index)+" ?", QMessageBox::Yes | QMessageBox::No);
 
+        if (reponse == QMessageBox::Yes)
+        {
+            if ( open == false){
 
-         if ( open == false){
-
-             if (wpListSave.size() == 1 )
-             {
-                 request->remove(index);
-                 request_smallMap->remove(index);
-                 ui->MarbleWidget_plan->repaint();
-                 ui->MarbleWidget_smallView->repaint();
-                 wpListSave.removeAt(index);
-                 ui->comboBox_ListWaypoint->clear();
-
-                 for ( int i = 0 ; i < wpListSave.size(); i++){
-                     sprintf(numWpText,"%d",i);
-                     temp = string(numWpText);
-                     textNumWaypoint = "" + temp ;
-                     qstr = QString::fromStdString(textNumWaypoint);
-                     ui->comboBox_ListWaypoint->addItem(QString::number(i));
-                     request->setName(i,qstr);
-
-             }
-                 showEditWaypoint(false);
-             }
-             else {
-
-                 request->remove(index);
-                 request_smallMap->remove(index);
-                 ui->MarbleWidget_plan->repaint();
-                 ui->MarbleWidget_smallView->repaint();
-                 wpListSave.removeAt(index);
-                 ui->comboBox_ListWaypoint->clear();
-
-                 for ( int i = 0 ; i < wpListSave.size(); i++)
+                 if (wpListSave.size() == 1 )
                  {
-                     sprintf(numWpText,"%d",i);
-                     temp = string(numWpText);
-                     textNumWaypoint = "" + temp ;
-                     qstr = QString::fromStdString(textNumWaypoint);
-                     ui->comboBox_ListWaypoint->addItem(QString::number(i));
-                     request->setName(i,qstr);
-                     wpListSave[i]->setNum(i);
+                     request->remove(index);
+                     request_smallMap->remove(index);
+                     ui->MarbleWidget_plan->repaint();
+                     ui->MarbleWidget_smallView->repaint();
+                     wpListSave.removeAt(index);
+                     ui->comboBox_ListWaypoint->clear();
+
+                     for ( int i = 0 ; i < wpListSave.size(); i++){
+                         sprintf(numWpText,"%d",i);
+                         temp = string(numWpText);
+                         textNumWaypoint = "" + temp ;
+                         qstr = QString::fromStdString(textNumWaypoint);
+                         ui->comboBox_ListWaypoint->addItem(QString::number(i));
+                         request->setName(i,qstr);
+
                  }
-                 qDebug() << wpListSave[0]->getNum();
+                     showEditWaypoint(false);
+                 }
+                 else {
+
+                     request->remove(index);
+                     request_smallMap->remove(index);
+                     ui->MarbleWidget_plan->repaint();
+                     ui->MarbleWidget_smallView->repaint();
+                     wpListSave.removeAt(index);
+                     ui->comboBox_ListWaypoint->clear();
+
+                     for ( int i = 0 ; i < wpListSave.size(); i++)
+                     {
+                         sprintf(numWpText,"%d",i);
+                         temp = string(numWpText);
+                         textNumWaypoint = "" + temp ;
+                         qstr = QString::fromStdString(textNumWaypoint);
+                         ui->comboBox_ListWaypoint->addItem(QString::number(i));
+                         request->setName(i,qstr);
+                         wpListSave[i]->setNum(i);
+                     }
+
+                 }
+
 
              }
+
+             else {
+                     if (wpListOpen.size() == 1 ){
+
+                         wpListOpen.removeAt(index);
+                         ui->comboBox_ListWaypoint->clear();
+
+                         for ( int i = 0 ; i < wpListOpen.size(); i++)
+                         {
+                             ui->comboBox_ListWaypoint->addItem(QString::number(i));
+                             wpListOpen[i]->setNum(i);
+                         }
+
+                         showEditWaypoint(false);
+
+                         myMission.saveMission(wpListOpen,fileOpened);
+                         wpListOpen =  myMission.loadMission(fileOpened);
+                         ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
+                         ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
+                         myMission.saveMissionKml(wpListOpen,lastMission);
+                         ui->MarbleWidget_plan->model()->addGeoDataFile( lastMission );
+                         ui->MarbleWidget_smallView->model()->addGeoDataFile( lastMission );
+                         ui->MarbleWidget_plan->repaint();
+                         ui->actionClear_mission->setEnabled(true);
+
+                     }
+                     else {
+
+                 showEditWaypoint(true);
+                 wpListOpen.removeAt(index);
+                 ui->comboBox_ListWaypoint->clear();
+
+                 for ( int i = 0 ; i < wpListOpen.size(); i++){
+                     ui->comboBox_ListWaypoint->addItem(QString::number(i));
+                     wpListOpen[i]->setNum(i);
+                 }
+
+                 myMission.saveMission(wpListOpen,fileOpened);
+                 wpListOpen =  myMission.loadMission(fileOpened);
+                 ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
+                 ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
+                 myMission.saveMissionKml(wpListOpen,lastMission);
+                 ui->MarbleWidget_plan->model()->addGeoDataFile( lastMission );
+                 ui->MarbleWidget_smallView->model()->addGeoDataFile( lastMission );
+                 ui->MarbleWidget_plan->repaint();
+                 ui->actionClear_mission->setEnabled(true);
 
 
          }
 
-         else {
-                 if (wpListOpen.size() == 1 ){
+         }
 
-                     wpListOpen.removeAt(index);
-                     ui->comboBox_ListWaypoint->clear();
-
-                     for ( int i = 0 ; i < wpListOpen.size(); i++)
-                     {
-                         ui->comboBox_ListWaypoint->addItem(QString::number(i));
-                         wpListOpen[i]->setNum(i);
-                     }
-
-                     showEditWaypoint(false);
-
-                     myMission.saveMission(wpListOpen,fileOpened);
-                     wpListOpen =  myMission.loadMission(fileOpened);
-                     ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
-                     ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
-                     myMission.saveMissionKml(wpListOpen,lastMission);
-                     ui->MarbleWidget_plan->model()->addGeoDataFile( lastMission );
-                     ui->MarbleWidget_smallView->model()->addGeoDataFile( lastMission );
-                     ui->MarbleWidget_plan->repaint();
-                     ui->actionClear_mission->setEnabled(true);
-
-                 }
-                 else {
-
-             showEditWaypoint(true);
-             wpListOpen.removeAt(index);
-             ui->comboBox_ListWaypoint->clear();
-
-             for ( int i = 0 ; i < wpListOpen.size(); i++){
-                 ui->comboBox_ListWaypoint->addItem(QString::number(i));
-                 wpListOpen[i]->setNum(i);
-             }
-
-             myMission.saveMission(wpListOpen,fileOpened);
-             wpListOpen =  myMission.loadMission(fileOpened);
-             ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
-             ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
-             myMission.saveMissionKml(wpListOpen,lastMission);
-             ui->MarbleWidget_plan->model()->addGeoDataFile( lastMission );
-             ui->MarbleWidget_smallView->model()->addGeoDataFile( lastMission );
-             ui->MarbleWidget_plan->repaint();
-             ui->actionClear_mission->setEnabled(true);
+        }
+        else if (reponse == QMessageBox::No)
+        {
+//rien
+        }
 
 
-     }
-
-     }
 
    }
-
 //Altitude value control ( it must be < 151 )
 void MARCS::on_lineEdit_Alt_textChanged(QString )
 {
@@ -684,7 +793,6 @@ void MARCS::on_lineEdit_Alt_textChanged(QString )
         ui->SaveEdit_button->setEnabled(true);
     }
 }
-
 //Heading value control ( it must be < 360 )
 void MARCS::on_lineEdit_HDG_textEdited(QString )
 {
@@ -713,19 +821,30 @@ void MARCS::on_timeEdit_Mission_timeChanged(const QTime &date)
     }
 
 }
-
+//Show Connect Dialog
 void MARCS::showConnectDialog(){
-  //  uiConnect->show();
+
+    QList<QextPortInfo> ports = QextSerialEnumerator::getPorts();
+
+    m_pComList->clear();
+
+    foreach (QextPortInfo port, ports) {
+        if (port.portName.at(0).toAscii()=='C'){
+
+           m_pComList->addItem(port.portName);
+
+       }
+    }
     widget->show();
     connect(m_pValidCom,SIGNAL(clicked()),this,SLOT(validCom()));
 
-}
-
+    }
+//Event listener of closing the window
 void MARCS::closeEvent(QCloseEvent *event)
 {
     close();
 }
-
+//emit 2 different signals from the some button
 void MARCS::on_start_button_clicked()
 {
     if ( motorOn == false ){
@@ -737,19 +856,18 @@ void MARCS::on_start_button_clicked()
         motorOn = false ;
     }
 }
-
+//Save the serial port
 void MARCS::validCom(){
     ui->start_button->setEnabled(true);
     widget->hide();
+    CommunicationControl::getInstance()->start(m_pComList->currentText());
 
 }
-
+//start motor of the RPA
 void MARCS::startMotors(){
 
     connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
     if (nbClickMotors == 0){
-
-        CommunicationControl::getInstance()->start(m_pComList->currentText());
         myCom->sendMotOn();
         ui->start_button->setIcon(iconOn);
         ui->start_button->setIconSize(QSize(61, 151));
@@ -762,15 +880,16 @@ void MARCS::startMotors(){
         nbClickMotors++;
     }
     ui->excute_button->setEnabled(true);
-
-
+    home->setNum(0);
+    home->setLong(RPA::getInstance()->getCoordinates()->getLongitude());
+    home->setLat(RPA::getInstance()->getCoordinates()->getLatitude());
+    home->setAlt(RPA::getInstance()->getHeight());
+    home->setHdg(RPA::getInstance()->getHeading());
+    createHomeMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
 }
-
+//stop the motor of the RPA
 void MARCS::stopMotors(){
-
-
     connect(this,SIGNAL(clickOn()),CommunicationControl::getInstance(),SIGNAL(sendMotOn()));
-    CommunicationControl::getInstance()->stop();
     myCom->sendMotOff();
     ui->start_button->setIcon(iconOff);
     ui->start_button->setIconSize(QSize(61, 151));
@@ -780,173 +899,251 @@ void MARCS::stopMotors(){
     ui->snapShoot_button->setEnabled(false);
     ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/0.png")));
     ui->label_Altitude_2->setText("0.0");
-
+    ui->excute_button->setIcon(iconTakeOff);
+    land= false ;
+    CommunicationControl::getInstance()->stop();
+    ui->NextWaypoint_button->hide();
 
 }
-
+//get the batteryLevel
 void MARCS::batteryLevel(double p_pValue){
-
     p_pValue = (int)(p_pValue * 10) / 10.;
-
     int dureeDeVie = (((15*60)*(((p_pValue - 9.5) / (12.5 - 9.5)) * 100))/100) ;
     int pourcentage =(((p_pValue - 9.5) / (12.5 - 9.5)) * 100);
-
+    int dureeDeVie_Min = dureeDeVie/60 ;
+    int dureeDeVie_Sec = (dureeDeVie%60)%60 ;
     double latRPA= RPA::getInstance()->getCoordinates()->getLatitude();
     double lonRPA = RPA::getInstance()->getCoordinates()->getLongitude();
 
+    time_t now1 = time (0);
+    struct tm * now2 = localtime( & now1);
+    string temp ;
+    char* time_mission = new char[32];
+    QString timeShow ;
+
+    sprintf(time_mission,"%d-%d-%d %d:%d:%d",(now2->tm_year + 1900 ) ,(now2->tm_mon+1), (now2->tm_mday),(now2->tm_hour), (now2->tm_min),now2->tm_sec);
+    temp = string(time_mission);
+    string time_mission_temp = "" + temp ;
+    timeShow = QString::fromStdString(time_mission_temp);
 
           if (pourcentage == 100 )
-    { ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/100.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+         { ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/100.png")));
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
+              }
+
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
-              }
-              else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
           }
           else if (pourcentage >= 90 && pourcentage < 100 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/90.png")));
               ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                 ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
+              }
+
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
-              }
-              else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 80 && pourcentage < 90 )
           {
               ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/80.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
+              }
+
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
-              }
-              else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 70 && pourcentage < 80 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/70.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='#4AA440'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='#4AA440'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
               }
-             else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
-             }
+
               else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
+              }
+              else {
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 60 && pourcentage < 70 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/60.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
+              }
 
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
-              }
-              else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 50 && pourcentage < 60 )
           { ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/50.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
               }
 
-             else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
               }
-              if (((dureeDeVie%60)%60)>=10) {
-               ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 40 && pourcentage < 50 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/40.png")));
-              ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
-              }
-              else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='green'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='green'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : green; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : green; }");
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='green'></font>"+QString::number(dureeDeVie_Min));
               }
 
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
+              else {
+                  ui->Time_left_Min->setText("<font color='green'>0</font>"+QString::number(dureeDeVie_Min));
+              }
+
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='green'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='green'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 30 && pourcentage < 40 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/30.png")));
               ui->led_button->setStyleSheet("* { background-color: rgb(255,127,36) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText(QString::number(dureeDeVie/60));
-              }
+              ui->label_Time_Left->setText("<font color='orange'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='orange'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : orange; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : orange; }");
+                if (logShow40 == false){
+                  QListWidgetItem* pItem =new QListWidgetItem("Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItem->setTextColor(QColor::fromRgb(255,127,36));
+                  ui->listLog->addItem(pItem);
 
-              else {
-                  ui->Time_left_Min->setText("0"+QString::number(dureeDeVie/60));
-              }
+                  QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItemLog->setTextColor(QColor::fromRgb(255,127,36));
+                  ui->ListLogFinal->addItem(pItemLog);
 
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText((QString::number((dureeDeVie%60)%60)));
+                  logShow40= true ;
+
               }
-              else {
-                  ui->Time_left_Seconde->setText("0"+(QString::number((dureeDeVie%60)%60)));
-              }
+                if ((dureeDeVie_Min) >=  10 ) {
+                    ui->Time_left_Min->setText("<font color='orange'></font>"+QString::number(dureeDeVie_Min));
+                }
+
+                else {
+                    ui->Time_left_Min->setText("<font color='orange'>0</font>"+QString::number(dureeDeVie_Min));
+                }
+
+                if ((dureeDeVie_Sec)>=10) {
+                    ui->Time_left_Seconde->setText("<font color='orange'></font>"+(QString::number(dureeDeVie_Sec)));
+                }
+                else {
+                    ui->Time_left_Seconde->setText("<font color='orange'>0</font>"+(QString::number(dureeDeVie_Sec)));
+                }
          }
           else if (pourcentage >= 20 && pourcentage < 30 )
           {   ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/20.png")));
               ui->led_button->setStyleSheet("* { background-color: rgb(255,127,36) }");
-              ui->label_Time_Left->setText("<font color='#E27101'>Time Left : </font>");
-              ui->Time_left_point->setText("<font color='#E27101'>: </font>");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText("<font color='#E27101'></font>"+QString::number(dureeDeVie/60));
+              ui->label_Time_Left->setText("<font color='orange'>Time Left : </font>");
+              ui->Time_left_point->setText("<font color='orange'>: </font>");
+              ui->Time_left_Min->setStyleSheet("QLabel { color : orange; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : orange; }");
+              if (logShow30 == false){
+
+                  QListWidgetItem* pItem =new QListWidgetItem("Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItem->setTextColor(QColor::fromRgb(255,127,36));
+                  ui->listLog->addItem(pItem);
+
+                  QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItemLog->setTextColor(QColor::fromRgb(255,127,36));
+                  ui->ListLogFinal->addItem(pItemLog);
+
+                  logShow30= true ;
+              }
+
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='orange'></font>"+QString::number(dureeDeVie_Min));
               }
 
               else {
-                  ui->Time_left_Min->setText("<font color='#E27101'>0</font>"+QString::number(dureeDeVie/60));
+                  ui->Time_left_Min->setText("<font color='orange'>0</font>"+QString::number(dureeDeVie_Min));
               }
 
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText("<font color='#E27101'></font>"+(QString::number((dureeDeVie%60)%60)));
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='orange'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Seconde->setText("<font color='#E27101'>0</font>"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='orange'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 10 && pourcentage < 20 )
@@ -955,18 +1152,32 @@ void MARCS::batteryLevel(double p_pValue){
               ui->label_Time_Left->setText("<font color='red'>Time Left : </font>");
               ui->Time_left_point->setText("<font color='red'>: </font>");
               ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText("<font color='red'></font>"+QString::number(dureeDeVie/60));
+              ui->Time_left_Min->setStyleSheet("QLabel { color : red; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : red; }");
+              if (logShow20 == false){
+
+                  QListWidgetItem* pItem =new QListWidgetItem("Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItem->setTextColor(QColor::fromRgb(255,0,0));
+                  ui->listLog->addItem(pItem);
+
+                  QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+                  ui->ListLogFinal->addItem(pItemLog);
+
+                  logShow20= true ;
+              }
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='red'></font>"+QString::number(dureeDeVie_Min));
               }
 
               else {
-                  ui->Time_left_Min->setText("<font color='red'>0</font>"+QString::number(dureeDeVie/60));
+                  ui->Time_left_Min->setText("<font color='red'>0</font>"+QString::number(dureeDeVie_Min));
               }
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText("<font color='red'></font>"+(QString::number((dureeDeVie%60)%60)));
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='red'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Seconde->setText("<font color='red'>0</font>"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='red'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
           else if (pourcentage >= 0 && pourcentage < 10 )
@@ -975,38 +1186,70 @@ void MARCS::batteryLevel(double p_pValue){
               ui->label_Time_Left->setText("<font color='red'>Time Left : </font>");
               ui->Time_left_point->setText("<font color='red'>: </font>");
               ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
-              if ((dureeDeVie/60) >=  10 ) {
-                  ui->Time_left_Min->setText("<font color='red'></font>"+QString::number(dureeDeVie/60));
+              ui->Time_left_Min->setStyleSheet("QLabel { color : red; }");
+              ui->Time_left_Seconde->setStyleSheet("QLabel { color : red; }");
+              if (logShow10 == false){
+
+                  QListWidgetItem* pItem =new QListWidgetItem("Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItem->setTextColor(QColor::fromRgb(255,0,0));
+                  ui->listLog->addItem(pItem);
+
+                  QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low battery and time left is :"+ QString::number(dureeDeVie_Min)+ " min.");
+                  pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+                  ui->ListLogFinal->addItem(pItemLog);
+
+                  logShow10= true ;
+              }
+              if ((dureeDeVie_Min) >=  10 ) {
+                  ui->Time_left_Min->setText("<font color='red'></font>"+QString::number(dureeDeVie_Min));
               }
 
               else {
-                  ui->Time_left_Min->setText("<font color='red'>0</font>"+QString::number(dureeDeVie/60));
+                  ui->Time_left_Min->setText("<font color='red'>0</font>"+QString::number(dureeDeVie_Min));
               }
 
-              if (((dureeDeVie%60)%60)>=10) {
-                  ui->Time_left_Seconde->setText("<font color='red'></font>"+(QString::number((dureeDeVie%60)%60)));
+              if ((dureeDeVie_Sec)>=10) {
+                  ui->Time_left_Seconde->setText("<font color='red'></font>"+(QString::number(dureeDeVie_Sec)));
               }
               else {
-                  ui->Time_left_Seconde->setText("<font color='red'>0</font>"+(QString::number((dureeDeVie%60)%60)));
+                  ui->Time_left_Seconde->setText("<font color='red'>0</font>"+(QString::number(dureeDeVie_Sec)));
               }
          }
-
           if(lonRPA < 200 && latRPA < 200){
 
               createRpaMark(RPA::getInstance()->getHeading(),lonRPA,latRPA,GeoDataCoordinates::Degree);
           }
           else {
               //rien
-
           }
-}
-void MARCS::setHeight(double p_dHeight){
-    ui->label_Altitude_2->setText(QString::number(p_dHeight));
-}
 
+
+          delete[] time_mission ;
+
+}
+//get the altitude of the RPA
+void MARCS::setHeight(double p_dHeight){
+    if (p_dHeight > 0 ) {
+
+        ui->label_Altitude_2->setText(QString::number(p_dHeight));
+        item = new QTableWidgetItem(QString::number(RPA::getInstance()->getCoordinates()->getLongitude()),1);
+        ui->tableRPA->setItem(1,3,item);
+
+    }
+    else {
+
+        ui->label_Altitude_2->setText("0.0");
+        item = new QTableWidgetItem(QString::number(0),1);
+        ui->tableRPA->setItem(1,3,item);
+
+    }
+    ui->label_Altitude_2->setText(QString::number(p_dHeight));
+    item = new QTableWidgetItem(QString::number(RPA::getInstance()->getCoordinates()->getLongitude()),1);
+    ui->tableRPA->setItem(1,3,item);
+}
+//Create the icon of the RPA to be add later in the map
 void MARCS::createStyleRPA (GeoDataStyle *style , double hdg ) {
     GeoDataIconStyle iconStyle;
-
     if ( hdg >= 0 && hdg < 20){
         iconStyle.setIconPath(QString::fromUtf8(":/new/prefix1/icon/Arrow/0.png"));
     }
@@ -1064,31 +1307,316 @@ void MARCS::createStyleRPA (GeoDataStyle *style , double hdg ) {
 
     style->setIconStyle( iconStyle );
 }
-
-
+//add mark of the RPA in the map
 void MARCS::createRpaMark(double hdg ,double lon, double lat, GeoDataCoordinates::Unit){
 
     //Create the placemark representing the Arch of Triumph
-     GeoDataPlacemark* placemarkArch = new GeoDataPlacemark( "" );
-     placemarkArch->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
-
-     GeoDataStyle* styleArch = new GeoDataStyle();
-     createStyleRPA (  styleArch, hdg );
-     placemarkArch->setStyle( styleArch ) ;
+    placemarkRPA->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
+     createStyleRPA (  styleArchRPA, hdg );
+     placemarkRPA->setStyle( styleArchRPA ) ;
 
      //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
      if(number==0){
-         documentRPA->append( placemarkArch );
-
+         documentRPA->append( placemarkRPA );
          ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentRPA);
               }
      else {
          documentRPA->remove(0);
-         documentRPA->append( placemarkArch );
+         documentRPA->append( placemarkRPA );
          ui->MarbleWidget_plan->model()->treeModel()->update();
      }
    number ++ ;
-   qDebug()<<"lat" <<RPA::getInstance()->getCoordinates()->getLatitude();
-   qDebug()<<"lon" <<RPA::getInstance()->getCoordinates()->getLongitude();
 }
+//Create the icon of Home to be add later in the map
+void MARCS::createStyleHome (GeoDataStyle *style  ) {
+    GeoDataIconStyle iconStyle;
+    iconStyle.setIconPath(QString::fromUtf8(":/new/prefix1/icon/home.png"));
+    style->setIconStyle( iconStyle );
+}
+//add mark of Home in the map
+void MARCS::createHomeMark(double lon, double lat, GeoDataCoordinates::Unit){
+    //Create the placemark representing the Arch of Triumph
+     placemarkHome->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
+     createStyleHome (  styleArchHome );
+     placemarkHome->setStyle( styleArchHome ) ;
 
+     //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
+     if(homeShow == false){
+         documentHome->append( placemarkHome );
+         ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentHome);
+         homeShow = true ;
+              }
+     else {
+         //
+     }
+}
+//Create the icon of AddMark to be add later in the map
+void MARCS::createStyleAddMark (GeoDataStyle *style  ) {
+    GeoDataIconStyle iconStyle;
+    iconStyle.setIconPath(QString::fromUtf8(":/new/prefix1/icon/addMark.png"));
+    style->setIconStyle( iconStyle );
+}
+//add mark of AddMark in the map
+void MARCS::createAddMark(double lon, double lat, GeoDataCoordinates::Unit){
+    //Create the placemark representing the Arch of Triumph
+    placemarkMark->setCoordinate(lon,lat,0,GeoDataCoordinates::Degree);
+     createStyleAddMark (  styleArchMark );
+     placemarkMark->setStyle( styleArchMark ) ;
+
+
+  if ( num_add_waypoint == 0){
+         //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
+             documentMark->append( placemarkMark );
+             ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentMark);
+      }
+ else {
+         documentMark->append(placemarkMark);
+         ui->MarbleWidget_plan->model()->treeModel()->update();
+      }
+    }
+//emit 2 signals from the execute button
+void MARCS::on_excute_button_clicked()
+{
+    if ( land == false ){
+        emit takeOff();
+        land = true ;
+    }
+    else {
+        emit landRPA();
+        land = false ;
+    }
+
+}
+//takeoff the RPA
+void MARCS::fly(){
+    ui->goHome_button->setEnabled(true);
+    ui->addMark_button->setEnabled(true);
+    ui->excute_button->setIcon(iconLand);
+    if (m_mission.length()> 0){
+        ui->NextWaypoint_button->show();
+        nextIsShowing = true ;
+    }
+    else {
+        //rien
+    }
+
+takeOffClicked = true ;
+   }
+//land the RPA
+void MARCS::stopFly(){
+    ui->goHome_button->setEnabled(false);
+    ui->addMark_button->setEnabled(false);
+    ui->excute_button->setIcon(iconTakeOff);
+    myCom->sendLand();
+
+    home->setLong(0);
+    home->setLat(0);
+    home->setAlt(0);
+    home->setHdg(0);
+    ui->NextWaypoint_button->hide();
+    nextIsShowing = false ;
+    takeOffClicked= false ;
+}
+void MARCS::on_addMark_button_clicked()
+{
+    double lon = RPA::getInstance()->getCoordinates()->getLongitude();
+    double lat = RPA::getInstance()->getCoordinates()->getLatitude();
+    double alt = RPA::getInstance()->getHeight();
+    double hdg = RPA::getInstance()->getHeading();
+
+
+          ui->tableMarkPoint->setItem(num_add_waypoint,0,new QTableWidgetItem(QString::number(num_add_waypoint)));
+          ui->tableMarkPoint->setItem(num_add_waypoint,1,new QTableWidgetItem(QString::number(lon)));
+          ui->tableMarkPoint->setItem(num_add_waypoint,2,new QTableWidgetItem(QString::number(lat)));
+          ui->tableMarkPoint->setItem(num_add_waypoint,3,new QTableWidgetItem(QString::number(alt)));
+          ui->tableMarkPoint->setItem(num_add_waypoint,4,new QTableWidgetItem(QString::number(hdg)));
+
+          ui->tableMarkPoint->item(num_add_waypoint,0)->setBackgroundColor(Qt::green);
+          wpListAdd.append(new waypoint(num_add_waypoint,lon,lat,alt,hdg,0,0,0));
+
+          createAddMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
+          num_add_waypoint ++ ;
+          ui->AddToMission_button->setEnabled(true);
+
+
+}
+//Check the GPS Level
+void MARCS::GPSLevel(int p_value){
+
+    time_t now1 = time (0);
+    struct tm * now2 = localtime( & now1);
+    string temp ;
+    char* time_mission = new char[32];
+    QString timeShow ;
+
+    sprintf(time_mission,"%d-%d-%d %d:%d:%d",(now2->tm_year + 1900 ) ,(now2->tm_mon+1), (now2->tm_mday),(now2->tm_hour), (now2->tm_min),now2->tm_sec);
+    temp = string(time_mission);
+    string time_mission_temp = "" + temp ;
+    timeShow = QString::fromStdString(time_mission_temp);
+
+
+    if (p_value == 0 && gps0 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps0 = true ;
+
+    }
+    else if (p_value == 1 && gps1 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps1 = true ;
+
+    }else if (p_value == 2 && gps2 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps2 = true ;
+
+    }else if (p_value == 3 && gps3 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps3 = true ;
+
+    }else if (p_value == 4 && gps4 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps4 = true ;
+
+
+    }else if (p_value == 5 && gps5 == false){
+        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(255,0,0));
+        ui->listLog->addItem(pItem);
+
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        ui->ListLogFinal->addItem(pItemLog);
+
+        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps5 = true ;
+    }
+    else if (p_value > 5) {
+        ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
+    }
+
+    delete[] time_mission;
+
+   }
+//add data info to RPA table
+void MARCS::setTableRPA(){
+
+
+    ui->tableRPA->setItem(0,0,  new QTableWidgetItem("RPA"));
+    ui->tableRPA->setItem(0,1 , new QTableWidgetItem(QString::number(RPA::getInstance()->getCoordinates()->getLongitude())));
+    ui->tableRPA->setItem(0,2 , new QTableWidgetItem(QString::number(RPA::getInstance()->getCoordinates()->getLatitude())));
+    ui->tableRPA->setItem(0,3 , new QTableWidgetItem(QString::number(RPA::getInstance()->getHeight())));
+    ui->tableRPA->setItem(0,4 , new QTableWidgetItem(QString::number(RPA::getInstance()->getHeading())));
+    ui->tableRPA->item(0, 0)->setBackground(Qt::green);
+    ui->tableRPA->item(0, 1)->setBackground(Qt::green);
+    ui->tableRPA->item(0, 2)->setBackground(Qt::green);
+    ui->tableRPA->item(0, 3)->setBackground(Qt::green);
+    ui->tableRPA->item(0, 4)->setBackground(Qt::green);
+
+    if ( clear_mission == false){
+        m_mission = myMission.getWaypointList();
+
+         for (int i = 0 ; i < m_mission.length() ;  i++) {
+
+               ui->tableWidget->setItem(i+1,0,new QTableWidgetItem(QString::number(m_mission[i]->getNum())));
+               ui->tableWidget->setItem(i+1,1,new QTableWidgetItem(QString::number(m_mission[i]->getLong())));
+               ui->tableWidget->setItem(i+1,2,new QTableWidgetItem(QString::number(m_mission[i]->getLat())));
+               ui->tableWidget->setItem(i+1,3,new QTableWidgetItem(QString::number(m_mission[i]->getAlt())));
+               ui->tableWidget->setItem(i+1,4,new QTableWidgetItem(QString::number(m_mission[i]->getHdg())));
+               ui->tableWidget->item(i+1,0)->setBackgroundColor(Qt::yellow);
+
+         }
+    }
+    else {
+
+        //rien
+    }
+
+    ui->tableWidget->setItem(0,0,new QTableWidgetItem("HOME"));
+    ui->tableWidget->setItem(0,1,new QTableWidgetItem(QString::number(home->getLong())));
+    ui->tableWidget->setItem(0,2,new QTableWidgetItem(QString::number(home->getLat())));
+    ui->tableWidget->setItem(0,3,new QTableWidgetItem(QString::number(home->getAlt())));
+    ui->tableWidget->setItem(0,4,new QTableWidgetItem(QString::number(home->getHdg())));
+    ui->tableWidget->item(0,0)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(0,1)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(0,2)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(0,3)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(0,4)->setBackgroundColor(Qt::green);
+
+
+
+
+}
+void MARCS::on_AddToMission_button_clicked()
+{
+    bool ok= false ;
+    if ( rowAdd == 0){
+        rowAdd = m_mission.length()+1;
+    }
+    else {
+        //rien
+    }
+    ui->tableWidget->setItem(rowAdd,0,new QTableWidgetItem(QString::number(rowAdd-1)));
+    ui->tableWidget->setItem(rowAdd,1,new QTableWidgetItem(QString::number(wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getLong())));
+    ui->tableWidget->setItem(rowAdd,2,new QTableWidgetItem(QString::number(wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getLat())));
+    ui->tableWidget->setItem(rowAdd,3,new QTableWidgetItem(QString::number(wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getAlt())));
+    ui->tableWidget->setItem(rowAdd,4,new QTableWidgetItem(QString::number(wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getHdg())));
+    ui->tableWidget->item(rowAdd,0)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(rowAdd,1)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(rowAdd,2)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(rowAdd,3)->setBackgroundColor(Qt::green);
+    ui->tableWidget->item(rowAdd,4)->setBackgroundColor(Qt::green);
+    m_mission.append(new waypoint(rowAdd-1,
+                     wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getLong(),
+                     wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getLat(),
+                     wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getAlt(),
+                     wpListAdd[ui->tableMarkPoint->currentItem()->text().toInt(&ok,10)]->getHdg(),60,1,0));
+ rowAdd++;
+ ui->actionSave_mission->setEnabled(true);
+ myMission.setWaypointList(m_mission);
+
+}
+void MARCS::on_NextWaypoint_button_clicked()
+{
+    emit next(m_mission[n]->getLong(),m_mission[n]->getLat(),m_mission[n]->getAlt(),n);
+    n++;
+}

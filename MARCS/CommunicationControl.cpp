@@ -26,6 +26,8 @@ CommunicationControl::CommunicationControl()
 
 	connect(this, SIGNAL(sendMove(double, double, double, double)), 
 		comThread, SLOT(sendMove(double, double, double, double)));
+    connect(this, SIGNAL(sendWaypoint(double, double, double, double)),
+        comThread, SLOT(sendWaypoint(double, double, double, double)));
 
 
    longitude = 0;
@@ -56,7 +58,7 @@ void CommunicationControl::start(QString p_sCom)
 {
 	m_sCom = p_sCom;
 	comThread->createCom(p_sCom);
-	m_pPollTimer.start(200);
+    m_pPollTimer.start(200);
 }
 
 void CommunicationControl::stop()

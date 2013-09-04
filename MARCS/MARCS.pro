@@ -25,10 +25,10 @@ SOURCES += main.cpp\
     RPA.cpp
 QT       += xml
 
-CONFIG += console
+RC_FILE = myapp.rc
 CONFIG += serialport
 
-
+CONFIG -= console
 HEADERS  += \
     ComThread.h \
     CommunicationControl.h \

@@ -18,13 +18,16 @@ public:
     void setNum(int n);
     void saveMission(QList < waypoint* > wpList , QString fileName);
     void saveMissionKml(QList < waypoint* > wpList , QString fileName);
+    void setWaypointList(QList <waypoint* > mission);
     QList <waypoint* > loadMission(QString filename);
-    //void customPaint(GeoPainter* painter);
+    QList <waypoint* > getWaypointList();
 
 
 
 public :
     int n_mission ;
+     QList <waypoint* > myMission ;
+
 };
 
 #endif // MISSION_H

@@ -17,6 +17,7 @@
 #include <QtGui/QTreeView>
 #include <QtGui/QApplication>
 #include <QListWidget>
+#include <QTableWidgetItem>
 #include <QListWidgetItem>
 #include <QPaintDevice>
 #include <QString>
@@ -26,6 +27,7 @@
 #include <GeoDataIconStyle.h>
 #include <GeoDataStyle.h>
 #include <QListView>
+#include <ctime>
 #include <QComboBox>
 #include <QDebug>
 #include <MarbleWidget.h>
@@ -45,6 +47,9 @@
 #include <global.h>
 #include <string>
 #include <iostream>
+#include "QGridLayout"
+#include "qextserialenumerator.h"
+#include <QMessageBox>
 using namespace Marble;
 using namespace std ;
 
@@ -63,39 +68,248 @@ public:
 signals :
   void clickOn() ;
   void clickOff();
+  void takeOff();
+  void landRPA();
+  void next(double lon , double lat , double alt , double num );
 
 public slots:
+  /**
+  * @brief Show the main window Map
+  * @param none
+  * @exception none
+  * @return none
+  */
     void openNewWindowMain();
+    /**
+    * @brief Show the Data window
+    * @param none
+    * @exception none
+    * @return none
+    */
     void openNewWindowData();
+    /**
+    * @brief Show the video window
+    * @param none
+    * @exception none
+    * @return none
+    */
     void openNewWindowVideo();
+    /**
+    * @brief Load map
+    * @param none
+    * @exception none
+    * @return none
+    */
     void openNewMap();
+    /**
+    * @brief switch view between the map and the video by clicking on map
+    * @param none
+    * @exception none
+    * @return none
+    */
     void switchToMap();
-    void afficheList();
+    /**
+    * @brief show log list
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void showList();
+    /**
+    * @brief Open new mission from Kml File
+    * @param none
+    * @exception none
+    * @return none
+    */
     void openMission();
+    /**
+    * @brief Save mission to Kml File
+    * @param none
+    * @exception none
+    * @return none
+    */
     void saveMission();
+    /**
+    * @brief add point to map
+    * @param lon qreal , lat qreal, GeoDataCoordinates::Unit
+    * @exception none
+    * @return none
+    */
     void addPoint( qreal lon, qreal lat, GeoDataCoordinates::Unit );
+    /**
+    * @brief clear mission from the map view
+    * @param none
+    * @exception none
+    * @return none
+    */
     void clearMission();
+    /**
+    * @brief open the list of the waypoints
+    * @param none
+    * @exception none
+    * @return none
+    */
     void editWaypoint();
+    /**
+    * @brief load waypoint data from the index
+    * @param none
+    * @exception none
+    * @return none
+    */
     void loadData();
+    /**
+    * @brief save edition to the XML file source of the mission
+    * @param none
+    * @exception none
+    * @return none
+    */
     void saveEditData();
+    /**
+    * @brief close the edit waypoints view
+    * @param none
+    * @exception none
+    * @return none
+    */
     void finishEditData();
-    void drawMission(GeoPainter* painter);
+    /**
+    * @brief show the waypoint edition area
+    * @param show bool
+    * @exception none
+    * @return none
+    */
     void showEditWaypoint(bool show);
+    /**
+    * @brief show the COM connect dialog
+    * @param none
+    * @exception none
+    * @return none
+    */
     void showConnectDialog();
+    /**
+    * @brief send the Serial COM
+    * @param none
+    * @exception none
+    * @return none
+    */
     void validCom();
+    /**
+    * @brief Close the window
+    * @param event QCloseEvent
+    * @exception none
+    * @return none
+    */
     void closeEvent(QCloseEvent *event);
+    /**
+    * @brief start the RPA engine
+    * @param none
+    * @exception none
+    * @return none
+    */
     void startMotors();
+    /**
+    * @brief get the battery Level;
+    * @param p_pValue double
+    * @exception none
+    * @return none
+    */
     void batteryLevel(double p_pValue);
+    /**
+    * @brief stop the RPA engine
+    * @param none
+    * @exception none
+    * @return none
+    */
     void stopMotors();
+    /**
+    * @brief Create the Style of the RPA presentation on the map
+    * @param style GeoDataStyle, hdg double
+    * @exception none
+    * @return none
+    */
     void createStyleRPA( GeoDataStyle *style, double hdg ) ;
+    /**
+    * @brief Add the RPA presentation on the map with heading and position
+    * @param hdg double , lon double , lat double , GeoDataCoordinates::Unit
+    * @exception none
+    * @return none
+    */
     void createRpaMark(double hdg,double lon, double lat, GeoDataCoordinates::Unit );
     /**
+    * @brief Create the Style of the HOME presentation on the map
+    * @param style GeoDataStyle
+    * @exception none
+    * @return none
+    */
+    void createStyleHome( GeoDataStyle *style ) ;
+    /**
+    * @brief Add the HOME presentation on the map with position
+    * @param lon double , lat double , GeoDataCoordinates::Unit
+    * @exception none
+    * @return none
+    */
+    void createHomeMark(double lon, double lat, GeoDataCoordinates::Unit );
+    /**
+    * @brief Create the Style of the Add Mark presentation on the map
+    * @param style GeoDataStyle
+    * @exception none
+    * @return none
+    */
+    void createStyleAddMark( GeoDataStyle *style ) ;
+    /**
+    * @brief Add the Add Mark presentation on the map with position
+    * @param lon double , lat double , GeoDataCoordinates::Unit
+    * @exception none
+    * @return none
+    */
+    void createAddMark(double lon, double lat, GeoDataCoordinates::Unit );
+    /**
     * @brief set RPA height field
-    * @param p_dSpeed double
+    * @param p_dHeight double
     * @exception none
     * @return none
     */
     void setHeight(double p_dHeight);
+    /**
+    * @brief take off the RPA
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void fly();
+    /**
+    * @brief land the RPA
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void stopFly();
+    /**
+    * @brief get The GPS Level
+    * @param p_value int
+    * @exception none
+    * @return none
+    */
+    void GPSLevel(int p_value);
+    /**
+    * @brief add information to RPA table
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void setTableRPA();
+    /**
+    * @brief show Log page
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void showLog();
+    /**
+    * @brief close the application
+    * @param none
+    * @exception none
+    * @return none
+    */
     void close();
 
 
@@ -106,24 +320,62 @@ private:
     QListView *m_listView;
     QList <waypoint* > wpListSave ;
     QList <waypoint* > wpListOpen ;
+    QList <waypoint* > wpListAdd ;
+    QList <waypoint* > m_mission ;
     QString lastMission;
     QString lastMap;
     QString fileOpened ;
     QString qstr ;
     int num_waypoint;
     int number ;
-
+    int m_map  ;
+    int nbClickMotors;
+    int num_add_waypoint;
+    int rowAdd;
+    int n;
+    waypoint* home;
+    bool clear_mission;
+    bool logShow40;
+    bool logShow30;
+    bool logShow20;
+    bool logShow10;
+    bool homeShow;
     bool affichageList;
     bool open  ;
     bool motorOn;
-    int m_map  ;
-    int nbClickMotors;
+    bool land ;
+    bool nextIsShowing;
+    bool takeOffClicked;
+    bool gps0;
+    bool gps1;
+    bool gps2;
+    bool gps3;
+    bool gps4;
+    bool gps5;
     char* numWpText;
+    QTableWidgetItem *ItemLon ;
+    QTableWidgetItem *ItemLat ;
+    QTableWidgetItem *ItemAlt;
+    QTableWidgetItem *ItemHdg ;
+    QTableWidgetItem *ItemName ;
+    QTableWidgetItem *ItemMarkLon ;
+    QTableWidgetItem *ItemMarkLat ;
+    QTableWidgetItem *ItemMarkAlt;
+    QTableWidgetItem *ItemMarkHdg ;
+    QTableWidgetItem *ItemMarkNum ;
     string textNumWaypoint ;
     string temp;
     GeoDataPlacemark *place ;
+    GeoDataPlacemark* placemarkRPA ;
+    GeoDataStyle* styleArchRPA;
+    GeoDataPlacemark* placemarkHome;
+    GeoDataStyle* styleArchHome ;
+    GeoDataPlacemark* placemarkMark ;
+    GeoDataStyle* styleArchMark;
     GeoDataDocument *document ;
     GeoDataDocument *documentRPA ;
+    GeoDataDocument *documentHome ;
+    GeoDataDocument *documentMark ;
     GeoDataCoordinates *tempo;
     RoutingManager* manager ;
     RouteRequest* request;
@@ -138,11 +390,12 @@ private:
     QGridLayout* layout ;
     QWidget* widget;
     QLabel* m_pLabel;
-    CommunicationControl* myComControl ;
     ComThread* myCom;
     QIcon iconOff;
     QIcon iconOn;
-    MissionControl* myMissionControl;
+    QIcon iconTakeOff;
+    QIcon iconLand;
+    QTableWidgetItem* item;
 
 private slots:
     void on_start_button_clicked();
@@ -151,7 +404,10 @@ private slots:
     void on_comboBox_ListWaypoint_currentIndexChanged(int index);
     void on_Delete_button_clicked();
     void on_timeEdit_Mission_timeChanged(const QTime &date);
-
+    void on_excute_button_clicked();
+    void on_addMark_button_clicked();
+    void on_AddToMission_button_clicked();
+    void on_NextWaypoint_button_clicked();
 };
 
 #endif // MARCS_H

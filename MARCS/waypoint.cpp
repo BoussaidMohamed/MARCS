@@ -14,7 +14,6 @@ waypoint::~waypoint()
 
 }
 
-
 double waypoint::getAlt(){
     return altitudeW ;
 }

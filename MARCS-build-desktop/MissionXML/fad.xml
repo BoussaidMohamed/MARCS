@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <Mission_Number>2013_9_4_11_9</Mission_Number>
+    <Waypoint>
+        <Number>0</Number>
+        <Longitude>1.43567</Longitude>
+        <Latitude>43.6049</Latitude>
+        <Altitude>100</Altitude>
+        <Heading>90</Heading>
+        <Time>60</Time>
+        <Type>1</Type>
+    </Waypoint>
+</Mission>

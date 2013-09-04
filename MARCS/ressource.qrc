@@ -67,5 +67,10 @@
         <file>icon/Arrow/300.png</file>
         <file>icon/Arrow/320.png</file>
         <file>icon/Arrow/340.png</file>
+        <file>icon/land.png</file>
+        <file>icon/addMark.png</file>
+        <file>icon/edit_add.png</file>
+        <file>icon/next.png</file>
+        <file>icon/icon.ico</file>
     </qresource>
 </RCC>

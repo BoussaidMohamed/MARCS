@@ -161,7 +161,7 @@ void ComThread::sendHome()
 	mustWrite = true;
 
 	mustRead = true;
-	sizeRead += 5;
+    sizeRead += 5;
 }
 
 void ComThread::sendLand()
@@ -181,7 +181,7 @@ void ComThread::sendLaunch()
 	mustWrite = true;
 
 	mustRead = true;
-	sizeRead += 5;
+    sizeRead += 5;
 }
 
 void ComThread::sendGoTo()
@@ -191,7 +191,7 @@ void ComThread::sendGoTo()
 	mustWrite = true;
 
 	mustRead = true;
-	sizeRead += 5;
+    sizeRead += 5;
 }
 
 void ComThread::sendWaypoint(double x, double y, double z, double number)
