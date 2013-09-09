@@ -37,7 +37,7 @@ CommunicationControl::CommunicationControl()
 
 	createLog();
 	comThread->start();
-	m_pRetryTimer.setInterval(300);
+    m_pRetryTimer.setInterval(1000);
 }
 
 void CommunicationControl::kill()
@@ -314,7 +314,7 @@ UAVLogger* CommunicationControl::getLogger()
 void CommunicationControl::pollData()
 {
 	emit poll(CURRENT_WAY_PACKET | GPS_PACKET | STATUS_PACKET | IMU_CALCDATA_PACKET | RC_DATA_PACKET);
-	m_pPollTimeout.start(150);
+    m_pPollTimeout.start(1000);
 }
 
 void CommunicationControl::autonomousMode()

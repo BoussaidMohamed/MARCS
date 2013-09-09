@@ -150,7 +150,7 @@ void ComThread::run()
                                 failNoticed = true;
 			}
 		}
-		QThread::msleep(5);
+        QThread::msleep(10);
 	}
 }
 
@@ -215,6 +215,7 @@ void ComThread::sendWaypoint(double x, double y, double z, double number)
 
 	mustRead = true;
 	sizeRead += 5;
+    qDebug()<<"send it ";
 }
 
 void ComThread::sendMove(double x, double y, double z, double yaw)

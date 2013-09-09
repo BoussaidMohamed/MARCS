@@ -124,8 +124,9 @@ void MissionControl::sendWaypoint()
                 //LatLongCoord pCoordinates = pWaypoint->getCoordinates();
 
                 //emit waypoint(pCoordinates.getLongitude(), pCoordinates.getLatitude(), pWaypoint->getAltitude(), pWaypoint->getNumber());
-		m_pWaypointTimer.start(1000);
-	}
+
+    }
+m_pWaypointTimer.start(1000);
 }
 
 bool MissionControl::nextWaypoint()

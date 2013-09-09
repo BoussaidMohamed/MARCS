@@ -1,22 +1,3 @@
-/******************************************************
-*			         MARCS 2012		                  *
-*******************************************************
-* @file CommunicationControl.h
-* @author Nicolas FERRRERO
-*
-* @date 2012/06/04 (creation_date)
-* @date 2012/07/20 (latest_modification_date)
-*
-* @brief Interaction controller
-*
-* @bug
-* - symptoms : none
-* - causes : none
-* - solutions : none
-*
-* @todo : none
-*/
-
 #ifndef __CONTROL
 #define __CONTROL
 

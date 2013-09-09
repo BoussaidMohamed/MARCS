@@ -47,6 +47,7 @@
 #include <global.h>
 #include <string>
 #include <iostream>
+#include <fstream>
 #include "QGridLayout"
 #include "qextserialenumerator.h"
 #include <QMessageBox>
@@ -277,6 +278,20 @@ public slots:
     */
     void fly();
     /**
+    * @brief Xbee disconnected
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void XbeeDisconnect();
+    /**
+    * @brief Xbee reconnected
+    * @param none
+    * @exception none
+    * @return none
+    */
+    void XbeeConnect();
+    /**
     * @brief land the RPA
     * @param none
     * @exception none
@@ -290,6 +305,8 @@ public slots:
     * @return none
     */
     void GPSLevel(int p_value);
+    void updateMotors(char p_cValue);
+    void goTo(double lon,double lat,double alt,double n);
     /**
     * @brief add information to RPA table
     * @param none
@@ -322,6 +339,7 @@ private:
     QList <waypoint* > wpListOpen ;
     QList <waypoint* > wpListAdd ;
     QList <waypoint* > m_mission ;
+    QList <GeoDataPlacemark*> listPlaceMark;
     QString lastMission;
     QString lastMap;
     QString fileOpened ;
@@ -333,6 +351,7 @@ private:
     int num_add_waypoint;
     int rowAdd;
     int n;
+    int m_cMotorValue;
     waypoint* home;
     bool clear_mission;
     bool logShow40;
@@ -343,6 +362,7 @@ private:
     bool affichageList;
     bool open  ;
     bool motorOn;
+    bool motorTurn;
     bool land ;
     bool nextIsShowing;
     bool takeOffClicked;
@@ -352,6 +372,7 @@ private:
     bool gps3;
     bool gps4;
     bool gps5;
+    bool missionOpned;
     char* numWpText;
     QTableWidgetItem *ItemLon ;
     QTableWidgetItem *ItemLat ;
@@ -367,10 +388,10 @@ private:
     string temp;
     GeoDataPlacemark *place ;
     GeoDataPlacemark* placemarkRPA ;
-    GeoDataStyle* styleArchRPA;
     GeoDataPlacemark* placemarkHome;
-    GeoDataStyle* styleArchHome ;
     GeoDataPlacemark* placemarkMark ;
+    GeoDataStyle* styleArchRPA;
+    GeoDataStyle* styleArchHome ;
     GeoDataStyle* styleArchMark;
     GeoDataDocument *document ;
     GeoDataDocument *documentRPA ;
@@ -381,10 +402,7 @@ private:
     RouteRequest* request;
     RoutingManager* manager_smallMap ;
     RouteRequest* request_smallMap;
-    GeoPainter* gp ;
-    QPaintDevice* paintDevice ;
-    QImage image;
-    QComboBox* m_pComList;		//Available COM port list
+    QComboBox* m_pComList;		    //Available COM port list
     QMainWindow* m_pComWindow;		//COM port selection window
     QPushButton* m_pValidCom;		//COM port validation button
     QGridLayout* layout ;

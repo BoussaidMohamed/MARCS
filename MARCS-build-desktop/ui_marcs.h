@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'marcs.ui'
 **
-** Created: Wed 4. Sep 10:50:56 2013
+** Created: Fri 6. Sep 15:53:46 2013
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -84,7 +84,6 @@ public:
     QLabel *label_Altitude;
     QLabel *Time_left_Seconde;
     QLabel *labelMark;
-    QListWidget *listLog;
     QTableWidget *tableRPA;
     QLineEdit *lineEdit_HDG;
     QPushButton *addMark_button;
@@ -93,6 +92,10 @@ public:
     QPushButton *AddToMission_button;
     Marble::MarbleWidget *MarbleWidget_smallView;
     QFrame *line_2;
+    QLabel *label;
+    QListWidget *listLog;
+    QLabel *labelNow;
+    QLabel *labelNext;
     QMenuBar *menubar;
     QMenu *menuPlanning;
     QMenu *menuSettings;
@@ -104,12 +107,14 @@ public:
     {
         if (MARCS->objectName().isEmpty())
             MARCS->setObjectName(QString::fromUtf8("MARCS"));
-        MARCS->resize(800, 632);
-        MARCS->setMinimumSize(QSize(800, 632));
-        MARCS->setMaximumSize(QSize(800, 632));
+        MARCS->resize(800, 645);
+        MARCS->setMinimumSize(QSize(800, 645));
+        MARCS->setMaximumSize(QSize(800, 645));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/new/prefix1/icon/Arrow/0.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/new/prefix1/icon/drone.png"), QSize(), QIcon::Normal, QIcon::Off);
         MARCS->setWindowIcon(icon);
+        MARCS->setWindowOpacity(1);
+        MARCS->setIconSize(QSize(40, 40));
         actionLoad_map = new QAction(MARCS);
         actionLoad_map->setObjectName(QString::fromUtf8("actionLoad_map"));
         QIcon icon1;
@@ -148,6 +153,7 @@ public:
         actionConnect_RPA->setIcon(icon6);
         actionController = new QAction(MARCS);
         actionController->setObjectName(QString::fromUtf8("actionController"));
+        actionController->setEnabled(false);
         QIcon icon7;
         icon7.addFile(QString::fromUtf8(":/new/prefix1/icon/joystick_256.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionController->setIcon(icon7);
@@ -174,6 +180,7 @@ public:
         actionLog->setIcon(icon11);
         actionRaplay_Mission = new QAction(MARCS);
         actionRaplay_Mission->setObjectName(QString::fromUtf8("actionRaplay_Mission"));
+        actionRaplay_Mission->setEnabled(false);
         QIcon icon12;
         icon12.addFile(QString::fromUtf8(":/new/prefix1/icon/replay_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionRaplay_Mission->setIcon(icon12);
@@ -211,8 +218,8 @@ public:
         font.setWeight(75);
         status_button->setFont(font);
         status_button->setIconSize(QSize(60, 60));
-        status_button->setAutoDefault(true);
-        status_button->setDefault(true);
+        status_button->setAutoDefault(false);
+        status_button->setDefault(false);
         status_button->setFlat(false);
         labelRPA = new QLabel(centralwidget);
         labelRPA->setObjectName(QString::fromUtf8("labelRPA"));
@@ -234,8 +241,8 @@ public:
         icon13.addFile(QString::fromUtf8(":/new/prefix1/icon/11954231621344997843camera_pictogram_r5d_01.svg.hi.png"), QSize(), QIcon::Normal, QIcon::Off);
         snapShoot_button->setIcon(icon13);
         snapShoot_button->setIconSize(QSize(61, 50));
-        snapShoot_button->setAutoDefault(true);
-        snapShoot_button->setDefault(true);
+        snapShoot_button->setAutoDefault(false);
+        snapShoot_button->setDefault(false);
         label_Time = new QLabel(centralwidget);
         label_Time->setObjectName(QString::fromUtf8("label_Time"));
         label_Time->setGeometry(QRect(408, 530, 46, 13));
@@ -244,8 +251,8 @@ public:
         led_button->setGeometry(QRect(750, 190, 21, 21));
         led_button->setMinimumSize(QSize(21, 21));
         led_button->setMaximumSize(QSize(21, 21));
-        led_button->setAutoDefault(true);
-        led_button->setDefault(true);
+        led_button->setAutoDefault(false);
+        led_button->setDefault(false);
         Time_left_point = new QLabel(centralwidget);
         Time_left_point->setObjectName(QString::fromUtf8("Time_left_point"));
         Time_left_point->setGeometry(QRect(745, 140, 21, 21));
@@ -303,7 +310,7 @@ public:
         battery_label->setScaledContents(true);
         line = new QFrame(centralwidget);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(623, 0, 31, 641));
+        line->setGeometry(QRect(620, 0, 31, 591));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
         start_button = new QPushButton(centralwidget);
@@ -315,8 +322,8 @@ public:
         start_button->setIcon(icon14);
         start_button->setIconSize(QSize(61, 151));
         start_button->setCheckable(false);
-        start_button->setAutoDefault(true);
-        start_button->setDefault(true);
+        start_button->setAutoDefault(false);
+        start_button->setDefault(false);
         label_Altitude_2 = new QLabel(centralwidget);
         label_Altitude_2->setObjectName(QString::fromUtf8("label_Altitude_2"));
         label_Altitude_2->setGeometry(QRect(690, 20, 71, 41));
@@ -335,8 +342,8 @@ public:
         icon15.addFile(QString::fromUtf8(":/new/prefix1/icon/takeoff.png"), QSize(), QIcon::Normal, QIcon::Off);
         excute_button->setIcon(icon15);
         excute_button->setIconSize(QSize(61, 151));
-        excute_button->setAutoDefault(true);
-        excute_button->setDefault(true);
+        excute_button->setAutoDefault(false);
+        excute_button->setDefault(false);
         line_4 = new QFrame(centralwidget);
         line_4->setObjectName(QString::fromUtf8("line_4"));
         line_4->setGeometry(QRect(660, 20, 118, 3));
@@ -387,13 +394,13 @@ public:
         NextWaypoint_button = new QPushButton(centralwidget);
         NextWaypoint_button->setObjectName(QString::fromUtf8("NextWaypoint_button"));
         NextWaypoint_button->setEnabled(true);
-        NextWaypoint_button->setGeometry(QRect(486, 530, 151, 61));
+        NextWaypoint_button->setGeometry(QRect(483, 530, 151, 61));
         QIcon icon16;
         icon16.addFile(QString::fromUtf8(":/new/prefix1/icon/next.png"), QSize(), QIcon::Normal, QIcon::Off);
         NextWaypoint_button->setIcon(icon16);
         NextWaypoint_button->setIconSize(QSize(61, 50));
-        NextWaypoint_button->setAutoDefault(true);
-        NextWaypoint_button->setDefault(true);
+        NextWaypoint_button->setAutoDefault(false);
+        NextWaypoint_button->setDefault(false);
         lineEdit_Alt = new QLineEdit(centralwidget);
         lineEdit_Alt->setObjectName(QString::fromUtf8("lineEdit_Alt"));
         lineEdit_Alt->setGeometry(QRect(340, 528, 61, 21));
@@ -405,8 +412,8 @@ public:
         icon17.addFile(QString::fromUtf8(":/new/prefix1/icon/HouseBlack.png"), QSize(), QIcon::Normal, QIcon::Off);
         goHome_button->setIcon(icon17);
         goHome_button->setIconSize(QSize(61, 151));
-        goHome_button->setAutoDefault(true);
-        goHome_button->setDefault(true);
+        goHome_button->setAutoDefault(false);
+        goHome_button->setDefault(false);
         tableMarkPoint = new QTableWidget(centralwidget);
         if (tableMarkPoint->columnCount() < 7)
             tableMarkPoint->setColumnCount(7);
@@ -461,9 +468,6 @@ public:
         labelMark->setObjectName(QString::fromUtf8("labelMark"));
         labelMark->setGeometry(QRect(265, 360, 91, 20));
         labelMark->setFont(font);
-        listLog = new QListWidget(centralwidget);
-        listLog->setObjectName(QString::fromUtf8("listLog"));
-        listLog->setGeometry(QRect(640, 230, 151, 201));
         tableRPA = new QTableWidget(centralwidget);
         if (tableRPA->columnCount() < 7)
             tableRPA->setColumnCount(7);
@@ -530,13 +534,13 @@ public:
         icon19.addFile(QString::fromUtf8(":/new/prefix1/icon/edit_add.png"), QSize(), QIcon::Normal, QIcon::Off);
         AddToMission_button->setIcon(icon19);
         AddToMission_button->setIconSize(QSize(61, 50));
-        AddToMission_button->setAutoDefault(true);
-        AddToMission_button->setDefault(true);
+        AddToMission_button->setAutoDefault(false);
+        AddToMission_button->setDefault(false);
         MarbleWidget_smallView = new Marble::MarbleWidget(centralwidget);
         MarbleWidget_smallView->setObjectName(QString::fromUtf8("MarbleWidget_smallView"));
-        MarbleWidget_smallView->setGeometry(QRect(650, 240, 141, 121));
+        MarbleWidget_smallView->setGeometry(QRect(640, 230, 155, 125));
         MarbleWidget_smallView->setMinimumSize(QSize(25, 25));
-        MarbleWidget_smallView->setMaximumSize(QSize(141, 121));
+        MarbleWidget_smallView->setMaximumSize(QSize(155, 125));
         MarbleWidget_smallView->setProperty("zoom", QVariant(2100));
         MarbleWidget_smallView->setProperty("longitude", QVariant(1.4));
         MarbleWidget_smallView->setProperty("latitude", QVariant(43.6));
@@ -548,6 +552,32 @@ public:
         line_2->setGeometry(QRect(280, 520, 20, 71));
         line_2->setFrameShape(QFrame::VLine);
         line_2->setFrameShadow(QFrame::Sunken);
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(540, 590, 311, 16));
+        QFont font6;
+        font6.setPointSize(7);
+        font6.setBold(false);
+        font6.setItalic(false);
+        font6.setWeight(50);
+        label->setFont(font6);
+        listLog = new QListWidget(centralwidget);
+        listLog->setObjectName(QString::fromUtf8("listLog"));
+        listLog->setGeometry(QRect(640, 230, 151, 201));
+        labelNow = new QLabel(centralwidget);
+        labelNow->setObjectName(QString::fromUtf8("labelNow"));
+        labelNow->setGeometry(QRect(511, 553, 21, 16));
+        QFont font7;
+        font7.setPointSize(12);
+        font7.setBold(true);
+        font7.setWeight(75);
+        labelNow->setFont(font7);
+        labelNow->setAlignment(Qt::AlignCenter);
+        labelNext = new QLabel(centralwidget);
+        labelNext->setObjectName(QString::fromUtf8("labelNext"));
+        labelNext->setGeometry(QRect(590, 553, 21, 16));
+        labelNext->setFont(font7);
+        labelNext->setAlignment(Qt::AlignCenter);
         MARCS->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MARCS);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -594,7 +624,7 @@ public:
 
     void retranslateUi(QMainWindow *MARCS)
     {
-        MARCS->setWindowTitle(QApplication::translate("MARCS", "MARCS", 0, QApplication::UnicodeUTF8));
+        MARCS->setWindowTitle(QApplication::translate("MARCS", "MARCS 2.0", 0, QApplication::UnicodeUTF8));
         actionLoad_map->setText(QApplication::translate("MARCS", "Load Map", 0, QApplication::UnicodeUTF8));
         actionLoad_mission->setText(QApplication::translate("MARCS", "Load Mission", 0, QApplication::UnicodeUTF8));
         actionSave_mission->setText(QApplication::translate("MARCS", "Save Mission", 0, QApplication::UnicodeUTF8));
@@ -607,7 +637,7 @@ public:
         actionVideo->setText(QApplication::translate("MARCS", "Video", 0, QApplication::UnicodeUTF8));
         actionFlight_data->setText(QApplication::translate("MARCS", "Flight Data", 0, QApplication::UnicodeUTF8));
         actionLog->setText(QApplication::translate("MARCS", "Log", 0, QApplication::UnicodeUTF8));
-        actionRaplay_Mission->setText(QApplication::translate("MARCS", "Raplay Mission", 0, QApplication::UnicodeUTF8));
+        actionRaplay_Mission->setText(QApplication::translate("MARCS", "Replay Mission", 0, QApplication::UnicodeUTF8));
         actionFollow_RAP->setText(QApplication::translate("MARCS", "Follow RPA", 0, QApplication::UnicodeUTF8));
         label_HDG->setText(QApplication::translate("MARCS", "HDG (\302\260) :", 0, QApplication::UnicodeUTF8));
         label_Alt->setText(QApplication::translate("MARCS", "Alt  (m ):", 0, QApplication::UnicodeUTF8));
@@ -703,12 +733,15 @@ public:
 #endif // QT_NO_TOOLTIP
         AddToMission_button->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        MarbleWidget_smallView->setToolTip(QApplication::translate("MARCS", "The Earth", 0, QApplication::UnicodeUTF8));
+        MarbleWidget_smallView->setToolTip(QApplication::translate("MARCS", "The Flight Plan", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
-        MarbleWidget_smallView->setWhatsThis(QApplication::translate("MARCS", "The Marble widget displays a virtual globe.", 0, QApplication::UnicodeUTF8));
+        MarbleWidget_smallView->setWhatsThis(QApplication::translate("MARCS", "The Flight Plan", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_WHATSTHIS
         MarbleWidget_smallView->setProperty("mapThemeId", QVariant(QApplication::translate("MARCS", "earth/openstreetmap/openstreetmap.dgml", 0, QApplication::UnicodeUTF8)));
+        label->setText(QApplication::translate("MARCS", "(c) Copyright 2013 Rockwell Collins, Inc. All Rights Reserved.", 0, QApplication::UnicodeUTF8));
+        labelNow->setText(QApplication::translate("MARCS", "H", 0, QApplication::UnicodeUTF8));
+        labelNext->setText(QApplication::translate("MARCS", "0", 0, QApplication::UnicodeUTF8));
         menuPlanning->setTitle(QApplication::translate("MARCS", "Planning", 0, QApplication::UnicodeUTF8));
         menuSettings->setTitle(QApplication::translate("MARCS", "Settings", 0, QApplication::UnicodeUTF8));
         menuDisplay->setTitle(QApplication::translate("MARCS", "Display", 0, QApplication::UnicodeUTF8));

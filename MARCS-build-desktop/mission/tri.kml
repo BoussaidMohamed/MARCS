@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+    <Folder>
+        <name>Mission MARCS</name>
+        <Placemark>
+            <name>0</name>
+            <Point>
+                <coordinates>1.37712,43.6311</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1</name>
+            <Point>
+                <coordinates>1.37734,43.6312</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>2</name>
+            <Point>
+                <coordinates>1.37752,43.631</coordinates>
+            </Point>
+        </Placemark>
+    </Folder>
+</kml>

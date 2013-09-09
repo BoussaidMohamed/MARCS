@@ -5,25 +5,13 @@
         <Placemark>
             <name>0</name>
             <Point>
-                <coordinates>1.37735,43.6312</coordinates>
+                <coordinates>1.3779,43.6316</coordinates>
             </Point>
         </Placemark>
         <Placemark>
             <name>1</name>
             <Point>
-                <coordinates>1.37698,43.6308</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark>
-            <name>2</name>
-            <Point>
-                <coordinates>1.37839,43.6304</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark>
-            <name>3</name>
-            <Point>
-                <coordinates>1.3779,43.6316</coordinates>
+                <coordinates>1.37765,43.6314</coordinates>
             </Point>
         </Placemark>
     </Folder>

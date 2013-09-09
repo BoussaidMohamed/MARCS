@@ -7,27 +7,36 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>632</height>
+    <height>645</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>800</width>
-    <height>632</height>
+    <height>645</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>800</width>
-    <height>632</height>
+    <height>645</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>MARCS</string>
+   <string>MARCS 2.0</string>
   </property>
   <property name="windowIcon">
    <iconset resource="ressource.qrc">
-    <normaloff>:/new/prefix1/icon/Arrow/0.png</normaloff>:/new/prefix1/icon/Arrow/0.png</iconset>
+    <normaloff>:/new/prefix1/icon/drone.png</normaloff>:/new/prefix1/icon/drone.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>40</width>
+    <height>40</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="ListLogFinal">
@@ -131,10 +140,10 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -209,10 +218,10 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_Time">
@@ -253,10 +262,10 @@
      <string/>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="Time_left_point">
@@ -428,10 +437,10 @@
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>623</x>
+      <x>620</x>
       <y>0</y>
       <width>31</width>
-      <height>641</height>
+      <height>591</height>
      </rect>
     </property>
     <property name="orientation">
@@ -470,10 +479,10 @@
      <bool>false</bool>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_Altitude_2">
@@ -543,10 +552,10 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="Line" name="line_4">
@@ -726,7 +735,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>486</x>
+      <x>483</x>
       <y>530</y>
       <width>151</width>
       <height>61</height>
@@ -749,10 +758,10 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_Alt">
@@ -794,10 +803,10 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QTableWidget" name="tableMarkPoint">
@@ -1025,16 +1034,6 @@
      <string>Mark Points</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listLog">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>230</y>
-      <width>151</width>
-      <height>201</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="tableRPA">
     <property name="geometry">
      <rect>
@@ -1232,19 +1231,19 @@
      </size>
     </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="Marble::MarbleWidget" name="MarbleWidget_smallView" native="true">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>240</y>
-      <width>141</width>
-      <height>121</height>
+      <x>640</x>
+      <y>230</y>
+      <width>155</width>
+      <height>125</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -1255,15 +1254,15 @@
     </property>
     <property name="maximumSize">
      <size>
-      <width>141</width>
-      <height>121</height>
+      <width>155</width>
+      <height>125</height>
      </size>
     </property>
     <property name="toolTip">
-     <string>The Earth</string>
+     <string>The Flight Plan</string>
     </property>
     <property name="whatsThis">
-     <string>The Marble widget displays a virtual globe.</string>
+     <string>The Flight Plan</string>
     </property>
     <property name="zoom" stdset="0">
      <number>2100</number>
@@ -1298,6 +1297,83 @@
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>590</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>(c) Copyright 2013 Rockwell Collins, Inc. All Rights Reserved.</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listLog">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>230</y>
+      <width>151</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNow">
+    <property name="geometry">
+     <rect>
+      <x>511</x>
+      <y>553</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>H</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNext">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>553</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -1426,6 +1502,9 @@
    </property>
   </action>
   <action name="actionController">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="ressource.qrc">
      <normaloff>:/new/prefix1/icon/joystick_256.png</normaloff>:/new/prefix1/icon/joystick_256.png</iconset>
@@ -1474,12 +1553,15 @@
    </property>
   </action>
   <action name="actionRaplay_Mission">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="ressource.qrc">
      <normaloff>:/new/prefix1/icon/replay_icon.png</normaloff>:/new/prefix1/icon/replay_icon.png</iconset>
    </property>
    <property name="text">
-    <string>Raplay Mission</string>
+    <string>Replay Mission</string>
    </property>
   </action>
   <action name="actionFollow_RAP">

@@ -1,22 +1,1271 @@
 
 Compute polled data
-    End of buffer not reached : number of resting char = 24
+    End of buffer not reached : number of resting char = 179
     New polled data structure found at index 0
         Status polled data found in buffer
+    End of buffer not reached : number of resting char = 152
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 49
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 4
 Polled data sent
 
 Compute polled data
-    End of buffer not reached : number of resting char = 247
-    New polled data structure found at index 3
+    End of buffer not reached : number of resting char = 92
+    End of buffer not reached : number of resting char = 87
+    New polled data structure found at index 21
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
         IMU polled data found in buffer
-    End of buffer not reached : number of resting char = 141
-    New polled data structure found at index 106
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
         RC polled data found in buffer
-    End of buffer not reached : number of resting char = 96
-    New polled data structure found at index 153
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
         Current way polled data found in buffer
-    End of buffer not reached : number of resting char = 71
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 63
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 36
+    End of buffer not reached : number of resting char = 12
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    End of buffer not reached : number of resting char = 218
+    End of buffer not reached : number of resting char = 206
+    New polled data structure found at index 67
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 157
+    New polled data structure found at index 114
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 132
+    New polled data structure found at index 137
+        Geolocation polled data found in buffer
+    End of buffer not reached : number of resting char = 61
+    New polled data structure found at index 208
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 34
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
     New polled data structure found at index 176
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 70
+    New polled data structure found at index 199
         Geolocation polled data found in buffer
 Polled data sent
 
@@ -309,26 +1558,111 @@ Compute polled data
 Polled data sent
 
 Compute polled data
-    End of buffer not reached : number of resting char = 9
+    End of buffer not reached : number of resting char = 269
     New polled data structure found at index 0
         Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
 Polled data sent
 
 Compute polled data
     End of buffer not reached : number of resting char = 269
-    New polled data structure found at index 18
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
         IMU polled data found in buffer
-    End of buffer not reached : number of resting char = 148
-    New polled data structure found at index 121
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
         RC polled data found in buffer
-    End of buffer not reached : number of resting char = 103
-    New polled data structure found at index 168
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
         Current way polled data found in buffer
-    End of buffer not reached : number of resting char = 78
-    New polled data structure found at index 191
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
         Geolocation polled data found in buffer
-    End of buffer not reached : number of resting char = 7
-    End of buffer not reached : number of resting char = 2
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
 Polled data sent
 
 Compute polled data
@@ -440,23 +1774,1550 @@ Compute polled data
 Polled data sent
 
 Compute polled data
-    End of buffer not reached : number of resting char = 27
+    End of buffer not reached : number of resting char = 269
     New polled data structure found at index 0
         Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
 Polled data sent
 
 Compute polled data
-    End of buffer not reached : number of resting char = 244
+    End of buffer not reached : number of resting char = 269
     New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
         IMU polled data found in buffer
-    End of buffer not reached : number of resting char = 141
-    New polled data structure found at index 103
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
         RC polled data found in buffer
-    End of buffer not reached : number of resting char = 96
-    New polled data structure found at index 150
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
         Current way polled data found in buffer
-    End of buffer not reached : number of resting char = 71
-    New polled data structure found at index 173
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        Unknown polled data type found in buffer
+    End of buffer not reached : number of resting char = 128
+    New polled data structure found at index 176
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 70
+    New polled data structure found at index 199
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 176
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 70
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 176
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 70
+    New polled data structure found at index 199
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 176
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 70
+    New polled data structure found at index 199
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
+        Geolocation polled data found in buffer
+Polled data sent
+
+Compute polled data
+    End of buffer not reached : number of resting char = 269
+    New polled data structure found at index 0
+        Status polled data found in buffer
+    End of buffer not reached : number of resting char = 242
+    New polled data structure found at index 27
+        IMU polled data found in buffer
+    End of buffer not reached : number of resting char = 139
+    New polled data structure found at index 130
+        RC polled data found in buffer
+    End of buffer not reached : number of resting char = 94
+    New polled data structure found at index 177
+        Current way polled data found in buffer
+    End of buffer not reached : number of resting char = 69
+    New polled data structure found at index 200
         Geolocation polled data found in buffer
 Polled data sent
 

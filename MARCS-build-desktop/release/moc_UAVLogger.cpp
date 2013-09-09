@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'UAVLogger.h'
 **
-** Created: Fri 9. Aug 16:11:51 2013
+** Created: Thu 5. Sep 15:46:17 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!

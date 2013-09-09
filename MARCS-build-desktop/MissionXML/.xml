@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <Mission_Number>2013_9_5_12_43</Mission_Number>
+    <Waypoint>
+        <Number>0</Number>
+        <Longitude>1.43499</Longitude>
+        <Latitude>43.6052</Latitude>
+        <Altitude>100</Altitude>
+        <Heading>90</Heading>
+        <Time>60</Time>
+        <Type>1</Type>
+    </Waypoint>
+    <Waypoint>
+        <Number>1</Number>
+        <Longitude>1.43495</Longitude>
+        <Latitude>43.6045</Latitude>
+        <Altitude>100</Altitude>
+        <Heading>90</Heading>
+        <Time>60</Time>
+        <Type>1</Type>
+    </Waypoint>
+    <Waypoint>
+        <Number>2</Number>
+        <Longitude>1.43657</Longitude>
+        <Latitude>43.6041</Latitude>
+        <Altitude>100</Altitude>
+        <Heading>90</Heading>
+        <Time>60</Time>
+        <Type>1</Type>
+    </Waypoint>
+    <Waypoint>
+        <Number>3</Number>
+        <Longitude>1.4367</Longitude>
+        <Latitude>43.6054</Latitude>
+        <Altitude>100</Altitude>
+        <Heading>90</Heading>
+        <Time>60</Time>
+        <Type>1</Type>
+    </Waypoint>
+</Mission>

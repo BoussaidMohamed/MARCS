@@ -1,13 +1,14 @@
 #include "marcs.h"
 #include "ui_marcs.h"
 
+std::stringstream stream;
+
 MARCS::MARCS(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MARCS)
 {
+
     ui->setupUi(this);
-
-
 
     iconOn.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOn.png"), QSize(), QIcon::Normal, QIcon::Off);
     iconOff.addFile(QString::fromUtf8(":/new/prefix1/icon/engineOff.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -17,10 +18,10 @@ MARCS::MARCS(QWidget *parent) :
     place =  new GeoDataPlacemark( "" );
     document = new GeoDataDocument();
     placemarkRPA = new GeoDataPlacemark( "" );
-    styleArchRPA = new GeoDataStyle();
     placemarkHome = new GeoDataPlacemark( "" );
-    styleArchHome = new GeoDataStyle();
     placemarkMark = new GeoDataPlacemark( "" );
+    styleArchRPA = new GeoDataStyle();
+    styleArchHome = new GeoDataStyle();
     styleArchMark = new GeoDataStyle();
 
     documentRPA = new GeoDataDocument();
@@ -56,7 +57,6 @@ MARCS::MARCS(QWidget *parent) :
     widget->setMaximumSize(180,100);
     widget->setMinimumSize(180,100);
 
-
     //config marble
     ui->MarbleWidget_smallView->setShowOverviewMap(false);
     ui->MarbleWidget_plan->setShowOverviewMap(false);
@@ -80,10 +80,12 @@ MARCS::MARCS(QWidget *parent) :
     ui->labelMission->hide();
     ui->labelRPA->hide();
     ui->AddToMission_button->hide();
-    ui->NextWaypoint_button->hide();
     ui->ListLogFinal->hide();
+    ui->labelNext->setStyleSheet("* { color: rgb(0,100,0) }");
+    ui->labelNow->setStyleSheet("* { color: rgb(255,0,255) }");
     ui->ListLogFinal->setStyleSheet("* { background-color: rgb(240,240,240) }");
     showEditWaypoint(false);
+
     //signal&&slot de l'application
     connect(ui->actionClose,SIGNAL(triggered()),this,SLOT(close()));
     connect(ui->led_button,SIGNAL(clicked()),this,SLOT(showList()));
@@ -97,7 +99,7 @@ MARCS::MARCS(QWidget *parent) :
     connect(ui->actionFlight_plan,SIGNAL(triggered()),this,SLOT(openNewWindowMain()));
     connect(ui->actionFlight_data,SIGNAL(triggered()),this,SLOT(openNewWindowData()));
     connect(ui->actionConnect_RPA,SIGNAL(triggered()),this,SLOT(showConnectDialog()));
-    connect(ui->MarbleWidget_smallView,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(switchToMap()));
+    connect(ui->MarbleWidget_smallView,SIGNAL(rightClicked(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(switchToMap()));
     connect(ui->MarbleWidget_plan,SIGNAL(rightClicked(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
     connect(this,SIGNAL(clickOn()),CommunicationControl::getInstance(),SIGNAL(sendMotOn()));
     connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
@@ -113,20 +115,12 @@ MARCS::MARCS(QWidget *parent) :
     connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(GPSLevel(int)));
     connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(setTableRPA()));
     connect(this,SIGNAL(next(double,double,double,double)),CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)));
+    connect(CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)),this,SLOT(goTo(double,double,double,double)));
     connect(ui->actionLog,SIGNAL(triggered()),this,SLOT(showLog()));
+    connect(CommunicationControl::getInstance(),SIGNAL(XBeeDisconnected()),this,SLOT(XbeeDisconnect()));
+    connect(CommunicationControl::getInstance(),SIGNAL(XBeeReconnected()),this,SLOT(XbeeConnect()));
+    connect(CommunicationControl::getInstance(), SIGNAL(inFlight(char)), this, SLOT(updateMotors(char)));
 
-    paintDevice = this;
-        // If the globe covers fully the screen then we can use the faster
-        // RGB32 as there are no translucent areas involved.
-        QImage::Format imageFormat = ( ui->MarbleWidget_plan->viewport()->mapCoversViewport() )
-                                     ? QImage::Format_RGB32
-                                     : QImage::Format_ARGB32_Premultiplied;
-        // Paint to an intermediate image
-        image = QImage( ui->MarbleWidget_plan->width(),ui->MarbleWidget_plan->height(), imageFormat );
-        image.fill( Qt::transparent );
-        paintDevice = &image;
-
-    gp = new GeoPainter ( paintDevice, ui->MarbleWidget_plan->viewport(), ui->MarbleWidget_plan->mapQuality() );
     home = new waypoint(0,0,0,0,0,0,0,0);
 
     number = 0 ;
@@ -136,6 +130,7 @@ MARCS::MARCS(QWidget *parent) :
     nbClickMotors=0;
     n = 0;
     rowAdd = 0;
+    m_cMotorValue = 0 ;
 
     affichageList = false ;//etat d'affichage de la liste du log
     logShow40 = false ;
@@ -155,12 +150,12 @@ MARCS::MARCS(QWidget *parent) :
     gps3 = false;
     gps4 = false;
     gps5 = false;
+    missionOpned = false ;
+    motorTurn = false ;
 }
 MARCS::~MARCS()
 {
     delete ui;
-    delete gp;
-    delete paintDevice ;
     delete place ;
     delete document ;
     delete documentRPA;
@@ -184,17 +179,17 @@ MARCS::~MARCS()
     delete ItemMarkLon;
     delete ItemMarkNum;
     delete placemarkRPA ;
-    delete styleArchRPA ;
     delete placemarkHome;
-    delete styleArchHome;
     delete placemarkMark ;
+    delete styleArchRPA ;
+    delete styleArchHome;
     delete styleArchMark ;
     myMission.~mission();
-    image.~QImage();
     wpListOpen.~QList();
     wpListSave.~QList();
     wpListAdd.~QList();
     m_mission.~QList();
+    listPlaceMark.~QList();
 }
 //Delete a mission from the view
 void MARCS::clearMission(){
@@ -212,6 +207,10 @@ void MARCS::clearMission(){
             ui->actionEdit_waypoint->setEnabled(false);
             ui->tableWidget->clear();
             clear_mission = true ;
+            missionOpned = false ;
+            ui->NextWaypoint_button->hide();
+            ui->labelNext->hide();
+            ui->labelNow->hide();
         }
         else if (reponse == QMessageBox::No)
         {
@@ -236,98 +235,117 @@ void MARCS::showList()
 void MARCS::openMission(){
 
     path = QFileDialog::getOpenFileName(this, "Load a mission", "./mission/", "KML (*.kml)");
-    QFileInfo inputFile(path);
-    string m ;
-    string nameFileOpen;
-    //get the path of the file
-    m = path.toUtf8().constData();
-    //get the file name selected by the user
-    size_t pos = m.find_last_of("/");
-    if(pos != std::string::npos){
 
-        nameFileOpen.assign(m.begin() + pos + 1, m.end()-4);
-    }
-      else
-    {
-      nameFileOpen = m;
-  }
-    string fileNameTempOpen = "./MissionXML/" + nameFileOpen +".xml" ;
-    fileOpened =  QString::fromStdString(fileNameTempOpen);
+    if (path.length()>0){
+        QFileInfo inputFile(path);
+        string m ;
+        string nameFileOpen;
+        //get the path of the file
+        m = path.toUtf8().constData();
+        //get the file name selected by the user
+        size_t pos = m.find_last_of("/");
+        if(pos != std::string::npos){
 
-    // Access the shared route request (start, destination and parameters)
-    manager = ui->MarbleWidget_plan->model()->routingManager();
-    manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
-    request = manager->routeRequest();
-    request_smallMap = manager_smallMap->routeRequest();
-    request->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
-    request_smallMap->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian ));
-    request->clear();
-    request_smallMap->clear();
-    ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-    ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
-    ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
-    ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
-    ui->MarbleWidget_plan->repaint();
-    ui->actionClear_mission->setEnabled(true);
-    //Make a copy for the mission information on a QList
-    lastMission = inputFile.absoluteFilePath();
-    wpListOpen = myMission.loadMission(fileOpened);
-    ui->actionEdit_waypoint->setEnabled(true);
-    open = true ;
-    num_waypoint=0;
-    showEditWaypoint(false);
-    wpListSave.clear();
-    myMission.setWaypointList(wpListOpen);
-    m_mission = myMission.getWaypointList();
-    clear_mission = false ;
-    if (takeOffClicked== true){
-        ui->NextWaypoint_button->show();
+            nameFileOpen.assign(m.begin() + pos + 1, m.end()-4);
+        }
+          else
+        {
+          nameFileOpen = m;
+      }
+        string fileNameTempOpen = "./MissionXML/" + nameFileOpen +".xml" ;
+        fileOpened =  QString::fromStdString(fileNameTempOpen);
+
+        // Access the shared route request (start, destination and parameters)
+        manager = ui->MarbleWidget_plan->model()->routingManager();
+        manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
+        request = manager->routeRequest();
+        request_smallMap = manager_smallMap->routeRequest();
+        request->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
+        request_smallMap->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian ));
+        request->clear();
+        request_smallMap->clear();
+        ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+        ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+        ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
+        ui->MarbleWidget_smallView->model()->removeGeoData(lastMission);
+        ui->MarbleWidget_plan->repaint();
+        ui->MarbleWidget_smallView->repaint();
+        ui->actionClear_mission->setEnabled(true);
+        //Make a copy for the mission information on a QList
+        lastMission = inputFile.absoluteFilePath();
+        wpListOpen = myMission.loadMission(fileOpened);
+        ui->actionEdit_waypoint->setEnabled(true);
+        open = true ;
+        num_waypoint=0;
+        showEditWaypoint(false);
+        wpListSave.clear();
+        myMission.setWaypointList(wpListOpen);
+        m_mission = myMission.getWaypointList();
+        clear_mission = false ;
+        if (takeOffClicked== true){
+            ui->NextWaypoint_button->show();
+            ui->labelNext->show();
+            ui->labelNow->show();
+        }
+        else {
+            //rien
+        }
+        missionOpned = true ;
+
     }
     else {
         //rien
     }
+
 }
 //Save a mission
 void MARCS::saveMission(){
 
     QString  fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "./mission/",  "KML files (*.kml)"  );
-    QString hideFile ;
-    string m ;
-    string nameFile;
+    if(fileName.length()>0){
 
-    m = fileName.toUtf8().constData();
-    size_t pos = m.find_last_of("/");
-    if(pos != std::string::npos){
+        QString hideFile ;
+        string m ;
+        string nameFile;
 
-        nameFile.assign(m.begin() + pos + 1, m.end()-4);
+        m = fileName.toUtf8().constData();
+        size_t pos = m.find_last_of("/");
+        if(pos != std::string::npos){
+
+            nameFile.assign(m.begin() + pos + 1, m.end()-4);
+        }
+          else
+        {
+          nameFile = m;
+      }
+        string fileNameTemp =  "./MissionXML/" + nameFile +".xml" ;
+        hideFile =  QString::fromStdString(fileNameTemp);
+
+
+        if (m_mission.length()==0){
+
+            myMission.saveMissionKml(wpListSave,fileName);
+            myMission.saveMission(wpListSave,hideFile);
+
+        }
+        else {
+
+            myMission.saveMissionKml(myMission.getWaypointList(),fileName);
+            myMission.saveMission(myMission.getWaypointList(),hideFile);
+
+        }
+
+        ui->actionSave_mission->setEnabled(false);
+        num_waypoint = 0 ;
+
+        QMessageBox::information(this, "Save Mission", "The Mission Was Saved");
+
+
+
     }
-      else
-    {
-      nameFile = m;
-  }
-    string fileNameTemp =  "./MissionXML/" + nameFile +".xml" ;
-    hideFile =  QString::fromStdString(fileNameTemp);
-
-
-    if (m_mission.length()==0){
-
-        myMission.saveMissionKml(wpListSave,fileName);
-        myMission.saveMission(wpListSave,hideFile);
-
+    else{
+        //rien
     }
-    else {
-
-        myMission.saveMissionKml(myMission.getWaypointList(),fileName);
-        myMission.saveMission(myMission.getWaypointList(),hideFile);
-
-    }
-
-    ui->actionSave_mission->setEnabled(false);
-    num_waypoint = 0 ;
-
-    QMessageBox::information(this, "Save Mission", "The Mission Was Saved");
-
-
 
 }
 //add waypoint to the Flight Plan
@@ -357,7 +375,7 @@ void MARCS::addPoint(qreal lon, qreal lat, GeoDataCoordinates::Unit){
  ui->actionEdit_waypoint->setEnabled(true);
  ui->actionSave_mission->setEnabled(true);
  ui->MarbleWidget_plan->repaint();
- ui->MarbleWidget_plan->repaint();
+ ui->MarbleWidget_smallView->repaint();
  open = false ;
  myMission.setWaypointList(wpListSave);
 }
@@ -380,6 +398,16 @@ void MARCS::openNewWindowMain()
     ui->ListLogFinal->hide();
     ui->actionLog->setEnabled(true);
     ui->AddToMission_button->hide();
+    if ( missionOpned == true && nextIsShowing == true){
+        ui->NextWaypoint_button->show();
+        ui->labelNext->show();
+        ui->labelNow->show();
+    }
+    else{
+        ui->NextWaypoint_button->hide();
+        ui->labelNext->hide();
+        ui->labelNow->hide();
+    }
 
 }
 //Show the page "Flight DATA"
@@ -401,6 +429,16 @@ void MARCS::openNewWindowData()
     ui->AddToMission_button->show();
     ui->ListLogFinal->hide();
     ui->actionLog->setEnabled(true);
+    if ( missionOpned == true && nextIsShowing == true){
+        ui->NextWaypoint_button->show();
+        ui->labelNext->show();
+        ui->labelNow->show();
+    }
+    else {
+        ui->NextWaypoint_button->hide();
+        ui->labelNext->hide();
+        ui->labelNow->hide();
+    }
     showEditWaypoint(false);
 
 }
@@ -423,14 +461,23 @@ void MARCS::openNewWindowVideo()
     ui->ListLogFinal->hide();
     ui->actionLog->setEnabled(true);
     showEditWaypoint(false);
-
     ui->AddToMission_button->hide();
+    ui->actionEdit_waypoint->setEnabled(false);
+    if ( missionOpned == true && nextIsShowing == true ){
+        ui->NextWaypoint_button->show();
+        ui->labelNext->show();
+        ui->labelNow->show();
+    }
+    else {
+        ui->NextWaypoint_button->hide();
+        ui->labelNext->hide();
+        ui->labelNow->hide();
+    }
 
 }
 
 void MARCS::showLog(){
     ui->ListLogFinal->show();
-
     ui->MarbleWidget_plan->hide();
     ui->MarbleWidget_smallView->hide();
     ui->tableWidget->hide();
@@ -448,6 +495,9 @@ void MARCS::showLog(){
     showEditWaypoint(false);
 
     ui->AddToMission_button->hide();
+    ui->NextWaypoint_button->hide();
+    ui->labelNext->hide();
+    ui->labelNow->hide();
 }
 
 //Close the window
@@ -463,28 +513,24 @@ void MARCS::openNewMap()
 
     if ( m_map == 0  ) {
         ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+        ui->MarbleWidget_smallView->model()->addGeoDataFile(inputFile.absoluteFilePath());
         lastMap = inputFile.absoluteFilePath();
         m_map = 1 ;
    }
 
     else {
         ui->MarbleWidget_plan->model()->removeGeoData(lastMap);
+        ui->MarbleWidget_smallView->model()->removeGeoData(lastMap);
         ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+        ui->MarbleWidget_smallView->model()->addGeoDataFile(inputFile.absoluteFilePath());
         lastMap = inputFile.absoluteFilePath();
     }
+
 }
 //Switch Mode ( Flight Plan , Video )
 void MARCS::switchToMap()
 {
-
-    ui->MarbleWidget_plan->show();
-    ui->MarbleWidget_smallView->hide();
-    ui->tableWidget->hide();
-    ui->snapShoot_button->hide();
-    ui->addMark_button->show();
-    ui->actionFlight_plan->setEnabled(false);
-    ui->actionFlight_data->setEnabled(true);
-    ui->actionVideo->setEnabled(true);
+openNewWindowMain();
 }
 //Display the edit waypoint zone
 void MARCS::editWaypoint(){
@@ -517,6 +563,8 @@ int maxCB = ui->comboBox_ListWaypoint->count();
         }
     }
     ui->NextWaypoint_button->hide();
+    ui->labelNext->hide();
+    ui->labelNow->hide();
 
 }
 //Get information of each waypoints and show it
@@ -586,6 +634,8 @@ ui->actionEdit_waypoint->setEnabled(true);
 ui->actionSave_mission->setEnabled(true);
 if (nextIsShowing == true){
     ui->NextWaypoint_button->show();
+    ui->labelNext->show();
+    ui->labelNow->show();
 }
 }
 //Display the edit waypoint zone
@@ -763,6 +813,7 @@ void MARCS::on_Delete_button_clicked()
                  ui->MarbleWidget_plan->model()->addGeoDataFile( lastMission );
                  ui->MarbleWidget_smallView->model()->addGeoDataFile( lastMission );
                  ui->MarbleWidget_plan->repaint();
+                 ui->MarbleWidget_smallView->repaint();
                  ui->actionClear_mission->setEnabled(true);
 
 
@@ -850,10 +901,12 @@ void MARCS::on_start_button_clicked()
     if ( motorOn == false ){
         emit clickOn();
         motorOn = true ;
+        qDebug()<<"MotorOn";
     }
     else {
         emit clickOff();
         motorOn = false ;
+        qDebug()<<"MotorOff";
     }
 }
 //Save the serial port
@@ -865,20 +918,19 @@ void MARCS::validCom(){
 }
 //start motor of the RPA
 void MARCS::startMotors(){
-
-    connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
     if (nbClickMotors == 0){
-        myCom->sendMotOn();
-        ui->start_button->setIcon(iconOn);
-        ui->start_button->setIconSize(QSize(61, 151));
-        nbClickMotors++;
-    }
+            myCom->sendMotOn();
+            ui->start_button->setIcon(iconOn);
+            ui->start_button->setIconSize(QSize(61, 151));
+            nbClickMotors++;
+      }
     else {
-        myCom->sendMotOn();
-        ui->start_button->setIcon(iconOn);
-        ui->start_button->setIconSize(QSize(61, 151));
-        nbClickMotors++;
-    }
+            myCom->sendMotOn();
+            ui->start_button->setIcon(iconOn);
+            ui->start_button->setIconSize(QSize(61, 151));
+            nbClickMotors++;
+        }
+
     ui->excute_button->setEnabled(true);
     home->setNum(0);
     home->setLong(RPA::getInstance()->getCoordinates()->getLongitude());
@@ -886,24 +938,32 @@ void MARCS::startMotors(){
     home->setAlt(RPA::getInstance()->getHeight());
     home->setHdg(RPA::getInstance()->getHeading());
     createHomeMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
+
+   connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
+   qDebug()<<"StartMotors";
+
 }
 //stop the motor of the RPA
 void MARCS::stopMotors(){
     connect(this,SIGNAL(clickOn()),CommunicationControl::getInstance(),SIGNAL(sendMotOn()));
-    myCom->sendMotOff();
-    ui->start_button->setIcon(iconOff);
-    ui->start_button->setIconSize(QSize(61, 151));
-    ui->excute_button->setEnabled(false);
-    ui->goHome_button->setEnabled(false);
-    ui->addMark_button->setEnabled(false);
-    ui->snapShoot_button->setEnabled(false);
-    ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/0.png")));
-    ui->label_Altitude_2->setText("0.0");
-    ui->excute_button->setIcon(iconTakeOff);
-    land= false ;
-    CommunicationControl::getInstance()->stop();
-    ui->NextWaypoint_button->hide();
+        myCom->sendMotOff();
+        ui->start_button->setIcon(iconOff);
+        ui->start_button->setIconSize(QSize(61, 151));
+        ui->excute_button->setEnabled(false);
+        ui->goHome_button->setEnabled(false);
+        ui->addMark_button->setEnabled(false);
+        ui->snapShoot_button->setEnabled(false);
+        ui->battery_label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/icon/0.png")));
+        ui->label_Altitude_2->setText("0.0");
+        ui->excute_button->setIcon(iconTakeOff);
+        land= false ;
+       // CommunicationControl::getInstance()->stop();
+        ui->NextWaypoint_button->hide();
+        ui->labelNext->hide();
+        ui->labelNow->hide();
 
+
+        qDebug()<<"StopMotors";
 }
 //get the batteryLevel
 void MARCS::batteryLevel(double p_pValue){
@@ -1312,21 +1372,23 @@ void MARCS::createRpaMark(double hdg ,double lon, double lat, GeoDataCoordinates
 
     //Create the placemark representing the Arch of Triumph
     placemarkRPA->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
-     createStyleRPA (  styleArchRPA, hdg );
-     placemarkRPA->setStyle( styleArchRPA ) ;
+    createStyleRPA (  styleArchRPA, hdg );
+    placemarkRPA->setStyle( styleArchRPA ) ;
 
      //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
      if(number==0){
          documentRPA->append( placemarkRPA );
-         ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentRPA);
+       ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentRPA);
               }
      else {
          documentRPA->remove(0);
          documentRPA->append( placemarkRPA );
          ui->MarbleWidget_plan->model()->treeModel()->update();
+
      }
    number ++ ;
-}
+}//add mark of the RPA in the map
+
 //Create the icon of Home to be add later in the map
 void MARCS::createStyleHome (GeoDataStyle *style  ) {
     GeoDataIconStyle iconStyle;
@@ -1336,10 +1398,9 @@ void MARCS::createStyleHome (GeoDataStyle *style  ) {
 //add mark of Home in the map
 void MARCS::createHomeMark(double lon, double lat, GeoDataCoordinates::Unit){
     //Create the placemark representing the Arch of Triumph
-     placemarkHome->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
+    placemarkHome->setCoordinate( lon, lat, 0, GeoDataCoordinates::Degree );
      createStyleHome (  styleArchHome );
      placemarkHome->setStyle( styleArchHome ) ;
-
      //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
      if(homeShow == false){
          documentHome->append( placemarkHome );
@@ -1359,10 +1420,10 @@ void MARCS::createStyleAddMark (GeoDataStyle *style  ) {
 //add mark of AddMark in the map
 void MARCS::createAddMark(double lon, double lat, GeoDataCoordinates::Unit){
     //Create the placemark representing the Arch of Triumph
-    placemarkMark->setCoordinate(lon,lat,0,GeoDataCoordinates::Degree);
-     createStyleAddMark (  styleArchMark );
-     placemarkMark->setStyle( styleArchMark ) ;
 
+    placemarkMark->setCoordinate(lon,lat,0,GeoDataCoordinates::Degree);
+    createStyleAddMark (  styleArchMark );
+    placemarkMark->setStyle( styleArchMark ) ;
 
   if ( num_add_waypoint == 0){
          //Create the document and add the two placemarks (the point representing the Arch of Triumph and the polygon with Bucharest's boundaries)
@@ -1370,9 +1431,17 @@ void MARCS::createAddMark(double lon, double lat, GeoDataCoordinates::Unit){
              ui->MarbleWidget_plan->model()->treeModel()->addDocument(documentMark);
       }
  else {
-         documentMark->append(placemarkMark);
-         ui->MarbleWidget_plan->model()->treeModel()->update();
+      for (int i = 0 ; i < num_add_waypoint ; i++)   {
+          documentMark->append(placemarkMark);
+
       }
+
+
+      }
+
+
+  ui->MarbleWidget_plan->model()->treeModel()->update();
+  num_add_waypoint++;
     }
 //emit 2 signals from the execute button
 void MARCS::on_excute_button_clicked()
@@ -1394,6 +1463,8 @@ void MARCS::fly(){
     ui->excute_button->setIcon(iconLand);
     if (m_mission.length()> 0){
         ui->NextWaypoint_button->show();
+        ui->labelNext->show();
+        ui->labelNow->show();
         nextIsShowing = true ;
     }
     else {
@@ -1414,6 +1485,8 @@ void MARCS::stopFly(){
     home->setAlt(0);
     home->setHdg(0);
     ui->NextWaypoint_button->hide();
+    ui->labelNext->hide();
+    ui->labelNow->hide();
     nextIsShowing = false ;
     takeOffClicked= false ;
 }
@@ -1435,7 +1508,7 @@ void MARCS::on_addMark_button_clicked()
           wpListAdd.append(new waypoint(num_add_waypoint,lon,lat,alt,hdg,0,0,0));
 
           createAddMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
-          num_add_waypoint ++ ;
+
           ui->AddToMission_button->setEnabled(true);
 
 
@@ -1480,6 +1553,10 @@ void MARCS::GPSLevel(int p_value){
 
         ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
         gps1 = true ;
+        gps2 = false ;
+        gps3 = false ;
+        gps4 = false ;
+        gps5 = false ;
 
     }else if (p_value == 2 && gps2 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
@@ -1491,7 +1568,11 @@ void MARCS::GPSLevel(int p_value){
         ui->ListLogFinal->addItem(pItemLog);
 
         ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps1 = false ;
         gps2 = true ;
+        gps3 = false ;
+        gps4 = false ;
+        gps5 = false ;
 
     }else if (p_value == 3 && gps3 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
@@ -1503,7 +1584,11 @@ void MARCS::GPSLevel(int p_value){
         ui->ListLogFinal->addItem(pItemLog);
 
         ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps1 = false ;
+        gps2 = false ;
         gps3 = true ;
+        gps4 = false ;
+        gps5 = false ;
 
     }else if (p_value == 4 && gps4 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
@@ -1515,23 +1600,29 @@ void MARCS::GPSLevel(int p_value){
         ui->ListLogFinal->addItem(pItemLog);
 
         ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+        gps1 = false ;
+        gps2 = false ;
+        gps3 = false ;
         gps4 = true ;
+        gps5 = false ;
 
 
-    }else if (p_value == 5 && gps5 == false){
-        QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
-        pItem->setTextColor(QColor::fromRgb(255,0,0));
+    }
+    else if (p_value > 4 && gps5 == false) {
+        QListWidgetItem* pItem =new QListWidgetItem("GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItem->setTextColor(QColor::fromRgb(0,100,0));
         ui->listLog->addItem(pItem);
 
-        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Low GPS Signal :"+ QString::number(p_value)+ "/7");
-        pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+        QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : GPS Signal :"+ QString::number(p_value)+ "/7");
+        pItemLog->setTextColor(QColor::fromRgb(0,100,0));
         ui->ListLogFinal->addItem(pItemLog);
 
-        ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
-        gps5 = true ;
-    }
-    else if (p_value > 5) {
         ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
+        gps1 = false ;
+        gps2 = false ;
+        gps3 = false ;
+        gps4 = false ;
+        gps5 = true ;
     }
 
     delete[] time_mission;
@@ -1617,6 +1708,100 @@ void MARCS::on_AddToMission_button_clicked()
 }
 void MARCS::on_NextWaypoint_button_clicked()
 {
-    emit next(m_mission[n]->getLong(),m_mission[n]->getLat(),m_mission[n]->getAlt(),n);
-    n++;
+    if ( n < m_mission.length()){
+
+        emit next(m_mission[n]->getLong(),m_mission[n]->getLat(),m_mission[n]->getAlt(),n);
+        if (n<m_mission.length()-1){
+
+            ui->labelNext->setText(QString::number(n+1));
+            ui->labelNow->setText(QString::number(n));
+        }
+        else {
+            //rien
+        }
+        n++;
+    }
+    else {
+        //
+    }
+}
+void MARCS::XbeeConnect(){
+    time_t now1 = time (0);
+    struct tm * now2 = localtime( & now1);
+    string temp ;
+    char* time_mission = new char[32];
+    QString timeShow ;
+
+    sprintf(time_mission,"%d-%d-%d %d:%d:%d",(now2->tm_year + 1900 ) ,(now2->tm_mon+1), (now2->tm_mday),(now2->tm_hour), (now2->tm_min),now2->tm_sec);
+    temp = string(time_mission);
+    string time_mission_temp = "" + temp ;
+    timeShow = QString::fromStdString(time_mission_temp);
+
+    QListWidgetItem* pItem =new QListWidgetItem("Xbee Reconnected.");
+    pItem->setTextColor(QColor::fromRgb(0,100,0));
+    ui->listLog->addItem(pItem);
+
+    QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Xbee Reconnected.");
+    pItemLog->setTextColor(QColor::fromRgb(0,100,0));
+    ui->ListLogFinal->addItem(pItemLog);
+
+    ui->led_button->setStyleSheet("* { background-color: rgb(0,100,0) }");
+    delete[] time_mission ;
+}
+void MARCS::XbeeDisconnect(){
+    time_t now1 = time (0);
+    struct tm * now2 = localtime( & now1);
+    string temp ;
+    char* time_mission = new char[32];
+    QString timeShow ;
+
+    sprintf(time_mission,"%d-%d-%d %d:%d:%d",(now2->tm_year + 1900 ) ,(now2->tm_mon+1), (now2->tm_mday),(now2->tm_hour), (now2->tm_min),now2->tm_sec);
+    temp = string(time_mission);
+    string time_mission_temp = "" + temp ;
+    timeShow = QString::fromStdString(time_mission_temp);
+
+    QListWidgetItem* pItem =new QListWidgetItem("Xbee Disconnected.");
+    pItem->setTextColor(QColor::fromRgb(255,0,0));
+    ui->listLog->addItem(pItem);
+
+    QListWidgetItem* pItemLog =new QListWidgetItem(timeShow+" : Xbee Disconnected.");
+    pItemLog->setTextColor(QColor::fromRgb(255,0,0));
+    ui->ListLogFinal->addItem(pItemLog);
+
+    ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
+    delete[] time_mission ;
+
+}
+
+void MARCS::updateMotors(char p_cValue){
+
+    if (m_cMotorValue != p_cValue)
+    {
+        m_cMotorValue = p_cValue;
+
+        if ( p_cValue == 1){
+
+            ui->start_button->setIcon(iconOn);
+            ui->start_button->setIconSize(QSize(61, 151));
+            ui->excute_button->setEnabled(true);
+            home->setNum(0);
+            home->setLong(RPA::getInstance()->getCoordinates()->getLongitude());
+            home->setLat(RPA::getInstance()->getCoordinates()->getLatitude());
+            home->setAlt(RPA::getInstance()->getHeight());
+            home->setHdg(RPA::getInstance()->getHeading());
+            createHomeMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
+            nbClickMotors = 1 ;
+            motorOn = true ;
+
+
+        }
+        else {
+            motorTurn = false ;
+            stopMotors();
+        }
+    }
+}
+
+void MARCS::goTo(double lon, double lat, double alt, double n){
+    myCom->sendGoTo();
 }
