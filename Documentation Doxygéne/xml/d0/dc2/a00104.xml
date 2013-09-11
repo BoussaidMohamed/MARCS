@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d0/dc2/a00104" kind="struct" prot="public">
+    <compoundname>DIRAMPFORCE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/dc2/a00104_1a335737bf1197ceadd1516dd615939362" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lEnd</definition>
+        <argsstring></argsstring>
+        <name>lEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="182" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/dc2/a00104_1ad6e5e5b134f022d8552a40e21617fe37" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lStart</definition>
+        <argsstring></argsstring>
+        <name>lStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="181" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="180" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="180" bodyend="183"/>
+    <listofallmembers>
+      <member refid="d0/dc2/a00104_1a335737bf1197ceadd1516dd615939362" prot="public" virt="non-virtual"><scope>DIRAMPFORCE</scope><name>lEnd</name></member>
+      <member refid="d0/dc2/a00104_1ad6e5e5b134f022d8552a40e21617fe37" prot="public" virt="non-virtual"><scope>DIRAMPFORCE</scope><name>lStart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

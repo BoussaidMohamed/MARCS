@@ -1,0 +1,1754 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/d7c/a00003">
+    <title>dinput.h File Reference</title>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">CPOINT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONA.__unnamed__</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONFORMATA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONFORMATW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIACTIONW.__unnamed__</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICOLORSET</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICONDITION</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICONFIGUREDEVICESPARAMSA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICONFIGUREDEVICESPARAMSW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICONSTANTFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DICUSTOMFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDATAFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVCAPS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVCAPS_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEIMAGEINFOA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEIMAGEINFOHEADERA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEIMAGEINFOHEADERW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEIMAGEINFOW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEINSTANCE_DX3A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEINSTANCE_DX3W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEINSTANCEA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEINSTANCEW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTDATA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTDATA_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTINSTANCE_DX3A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTINSTANCE_DX3W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTINSTANCEA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIDEVICEOBJECTINSTANCEW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIEFFECT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIEFFECT_DX5</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIEFFECTINFOA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIEFFECTINFOW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIEFFESCAPE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIENVELOPE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIFILEEFFECT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIJOYSTATE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIJOYSTATE2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIMOUSESTATE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIMOUSESTATE2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIOBJECTDATAFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPERIODIC</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPCAL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPCALPOV</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPCPOINTS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPDWORD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPGUIDANDPATH</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPHEADER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPPOINTER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPRANGE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIPROPSTRING</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d7c/a00003">DIRAMPFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link>  <link linkend="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c">D3DCOLOR</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d1/d22/a00057">DIACTIONW</link>  <link linkend="d1/d7c/a00003_1a7335cc1293f997b1d0f8069b89735f29">DIACTION</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d9/d2e/a00056">DIACTIONFORMATW</link>  <link linkend="d1/d7c/a00003_1a4c9b2d803ccb4535619e51c9ffb9f76b">DIACTIONFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1df/d03/a00062">DICONFIGUREDEVICESPARAMSW</link>  <link linkend="d1/d7c/a00003_1a0f748f4abe884f1f9a8f33379d765dbc">DICONFIGUREDEVICESPARAMS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d0/d89/a00071">DIDEVICEIMAGEINFOW</link>  <link linkend="d1/d7c/a00003_1ae1e5b3be6b7c41ce2b8766184954903c">DIDEVICEIMAGEINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d2/db1/a00070">DIDEVICEIMAGEINFOHEADERW</link>  <link linkend="d1/d7c/a00003_1ab692ca9786dfc4d5ca34347123e00629">DIDEVICEIMAGEINFOHEADER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d9/da5/a00075">DIDEVICEINSTANCEW</link>  <link linkend="d1/d7c/a00003_1a8545eb4f5dfab7902125ada298800c51">DIDEVICEINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d1/d6e/a00073">DIDEVICEINSTANCE_DX3W</link>  <link linkend="d1/d7c/a00003_1adf33054b27c22e835e1de7bef47914c6">DIDEVICEINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d8/d53/a00081">DIDEVICEOBJECTINSTANCEW</link>  <link linkend="d1/d7c/a00003_1a8c31ac566eb0aa9fa96e309722b66afa">DIDEVICEOBJECTINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d1/d51/a00079">DIDEVICEOBJECTINSTANCE_DX3W</link>  <link linkend="d1/d7c/a00003_1abf4b23cea2b05a1a3ddfd54484f657a9">DIDEVICEOBJECTINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1d4/d63/a00082">DIEFFECT</link>  <link linkend="d1/d7c/a00003_1a1a1c717e42e6338142238adb158c84f2">DIEFFECT_DX6</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1df/d13/a00085">DIEFFECTINFOW</link>  <link linkend="d1/d7c/a00003_1a5c860c9f5d60736cf31e31fb1c7d32fb">DIEFFECTINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1ab82adb474aad50be88517e3ecb5e4c39">LPCDIACTIONW</link>  <link linkend="d1/d7c/a00003_1ad8ef3f40674790d38cd0972054871c32">LPCDIACTION</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1dc/dee/a00053">DIACTIONA</link> *  <link linkend="d1/d7c/a00003_1a95e3ed0eb15376c01274f3c1f8ceb7ca">LPCDIACTIONA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1a058106497df13250c46f8683921d92d6">LPCDIACTIONFORMATW</link>  <link linkend="d1/d7c/a00003_1abd00896a8616d7f34f137421baa9d5ed">LPCDIACTIONFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/d6d/a00055">DIACTIONFORMATA</link> *  <link linkend="d1/d7c/a00003_1ae3665991df270a750027b641399310ec">LPCDIACTIONFORMATA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/d2e/a00056">DIACTIONFORMATW</link> *  <link linkend="d1/d7c/a00003_1a058106497df13250c46f8683921d92d6">LPCDIACTIONFORMATW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d22/a00057">DIACTIONW</link> *  <link linkend="d1/d7c/a00003_1ab82adb474aad50be88517e3ecb5e4c39">LPCDIACTIONW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d3/d8b/a00059">DICOLORSET</link> *  <link linkend="d1/d7c/a00003_1a75d57d285c7503669b3e79806cc8da87">LPCDICOLORSET</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/d73/a00060">DICONDITION</link> *  <link linkend="d1/d7c/a00003_1abebe330bdc3a47cbb406f44a6e5a598e">LPCDICONDITION</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1aab9a51e14e582063aa0236eaa7bd8831">LPCDICONFIGUREDEVICESPARAMSW</link>  <link linkend="d1/d7c/a00003_1a9eebe085ddf02e611400976bb2e2c7fb">LPCDICONFIGUREDEVICESPARAMS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/de8/a00061">DICONFIGUREDEVICESPARAMSA</link> *  <link linkend="d1/d7c/a00003_1a6e1cbab3e69a1d15c566d9c1af7e516d">LPCDICONFIGUREDEVICESPARAMSA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1df/d03/a00062">DICONFIGUREDEVICESPARAMSW</link> *  <link linkend="d1/d7c/a00003_1aab9a51e14e582063aa0236eaa7bd8831">LPCDICONFIGUREDEVICESPARAMSW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d6f/a00063">DICONSTANTFORCE</link> *  <link linkend="d1/d7c/a00003_1a5a236a7175ba68af788a4f28fb607e30">LPCDICONSTANTFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1df/d5f/a00064">DICUSTOMFORCE</link> *  <link linkend="d1/d7c/a00003_1a5f2c8f05109efdabb0d6fedaaee15e00">LPCDICUSTOMFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> *  <link linkend="d1/d7c/a00003_1ab7e0c3254f09795a4a2176cac228ba7d">LPCDIDATAFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1aad68924d42e1b039ebc54270cc8ba7ca">LPCDIDEVICEIMAGEINFOW</link>  <link linkend="d1/d7c/a00003_1a03ede45d49c52431e7e4d7a5b6f8d2e8">LPCDIDEVICEIMAGEINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1da/d24/a00068">DIDEVICEIMAGEINFOA</link> *  <link linkend="d1/d7c/a00003_1a7ba20775125e9649cd245f011e916cd9">LPCDIDEVICEIMAGEINFOA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1a25e4d40027bc0a65765ba55b6f9698bc">LPCDIDEVICEIMAGEINFOHEADERW</link>  <link linkend="d1/d7c/a00003_1a8cfdb6a6ea6df0820c1c4676f2cd12b9">LPCDIDEVICEIMAGEINFOHEADER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/d31/a00069">DIDEVICEIMAGEINFOHEADERA</link> *  <link linkend="d1/d7c/a00003_1a093f5f31b59aff80b0a28cd4bc56c363">LPCDIDEVICEIMAGEINFOHEADERA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d2/db1/a00070">DIDEVICEIMAGEINFOHEADERW</link> *  <link linkend="d1/d7c/a00003_1a25e4d40027bc0a65765ba55b6f9698bc">LPCDIDEVICEIMAGEINFOHEADERW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d0/d89/a00071">DIDEVICEIMAGEINFOW</link> *  <link linkend="d1/d7c/a00003_1aad68924d42e1b039ebc54270cc8ba7ca">LPCDIDEVICEIMAGEINFOW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="d1/d7c/a00003_1a897d867e23d8d452f9a4b0e3b3b17151">LPCDIDEVICEINSTANCEW</link>  <link linkend="d1/d7c/a00003_1a647892d9a904252334406b4edc80d32c">LPCDIDEVICEINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1adf33054b27c22e835e1de7bef47914c6">DIDEVICEINSTANCE_DX3</link> *  <link linkend="d1/d7c/a00003_1a99a2e148b0e35f3edf4aac82a1329ef8">LPCDIDEVICEINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d6/d2c/a00072">DIDEVICEINSTANCE_DX3A</link> *  <link linkend="d1/d7c/a00003_1aef940f27ff3e4aeead520b3ee8c8c0d7">LPCDIDEVICEINSTANCE_DX3A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d6e/a00073">DIDEVICEINSTANCE_DX3W</link> *  <link linkend="d1/d7c/a00003_1a58ca8d96ed54e0e5150f09802f218d9f">LPCDIDEVICEINSTANCE_DX3W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1db/db6/a00074">DIDEVICEINSTANCEA</link> *  <link linkend="d1/d7c/a00003_1a95a958de7d27b22fa2f15f5d6c2917d0">LPCDIDEVICEINSTANCEA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/da5/a00075">DIDEVICEINSTANCEW</link> *  <link linkend="d1/d7c/a00003_1a897d867e23d8d452f9a4b0e3b3b17151">LPCDIDEVICEINSTANCEW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1db/df8/a00076">DIDEVICEOBJECTDATA</link> *  <link linkend="d1/d7c/a00003_1a2fa78c4a1805d9968c9f8ca6a8ecad29">LPCDIDEVICEOBJECTDATA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d09/a00077">DIDEVICEOBJECTDATA_DX3</link> *  <link linkend="d1/d7c/a00003_1a6188cbc25716d308546ea064ada64220">LPCDIDEVICEOBJECTDATA_DX</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1a8c31ac566eb0aa9fa96e309722b66afa">DIDEVICEOBJECTINSTANCE</link> *  <link linkend="d1/d7c/a00003_1a916ed3b36c0fee9ec6f929b7889abd08">LPCDIDEVICEOBJECTINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1abf4b23cea2b05a1a3ddfd54484f657a9">DIDEVICEOBJECTINSTANCE_DX3</link> *  <link linkend="d1/d7c/a00003_1ad1e95f2c2fdac469111bb708f524ca31">LPCDIDEVICEOBJECTINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/da4/a00078">DIDEVICEOBJECTINSTANCE_DX3A</link> *  <link linkend="d1/d7c/a00003_1a18672358bcd2b835bfa855173268df37">LPCDIDEVICEOBJECTINSTANCE_DX3A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d51/a00079">DIDEVICEOBJECTINSTANCE_DX3W</link> *  <link linkend="d1/d7c/a00003_1a819f613e109c32de5c230875167415d6">LPCDIDEVICEOBJECTINSTANCE_DX3W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1da/dec/a00080">DIDEVICEOBJECTINSTANCEA</link> *  <link linkend="d1/d7c/a00003_1a65a62a5e75510b9d893a3092f0c646e4">LPCDIDEVICEOBJECTINSTANCEA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d8/d53/a00081">DIDEVICEOBJECTINSTANCEW</link> *  <link linkend="d1/d7c/a00003_1a84b31016723ef5fcb7959be44701a135">LPCDIDEVICEOBJECTINSTANCEW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/d63/a00082">DIEFFECT</link> *  <link linkend="d1/d7c/a00003_1a7913240b16286bfdcb811a35a982b236">LPCDIEFFECT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d2/d1f/a00083">DIEFFECT_DX5</link> *  <link linkend="d1/d7c/a00003_1a57b16498dd99a721d2ea77611b4d0f5c">LPCDIEFFECT_DX5</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1a5c860c9f5d60736cf31e31fb1c7d32fb">DIEFFECTINFO</link> *  <link linkend="d1/d7c/a00003_1a391924134bcbc6838b109050d1ca86a1">LPCDIEFFECTINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1df/d5d/a00084">DIEFFECTINFOA</link> *  <link linkend="d1/d7c/a00003_1ad7b2aff43ba8d8f05d063aa44e740f4d">LPCDIEFFECTINFOA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1df/d13/a00085">DIEFFECTINFOW</link> *  <link linkend="d1/d7c/a00003_1a7cf0794e08d30d1fdfa46eced72dcf32">LPCDIEFFECTINFOW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d1e/a00087">DIENVELOPE</link> *  <link linkend="d1/d7c/a00003_1a4e883ddb6697630d772eb10b5f507c10">LPCDIENVELOPE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1db/ddf/a00088">DIFILEEFFECT</link> *  <link linkend="d1/d7c/a00003_1aec817b504a68bf4e3bbfd9861d319565">LPCDIFILEEFFECT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/d7d/a00093">DIOBJECTDATAFORMAT</link> *  <link linkend="d1/d7c/a00003_1a546c0b2bd7e821807c6387af1334805f">LPCDIOBJECTDATAFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1dc/d54/a00094">DIPERIODIC</link> *  <link linkend="d1/d7c/a00003_1a757f68f77540a4b8914a9f3ca10194b7">LPCDIPERIODIC</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/d77/a00095">DIPROPCAL</link> *  <link linkend="d1/d7c/a00003_1aa33e6caa7b080b1c6c7b6c6090a476a5">LPCDIPROPCAL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/df8/a00096">DIPROPCALPOV</link> *  <link linkend="d1/d7c/a00003_1a90692431c0c278c8d3a5856b06aae14c">LPCDIPROPCALPOV</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d84/a00097">DIPROPCPOINTS</link> *  <link linkend="d1/d7c/a00003_1adbcdef4c47ea1e83dc17811ac1cec4ff">LPCDIPROPCPOINTS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d1/d44/a00098">DIPROPDWORD</link> *  <link linkend="d1/d7c/a00003_1a84123d6a8c2325690d8482435b278844">LPCDIPROPDWORD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1da/d74/a00099">DIPROPGUIDANDPATH</link> *  <link linkend="d1/d7c/a00003_1a1de9a457e520384d86f5cc469e5dd0fd">LPCDIPROPGUIDANDPATH</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d0/d61/a00100">DIPROPHEADER</link> *  <link linkend="d1/d7c/a00003_1aa73246465a32c316894f99e088564911">LPCDIPROPHEADER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d4/d3a/a00101">DIPROPPOINTER</link> *  <link linkend="d1/d7c/a00003_1a26821d817fa1d7bb8dce534ac834bc9d">LPCDIPROPPOINTER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d9/dcc/a00102">DIPROPRANGE</link> *  <link linkend="d1/d7c/a00003_1a40036dc17dbd2a28df45183b2fa0bf09">LPCDIPROPRANGE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d5/d1e/a00103">DIPROPSTRING</link> *  <link linkend="d1/d7c/a00003_1a4a69c03c040bf8499455bd6ffe0c5e3e">LPCDIPROPSTRING</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef const <link linkend="d1/d7c/a00003_1d0/dc2/a00104">DIRAMPFORCE</link> *  <link linkend="d1/d7c/a00003_1a4b7323607967ae2b77b58c07b13ff996">LPCDIRAMPFORCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIACTIONW  <link linkend="d1/d7c/a00003_1a489791d7fe291f49a30bce2c41561b80">LPDIACTION</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIACTIONFORMATW  <link linkend="d1/d7c/a00003_1ad455479d1aad1006b0f2f370020a1561">LPDIACTIONFORMAT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDICONFIGUREDEVICESPARAMSW  <link linkend="d1/d7c/a00003_1a03d7f1acd2b2da26a331b15ccc463620">LPDICONFIGUREDEVICESPARAMS</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEIMAGEINFOW  <link linkend="d1/d7c/a00003_1a7454d72e0a3290f0fff53dbebc3f47e4">LPDIDEVICEIMAGEINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEIMAGEINFOHEADERW  <link linkend="d1/d7c/a00003_1a1e2a065a3e75d112c3a6f5cbc016f2c0">LPDIDEVICEIMAGEINFOHEADER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEINSTANCEW  <link linkend="d1/d7c/a00003_1ac20a15da7028e1b65805a603f385caad">LPDIDEVICEINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEINSTANCE_DX3W  <link linkend="d1/d7c/a00003_1afddf4bcb53f62b79f8bd54b0b3ce311d">LPDIDEVICEINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEOBJECTINSTANCEW  <link linkend="d1/d7c/a00003_1a632115c71c2aaba0533ec7e4ed5015fa">LPDIDEVICEOBJECTINSTANCE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIDEVICEOBJECTINSTANCE_DX3W  <link linkend="d1/d7c/a00003_1a8d081509d5d60771e9f6549cf4151a0a">LPDIDEVICEOBJECTINSTANCE_DX3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIEFFECT  <link linkend="d1/d7c/a00003_1a96f5bf5ae59f2789ad6490fd3a171e37">LPDIEFFECT_DX6</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef LPDIEFFECTINFOW  <link linkend="d1/d7c/a00003_1ae4b8a0c226ecd9ee23faf99caba1606a">LPDIEFFECTINFO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput *  <link linkend="d1/d7c/a00003_1abac32f2ed179a444edf812852fe99eea">LPDIRECTINPUT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput2 *  <link linkend="d1/d7c/a00003_1a7205b81a31bacc85e95cf3a8545f9f9b">LPDIRECTINPUT2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput2A *  <link linkend="d1/d7c/a00003_1a8871a961342dc25c1a087c9e5da2d056">LPDIRECTINPUT2A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput2W *  <link linkend="d1/d7c/a00003_1a61f44686dffb8db3321f3f44377e4395">LPDIRECTINPUT2W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput7 *  <link linkend="d1/d7c/a00003_1a833f931347ae9cc96fae2596956fb98f">LPDIRECTINPUT7</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput7A *  <link linkend="d1/d7c/a00003_1a4ad48bf8d300fbe8394ebbf0985896ce">LPDIRECTINPUT7A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput7W *  <link linkend="d1/d7c/a00003_1af49eb62e2400b509b9b409f587cb0870">LPDIRECTINPUT7W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput8 *  <link linkend="d1/d7c/a00003_1a00f84f5b8317b505deb4709eb2e2400a">LPDIRECTINPUT8</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput8A *  <link linkend="d1/d7c/a00003_1ae5643064b5c19425587519a67175632c">LPDIRECTINPUT8A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInput8W *  <link linkend="d1/d7c/a00003_1a990deefb7b3e33a81a36849ec300eced">LPDIRECTINPUT8W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputA *  <link linkend="d1/d7c/a00003_1a79f366b25bc77211c1e3e7b1763edfb2">LPDIRECTINPUTA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice *  <link linkend="d1/d7c/a00003_1a42b718dc87c1c182750c40d987d70078">LPDIRECTINPUTDEVICE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice2 *  <link linkend="d1/d7c/a00003_1ad161791b8c64dc095d93de9249f66bd2">LPDIRECTINPUTDEVICE2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice2A *  <link linkend="d1/d7c/a00003_1a9714addbfd790f5abbac42edea8cef85">LPDIRECTINPUTDEVICE2A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice2W *  <link linkend="d1/d7c/a00003_1a3a8843c19d62800f8fe2b1cb9f05311a">LPDIRECTINPUTDEVICE2W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice7 *  <link linkend="d1/d7c/a00003_1a49b0e645700378519a8ecb806ad9a659">LPDIRECTINPUTDEVICE7</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice7A *  <link linkend="d1/d7c/a00003_1a96dc558565bcab18e4bed487c7b6bf6f">LPDIRECTINPUTDEVICE7A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice7W *  <link linkend="d1/d7c/a00003_1a30055ee71c5dd040eee33ec418286ab4">LPDIRECTINPUTDEVICE7W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice8 *  <link linkend="d1/d7c/a00003_1af376786795f5bddb9df4f7ea154151d1">LPDIRECTINPUTDEVICE8</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice8A *  <link linkend="d1/d7c/a00003_1a233d763af5acb36977fbae868c5aae5b">LPDIRECTINPUTDEVICE8A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDevice8W *  <link linkend="d1/d7c/a00003_1aab11097e6f2d715555b1c2b7c5f1f9e3">LPDIRECTINPUTDEVICE8W</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDeviceA *  <link linkend="d1/d7c/a00003_1a36fbca80cb268f68eec6decab3b0f3c8">LPDIRECTINPUTDEVICEA</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputDeviceW *  <link linkend="d1/d7c/a00003_1a42553758c3ccdd71de96b64ef5606366">LPDIRECTINPUTDEVICEW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputEffect *  <link linkend="d1/d7c/a00003_1ac8278f319038d7db709c5ea828830fb9">LPDIRECTINPUTEFFECT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct IDirectInputW *  <link linkend="d1/d7c/a00003_1a725405faff6a6f68536bed909184ac26">LPDIRECTINPUTW</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(WINAPI *  <link linkend="d1/d7c/a00003_1a8b04100731d7558ed2fa59d16fb3bdf5">LPFNSHOWJOYCPL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> <link linkend="d1/d7c/a00003_1a235cab10844b140f40203c0fea9b61db">c_dfDIJoystick</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> <link linkend="d1/d7c/a00003_1a227180ec68361223e7036155b7f240d4">c_dfDIJoystick2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> <link linkend="d1/d7c/a00003_1a7901524ab02ffb3aa7454c50bd2ff25c">c_dfDIKeyboard</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> <link linkend="d1/d7c/a00003_1a07470246f3f792447c3721b8db689a7c">c_dfDIMouse</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const <link linkend="d1/d7c/a00003_1de/de1/a00065">DIDATAFORMAT</link> <link linkend="d1/d7c/a00003_1a186703f883055c6ad0758f63cedea4d6">c_dfDIMouse2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>typedef <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>typedef <link linkend="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61">LPVOID</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>typedef <link linkend="d1/d7c/a00003_1aa329482e9480267b328989972b606a2b">BOOL</link> (
+FAR PASCAL * LPDIENUMEFFECTSINFILECALLBACK)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a9fc48f8857e8378741a89f04bc6aa81e">DECLARE_INTERFACE_</link> (
+IDirectInputEffect , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a0e899d97facde14cf5756fdbf0bf0787">DECLARE_INTERFACE_</link> (
+IDirectInputDeviceW , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad7f6202a81c8eb76748f2a5cdaca8c47">DECLARE_INTERFACE_</link> (
+IDirectInputDeviceA , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1acbb45308af2e2ae802b88281e9fc3b43">DECLARE_INTERFACE_</link> (
+IDirectInputDevice2W , IDirectInputDeviceW )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad09bc92ff34907b2a5c321f62c5d3522">DECLARE_INTERFACE_</link> (
+IDirectInputDevice2A , IDirectInputDeviceA )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a2b88b4979cbce22258be65df79e1f468">DECLARE_INTERFACE_</link> (
+IDirectInputDevice7W , IDirectInputDevice2W )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a469b13fc728a1c22dc9485f1ac1a5b67">DECLARE_INTERFACE_</link> (
+IDirectInputDevice7A , IDirectInputDevice2A )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a8dec16c5941908c5393b5f80c962faa1">DECLARE_INTERFACE_</link> (
+IDirectInputDevice8W , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad6b57c73ee442401ded0de5f8e512353">DECLARE_INTERFACE_</link> (
+IDirectInputDevice8A , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1aeaa285c4b32a1c7ac014f571829ab0df">DECLARE_INTERFACE_</link> (
+IDirectInputW , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a1088ec40300c5e02cdcc05691685192f">DECLARE_INTERFACE_</link> (
+IDirectInputA , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a6f3ce6ec001b0e1b3d4e4f653bdf90d5">DECLARE_INTERFACE_</link> (
+IDirectInput2W , IDirectInputW )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a803ec11a9f0be84b8737320f8ab4ad0b">DECLARE_INTERFACE_</link> (
+IDirectInput2A , IDirectInputA )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ae51d52fe6abe8c195f6e00303bb56553">DECLARE_INTERFACE_</link> (
+IDirectInput7W , IDirectInput2W )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a6586344ad62a67ecc0c1cb1c95bb7059">DECLARE_INTERFACE_</link> (
+IDirectInput7A , IDirectInput2A )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ac0205ef36694ea599ee5877d68a1ffbd">DECLARE_INTERFACE_</link> (
+IDirectInput8W , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a732377b6f6a29a82f8d88be3d6152c07">DECLARE_INTERFACE_</link> (
+IDirectInput8A , IUnknown )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad3bd5cb1fdbb5eb5fdb7e04c34f6dc79">DEFINE_GUID</link> (
+CLSID_DirectInput , 0x25E609E0 , 0xB259 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a0e52689b53ae1d2de23289c2130573a3">DEFINE_GUID</link> (
+CLSID_DirectInputDevice , 0x25E609E1 , 0xB259 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a0554606c640f479b10b6f3c74429b473">DEFINE_GUID</link> (
+CLSID_DirectInput8 , 0x25E609E4 , 0xB259 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ac2a00a3542a3bcb58056ddd4ec45bcbb">DEFINE_GUID</link> (
+CLSID_DirectInputDevice8 , 0x25E609E5 , 0xB259 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a046a67c5392dad8bd59cc7b16a96048c">DEFINE_GUID</link> (
+IID_IDirectInputA , 0x89521360 , 0xAA8A , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a8c581d02fd3e9c7c45bd1dd7d6e32db0">DEFINE_GUID</link> (
+IID_IDirectInputW , 0x89521361 , 0xAA8A , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a521289484399bdca74b59392401ca199">DEFINE_GUID</link> (
+IID_IDirectInput2A , 0x5944E662 , 0xAA8A , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ae2e0894bbb850d6cd9ec70b9b282ea3c">DEFINE_GUID</link> (
+IID_IDirectInput2W , 0x5944E663 , 0xAA8A , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a1f46004ffd79fdc8918b55ea789adb48">DEFINE_GUID</link> (
+IID_IDirectInput7A , 0x9A4CB684 , 0x236D , 0x11D3 , 0x8E , 0x9D , 0x00 , 0xC0 , 0x4F , 0x68 , 0x44 , 0xAE )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a3c5dc8f8a57afa7ddd4e7c0f75efbb19">DEFINE_GUID</link> (
+IID_IDirectInput7W , 0x9A4CB685 , 0x236D , 0x11D3 , 0x8E , 0x9D , 0x00 , 0xC0 , 0x4F , 0x68 , 0x44 , 0xAE )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a59553d6e328871b5eaa1e57ac81afac6">DEFINE_GUID</link> (
+IID_IDirectInput8A , 0xBF798030 , 0x483A , 0x4DA2 , 0xAA , 0x99 , 0x5D , 0x64 , 0xED , 0x36 , 0x97 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a9db8cc5475b436b238716b79a4f6229f">DEFINE_GUID</link> (
+IID_IDirectInput8W , 0xBF798031 , 0x483A , 0x4DA2 , 0xAA , 0x99 , 0x5D , 0x64 , 0xED , 0x36 , 0x97 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ae5243b00777c2d0565be5f93f4b02cbc">DEFINE_GUID</link> (
+IID_IDirectInputDeviceA , 0x5944E680 , 0xC92E , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ab36684eae42c39a339d82255de354d85">DEFINE_GUID</link> (
+IID_IDirectInputDeviceW , 0x5944E681 , 0xC92E , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a1014d3a043df5f79ef9869554be0ebfc">DEFINE_GUID</link> (
+IID_IDirectInputDevice2A , 0x5944E682 , 0xC92E , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1abcf61ca13bad637a91424cc7691328ab">DEFINE_GUID</link> (
+IID_IDirectInputDevice2W , 0x5944E683 , 0xC92E , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a8e5256d315810d1615e850d108889fa6">DEFINE_GUID</link> (
+IID_IDirectInputDevice7A , 0x57D7C6BC , 0x2356 , 0x11D3 , 0x8E , 0x9D , 0x00 , 0xC0 , 0x4F , 0x68 , 0x44 , 0xAE )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a6046d1e1bf88f5cdb4ed3c7e9645b38c">DEFINE_GUID</link> (
+IID_IDirectInputDevice7W , 0x57D7C6BD , 0x2356 , 0x11D3 , 0x8E , 0x9D , 0x00 , 0xC0 , 0x4F , 0x68 , 0x44 , 0xAE )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ab5e0c4b352dab999e3035fc8f4437768">DEFINE_GUID</link> (
+IID_IDirectInputDevice8A , 0x54D41080 , 0xDC15 , 0x4833 , 0xA4 , 0x1B , 0x74 , 0x8F , 0x73 , 0xA3 , 0x81 , 0x79 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ae64487d795ed39e4296a9d2a99dc0ca7">DEFINE_GUID</link> (
+IID_IDirectInputDevice8W , 0x54D41081 , 0xDC15 , 0x4833 , 0xA4 , 0x1B , 0x74 , 0x8F , 0x73 , 0xA3 , 0x81 , 0x79 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a443057c80195df3a74da648c44ffdeb8">DEFINE_GUID</link> (
+IID_IDirectInputEffect , 0xE7E1F7C0 , 0x88D2 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1aa9389fc8d80c0a20e480265bf44d7b2c">DEFINE_GUID</link> (
+GUID_XAxis , 0xA36D02E0 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a71b9e670af49c5dcb2db84deb5b3e7fa">DEFINE_GUID</link> (
+GUID_YAxis , 0xA36D02E1 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1acf20f9e77d5c4399f563e67b9240e501">DEFINE_GUID</link> (
+GUID_ZAxis , 0xA36D02E2 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a10856cef532723b730a2113f73303376">DEFINE_GUID</link> (
+GUID_RxAxis , 0xA36D02F4 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad67cad905596f26544c432d8d1261e3d">DEFINE_GUID</link> (
+GUID_RyAxis , 0xA36D02F5 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a2065ebf5ab5ffc03018b1f22a39faff4">DEFINE_GUID</link> (
+GUID_RzAxis , 0xA36D02E3 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ac6e756cc0020cb6f855e0780b0c23665">DEFINE_GUID</link> (
+GUID_Slider , 0xA36D02E4 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a899e135512d7311a9b81ef6ca731202f">DEFINE_GUID</link> (
+GUID_Button , 0xA36D02F0 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad5c53a7b51b311e97b173add725d9727">DEFINE_GUID</link> (
+GUID_Key , 0x55728220 , 0xD33C , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a776d765d15df1de9ece173bf4e78daa4">DEFINE_GUID</link> (
+GUID_POV , 0xA36D02F2 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a4d2aa06df1ea7a827375d79a5dc9fef0">DEFINE_GUID</link> (
+GUID_Unknown , 0xA36D02F3 , 0xC9F3 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a3d3e6f06112a0bea3541bb74babea0c3">DEFINE_GUID</link> (
+GUID_SysMouse , 0x6F1D2B60 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1aaae039c09b92d8be723e454d413f0cfc">DEFINE_GUID</link> (
+GUID_SysKeyboard , 0x6F1D2B61 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1adf7832846d41ce8875cf2c84feceeafb">DEFINE_GUID</link> (
+GUID_Joystick , 0x6F1D2B70 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a73fcdf0b55d23bc15f2b53eaaf100622">DEFINE_GUID</link> (
+GUID_SysMouseEm , 0x6F1D2B80 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a7d46226b3c5e42591c7d4edb83648cfa">DEFINE_GUID</link> (
+GUID_SysMouseEm2 , 0x6F1D2B81 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1afd927ef03d8f10f9f7c56f3fda242287">DEFINE_GUID</link> (
+GUID_SysKeyboardEm , 0x6F1D2B82 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1aad091cac793021cfe6eb9976cd856223">DEFINE_GUID</link> (
+GUID_SysKeyboardEm2 , 0x6F1D2B83 , 0xD5A0 , 0x11CF , 0xBF , 0xC7 , 0x44 , 0x45 , 0x53 , 0x54 , 0x00 , 0x00 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a56a8fc833f8fcf3847ac2d3d5238ae29">DEFINE_GUID</link> (
+GUID_ConstantForce , 0x13541C20 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ad4cec1d20a2984d7dc78efbeddaae57e">DEFINE_GUID</link> (
+GUID_RampForce , 0x13541C21 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1abed2152a5c7a8ca98c49f2edf2f3c39f">DEFINE_GUID</link> (
+GUID_Square , 0x13541C22 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a4308592bca9821d707ce89bfe354fd46">DEFINE_GUID</link> (
+GUID_Sine , 0x13541C23 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1adda2dc630e3788cc5d8069b8e88e4dc2">DEFINE_GUID</link> (
+GUID_Triangle , 0x13541C24 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1afeea262b303fa70b05f9e8ca5219a9ff">DEFINE_GUID</link> (
+GUID_SawtoothUp , 0x13541C25 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1ae5c83df434e234dc8137813a88baa365">DEFINE_GUID</link> (
+GUID_SawtoothDown , 0x13541C26 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a9b43939764bec5ab994000daf3a30fa3">DEFINE_GUID</link> (
+GUID_Spring , 0x13541C27 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1abf0e40a5179657d583422b9867ab367a">DEFINE_GUID</link> (
+GUID_Damper , 0x13541C28 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a6044f7e00abbaa51b21a15b62d0772c4">DEFINE_GUID</link> (
+GUID_Inertia , 0x13541C29 , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1aeb4e1f2af91f07126440a21dbde184e6">DEFINE_GUID</link> (
+GUID_Friction , 0x13541C2A , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/d7c/a00003_1a3a08d0b7dffbeba0c16cce68bba7c872">DEFINE_GUID</link> (
+GUID_CustomForce , 0x13541C2B , 0x8E33 , 0x11D0 , 0x9A , 0xD0 , 0x00 , 0xA0 , 0xC9 , 0xA0 , 0x6E , 0x35 )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HRESULT WINAPI <link linkend="d1/d7c/a00003_1a033ff14686ff20cf74711d1504c2c543">DirectInput8Create</link> (
+HINSTANCE hinst, <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link> dwVersion, REFIID riidltf, <link linkend="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61">LPVOID</link> * ppvOut, LPUNKNOWN punkOuter)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HRESULT WINAPI <link linkend="d1/d7c/a00003_1a1f571019a8af3f12b09a21b67756140b">DirectInputCreateA</link> (
+HINSTANCE hinst, <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link> dwVersion, <link linkend="d1/d7c/a00003_1a79f366b25bc77211c1e3e7b1763edfb2">LPDIRECTINPUTA</link> * ppDI, LPUNKNOWN punkOuter)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HRESULT WINAPI <link linkend="d1/d7c/a00003_1a52077c7e9bfab3f367e3723cc6d54440">DirectInputCreateEx</link> (
+HINSTANCE hinst, <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link> dwVersion, REFIID riidltf, <link linkend="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61">LPVOID</link> * ppvOut, LPUNKNOWN punkOuter)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HRESULT WINAPI <link linkend="d1/d7c/a00003_1a57474ca7cb83d1a4bdefcb90d23a59db">DirectInputCreateW</link> (
+HINSTANCE hinst, <link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link> dwVersion, <link linkend="d1/d7c/a00003_1a725405faff6a6f68536bed909184ac26">LPDIRECTINPUTW</link> * ppDI, LPUNKNOWN punkOuter)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>WINMMAPI MMRESULT WINAPI <link linkend="d1/d7c/a00003_1a8fdf280898cef56c682ac68f024f7320">joyConfigChanged</link> (
+<link linkend="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c">DWORD</link> dwFlags)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void WINAPI <link linkend="d1/d7c/a00003_1af54832e2c9e245f5f1cc3b909ac2f373">ShowJoyCPL</link> (
+HWND hWnd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h</para>
+    </simplesect>
+</section>

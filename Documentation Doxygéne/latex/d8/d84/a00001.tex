@@ -1,0 +1,1577 @@
+\hypertarget{a00001}{\section{Communication\-Control Class Reference}
+\label{a00001}\index{Communication\-Control@{Communication\-Control}}
+}
+
+
+{\ttfamily \#include \char`\"{}Communication\-Control.\-h\char`\"{}}
+
+Inheritance diagram for Communication\-Control\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/d84/a00001}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Public Member Functions}
+\subsection*{Static Public Member Functions}
+\subsection*{Private Member Functions}
+\subsection*{Private Attributes}
+\subsection*{Static Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00001_a2652efe05f8aef69a18bc33ff242f6c4}{\index{Communication\-Control@{Communication\-Control}!Communication\-Control@{Communication\-Control}}
+\index{Communication\-Control@{Communication\-Control}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{Communication\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Communication\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a2652efe05f8aef69a18bc33ff242f6c4}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00001}{Communication\-Control} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread} = \textcolor{keyword}{new} \hyperlink{a00002}{ComThread}();
+8 
+9     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_a38513372e1af4752cee2e2d046c98821}{sendLaunch}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(
+      \hyperlink{a00001_a38513372e1af4752cee2e2d046c98821}{sendLaunch}()));
+10     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_a2664ee66ff3ea7ed8cdca604bce4be33}{sendLand}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_a2664ee66ff3ea7ed8cdca604bce4be33}{sendLand}()));
+11     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_ac898a9141e335cfee3e6c9ebb6815411}{sendHome}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_ac898a9141e335cfee3e6c9ebb6815411}{sendHome}()));
+12     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_ad6b67904e4b30f5a26bef654f8a3c4a6}{sendMotOn}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(
+      \hyperlink{a00001_ad6b67904e4b30f5a26bef654f8a3c4a6}{sendMotOn}()));
+13     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_a01a812308fc692593b9abcab86bf003d}{sendMotOff}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(
+      \hyperlink{a00001_a01a812308fc692593b9abcab86bf003d}{sendMotOff}()));
+14 
+15     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_ad6acfa8418d9902f110bee275fe13a57}{poll}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short})), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(
+      \hyperlink{a00001_ad6acfa8418d9902f110bee275fe13a57}{poll}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short})));
+16     connect(\hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SIGNAL(dataReceived(\textcolor{keywordtype}{char}*, \textcolor{keywordtype}{int})), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00001_ac21f894815c1cbdbf31d5bfe7d69a0af}{computePolledData}(\textcolor{keywordtype}{char}*, \textcolor{keywordtype}{int})));
+17     connect(\hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SIGNAL(\hyperlink{a00001_a289c96805ddb1941fe330931d73321a0}{XBeeDisconnected}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00001_a289c96805ddb1941fe330931d73321a0}{XBeeDisconnected}()));
+18     connect(\hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SIGNAL(\hyperlink{a00001_afb47495b5727dae0e7a5bac62098cb1e}{XBeeReconnected}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00001_afb47495b5727dae0e7a5bac62098cb1e}{XBeeReconnected}()));
+19 
+20     connect(&\hyperlink{a00001_a318ffe406e999f9b02b7e811cfc86479}{m\_pPollTimer}, SIGNAL(timeout()), \textcolor{keyword}{this}, SLOT(\hyperlink{a00001_ac02d771e0ef073ed89aeaca4ed961a05}{pollData}()));
+21     connect(&\hyperlink{a00001_a0ed94524da54e5031e44ab80b249b042}{m\_pPollTimeout}, SIGNAL(timeout()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00001_a417a5d7262b4ed5f466af6ff7878b09d}{pollDataTimedOut}()));
+22     
+23     connect(\hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SIGNAL(\hyperlink{a00001_a289c96805ddb1941fe330931d73321a0}{XBeeDisconnected}()), &
+      \hyperlink{a00001_a3347d5764783c5008947f5addca55346}{m\_pRetryTimer}, SLOT(\hyperlink{a00001_ae262c467eec4b15d1f6e487ab6397d68}{start}()));
+24     connect(&\hyperlink{a00001_a3347d5764783c5008947f5addca55346}{m\_pRetryTimer}, SIGNAL(timeout()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00001_a7162886e6b7f34f937eefcdfdcf9a052}{retryConnection}()));
+25     connect(\hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SIGNAL(\hyperlink{a00001_afb47495b5727dae0e7a5bac62098cb1e}{XBeeReconnected}()), &
+      \hyperlink{a00001_a3347d5764783c5008947f5addca55346}{m\_pRetryTimer}, SLOT(\hyperlink{a00001_a8c528baf37154d347366083f0f816846}{stop}()));
+26 
+27     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_afeec69b8ef45da950fab78df4a1584e3}{sendMove}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+28         \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_afeec69b8ef45da950fab78df4a1584e3}{sendMove}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+29     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})),
+30         \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+31 
+32 
+33    \hyperlink{a00001_ac155e35fdeebafc89723a51520fb9fe6}{longitude} = 0;
+34     \hyperlink{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{latitude} = 0;
+35     \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude} = 0;
+36     \hyperlink{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}{m\_nLinkTries} = 0;
+37 
+38     \hyperlink{a00001_a7ac28e04cb63f852e31316b6fcd25228}{createLog}();
+39     \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}->start();
+40     \hyperlink{a00001_a3347d5764783c5008947f5addca55346}{m\_pRetryTimer}.setInterval(1000);
+41 \}
+\end{DoxyCode}
+\hypertarget{a00001_a6dd7d247ba3ce1d8ee4418f7a5a1ac68}{\index{Communication\-Control@{Communication\-Control}!$\sim$\-Communication\-Control@{$\sim$\-Communication\-Control}}
+\index{$\sim$\-Communication\-Control@{$\sim$\-Communication\-Control}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{$\sim$\-Communication\-Control}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Communication\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a6dd7d247ba3ce1d8ee4418f7a5a1ac68}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keyword}{delete} \hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log};
+55 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00001_aaaf1f78d12176382ee56a92912b1cc53}{\index{Communication\-Control@{Communication\-Control}!autonomous\-Mode@{autonomous\-Mode}}
+\index{autonomous\-Mode@{autonomous\-Mode}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{autonomous\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void autonomous\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_aaaf1f78d12176382ee56a92912b1cc53}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+321 \{
+322     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+323         \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+324 
+325     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_a26c718e7e95e398ee9368434c23d0622}{sendGoTo}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_a26c718e7e95e398ee9368434c23d0622}{sendGoTo}()));
+326 \}
+\end{DoxyCode}
+\hypertarget{a00001_aa21c6f5ea480a2b19a771e4a232d1a4b}{\index{Communication\-Control@{Communication\-Control}!battery\-Level@{battery\-Level}}
+\index{battery\-Level@{battery\-Level}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{battery\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void battery\-Level (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_aa21c6f5ea480a2b19a771e4a232d1a4b}
+
+
+Battery level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Value} & battery voltage double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ac21f894815c1cbdbf31d5bfe7d69a0af}{\index{Communication\-Control@{Communication\-Control}!compute\-Polled\-Data@{compute\-Polled\-Data}}
+\index{compute\-Polled\-Data@{compute\-Polled\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{compute\-Polled\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void compute\-Polled\-Data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_ac21f894815c1cbdbf31d5bfe7d69a0af}
+
+
+Polled data to be sent to other modules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & polled data char$\ast$ \\
+\hline
+{\em length} & length in char of the polled data int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+119 \{
+120     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} descriptor = 0;
+121     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} sendCrc = 0;
+122     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} checksum = 0;
+123     \textcolor{keywordtype}{int} index = 0;
+124     \textcolor{keywordtype}{char} ack[6];
+125 
+126     \hyperlink{a00001_a0ed94524da54e5031e44ab80b249b042}{m\_pPollTimeout}.stop();
+127     \hyperlink{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}{m\_nLinkTries} = 0;
+128     emit \hyperlink{a00001_a3a3794256db7e6b52daad0dc178c2db9}{XBeeStatus}(\textcolor{keyword}{true});
+129 
+130     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << endl << \textcolor{stringliteral}{"Compute polled data"} << endl;
+131 
+132     \textcolor{keywordflow}{while} (index < length)
+133     \{
+134         *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"    End of buffer not reached : number
+       of resting char = "} << length - index << endl;
+135 
+136         \textcolor{keywordflow}{while} (!(data[index] == \textcolor{charliteral}{'>'}))
+137         \{
+138             index++;
+139         \}
+140 
+141         \textcolor{keywordflow}{if} ((data[index + 1] == \textcolor{charliteral}{'a'} && data[index + 3] == \textcolor{charliteral}{'a'} && data[index + 4] == \textcolor{charliteral}{'<'}) && index < length)
+142         \{
+143             \textcolor{keywordflow}{if} (index <= 395)
+144             \{
+145                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"Command acknowledge received"} 
+      << endl;
+146                 memcpy((\textcolor{keywordtype}{void}*)ack, (\textcolor{keywordtype}{void}*)&data[index], 5 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+147                 ack[5] = \textcolor{charliteral}{'\(\backslash\)0'};
+148             \}
+149 
+150             emit \hyperlink{a00001_a49a7c28f7c937cffeef6878cec48b396}{displayAck}(ack);
+151         \}
+152         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((data[index + 1] == \textcolor{charliteral}{'*'} && data[index + 2] == \textcolor{charliteral}{'>'}) && index < length - \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 -
+       \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}))
+153         \{
+154             *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"    New polled data structure found
+       at index "} << index << endl;
+155 
+156             descriptor = data[index + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 + \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short})];
+157             index += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 + \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char);
+158 
+159             \textcolor{keywordflow}{if} (descriptor == STATUS\_DESCRIPTOR)
+160             \{
+161                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        Status polled data
+       found in buffer"} << endl;
+162 
+163                 \textcolor{keywordflow}{if} (index < (length - \textcolor{keyword}{sizeof}(\hyperlink{a00004_df/d98/a00107}{LL\_STATUS}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1))
+164                 \{
+165                     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{st}, &data[index], \textcolor{keyword}{sizeof}(\hyperlink{a00004_df/d98/a00107}{LL\_STATUS}));
+166 
+167                     index += \textcolor{keyword}{sizeof}(\hyperlink{a00004_df/d98/a00107}{LL\_STATUS});
+168                     memcpy((\textcolor{keywordtype}{void}*)&sendCrc, &data[index], \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+169 
+170                     checksum = \hyperlink{a00001_a914607c9e5f387852e494b819d9da3dd}{crc16}(&\hyperlink{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{st}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_df/d98/a00107}{LL\_STATUS}));
+171 
+172                     emit \hyperlink{a00001_aa21c6f5ea480a2b19a771e4a232d1a4b}{batteryLevel}(\hyperlink{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{st}.\hyperlink{a00004_a459f77aee98b6bebbd3c2d54f2ab6667}{battery\_voltage\_1} / 1000.);
+173                     emit \hyperlink{a00001_ac07c6c4960d3789765cee7bc68a5fe44}{updateStatus}(\hyperlink{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{st}.\hyperlink{a00004_a3a9b579ed098eba7a5107adb32a9375a}{flightMode});
+174                     
+175                     emit \hyperlink{a00001_a5f730a9a91784cbf28d39ab22e4d7fec}{inFlight}(\hyperlink{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{st}.\hyperlink{a00004_af2fb6251c4d6d896f8b035e3b0f20f62}{flying});
+176                 \}
+177                 \textcolor{keywordflow}{else}
+178                 \{
+179                     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        ERROR : Incomplete
+       structure"} << endl;
+180                 \}
+181             \}
+182             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptor == IMU\_CALCDATA\_DESCRIPTOR)
+183             \{
+184                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        IMU polled data found
+       in buffer"} << endl;
+185 
+186                 \textcolor{keywordflow}{if} (index < (length - \textcolor{keyword}{sizeof}(\hyperlink{a00004_d7/d70/a00106}{IMU\_CALCDATA}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1)
+      )
+187                 \{
+188                     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}{imu}, &data[index], \textcolor{keyword}{sizeof}(\hyperlink{a00004_d7/d70/a00106}{IMU\_CALCDATA}));
+189 
+190                     index += \textcolor{keyword}{sizeof}(\hyperlink{a00004_d7/d70/a00106}{IMU\_CALCDATA});
+191                     memcpy((\textcolor{keywordtype}{void}*)&sendCrc, &data[index], \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+192 
+193                     checksum = \hyperlink{a00001_a914607c9e5f387852e494b819d9da3dd}{crc16}(&\hyperlink{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}{imu}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_d7/d70/a00106}{IMU\_CALCDATA}));
+194                     \hyperlink{a00001_ae024163074f229a06b7ea69b190e466d}{heading} = \hyperlink{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}{imu}.\hyperlink{a00004_ac66ed08857aecb91f07bdc414b445973}{mag\_heading} / 1000.;
+195                     \hyperlink{a00001_a89f6abd564014faeff7cd20c340a9c7d}{height} = \hyperlink{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}{imu}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} / 1000.;
+196 
+197                     emit \hyperlink{a00001_aa3c54f0958638486df2b69a9b53c5d7f}{updateHeading}(\hyperlink{a00001_ae024163074f229a06b7ea69b190e466d}{heading});
+198                     emit \hyperlink{a00001_a5114b66563f0437e0f1eac070557cb4c}{updateHeight}(\hyperlink{a00001_a89f6abd564014faeff7cd20c340a9c7d}{height});
+199                 \}
+200                 \textcolor{keywordflow}{else}
+201                 \{
+202                     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        ERROR : Incomplete
+       structure"} << endl;
+203                 \}
+204             \}
+205             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptor == CURRENT\_WAY\_DESCRIPTOR)
+206             \{
+207                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        Current way polled data
+       found in buffer"} << endl;
+208 
+209                 \textcolor{keywordflow}{if} (index < (length - \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/d84/a00052}{CURRENT\_WAY}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1))
+210                 \{
+211                     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{cw}, &data[index], \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/d84/a00052}{CURRENT\_WAY}));
+212 
+213                     index += \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/d84/a00052}{CURRENT\_WAY});
+214                     memcpy((\textcolor{keywordtype}{void}*)&sendCrc, &data[index], \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+215 
+216                     checksum = \hyperlink{a00001_a914607c9e5f387852e494b819d9da3dd}{crc16}(&\hyperlink{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{cw}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/d84/a00052}{CURRENT\_WAY}));
+217 
+218                     emit \hyperlink{a00001_a6f8056c0ce5dd09565148cff2aa1d6aa}{waypointNAVInfo}(\hyperlink{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{cw}.\hyperlink{a00004_a62b91a02c0e7c93551d2875c725ad883}{current\_wp}, 
+      \hyperlink{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{cw}.\hyperlink{a00004_adba24dc812335f36e8793c535dc6e8bf}{distance\_to\_wp} / 10., \hyperlink{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{cw}.\hyperlink{a00004_a820db34ea9303c6b8f6266107b434058}{navigation\_status});
+219                 \}
+220                 \textcolor{keywordflow}{else}
+221                 \{
+222                     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        ERROR : Incomplete
+       structure"} << endl;
+223                 \}
+224             \}
+225             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptor == GPS\_DESCRIPTOR && index < (length - \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1))
+226             \{
+227                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        Geolocation polled data
+       found in buffer"} << endl;
+228 
+229                 \textcolor{keywordflow}{if} (index < (length - \textcolor{keyword}{sizeof}(\hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"
+      <#<"}) - 1))
+230                 \{
+231                     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}, &data[index], \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED}));
+232 
+233                     index += \textcolor{keyword}{sizeof}(\hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED});
+234                     memcpy((\textcolor{keywordtype}{void}*)&sendCrc, &data[index], \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+235 
+236                     checksum = \hyperlink{a00001_a914607c9e5f387852e494b819d9da3dd}{crc16}(&\hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED}));
+237 
+238                     \hyperlink{a00001_ac155e35fdeebafc89723a51520fb9fe6}{longitude} = \hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_a17963aafb9acb082fcc06c90195cb4fa}{longitude} / 10000000.;
+239                     \hyperlink{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{latitude} = \hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_a5bf9aac20fe4e7a73cd1a9fc30d7ae00}{latitude} / 10000000.;
+240                     \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude} = \hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} / 1000.;
+241                     \textcolor{keywordtype}{double} speedX = qAbs(\hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_a20fcaf3d7d5effa75ca571510f53a6cc}{speed\_x} * 0.0036);
+242                     \textcolor{keywordtype}{double} speedY = qAbs(\hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_a3abd5cb27c81871612651aee8a0476ba}{speed\_y} * 0.0036);
+243                     \hyperlink{a00001_a9747f19755c0d74510f7a0860c11fbef}{m\_dSpeed} = qSqrt(speedX * speedX + speedY * speedY);
+244 
+245                     \textcolor{keywordflow}{if} (checksum == sendCrc)
+246                     \{
+247                         emit \hyperlink{a00001_ac64f2ec114d4ab8dd8ed8dd31f243454}{geolocation}(\hyperlink{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{latitude}, \hyperlink{a00001_ac155e35fdeebafc89723a51520fb9fe6}{longitude}, 
+      \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude}, \hyperlink{a00001_ae024163074f229a06b7ea69b190e466d}{heading});
+248                         emit \hyperlink{a00001_aeffc2ecc4a5de587172d46c5ff0156db}{updateSpeed}(\hyperlink{a00001_a9747f19755c0d74510f7a0860c11fbef}{m\_dSpeed});
+249                         emit \hyperlink{a00001_a8ca9715733ba2afa7525da56a6e98311}{updateGPSQuality}(\hyperlink{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{gps}.\hyperlink{a00004_a9390419b61f0e0bae53f5f094ce82b93}{numSV});
+250                     \}
+251                 \}
+252                 \textcolor{keywordflow}{else}
+253                 \{
+254                     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        ERROR : Incomplete
+       structure"} << endl;
+255                 \}
+256 
+257                 \hyperlink{a00001_a31082f0cdd2aeea81ceb79028bf639af}{writeLog}(checksum == sendCrc);
+258             \}
+259             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptor == RC\_DATA\_DESCRIPTOR && index < (length - \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d1/dd6/a00108}{RC\_DATA}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1))
+260             \{
+261                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        RC polled data found in
+       buffer"} << endl;
+262 
+263                 \textcolor{keywordflow}{if} (index < (length - \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/dd6/a00108}{RC\_DATA}) - \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1))
+264                 \{
+265                     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}, &data[index], \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/dd6/a00108}{RC\_DATA}));
+266 
+267                     index += \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/dd6/a00108}{RC\_DATA});
+268                     memcpy((\textcolor{keywordtype}{void}*)&sendCrc, &data[index], \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+269 
+270                     checksum = \hyperlink{a00001_a914607c9e5f387852e494b819d9da3dd}{crc16}(&\hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_d1/dd6/a00108}{RC\_DATA}));
+271 
+272                     emit \hyperlink{a00001_ab51c3c4f71404589fc3a47c213449b1e}{rcData}(\hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[3], \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.
+      \hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[0], \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[1], 
+273                             \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[2], \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[4], 
+      \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a9ece938051bc16291613a2bdccd52bec}{channels\_out}[5], \hyperlink{a00001_a53109ee6a15f404839038d5405afaee1}{rc}.\hyperlink{a00004_a6ae861576031be7ecfd4d6c9e870fb99}{lock});
+274                 \}
+275                 \textcolor{keywordflow}{else}
+276                 \{
+277                     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        ERROR : Incomplete
+       structure"} << endl;
+278                 \}
+279             \}
+280             \textcolor{keywordflow}{else}
+281             \{
+282                 *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"        Unknown polled data
+       type found in buffer"} << endl;
+283             \}
+284         \}
+285         index += \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+286     \}
+287 
+288     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_abfd62a1f4f4f584858b758c0800e9b70}{getSystemLoggerStream}()) << \textcolor{stringliteral}{"Polled data sent"} << endl;
+289 \}
+\end{DoxyCode}
+\hypertarget{a00001_a57866bb7255c471cd9c4cfdf7c88681d}{\index{Communication\-Control@{Communication\-Control}!computer\-Aided\-Control\-Mode@{computer\-Aided\-Control\-Mode}}
+\index{computer\-Aided\-Control\-Mode@{computer\-Aided\-Control\-Mode}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{computer\-Aided\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void computer\-Aided\-Control\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_a57866bb7255c471cd9c4cfdf7c88681d}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+329 \{
+330     disconnect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+331         \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(\hyperlink{a00001_aabee8811f89359e4de50856e175f98e4}{sendWaypoint}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+332 
+333     disconnect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00001_a26c718e7e95e398ee9368434c23d0622}{sendGoTo}()), \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}, SLOT(
+      \hyperlink{a00001_a26c718e7e95e398ee9368434c23d0622}{sendGoTo}()));
+334 \}
+\end{DoxyCode}
+\hypertarget{a00001_a4c881076a61ae41ab4b5e0a615b442b6}{\index{Communication\-Control@{Communication\-Control}!control\-Waypoint@{control\-Waypoint}}
+\index{control\-Waypoint@{control\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{control\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void control\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x\-Dest, }
+\item[{double}]{y\-Dest, }
+\item[{double}]{z\-Dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_a4c881076a61ae41ab4b5e0a615b442b6}
+
+
+Control the given waypoint validity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Dest} & longitude double \\
+\hline
+{\em y\-Dest} & latitude double \\
+\hline
+{\em z\-Dest} & altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordtype}{int} raver = 6378137;
+83 
+84     qreal xRad = xDest * M\_PI / 180.;
+85     qreal yRad = yDest * M\_PI / 180.;
+86     qreal latRad = \hyperlink{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{latitude} * M\_PI / 180.;
+87     qreal longRad = \hyperlink{a00001_ac155e35fdeebafc89723a51520fb9fe6}{longitude} * M\_PI / 180.;
+88 
+89     qreal dist = raver * qAcos((qCos(yRad) * qCos(latRad) * qCos(xRad - longRad)) + (qSin(yRad) * qSin(
+      latRad)));
+90 
+91     \textcolor{keywordtype}{bool} validDistance = dist <= DISTMAX;
+92     \textcolor{keywordtype}{bool} validAltitude = (zDest > \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude}) && (zDest <= \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude} + ALTMAX);
+93 
+94     emit \hyperlink{a00001_acc446efda119ee2dd0b845a4e96b3397}{validWaypoint}(dist, validDistance, validAltitude);
+95 \}
+\end{DoxyCode}
+\hypertarget{a00001_a914607c9e5f387852e494b819d9da3dd}{\index{Communication\-Control@{Communication\-Control}!crc16@{crc16}}
+\index{crc16@{crc16}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{crc16}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short crc16 (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{unsigned short}]{cnt}
+\end{DoxyParamCaption}
+)}}\label{a00001_a914607c9e5f387852e494b819d9da3dd}
+
+
+Compute crc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+105 \{
+106     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} crc = 0xff;
+107     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)data;
+108     \textcolor{keywordtype}{int} i;
+109 
+110     \textcolor{keywordflow}{for} (i = 0; i < cnt; i++)
+111     \{
+112         crc = \hyperlink{a00001_af69ddfcaef7d003a3ac128b9f33ca1ba}{crc\_update}(crc, *ptr);
+113         ptr++;
+114     \}
+115     \textcolor{keywordflow}{return} crc;
+116 \}
+\end{DoxyCode}
+\hypertarget{a00001_af69ddfcaef7d003a3ac128b9f33ca1ba}{\index{Communication\-Control@{Communication\-Control}!crc\-\_\-update@{crc\-\_\-update}}
+\index{crc\-\_\-update@{crc\-\_\-update}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{crc\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short crc\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{crc, }
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)}}\label{a00001_af69ddfcaef7d003a3ac128b9f33ca1ba}
+
+
+Update crc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+98 \{
+99     data ^= (crc & 0xff);
+100     data ^= data << 4;
+101     \textcolor{keywordflow}{return} ((((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}) data << 8) | ((crc >> 8) & 0xff)) ^ (\textcolor{keywordtype}{unsigned} char) (data >> 4) ^ ((\textcolor{keywordtype}{unsigned}
+       short) data << 3));
+102 \}
+\end{DoxyCode}
+\hypertarget{a00001_a7ac28e04cb63f852e31316b6fcd25228}{\index{Communication\-Control@{Communication\-Control}!create\-Log@{create\-Log}}
+\index{create\-Log@{create\-Log}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{create\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void create\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00001_a7ac28e04cb63f852e31316b6fcd25228}
+
+
+Create logger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+292 \{
+293     \hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log} = \textcolor{keyword}{new} \hyperlink{a00014}{UAVLogger}();
+294 
+295     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_aeabc1d456526485e8c922a94b4bfa22d}{getDataLoggerStream}()) << \textcolor{stringliteral}{"Date"} << \textcolor{stringliteral}{"; "} << \textcolor{stringliteral}{"Latitude (°)"} << \textcolor{stringliteral}{"; "} << \textcolor{stringliteral}{"
+      Longitude (°)"} 
+296         << \textcolor{stringliteral}{"; "} << \textcolor{stringliteral}{"Altitude (from ground, in m)"} << \textcolor{stringliteral}{"; "} << \textcolor{stringliteral}{"Heading (°)"} << \textcolor{stringliteral}{"; "} 
+297         << \textcolor{stringliteral}{"Speed (km/h)"} << \textcolor{stringliteral}{"; "} << \textcolor{stringliteral}{"Valid crc"} << endl;
+298 \}
+\end{DoxyCode}
+\hypertarget{a00001_a49a7c28f7c937cffeef6878cec48b396}{\index{Communication\-Control@{Communication\-Control}!display\-Ack@{display\-Ack}}
+\index{display\-Ack@{display\-Ack}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{display\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void display\-Ack (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a49a7c28f7c937cffeef6878cec48b396}
+
+
+Update acknowledge value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & received acknowledge char$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ac64f2ec114d4ab8dd8ed8dd31f243454}{\index{Communication\-Control@{Communication\-Control}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{double}]{altitude, }
+\item[{double}]{heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ac64f2ec114d4ab8dd8ed8dd31f243454}
+
+
+Update M\-U\-A\-V geolocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{\index{Communication\-Control@{Communication\-Control}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Communication\-Control} $\ast$ get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}
+
+
+Lone instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+lone instance Communication\-Control$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+71 \{
+72     \textcolor{keywordflow}{if} (\hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton} == NULL)
+73     \{
+74         \hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton} = \textcolor{keyword}{new} \hyperlink{a00001_a2652efe05f8aef69a18bc33ff242f6c4}{CommunicationControl}();
+75     \}
+76 
+77     \textcolor{keywordflow}{return} \hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton};
+78 \}
+\end{DoxyCode}
+\hypertarget{a00001_ade64afbb6a24f22d48cff310655c8755}{\index{Communication\-Control@{Communication\-Control}!get\-Logger@{get\-Logger}}
+\index{get\-Logger@{get\-Logger}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{get\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-A\-V\-Logger} $\ast$ get\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00001_ade64afbb6a24f22d48cff310655c8755}
+
+
+Logger getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+logger U\-A\-V\-Logger$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+309 \{
+310     \textcolor{keywordflow}{return} \hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log};
+311 \}
+\end{DoxyCode}
+\hypertarget{a00001_a5f730a9a91784cbf28d39ab22e4d7fec}{\index{Communication\-Control@{Communication\-Control}!in\-Flight@{in\-Flight}}
+\index{in\-Flight@{in\-Flight}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{in\-Flight}]{\setlength{\rightskip}{0pt plus 5cm}void in\-Flight (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a5f730a9a91784cbf28d39ab22e4d7fec}
+
+
+Update flight state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Value} & flight in progress (engines started) char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_aae9d52caad9fb2892deeb25596cfd2ab}{\index{Communication\-Control@{Communication\-Control}!kill@{kill}}
+\index{kill@{kill}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00001_aae9d52caad9fb2892deeb25596cfd2ab}
+
+
+Instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{keywordflow}{if} (\hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton} != NULL)
+46     \{
+47         \textcolor{keyword}{delete} \hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton};
+48         \hyperlink{a00001_aee0300254b12ae17cc030042d51787c4}{singleton} = NULL;
+49     \}
+50 \}
+\end{DoxyCode}
+\hypertarget{a00001_ad6acfa8418d9902f110bee275fe13a57}{\index{Communication\-Control@{Communication\-Control}!poll@{poll}}
+\index{poll@{poll}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}void poll (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{data\-To\-Poll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ad6acfa8418d9902f110bee275fe13a57}
+
+
+Poll data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\-To\-Poll} & data to poll unsigned short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ac02d771e0ef073ed89aeaca4ed961a05}{\index{Communication\-Control@{Communication\-Control}!poll\-Data@{poll\-Data}}
+\index{poll\-Data@{poll\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void poll\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_ac02d771e0ef073ed89aeaca4ed961a05}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+315 \{
+316     emit \hyperlink{a00001_ad6acfa8418d9902f110bee275fe13a57}{poll}(CURRENT\_WAY\_PACKET | GPS\_PACKET | STATUS\_PACKET | IMU\_CALCDATA\_PACKET | RC\_DATA\_PACKET);
+317     \hyperlink{a00001_a0ed94524da54e5031e44ab80b249b042}{m\_pPollTimeout}.start(1000);
+318 \}
+\end{DoxyCode}
+\hypertarget{a00001_a417a5d7262b4ed5f466af6ff7878b09d}{\index{Communication\-Control@{Communication\-Control}!poll\-Data\-Timed\-Out@{poll\-Data\-Timed\-Out}}
+\index{poll\-Data\-Timed\-Out@{poll\-Data\-Timed\-Out}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll\-Data\-Timed\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void poll\-Data\-Timed\-Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_a417a5d7262b4ed5f466af6ff7878b09d}
+
+
+Data poll timedout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+337 \{
+338     \hyperlink{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}{m\_nLinkTries} ++;
+339 
+340     \textcolor{keywordflow}{if} (\hyperlink{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}{m\_nLinkTries} > NB\_TRIES)
+341     \{
+342         \hyperlink{a00001_a0ed94524da54e5031e44ab80b249b042}{m\_pPollTimeout}.stop();
+343         \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}->\hyperlink{a00002_a34bd4298c27ce53379ec5eb23db83601}{clearCounters}();
+344         emit \hyperlink{a00001_a3a3794256db7e6b52daad0dc178c2db9}{XBeeStatus}(\textcolor{keyword}{false});
+345     \}
+346 \}
+\end{DoxyCode}
+\hypertarget{a00001_ab51c3c4f71404589fc3a47c213449b1e}{\index{Communication\-Control@{Communication\-Control}!rc\-Data@{rc\-Data}}
+\index{rc\-Data@{rc\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{rc\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void rc\-Data (
+\begin{DoxyParamCaption}
+\item[{short}]{yaw, }
+\item[{short}]{pitch, }
+\item[{short}]{roll, }
+\item[{short}]{thrust, }
+\item[{short}]{serial, }
+\item[{short}]{G\-P\-S\-Height\-Control, }
+\item[{char}]{valid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ab51c3c4f71404589fc3a47c213449b1e}
+
+
+Update remote control data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & short \\
+\hline
+{\em pitch} & short \\
+\hline
+{\em roll} & short \\
+\hline
+{\em thrust} & short \\
+\hline
+{\em serial} & short \\
+\hline
+{\em G\-P\-S\-Height\-Control} & short \\
+\hline
+{\em valid} & char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a7162886e6b7f34f937eefcdfdcf9a052}{\index{Communication\-Control@{Communication\-Control}!retry\-Connection@{retry\-Connection}}
+\index{retry\-Connection@{retry\-Connection}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{retry\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void retry\-Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00001_a7162886e6b7f34f937eefcdfdcf9a052}
+
+
+Retry connection (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+349 \{
+350     \hyperlink{a00001_a8c528baf37154d347366083f0f816846}{stop}();
+351     \hyperlink{a00001_ae262c467eec4b15d1f6e487ab6397d68}{start}(\hyperlink{a00001_a6ac4068e574f32c7f5aa0c54f3ce3897}{m\_sCom});
+352 \}
+\end{DoxyCode}
+\hypertarget{a00001_a26c718e7e95e398ee9368434c23d0622}{\index{Communication\-Control@{Communication\-Control}!send\-Go\-To@{send\-Go\-To}}
+\index{send\-Go\-To@{send\-Go\-To}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Go\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a26c718e7e95e398ee9368434c23d0622}
+
+
+Send go to order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ac898a9141e335cfee3e6c9ebb6815411}{\index{Communication\-Control@{Communication\-Control}!send\-Home@{send\-Home}}
+\index{send\-Home@{send\-Home}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Home}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ac898a9141e335cfee3e6c9ebb6815411}
+
+
+Send come home order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a2664ee66ff3ea7ed8cdca604bce4be33}{\index{Communication\-Control@{Communication\-Control}!send\-Land@{send\-Land}}
+\index{send\-Land@{send\-Land}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Land}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Land (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a2664ee66ff3ea7ed8cdca604bce4be33}
+
+
+Send land order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a38513372e1af4752cee2e2d046c98821}{\index{Communication\-Control@{Communication\-Control}!send\-Launch@{send\-Launch}}
+\index{send\-Launch@{send\-Launch}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Launch}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Launch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a38513372e1af4752cee2e2d046c98821}
+
+
+Send launch (define home) order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a01a812308fc692593b9abcab86bf003d}{\index{Communication\-Control@{Communication\-Control}!send\-Mot\-Off@{send\-Mot\-Off}}
+\index{send\-Mot\-Off@{send\-Mot\-Off}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Mot\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mot\-Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a01a812308fc692593b9abcab86bf003d}
+
+
+Send stop engines order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ad6b67904e4b30f5a26bef654f8a3c4a6}{\index{Communication\-Control@{Communication\-Control}!send\-Mot\-On@{send\-Mot\-On}}
+\index{send\-Mot\-On@{send\-Mot\-On}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Mot\-On}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mot\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ad6b67904e4b30f5a26bef654f8a3c4a6}
+
+
+Send start engines order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_afeec69b8ef45da950fab78df4a1584e3}{\index{Communication\-Control@{Communication\-Control}!send\-Move@{send\-Move}}
+\index{send\-Move@{send\-Move}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_afeec69b8ef45da950fab78df4a1584e3}
+
+
+Relative move to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x axe move in meters double \\
+\hline
+{\em y} & y axe move in meters double \\
+\hline
+{\em z} & z axe move in meters double \\
+\hline
+{\em yaw} & heading value in degrees double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_aabee8811f89359e4de50856e175f98e4}{\index{Communication\-Control@{Communication\-Control}!send\-Waypoint@{send\-Waypoint}}
+\index{send\-Waypoint@{send\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_aabee8811f89359e4de50856e175f98e4}
+
+
+\hyperlink{a00017}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ae262c467eec4b15d1f6e487ab6397d68}{\index{Communication\-Control@{Communication\-Control}!start@{start}}
+\index{start@{start}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void start (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{p\-\_\-s\-Com}
+\end{DoxyParamCaption}
+)}}\label{a00001_ae262c467eec4b15d1f6e487ab6397d68}
+
+
+Start communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+58 \{
+59     \hyperlink{a00001_a6ac4068e574f32c7f5aa0c54f3ce3897}{m\_sCom} = p\_sCom;
+60     \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}->\hyperlink{a00002_a665582c4fbc3a48be815747e26dd6a02}{createCom}(p\_sCom);
+61     \hyperlink{a00001_a318ffe406e999f9b02b7e811cfc86479}{m\_pPollTimer}.start(200);
+62 \}
+\end{DoxyCode}
+\hypertarget{a00001_a8c528baf37154d347366083f0f816846}{\index{Communication\-Control@{Communication\-Control}!stop@{stop}}
+\index{stop@{stop}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00001_a8c528baf37154d347366083f0f816846}
+
+
+Stop communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+65 \{
+66     \hyperlink{a00001_acb05f93668631d777d1e9a4efa094d6e}{comThread}->\hyperlink{a00002_a681ba4ec7299214b9bb86e660fe22701}{releaseCom}();
+67     \hyperlink{a00001_a318ffe406e999f9b02b7e811cfc86479}{m\_pPollTimer}.stop();
+68 \}
+\end{DoxyCode}
+\hypertarget{a00001_a8ca9715733ba2afa7525da56a6e98311}{\index{Communication\-Control@{Communication\-Control}!update\-G\-P\-S\-Quality@{update\-G\-P\-S\-Quality}}
+\index{update\-G\-P\-S\-Quality@{update\-G\-P\-S\-Quality}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-G\-P\-S\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}void update\-G\-P\-S\-Quality (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-i\-Satellite}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a8ca9715733ba2afa7525da56a6e98311}
+
+
+G\-P\-S qualtity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-i\-Satellite} & number of get satellites int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_aa3c54f0958638486df2b69a9b53c5d7f}{\index{Communication\-Control@{Communication\-Control}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_aa3c54f0958638486df2b69a9b53c5d7f}
+
+
+Update heading value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a5114b66563f0437e0f1eac070557cb4c}{\index{Communication\-Control@{Communication\-Control}!update\-Height@{update\-Height}}
+\index{update\-Height@{update\-Height}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a5114b66563f0437e0f1eac070557cb4c}
+
+
+Update height value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_aeffc2ecc4a5de587172d46c5ff0156db}{\index{Communication\-Control@{Communication\-Control}!update\-Speed@{update\-Speed}}
+\index{update\-Speed@{update\-Speed}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Speed (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_aeffc2ecc4a5de587172d46c5ff0156db}
+
+
+Update speed value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_ac07c6c4960d3789765cee7bc68a5fe44}{\index{Communication\-Control@{Communication\-Control}!update\-Status@{update\-Status}}
+\index{update\-Status@{update\-Status}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Status (
+\begin{DoxyParamCaption}
+\item[{short}]{p\-\_\-d\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_ac07c6c4960d3789765cee7bc68a5fe44}
+
+
+M\-U\-A\-V internal state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Value} & M\-U\-A\-V status short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_acc446efda119ee2dd0b845a4e96b3397}{\index{Communication\-Control@{Communication\-Control}!valid\-Waypoint@{valid\-Waypoint}}
+\index{valid\-Waypoint@{valid\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{valid\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{dist, }
+\item[{bool}]{valid\-Lat\-Long, }
+\item[{bool}]{valid\-Altitude}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_acc446efda119ee2dd0b845a4e96b3397}
+
+
+Define if the waypoint is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & distance between the 2 waypoints double \\
+\hline
+{\em valid\-Lat\-Long} & valid coordinates bool \\
+\hline
+{\em valid\-Altitude} & valid altitude bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a6f8056c0ce5dd09565148cff2aa1d6aa}{\index{Communication\-Control@{Communication\-Control}!waypoint\-N\-A\-V\-Info@{waypoint\-N\-A\-V\-Info}}
+\index{waypoint\-N\-A\-V\-Info@{waypoint\-N\-A\-V\-Info}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{waypoint\-N\-A\-V\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void waypoint\-N\-A\-V\-Info (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Waypoint\-Number, }
+\item[{short}]{p\-\_\-n\-Distance, }
+\item[{short}]{p\-\_\-c\-Status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a6f8056c0ce5dd09565148cff2aa1d6aa}
+
+
+\hyperlink{a00017}{Waypoint} navigation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Waypoint\-Number} & waypoint number char \\
+\hline
+{\em p\-\_\-n\-Distance} & between M\-U\-A\-V and waypoint short \\
+\hline
+{\em p\-\_\-c\-Status} & navigation status (reached or not) short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a31082f0cdd2aeea81ceb79028bf639af}{\index{Communication\-Control@{Communication\-Control}!write\-Log@{write\-Log}}
+\index{write\-Log@{write\-Log}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{write\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void write\-Log (
+\begin{DoxyParamCaption}
+\item[{bool}]{valid\-Crc}
+\end{DoxyParamCaption}
+)}}\label{a00001_a31082f0cdd2aeea81ceb79028bf639af}
+
+
+Write logs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valid\-Crc} & valid crc state bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+301 \{
+302     *(\hyperlink{a00001_a7577a19e7793780c079fea7dcaefabf0}{log}->\hyperlink{a00014_aeabc1d456526485e8c922a94b4bfa22d}{getDataLoggerStream}()) << QDateTime::currentDateTime().toString() << \textcolor{stringliteral}{"; "} 
+      <<
+303         \hyperlink{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{latitude} << \textcolor{stringliteral}{"; "} << \hyperlink{a00001_ac155e35fdeebafc89723a51520fb9fe6}{longitude} << \textcolor{stringliteral}{"; "} << \hyperlink{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{altitude} << \textcolor{stringliteral}{"; "} << 
+      \hyperlink{a00001_ae024163074f229a06b7ea69b190e466d}{heading} << \textcolor{stringliteral}{"; "} << 
+304         \hyperlink{a00001_a9747f19755c0d74510f7a0860c11fbef}{m\_dSpeed} << \textcolor{stringliteral}{"; "} << validCrc << endl;
+305 \}
+\end{DoxyCode}
+\hypertarget{a00001_a289c96805ddb1941fe330931d73321a0}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Disconnected@{X\-Bee\-Disconnected}}
+\index{X\-Bee\-Disconnected@{X\-Bee\-Disconnected}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Disconnected}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a289c96805ddb1941fe330931d73321a0}
+
+
+X\-Bee physically disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_afb47495b5727dae0e7a5bac62098cb1e}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Reconnected@{X\-Bee\-Reconnected}}
+\index{X\-Bee\-Reconnected@{X\-Bee\-Reconnected}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Reconnected}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Reconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_afb47495b5727dae0e7a5bac62098cb1e}
+
+
+X\-Bee physically reconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00001_a3a3794256db7e6b52daad0dc178c2db9}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Status@{X\-Bee\-Status}}
+\index{X\-Bee\-Status@{X\-Bee\-Status}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Status (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-b\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00001_a3a3794256db7e6b52daad0dc178c2db9}
+
+
+Update X\-Bee connection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-b\-Value} & status bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00001_a2b13d276aee0d9fd646c8fa3647e869b}{\index{Communication\-Control@{Communication\-Control}!altitude@{altitude}}
+\index{altitude@{altitude}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{altitude}]{\setlength{\rightskip}{0pt plus 5cm}double altitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a2b13d276aee0d9fd646c8fa3647e869b}
+\hypertarget{a00001_acb05f93668631d777d1e9a4efa094d6e}{\index{Communication\-Control@{Communication\-Control}!com\-Thread@{com\-Thread}}
+\index{com\-Thread@{com\-Thread}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{com\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Com\-Thread}$\ast$ com\-Thread\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_acb05f93668631d777d1e9a4efa094d6e}
+\hypertarget{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}{\index{Communication\-Control@{Communication\-Control}!cw@{cw}}
+\index{cw@{cw}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{cw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-U\-R\-R\-E\-N\-T\-\_\-\-W\-A\-Y} cw\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a4c9b6ed9e971686ce98aa7170cb1e7f2}
+\hypertarget{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}{\index{Communication\-Control@{Communication\-Control}!gps@{gps}}
+\index{gps@{gps}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{gps}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-P\-S\-\_\-\-D\-A\-T\-A\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D} gps\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_ac042d2d437c63ce6fe1916aac1c77a9b}
+\hypertarget{a00001_ae024163074f229a06b7ea69b190e466d}{\index{Communication\-Control@{Communication\-Control}!heading@{heading}}
+\index{heading@{heading}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{heading}]{\setlength{\rightskip}{0pt plus 5cm}double heading\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_ae024163074f229a06b7ea69b190e466d}
+\hypertarget{a00001_a89f6abd564014faeff7cd20c340a9c7d}{\index{Communication\-Control@{Communication\-Control}!height@{height}}
+\index{height@{height}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}double height\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a89f6abd564014faeff7cd20c340a9c7d}
+\hypertarget{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}{\index{Communication\-Control@{Communication\-Control}!imu@{imu}}
+\index{imu@{imu}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{imu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-C\-A\-L\-C\-D\-A\-T\-A} imu\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a8e97a0fe2d5d03eb1a9344f36f8b6b85}
+\hypertarget{a00001_a76714bdbc5c536fa77dfb14533ff82a9}{\index{Communication\-Control@{Communication\-Control}!latitude@{latitude}}
+\index{latitude@{latitude}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{latitude}]{\setlength{\rightskip}{0pt plus 5cm}double latitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a76714bdbc5c536fa77dfb14533ff82a9}
+\hypertarget{a00001_a7577a19e7793780c079fea7dcaefabf0}{\index{Communication\-Control@{Communication\-Control}!log@{log}}
+\index{log@{log}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-A\-V\-Logger}$\ast$ log\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a7577a19e7793780c079fea7dcaefabf0}
+\hypertarget{a00001_ac155e35fdeebafc89723a51520fb9fe6}{\index{Communication\-Control@{Communication\-Control}!longitude@{longitude}}
+\index{longitude@{longitude}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{longitude}]{\setlength{\rightskip}{0pt plus 5cm}double longitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_ac155e35fdeebafc89723a51520fb9fe6}
+\hypertarget{a00001_a9747f19755c0d74510f7a0860c11fbef}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-d\-Speed@{m\-\_\-d\-Speed}}
+\index{m\-\_\-d\-Speed@{m\-\_\-d\-Speed}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-d\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Speed\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a9747f19755c0d74510f7a0860c11fbef}
+\hypertarget{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-n\-Link\-Tries@{m\-\_\-n\-Link\-Tries}}
+\index{m\-\_\-n\-Link\-Tries@{m\-\_\-n\-Link\-Tries}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-n\-Link\-Tries}]{\setlength{\rightskip}{0pt plus 5cm}int m\-\_\-n\-Link\-Tries\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_aa5a7389d7467aa0a6f4dbd964b1ce692}
+\hypertarget{a00001_a0ed94524da54e5031e44ab80b249b042}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-p\-Poll\-Timeout@{m\-\_\-p\-Poll\-Timeout}}
+\index{m\-\_\-p\-Poll\-Timeout@{m\-\_\-p\-Poll\-Timeout}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-p\-Poll\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Poll\-Timeout\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a0ed94524da54e5031e44ab80b249b042}
+\hypertarget{a00001_a318ffe406e999f9b02b7e811cfc86479}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-p\-Poll\-Timer@{m\-\_\-p\-Poll\-Timer}}
+\index{m\-\_\-p\-Poll\-Timer@{m\-\_\-p\-Poll\-Timer}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-p\-Poll\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Poll\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a318ffe406e999f9b02b7e811cfc86479}
+\hypertarget{a00001_a3347d5764783c5008947f5addca55346}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-p\-Retry\-Timer@{m\-\_\-p\-Retry\-Timer}}
+\index{m\-\_\-p\-Retry\-Timer@{m\-\_\-p\-Retry\-Timer}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-p\-Retry\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Retry\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a3347d5764783c5008947f5addca55346}
+\hypertarget{a00001_a6ac4068e574f32c7f5aa0c54f3ce3897}{\index{Communication\-Control@{Communication\-Control}!m\-\_\-s\-Com@{m\-\_\-s\-Com}}
+\index{m\-\_\-s\-Com@{m\-\_\-s\-Com}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{m\-\_\-s\-Com}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String m\-\_\-s\-Com\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a6ac4068e574f32c7f5aa0c54f3ce3897}
+\hypertarget{a00001_a53109ee6a15f404839038d5405afaee1}{\index{Communication\-Control@{Communication\-Control}!rc@{rc}}
+\index{rc@{rc}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{rc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-C\-\_\-\-D\-A\-T\-A} rc\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_a53109ee6a15f404839038d5405afaee1}
+\hypertarget{a00001_aee0300254b12ae17cc030042d51787c4}{\index{Communication\-Control@{Communication\-Control}!singleton@{singleton}}
+\index{singleton@{singleton}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{singleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Communication\-Control} $\ast$ singleton = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{a00001_aee0300254b12ae17cc030042d51787c4}
+\hypertarget{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}{\index{Communication\-Control@{Communication\-Control}!st@{st}}
+\index{st@{st}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{st}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-L\-\_\-\-S\-T\-A\-T\-U\-S} st\hspace{0.3cm}{\ttfamily [private]}}}\label{a00001_aab0e6d0ec390cd7a3094356a2bc5354e}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00019}{Communication\-Control.\-h}\item 
+\hyperlink{a00018}{Communication\-Control.\-cpp}\end{DoxyCompactItemize}

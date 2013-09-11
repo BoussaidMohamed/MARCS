@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d7/d70/a00106" kind="struct" prot="public">
+    <compoundname>IMU_CALCDATA</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d70/a00106_1a7676f09585cd44b4491a741080f5144f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acc_absolute_value</definition>
+        <argsstring></argsstring>
+        <name>acc_absolute_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="156" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ac0830d448e4d20a04c32b09130494773" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acc_angle_nick</definition>
+        <argsstring></argsstring>
+        <name>acc_angle_nick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="153" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a874e0348826b70ca9216fc511d452d39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acc_angle_roll</definition>
+        <argsstring></argsstring>
+        <name>acc_angle_roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="154" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a7fbb77671df053d84528cbea2382e592" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_x</definition>
+        <argsstring></argsstring>
+        <name>acc_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="149" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a0650341698626bafda8a1ab5a56c3295" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_x_calib</definition>
+        <argsstring></argsstring>
+        <name>acc_x_calib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="145" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a770deedc041beaba300bef47cb3a38a4" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_y</definition>
+        <argsstring></argsstring>
+        <name>acc_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="150" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1abe02bf64056f97d29007aad7e3d88fa0" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_y_calib</definition>
+        <argsstring></argsstring>
+        <name>acc_y_calib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="146" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ae7846339ad41e5bb0fec5dd122604db4" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_z</definition>
+        <argsstring></argsstring>
+        <name>acc_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="151" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a424a693d153b5d8e1d1fc7a79aaaecaf" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short acc_z_calib</definition>
+        <argsstring></argsstring>
+        <name>acc_z_calib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="147" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a02e2b78d44d14ab230a5fdd1f8a61dc6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angle_nick</definition>
+        <argsstring></argsstring>
+        <name>angle_nick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="137" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a700c1f6bb0b98b4f44a4086502236d41" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angle_roll</definition>
+        <argsstring></argsstring>
+        <name>angle_roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="138" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a7e1ff19efdfcc551a549c8d769bc34c5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angle_yaw</definition>
+        <argsstring></argsstring>
+        <name>angle_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="139" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ace618a2450b8bd99b2377cf704a1604c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angvel_nick</definition>
+        <argsstring></argsstring>
+        <name>angvel_nick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="141" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a685764cb37c192579c2acddea33fc3af" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angvel_roll</definition>
+        <argsstring></argsstring>
+        <name>angvel_roll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="142" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ae0aac64596e8698a3f08c6bd67e5e3dc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int angvel_yaw</definition>
+        <argsstring></argsstring>
+        <name>angvel_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="143" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a454401a27e66ca5856375ef34a112f16" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dheight</definition>
+        <argsstring></argsstring>
+        <name>dheight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="169" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a58deb45e3ef00aa81b1b03299acc5923" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dheight_reference</definition>
+        <argsstring></argsstring>
+        <name>dheight_reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="171" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="167" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ae47e65d3c3b86aa787aa7d890b8cdc80" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int height_reference</definition>
+        <argsstring></argsstring>
+        <name>height_reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="173" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a5bd8b970433f692f68235dac221830b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hx</definition>
+        <argsstring></argsstring>
+        <name>Hx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="158" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1aaf715f851555c840ea562b90494851e3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hy</definition>
+        <argsstring></argsstring>
+        <name>Hy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="159" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a543c6feb7feff64c375d476164793025" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Hz</definition>
+        <argsstring></argsstring>
+        <name>Hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="160" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1ac66ed08857aecb91f07bdc414b445973" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mag_heading</definition>
+        <argsstring></argsstring>
+        <name>mag_heading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="162" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a20fcaf3d7d5effa75ca571510f53a6cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_x</definition>
+        <argsstring></argsstring>
+        <name>speed_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="163" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a3abd5cb27c81871612651aee8a0476ba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_y</definition>
+        <argsstring></argsstring>
+        <name>speed_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="164" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d70/a00106_1a8699fea0a4e28198c556231ab49ffcf5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_z</definition>
+        <argsstring></argsstring>
+        <name>speed_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="165" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="135" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="134" bodyend="174"/>
+    <listofallmembers>
+      <member refid="d7/d70/a00106_1a7676f09585cd44b4491a741080f5144f" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_absolute_value</name></member>
+      <member refid="d7/d70/a00106_1ac0830d448e4d20a04c32b09130494773" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_angle_nick</name></member>
+      <member refid="d7/d70/a00106_1a874e0348826b70ca9216fc511d452d39" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_angle_roll</name></member>
+      <member refid="d7/d70/a00106_1a7fbb77671df053d84528cbea2382e592" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_x</name></member>
+      <member refid="d7/d70/a00106_1a0650341698626bafda8a1ab5a56c3295" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_x_calib</name></member>
+      <member refid="d7/d70/a00106_1a770deedc041beaba300bef47cb3a38a4" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_y</name></member>
+      <member refid="d7/d70/a00106_1abe02bf64056f97d29007aad7e3d88fa0" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_y_calib</name></member>
+      <member refid="d7/d70/a00106_1ae7846339ad41e5bb0fec5dd122604db4" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_z</name></member>
+      <member refid="d7/d70/a00106_1a424a693d153b5d8e1d1fc7a79aaaecaf" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>acc_z_calib</name></member>
+      <member refid="d7/d70/a00106_1a02e2b78d44d14ab230a5fdd1f8a61dc6" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angle_nick</name></member>
+      <member refid="d7/d70/a00106_1a700c1f6bb0b98b4f44a4086502236d41" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angle_roll</name></member>
+      <member refid="d7/d70/a00106_1a7e1ff19efdfcc551a549c8d769bc34c5" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angle_yaw</name></member>
+      <member refid="d7/d70/a00106_1ace618a2450b8bd99b2377cf704a1604c" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angvel_nick</name></member>
+      <member refid="d7/d70/a00106_1a685764cb37c192579c2acddea33fc3af" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angvel_roll</name></member>
+      <member refid="d7/d70/a00106_1ae0aac64596e8698a3f08c6bd67e5e3dc" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>angvel_yaw</name></member>
+      <member refid="d7/d70/a00106_1a454401a27e66ca5856375ef34a112f16" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>dheight</name></member>
+      <member refid="d7/d70/a00106_1a58deb45e3ef00aa81b1b03299acc5923" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>dheight_reference</name></member>
+      <member refid="d7/d70/a00106_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>height</name></member>
+      <member refid="d7/d70/a00106_1ae47e65d3c3b86aa787aa7d890b8cdc80" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>height_reference</name></member>
+      <member refid="d7/d70/a00106_1a5bd8b970433f692f68235dac221830b1" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>Hx</name></member>
+      <member refid="d7/d70/a00106_1aaf715f851555c840ea562b90494851e3" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>Hy</name></member>
+      <member refid="d7/d70/a00106_1a543c6feb7feff64c375d476164793025" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>Hz</name></member>
+      <member refid="d7/d70/a00106_1ac66ed08857aecb91f07bdc414b445973" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>mag_heading</name></member>
+      <member refid="d7/d70/a00106_1a20fcaf3d7d5effa75ca571510f53a6cc" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>speed_x</name></member>
+      <member refid="d7/d70/a00106_1a3abd5cb27c81871612651aee8a0476ba" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>speed_y</name></member>
+      <member refid="d7/d70/a00106_1a8699fea0a4e28198c556231ab49ffcf5" prot="public" virt="non-virtual"><scope>IMU_CALCDATA</scope><name>speed_z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

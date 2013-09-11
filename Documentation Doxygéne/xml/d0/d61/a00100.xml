@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d0/d61/a00100" kind="struct" prot="public">
+    <compoundname>DIPROPHEADER</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/d61/a00100_1a36e908f5e7f0a92e278f162a45b88eae" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwHeaderSize</definition>
+        <argsstring></argsstring>
+        <name>dwHeaderSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1032" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1032" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d61/a00100_1a4b57c3b37d55d8ad2406fe985df8ffa5" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwHow</definition>
+        <argsstring></argsstring>
+        <name>dwHow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1034" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1034" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d61/a00100_1ae55671f00fe7c7a5fbe72c05761f58d0" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwObj</definition>
+        <argsstring></argsstring>
+        <name>dwObj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1033" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1033" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d61/a00100_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1031" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1031" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1030" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1030" bodyend="1035"/>
+    <listofallmembers>
+      <member refid="d0/d61/a00100_1a36e908f5e7f0a92e278f162a45b88eae" prot="public" virt="non-virtual"><scope>DIPROPHEADER</scope><name>dwHeaderSize</name></member>
+      <member refid="d0/d61/a00100_1a4b57c3b37d55d8ad2406fe985df8ffa5" prot="public" virt="non-virtual"><scope>DIPROPHEADER</scope><name>dwHow</name></member>
+      <member refid="d0/d61/a00100_1ae55671f00fe7c7a5fbe72c05761f58d0" prot="public" virt="non-virtual"><scope>DIPROPHEADER</scope><name>dwObj</name></member>
+      <member refid="d0/d61/a00100_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIPROPHEADER</scope><name>dwSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

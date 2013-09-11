@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d9/d73/a00060" kind="struct" prot="public">
+    <compoundname>DICONDITION</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d73/a00060_1ab8ef88f6ad4b78b4144f8b4874299286" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwNegativeSaturation</definition>
+        <argsstring></argsstring>
+        <name>dwNegativeSaturation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="199" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d73/a00060_1a44d4b9216780dac85a29bc6c8cd17e99" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwPositiveSaturation</definition>
+        <argsstring></argsstring>
+        <name>dwPositiveSaturation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="198" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d73/a00060_1af30a27eff7622fb9185a6217cbbcf99a" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lDeadBand</definition>
+        <argsstring></argsstring>
+        <name>lDeadBand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="200" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d73/a00060_1a00b41a900a3d8351933fb983a2a4d65c" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lNegativeCoefficient</definition>
+        <argsstring></argsstring>
+        <name>lNegativeCoefficient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="197" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d73/a00060_1a2e20f7009060c677fbc0331de06a4c1c" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lOffset</definition>
+        <argsstring></argsstring>
+        <name>lOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="195" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d73/a00060_1a4860a93a1f284b125078f820cfa7dc69" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lPositiveCoefficient</definition>
+        <argsstring></argsstring>
+        <name>lPositiveCoefficient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="196" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="194" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="194" bodyend="201"/>
+    <listofallmembers>
+      <member refid="d9/d73/a00060_1ab8ef88f6ad4b78b4144f8b4874299286" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>dwNegativeSaturation</name></member>
+      <member refid="d9/d73/a00060_1a44d4b9216780dac85a29bc6c8cd17e99" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>dwPositiveSaturation</name></member>
+      <member refid="d9/d73/a00060_1af30a27eff7622fb9185a6217cbbcf99a" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>lDeadBand</name></member>
+      <member refid="d9/d73/a00060_1a00b41a900a3d8351933fb983a2a4d65c" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>lNegativeCoefficient</name></member>
+      <member refid="d9/d73/a00060_1a2e20f7009060c677fbc0331de06a4c1c" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>lOffset</name></member>
+      <member refid="d9/d73/a00060_1a4860a93a1f284b125078f820cfa7dc69" prot="public" virt="non-virtual"><scope>DICONDITION</scope><name>lPositiveCoefficient</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

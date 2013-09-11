@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d61/a00031" kind="file">
+    <compoundname>mission.h</compoundname>
+    <innerclass refid="da/da0/a00009" prot="public">mission</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MISSION_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MISSION_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;GeoPainter.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d97/a00045" kindref="compound">waypoint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFileDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QXmlStreamReader&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="da/da0/a00009" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="da/da0/a00009" kindref="compound">mission</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3" kindref="member">mission</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3" kindref="member">mission</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/da0/a00009_1a98ca623d084c7cb213a3cf85614aa5d7" kindref="member">~mission</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a5d06a1578648c9b23746188891b01aae" kindref="member">getNum</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a14c494edc171ceb9b2934855efa3d994" kindref="member">setNum</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a4c40423028a4cfdf1bbbea8945cb696b" kindref="member">saveMission</ref>(QList<sp/>&lt;<sp/>waypoint*<sp/>&gt;<sp/>wpList<sp/>,<sp/>QString<sp/>fileName);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a378e572221c084c413a947adec25183b" kindref="member">saveMissionKml</ref>(QList<sp/>&lt;<sp/>waypoint*<sp/>&gt;<sp/>wpList<sp/>,<sp/>QString<sp/>fileName);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a22c390047351019cdcf09e1f38b66784" kindref="member">setWaypointList</ref>(QList<sp/>&lt;waypoint*<sp/>&gt;<sp/><ref refid="da/da0/a00009" kindref="compound">mission</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>QList<sp/>&lt;waypoint*<sp/>&gt;<sp/><ref refid="da/da0/a00009_1af307fc09e3c8e4303ff16324d681213a" kindref="member">loadMission</ref>(QString<sp/>filename);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QList<sp/>&lt;waypoint*<sp/>&gt;<sp/><ref refid="da/da0/a00009_1a4788e93bd0bed6d7fd53cff1840a7f5b" kindref="member">getWaypointList</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>:</highlight></codeline>
+<codeline lineno="28" refid="da/da0/a00009_1a3676e27abf87db4ad6d4aec72b049efd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="da/da0/a00009_1a3676e27abf87db4ad6d4aec72b049efd" kindref="member">n_mission</ref><sp/>;</highlight></codeline>
+<codeline lineno="29" refid="da/da0/a00009_1a9d16159daf0b07b53c085e967131380a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>QList<sp/>&lt;waypoint*<sp/>&gt;<sp/><ref refid="da/da0/a00009_1a9d16159daf0b07b53c085e967131380a" kindref="member">myMission</ref><sp/>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MISSION_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h"/>
+  </compounddef>
+</doxygen>

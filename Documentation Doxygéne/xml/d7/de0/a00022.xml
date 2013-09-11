@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d7/de0/a00022" kind="file">
+    <compoundname>JoystickGrabber.h</compoundname>
+    <innerclass refid="dd/dad/a00005" prot="public">JoystickGrabber</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__JOYSTICKGRABBER</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__JOYSTICKGRABBER</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WINSOCKAPI_</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DIRECTINPUT_VERSION<sp/>0x0800</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="d1/d7c/a00003" kindref="compound">dinput.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;winsock2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QTimer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;ws2_32.lib&quot;)</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="dd/dad/a00005" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dd/dad/a00005" kindref="compound">JoystickGrabber</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Prefix<sp/><sp/>Meaning<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Variable<sp/>Type</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Array<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Table</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logic</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>precision<sp/>float</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dw<sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>Word<sp/><sp/><sp/><sp/><sp/>Unsigned<sp/>32<sp/>bits<sp/>word</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>index</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>value</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>stream<sp/><sp/><sp/>Stringstream</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Attributes<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="dd/dad/a00005_1a8ba25017352f50469eddacb322dea1ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTimer<sp/><ref refid="dd/dad/a00005_1a8ba25017352f50469eddacb322dea1ea" kindref="member">m_pTimer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Error<sp/>send<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="dd/dad/a00005_1af12f531f42742bba28eb859035b7e73a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1af12f531f42742bba28eb859035b7e73a" kindref="member">m_bDeviceNotCreated</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//Device<sp/>not<sp/>created<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="dd/dad/a00005_1aa1d8cba0c8d6adf7ac4233b286737ca3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1aa1d8cba0c8d6adf7ac4233b286737ca3" kindref="member">m_bNoJoystick</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//No<sp/>joystick<sp/>connected<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="dd/dad/a00005_1aab9a18185f2227483c2a0aee90f0d27b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1aab9a18185f2227483c2a0aee90f0d27b" kindref="member">m_bDirectInputProblem</ref>;<sp/></highlight><highlight class="comment">//Direct<sp/>Input<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="dd/dad/a00005_1ace877f18c922f37da48234f6256cad3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1ace877f18c922f37da48234f6256cad3e" kindref="member">m_bDataFormatProblem</ref>;<sp/><sp/></highlight><highlight class="comment">//Data<sp/>format<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="dd/dad/a00005_1a74fbab1c63c7f04116e05b75666db7a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a74fbab1c63c7f04116e05b75666db7a4" kindref="member">m_bJoystickProblem</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Joystick<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="dd/dad/a00005_1aa8af7ff7c29595e20b1df31bf0d87bce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1aa8af7ff7c29595e20b1df31bf0d87bce" kindref="member">m_bDeviceEnumProblem</ref>;<sp/><sp/></highlight><highlight class="comment">//Device<sp/>enumeration<sp/>error<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a7e8f5705bbae79af7d5c357280b9d17e" kindref="member">computeData</ref>(<ref refid="db/dab/a00089" kindref="compound">DIJOYSTATE</ref><sp/><ref refid="de/d11/a00021_1a0eac3b9a806be1f5f00f0d6346303ed3" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a8fee61d7a783cade1a3d07fe86284d27" kindref="member">Finalize</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Attributes<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="dd/dad/a00005_1ab182c34f8588348767de30e37ac6c659" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1ab182c34f8588348767de30e37ac6c659" kindref="member">leftStickX</ref>;<sp/><sp/></highlight><highlight class="comment">//Left<sp/>stick<sp/>X<sp/>axe<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="dd/dad/a00005_1a3db012f463d24f44cefdfef69c495a0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a3db012f463d24f44cefdfef69c495a0e" kindref="member">leftStickY</ref>;<sp/><sp/></highlight><highlight class="comment">//Left<sp/>stick<sp/>Y<sp/>axe<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="dd/dad/a00005_1a3010a64bd66ee481f2f6c94f368993ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a3010a64bd66ee481f2f6c94f368993ef" kindref="member">topTrigger</ref>;<sp/><sp/></highlight><highlight class="comment">//Top<sp/>triggers<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="dd/dad/a00005_1af0881450f92ff4ebb21414f6c6f124df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1af0881450f92ff4ebb21414f6c6f124df" kindref="member">rightStickX</ref>;<sp/></highlight><highlight class="comment">//Right<sp/>stick<sp/>X<sp/>axe<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="dd/dad/a00005_1afc18149eb56e03b5cf59623dfb93bdb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1afc18149eb56e03b5cf59623dfb93bdb3" kindref="member">rightStickY</ref>;<sp/></highlight><highlight class="comment">//Right<sp/>stick<sp/>Y<sp/>axe<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="dd/dad/a00005_1a79f4acbf0893aed36f0bf600410b9fde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a79f4acbf0893aed36f0bf600410b9fde" kindref="member">buttons</ref>[32];<sp/><sp/><sp/></highlight><highlight class="comment">//Button<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="dd/dad/a00005_1ae68cabc9fc7cc8568adebca29ba3868d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1ae68cabc9fc7cc8568adebca29ba3868d" kindref="member">pov</ref>[4];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Point<sp/>of<sp/>View<sp/>stick<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dad/a00005_1a00527a60ea73ba28608e06e59dc9c638" kindref="member">JoystickGrabber</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a2dfbfa6847025eb5bff311a5cdd23128" kindref="member">createDevice</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Signals<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1ad70a13ae9071262fc324babf6254d6ea" kindref="member">noJoystick</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a10733eb4d9bf54f33699a23fe0e0c4f8" kindref="member">directInputProblem</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1aa6bfaa413ce18461ac71e75248460700" kindref="member">dataFormatProblem</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a2359b3e182aa100a1c8da8c5d05155fe" kindref="member">joystickProblem</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a51a5a6418d902f49aa198a8d3ae923f6" kindref="member">deviceEnumProblem</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a05f4229ff68c39c5983aa630a0ee359d" kindref="member">dataComputed</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Slots<sp/>====================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1ae8d92c6f646a05d37cdee939fdc6110f" kindref="member">grab</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dad/a00005_1a6a2caa19e313a28cc345be6dd67f2121" kindref="member">sendAcknowledge</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/JoystickGrabber.h"/>
+  </compounddef>
+</doxygen>

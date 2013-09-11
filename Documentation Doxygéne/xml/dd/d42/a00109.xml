@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dd/d42/a00109" kind="struct" prot="public">
+    <compoundname>WAYPOINT</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/d42/a00109_1a8191d25c9e9667de75b852aa1b3cd7b7" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short chksum</definition>
+        <argsstring></argsstring>
+        <name>chksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="76" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a42e84e4d4c65fe419a617709cc917e94" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dummy_1</definition>
+        <argsstring></argsstring>
+        <name>dummy_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="65" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1ac19ac6c2b8775c374a37861835810517" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short dummy_2</definition>
+        <argsstring></argsstring>
+        <name>dummy_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="66" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="84" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a38184c087a13ec7e1b887656d9ccf848" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char max_speed</definition>
+        <argsstring></argsstring>
+        <name>max_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="70" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a702e933b2034a3d94950c39bfdcd3052" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short pos_acc</definition>
+        <argsstring></argsstring>
+        <name>pos_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="74" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a78b61a2d452301b80cd56942bfc362e0" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="68" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a9e291d833ba33b59d6063a0cd586a86b" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="72" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a66219f3f331762fb4a8d21c1f01d1105" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char wp_number</definition>
+        <argsstring></argsstring>
+        <name>wp_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="63" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a80c0944640e62d3ed6c5419c1bcc0c88" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="78" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1aa482c4cc86a24474e4fb19b5b5978778" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="80" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d42/a00109_1a7d2cd970242d8b46e019dd7653588b30" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yaw</definition>
+        <argsstring></argsstring>
+        <name>yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="82" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="61" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="60" bodyend="85"/>
+    <listofallmembers>
+      <member refid="dd/d42/a00109_1a8191d25c9e9667de75b852aa1b3cd7b7" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>chksum</name></member>
+      <member refid="dd/d42/a00109_1a42e84e4d4c65fe419a617709cc917e94" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>dummy_1</name></member>
+      <member refid="dd/d42/a00109_1ac19ac6c2b8775c374a37861835810517" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>dummy_2</name></member>
+      <member refid="dd/d42/a00109_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>height</name></member>
+      <member refid="dd/d42/a00109_1a38184c087a13ec7e1b887656d9ccf848" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>max_speed</name></member>
+      <member refid="dd/d42/a00109_1a702e933b2034a3d94950c39bfdcd3052" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>pos_acc</name></member>
+      <member refid="dd/d42/a00109_1a78b61a2d452301b80cd56942bfc362e0" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>properties</name></member>
+      <member refid="dd/d42/a00109_1a9e291d833ba33b59d6063a0cd586a86b" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>time</name></member>
+      <member refid="dd/d42/a00109_1a66219f3f331762fb4a8d21c1f01d1105" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>wp_number</name></member>
+      <member refid="dd/d42/a00109_1a80c0944640e62d3ed6c5419c1bcc0c88" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>X</name></member>
+      <member refid="dd/d42/a00109_1aa482c4cc86a24474e4fb19b5b5978778" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>Y</name></member>
+      <member refid="dd/d42/a00109_1a7d2cd970242d8b46e019dd7653588b30" prot="public" virt="non-virtual"><scope>WAYPOINT</scope><name>yaw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

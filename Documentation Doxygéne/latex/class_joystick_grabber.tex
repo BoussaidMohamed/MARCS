@@ -1,0 +1,314 @@
+\hypertarget{class_joystick_grabber}{\section{Joystick\-Grabber Class Reference}
+\label{class_joystick_grabber}\index{Joystick\-Grabber@{Joystick\-Grabber}}
+}
+Inheritance diagram for Joystick\-Grabber\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_joystick_grabber}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_joystick_grabber_a30ed6804623b6513422a42f2ae95c046}{grab} ()
+\begin{DoxyCompactList}\small\item\em Grab information one time. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_ae880b3d96fd4d528df1b03fe7de4667f}{send\-Acknowledge} ()
+\begin{DoxyCompactList}\small\item\em Send errors each time interval of the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_joystick_grabber_ad950726c1b3772c6c1f6f84b46ccd4b7}{no\-Joystick} ()
+\begin{DoxyCompactList}\small\item\em No joystick or gamepad connected signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_a3b76bcfe0b0dbb84108b0e07939ae17a}{direct\-Input\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Direct Input problem signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_abd28f72631e9ed164cda0a20d2dfa6c6}{data\-Format\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Data format for controller problem signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_a81149a5fdf6fee31bf5ebb410e36ec79}{joystick\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Joystick access problem signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_aba1214b33a7489e7af702bc3644e5d32}{device\-Enum\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Enumeration of devices problem signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_a09db4dae51da75becab8485e5359a2a7}{data\-Computed} ()
+\begin{DoxyCompactList}\small\item\em Data computed signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_joystick_grabber_ac4ad15976e6599d1c64d67b087f51989}{Joystick\-Grabber} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_joystick_grabber_a699de80499b4bbac5ddfb632f9c7f9b1}{create\-Device} ()
+\begin{DoxyCompactList}\small\item\em Create the Direct X device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_joystick_grabber_aa5b0dc1be6c1a5956f4dd35a73d3613f}{double {\bfseries left\-Stick\-X}}\label{class_joystick_grabber_aa5b0dc1be6c1a5956f4dd35a73d3613f}
+
+\item 
+\hypertarget{class_joystick_grabber_aebbfc8607fd43a1ec5cf276f61a47b8f}{double {\bfseries left\-Stick\-Y}}\label{class_joystick_grabber_aebbfc8607fd43a1ec5cf276f61a47b8f}
+
+\item 
+\hypertarget{class_joystick_grabber_a25d9bc2cbacbba2b787f156d588c6ae2}{double {\bfseries top\-Trigger}}\label{class_joystick_grabber_a25d9bc2cbacbba2b787f156d588c6ae2}
+
+\item 
+\hypertarget{class_joystick_grabber_a556ef1a0fc9701f20656ea30563a675d}{double {\bfseries right\-Stick\-X}}\label{class_joystick_grabber_a556ef1a0fc9701f20656ea30563a675d}
+
+\item 
+\hypertarget{class_joystick_grabber_a8c1d2647fb27e9eba92b6abcefa4abd9}{double {\bfseries right\-Stick\-Y}}\label{class_joystick_grabber_a8c1d2647fb27e9eba92b6abcefa4abd9}
+
+\item 
+\hypertarget{class_joystick_grabber_a3fd1a9704da03136779f38a32dcb1a0d}{bool {\bfseries buttons} \mbox{[}32\mbox{]}}\label{class_joystick_grabber_a3fd1a9704da03136779f38a32dcb1a0d}
+
+\item 
+\hypertarget{class_joystick_grabber_a7ef9aeb595e1a619ebd43767c1d0c4bb}{bool {\bfseries pov} \mbox{[}4\mbox{]}}\label{class_joystick_grabber_a7ef9aeb595e1a619ebd43767c1d0c4bb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_joystick_grabber_ac4ad15976e6599d1c64d67b087f51989}{\index{Joystick\-Grabber@{Joystick\-Grabber}!Joystick\-Grabber@{Joystick\-Grabber}}
+\index{Joystick\-Grabber@{Joystick\-Grabber}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{Joystick\-Grabber}]{\setlength{\rightskip}{0pt plus 5cm}Joystick\-Grabber\-::\-Joystick\-Grabber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_joystick_grabber_ac4ad15976e6599d1c64d67b087f51989}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_joystick_grabber}{Joystick\-Grabber} instance 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_joystick_grabber_a699de80499b4bbac5ddfb632f9c7f9b1}{\index{Joystick\-Grabber@{Joystick\-Grabber}!create\-Device@{create\-Device}}
+\index{create\-Device@{create\-Device}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{create\-Device}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::create\-Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_joystick_grabber_a699de80499b4bbac5ddfb632f9c7f9b1}
+
+
+Create the Direct X device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_a09db4dae51da75becab8485e5359a2a7}{\index{Joystick\-Grabber@{Joystick\-Grabber}!data\-Computed@{data\-Computed}}
+\index{data\-Computed@{data\-Computed}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{data\-Computed}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::data\-Computed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_a09db4dae51da75becab8485e5359a2a7}
+
+
+Data computed signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_abd28f72631e9ed164cda0a20d2dfa6c6}{\index{Joystick\-Grabber@{Joystick\-Grabber}!data\-Format\-Problem@{data\-Format\-Problem}}
+\index{data\-Format\-Problem@{data\-Format\-Problem}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{data\-Format\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::data\-Format\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_abd28f72631e9ed164cda0a20d2dfa6c6}
+
+
+Data format for controller problem signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_aba1214b33a7489e7af702bc3644e5d32}{\index{Joystick\-Grabber@{Joystick\-Grabber}!device\-Enum\-Problem@{device\-Enum\-Problem}}
+\index{device\-Enum\-Problem@{device\-Enum\-Problem}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{device\-Enum\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::device\-Enum\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_aba1214b33a7489e7af702bc3644e5d32}
+
+
+Enumeration of devices problem signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_a3b76bcfe0b0dbb84108b0e07939ae17a}{\index{Joystick\-Grabber@{Joystick\-Grabber}!direct\-Input\-Problem@{direct\-Input\-Problem}}
+\index{direct\-Input\-Problem@{direct\-Input\-Problem}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{direct\-Input\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::direct\-Input\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_a3b76bcfe0b0dbb84108b0e07939ae17a}
+
+
+Direct Input problem signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_a30ed6804623b6513422a42f2ae95c046}{\index{Joystick\-Grabber@{Joystick\-Grabber}!grab@{grab}}
+\index{grab@{grab}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{grab}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::grab (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_joystick_grabber_a30ed6804623b6513422a42f2ae95c046}
+
+
+Grab information one time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_a81149a5fdf6fee31bf5ebb410e36ec79}{\index{Joystick\-Grabber@{Joystick\-Grabber}!joystick\-Problem@{joystick\-Problem}}
+\index{joystick\-Problem@{joystick\-Problem}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{joystick\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::joystick\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_a81149a5fdf6fee31bf5ebb410e36ec79}
+
+
+Joystick access problem signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_ad950726c1b3772c6c1f6f84b46ccd4b7}{\index{Joystick\-Grabber@{Joystick\-Grabber}!no\-Joystick@{no\-Joystick}}
+\index{no\-Joystick@{no\-Joystick}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{no\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::no\-Joystick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_joystick_grabber_ad950726c1b3772c6c1f6f84b46ccd4b7}
+
+
+No joystick or gamepad connected signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_joystick_grabber_ae880b3d96fd4d528df1b03fe7de4667f}{\index{Joystick\-Grabber@{Joystick\-Grabber}!send\-Acknowledge@{send\-Acknowledge}}
+\index{send\-Acknowledge@{send\-Acknowledge}!JoystickGrabber@{Joystick\-Grabber}}
+\subsubsection[{send\-Acknowledge}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick\-Grabber\-::send\-Acknowledge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_joystick_grabber_ae880b3d96fd4d528df1b03fe7de4667f}
+
+
+Send errors each time interval of the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Joystick\-Grabber.\-h\item 
+Joystick\-Grabber.\-cpp\end{DoxyCompactItemize}

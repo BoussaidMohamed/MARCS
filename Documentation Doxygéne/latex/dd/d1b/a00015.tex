@@ -1,0 +1,676 @@
+\hypertarget{a00015}{\section{video Class Reference}
+\label{a00015}\index{video@{video}}
+}
+
+
+{\ttfamily \#include \char`\"{}video.\-h\char`\"{}}
+
+Inheritance diagram for video\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dd/d1b/a00015}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Public Member Functions}
+\subsection*{Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00015_af7ccf696656e3145c9396f15bcd91695}{\index{video@{video}!video@{video}}
+\index{video@{video}!video@{video}}
+\subsubsection[{video}]{\setlength{\rightskip}{0pt plus 5cm}{\bf video} (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{a00015_af7ccf696656e3145c9396f15bcd91695}
+
+\begin{DoxyCode}
+65                             :
+66     QMainWindow(parent),
+67     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}(\textcolor{keyword}{new} Ui::video)
+68 \{
+69     \hyperlink{a00042_aef1d7c2fea653fb1d729b2f40b2c2c53}{affichageList} = false ;\textcolor{comment}{//etat d'affichage de la liste du log}
+70     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->setupUi(\textcolor{keyword}{this});
+71     \hyperlink{a00042_ab78e87803316b7303d0f8697c7c0f253}{place} =  \textcolor{keyword}{new} GeoDataPlacemark( \textcolor{stringliteral}{""} );
+72     \hyperlink{a00042_a8b0f68f97ddd8c30ad31efa6919778ee}{document} = \textcolor{keyword}{new} GeoDataDocument();
+73 
+74 
+75     \textcolor{comment}{//config marble}
+76     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->setShowOverviewMap(\textcolor{keyword}{false});
+77     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->setShowOverviewMap(\textcolor{keyword}{false});
+78     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->setShowScaleBar(\textcolor{keyword}{false});
+79     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->setShowCompass(\textcolor{keyword}{false});
+80     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->hide();
+81 
+82 
+83     \textcolor{comment}{//initialisation de l'intreface}
+84     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->tableWidget->hide();
+85     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->snapShoot\_button->hide();
+86     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan->setEnabled(\textcolor{keyword}{false});
+87     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data->setEnabled(\textcolor{keyword}{true});
+88     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo->setEnabled(\textcolor{keyword}{true});
+89     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->listLog->hide();
+90     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionClear\_mission->setEnabled(\textcolor{keyword}{false});
+91     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Alt->hide();
+92     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_HDG->hide();
+93     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Num\_Waypoint->hide();
+94     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Time->hide();
+95     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->hide();
+96     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->hide();
+97     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->hide();
+98     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->line\_2->hide();
+99     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button->hide();
+100     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->LoadData\_button->hide();
+101     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->hide();
+102     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->FinishEdit\_button\_2->hide();
+103 
+104 
+105 
+106     \textcolor{comment}{//signal&&slot de l'application}
+107     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(
+      \hyperlink{a00015_a688b7983c0da36424d5b4d10a0c007f7}{openNewWindowMain}()));
+108     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(
+      \hyperlink{a00015_a7d0835d5762ca85bc460aeeabca018c7}{openNewWindowData}()));
+109     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a03f5e63773125e14f1e32c94420ff7bf}{openNewWindowVideo}()));
+110     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionLoad\_map,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a7225d8cbcace3eaee988a9d7724c0dbd}{openNewMap}()));
+111     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionLoad\_mission,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a489b8f1d983d32ae8b2e5d9e29aff63a}{openMission}()));
+112     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionClose,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a5ae591df94fc66ccb85cbb6565368bca}{close}()));
+113     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)
+      ),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_ab8446a0b12406c07562af271392ab19b}{switchToMap}()));
+114     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->status\_button,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_ad0f7d75c8390ef3bfcc62ad26098dacc}{afficheList}()));
+115     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->led\_button,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_ad0f7d75c8390ef3bfcc62ad26098dacc}{afficheList}()));
+116     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionSave\_mission,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a816a9f0cf14cf70a29662387914071f5}{saveMission}()));
+117     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionClear\_mission,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_ac413685926a24cbbde53d1f3706a3093}{clearMission}()));
+118     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionStart\_planning,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(
+      \hyperlink{a00015_a1d75cd9cd7e205209d38efc1b47ecb13}{activateAddingPoint}()));
+119     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionEdit\_waypoint,SIGNAL(triggered()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a9231d60467923911b4ba0d167004588d}{editWaypoint}()));
+120 
+121     QPaintDevice *paintDevice = \textcolor{keyword}{this};
+122    \textcolor{comment}{// QPaintEvent *evt ;}
+123     QImage image;
+124     \textcolor{keywordflow}{if} (!isEnabled())
+125     \{
+126         \textcolor{comment}{// If the globe covers fully the screen then we can use the faster}
+127         \textcolor{comment}{// RGB32 as there are no translucent areas involved.}
+128         QImage::Format imageFormat = ( \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->viewport()->mapCoversViewport() )
+129                                      ? QImage::Format\_RGB32
+130                                      : QImage::Format\_ARGB32\_Premultiplied;
+131         \textcolor{comment}{// Paint to an intermediate image}
+132         image = QImage( rect().size(), imageFormat );
+133 
+134         image.fill( Qt::transparent );
+135         paintDevice = &image;
+136 
+137     \}
+138 
+139 
+140 \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp} = \textcolor{keyword}{new} GeoPainter ( paintDevice, \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->viewport(), \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->
+      mapQuality() );
+141 \textcolor{comment}{//ui->MarbleWidget\_plan->paint( gp, evt->rect() );}
+142 \hyperlink{a00015_a67857e604fad85ea53503c492a77a5a9}{drawMission}();
+143 
+144 \}
+\end{DoxyCode}
+\hypertarget{a00015_ad13b02e319297aac06bde53ec8a4b167}{\index{video@{video}!$\sim$video@{$\sim$video}}
+\index{$\sim$video@{$\sim$video}!video@{video}}
+\subsubsection[{$\sim$video}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf video} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00015_ad13b02e319297aac06bde53ec8a4b167}
+
+\begin{DoxyCode}
+147 \{
+148     \textcolor{keyword}{delete} \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui};
+149 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00015_a1d75cd9cd7e205209d38efc1b47ecb13}{\index{video@{video}!activate\-Adding\-Point@{activate\-Adding\-Point}}
+\index{activate\-Adding\-Point@{activate\-Adding\-Point}!video@{video}}
+\subsubsection[{activate\-Adding\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void activate\-Adding\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a1d75cd9cd7e205209d38efc1b47ecb13}
+
+\begin{DoxyCode}
+162                                \{
+163     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionSave\_mission->setEnabled(\textcolor{keyword}{true});
+164     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),\textcolor{keyword}{
+      this},SLOT(\hyperlink{a00015_a070a5570eaeac36ef13715ca18be3ec9}{addPoint}(qreal,qreal,GeoDataCoordinates::Unit)));
+165     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionStart\_planning->setEnabled(\textcolor{keyword}{false});
+166 \}
+\end{DoxyCode}
+\hypertarget{a00015_a070a5570eaeac36ef13715ca18be3ec9}{\index{video@{video}!add\-Point@{add\-Point}}
+\index{add\-Point@{add\-Point}!video@{video}}
+\subsubsection[{add\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void add\-Point (
+\begin{DoxyParamCaption}
+\item[{qreal}]{lon, }
+\item[{qreal}]{lat, }
+\item[{Geo\-Data\-Coordinates\-::\-Unit}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a070a5570eaeac36ef13715ca18be3ec9}
+
+\begin{DoxyCode}
+268                                                                 \{
+269 
+270 
+271   sprintf(\hyperlink{a00042_aad93f0b04d6ea6ac097124ef453bef9d}{numWpText},\textcolor{stringliteral}{"%d"},\hyperlink{a00042_ab5b110200d9f08e5d10a2549f54073c9}{num\_waypoint});
+272   \hyperlink{a00042_a57c52213e1c32a667a5963a122e0a23b}{temp} = string(\hyperlink{a00042_aad93f0b04d6ea6ac097124ef453bef9d}{numWpText});
+273   \hyperlink{a00042_aa6011e6576184fcd9e0841fdffbaa826}{textNumWaypoint} = \textcolor{stringliteral}{"# "} + \hyperlink{a00042_a57c52213e1c32a667a5963a122e0a23b}{temp} ;
+274   \hyperlink{a00042_add3cc0473ea4a2ff453620e16ac24056}{qstr} = QString::fromStdString(\hyperlink{a00042_aa6011e6576184fcd9e0841fdffbaa826}{textNumWaypoint});
+275 
+276   \textcolor{comment}{// Access the shared route request (start, destination and parameters)}
+277   \hyperlink{a00042_a02d3f124c170b0126dab54f6e5a18dae}{manager} = \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->routingManager();
+278   \hyperlink{a00042_aca10b4dc402bfe3d17f1fcba33544252}{manager\_smallMap} = \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->model()->routingManager();
+279   \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request} = \hyperlink{a00042_a02d3f124c170b0126dab54f6e5a18dae}{manager}->routeRequest();
+280   \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap} = \hyperlink{a00042_aca10b4dc402bfe3d17f1fcba33544252}{manager\_smallMap}->routeRequest();
+281 
+282   \hyperlink{a00042_a99347d1261cfb39396fdc4965d16f515}{tempo} = \textcolor{keyword}{new} GeoDataCoordinates(lon,lat,0.0,GeoDataCoordinates::Radian);
+283 
+284  \textcolor{comment}{// add point to map}
+285  \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request}->append( GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ) );
+286  \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request}->setName(\hyperlink{a00042_ab5b110200d9f08e5d10a2549f54073c9}{num\_waypoint},\hyperlink{a00042_add3cc0473ea4a2ff453620e16ac24056}{qstr});
+287  \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap}->append(GeoDataCoordinates( lon, lat, 0.0, GeoDataCoordinates::Radian ));
+288  \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap}->setName(\hyperlink{a00042_ab5b110200d9f08e5d10a2549f54073c9}{num\_waypoint},\hyperlink{a00042_add3cc0473ea4a2ff453620e16ac24056}{qstr});
+289  \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}.append(\textcolor{keyword}{new} \hyperlink{a00016}{waypoint}(\hyperlink{a00042_ab5b110200d9f08e5d10a2549f54073c9}{num\_waypoint},\hyperlink{a00042_a99347d1261cfb39396fdc4965d16f515}{tempo}->longitude(
+      GeoDataCoordinates::Degree),\hyperlink{a00042_a99347d1261cfb39396fdc4965d16f515}{tempo}->latitude(GeoDataCoordinates::Degree),100.0,90.0,60,1,1));
+290  \hyperlink{a00042_ab5b110200d9f08e5d10a2549f54073c9}{num\_waypoint}++ ;
+291 
+292  \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionEdit\_waypoint->setEnabled(\textcolor{keyword}{true});
+293  \hyperlink{a00042_a8c7e45250b1eb6821dd59fb2a9a016d7}{open} = false ;
+294 \}
+\end{DoxyCode}
+\hypertarget{a00015_ad0f7d75c8390ef3bfcc62ad26098dacc}{\index{video@{video}!affiche\-List@{affiche\-List}}
+\index{affiche\-List@{affiche\-List}!video@{video}}
+\subsubsection[{affiche\-List}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_ad0f7d75c8390ef3bfcc62ad26098dacc}
+
+\begin{DoxyCode}
+170 \{
+171     \textcolor{keywordflow}{if} (\hyperlink{a00042_aef1d7c2fea653fb1d729b2f40b2c2c53}{affichageList}==\textcolor{keyword}{false})\{
+172         \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->listLog->show();
+173         \hyperlink{a00042_aef1d7c2fea653fb1d729b2f40b2c2c53}{affichageList} = true ;
+174     \}
+175     \textcolor{keywordflow}{else} \{
+176         \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->listLog->hide();
+177         \hyperlink{a00042_aef1d7c2fea653fb1d729b2f40b2c2c53}{affichageList} = false ;
+178     \}
+179 
+180 \}
+\end{DoxyCode}
+\hypertarget{a00015_ac413685926a24cbbde53d1f3706a3093}{\index{video@{video}!clear\-Mission@{clear\-Mission}}
+\index{clear\-Mission@{clear\-Mission}!video@{video}}
+\subsubsection[{clear\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void clear\-Mission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_ac413685926a24cbbde53d1f3706a3093}
+
+\begin{DoxyCode}
+153                         \{
+154 
+155     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->removeGeoData(\hyperlink{a00042_a3de39ae285a10e6655db42a1dd146c69}{lastMission});
+156     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionClear\_mission->setEnabled(\textcolor{keyword}{false});
+157     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionSave\_mission->setEnabled(\textcolor{keyword}{false});
+158 
+159 \}
+\end{DoxyCode}
+\hypertarget{a00015_a5ae591df94fc66ccb85cbb6565368bca}{\index{video@{video}!close@{close}}
+\index{close@{close}!video@{video}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a5ae591df94fc66ccb85cbb6565368bca}
+
+\begin{DoxyCode}
+340 \{
+341     exit(0);
+342 \}
+\end{DoxyCode}
+\hypertarget{a00015_a67857e604fad85ea53503c492a77a5a9}{\index{video@{video}!draw\-Mission@{draw\-Mission}}
+\index{draw\-Mission@{draw\-Mission}!video@{video}}
+\subsubsection[{draw\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Mission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a67857e604fad85ea53503c492a77a5a9}
+
+\begin{DoxyCode}
+372                        \{
+373 
+374     GeoDataCoordinates France( 2.2, 48.52, 0.0, GeoDataCoordinates::Degree );
+375     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->setPen( QColor( 0, 0, 0 ) );
+376     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->drawText( France, \textcolor{stringliteral}{"France"} );
+377 
+378     GeoDataCoordinates Canada( -77.02, 48.52, 0.0, GeoDataCoordinates::Degree );
+379     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->setPen( QColor( 0, 0, 0 ) );
+380     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->drawText( Canada, \textcolor{stringliteral}{"Canada"} );
+381 
+382     \textcolor{comment}{//A line from France to Canada without tessellation}
+383 
+384     GeoDataLineString shapeNoTessellation( NoTessellation );
+385     shapeNoTessellation << France << Canada;
+386 
+387     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->setPen( oxygenSkyBlue4 );
+388     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->drawPolyline( shapeNoTessellation );
+389 
+390     \textcolor{comment}{//The same line, but with tessellation}
+391 
+392     GeoDataLineString shapeTessellate( Tessellate );
+393     shapeTessellate << France << Canada;
+394 
+395     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->setPen( oxygenBrickRed4 );
+396     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->drawPolyline( shapeTessellate );
+397 
+398     \textcolor{comment}{//Now following the latitude circles}
+399 
+400     GeoDataLineString shapeLatitudeCircle( RespectLatitudeCircle | Tessellate );
+401     shapeLatitudeCircle << France << Canada;
+402 
+403     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->setPen( oxygenForestGreen4 );
+404     \hyperlink{a00042_a6db9a27632d51962600fe2f1debbb678}{gp}->drawPolyline( shapeLatitudeCircle );
+405 \}
+\end{DoxyCode}
+\hypertarget{a00015_a9231d60467923911b4ba0d167004588d}{\index{video@{video}!edit\-Waypoint@{edit\-Waypoint}}
+\index{edit\-Waypoint@{edit\-Waypoint}!video@{video}}
+\subsubsection[{edit\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void edit\-Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a9231d60467923911b4ba0d167004588d}
+
+\begin{DoxyCode}
+407                         \{
+408     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->show();
+409     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->LoadData\_button->show();
+410     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Num\_Waypoint->show();
+411 
+412     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionEdit\_waypoint->setEnabled(\textcolor{keyword}{false});
+413     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->clear();
+414 
+415     \textcolor{keywordflow}{if} ( \hyperlink{a00042_a8c7e45250b1eb6821dd59fb2a9a016d7}{open} == \textcolor{keyword}{false})\{
+416 
+417         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0 ; i < \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}.size(); i++)\{
+418             \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->addItem(QString::number(i+1));
+419         \}
+420     \}
+421     \textcolor{keywordflow}{else} \{
+422         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0 ; i < \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}.size(); i++)\{
+423             \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->addItem(QString::number(i+1));
+424         \}
+425 
+426     \}
+427 
+428     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->LoadData\_button,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a3ba779451a386238417fbab60f0d4db0}{loadData}()));
+429 
+430 
+431 \}
+\end{DoxyCode}
+\hypertarget{a00015_a7e07a9d88a66fadd639dec3139cf9f4c}{\index{video@{video}!finish\-Edit\-Data@{finish\-Edit\-Data}}
+\index{finish\-Edit\-Data@{finish\-Edit\-Data}!video@{video}}
+\subsubsection[{finish\-Edit\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void finish\-Edit\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a7e07a9d88a66fadd639dec3139cf9f4c}
+
+\begin{DoxyCode}
+504                           \{
+505 
+506 
+507     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Alt->hide();
+508     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_HDG->hide();
+509     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Num\_Waypoint->hide();
+510     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Time->hide();
+511     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->hide();
+512     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->hide();
+513     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->hide();
+514     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->line\_2->hide();
+515     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button->hide();
+516     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->LoadData\_button->hide();
+517     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->hide();
+518     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->FinishEdit\_button\_2->hide();
+519     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionEdit\_waypoint->setEnabled(\textcolor{keyword}{true});
+520 
+521 
+522 \}
+\end{DoxyCode}
+\hypertarget{a00015_a3ba779451a386238417fbab60f0d4db0}{\index{video@{video}!load\-Data@{load\-Data}}
+\index{load\-Data@{load\-Data}!video@{video}}
+\subsubsection[{load\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void load\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a3ba779451a386238417fbab60f0d4db0}
+
+\begin{DoxyCode}
+433                     \{
+434     \textcolor{keywordtype}{int} h ;
+435     \textcolor{keywordtype}{int} m ;
+436     \textcolor{keywordtype}{int} s ;
+437 
+438     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Alt->show();
+439     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_HDG->show();
+440     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->label\_Time->show();
+441     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->show();
+442     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->show();
+443     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->show();
+444     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->line\_2->show();
+445     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button->show();
+446     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->FinishEdit\_button\_2->show();
+447     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button->setEnabled(\textcolor{keyword}{true});
+448 
+449     \textcolor{keywordflow}{if} ( \hyperlink{a00042_a8c7e45250b1eb6821dd59fb2a9a016d7}{open} == \textcolor{keyword}{false})\{
+450         h = \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+451         m = (\hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+452         s = (\hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+453 
+454        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->setText(QString::number(\hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->
+      currentIndex()]->getAlt()));
+455        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->setText(QString::number(\hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->
+      currentIndex()]->getHdg()));
+456        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->setTime(QTime(h,m,s,00));
+457 
+458     \}
+459 
+460     \textcolor{keywordflow}{else} \{
+461         h = \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+462         m = (\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+463         s = (\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+464 
+465        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->setText(QString::number(\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->
+      currentIndex()]->getAlt()));
+466        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->setText(QString::number(\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->
+      currentIndex()]->getHdg()));
+467        \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->setTime(QTime(h,m,s,00));
+468 
+469     \}
+470 
+471     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a14a8662407eb95fe2c478c0cee351de5}{saveEditData}()));
+472     connect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->FinishEdit\_button\_2,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\hyperlink{a00015_a7e07a9d88a66fadd639dec3139cf9f4c}{finishEditData}()));
+473 
+474    \}
+\end{DoxyCode}
+\hypertarget{a00015_a489b8f1d983d32ae8b2e5d9e29aff63a}{\index{video@{video}!open\-Mission@{open\-Mission}}
+\index{open\-Mission@{open\-Mission}!video@{video}}
+\subsubsection[{open\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Mission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a489b8f1d983d32ae8b2e5d9e29aff63a}
+
+\begin{DoxyCode}
+183                        \{
+184 
+185    disconnect(\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),\textcolor{keyword}{
+      this},SLOT(\hyperlink{a00015_a070a5570eaeac36ef13715ca18be3ec9}{addPoint}(qreal,qreal,GeoDataCoordinates::Unit)));
+186 
+187     \hyperlink{a00015_a34b772573db9a14b1acb61b24709ae73}{path} = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Load a mission"}, \textcolor{stringliteral}{"C:/Users/mboussai/Desktop/Mohamed/Qt
+       Projects/FILES/mission"}, \textcolor{stringliteral}{"KML (*.kml)"});
+188     QFileInfo inputFile(\hyperlink{a00015_a34b772573db9a14b1acb61b24709ae73}{path});
+189     QString file ;
+190     file = \textcolor{stringliteral}{"C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/testParse.xml"};
+191 
+192     \textcolor{keywordtype}{string} m ;
+193     \textcolor{keywordtype}{string} nameFileOpen;
+194 
+195 
+196     m = \hyperlink{a00015_a34b772573db9a14b1acb61b24709ae73}{path}.toUtf8().constData();
+197     \textcolor{keywordtype}{size\_t} pos = m.find\_last\_of(\textcolor{stringliteral}{"/"});
+198     \textcolor{keywordflow}{if}(pos != std::string::npos)\{
+199 
+200         nameFileOpen.assign(m.begin() + pos + 1, m.end()-4);
+201     \}
+202       \textcolor{keywordflow}{else}
+203     \{
+204       nameFileOpen = m;
+205   \}
+206     \textcolor{keywordtype}{string} fileNameTempOpen = \textcolor{stringliteral}{"C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/"} + 
+      nameFileOpen +\textcolor{stringliteral}{".xml"} ;
+207     \hyperlink{a00042_ae55f476d1700ade204b3038b8c37f8ba}{fileOpened} =  QString::fromStdString(fileNameTempOpen);
+208 
+209     \textcolor{comment}{// Access the shared route request (start, destination and parameters)}
+210     \hyperlink{a00042_a02d3f124c170b0126dab54f6e5a18dae}{manager} = \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->routingManager();
+211     \hyperlink{a00042_aca10b4dc402bfe3d17f1fcba33544252}{manager\_smallMap} = \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->model()->routingManager();
+212     \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request} = \hyperlink{a00042_a02d3f124c170b0126dab54f6e5a18dae}{manager}->routeRequest();
+213     \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap} = \hyperlink{a00042_aca10b4dc402bfe3d17f1fcba33544252}{manager\_smallMap}->routeRequest();
+214     \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request}->append( GeoDataCoordinates( 0.0, 1.0, 0.0, GeoDataCoordinates::Radian ) );
+215     \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap}->append(GeoDataCoordinates( 0.0, 4.0, 0.0, GeoDataCoordinates::Radian 
+      ));
+216 
+217     \hyperlink{a00042_ade0ea03ae98566eaed4f7a1f331f237a}{request}->clear();
+218     \hyperlink{a00042_aeae2fdde26f8ed9003c0cf66a1f25662}{request\_smallMap}->clear();
+219     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+220     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->repaint();
+221     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+222     \hyperlink{a00042_a3de39ae285a10e6655db42a1dd146c69}{lastMission} = inputFile.absoluteFilePath();
+223     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionClear\_mission->setEnabled(\textcolor{keyword}{true});
+224     \hyperlink{a00042_a3de39ae285a10e6655db42a1dd146c69}{lastMission} = inputFile.absoluteFilePath();
+225     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionStart\_planning->setEnabled(\textcolor{keyword}{true});
+226 
+227      \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen} = \hyperlink{a00015_a8bd377d858dd541faf8108389a13e5ed}{myMission}.\hyperlink{a00009_af307fc09e3c8e4303ff16324d681213a}{loadMission}(\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen},
+      \hyperlink{a00042_ae55f476d1700ade204b3038b8c37f8ba}{fileOpened});
+228     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionEdit\_waypoint->setEnabled(\textcolor{keyword}{true});
+229     \hyperlink{a00042_a8c7e45250b1eb6821dd59fb2a9a016d7}{open} = true ;
+230 
+231 
+232 \}
+\end{DoxyCode}
+\hypertarget{a00015_a7225d8cbcace3eaee988a9d7724c0dbd}{\index{video@{video}!open\-New\-Map@{open\-New\-Map}}
+\index{open\-New\-Map@{open\-New\-Map}!video@{video}}
+\subsubsection[{open\-New\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void open\-New\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a7225d8cbcace3eaee988a9d7724c0dbd}
+
+\begin{DoxyCode}
+347 \{
+348     \hyperlink{a00015_a34b772573db9a14b1acb61b24709ae73}{path} = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, \textcolor{stringliteral}{"Load a map"},\textcolor{stringliteral}{"C:/Users/mboussai/Desktop/Mohamed/Qt
+       Projects/FILES/map"}, \textcolor{stringliteral}{"OSM (*.osm)"});
+349     QFileInfo inputFile(\hyperlink{a00015_a34b772573db9a14b1acb61b24709ae73}{path});
+350 
+351         \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->removeGeoData(\hyperlink{a00042_ade9b9dbbdedb4e80abbaa2201ba82d05}{lastMap});
+352         \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+353         \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->model()->addGeoDataFile( inputFile.absoluteFilePath() );
+354         \hyperlink{a00042_ade9b9dbbdedb4e80abbaa2201ba82d05}{lastMap} = inputFile.absoluteFilePath();
+355 
+356 \}
+\end{DoxyCode}
+\hypertarget{a00015_a7d0835d5762ca85bc460aeeabca018c7}{\index{video@{video}!open\-New\-Window\-Data@{open\-New\-Window\-Data}}
+\index{open\-New\-Window\-Data@{open\-New\-Window\-Data}!video@{video}}
+\subsubsection[{open\-New\-Window\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void open\-New\-Window\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a7d0835d5762ca85bc460aeeabca018c7}
+
+\begin{DoxyCode}
+312 \{
+313     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->hide();
+314     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->hide();
+315     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->tableWidget->show();
+316     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->snapShoot\_button->hide();
+317     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->addMark\_button->hide();
+318     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan->setEnabled(\textcolor{keyword}{true});
+319     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data->setEnabled(\textcolor{keyword}{false});
+320     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo->setEnabled(\textcolor{keyword}{true});
+321 
+322 \}
+\end{DoxyCode}
+\hypertarget{a00015_a688b7983c0da36424d5b4d10a0c007f7}{\index{video@{video}!open\-New\-Window\-Main@{open\-New\-Window\-Main}}
+\index{open\-New\-Window\-Main@{open\-New\-Window\-Main}!video@{video}}
+\subsubsection[{open\-New\-Window\-Main}]{\setlength{\rightskip}{0pt plus 5cm}void open\-New\-Window\-Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a688b7983c0da36424d5b4d10a0c007f7}
+
+\begin{DoxyCode}
+298 \{
+299     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->show();
+300     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->hide();
+301     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->tableWidget->hide();
+302     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->snapShoot\_button->hide();
+303     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->addMark\_button->show();
+304     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan->setEnabled(\textcolor{keyword}{false});
+305     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data->setEnabled(\textcolor{keyword}{true});
+306     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo->setEnabled(\textcolor{keyword}{true});
+307 
+308 \}
+\end{DoxyCode}
+\hypertarget{a00015_a03f5e63773125e14f1e32c94420ff7bf}{\index{video@{video}!open\-New\-Window\-Video@{open\-New\-Window\-Video}}
+\index{open\-New\-Window\-Video@{open\-New\-Window\-Video}!video@{video}}
+\subsubsection[{open\-New\-Window\-Video}]{\setlength{\rightskip}{0pt plus 5cm}void open\-New\-Window\-Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a03f5e63773125e14f1e32c94420ff7bf}
+
+\begin{DoxyCode}
+326 \{
+327     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->hide();
+328     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->show();
+329     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->tableWidget->hide();
+330     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->snapShoot\_button->show();
+331     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->addMark\_button->show();
+332     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan->setEnabled(\textcolor{keyword}{true});
+333     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data->setEnabled(\textcolor{keyword}{true});
+334     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo->setEnabled(\textcolor{keyword}{false});
+335 
+336 \}
+\end{DoxyCode}
+\hypertarget{a00015_a14a8662407eb95fe2c478c0cee351de5}{\index{video@{video}!save\-Edit\-Data@{save\-Edit\-Data}}
+\index{save\-Edit\-Data@{save\-Edit\-Data}!video@{video}}
+\subsubsection[{save\-Edit\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Edit\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a14a8662407eb95fe2c478c0cee351de5}
+
+\begin{DoxyCode}
+476                         \{
+477     \textcolor{keywordtype}{bool} ok = false ;
+478     QTime \hyperlink{a00042_a99347d1261cfb39396fdc4965d16f515}{tempo} = \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->timeEdit\_Mission->time();
+479     \textcolor{keywordtype}{int} time = tempo.hour() * 3600 + tempo.minute() * 60 + tempo.second() ;
+480 
+481     \textcolor{keywordflow}{if} ( \hyperlink{a00042_a8c7e45250b1eb6821dd59fb2a9a016d7}{open} == \textcolor{keyword}{false})\{
+482 
+483         \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setAlt(
+      \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->text().toDouble(&ok));
+484         \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setHdg(
+      \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->text().toDouble(&ok));
+485         \hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setTime(time);
+486 
+487     \}
+488 
+489     \textcolor{keywordflow}{else} \{
+490 
+491 
+492         \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setAlt(
+      \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_Alt->text().toDouble(&ok));
+493         \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setHdg(
+      \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->lineEdit\_HDG->text().toDouble(&ok));
+494         \hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen}[\hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->comboBox\_ListWaypoint->currentIndex()]->setTime(time);
+495         \hyperlink{a00015_a8bd377d858dd541faf8108389a13e5ed}{myMission}.\hyperlink{a00009_a4c40423028a4cfdf1bbbea8945cb696b}{saveMission}(\hyperlink{a00042_a5d3a9439b166172c9c871c9a723eac19}{wpListOpen},
+      \hyperlink{a00042_ae55f476d1700ade204b3038b8c37f8ba}{fileOpened});
+496 
+497     \}
+498 
+499 
+500     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->SaveEdit\_button->setEnabled(\textcolor{keyword}{false});
+501 
+502 \}
+\end{DoxyCode}
+\hypertarget{a00015_a816a9f0cf14cf70a29662387914071f5}{\index{video@{video}!save\-Mission@{save\-Mission}}
+\index{save\-Mission@{save\-Mission}!video@{video}}
+\subsubsection[{save\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Mission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_a816a9f0cf14cf70a29662387914071f5}
+
+\begin{DoxyCode}
+235                        \{
+236     QString  fileName = QFileDialog::getSaveFileName( \textcolor{keyword}{this},  \textcolor{stringliteral}{"Save a mission"} , \textcolor{stringliteral}{"
+      C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission"},  \textcolor{stringliteral}{"KML files (*.kml)"}  );
+237     \textcolor{keywordtype}{string} m ;
+238     \textcolor{keywordtype}{string} nameFile;
+239     QString hideFile ;
+240 
+241 
+242     m = fileName.toUtf8().constData();
+243     \textcolor{keywordtype}{size\_t} pos = m.find\_last\_of(\textcolor{stringliteral}{"/"});
+244     \textcolor{keywordflow}{if}(pos != std::string::npos)\{
+245 
+246         nameFile.assign(m.begin() + pos + 1, m.end()-4);
+247     \}
+248       \textcolor{keywordflow}{else}
+249     \{
+250       nameFile = m;
+251   \}
+252     \textcolor{keywordtype}{string} fileNameTemp = \textcolor{stringliteral}{"C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/"} + nameFile +\textcolor{stringliteral}{"
+      .xml"} ;
+253     hideFile =  QString::fromStdString(fileNameTemp);
+254 
+255       \textcolor{keywordflow}{if} ( !fileName.isEmpty() ) \{
+256           \hyperlink{a00042_a02d3f124c170b0126dab54f6e5a18dae}{manager}->saveRoute(fileName);
+257 
+258        \}
+259 
+260     \hyperlink{a00015_a8bd377d858dd541faf8108389a13e5ed}{myMission}.\hyperlink{a00009_a4c40423028a4cfdf1bbbea8945cb696b}{saveMission}(\hyperlink{a00042_afe5800195fe7a91ea1bad152ba9113b5}{wpListSave},hideFile);
+261 
+262     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionSave\_mission->setEnabled(\textcolor{keyword}{false});
+263 
+264 \}
+\end{DoxyCode}
+\hypertarget{a00015_ab8446a0b12406c07562af271392ab19b}{\index{video@{video}!switch\-To\-Map@{switch\-To\-Map}}
+\index{switch\-To\-Map@{switch\-To\-Map}!video@{video}}
+\subsubsection[{switch\-To\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void switch\-To\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00015_ab8446a0b12406c07562af271392ab19b}
+
+\begin{DoxyCode}
+360 \{
+361 
+362     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_plan->show();
+363     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->MarbleWidget\_smallView->hide();
+364     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->tableWidget->hide();
+365     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->snapShoot\_button->hide();
+366     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->addMark\_button->show();
+367     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_plan->setEnabled(\textcolor{keyword}{false});
+368     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionFlight\_data->setEnabled(\textcolor{keyword}{true});
+369     \hyperlink{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{ui}->actionVideo->setEnabled(\textcolor{keyword}{true});
+370 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00015_a8bd377d858dd541faf8108389a13e5ed}{\index{video@{video}!my\-Mission@{my\-Mission}}
+\index{my\-Mission@{my\-Mission}!video@{video}}
+\subsubsection[{my\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mission} my\-Mission\hspace{0.3cm}{\ttfamily [private]}}}\label{a00015_a8bd377d858dd541faf8108389a13e5ed}
+\hypertarget{a00015_a34b772573db9a14b1acb61b24709ae73}{\index{video@{video}!path@{path}}
+\index{path@{path}!video@{video}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String path\hspace{0.3cm}{\ttfamily [private]}}}\label{a00015_a34b772573db9a14b1acb61b24709ae73}
+\hypertarget{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}{\index{video@{video}!ui@{ui}}
+\index{ui@{ui}!video@{video}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::video$\ast$ ui\hspace{0.3cm}{\ttfamily [private]}}}\label{a00015_a4f4e978b71511ee6fcb91ef1a4e3c17c}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00043}{video.\-h}\item 
+\hyperlink{a00042}{video.\-cpp}\end{DoxyCompactItemize}

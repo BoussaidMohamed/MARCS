@@ -1,0 +1,682 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d4/d51/a00017" kind="class" prot="public">
+    <compoundname>Waypoint</compoundname>
+    <includes refid="d6/d2d/a00047" local="yes">Waypoints.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dAltitude</definition>
+        <argsstring></argsstring>
+        <name>m_dAltitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="49" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_iNumber</definition>
+        <argsstring></argsstring>
+        <name>m_iNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="51" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" prot="private" static="no" mutable="no">
+        <type>Action *</type>
+        <definition>Action* m_pAction</definition>
+        <argsstring></argsstring>
+        <name>m_pAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="50" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+        <definition>LatLongCoord* m_pCoordinates</definition>
+        <argsstring></argsstring>
+        <name>m_pCoordinates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="48" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Waypoint</definition>
+        <argsstring>()</argsstring>
+        <name>Waypoint</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="62" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a41f77c8ec61a3dcbc767a65857490ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Waypoint</definition>
+        <argsstring>(int p_iNumber)</argsstring>
+        <name>Waypoint</name>
+        <param>
+          <type>int</type>
+          <declname>p_iNumber</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_iNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="70" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a89d9cbfd30e47222560175a96c52b9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Waypoint</definition>
+        <argsstring>(Waypoint *p_pWaypoint)</argsstring>
+        <name>Waypoint</name>
+        <param>
+          <type><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> *</type>
+          <declname>p_pWaypoint</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pWaypoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint model Waypoint* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="78" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a51fe298375fa476fec251da51e1506c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Waypoint</definition>
+        <argsstring>(LatLongCoord *p_pCoordinates, double p_dAltitude=0.)</argsstring>
+        <name>Waypoint</name>
+        <param>
+          <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+          <declname>p_pCoordinates</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_dAltitude</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pCoordinates</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint coordinates LatLongCoord* </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_dAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint altitude double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="87" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a21095cdf6dcd661854161cb0bb6205f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Waypoint</definition>
+        <argsstring>()</argsstring>
+        <name>~Waypoint</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="95" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1abba463025419dde5992dbae2251d9e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Action *</type>
+        <definition>Action * getAction</definition>
+        <argsstring>()</argsstring>
+        <name>getAction</name>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> action getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="160" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a6f20aa9c433a4f132a1720becc864a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getAltitude</definition>
+        <argsstring>()</argsstring>
+        <name>getAltitude</name>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> altitude getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="152" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a8aaef3ba118d70f729ec23dee71755a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+        <definition>LatLongCoord * getCoordinates</definition>
+        <argsstring>()</argsstring>
+        <name>getCoordinates</name>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> coordinates getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="144" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a3983021e2dfb69abb22ef299fd4fb078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getDistance</definition>
+        <argsstring>(Waypoint *p_pWaypoint)</argsstring>
+        <name>getDistance</name>
+        <param>
+          <type><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> *</type>
+          <declname>p_pWaypoint</declname>
+        </param>
+        <briefdescription>
+<para>Compute distance between 2 waypoints. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pWaypoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second waypoint model Waypoint* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="168" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a26b2bb379b3e56aedd0bd8846ed6aa7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getNumber</definition>
+        <argsstring>()</argsstring>
+        <name>getNumber</name>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> number getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="176" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a81f0758a888d209474d3b7235b5d4d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Waypoint &amp;p_pWaypoint)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> &amp;</type>
+          <declname>p_pWaypoint</declname>
+        </param>
+        <briefdescription>
+<para>Comparaison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pWaypoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second waypoint model <ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref>&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Equality between the 2 models bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="194" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="108" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1ab4199a04816b77f70145835eab31b68a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAction</definition>
+        <argsstring>(Action *p_pAction)</argsstring>
+        <name>setAction</name>
+        <param>
+          <type>Action *</type>
+          <declname>p_pAction</declname>
+        </param>
+        <briefdescription>
+<para>Action setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>associated action Action* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="120" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a113cd241668e0eed0a745c438eb55b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAction</definition>
+        <argsstring>(QString p_pAction)</argsstring>
+        <name>setAction</name>
+        <param>
+          <type>QString</type>
+          <declname>p_pAction</declname>
+        </param>
+        <briefdescription>
+<para>set action by its string </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>associated action string QString </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="128" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1ac967c692f2002391c7210139dae74c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAltitude</definition>
+        <argsstring>(double p_dAltitude)</argsstring>
+        <name>setAltitude</name>
+        <param>
+          <type>double</type>
+          <declname>p_dAltitude</declname>
+        </param>
+        <briefdescription>
+<para>Altitude setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint altitude double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="112" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1adb5609c93db8958dd1c279b69b40c404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setCoordinates</definition>
+        <argsstring>(LatLongCoord *p_pCoordinates, double p_dAltitude=0.)</argsstring>
+        <name>setCoordinates</name>
+        <param>
+          <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+          <declname>p_pCoordinates</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_dAltitude</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+<para>Coordinates setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pCoordinates</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint coordinates LatLongCoord* </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_dAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint altitude double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="104" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1aa3624d2fcca357ce2981bf1ab1685243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setNumber</definition>
+        <argsstring>(int p_iNumber)</argsstring>
+        <name>setNumber</name>
+        <param>
+          <type>int</type>
+          <declname>p_iNumber</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> number setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_iNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="136" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/a00017_1a53f0be2b77075cdad9e551ce42a147b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QDomElement</type>
+        <definition>QDomElement toXML</definition>
+        <argsstring>(QDomDocument p_pDocument)</argsstring>
+        <name>toXML</name>
+        <param>
+          <type>QDomDocument</type>
+          <declname>p_pDocument</declname>
+        </param>
+        <briefdescription>
+<para>Describe a waypoint in XML structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>XML representation of waypoint QDomElement </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="184" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp" bodystart="90" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="175">
+        <label>LatLongCoord</label>
+        <link refid="de/d21/a00006"/>
+      </node>
+      <node id="174">
+        <label>Waypoint</label>
+        <link refid="d4/d51/a00017"/>
+        <childnode refid="175" relation="usage">
+          <edgelabel>m_pCoordinates</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" line="31" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.h" bodystart="30" bodyend="195"/>
+    <listofallmembers>
+      <member refid="d4/d51/a00017_1abba463025419dde5992dbae2251d9e64" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>getAction</name></member>
+      <member refid="d4/d51/a00017_1a6f20aa9c433a4f132a1720becc864a2b" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>getAltitude</name></member>
+      <member refid="d4/d51/a00017_1a8aaef3ba118d70f729ec23dee71755a7" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>getCoordinates</name></member>
+      <member refid="d4/d51/a00017_1a3983021e2dfb69abb22ef299fd4fb078" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>getDistance</name></member>
+      <member refid="d4/d51/a00017_1a26b2bb379b3e56aedd0bd8846ed6aa7b" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>getNumber</name></member>
+      <member refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" prot="private" virt="non-virtual"><scope>Waypoint</scope><name>m_dAltitude</name></member>
+      <member refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" prot="private" virt="non-virtual"><scope>Waypoint</scope><name>m_iNumber</name></member>
+      <member refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" prot="private" virt="non-virtual"><scope>Waypoint</scope><name>m_pAction</name></member>
+      <member refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" prot="private" virt="non-virtual"><scope>Waypoint</scope><name>m_pCoordinates</name></member>
+      <member refid="d4/d51/a00017_1a81f0758a888d209474d3b7235b5d4d64" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>operator==</name></member>
+      <member refid="d4/d51/a00017_1ab4199a04816b77f70145835eab31b68a" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>setAction</name></member>
+      <member refid="d4/d51/a00017_1a113cd241668e0eed0a745c438eb55b7b" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>setAction</name></member>
+      <member refid="d4/d51/a00017_1ac967c692f2002391c7210139dae74c9b" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>setAltitude</name></member>
+      <member refid="d4/d51/a00017_1adb5609c93db8958dd1c279b69b40c404" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>setCoordinates</name></member>
+      <member refid="d4/d51/a00017_1aa3624d2fcca357ce2981bf1ab1685243" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>setNumber</name></member>
+      <member refid="d4/d51/a00017_1a53f0be2b77075cdad9e551ce42a147b1" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>toXML</name></member>
+      <member refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>Waypoint</name></member>
+      <member refid="d4/d51/a00017_1a41f77c8ec61a3dcbc767a65857490ea0" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>Waypoint</name></member>
+      <member refid="d4/d51/a00017_1a89d9cbfd30e47222560175a96c52b9ad" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>Waypoint</name></member>
+      <member refid="d4/d51/a00017_1a51fe298375fa476fec251da51e1506c0" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>Waypoint</name></member>
+      <member refid="d4/d51/a00017_1a21095cdf6dcd661854161cb0bb6205f8" prot="public" virt="non-virtual"><scope>Waypoint</scope><name>~Waypoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

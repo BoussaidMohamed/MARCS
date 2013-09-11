@@ -1,0 +1,1138 @@
+\hypertarget{class_communication_control}{\section{Communication\-Control Class Reference}
+\label{class_communication_control}\index{Communication\-Control@{Communication\-Control}}
+}
+Inheritance diagram for Communication\-Control\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_communication_control}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communication_control_ad542ea19ca17efa73a5f8d3db6963419}{control\-Waypoint} (double x\-Dest, double y\-Dest, double z\-Dest)
+\begin{DoxyCompactList}\small\item\em Control the given waypoint validity. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a1648b1e8ddea90d124c0024b236cb024}{compute\-Polled\-Data} (char $\ast$data, int length)
+\begin{DoxyCompactList}\small\item\em Polled data to be sent to other modules. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_aaddaf7c3e89845a7791e8f0c29805072}{poll\-Data} ()
+\begin{DoxyCompactList}\small\item\em Poll data (timed) \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a1fd9d5564182805412c21a60a1d7c8e6}{autonomous\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Poll data (timed) \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a21637edb8cc39ebaacbdfd41a56d1bf4}{computer\-Aided\-Control\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Poll data (timed) \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a91d026d8686a55061e70d5a1ca1b3f90}{poll\-Data\-Timed\-Out} ()
+\begin{DoxyCompactList}\small\item\em Data poll timedout. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_ad3783a1d1ccac39dfb76c54c1f925ac5}{retry\-Connection} ()
+\begin{DoxyCompactList}\small\item\em Retry connection (timed) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communication_control_a80599eb481b0654c13aed69b80e49110}{send\-Waypoint} (double x, double y, double z, double yaw)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_waypoint}{Waypoint} to send. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a5cef76265bbc899f19b866cf57b7180f}{send\-Move} (double x, double y, double z, double yaw)
+\begin{DoxyCompactList}\small\item\em Relative move to send. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a83da5b9e8dea359d5858119c2b000236}{send\-Go\-To} ()
+\begin{DoxyCompactList}\small\item\em Send go to order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_ae84682b61cb1ad4949dd8cd7e71f8358}{send\-Launch} ()
+\begin{DoxyCompactList}\small\item\em Send launch (define home) order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_af3e4f1c2010d8e9808efc7cd9143eff4}{send\-Land} ()
+\begin{DoxyCompactList}\small\item\em Send land order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a10ee54e956ed547e458169e4ac3dba24}{send\-Home} ()
+\begin{DoxyCompactList}\small\item\em Send come home order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a919607401613290c2074e93e1d619bd6}{send\-Mot\-On} ()
+\begin{DoxyCompactList}\small\item\em Send start engines order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_af64c52e5ad88d77a6f1971e4b16be3fd}{send\-Mot\-Off} ()
+\begin{DoxyCompactList}\small\item\em Send stop engines order. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a41b638705cbb715c63f727c1fdab8353}{poll} (unsigned short data\-To\-Poll)
+\begin{DoxyCompactList}\small\item\em Poll data. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a933344dd393a526ced8a29a26597faa8}{valid\-Waypoint} (double dist, bool valid\-Lat\-Long, bool valid\-Altitude)
+\begin{DoxyCompactList}\small\item\em Define if the waypoint is valid. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a145f786884d57abfa024398c71cc5e9d}{waypoint\-N\-A\-V\-Info} (char p\-\_\-c\-Waypoint\-Number, short p\-\_\-n\-Distance, short p\-\_\-c\-Status)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_waypoint}{Waypoint} navigation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_aa46458d228065fa3da9c6ca1cb7eba6e}{update\-G\-P\-S\-Quality} (int p\-\_\-i\-Satellite)
+\begin{DoxyCompactList}\small\item\em G\-P\-S qualtity. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a43732f15ec914b6ceeabfca82a4da255}{battery\-Level} (double p\-\_\-d\-Value)
+\begin{DoxyCompactList}\small\item\em Battery level. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a587b49581d9b9ea0eee351f48d2fe385}{update\-Status} (short p\-\_\-d\-Value)
+\begin{DoxyCompactList}\small\item\em M\-U\-A\-V internal state. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a130ffeff0d926e1250a2b4da5a7bd8fc}{in\-Flight} (char p\-\_\-c\-Value)
+\begin{DoxyCompactList}\small\item\em Update flight state. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a7d217c6e3227147db5850e8440c95a91}{update\-Heading} (double p\-\_\-p\-Value)
+\begin{DoxyCompactList}\small\item\em Update heading value. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a119483d53d4e17a60c93d329734718b3}{update\-Height} (double p\-\_\-p\-Value)
+\begin{DoxyCompactList}\small\item\em Update height value. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_af76e91ad82632e3698e2dea887cac7be}{display\-Ack} (char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Update acknowledge value. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a16ab12eeb75b3504d8a3d520f18206d2}{geolocation} (double latitude, double longitude, double altitude, double heading)
+\begin{DoxyCompactList}\small\item\em Update M\-U\-A\-V geolocation. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a6e7005e168c6085e8aeb80e859332b8d}{rc\-Data} (short yaw, short pitch, short roll, short thrust, short serial, short G\-P\-S\-Height\-Control, char valid)
+\begin{DoxyCompactList}\small\item\em Update remote control data. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_ab70e1fc176378dd2ffabea7f4f2a1762}{X\-Bee\-Status} (bool p\-\_\-b\-Value)
+\begin{DoxyCompactList}\small\item\em Update X\-Bee connection status. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_aaed9f8ace9b8f80d55fe245b065ae759}{update\-Speed} (double p\-\_\-d\-Speed)
+\begin{DoxyCompactList}\small\item\em Update speed value. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_ac02486c2c7dd921a78a108bc60d843a7}{X\-Bee\-Disconnected} ()
+\begin{DoxyCompactList}\small\item\em X\-Bee physically disconnected. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a852eb0e0e7095e01dd1fba158aae5ec5}{X\-Bee\-Reconnected} ()
+\begin{DoxyCompactList}\small\item\em X\-Bee physically reconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communication_control_a321f1c016de4d9d93695293e0c252687}{start} (Q\-String p\-\_\-s\-Com)
+\begin{DoxyCompactList}\small\item\em Start communication. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a32500cfca501e4836b9c1ed84350d5c6}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop communication. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_communication_control_a6be2f8c60b546565945cf4da6c192eb3}{crc\-\_\-update} (unsigned short crc, unsigned char data)
+\begin{DoxyCompactList}\small\item\em Update crc. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_communication_control_a281d00c02b2292c08464c5af903be47b}{crc16} (void $\ast$data, unsigned short cnt)
+\begin{DoxyCompactList}\small\item\em Compute crc. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_a7690c208374a6cff17076d6c551afb65}{create\-Log} ()
+\begin{DoxyCompactList}\small\item\em Create logger. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_control_ad4ea576e660f4a5ba5cd7b3985f08315}{write\-Log} (bool valid\-Crc)
+\begin{DoxyCompactList}\small\item\em Write logs. \end{DoxyCompactList}\item 
+\hyperlink{class_u_a_v_logger}{U\-A\-V\-Logger} $\ast$ \hyperlink{class_communication_control_a4e67a1c26ccce71563343763f639c30f}{get\-Logger} ()
+\begin{DoxyCompactList}\small\item\em Logger getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_communication_control}{Communication\-Control} $\ast$ \hyperlink{class_communication_control_ac0260a9c06c7d0098c506ef8015f2c6e}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Lone instance getter. \end{DoxyCompactList}\item 
+static void \hyperlink{class_communication_control_a48a6b49ae96e013e412df31cbd39a780}{kill} ()
+\begin{DoxyCompactList}\small\item\em Instance killer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_control_a1fd9d5564182805412c21a60a1d7c8e6}{\index{Communication\-Control@{Communication\-Control}!autonomous\-Mode@{autonomous\-Mode}}
+\index{autonomous\-Mode@{autonomous\-Mode}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{autonomous\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::autonomous\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_a1fd9d5564182805412c21a60a1d7c8e6}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a43732f15ec914b6ceeabfca82a4da255}{\index{Communication\-Control@{Communication\-Control}!battery\-Level@{battery\-Level}}
+\index{battery\-Level@{battery\-Level}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{battery\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::battery\-Level (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a43732f15ec914b6ceeabfca82a4da255}
+
+
+Battery level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Value} & battery voltage double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a1648b1e8ddea90d124c0024b236cb024}{\index{Communication\-Control@{Communication\-Control}!compute\-Polled\-Data@{compute\-Polled\-Data}}
+\index{compute\-Polled\-Data@{compute\-Polled\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{compute\-Polled\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::compute\-Polled\-Data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_a1648b1e8ddea90d124c0024b236cb024}
+
+
+Polled data to be sent to other modules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & polled data char$\ast$ \\
+\hline
+{\em length} & length in char of the polled data int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a21637edb8cc39ebaacbdfd41a56d1bf4}{\index{Communication\-Control@{Communication\-Control}!computer\-Aided\-Control\-Mode@{computer\-Aided\-Control\-Mode}}
+\index{computer\-Aided\-Control\-Mode@{computer\-Aided\-Control\-Mode}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{computer\-Aided\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::computer\-Aided\-Control\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_a21637edb8cc39ebaacbdfd41a56d1bf4}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ad542ea19ca17efa73a5f8d3db6963419}{\index{Communication\-Control@{Communication\-Control}!control\-Waypoint@{control\-Waypoint}}
+\index{control\-Waypoint@{control\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{control\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::control\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x\-Dest, }
+\item[{double}]{y\-Dest, }
+\item[{double}]{z\-Dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_ad542ea19ca17efa73a5f8d3db6963419}
+
+
+Control the given waypoint validity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Dest} & longitude double \\
+\hline
+{\em y\-Dest} & latitude double \\
+\hline
+{\em z\-Dest} & altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a281d00c02b2292c08464c5af903be47b}{\index{Communication\-Control@{Communication\-Control}!crc16@{crc16}}
+\index{crc16@{crc16}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{crc16}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Communication\-Control\-::crc16 (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{unsigned short}]{cnt}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a281d00c02b2292c08464c5af903be47b}
+
+
+Compute crc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a6be2f8c60b546565945cf4da6c192eb3}{\index{Communication\-Control@{Communication\-Control}!crc\-\_\-update@{crc\-\_\-update}}
+\index{crc\-\_\-update@{crc\-\_\-update}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{crc\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Communication\-Control\-::crc\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{crc, }
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a6be2f8c60b546565945cf4da6c192eb3}
+
+
+Update crc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a7690c208374a6cff17076d6c551afb65}{\index{Communication\-Control@{Communication\-Control}!create\-Log@{create\-Log}}
+\index{create\-Log@{create\-Log}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{create\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::create\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a7690c208374a6cff17076d6c551afb65}
+
+
+Create logger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_af76e91ad82632e3698e2dea887cac7be}{\index{Communication\-Control@{Communication\-Control}!display\-Ack@{display\-Ack}}
+\index{display\-Ack@{display\-Ack}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{display\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::display\-Ack (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_af76e91ad82632e3698e2dea887cac7be}
+
+
+Update acknowledge value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & received acknowledge char$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a16ab12eeb75b3504d8a3d520f18206d2}{\index{Communication\-Control@{Communication\-Control}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{double}]{altitude, }
+\item[{double}]{heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a16ab12eeb75b3504d8a3d520f18206d2}
+
+
+Update M\-U\-A\-V geolocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ac0260a9c06c7d0098c506ef8015f2c6e}{\index{Communication\-Control@{Communication\-Control}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Communication\-Control} $\ast$ Communication\-Control\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_communication_control_ac0260a9c06c7d0098c506ef8015f2c6e}
+
+
+Lone instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+lone instance Communication\-Control$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a4e67a1c26ccce71563343763f639c30f}{\index{Communication\-Control@{Communication\-Control}!get\-Logger@{get\-Logger}}
+\index{get\-Logger@{get\-Logger}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{get\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-A\-V\-Logger} $\ast$ Communication\-Control\-::get\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a4e67a1c26ccce71563343763f639c30f}
+
+
+Logger getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+logger U\-A\-V\-Logger$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a130ffeff0d926e1250a2b4da5a7bd8fc}{\index{Communication\-Control@{Communication\-Control}!in\-Flight@{in\-Flight}}
+\index{in\-Flight@{in\-Flight}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{in\-Flight}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::in\-Flight (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a130ffeff0d926e1250a2b4da5a7bd8fc}
+
+
+Update flight state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Value} & flight in progress (engines started) char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a48a6b49ae96e013e412df31cbd39a780}{\index{Communication\-Control@{Communication\-Control}!kill@{kill}}
+\index{kill@{kill}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_communication_control_a48a6b49ae96e013e412df31cbd39a780}
+
+
+Instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a41b638705cbb715c63f727c1fdab8353}{\index{Communication\-Control@{Communication\-Control}!poll@{poll}}
+\index{poll@{poll}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::poll (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{data\-To\-Poll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a41b638705cbb715c63f727c1fdab8353}
+
+
+Poll data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\-To\-Poll} & data to poll unsigned short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_aaddaf7c3e89845a7791e8f0c29805072}{\index{Communication\-Control@{Communication\-Control}!poll\-Data@{poll\-Data}}
+\index{poll\-Data@{poll\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::poll\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_aaddaf7c3e89845a7791e8f0c29805072}
+
+
+Poll data (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a91d026d8686a55061e70d5a1ca1b3f90}{\index{Communication\-Control@{Communication\-Control}!poll\-Data\-Timed\-Out@{poll\-Data\-Timed\-Out}}
+\index{poll\-Data\-Timed\-Out@{poll\-Data\-Timed\-Out}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{poll\-Data\-Timed\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::poll\-Data\-Timed\-Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_a91d026d8686a55061e70d5a1ca1b3f90}
+
+
+Data poll timedout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a6e7005e168c6085e8aeb80e859332b8d}{\index{Communication\-Control@{Communication\-Control}!rc\-Data@{rc\-Data}}
+\index{rc\-Data@{rc\-Data}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{rc\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::rc\-Data (
+\begin{DoxyParamCaption}
+\item[{short}]{yaw, }
+\item[{short}]{pitch, }
+\item[{short}]{roll, }
+\item[{short}]{thrust, }
+\item[{short}]{serial, }
+\item[{short}]{G\-P\-S\-Height\-Control, }
+\item[{char}]{valid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a6e7005e168c6085e8aeb80e859332b8d}
+
+
+Update remote control data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & short \\
+\hline
+{\em pitch} & short \\
+\hline
+{\em roll} & short \\
+\hline
+{\em thrust} & short \\
+\hline
+{\em serial} & short \\
+\hline
+{\em G\-P\-S\-Height\-Control} & short \\
+\hline
+{\em valid} & char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ad3783a1d1ccac39dfb76c54c1f925ac5}{\index{Communication\-Control@{Communication\-Control}!retry\-Connection@{retry\-Connection}}
+\index{retry\-Connection@{retry\-Connection}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{retry\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::retry\-Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_communication_control_ad3783a1d1ccac39dfb76c54c1f925ac5}
+
+
+Retry connection (timed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a83da5b9e8dea359d5858119c2b000236}{\index{Communication\-Control@{Communication\-Control}!send\-Go\-To@{send\-Go\-To}}
+\index{send\-Go\-To@{send\-Go\-To}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Go\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a83da5b9e8dea359d5858119c2b000236}
+
+
+Send go to order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a10ee54e956ed547e458169e4ac3dba24}{\index{Communication\-Control@{Communication\-Control}!send\-Home@{send\-Home}}
+\index{send\-Home@{send\-Home}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Home}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a10ee54e956ed547e458169e4ac3dba24}
+
+
+Send come home order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_af3e4f1c2010d8e9808efc7cd9143eff4}{\index{Communication\-Control@{Communication\-Control}!send\-Land@{send\-Land}}
+\index{send\-Land@{send\-Land}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Land}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Land (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_af3e4f1c2010d8e9808efc7cd9143eff4}
+
+
+Send land order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ae84682b61cb1ad4949dd8cd7e71f8358}{\index{Communication\-Control@{Communication\-Control}!send\-Launch@{send\-Launch}}
+\index{send\-Launch@{send\-Launch}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Launch}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Launch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_ae84682b61cb1ad4949dd8cd7e71f8358}
+
+
+Send launch (define home) order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_af64c52e5ad88d77a6f1971e4b16be3fd}{\index{Communication\-Control@{Communication\-Control}!send\-Mot\-Off@{send\-Mot\-Off}}
+\index{send\-Mot\-Off@{send\-Mot\-Off}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Mot\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Mot\-Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_af64c52e5ad88d77a6f1971e4b16be3fd}
+
+
+Send stop engines order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a919607401613290c2074e93e1d619bd6}{\index{Communication\-Control@{Communication\-Control}!send\-Mot\-On@{send\-Mot\-On}}
+\index{send\-Mot\-On@{send\-Mot\-On}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Mot\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Mot\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a919607401613290c2074e93e1d619bd6}
+
+
+Send start engines order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a5cef76265bbc899f19b866cf57b7180f}{\index{Communication\-Control@{Communication\-Control}!send\-Move@{send\-Move}}
+\index{send\-Move@{send\-Move}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a5cef76265bbc899f19b866cf57b7180f}
+
+
+Relative move to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x axe move in meters double \\
+\hline
+{\em y} & y axe move in meters double \\
+\hline
+{\em z} & z axe move in meters double \\
+\hline
+{\em yaw} & heading value in degrees double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a80599eb481b0654c13aed69b80e49110}{\index{Communication\-Control@{Communication\-Control}!send\-Waypoint@{send\-Waypoint}}
+\index{send\-Waypoint@{send\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{send\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::send\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a80599eb481b0654c13aed69b80e49110}
+
+
+\hyperlink{class_waypoint}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a321f1c016de4d9d93695293e0c252687}{\index{Communication\-Control@{Communication\-Control}!start@{start}}
+\index{start@{start}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::start (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{p\-\_\-s\-Com}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a321f1c016de4d9d93695293e0c252687}
+
+
+Start communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a32500cfca501e4836b9c1ed84350d5c6}{\index{Communication\-Control@{Communication\-Control}!stop@{stop}}
+\index{stop@{stop}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_a32500cfca501e4836b9c1ed84350d5c6}
+
+
+Stop communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_aa46458d228065fa3da9c6ca1cb7eba6e}{\index{Communication\-Control@{Communication\-Control}!update\-G\-P\-S\-Quality@{update\-G\-P\-S\-Quality}}
+\index{update\-G\-P\-S\-Quality@{update\-G\-P\-S\-Quality}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-G\-P\-S\-Quality}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::update\-G\-P\-S\-Quality (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-i\-Satellite}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_aa46458d228065fa3da9c6ca1cb7eba6e}
+
+
+G\-P\-S qualtity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-i\-Satellite} & number of get satellites int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a7d217c6e3227147db5850e8440c95a91}{\index{Communication\-Control@{Communication\-Control}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a7d217c6e3227147db5850e8440c95a91}
+
+
+Update heading value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a119483d53d4e17a60c93d329734718b3}{\index{Communication\-Control@{Communication\-Control}!update\-Height@{update\-Height}}
+\index{update\-Height@{update\-Height}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::update\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a119483d53d4e17a60c93d329734718b3}
+
+
+Update height value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_aaed9f8ace9b8f80d55fe245b065ae759}{\index{Communication\-Control@{Communication\-Control}!update\-Speed@{update\-Speed}}
+\index{update\-Speed@{update\-Speed}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::update\-Speed (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_aaed9f8ace9b8f80d55fe245b065ae759}
+
+
+Update speed value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a587b49581d9b9ea0eee351f48d2fe385}{\index{Communication\-Control@{Communication\-Control}!update\-Status@{update\-Status}}
+\index{update\-Status@{update\-Status}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{update\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::update\-Status (
+\begin{DoxyParamCaption}
+\item[{short}]{p\-\_\-d\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a587b49581d9b9ea0eee351f48d2fe385}
+
+
+M\-U\-A\-V internal state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Value} & M\-U\-A\-V status short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a933344dd393a526ced8a29a26597faa8}{\index{Communication\-Control@{Communication\-Control}!valid\-Waypoint@{valid\-Waypoint}}
+\index{valid\-Waypoint@{valid\-Waypoint}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{valid\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::valid\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{dist, }
+\item[{bool}]{valid\-Lat\-Long, }
+\item[{bool}]{valid\-Altitude}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a933344dd393a526ced8a29a26597faa8}
+
+
+Define if the waypoint is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & distance between the 2 waypoints double \\
+\hline
+{\em valid\-Lat\-Long} & valid coordinates bool \\
+\hline
+{\em valid\-Altitude} & valid altitude bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a145f786884d57abfa024398c71cc5e9d}{\index{Communication\-Control@{Communication\-Control}!waypoint\-N\-A\-V\-Info@{waypoint\-N\-A\-V\-Info}}
+\index{waypoint\-N\-A\-V\-Info@{waypoint\-N\-A\-V\-Info}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{waypoint\-N\-A\-V\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::waypoint\-N\-A\-V\-Info (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Waypoint\-Number, }
+\item[{short}]{p\-\_\-n\-Distance, }
+\item[{short}]{p\-\_\-c\-Status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a145f786884d57abfa024398c71cc5e9d}
+
+
+\hyperlink{class_waypoint}{Waypoint} navigation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Waypoint\-Number} & waypoint number char \\
+\hline
+{\em p\-\_\-n\-Distance} & between M\-U\-A\-V and waypoint short \\
+\hline
+{\em p\-\_\-c\-Status} & navigation status (reached or not) short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ad4ea576e660f4a5ba5cd7b3985f08315}{\index{Communication\-Control@{Communication\-Control}!write\-Log@{write\-Log}}
+\index{write\-Log@{write\-Log}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{write\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::write\-Log (
+\begin{DoxyParamCaption}
+\item[{bool}]{valid\-Crc}
+\end{DoxyParamCaption}
+)}}\label{class_communication_control_ad4ea576e660f4a5ba5cd7b3985f08315}
+
+
+Write logs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valid\-Crc} & valid crc state bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ac02486c2c7dd921a78a108bc60d843a7}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Disconnected@{X\-Bee\-Disconnected}}
+\index{X\-Bee\-Disconnected@{X\-Bee\-Disconnected}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Disconnected}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::\-X\-Bee\-Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_ac02486c2c7dd921a78a108bc60d843a7}
+
+
+X\-Bee physically disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_a852eb0e0e7095e01dd1fba158aae5ec5}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Reconnected@{X\-Bee\-Reconnected}}
+\index{X\-Bee\-Reconnected@{X\-Bee\-Reconnected}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Reconnected}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::\-X\-Bee\-Reconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_a852eb0e0e7095e01dd1fba158aae5ec5}
+
+
+X\-Bee physically reconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_communication_control_ab70e1fc176378dd2ffabea7f4f2a1762}{\index{Communication\-Control@{Communication\-Control}!X\-Bee\-Status@{X\-Bee\-Status}}
+\index{X\-Bee\-Status@{X\-Bee\-Status}!CommunicationControl@{Communication\-Control}}
+\subsubsection[{X\-Bee\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\-Control\-::\-X\-Bee\-Status (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-b\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_communication_control_ab70e1fc176378dd2ffabea7f4f2a1762}
+
+
+Update X\-Bee connection status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-b\-Value} & status bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Communication\-Control.\-h\item 
+Communication\-Control.\-cpp\end{DoxyCompactItemize}

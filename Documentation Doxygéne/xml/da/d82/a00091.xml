@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="da/d82/a00091" kind="struct" prot="public">
+    <compoundname>DIMOUSESTATE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/d82/a00091_1a5caab2f62348491c05eb56720be4ed99" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lX</definition>
+        <argsstring></argsstring>
+        <name>lX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1988" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1988" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d82/a00091_1ae174db734839eb185acdb0cd79b9ba24" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lY</definition>
+        <argsstring></argsstring>
+        <name>lY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1989" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1989" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d82/a00091_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lZ</definition>
+        <argsstring></argsstring>
+        <name>lZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1990" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1990" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d82/a00091_1a0b1f5b4611deddd34dd5a086a8801ad9" prot="public" static="no" mutable="no">
+        <type>BYTE</type>
+        <definition>BYTE rgbButtons[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>rgbButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1991" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1991" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1987" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1987" bodyend="1992"/>
+    <listofallmembers>
+      <member refid="da/d82/a00091_1a5caab2f62348491c05eb56720be4ed99" prot="public" virt="non-virtual"><scope>DIMOUSESTATE</scope><name>lX</name></member>
+      <member refid="da/d82/a00091_1ae174db734839eb185acdb0cd79b9ba24" prot="public" virt="non-virtual"><scope>DIMOUSESTATE</scope><name>lY</name></member>
+      <member refid="da/d82/a00091_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" virt="non-virtual"><scope>DIMOUSESTATE</scope><name>lZ</name></member>
+      <member refid="da/d82/a00091_1a0b1f5b4611deddd34dd5a086a8801ad9" prot="public" virt="non-virtual"><scope>DIMOUSESTATE</scope><name>rgbButtons</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

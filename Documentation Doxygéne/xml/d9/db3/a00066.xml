@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d9/db3/a00066" kind="struct" prot="public">
+    <compoundname>DIDEVCAPS</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/db3/a00066_1a24bf72ec9099cceba7f03c9d6c52ae11" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwAxes</definition>
+        <argsstring></argsstring>
+        <name>dwAxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="535" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a2e6e5494aa77374c8c88d5ad03e86845" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwButtons</definition>
+        <argsstring></argsstring>
+        <name>dwButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="536" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDevType</definition>
+        <argsstring></argsstring>
+        <name>dwDevType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="534" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1af19935051869fa809f335c7bcf947c44" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFFDriverVersion</definition>
+        <argsstring></argsstring>
+        <name>dwFFDriverVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="543" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1adabe1d6e9faba066916125dedcc56678" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFFMinTimeResolution</definition>
+        <argsstring></argsstring>
+        <name>dwFFMinTimeResolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="540" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="540" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a52cdc7a92d7696f1548042a4d6a75f32" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFFSamplePeriod</definition>
+        <argsstring></argsstring>
+        <name>dwFFSamplePeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="539" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a06384701ec03dd0b73a4162acae81b95" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFirmwareRevision</definition>
+        <argsstring></argsstring>
+        <name>dwFirmwareRevision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="541" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFlags</definition>
+        <argsstring></argsstring>
+        <name>dwFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="533" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a27d5a9c4a44b526603157e9c4dbf63a4" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwHardwareRevision</definition>
+        <argsstring></argsstring>
+        <name>dwHardwareRevision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="542" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a658e41df851f944e49ab60307fd5ae13" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwPOVs</definition>
+        <argsstring></argsstring>
+        <name>dwPOVs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="537" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db3/a00066_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="532" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="531" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="531" bodyend="545"/>
+    <listofallmembers>
+      <member refid="d9/db3/a00066_1a24bf72ec9099cceba7f03c9d6c52ae11" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwAxes</name></member>
+      <member refid="d9/db3/a00066_1a2e6e5494aa77374c8c88d5ad03e86845" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwButtons</name></member>
+      <member refid="d9/db3/a00066_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwDevType</name></member>
+      <member refid="d9/db3/a00066_1af19935051869fa809f335c7bcf947c44" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwFFDriverVersion</name></member>
+      <member refid="d9/db3/a00066_1adabe1d6e9faba066916125dedcc56678" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwFFMinTimeResolution</name></member>
+      <member refid="d9/db3/a00066_1a52cdc7a92d7696f1548042a4d6a75f32" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwFFSamplePeriod</name></member>
+      <member refid="d9/db3/a00066_1a06384701ec03dd0b73a4162acae81b95" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwFirmwareRevision</name></member>
+      <member refid="d9/db3/a00066_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwFlags</name></member>
+      <member refid="d9/db3/a00066_1a27d5a9c4a44b526603157e9c4dbf63a4" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwHardwareRevision</name></member>
+      <member refid="d9/db3/a00066_1a658e41df851f944e49ab60307fd5ae13" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwPOVs</name></member>
+      <member refid="d9/db3/a00066_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIDEVCAPS</scope><name>dwSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

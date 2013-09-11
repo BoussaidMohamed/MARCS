@@ -1,0 +1,673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d86/a00012" kind="class" prot="public">
+    <compoundname>RPA</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="d1/dc6/a00037" local="yes">RPA.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="df/d86/a00012_1a90cad5e82f2f5e5e963848285d59a3f9" prot="private" static="yes" mutable="no">
+        <type><ref refid="df/d86/a00012" kindref="compound">RPA</ref> *</type>
+        <definition>RPA * singleton</definition>
+        <argsstring></argsstring>
+        <name>singleton</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="48" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="df/d86/a00012_1a79a2bd07a373f3b0042e6c2dc0e51fc0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dAltitude</definition>
+        <argsstring></argsstring>
+        <name>m_dAltitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="50" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d86/a00012_1a610bb35047703e6c2c0176285cd09312" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dHeading</definition>
+        <argsstring></argsstring>
+        <name>m_dHeading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="51" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d86/a00012_1a56427301298e19fe48b131d43376abce" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dHeight</definition>
+        <argsstring></argsstring>
+        <name>m_dHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="52" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d86/a00012_1a0af541d1b4b8c59e4385c003e377b746" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+        <definition>LatLongCoord* m_pPosition</definition>
+        <argsstring></argsstring>
+        <name>m_pPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="49" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="df/d86/a00012_1abe9ae8f14b57b3de791786e7c0852b1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RPA</definition>
+        <argsstring>()</argsstring>
+        <name>RPA</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="62" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="5" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1a4043fd156cb502931774dc35bc00fdde" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~RPA</definition>
+        <argsstring>()</argsstring>
+        <name>~RPA</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="70" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="df/d86/a00012_1a40277d38c94caf6125045994ba06f18f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/d86/a00012" kindref="compound">RPA</ref> *</type>
+        <definition>RPA * getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> instance getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> pointer RPA* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="81" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>()</argsstring>
+        <name>kill</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> instance killer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="89" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="16" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d86/a00012_1a6f20aa9c433a4f132a1720becc864a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getAltitude</definition>
+        <argsstring>()</argsstring>
+        <name>getAltitude</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> altitude getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>altitude in meters double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="137" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1a8aaef3ba118d70f729ec23dee71755a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+        <definition>LatLongCoord * getCoordinates</definition>
+        <argsstring>()</argsstring>
+        <name>getCoordinates</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> coordinates getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>latitude / longitude coordinates in decimal degrees LatLongCoord* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="129" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1a8c56441519ab3fa6a971bc898106adc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getHeading</definition>
+        <argsstring>()</argsstring>
+        <name>getHeading</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> heading getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>heading in degrees double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="145" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1ae1d662c26106ff9692252346d578e8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> height getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>heading in degrees double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="153" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1ac967c692f2002391c7210139dae74c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAltitude</definition>
+        <argsstring>(double p_dAltitude)</argsstring>
+        <name>setAltitude</name>
+        <param>
+          <type>double</type>
+          <declname>p_dAltitude</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> altitude setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new altitude double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="105" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1ad4a7c4bae5c3e6d868a9441afbc1269a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setCoordinates</definition>
+        <argsstring>(LatLongCoord *p_pPosition)</argsstring>
+        <name>setCoordinates</name>
+        <param>
+          <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+          <declname>p_pPosition</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> coordinates setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new GPS coordinates LatLongCoord* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="97" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1a7d62e844db7219c9230c5a65377ae8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHeading</definition>
+        <argsstring>(double p_dHeading)</argsstring>
+        <name>setHeading</name>
+        <param>
+          <type>double</type>
+          <declname>p_dHeading</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> heading setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dHeading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="113" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d86/a00012_1af5b10f1aa2f28ed0c42d4f47efb693e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHeight</definition>
+        <argsstring>(double p_dHeight)</argsstring>
+        <name>setHeight</name>
+        <param>
+          <type>double</type>
+          <declname>p_dHeight</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="df/d86/a00012" kindref="compound">RPA</ref> height setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dHeading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="121" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="df/d86/a00012_1aefff1faa5888fec11aae0f1039cf2cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void positionChanged</definition>
+        <argsstring>()</argsstring>
+        <name>positionChanged</name>
+        <briefdescription>
+<para>Position changed event signal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="164" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="df/d86/a00012_1a04e801b333f118c8877267b1797cfe24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void geolocation</definition>
+        <argsstring>(double p_fLatitude, double p_fLongitude, double p_fAltitude, double p_fHeading)</argsstring>
+        <name>geolocation</name>
+        <param>
+          <type>double</type>
+          <declname>p_fLatitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_fLongitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_fAltitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_fHeading</declname>
+        </param>
+        <briefdescription>
+<para>geolocation update slot </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_fLatitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_fLongitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_fAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_fHeading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;false&quot; heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="178" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="92" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="slot" id="df/d86/a00012_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateHeading</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateHeading</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>&quot;real&quot; heading update slot </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;real&quot; heading value double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="186" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="slot" id="df/d86/a00012_1a5114b66563f0437e0f1eac070557cb4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateHeight</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateHeight</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Height (from ground) update slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;real&quot; heading value double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="194" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="161">
+        <label>RPA</label>
+        <link refid="df/d86/a00012"/>
+        <childnode refid="162" relation="usage">
+          <edgelabel>m_pPosition</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>singleton</edgelabel>
+        </childnode>
+      </node>
+      <node id="162">
+        <label>LatLongCoord</label>
+        <link refid="de/d21/a00006"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" line="29" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/RPA.h" bodystart="28" bodyend="195"/>
+    <listofallmembers>
+      <member refid="df/d86/a00012_1a04e801b333f118c8877267b1797cfe24" prot="public" virt="non-virtual"><scope>RPA</scope><name>geolocation</name></member>
+      <member refid="df/d86/a00012_1a6f20aa9c433a4f132a1720becc864a2b" prot="public" virt="non-virtual"><scope>RPA</scope><name>getAltitude</name></member>
+      <member refid="df/d86/a00012_1a8aaef3ba118d70f729ec23dee71755a7" prot="public" virt="non-virtual"><scope>RPA</scope><name>getCoordinates</name></member>
+      <member refid="df/d86/a00012_1a8c56441519ab3fa6a971bc898106adc4" prot="public" virt="non-virtual"><scope>RPA</scope><name>getHeading</name></member>
+      <member refid="df/d86/a00012_1ae1d662c26106ff9692252346d578e8fa" prot="public" virt="non-virtual"><scope>RPA</scope><name>getHeight</name></member>
+      <member refid="df/d86/a00012_1a40277d38c94caf6125045994ba06f18f" prot="public" virt="non-virtual"><scope>RPA</scope><name>getInstance</name></member>
+      <member refid="df/d86/a00012_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" virt="non-virtual"><scope>RPA</scope><name>kill</name></member>
+      <member refid="df/d86/a00012_1a79a2bd07a373f3b0042e6c2dc0e51fc0" prot="private" virt="non-virtual"><scope>RPA</scope><name>m_dAltitude</name></member>
+      <member refid="df/d86/a00012_1a610bb35047703e6c2c0176285cd09312" prot="private" virt="non-virtual"><scope>RPA</scope><name>m_dHeading</name></member>
+      <member refid="df/d86/a00012_1a56427301298e19fe48b131d43376abce" prot="private" virt="non-virtual"><scope>RPA</scope><name>m_dHeight</name></member>
+      <member refid="df/d86/a00012_1a0af541d1b4b8c59e4385c003e377b746" prot="private" virt="non-virtual"><scope>RPA</scope><name>m_pPosition</name></member>
+      <member refid="df/d86/a00012_1aefff1faa5888fec11aae0f1039cf2cad" prot="public" virt="non-virtual"><scope>RPA</scope><name>positionChanged</name></member>
+      <member refid="df/d86/a00012_1abe9ae8f14b57b3de791786e7c0852b1a" prot="private" virt="non-virtual"><scope>RPA</scope><name>RPA</name></member>
+      <member refid="df/d86/a00012_1ac967c692f2002391c7210139dae74c9b" prot="public" virt="non-virtual"><scope>RPA</scope><name>setAltitude</name></member>
+      <member refid="df/d86/a00012_1ad4a7c4bae5c3e6d868a9441afbc1269a" prot="public" virt="non-virtual"><scope>RPA</scope><name>setCoordinates</name></member>
+      <member refid="df/d86/a00012_1a7d62e844db7219c9230c5a65377ae8a4" prot="public" virt="non-virtual"><scope>RPA</scope><name>setHeading</name></member>
+      <member refid="df/d86/a00012_1af5b10f1aa2f28ed0c42d4f47efb693e9" prot="public" virt="non-virtual"><scope>RPA</scope><name>setHeight</name></member>
+      <member refid="df/d86/a00012_1a90cad5e82f2f5e5e963848285d59a3f9" prot="private" virt="non-virtual"><scope>RPA</scope><name>singleton</name></member>
+      <member refid="df/d86/a00012_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" virt="non-virtual"><scope>RPA</scope><name>updateHeading</name></member>
+      <member refid="df/d86/a00012_1a5114b66563f0437e0f1eac070557cb4c" prot="public" virt="non-virtual"><scope>RPA</scope><name>updateHeight</name></member>
+      <member refid="df/d86/a00012_1a4043fd156cb502931774dc35bc00fdde" prot="private" virt="non-virtual"><scope>RPA</scope><name>~RPA</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

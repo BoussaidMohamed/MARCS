@@ -1,0 +1,680 @@
+.TH "PeripheralController" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PeripheralController \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'PeripheralController\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Public Member Functions"
+.SS "Static Public Member Functions"
+.SS "Private Member Functions"
+.SS "Private Attributes"
+.SS "Static Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBPeripheralController\fP ()\fC [private]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBPeripheralController\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+6 {
+7     m_pJoystick = new JoystickGrabber();
+8 
+9     m_bMouseMode = true;
+10     m_bWaitRelease = false;
+11     m_bWaitReleaseRight = false;
+12     m_bWaitReleaseMode = false;
+13 
+14     connect(&m_pTimer, SIGNAL(timeout()), m_pJoystick, SLOT(grab()));
+15     connect(m_pJoystick, SIGNAL(dataComputed()), this, SLOT(useController()));
+16     connect(m_pJoystick, SIGNAL(dataComputed()), this, SIGNAL(controllerConnected()));
+17     connect(m_pJoystick, SIGNAL(noJoystick()), this, SIGNAL(noJoystick()));
+18     connect(m_pJoystick, SIGNAL(directInputProblem()), this, SIGNAL(directInputProblem()));
+19     connect(m_pJoystick, SIGNAL(dataFormatProblem()), this, SIGNAL(dataFormatProblem()));
+20     connect(m_pJoystick, SIGNAL(joystickProblem()), this, SIGNAL(joystickProblem()));
+21     connect(m_pJoystick, SIGNAL(deviceEnumProblem()), this, SIGNAL(deviceEnumProblem()));
+22 }
+.fi
+.SS "~\fBPeripheralController\fP ()\fC [private]\fP"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+44 {
+45 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void controllerConnected ()\fC [signal]\fP"
+
+.PP
+Controller connected event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void controllerControlMode ()\fC [signal]\fP"
+
+.PP
+Controller control mode event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void controllerMouseMode ()\fC [signal]\fP"
+
+.PP
+Controller mouse mode event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void controlMode ()\fC [private]\fP"
+
+.PP
+MUAV control management\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+153 {
+154     double x = 0, y = 0, z = 0, yaw = 0, height = 0;
+155     bool bSend = false;
+156 
+157     if (m_pJoystick->leftStickY < -0\&.5)
+158     {
+159         x = 10;
+160         bSend = true;
+161     }
+162     else if (m_pJoystick->leftStickY > 0\&.5)
+163     {
+164         x = -10;
+165         bSend = true;
+166     }
+167 
+168     if (m_pJoystick->leftStickX < -0\&.5)
+169     {
+170         y = 10;
+171         bSend = true;
+172     }
+173     else if (m_pJoystick->leftStickX > 0\&.5)
+174     {
+175         y = -10;
+176         bSend = true;
+177     }
+178 
+179     if (m_pJoystick->rightStickX < -0\&.5)
+180     {
+181         yaw = RPA::getInstance()->getHeading() - 10;
+182         bSend = true;
+183 
+184         if (yaw < 0)
+185         {
+186             yaw = RPA::getInstance()->getHeading() - 10 + 360;
+187         }
+188     }
+189     else if (m_pJoystick->rightStickX > 0\&.5)
+190     {   
+191         yaw = RPA::getInstance()->getHeading() + 10;
+192         bSend = true;
+193 
+194         if (yaw > 360)
+195         {
+196             yaw = RPA::getInstance()->getHeading() + 10 - 360;
+197         }
+198     }
+199 
+200     if (m_pJoystick->topTrigger < -0\&.5)
+201     {
+202         height = RPA::getInstance()->getHeight() + 10;
+203         bSend = true;
+204     }
+205     else if (m_pJoystick->topTrigger > 0\&.5)
+206     {
+207         height = RPA::getInstance()->getHeight() - 10;
+208         bSend = true;
+209     }
+210 
+211     if (bSend)
+212     {
+213         emit move(x, y, height, yaw);
+214     }
+215 }
+.fi
+.SS "void dataFormatProblem ()\fC [signal]\fP"
+
+.PP
+Direct X data format problem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void deviceEnumProblem ()\fC [signal]\fP"
+
+.PP
+Device emumeration problem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void directInputProblem ()\fC [signal]\fP"
+
+.PP
+Direct Input problem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "\fBPeripheralController\fP * getInstance ()\fC [static]\fP"
+
+.PP
+Get the lone instance\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBPeripheralController\fP instance PeripheralController* 
+.RE
+.PP
+
+.PP
+.nf
+25 {
+26     if (singleton == NULL)
+27     {
+28         singleton = new PeripheralController();
+29     }
+30 
+31     return singleton;
+32 }
+.fi
+.SS "bool isMouseMode ()"
+
+.PP
+Mouse mode activated indicator\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+In mouse mode bool 
+.RE
+.PP
+
+.PP
+.nf
+218 {
+219     return m_bMouseMode;
+220 }
+.fi
+.SS "void joystickProblem ()\fC [signal]\fP"
+
+.PP
+Game controller device state get problem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void kill ()\fC [static]\fP"
+
+.PP
+Lone instance killer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+35 {
+36     if (singleton != NULL)
+37     {
+38         delete singleton;
+39         singleton = NULL;
+40     }
+41 }
+.fi
+.SS "void mouseEvent (Qt::MouseButtonbutton, boolwaitRelease)\fC [signal]\fP"
+
+.PP
+Mouse event reagrding actions on gamepad\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbutton\fP emulated pressed button Qt::MouseButton 
+.br
+\fIwaitRelease\fP button already pressed bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void mouseMode ()\fC [private]\fP"
+
+.PP
+Mouse mode management\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+84 {
+85     bool modified = false;
+86     int x, y;
+87     QPoint position = QCursor::pos();
+88 
+89     x = position\&.x();
+90     y = position\&.y();
+91 
+92     if (m_pJoystick->leftStickX < -0\&.7 || m_pJoystick->leftStickX > 0\&.7)
+93     {
+94         modified = true;
+95         x = position\&.x() + (int)(m_pJoystick->leftStickX * 50);
+96     }
+97     else if (m_pJoystick->leftStickX < -0\&.4 || m_pJoystick->leftStickX > 0\&.4)
+98     {
+99         modified = true;
+100         x = position\&.x() + (int)(m_pJoystick->leftStickX * 20);
+101     }
+102     else if (m_pJoystick->leftStickX < -0\&.2 || m_pJoystick->leftStickX > 0\&.2)
+103     {
+104         modified = true;
+105         x = position\&.x() + (int)(m_pJoystick->leftStickX * 10);
+106     }
+107 
+108     if (m_pJoystick->leftStickY < -0\&.7 || m_pJoystick->leftStickY > 0\&.7)
+109     {
+110         modified = true;
+111         y = position\&.y() + (int)(m_pJoystick->leftStickY * 50);
+112     }
+113     else if (m_pJoystick->leftStickY < -0\&.4 || m_pJoystick->leftStickY > 0\&.4)
+114     {
+115         modified = true;
+116         y = position\&.y() + (int)(m_pJoystick->leftStickY * 20);
+117     }
+118     else if (m_pJoystick->leftStickY < -0\&.2 || m_pJoystick->leftStickY > 0\&.2)
+119     {
+120         modified = true;
+121         y = position\&.y() + (int)(m_pJoystick->leftStickY * 10);
+122     }
+123 
+124     if (m_pJoystick->buttons[0] == true && !m_bWaitRelease)
+125     { 
+126         emit mouseEvent(Qt::LeftButton, m_bWaitRelease);
+127         m_bWaitRelease = true;
+128     }
+129     else if (m_pJoystick->buttons[0] == false && m_bWaitRelease == true)
+130     {
+131         emit mouseEvent(Qt::LeftButton, m_bWaitRelease);
+132         m_bWaitRelease = false;
+133     }
+134 
+135     if (m_pJoystick->buttons[1] == true && !m_bWaitReleaseRight)
+136     { 
+137         emit mouseEvent(Qt::RightButton, m_bWaitReleaseRight);
+138         m_bWaitReleaseRight = true;
+139     }
+140     else if (m_pJoystick->buttons[1] == false && m_bWaitReleaseRight == true)
+141     {
+142         emit mouseEvent(Qt::RightButton, m_bWaitReleaseRight);
+143         m_bWaitReleaseRight = false;
+144     }
+145 
+146     if (modified)
+147     {
+148         QCursor::setPos(x, y);
+149     }
+150 }
+.fi
+.SS "void move (doublex, doubley, doublez, doubleyaw)\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP to send\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP in meters double 
+.br
+\fIy\fP in meters double 
+.br
+\fIz\fP altitude double 
+.br
+\fIyaw\fP heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void noJoystick ()\fC [signal]\fP"
+
+.PP
+No joystick event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void startControllerGrab (intp_nTime)"
+
+.PP
+Start grab timer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_nTime\fP interval time in ms for grab int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+48 {
+49     m_pTimer\&.start(p_nTime);
+50 }
+.fi
+.SS "void useController ()\fC [slot]\fP"
+
+.PP
+Controller handle slot (timed by another software controller) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+53 {
+54     if (m_pJoystick->buttons[5] == true && !m_bWaitReleaseMode)
+55     {
+56         m_bWaitReleaseMode = true;
+57         m_bMouseMode = !m_bMouseMode;
+58 
+59         if (m_bMouseMode)
+60         {
+61             emit controllerMouseMode();
+62         }
+63         else
+64         {
+65             emit controllerControlMode();
+66         }
+67     }
+68     else if (m_pJoystick->buttons[5] == false && m_bWaitReleaseMode)
+69     {
+70         m_bWaitReleaseMode = false;
+71     }
+72 
+73     if (m_bMouseMode)
+74     {
+75         mouseMode();
+76     }
+77     else
+78     {
+79         controlMode();
+80     }
+81 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "bool m_bMouseMode\fC [private]\fP"
+
+.SS "bool m_bWaitRelease\fC [private]\fP"
+
+.SS "bool m_bWaitReleaseMode\fC [private]\fP"
+
+.SS "bool m_bWaitReleaseRight\fC [private]\fP"
+
+.SS "\fBJoystickGrabber\fP* m_pJoystick\fC [private]\fP"
+
+.SS "QTimer m_pTimer\fC [private]\fP"
+
+.SS "bool problemDetected\fC [private]\fP"
+
+.SS "\fBPeripheralController\fP * singleton = NULL\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

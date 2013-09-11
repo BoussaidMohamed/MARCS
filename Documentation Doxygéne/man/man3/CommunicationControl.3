@@ -1,0 +1,1360 @@
+.TH "CommunicationControl" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommunicationControl \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'CommunicationControl\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Public Member Functions"
+.SS "Static Public Member Functions"
+.SS "Private Member Functions"
+.SS "Private Attributes"
+.SS "Static Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBCommunicationControl\fP ()\fC [private]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBCommunicationControl\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+6 {
+7     comThread = new ComThread();
+8 
+9     connect(this, SIGNAL(sendLaunch()), comThread, SLOT(sendLaunch()));
+10     connect(this, SIGNAL(sendLand()), comThread, SLOT(sendLand()));
+11     connect(this, SIGNAL(sendHome()), comThread, SLOT(sendHome()));
+12     connect(this, SIGNAL(sendMotOn()), comThread, SLOT(sendMotOn()));
+13     connect(this, SIGNAL(sendMotOff()), comThread, SLOT(sendMotOff()));
+14 
+15     connect(this, SIGNAL(poll(unsigned short)), comThread, SLOT(poll(unsigned short)));
+16     connect(comThread, SIGNAL(dataReceived(char*, int)), this, SLOT(computePolledData(char*, int)));
+17     connect(comThread, SIGNAL(XBeeDisconnected()), this, SIGNAL(XBeeDisconnected()));
+18     connect(comThread, SIGNAL(XBeeReconnected()), this, SIGNAL(XBeeReconnected()));
+19 
+20     connect(&m_pPollTimer, SIGNAL(timeout()), this, SLOT(pollData()));
+21     connect(&m_pPollTimeout, SIGNAL(timeout()), this, SLOT(pollDataTimedOut()));
+22     
+23     connect(comThread, SIGNAL(XBeeDisconnected()), &m_pRetryTimer, SLOT(start()));
+24     connect(&m_pRetryTimer, SIGNAL(timeout()), this, SLOT(retryConnection()));
+25     connect(comThread, SIGNAL(XBeeReconnected()), &m_pRetryTimer, SLOT(stop()));
+26 
+27     connect(this, SIGNAL(sendMove(double, double, double, double)), 
+28         comThread, SLOT(sendMove(double, double, double, double)));
+29     connect(this, SIGNAL(sendWaypoint(double, double, double, double)),
+30         comThread, SLOT(sendWaypoint(double, double, double, double)));
+31 
+32 
+33    longitude = 0;
+34     latitude = 0;
+35     altitude = 0;
+36     m_nLinkTries = 0;
+37 
+38     createLog();
+39     comThread->start();
+40     m_pRetryTimer\&.setInterval(1000);
+41 }
+.fi
+.SS "~\fBCommunicationControl\fP ()\fC [private]\fP"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+53 {
+54     delete log;
+55 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void autonomousMode ()\fC [slot]\fP"
+
+.PP
+Poll data (timed) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+321 {
+322     connect(this, SIGNAL(sendWaypoint(double, double, double, double)), 
+323         comThread, SLOT(sendWaypoint(double, double, double, double)));
+324 
+325     connect(this, SIGNAL(sendGoTo()), comThread, SLOT(sendGoTo()));
+326 }
+.fi
+.SS "void batteryLevel (doublep_dValue)\fC [signal]\fP"
+
+.PP
+Battery level\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dValue\fP battery voltage double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void computePolledData (char *data, intlength)\fC [slot]\fP"
+
+.PP
+Polled data to be sent to other modules\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP polled data char* 
+.br
+\fIlength\fP length in char of the polled data int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+119 {
+120     unsigned char descriptor = 0;
+121     unsigned short sendCrc = 0;
+122     unsigned short checksum = 0;
+123     int index = 0;
+124     char ack[6];
+125 
+126     m_pPollTimeout\&.stop();
+127     m_nLinkTries = 0;
+128     emit XBeeStatus(true);
+129 
+130     *(log->getSystemLoggerStream()) << endl << "Compute polled data" << endl;
+131 
+132     while (index < length)
+133     {
+134         *(log->getSystemLoggerStream()) << "    End of buffer not reached : number of resting char = " << length - index << endl;
+135 
+136         while (!(data[index] == '>'))
+137         {
+138             index++;
+139         }
+140 
+141         if ((data[index + 1] == 'a' && data[index + 3] == 'a' && data[index + 4] == '<') && index < length)
+142         {
+143             if (index <= 395)
+144             {
+145                 *(log->getSystemLoggerStream()) << "Command acknowledge received" << endl;
+146                 memcpy((void*)ack, (void*)&data[index], 5 * sizeof(char));
+147                 ack[5] = '\0';
+148             }
+149 
+150             emit displayAck(ack);
+151         }
+152         else if ((data[index + 1] == '*' && data[index + 2] == '>') && index < length - sizeof(">*>") - 1 - sizeof(short))
+153         {
+154             *(log->getSystemLoggerStream()) << "    New polled data structure found at index " << index << endl;
+155 
+156             descriptor = data[index + sizeof(">*>") - 1 + sizeof(short)];
+157             index += sizeof(">*>") - 1 + sizeof(short) + sizeof(char);
+158 
+159             if (descriptor == STATUS_DESCRIPTOR)
+160             {
+161                 *(log->getSystemLoggerStream()) << "        Status polled data found in buffer" << endl;
+162 
+163                 if (index < (length - sizeof(LL_STATUS) - sizeof(short) + sizeof("<#<") - 1))
+164                 {
+165                     memcpy((void*)&st, &data[index], sizeof(LL_STATUS));
+166 
+167                     index += sizeof(LL_STATUS);
+168                     memcpy((void*)&sendCrc, &data[index], sizeof(short));
+169 
+170                     checksum = crc16(&st, sizeof(LL_STATUS));
+171 
+172                     emit batteryLevel(st\&.battery_voltage_1 / 1000\&.);
+173                     emit updateStatus(st\&.flightMode);
+174                     
+175                     emit inFlight(st\&.flying);
+176                 }
+177                 else
+178                 {
+179                     *(log->getSystemLoggerStream()) << "        ERROR : Incomplete structure" << endl;
+180                 }
+181             }
+182             else if (descriptor == IMU_CALCDATA_DESCRIPTOR)
+183             {
+184                 *(log->getSystemLoggerStream()) << "        IMU polled data found in buffer" << endl;
+185 
+186                 if (index < (length - sizeof(IMU_CALCDATA) - sizeof(short) + sizeof("<#<") - 1))
+187                 {
+188                     memcpy((void*)&imu, &data[index], sizeof(IMU_CALCDATA));
+189 
+190                     index += sizeof(IMU_CALCDATA);
+191                     memcpy((void*)&sendCrc, &data[index], sizeof(short));
+192 
+193                     checksum = crc16(&imu, sizeof(IMU_CALCDATA));
+194                     heading = imu\&.mag_heading / 1000\&.;
+195                     height = imu\&.height / 1000\&.;
+196 
+197                     emit updateHeading(heading);
+198                     emit updateHeight(height);
+199                 }
+200                 else
+201                 {
+202                     *(log->getSystemLoggerStream()) << "        ERROR : Incomplete structure" << endl;
+203                 }
+204             }
+205             else if (descriptor == CURRENT_WAY_DESCRIPTOR)
+206             {
+207                 *(log->getSystemLoggerStream()) << "        Current way polled data found in buffer" << endl;
+208 
+209                 if (index < (length - sizeof(CURRENT_WAY) - sizeof(short) + sizeof("<#<") - 1))
+210                 {
+211                     memcpy((void*)&cw, &data[index], sizeof(CURRENT_WAY));
+212 
+213                     index += sizeof(CURRENT_WAY);
+214                     memcpy((void*)&sendCrc, &data[index], sizeof(short));
+215 
+216                     checksum = crc16(&cw, sizeof(CURRENT_WAY));
+217 
+218                     emit waypointNAVInfo(cw\&.current_wp, cw\&.distance_to_wp / 10\&., cw\&.navigation_status);
+219                 }
+220                 else
+221                 {
+222                     *(log->getSystemLoggerStream()) << "        ERROR : Incomplete structure" << endl;
+223                 }
+224             }
+225             else if (descriptor == GPS_DESCRIPTOR && index < (length - sizeof(GPS_DATA_ADVANCED) - sizeof(short) + sizeof("<#<") - 1))
+226             {
+227                 *(log->getSystemLoggerStream()) << "        Geolocation polled data found in buffer" << endl;
+228 
+229                 if (index < (length - sizeof(GPS_DATA_ADVANCED) - sizeof(short) + sizeof("<#<") - 1))
+230                 {
+231                     memcpy((void*)&gps, &data[index], sizeof(GPS_DATA_ADVANCED));
+232 
+233                     index += sizeof(GPS_DATA_ADVANCED);
+234                     memcpy((void*)&sendCrc, &data[index], sizeof(short));
+235 
+236                     checksum = crc16(&gps, sizeof(GPS_DATA_ADVANCED));
+237 
+238                     longitude = gps\&.longitude / 10000000\&.;
+239                     latitude = gps\&.latitude / 10000000\&.;
+240                     altitude = gps\&.height / 1000\&.;
+241                     double speedX = qAbs(gps\&.speed_x * 0\&.0036);
+242                     double speedY = qAbs(gps\&.speed_y * 0\&.0036);
+243                     m_dSpeed = qSqrt(speedX * speedX + speedY * speedY);
+244 
+245                     if (checksum == sendCrc)
+246                     {
+247                         emit geolocation(latitude, longitude, altitude, heading);
+248                         emit updateSpeed(m_dSpeed);
+249                         emit updateGPSQuality(gps\&.numSV);
+250                     }
+251                 }
+252                 else
+253                 {
+254                     *(log->getSystemLoggerStream()) << "        ERROR : Incomplete structure" << endl;
+255                 }
+256 
+257                 writeLog(checksum == sendCrc);
+258             }
+259             else if (descriptor == RC_DATA_DESCRIPTOR && index < (length - sizeof(RC_DATA) - sizeof(short) + sizeof("<#<") - 1))
+260             {
+261                 *(log->getSystemLoggerStream()) << "        RC polled data found in buffer" << endl;
+262 
+263                 if (index < (length - sizeof(RC_DATA) - sizeof(short) + sizeof("<#<") - 1))
+264                 {
+265                     memcpy((void*)&rc, &data[index], sizeof(RC_DATA));
+266 
+267                     index += sizeof(RC_DATA);
+268                     memcpy((void*)&sendCrc, &data[index], sizeof(short));
+269 
+270                     checksum = crc16(&rc, sizeof(RC_DATA));
+271 
+272                     emit rcData(rc\&.channels_out[3], rc\&.channels_out[0], rc\&.channels_out[1], 
+273                             rc\&.channels_out[2], rc\&.channels_out[4], rc\&.channels_out[5], rc\&.lock);
+274                 }
+275                 else
+276                 {
+277                     *(log->getSystemLoggerStream()) << "        ERROR : Incomplete structure" << endl;
+278                 }
+279             }
+280             else
+281             {
+282                 *(log->getSystemLoggerStream()) << "        Unknown polled data type found in buffer" << endl;
+283             }
+284         }
+285         index += sizeof(short) + sizeof("<#<") - 1;
+286     }
+287 
+288     *(log->getSystemLoggerStream()) << "Polled data sent" << endl;
+289 }
+.fi
+.SS "void computerAidedControlMode ()\fC [slot]\fP"
+
+.PP
+Poll data (timed) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+329 {
+330     disconnect(this, SIGNAL(sendWaypoint(double, double, double, double)), 
+331         comThread, SLOT(sendWaypoint(double, double, double, double)));
+332 
+333     disconnect(this, SIGNAL(sendGoTo()), comThread, SLOT(sendGoTo()));
+334 }
+.fi
+.SS "void controlWaypoint (doublexDest, doubleyDest, doublezDest)\fC [slot]\fP"
+
+.PP
+Control the given waypoint validity\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIxDest\fP longitude double 
+.br
+\fIyDest\fP latitude double 
+.br
+\fIzDest\fP altitude double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+81 {
+82     int raver = 6378137;
+83 
+84     qreal xRad = xDest * M_PI / 180\&.;
+85     qreal yRad = yDest * M_PI / 180\&.;
+86     qreal latRad = latitude * M_PI / 180\&.;
+87     qreal longRad = longitude * M_PI / 180\&.;
+88 
+89     qreal dist = raver * qAcos((qCos(yRad) * qCos(latRad) * qCos(xRad - longRad)) + (qSin(yRad) * qSin(latRad)));
+90 
+91     bool validDistance = dist <= DISTMAX;
+92     bool validAltitude = (zDest > altitude) && (zDest <= altitude + ALTMAX);
+93 
+94     emit validWaypoint(dist, validDistance, validAltitude);
+95 }
+.fi
+.SS "unsigned short crc16 (void *data, unsigned shortcnt)"
+
+.PP
+Compute crc\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+105 {
+106     unsigned short crc = 0xff;
+107     unsigned char *ptr = (unsigned char *)data;
+108     int i;
+109 
+110     for (i = 0; i < cnt; i++)
+111     {
+112         crc = crc_update(crc, *ptr);
+113         ptr++;
+114     }
+115     return crc;
+116 }
+.fi
+.SS "unsigned short crc_update (unsigned shortcrc, unsigned chardata)"
+
+.PP
+Update crc\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+98 {
+99     data ^= (crc & 0xff);
+100     data ^= data << 4;
+101     return ((((unsigned short) data << 8) | ((crc >> 8) & 0xff)) ^ (unsigned char) (data >> 4) ^ ((unsigned short) data << 3));
+102 }
+.fi
+.SS "void createLog ()"
+
+.PP
+Create logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+292 {
+293     log = new UAVLogger();
+294 
+295     *(log->getDataLoggerStream()) << "Date" << "; " << "Latitude (°)" << "; " << "Longitude (°)" 
+296         << "; " << "Altitude (from ground, in m)" << "; " << "Heading (°)" << "; " 
+297         << "Speed (km/h)" << "; " << "Valid crc" << endl;
+298 }
+.fi
+.SS "void displayAck (char *data)\fC [signal]\fP"
+
+.PP
+Update acknowledge value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP received acknowledge char* 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void geolocation (doublelatitude, doublelongitude, doublealtitude, doubleheading)\fC [signal]\fP"
+
+.PP
+Update MUAV geolocation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP longitude double 
+.br
+\fIy\fP latitude double 
+.br
+\fIz\fP altitude double 
+.br
+\fIyaw\fP heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "\fBCommunicationControl\fP * getInstance ()\fC [static]\fP"
+
+.PP
+Lone instance getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+lone instance CommunicationControl* 
+.RE
+.PP
+
+.PP
+.nf
+71 {
+72     if (singleton == NULL)
+73     {
+74         singleton = new CommunicationControl();
+75     }
+76 
+77     return singleton;
+78 }
+.fi
+.SS "\fBUAVLogger\fP * getLogger ()"
+
+.PP
+Logger getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+logger UAVLogger* 
+.RE
+.PP
+
+.PP
+.nf
+309 {
+310     return log;
+311 }
+.fi
+.SS "void inFlight (charp_cValue)\fC [signal]\fP"
+
+.PP
+Update flight state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_cValue\fP flight in progress (engines started) char 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void kill ()\fC [static]\fP"
+
+.PP
+Instance killer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+44 {
+45     if (singleton != NULL)
+46     {
+47         delete singleton;
+48         singleton = NULL;
+49     }
+50 }
+.fi
+.SS "void poll (unsigned shortdataToPoll)\fC [signal]\fP"
+
+.PP
+Poll data\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdataToPoll\fP data to poll unsigned short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void pollData ()\fC [slot]\fP"
+
+.PP
+Poll data (timed) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+315 {
+316     emit poll(CURRENT_WAY_PACKET | GPS_PACKET | STATUS_PACKET | IMU_CALCDATA_PACKET | RC_DATA_PACKET);
+317     m_pPollTimeout\&.start(1000);
+318 }
+.fi
+.SS "void pollDataTimedOut ()\fC [slot]\fP"
+
+.PP
+Data poll timedout\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+337 {
+338     m_nLinkTries ++;
+339 
+340     if (m_nLinkTries > NB_TRIES)
+341     {
+342         m_pPollTimeout\&.stop();
+343         comThread->clearCounters();
+344         emit XBeeStatus(false);
+345     }
+346 }
+.fi
+.SS "void rcData (shortyaw, shortpitch, shortroll, shortthrust, shortserial, shortGPSHeightControl, charvalid)\fC [signal]\fP"
+
+.PP
+Update remote control data\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIyaw\fP short 
+.br
+\fIpitch\fP short 
+.br
+\fIroll\fP short 
+.br
+\fIthrust\fP short 
+.br
+\fIserial\fP short 
+.br
+\fIGPSHeightControl\fP short 
+.br
+\fIvalid\fP char 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void retryConnection ()\fC [slot]\fP"
+
+.PP
+Retry connection (timed) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+349 {
+350     stop();
+351     start(m_sCom);
+352 }
+.fi
+.SS "void sendGoTo ()\fC [signal]\fP"
+
+.PP
+Send go to order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendHome ()\fC [signal]\fP"
+
+.PP
+Send come home order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendLand ()\fC [signal]\fP"
+
+.PP
+Send land order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendLaunch ()\fC [signal]\fP"
+
+.PP
+Send launch (define home) order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendMotOff ()\fC [signal]\fP"
+
+.PP
+Send stop engines order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendMotOn ()\fC [signal]\fP"
+
+.PP
+Send start engines order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendMove (doublex, doubley, doublez, doubleyaw)\fC [signal]\fP"
+
+.PP
+Relative move to send\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP x axe move in meters double 
+.br
+\fIy\fP y axe move in meters double 
+.br
+\fIz\fP z axe move in meters double 
+.br
+\fIyaw\fP heading value in degrees double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendWaypoint (doublex, doubley, doublez, doubleyaw)\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP to send\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP longitude double 
+.br
+\fIy\fP latitude double 
+.br
+\fIz\fP altitude double 
+.br
+\fIyaw\fP heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void start (QStringp_sCom)"
+
+.PP
+Start communication\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+58 {
+59     m_sCom = p_sCom;
+60     comThread->createCom(p_sCom);
+61     m_pPollTimer\&.start(200);
+62 }
+.fi
+.SS "void stop ()"
+
+.PP
+Stop communication\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+65 {
+66     comThread->releaseCom();
+67     m_pPollTimer\&.stop();
+68 }
+.fi
+.SS "void updateGPSQuality (intp_iSatellite)\fC [signal]\fP"
+
+.PP
+GPS qualtity\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_iSatellite\fP number of get satellites int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void updateHeading (doublep_pValue)\fC [signal]\fP"
+
+.PP
+Update heading value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP heading value double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void updateHeight (doublep_pValue)\fC [signal]\fP"
+
+.PP
+Update height value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP heading value double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void updateSpeed (doublep_dSpeed)\fC [signal]\fP"
+
+.PP
+Update speed value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIspeed\fP double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void updateStatus (shortp_dValue)\fC [signal]\fP"
+
+.PP
+MUAV internal state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dValue\fP MUAV status short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void validWaypoint (doubledist, boolvalidLatLong, boolvalidAltitude)\fC [signal]\fP"
+
+.PP
+Define if the waypoint is valid\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdist\fP distance between the 2 waypoints double 
+.br
+\fIvalidLatLong\fP valid coordinates bool 
+.br
+\fIvalidAltitude\fP valid altitude bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void waypointNAVInfo (charp_cWaypointNumber, shortp_nDistance, shortp_cStatus)\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP navigation state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_cWaypointNumber\fP waypoint number char 
+.br
+\fIp_nDistance\fP between MUAV and waypoint short 
+.br
+\fIp_cStatus\fP navigation status (reached or not) short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void writeLog (boolvalidCrc)"
+
+.PP
+Write logs\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalidCrc\fP valid crc state bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+301 {
+302     *(log->getDataLoggerStream()) << QDateTime::currentDateTime()\&.toString() << "; " <<
+303         latitude << "; " << longitude << "; " << altitude << "; " << heading << "; " << 
+304         m_dSpeed << "; " << validCrc << endl;
+305 }
+.fi
+.SS "void XBeeDisconnected ()\fC [signal]\fP"
+
+.PP
+XBee physically disconnected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void XBeeReconnected ()\fC [signal]\fP"
+
+.PP
+XBee physically reconnected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void XBeeStatus (boolp_bValue)\fC [signal]\fP"
+
+.PP
+Update XBee connection status\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_bValue\fP status bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SH "Field Documentation"
+.PP 
+.SS "double altitude\fC [private]\fP"
+
+.SS "\fBComThread\fP* comThread\fC [private]\fP"
+
+.SS "\fBCURRENT_WAY\fP cw\fC [private]\fP"
+
+.SS "\fBGPS_DATA_ADVANCED\fP gps\fC [private]\fP"
+
+.SS "double heading\fC [private]\fP"
+
+.SS "double height\fC [private]\fP"
+
+.SS "\fBIMU_CALCDATA\fP imu\fC [private]\fP"
+
+.SS "double latitude\fC [private]\fP"
+
+.SS "\fBUAVLogger\fP* log\fC [private]\fP"
+
+.SS "double longitude\fC [private]\fP"
+
+.SS "double m_dSpeed\fC [private]\fP"
+
+.SS "int m_nLinkTries\fC [private]\fP"
+
+.SS "QTimer m_pPollTimeout\fC [private]\fP"
+
+.SS "QTimer m_pPollTimer\fC [private]\fP"
+
+.SS "QTimer m_pRetryTimer\fC [private]\fP"
+
+.SS "QString m_sCom\fC [private]\fP"
+
+.SS "\fBRC_DATA\fP rc\fC [private]\fP"
+
+.SS "\fBCommunicationControl\fP * singleton = NULL\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBLL_STATUS\fP st\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

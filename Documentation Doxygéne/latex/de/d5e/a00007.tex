@@ -1,0 +1,437 @@
+\hypertarget{a00007}{\section{Log\-Replay\-Control Class Reference}
+\label{a00007}\index{Log\-Replay\-Control@{Log\-Replay\-Control}}
+}
+
+
+{\ttfamily \#include \char`\"{}Log\-Replay\-Control.\-h\char`\"{}}
+
+Inheritance diagram for Log\-Replay\-Control\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/d5e/a00007}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Static Public Member Functions}
+\subsection*{Private Member Functions}
+\subsection*{Private Attributes}
+\subsection*{Static Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00007_ab0b79423b2b67162e12b82b5458610c6}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!Log\-Replay\-Control@{Log\-Replay\-Control}}
+\index{Log\-Replay\-Control@{Log\-Replay\-Control}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{Log\-Replay\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\-Replay\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_ab0b79423b2b67162e12b82b5458610c6}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00007}{Log\-Replay\-Control} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     \textcolor{comment}{/*m\_pStartPause = new ToggleButton();}
+8 \textcolor{comment}{    m\_pIncSpeed = new QPushButton();}
+9 \textcolor{comment}{    m\_pDecSpeed = new QPushButton();}
+10 \textcolor{comment}{    m\_pStop = new QPushButton();*/}
+11     \hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} = 0;
+12     \hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} = \textcolor{keyword}{false};
+13     connect(&\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}, SIGNAL(timeout()), \textcolor{keyword}{this}, SLOT(\hyperlink{a00007_aa4dbf9e6f1a5549a0444ad2995e8748b}{replay}()));
+14 \}
+\end{DoxyCode}
+\hypertarget{a00007_a9a1182668244140773a52ee54723c8fd}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!$\sim$\-Log\-Replay\-Control@{$\sim$\-Log\-Replay\-Control}}
+\index{$\sim$\-Log\-Replay\-Control@{$\sim$\-Log\-Replay\-Control}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{$\sim$\-Log\-Replay\-Control}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Log\-Replay\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a9a1182668244140773a52ee54723c8fd}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+26 \{
+27 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00007_a9b83f0fc7f06bee951213dd4b22e0e93}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!backward@{backward}}
+\index{backward@{backward}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{backward}]{\setlength{\rightskip}{0pt plus 5cm}void backward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a9b83f0fc7f06bee951213dd4b22e0e93}
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{keywordflow}{if} (\hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} == \textcolor{keyword}{true})
+79     \{
+80         \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() + 50);
+81     \}
+82     \textcolor{keywordflow}{else}
+83     \{
+84         \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() - 50);
+85 
+86         \textcolor{keywordflow}{if} (\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() <= 0)
+87         \{
+88             \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(50);
+89             \hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} = \textcolor{keyword}{true};
+90         \}
+91     \}
+92 \}
+\end{DoxyCode}
+\hypertarget{a00007_a7de2a543986e45b9083c69f6138bf079}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!forward@{forward}}
+\index{forward@{forward}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{forward}]{\setlength{\rightskip}{0pt plus 5cm}void forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a7de2a543986e45b9083c69f6138bf079}
+
+\begin{DoxyCode}
+59 \{
+60     \textcolor{keywordflow}{if} (\hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} == \textcolor{keyword}{false})
+61     \{
+62         \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() + 50);
+63     \}
+64     \textcolor{keywordflow}{else}
+65     \{
+66         \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() - 50);
+67 
+68         \textcolor{keywordflow}{if} (\hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.interval() <= 0)
+69         \{
+70             \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.setInterval(50);
+71             \hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} = \textcolor{keyword}{false};
+72         \}
+73     \}
+74 \}
+\end{DoxyCode}
+\hypertarget{a00007_ac64f2ec114d4ab8dd8ed8dd31f243454}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{double}]{altitude, }
+\item[{double}]{heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00007_ac64f2ec114d4ab8dd8ed8dd31f243454}
+
+
+Update M\-U\-A\-V geolocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00007_adb2b1b18fad4caaafde371f991525f38}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\-Replay\-Control} $\ast$ get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00007_adb2b1b18fad4caaafde371f991525f38}
+
+
+\hyperlink{a00007}{Log\-Replay\-Control} lone instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+lone instance Mission\-Control$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordflow}{if} (\hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton} == NULL)
+32     \{
+33         \hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton} = \textcolor{keyword}{new} \hyperlink{a00007_ab0b79423b2b67162e12b82b5458610c6}{LogReplayControl}();
+34     \}
+35 
+36     \textcolor{keywordflow}{return} \hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton};
+37 \}
+\end{DoxyCode}
+\hypertarget{a00007_aae9d52caad9fb2892deeb25596cfd2ab}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!kill@{kill}}
+\index{kill@{kill}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00007_aae9d52caad9fb2892deeb25596cfd2ab}
+
+
+Instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+17 \{
+18     \textcolor{keywordflow}{if} (\hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton} != NULL)
+19     \{
+20         \textcolor{keyword}{delete} \hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton};
+21         \hyperlink{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{singleton} = NULL;
+22     \}
+23 \}
+\end{DoxyCode}
+\hypertarget{a00007_a2d8621c7c4f4531bee805e91595b6b76}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!open\-Log@{open\-Log}}
+\index{open\-Log@{open\-Log}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{open\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void open\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a2d8621c7c4f4531bee805e91595b6b76}
+
+\begin{DoxyCode}
+135 \{
+136         \textcolor{comment}{//QString name = QFileDialog::getOpenFileName(NULL, ResourceControl::getText("selectLogTitle"),}
+137         \textcolor{comment}{//  "", "Data log files (*.csv)");}
+138     QString name = \textcolor{stringliteral}{"Hola"};
+139 
+140     \textcolor{keywordflow}{if} (name != \textcolor{stringliteral}{""})
+141     \{
+142         QString line;
+143         QStringList lineSplit;
+144 
+145         QFile file(name);
+146 
+147         \textcolor{keywordflow}{if} (file.open(QIODevice::ReadOnly))
+148         \{
+149             QTextStream textStream(&file);
+150             line = textStream.readLine();
+151 
+152             \textcolor{keywordflow}{while} (!textStream.atEnd())
+153             \{
+154                 line = textStream.readLine();
+155                 lineSplit = line.split(\textcolor{stringliteral}{";"});
+156 
+157                 \hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}.push\_back(lineSplit.at(1).toDouble());
+158                 \hyperlink{a00007_aa900c1e4f1eea660e8f52de1e2109bad}{m\_aLongitude}.push\_back(lineSplit.at(2).toDouble());
+159                 \hyperlink{a00007_a9d1929fdd4a8b1a587c97688bc91037b}{m\_aAltitude}.push\_back(lineSplit.at(3).toDouble());
+160                 \hyperlink{a00007_a9eed7e988005e7291b4e9d401c678693}{m\_aHeading}.push\_back(lineSplit.at(4).toDouble());
+161             \}
+162         \}
+163     \}
+164 \}
+\end{DoxyCode}
+\hypertarget{a00007_a7167f5c196fc5e167bfabde1a730e81d}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!pause@{pause}}
+\index{pause@{pause}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a7167f5c196fc5e167bfabde1a730e81d}
+
+\begin{DoxyCode}
+46 \{
+47     \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.stop();
+48 \}
+\end{DoxyCode}
+\hypertarget{a00007_aa4dbf9e6f1a5549a0444ad2995e8748b}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!replay@{replay}}
+\index{replay@{replay}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{replay}]{\setlength{\rightskip}{0pt plus 5cm}void replay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_aa4dbf9e6f1a5549a0444ad2995e8748b}
+
+\begin{DoxyCode}
+95 \{
+96     \textcolor{keywordflow}{if} (\hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} == \textcolor{keyword}{false})
+97     \{
+98         \textcolor{keywordflow}{if} (\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} > \hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}.length())
+99         \{
+100             \hyperlink{a00007_a8c528baf37154d347366083f0f816846}{stop}();
+101         \}
+102         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} < \hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}.length())
+103         \{
+104             emit \hyperlink{a00007_ac64f2ec114d4ab8dd8ed8dd31f243454}{geolocation}(\hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}[\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}], 
+      \hyperlink{a00007_aa900c1e4f1eea660e8f52de1e2109bad}{m\_aLongitude}[m\_iData], \hyperlink{a00007_a9d1929fdd4a8b1a587c97688bc91037b}{m\_aAltitude}[m\_iData], 0);
+105             emit \hyperlink{a00007_aa3c54f0958638486df2b69a9b53c5d7f}{updateHeading}(\hyperlink{a00007_a9eed7e988005e7291b4e9d401c678693}{m\_aHeading}[\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}]);
+106 
+107             \hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}++;
+108         \}
+109         \textcolor{keywordflow}{else}
+110         \{
+111             \hyperlink{a00007_a8c528baf37154d347366083f0f816846}{stop}();
+112         \}
+113     \}
+114     \textcolor{keywordflow}{else}
+115     \{
+116         \textcolor{keywordflow}{if} (\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} < 0)
+117         \{
+118             \hyperlink{a00007_a8c528baf37154d347366083f0f816846}{stop}();
+119         \}
+120         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} < \hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}.length())
+121         \{
+122             emit \hyperlink{a00007_ac64f2ec114d4ab8dd8ed8dd31f243454}{geolocation}(\hyperlink{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{m\_aLatitude}[\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}], 
+      \hyperlink{a00007_aa900c1e4f1eea660e8f52de1e2109bad}{m\_aLongitude}[m\_iData], \hyperlink{a00007_a9d1929fdd4a8b1a587c97688bc91037b}{m\_aAltitude}[m\_iData], 0);
+123             emit \hyperlink{a00007_aa3c54f0958638486df2b69a9b53c5d7f}{updateHeading}(\hyperlink{a00007_a9eed7e988005e7291b4e9d401c678693}{m\_aHeading}[\hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}]);
+124 
+125             \hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData}--;
+126         \}
+127         \textcolor{keywordflow}{else}
+128         \{
+129             \hyperlink{a00007_a8c528baf37154d347366083f0f816846}{stop}();
+130         \}
+131     \}
+132 \}
+\end{DoxyCode}
+\hypertarget{a00007_a60de64d75454385b23995437f1d72669}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!start@{start}}
+\index{start@{start}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a60de64d75454385b23995437f1d72669}
+
+\begin{DoxyCode}
+40 \{
+41     \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.start(200);
+42     \hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}()->\hyperlink{a00001_a8c528baf37154d347366083f0f816846}{stop}();
+43 \}
+\end{DoxyCode}
+\hypertarget{a00007_a8c528baf37154d347366083f0f816846}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!stop@{stop}}
+\index{stop@{stop}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00007_a8c528baf37154d347366083f0f816846}
+
+\begin{DoxyCode}
+51 \{
+52     \hyperlink{a00007_a751177401fcce70c122d30de758b05a0}{m\_pReplayTimer}.stop();
+53 
+54     \hyperlink{a00007_ae4449bc255d96573e420df2efe33e83e}{m\_iData} = 0;
+55     \hyperlink{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{m\_bReverse} = \textcolor{keyword}{false};
+56 \}
+\end{DoxyCode}
+\hypertarget{a00007_aa3c54f0958638486df2b69a9b53c5d7f}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00007_aa3c54f0958638486df2b69a9b53c5d7f}
+
+
+Update heading value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00007_a9d1929fdd4a8b1a587c97688bc91037b}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-a\-Altitude@{m\-\_\-a\-Altitude}}
+\index{m\-\_\-a\-Altitude@{m\-\_\-a\-Altitude}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-a\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$double$>$ m\-\_\-a\-Altitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a9d1929fdd4a8b1a587c97688bc91037b}
+\hypertarget{a00007_a9eed7e988005e7291b4e9d401c678693}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-a\-Heading@{m\-\_\-a\-Heading}}
+\index{m\-\_\-a\-Heading@{m\-\_\-a\-Heading}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-a\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$double$>$ m\-\_\-a\-Heading\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a9eed7e988005e7291b4e9d401c678693}
+\hypertarget{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-a\-Latitude@{m\-\_\-a\-Latitude}}
+\index{m\-\_\-a\-Latitude@{m\-\_\-a\-Latitude}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-a\-Latitude}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$double$>$ m\-\_\-a\-Latitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a684fa381f2a0f0098edcbc7c7b3ea93d}
+\hypertarget{a00007_aa900c1e4f1eea660e8f52de1e2109bad}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-a\-Longitude@{m\-\_\-a\-Longitude}}
+\index{m\-\_\-a\-Longitude@{m\-\_\-a\-Longitude}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-a\-Longitude}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$double$>$ m\-\_\-a\-Longitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_aa900c1e4f1eea660e8f52de1e2109bad}
+\hypertarget{a00007_a9b60d9b0fc5bc08efbad926439d7933c}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-b\-Reverse@{m\-\_\-b\-Reverse}}
+\index{m\-\_\-b\-Reverse@{m\-\_\-b\-Reverse}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-b\-Reverse}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Reverse\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a9b60d9b0fc5bc08efbad926439d7933c}
+\hypertarget{a00007_ae4449bc255d96573e420df2efe33e83e}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-i\-Data@{m\-\_\-i\-Data}}
+\index{m\-\_\-i\-Data@{m\-\_\-i\-Data}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-i\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int m\-\_\-i\-Data\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_ae4449bc255d96573e420df2efe33e83e}
+\hypertarget{a00007_a751177401fcce70c122d30de758b05a0}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!m\-\_\-p\-Replay\-Timer@{m\-\_\-p\-Replay\-Timer}}
+\index{m\-\_\-p\-Replay\-Timer@{m\-\_\-p\-Replay\-Timer}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{m\-\_\-p\-Replay\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Replay\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00007_a751177401fcce70c122d30de758b05a0}
+\hypertarget{a00007_a72df5eacd5c7ea6c052e02000643fd7e}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!singleton@{singleton}}
+\index{singleton@{singleton}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{singleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\-Replay\-Control} $\ast$ singleton = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{a00007_a72df5eacd5c7ea6c052e02000643fd7e}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00026}{Log\-Replay\-Control.\-h}\item 
+\hyperlink{a00025}{Log\-Replay\-Control.\-cpp}\end{DoxyCompactItemize}

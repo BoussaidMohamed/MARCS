@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d9/d2e/a00056" kind="struct" prot="public">
+    <compoundname>DIACTIONFORMATW</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d2e/a00056_1ae15443760fb1e56392d47da22bd9d103" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwActionSize</definition>
+        <argsstring></argsstring>
+        <name>dwActionSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="724" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a92761eecb6910f4a437a95dd14171e93" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwBufferSize</definition>
+        <argsstring></argsstring>
+        <name>dwBufferSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="730" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1ae4dd9dc42f5e54b0d46f4fdd0a8bde8c" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwCRC</definition>
+        <argsstring></argsstring>
+        <name>dwCRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="735" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a6599e7e2ac8527227e1b25a7cf171709" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDataSize</definition>
+        <argsstring></argsstring>
+        <name>dwDataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="725" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="725" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a7f25e1451e47f306ba2f7b4df8a98cb7" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwGenre</definition>
+        <argsstring></argsstring>
+        <name>dwGenre</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="729" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1ab3c72dc33adb40eb012766701fb54b26" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwNumActions</definition>
+        <argsstring></argsstring>
+        <name>dwNumActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="726" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="726" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="723" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="723" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a29b28c447c8479ccca5479fe86ffddc8" prot="public" static="no" mutable="no">
+        <type>FILETIME</type>
+        <definition>FILETIME ftTimeStamp</definition>
+        <argsstring></argsstring>
+        <name>ftTimeStamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="734" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1ac580279a42dedf4f7b6ad1abed891f6e" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidActionMap</definition>
+        <argsstring></argsstring>
+        <name>guidActionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="728" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1af23659cd7790add805fab421d16090c9" prot="public" static="no" mutable="no">
+        <type>OPTIONAL HINSTANCE</type>
+        <definition>OPTIONAL HINSTANCE hInstString</definition>
+        <argsstring></argsstring>
+        <name>hInstString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="733" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1abf71f27dd08ea4a40d16576705b92da5" prot="public" static="no" mutable="no">
+        <type>OPTIONAL LONG</type>
+        <definition>OPTIONAL LONG lAxisMax</definition>
+        <argsstring></argsstring>
+        <name>lAxisMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="732" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1ae03184d3b70774f29a59f1c589f3112e" prot="public" static="no" mutable="no">
+        <type>OPTIONAL LONG</type>
+        <definition>OPTIONAL LONG lAxisMin</definition>
+        <argsstring></argsstring>
+        <name>lAxisMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="731" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a7e669360dc1e8e4c72cc7d10264cf6f2" prot="public" static="no" mutable="no">
+        <type>LPDIACTIONW</type>
+        <definition>LPDIACTIONW rgoAction</definition>
+        <argsstring></argsstring>
+        <name>rgoAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="727" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="727" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d2e/a00056_1a8fdf7c33ab4ccfe5715c06775d080d5b" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR tszActionMap[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszActionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="736" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="736" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="722" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="722" bodyend="737"/>
+    <listofallmembers>
+      <member refid="d9/d2e/a00056_1ae15443760fb1e56392d47da22bd9d103" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwActionSize</name></member>
+      <member refid="d9/d2e/a00056_1a92761eecb6910f4a437a95dd14171e93" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwBufferSize</name></member>
+      <member refid="d9/d2e/a00056_1ae4dd9dc42f5e54b0d46f4fdd0a8bde8c" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwCRC</name></member>
+      <member refid="d9/d2e/a00056_1a6599e7e2ac8527227e1b25a7cf171709" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwDataSize</name></member>
+      <member refid="d9/d2e/a00056_1a7f25e1451e47f306ba2f7b4df8a98cb7" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwGenre</name></member>
+      <member refid="d9/d2e/a00056_1ab3c72dc33adb40eb012766701fb54b26" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwNumActions</name></member>
+      <member refid="d9/d2e/a00056_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>dwSize</name></member>
+      <member refid="d9/d2e/a00056_1a29b28c447c8479ccca5479fe86ffddc8" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>ftTimeStamp</name></member>
+      <member refid="d9/d2e/a00056_1ac580279a42dedf4f7b6ad1abed891f6e" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>guidActionMap</name></member>
+      <member refid="d9/d2e/a00056_1af23659cd7790add805fab421d16090c9" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>hInstString</name></member>
+      <member refid="d9/d2e/a00056_1abf71f27dd08ea4a40d16576705b92da5" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>lAxisMax</name></member>
+      <member refid="d9/d2e/a00056_1ae03184d3b70774f29a59f1c589f3112e" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>lAxisMin</name></member>
+      <member refid="d9/d2e/a00056_1a7e669360dc1e8e4c72cc7d10264cf6f2" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>rgoAction</name></member>
+      <member refid="d9/d2e/a00056_1a8fdf7c33ab4ccfe5715c06775d080d5b" prot="public" virt="non-virtual"><scope>DIACTIONFORMATW</scope><name>tszActionMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

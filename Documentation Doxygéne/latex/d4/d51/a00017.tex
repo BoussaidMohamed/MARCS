@@ -1,0 +1,589 @@
+\hypertarget{a00017}{\section{Waypoint Class Reference}
+\label{a00017}\index{Waypoint@{Waypoint}}
+}
+
+
+{\ttfamily \#include \char`\"{}Waypoints.\-h\char`\"{}}
+
+\subsection*{Public Member Functions}
+\subsection*{Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00017_a229fe7945d9a40d753377e317a4dffef}{\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\subsubsection[{Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_a229fe7945d9a40d753377e317a4dffef}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00017}{Waypoint} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber} = 0;
+6     \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} = \textcolor{keyword}{new} \hyperlink{a00006}{LatLongCoord}();
+7     \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = 0.;
+8     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} = \textcolor{keyword}{new} Action();
+9 \}
+\end{DoxyCode}
+\hypertarget{a00017_a41f77c8ec61a3dcbc767a65857490ea0}{\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\subsubsection[{Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-i\-Number}
+\end{DoxyParamCaption}
+)}}\label{a00017_a41f77c8ec61a3dcbc767a65857490ea0}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-i\-Number} & waypoint number int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00017}{Waypoint} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+12 \{
+13     \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber} = p\_iNumber;
+14     \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} = \textcolor{keyword}{new} \hyperlink{a00006}{LatLongCoord}();
+15     \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = 0.;
+16     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} = \textcolor{keyword}{new} Action();
+17 \}
+\end{DoxyCode}
+\hypertarget{a00017_a89d9cbfd30e47222560175a96c52b9ad}{\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\subsubsection[{Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint} $\ast$}]{p\-\_\-p\-Waypoint}
+\end{DoxyParamCaption}
+)}}\label{a00017_a89d9cbfd30e47222560175a96c52b9ad}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Waypoint} & waypoint model Waypoint$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00017}{Waypoint} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+19                                        :\hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude}(p\_pWaypoint->
+      \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude}), \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber}(p\_pWaypoint->\hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber})
+20 \{
+21     \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} = \textcolor{keyword}{new} \hyperlink{a00006}{LatLongCoord}(p\_pWaypoint->
+      \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates});
+22     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} = \textcolor{keyword}{new} Action(p\_pWaypoint->\hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction});
+23 \}
+\end{DoxyCode}
+\hypertarget{a00017_a51fe298375fa476fec251da51e1506c0}{\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!Waypoint@{Waypoint}}
+\subsubsection[{Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Waypoint} (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Coordinates, }
+\item[{double}]{p\-\_\-d\-Altitude = {\ttfamily 0.}}
+\end{DoxyParamCaption}
+)}}\label{a00017_a51fe298375fa476fec251da51e1506c0}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Coordinates} & waypoint coordinates Lat\-Long\-Coord$\ast$ \\
+\hline
+{\em p\-\_\-d\-Altitude} & waypoint altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00017}{Waypoint} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+26 \{
+27     \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber} = 0;
+28     \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} = p\_pCoordinates;
+29     \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = p\_dAltitude;
+30     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} = \textcolor{keyword}{new} Action();
+31 \}
+\end{DoxyCode}
+\hypertarget{a00017_a21095cdf6dcd661854161cb0bb6205f8}{\index{Waypoint@{Waypoint}!$\sim$\-Waypoint@{$\sim$\-Waypoint}}
+\index{$\sim$\-Waypoint@{$\sim$\-Waypoint}!Waypoint@{Waypoint}}
+\subsubsection[{$\sim$\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Waypoint} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_a21095cdf6dcd661854161cb0bb6205f8}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+34 \{
+35     \textcolor{keyword}{delete} \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates};
+36     \textcolor{keyword}{delete} \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction};
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00017_abba463025419dde5992dbae2251d9e64}{\index{Waypoint@{Waypoint}!get\-Action@{get\-Action}}
+\index{get\-Action@{get\-Action}!Waypoint@{Waypoint}}
+\subsubsection[{get\-Action}]{\setlength{\rightskip}{0pt plus 5cm}Action $\ast$ get\-Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_abba463025419dde5992dbae2251d9e64}
+
+
+\hyperlink{a00017}{Waypoint} action getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{keywordflow}{return} \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction};
+78 \}
+\end{DoxyCode}
+\hypertarget{a00017_a6f20aa9c433a4f132a1720becc864a2b}{\index{Waypoint@{Waypoint}!get\-Altitude@{get\-Altitude}}
+\index{get\-Altitude@{get\-Altitude}!Waypoint@{Waypoint}}
+\subsubsection[{get\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_a6f20aa9c433a4f132a1720becc864a2b}
+
+
+\hyperlink{a00017}{Waypoint} altitude getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+71 \{
+72     \textcolor{keywordflow}{return} \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude};
+73 \}
+\end{DoxyCode}
+\hypertarget{a00017_a8aaef3ba118d70f729ec23dee71755a7}{\index{Waypoint@{Waypoint}!get\-Coordinates@{get\-Coordinates}}
+\index{get\-Coordinates@{get\-Coordinates}!Waypoint@{Waypoint}}
+\subsubsection[{get\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} $\ast$ get\-Coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_a8aaef3ba118d70f729ec23dee71755a7}
+
+
+\hyperlink{a00017}{Waypoint} coordinates getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+66 \{
+67     \textcolor{keywordflow}{return} \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates};
+68 \}
+\end{DoxyCode}
+\hypertarget{a00017_a3983021e2dfb69abb22ef299fd4fb078}{\index{Waypoint@{Waypoint}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!Waypoint@{Waypoint}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Waypoint} $\ast$}]{p\-\_\-p\-Waypoint}
+\end{DoxyParamCaption}
+)}}\label{a00017_a3983021e2dfb69abb22ef299fd4fb078}
+
+
+Compute distance between 2 waypoints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Waypoint} & second waypoint model Waypoint$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordflow}{return} \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates}->\hyperlink{a00006_a972909f70c7e244c9440fee2500c12c7}{getDistance}(p\_pWaypoint->
+      \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates});
+83 \}
+\end{DoxyCode}
+\hypertarget{a00017_a26b2bb379b3e56aedd0bd8846ed6aa7b}{\index{Waypoint@{Waypoint}!get\-Number@{get\-Number}}
+\index{get\-Number@{get\-Number}!Waypoint@{Waypoint}}
+\subsubsection[{get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00017_a26b2bb379b3e56aedd0bd8846ed6aa7b}
+
+
+\hyperlink{a00017}{Waypoint} number getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+86 \{
+87     \textcolor{keywordflow}{return} \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber};
+88 \}
+\end{DoxyCode}
+\hypertarget{a00017_a81f0758a888d209474d3b7235b5d4d64}{\index{Waypoint@{Waypoint}!operator==@{operator==}}
+\index{operator==@{operator==}!Waypoint@{Waypoint}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Waypoint} \&}]{p\-\_\-p\-Waypoint}
+\end{DoxyParamCaption}
+)}}\label{a00017_a81f0758a888d209474d3b7235b5d4d64}
+
+
+Comparaison operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Waypoint} & second waypoint model \hyperlink{a00017}{Waypoint}\& \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Equality between the 2 models bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{keywordtype}{bool} bCoordinates = *this->\hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} == *p\_pWaypoint.
+      \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates};
+111     \textcolor{keywordtype}{bool} bAltitude = this->\hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} == p\_pWaypoint.\hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude};
+112     \textcolor{keywordtype}{bool} bAction = *this->\hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} == *p\_pWaypoint.\hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction};
+113 
+114     \textcolor{keywordflow}{return} bCoordinates && bAltitude && bAction;
+115 \}\end{DoxyCode}
+\hypertarget{a00017_ab4199a04816b77f70145835eab31b68a}{\index{Waypoint@{Waypoint}!set\-Action@{set\-Action}}
+\index{set\-Action@{set\-Action}!Waypoint@{Waypoint}}
+\subsubsection[{set\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Action (
+\begin{DoxyParamCaption}
+\item[{Action $\ast$}]{p\-\_\-p\-Action}
+\end{DoxyParamCaption}
+)}}\label{a00017_ab4199a04816b77f70145835eab31b68a}
+
+
+Action setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Action} & associated action Action$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+51 \{
+52     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction} = p\_pAction;
+53 \}
+\end{DoxyCode}
+\hypertarget{a00017_a113cd241668e0eed0a745c438eb55b7b}{\index{Waypoint@{Waypoint}!set\-Action@{set\-Action}}
+\index{set\-Action@{set\-Action}!Waypoint@{Waypoint}}
+\subsubsection[{set\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Action (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{p\-\_\-p\-Action}
+\end{DoxyParamCaption}
+)}}\label{a00017_a113cd241668e0eed0a745c438eb55b7b}
+
+
+set action by its string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Action} & associated action string Q\-String \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+56 \{
+57     \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction}->setType(p\_pAction);
+58 \}
+\end{DoxyCode}
+\hypertarget{a00017_ac967c692f2002391c7210139dae74c9b}{\index{Waypoint@{Waypoint}!set\-Altitude@{set\-Altitude}}
+\index{set\-Altitude@{set\-Altitude}!Waypoint@{Waypoint}}
+\subsubsection[{set\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Altitude (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Altitude}
+\end{DoxyParamCaption}
+)}}\label{a00017_ac967c692f2002391c7210139dae74c9b}
+
+
+Altitude setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Altitude} & waypoint altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+46 \{
+47     \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = p\_dAltitude;
+48 \}
+\end{DoxyCode}
+\hypertarget{a00017_adb5609c93db8958dd1c279b69b40c404}{\index{Waypoint@{Waypoint}!set\-Coordinates@{set\-Coordinates}}
+\index{set\-Coordinates@{set\-Coordinates}!Waypoint@{Waypoint}}
+\subsubsection[{set\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Coordinates (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Coordinates, }
+\item[{double}]{p\-\_\-d\-Altitude = {\ttfamily 0.}}
+\end{DoxyParamCaption}
+)}}\label{a00017_adb5609c93db8958dd1c279b69b40c404}
+
+
+Coordinates setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Coordinates} & waypoint coordinates Lat\-Long\-Coord$\ast$ \\
+\hline
+{\em p\-\_\-d\-Altitude} & waypoint altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+40 \{
+41     \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates} = p\_pCoordinates;
+42     \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = p\_dAltitude;
+43 \}
+\end{DoxyCode}
+\hypertarget{a00017_aa3624d2fcca357ce2981bf1ab1685243}{\index{Waypoint@{Waypoint}!set\-Number@{set\-Number}}
+\index{set\-Number@{set\-Number}!Waypoint@{Waypoint}}
+\subsubsection[{set\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-i\-Number}
+\end{DoxyParamCaption}
+)}}\label{a00017_aa3624d2fcca357ce2981bf1ab1685243}
+
+
+\hyperlink{a00017}{Waypoint} number setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-i\-Number} & waypoint number int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+61 \{
+62     \hyperlink{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{m\_iNumber} = p\_iNumber;
+63 \}
+\end{DoxyCode}
+\hypertarget{a00017_a53f0be2b77075cdad9e551ce42a147b1}{\index{Waypoint@{Waypoint}!to\-X\-M\-L@{to\-X\-M\-L}}
+\index{to\-X\-M\-L@{to\-X\-M\-L}!Waypoint@{Waypoint}}
+\subsubsection[{to\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Dom\-Element to\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{Q\-Dom\-Document}]{p\-\_\-p\-Document}
+\end{DoxyParamCaption}
+)}}\label{a00017_a53f0be2b77075cdad9e551ce42a147b1}
+
+
+Describe a waypoint in X\-M\-L structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+X\-M\-L representation of waypoint Q\-Dom\-Element 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+91 \{
+92     QDomElement pWaypoint = p\_pDocument.createElement(\textcolor{stringliteral}{"waypoint"});
+93 
+94     QDomElement pLocation = p\_pDocument.createElement(\textcolor{stringliteral}{"location"});
+95     pLocation.setAttribute(\textcolor{stringliteral}{"longitude"}, \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates}->
+      \hyperlink{a00006_aeca2669cb6715159606e844ab6a77bbf}{getLongitude}());
+96     pLocation.setAttribute(\textcolor{stringliteral}{"latitude"}, \hyperlink{a00017_a1900c34e2c85593efdee3d7436c508b3}{m\_pCoordinates}->\hyperlink{a00006_a555fe9c52a678f22d66b31358566cfe9}{getLatitude}());
+97     pLocation.setAttribute(\textcolor{stringliteral}{"altitude"}, \hyperlink{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude});
+98     
+99     QDomElement pAction = p\_pDocument.createElement(\textcolor{stringliteral}{"action"});
+100     pAction.setAttribute(\textcolor{stringliteral}{"name"}, \hyperlink{a00017_a63916589fa097ccd19239948429b55f7}{m\_pAction}->getTypeString());
+101 
+102     pWaypoint.appendChild(pLocation);
+103     pWaypoint.appendChild(pAction);
+104 
+105     \textcolor{keywordflow}{return} pWaypoint;
+106 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}{\index{Waypoint@{Waypoint}!m\-\_\-d\-Altitude@{m\-\_\-d\-Altitude}}
+\index{m\-\_\-d\-Altitude@{m\-\_\-d\-Altitude}!Waypoint@{Waypoint}}
+\subsubsection[{m\-\_\-d\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Altitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00017_a79a2bd07a373f3b0042e6c2dc0e51fc0}
+\hypertarget{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}{\index{Waypoint@{Waypoint}!m\-\_\-i\-Number@{m\-\_\-i\-Number}}
+\index{m\-\_\-i\-Number@{m\-\_\-i\-Number}!Waypoint@{Waypoint}}
+\subsubsection[{m\-\_\-i\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int m\-\_\-i\-Number\hspace{0.3cm}{\ttfamily [private]}}}\label{a00017_a9fb4f1b5ca39cdbcb7142c90feb5f38f}
+\hypertarget{a00017_a63916589fa097ccd19239948429b55f7}{\index{Waypoint@{Waypoint}!m\-\_\-p\-Action@{m\-\_\-p\-Action}}
+\index{m\-\_\-p\-Action@{m\-\_\-p\-Action}!Waypoint@{Waypoint}}
+\subsubsection[{m\-\_\-p\-Action}]{\setlength{\rightskip}{0pt plus 5cm}Action$\ast$ m\-\_\-p\-Action\hspace{0.3cm}{\ttfamily [private]}}}\label{a00017_a63916589fa097ccd19239948429b55f7}
+\hypertarget{a00017_a1900c34e2c85593efdee3d7436c508b3}{\index{Waypoint@{Waypoint}!m\-\_\-p\-Coordinates@{m\-\_\-p\-Coordinates}}
+\index{m\-\_\-p\-Coordinates@{m\-\_\-p\-Coordinates}!Waypoint@{Waypoint}}
+\subsubsection[{m\-\_\-p\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord}$\ast$ m\-\_\-p\-Coordinates\hspace{0.3cm}{\ttfamily [private]}}}\label{a00017_a1900c34e2c85593efdee3d7436c508b3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047}{Waypoints.\-h}\item 
+\hyperlink{a00046}{Waypoints.\-cpp}\end{DoxyCompactItemize}

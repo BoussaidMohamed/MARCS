@@ -1,0 +1,2001 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d8/d84/a00001" kind="class" prot="public">
+    <compoundname>CommunicationControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="dd/da2/a00019" local="yes">CommunicationControl.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d8/d84/a00001_1aee0300254b12ae17cc030042d51787c4" prot="private" static="yes" mutable="no">
+        <type><ref refid="d8/d84/a00001" kindref="compound">CommunicationControl</ref> *</type>
+        <definition>CommunicationControl * singleton</definition>
+        <argsstring></argsstring>
+        <name>singleton</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/d84/a00001_1a2b13d276aee0d9fd646c8fa3647e869b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double altitude</definition>
+        <argsstring></argsstring>
+        <name>altitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="46" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1acb05f93668631d777d1e9a4efa094d6e" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d46/a00002" kindref="compound">ComThread</ref> *</type>
+        <definition>ComThread* comThread</definition>
+        <argsstring></argsstring>
+        <name>comThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a4c9b6ed9e971686ce98aa7170cb1e7f2" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d84/a00052" kindref="compound">CURRENT_WAY</ref></type>
+        <definition>CURRENT_WAY cw</definition>
+        <argsstring></argsstring>
+        <name>cw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="40" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1ac042d2d437c63ce6fe1916aac1c77a9b" prot="private" static="no" mutable="no">
+        <type><ref refid="d3/d32/a00105" kindref="compound">GPS_DATA_ADVANCED</ref></type>
+        <definition>GPS_DATA_ADVANCED gps</definition>
+        <argsstring></argsstring>
+        <name>gps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="39" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1ae024163074f229a06b7ea69b190e466d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="47" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a89f6abd564014faeff7cd20c340a9c7d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="49" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a8e97a0fe2d5d03eb1a9344f36f8b6b85" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d70/a00106" kindref="compound">IMU_CALCDATA</ref></type>
+        <definition>IMU_CALCDATA imu</definition>
+        <argsstring></argsstring>
+        <name>imu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="42" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a76714bdbc5c536fa77dfb14533ff82a9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double latitude</definition>
+        <argsstring></argsstring>
+        <name>latitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="45" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a7577a19e7793780c079fea7dcaefabf0" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/de7/a00014" kindref="compound">UAVLogger</ref> *</type>
+        <definition>UAVLogger* log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1ac155e35fdeebafc89723a51520fb9fe6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double longitude</definition>
+        <argsstring></argsstring>
+        <name>longitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="44" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a9747f19755c0d74510f7a0860c11fbef" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dSpeed</definition>
+        <argsstring></argsstring>
+        <name>m_dSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="48" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1aa5a7389d7467aa0a6f4dbd964b1ce692" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_nLinkTries</definition>
+        <argsstring></argsstring>
+        <name>m_nLinkTries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="50" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a0ed94524da54e5031e44ab80b249b042" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pPollTimeout</definition>
+        <argsstring></argsstring>
+        <name>m_pPollTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="38" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a318ffe406e999f9b02b7e811cfc86479" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pPollTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pPollTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="37" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a3347d5764783c5008947f5addca55346" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pRetryTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pRetryTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="52" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a6ac4068e574f32c7f5aa0c54f3ce3897" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString m_sCom</definition>
+        <argsstring></argsstring>
+        <name>m_sCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="51" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1a53109ee6a15f404839038d5405afaee1" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/dd6/a00108" kindref="compound">RC_DATA</ref></type>
+        <definition>RC_DATA rc</definition>
+        <argsstring></argsstring>
+        <name>rc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="43" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d84/a00001_1aab0e6d0ec390cd7a3094356a2bc5354e" prot="private" static="no" mutable="no">
+        <type><ref refid="df/d98/a00107" kindref="compound">LL_STATUS</ref></type>
+        <definition>LL_STATUS st</definition>
+        <argsstring></argsstring>
+        <name>st</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="41" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/d84/a00001_1a2652efe05f8aef69a18bc33ff242f6c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommunicationControl</definition>
+        <argsstring>()</argsstring>
+        <name>CommunicationControl</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d8/d84/a00001" kindref="compound">CommunicationControl</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="62" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="5" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1a6dd7d247ba3ce1d8ee4418f7a5a1ac68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~CommunicationControl</definition>
+        <argsstring>()</argsstring>
+        <name>~CommunicationControl</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="70" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d8/d84/a00001_1afebd43c1f2afd7ec0eb35f99e50f0964" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d84/a00001" kindref="compound">CommunicationControl</ref> *</type>
+        <definition>CommunicationControl * getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para>Lone instance getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lone instance CommunicationControl* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="81" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="70" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>()</argsstring>
+        <name>kill</name>
+        <briefdescription>
+<para>Instance killer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="89" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d84/a00001_1a914607c9e5f387852e494b819d9da3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short crc16</definition>
+        <argsstring>(void *data, unsigned short cnt)</argsstring>
+        <name>crc16</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>cnt</declname>
+        </param>
+        <briefdescription>
+<para>Compute crc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="121" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="104" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1af69ddfcaef7d003a3ac128b9f33ca1ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short crc_update</definition>
+        <argsstring>(unsigned short crc, unsigned char data)</argsstring>
+        <name>crc_update</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>crc</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Update crc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="113" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="97" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1a7ac28e04cb63f852e31316b6fcd25228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createLog</definition>
+        <argsstring>()</argsstring>
+        <name>createLog</name>
+        <briefdescription>
+<para>Create logger. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="129" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="291" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1ade64afbb6a24f22d48cff310655c8755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/de7/a00014" kindref="compound">UAVLogger</ref> *</type>
+        <definition>UAVLogger * getLogger</definition>
+        <argsstring>()</argsstring>
+        <name>getLogger</name>
+        <briefdescription>
+<para>Logger getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>logger UAVLogger* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="145" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="308" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1ae262c467eec4b15d1f6e487ab6397d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>(QString p_sCom)</argsstring>
+        <name>start</name>
+        <param>
+          <type>QString</type>
+          <declname>p_sCom</declname>
+        </param>
+        <briefdescription>
+<para>Start communication. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="97" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1a8c528baf37154d347366083f0f816846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Stop communication. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="105" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d84/a00001_1a31082f0cdd2aeea81ceb79028bf639af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeLog</definition>
+        <argsstring>(bool validCrc)</argsstring>
+        <name>writeLog</name>
+        <param>
+          <type>bool</type>
+          <declname>validCrc</declname>
+        </param>
+        <briefdescription>
+<para>Write logs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>validCrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valid crc state bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="137" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="300" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="d8/d84/a00001_1aa21c6f5ea480a2b19a771e4a232d1a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void batteryLevel</definition>
+        <argsstring>(double p_dValue)</argsstring>
+        <name>batteryLevel</name>
+        <param>
+          <type>double</type>
+          <declname>p_dValue</declname>
+        </param>
+        <briefdescription>
+<para>Battery level. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>battery voltage double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a49a7c28f7c937cffeef6878cec48b396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayAck</definition>
+        <argsstring>(char *data)</argsstring>
+        <name>displayAck</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Update acknowledge value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>received acknowledge char* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="302" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ac64f2ec114d4ab8dd8ed8dd31f243454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void geolocation</definition>
+        <argsstring>(double latitude, double longitude, double altitude, double heading)</argsstring>
+        <name>geolocation</name>
+        <param>
+          <type>double</type>
+          <declname>latitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>longitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>heading</declname>
+        </param>
+        <briefdescription>
+<para>Update MUAV geolocation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="313" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a5f730a9a91784cbf28d39ab22e4d7fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inFlight</definition>
+        <argsstring>(char p_cValue)</argsstring>
+        <name>inFlight</name>
+        <param>
+          <type>char</type>
+          <declname>p_cValue</declname>
+        </param>
+        <briefdescription>
+<para>Update flight state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_cValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flight in progress (engines started) char </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ad6acfa8418d9902f110bee275fe13a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void poll</definition>
+        <argsstring>(unsigned short dataToPoll)</argsstring>
+        <name>poll</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>dataToPoll</declname>
+        </param>
+        <briefdescription>
+<para>Poll data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataToPoll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data to poll unsigned short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ab51c3c4f71404589fc3a47c213449b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rcData</definition>
+        <argsstring>(short yaw, short pitch, short roll, short thrust, short serial, short GPSHeightControl, char valid)</argsstring>
+        <name>rcData</name>
+        <param>
+          <type>short</type>
+          <declname>yaw</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>roll</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>thrust</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>GPSHeightControl</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+<para>Update remote control data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thrust</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GPSHeightControl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="327" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a26c718e7e95e398ee9368434c23d0622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendGoTo</definition>
+        <argsstring>()</argsstring>
+        <name>sendGoTo</name>
+        <briefdescription>
+<para>Send go to order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ac898a9141e335cfee3e6c9ebb6815411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendHome</definition>
+        <argsstring>()</argsstring>
+        <name>sendHome</name>
+        <briefdescription>
+<para>Send come home order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a2664ee66ff3ea7ed8cdca604bce4be33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendLand</definition>
+        <argsstring>()</argsstring>
+        <name>sendLand</name>
+        <briefdescription>
+<para>Send land order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="194" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a38513372e1af4752cee2e2d046c98821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendLaunch</definition>
+        <argsstring>()</argsstring>
+        <name>sendLaunch</name>
+        <briefdescription>
+<para>Send launch (define home) order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a01a812308fc692593b9abcab86bf003d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMotOff</definition>
+        <argsstring>()</argsstring>
+        <name>sendMotOff</name>
+        <briefdescription>
+<para>Send stop engines order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ad6b67904e4b30f5a26bef654f8a3c4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMotOn</definition>
+        <argsstring>()</argsstring>
+        <name>sendMotOn</name>
+        <briefdescription>
+<para>Send start engines order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1afeec69b8ef45da950fab78df4a1584e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMove</definition>
+        <argsstring>(double x, double y, double z, double yaw)</argsstring>
+        <name>sendMove</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para>Relative move to send. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x axe move in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y axe move in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z axe move in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading value in degrees double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1aabee8811f89359e4de50856e175f98e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendWaypoint</definition>
+        <argsstring>(double x, double y, double z, double yaw)</argsstring>
+        <name>sendWaypoint</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> to send. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a8ca9715733ba2afa7525da56a6e98311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateGPSQuality</definition>
+        <argsstring>(int p_iSatellite)</argsstring>
+        <name>updateGPSQuality</name>
+        <param>
+          <type>int</type>
+          <declname>p_iSatellite</declname>
+        </param>
+        <briefdescription>
+<para>GPS qualtity. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_iSatellite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of get satellites int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="254" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateHeading</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateHeading</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Update heading value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading value double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="286" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a5114b66563f0437e0f1eac070557cb4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateHeight</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateHeight</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Update height value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading value double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="294" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1aeffc2ecc4a5de587172d46c5ff0156db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateSpeed</definition>
+        <argsstring>(double p_dSpeed)</argsstring>
+        <name>updateSpeed</name>
+        <param>
+          <type>double</type>
+          <declname>p_dSpeed</declname>
+        </param>
+        <briefdescription>
+<para>Update speed value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="344" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1ac07c6c4960d3789765cee7bc68a5fe44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateStatus</definition>
+        <argsstring>(short p_dValue)</argsstring>
+        <name>updateStatus</name>
+        <param>
+          <type>short</type>
+          <declname>p_dValue</declname>
+        </param>
+        <briefdescription>
+<para>MUAV internal state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MUAV status short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1acc446efda119ee2dd0b845a4e96b3397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void validWaypoint</definition>
+        <argsstring>(double dist, bool validLatLong, bool validAltitude)</argsstring>
+        <name>validWaypoint</name>
+        <param>
+          <type>double</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>validLatLong</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>validAltitude</declname>
+        </param>
+        <briefdescription>
+<para>Define if the waypoint is valid. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>distance between the 2 waypoints double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>validLatLong</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valid coordinates bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>validAltitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valid altitude bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="236" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a6f8056c0ce5dd09565148cff2aa1d6aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void waypointNAVInfo</definition>
+        <argsstring>(char p_cWaypointNumber, short p_nDistance, short p_cStatus)</argsstring>
+        <name>waypointNAVInfo</name>
+        <param>
+          <type>char</type>
+          <declname>p_cWaypointNumber</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nDistance</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_cStatus</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> navigation state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_cWaypointNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number char </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_nDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>between MUAV and waypoint short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_cStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>navigation status (reached or not) short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a289c96805ddb1941fe330931d73321a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeDisconnected</definition>
+        <argsstring>()</argsstring>
+        <name>XBeeDisconnected</name>
+        <briefdescription>
+<para>XBee physically disconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="352" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1afb47495b5727dae0e7a5bac62098cb1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeReconnected</definition>
+        <argsstring>()</argsstring>
+        <name>XBeeReconnected</name>
+        <briefdescription>
+<para>XBee physically reconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="360" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d8/d84/a00001_1a3a3794256db7e6b52daad0dc178c2db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeStatus</definition>
+        <argsstring>(bool p_bValue)</argsstring>
+        <name>XBeeStatus</name>
+        <param>
+          <type>bool</type>
+          <declname>p_bValue</declname>
+        </param>
+        <briefdescription>
+<para>Update XBee connection status. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_bValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>status bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="336" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="d8/d84/a00001_1aaaf1f78d12176382ee56a92912b1cc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void autonomousMode</definition>
+        <argsstring>()</argsstring>
+        <name>autonomousMode</name>
+        <briefdescription>
+<para>Poll data (timed) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="398" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="320" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1ac21f894815c1cbdbf31d5bfe7d69a0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void computePolledData</definition>
+        <argsstring>(char *data, int length)</argsstring>
+        <name>computePolledData</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Polled data to be sent to other modules. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>polled data char* </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length in char of the polled data int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="382" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="118" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1a57866bb7255c471cd9c4cfdf7c88681d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void computerAidedControlMode</definition>
+        <argsstring>()</argsstring>
+        <name>computerAidedControlMode</name>
+        <briefdescription>
+<para>Poll data (timed) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="406" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="328" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1a4c881076a61ae41ab4b5e0a615b442b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controlWaypoint</definition>
+        <argsstring>(double xDest, double yDest, double zDest)</argsstring>
+        <name>controlWaypoint</name>
+        <param>
+          <type>double</type>
+          <declname>xDest</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yDest</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zDest</declname>
+        </param>
+        <briefdescription>
+<para>Control the given waypoint validity. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="373" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="80" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1ac02d771e0ef073ed89aeaca4ed961a05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pollData</definition>
+        <argsstring>()</argsstring>
+        <name>pollData</name>
+        <briefdescription>
+<para>Poll data (timed) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="390" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="314" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1a417a5d7262b4ed5f466af6ff7878b09d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pollDataTimedOut</definition>
+        <argsstring>()</argsstring>
+        <name>pollDataTimedOut</name>
+        <briefdescription>
+<para>Data poll timedout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="414" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="336" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="slot" id="d8/d84/a00001_1a7162886e6b7f34f937eefcdfdcf9a052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void retryConnection</definition>
+        <argsstring>()</argsstring>
+        <name>retryConnection</name>
+        <briefdescription>
+<para>Retry connection (timed) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="422" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.cpp" bodystart="348" bodyend="352"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>LL_STATUS</label>
+        <link refid="df/d98/a00107"/>
+      </node>
+      <node id="6">
+        <label>CURRENT_WAY</label>
+        <link refid="d1/d84/a00052"/>
+      </node>
+      <node id="5">
+        <label>GPS_DATA_ADVANCED</label>
+        <link refid="d3/d32/a00105"/>
+      </node>
+      <node id="2">
+        <label>UAVLogger</label>
+        <link refid="d2/de7/a00014"/>
+      </node>
+      <node id="1">
+        <label>CommunicationControl</label>
+        <link refid="d8/d84/a00001"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>log</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>singleton</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>rc</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>st</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gps</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>cw</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>imu</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>comThread</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RC_DATA</label>
+        <link refid="d1/dd6/a00108"/>
+      </node>
+      <node id="8">
+        <label>ComThread</label>
+        <link refid="d7/d46/a00002"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>wp</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IMU_CALCDATA</label>
+        <link refid="d7/d70/a00106"/>
+      </node>
+      <node id="9">
+        <label>WAYPOINT</label>
+        <link refid="dd/d42/a00109"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" line="15" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/CommunicationControl.h" bodystart="14" bodyend="423"/>
+    <listofallmembers>
+      <member refid="d8/d84/a00001_1a2b13d276aee0d9fd646c8fa3647e869b" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>altitude</name></member>
+      <member refid="d8/d84/a00001_1aaaf1f78d12176382ee56a92912b1cc53" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>autonomousMode</name></member>
+      <member refid="d8/d84/a00001_1aa21c6f5ea480a2b19a771e4a232d1a4b" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>batteryLevel</name></member>
+      <member refid="d8/d84/a00001_1a2652efe05f8aef69a18bc33ff242f6c4" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>CommunicationControl</name></member>
+      <member refid="d8/d84/a00001_1ac21f894815c1cbdbf31d5bfe7d69a0af" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>computePolledData</name></member>
+      <member refid="d8/d84/a00001_1a57866bb7255c471cd9c4cfdf7c88681d" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>computerAidedControlMode</name></member>
+      <member refid="d8/d84/a00001_1acb05f93668631d777d1e9a4efa094d6e" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>comThread</name></member>
+      <member refid="d8/d84/a00001_1a4c881076a61ae41ab4b5e0a615b442b6" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>controlWaypoint</name></member>
+      <member refid="d8/d84/a00001_1a914607c9e5f387852e494b819d9da3dd" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>crc16</name></member>
+      <member refid="d8/d84/a00001_1af69ddfcaef7d003a3ac128b9f33ca1ba" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>crc_update</name></member>
+      <member refid="d8/d84/a00001_1a7ac28e04cb63f852e31316b6fcd25228" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>createLog</name></member>
+      <member refid="d8/d84/a00001_1a4c9b6ed9e971686ce98aa7170cb1e7f2" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>cw</name></member>
+      <member refid="d8/d84/a00001_1a49a7c28f7c937cffeef6878cec48b396" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>displayAck</name></member>
+      <member refid="d8/d84/a00001_1ac64f2ec114d4ab8dd8ed8dd31f243454" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>geolocation</name></member>
+      <member refid="d8/d84/a00001_1afebd43c1f2afd7ec0eb35f99e50f0964" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>getInstance</name></member>
+      <member refid="d8/d84/a00001_1ade64afbb6a24f22d48cff310655c8755" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>getLogger</name></member>
+      <member refid="d8/d84/a00001_1ac042d2d437c63ce6fe1916aac1c77a9b" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>gps</name></member>
+      <member refid="d8/d84/a00001_1ae024163074f229a06b7ea69b190e466d" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>heading</name></member>
+      <member refid="d8/d84/a00001_1a89f6abd564014faeff7cd20c340a9c7d" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>height</name></member>
+      <member refid="d8/d84/a00001_1a8e97a0fe2d5d03eb1a9344f36f8b6b85" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>imu</name></member>
+      <member refid="d8/d84/a00001_1a5f730a9a91784cbf28d39ab22e4d7fec" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>inFlight</name></member>
+      <member refid="d8/d84/a00001_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>kill</name></member>
+      <member refid="d8/d84/a00001_1a76714bdbc5c536fa77dfb14533ff82a9" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>latitude</name></member>
+      <member refid="d8/d84/a00001_1a7577a19e7793780c079fea7dcaefabf0" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>log</name></member>
+      <member refid="d8/d84/a00001_1ac155e35fdeebafc89723a51520fb9fe6" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>longitude</name></member>
+      <member refid="d8/d84/a00001_1a9747f19755c0d74510f7a0860c11fbef" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_dSpeed</name></member>
+      <member refid="d8/d84/a00001_1aa5a7389d7467aa0a6f4dbd964b1ce692" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_nLinkTries</name></member>
+      <member refid="d8/d84/a00001_1a0ed94524da54e5031e44ab80b249b042" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_pPollTimeout</name></member>
+      <member refid="d8/d84/a00001_1a318ffe406e999f9b02b7e811cfc86479" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_pPollTimer</name></member>
+      <member refid="d8/d84/a00001_1a3347d5764783c5008947f5addca55346" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_pRetryTimer</name></member>
+      <member refid="d8/d84/a00001_1a6ac4068e574f32c7f5aa0c54f3ce3897" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>m_sCom</name></member>
+      <member refid="d8/d84/a00001_1ad6acfa8418d9902f110bee275fe13a57" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>poll</name></member>
+      <member refid="d8/d84/a00001_1ac02d771e0ef073ed89aeaca4ed961a05" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>pollData</name></member>
+      <member refid="d8/d84/a00001_1a417a5d7262b4ed5f466af6ff7878b09d" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>pollDataTimedOut</name></member>
+      <member refid="d8/d84/a00001_1a53109ee6a15f404839038d5405afaee1" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>rc</name></member>
+      <member refid="d8/d84/a00001_1ab51c3c4f71404589fc3a47c213449b1e" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>rcData</name></member>
+      <member refid="d8/d84/a00001_1a7162886e6b7f34f937eefcdfdcf9a052" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>retryConnection</name></member>
+      <member refid="d8/d84/a00001_1a26c718e7e95e398ee9368434c23d0622" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendGoTo</name></member>
+      <member refid="d8/d84/a00001_1ac898a9141e335cfee3e6c9ebb6815411" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendHome</name></member>
+      <member refid="d8/d84/a00001_1a2664ee66ff3ea7ed8cdca604bce4be33" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendLand</name></member>
+      <member refid="d8/d84/a00001_1a38513372e1af4752cee2e2d046c98821" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendLaunch</name></member>
+      <member refid="d8/d84/a00001_1a01a812308fc692593b9abcab86bf003d" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendMotOff</name></member>
+      <member refid="d8/d84/a00001_1ad6b67904e4b30f5a26bef654f8a3c4a6" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendMotOn</name></member>
+      <member refid="d8/d84/a00001_1afeec69b8ef45da950fab78df4a1584e3" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendMove</name></member>
+      <member refid="d8/d84/a00001_1aabee8811f89359e4de50856e175f98e4" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>sendWaypoint</name></member>
+      <member refid="d8/d84/a00001_1aee0300254b12ae17cc030042d51787c4" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>singleton</name></member>
+      <member refid="d8/d84/a00001_1aab0e6d0ec390cd7a3094356a2bc5354e" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>st</name></member>
+      <member refid="d8/d84/a00001_1ae262c467eec4b15d1f6e487ab6397d68" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>start</name></member>
+      <member refid="d8/d84/a00001_1a8c528baf37154d347366083f0f816846" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>stop</name></member>
+      <member refid="d8/d84/a00001_1a8ca9715733ba2afa7525da56a6e98311" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>updateGPSQuality</name></member>
+      <member refid="d8/d84/a00001_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>updateHeading</name></member>
+      <member refid="d8/d84/a00001_1a5114b66563f0437e0f1eac070557cb4c" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>updateHeight</name></member>
+      <member refid="d8/d84/a00001_1aeffc2ecc4a5de587172d46c5ff0156db" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>updateSpeed</name></member>
+      <member refid="d8/d84/a00001_1ac07c6c4960d3789765cee7bc68a5fe44" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>updateStatus</name></member>
+      <member refid="d8/d84/a00001_1acc446efda119ee2dd0b845a4e96b3397" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>validWaypoint</name></member>
+      <member refid="d8/d84/a00001_1a6f8056c0ce5dd09565148cff2aa1d6aa" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>waypointNAVInfo</name></member>
+      <member refid="d8/d84/a00001_1a31082f0cdd2aeea81ceb79028bf639af" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>writeLog</name></member>
+      <member refid="d8/d84/a00001_1a289c96805ddb1941fe330931d73321a0" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>XBeeDisconnected</name></member>
+      <member refid="d8/d84/a00001_1afb47495b5727dae0e7a5bac62098cb1e" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>XBeeReconnected</name></member>
+      <member refid="d8/d84/a00001_1a3a3794256db7e6b52daad0dc178c2db9" prot="public" virt="non-virtual"><scope>CommunicationControl</scope><name>XBeeStatus</name></member>
+      <member refid="d8/d84/a00001_1a6dd7d247ba3ce1d8ee4418f7a5a1ac68" prot="private" virt="non-virtual"><scope>CommunicationControl</scope><name>~CommunicationControl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,262 @@
+.TH "LatLongCoord" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LatLongCoord \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'LatLongCoord\&.h'\fP
+.SS "Public Member Functions"
+.SS "Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBLatLongCoord\fP ()"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLatLongCoord\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+4 {
+5     m_dLatitude = std::numeric_limits<double>::infinity();
+6     m_dLongitude = std::numeric_limits<double>::infinity();
+7 }
+.fi
+.SS "\fBLatLongCoord\fP (\fBLatLongCoord\fP *p_pCoordinates)"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pCoordinates\fP latitude / longitude coordinates LatLongCoord* 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLatLongCoord\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+10 {
+11     m_dLatitude = p_pCoordinates->m_dLatitude;
+12     m_dLongitude = p_pCoordinates->m_dLongitude;
+13 }
+.fi
+.SS "\fBLatLongCoord\fP (doublep_dLatitude, doublep_dLongitude)"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dLatitude\fP latitude in decimal degrees double 
+.br
+\fIp_dLongitude\fP longitude in decimal degrees double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLatLongCoord\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+16 {
+17     m_dLatitude = p_dLatitude;
+18     m_dLongitude = p_dLongitude;
+19 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "double getDistance (\fBLatLongCoord\fP *p_pCoordinate)"
+
+.PP
+Compute distance between 2 latitude / longitude coordinates\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pCoordinate\fP second coordinates model LatLongCoord* 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+38 {
+39     int raver = 6378137;
+40 
+41     double longRad = p_pCoordinates->getLongitude() * M_PI / 180\&.;
+42     double latRad = p_pCoordinates->getLatitude() * M_PI / 180\&.;
+43     double destLatRad = m_dLatitude * M_PI / 180\&.;
+44     double destLongRad = m_dLongitude * M_PI / 180\&.;
+45 
+46     return raver * qAcos((qCos(latRad) * qCos(destLatRad) * qCos(longRad - destLongRad)) + (qSin(latRad) * qSin(destLatRad)));
+47 }
+.fi
+.SS "double getLatitude ()"
+
+.PP
+Latitude getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Latitude in decimal degrees double 
+.RE
+.PP
+
+.PP
+.nf
+28 {
+29     return m_dLatitude;
+30 }
+.fi
+.SS "double getLongitude ()"
+
+.PP
+Longitude getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Latitude in decimal degrees double 
+.RE
+.PP
+
+.PP
+.nf
+33 {
+34     return m_dLongitude;
+35 }
+.fi
+.SS "bool operator== (const \fBLatLongCoord\fP &p_pLatLong)"
+
+.PP
+Comparaison operator\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pLatLong\fP second coordinates model \fBLatLongCoord\fP& 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Equality between the 2 models bool 
+.RE
+.PP
+
+.PP
+.nf
+50 {
+51     bool bLatitude = this->m_dLatitude == p_pLatLong\&.m_dLatitude;
+52     bool bLongitude = this->m_dLongitude == p_pLatLong\&.m_dLongitude;
+53 
+54     return bLatitude && bLongitude;
+55 }
+.fi
+.SS "void setCoordinates (doublep_dLatitude, doublep_dLongitude)"
+
+.PP
+Coordinates setter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dLatitude\fP latitude in decimal degrees double 
+.br
+\fIp_dLongitude\fP longitude in decimal degrees double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+22 {
+23     m_dLatitude = p_dLatitude;
+24     m_dLongitude = p_dLongitude;
+25 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "double m_dLatitude\fC [private]\fP"
+
+.SS "double m_dLongitude\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

@@ -1,0 +1,503 @@
+.TH "RPA" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RPA \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'RPA\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Public Member Functions"
+.SS "Static Public Member Functions"
+.SS "Private Member Functions"
+.SS "Private Attributes"
+.SS "Static Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBRPA\fP ()\fC [private]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBRPA\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+6 {
+7     m_pPosition = new LatLongCoord();
+8     m_dAltitude = 0;
+9     m_dHeading = 0;
+10 
+11     connect(LogReplayControl::getInstance(), SIGNAL(geolocation(double, double, double, double)), 
+12         this, SLOT(geolocation(double, double, double, double)));
+13     connect(LogReplayControl::getInstance(), SIGNAL(updateHeading(double)), this, SLOT(updateHeading(double)));
+14 }
+.fi
+.SS "~\fBRPA\fP ()\fC [private]\fP"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+26 {
+27     delete m_pPosition;
+28 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void geolocation (doublep_fLatitude, doublep_fLongitude, doublep_fAltitude, doublep_fHeading)\fC [slot]\fP"
+
+.PP
+geolocation update slot 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_fLatitude\fP latitude double 
+.br
+\fIp_fLongitude\fP longitude double 
+.br
+\fIp_fAltitude\fP altitude double 
+.br
+\fIp_fHeading\fP 'false' heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+93 {
+94     setAltitude(p_fAltitude);
+95     setCoordinates(new LatLongCoord(p_fLatitude, p_fLongitude));
+96 
+97     emit positionChanged();
+98 }
+.fi
+.SS "double getAltitude ()"
+
+.PP
+\fBRPA\fP altitude getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+altitude in meters double 
+.RE
+.PP
+
+.PP
+.nf
+78 {
+79     return m_dAltitude;
+80 }
+.fi
+.SS "\fBLatLongCoord\fP * getCoordinates ()"
+
+.PP
+\fBRPA\fP coordinates getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+latitude / longitude coordinates in decimal degrees LatLongCoord* 
+.RE
+.PP
+
+.PP
+.nf
+73 {
+74     return m_pPosition;
+75 }
+.fi
+.SS "double getHeading ()"
+
+.PP
+\fBRPA\fP heading getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+heading in degrees double 
+.RE
+.PP
+
+.PP
+.nf
+83 {
+84     return m_dHeading;
+85 }
+.fi
+.SS "double getHeight ()"
+
+.PP
+\fBRPA\fP height getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+heading in degrees double 
+.RE
+.PP
+
+.PP
+.nf
+88 {
+89     return m_dHeight;
+90 }
+.fi
+.SS "\fBRPA\fP * getInstance ()\fC [static]\fP"
+
+.PP
+\fBRPA\fP instance getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBRPA\fP pointer RPA* 
+.RE
+.PP
+
+.PP
+.nf
+31 {
+32     if (singleton == NULL)
+33     {
+34         singleton = new RPA();
+35     }
+36 
+37     return singleton;
+38 }
+.fi
+.SS "void kill ()\fC [static]\fP"
+
+.PP
+\fBRPA\fP instance killer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+17 {
+18     if (singleton != NULL)
+19     {
+20         delete singleton;
+21         singleton = NULL;
+22     }
+23 }
+.fi
+.SS "void positionChanged ()\fC [signal]\fP"
+
+.PP
+Position changed event signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void setAltitude (doublep_dAltitude)"
+
+.PP
+\fBRPA\fP altitude setter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dAltitude\fP new altitude double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+47 {
+48     m_dAltitude = p_dAltitude;
+49 }
+.fi
+.SS "void setCoordinates (\fBLatLongCoord\fP *p_pPosition)"
+
+.PP
+\fBRPA\fP coordinates setter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pPosition\fP new GPS coordinates LatLongCoord* 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+41 {
+42     m_pPosition->setCoordinates(p_pPosition->getLatitude(), p_pPosition->getLongitude());
+43     emit positionChanged();
+44 }
+.fi
+.SS "void setHeading (doublep_dHeading)"
+
+.PP
+\fBRPA\fP heading setter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dHeading\fP new heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+52 {
+53     if(p_dHeading > 360)
+54     {
+55         m_dHeading = p_dHeading - 360;
+56     }
+57     else if (p_dHeading < 0)
+58     {
+59         m_dHeading = 360 + p_dHeading;
+60     }
+61     else
+62     {
+63         m_dHeading = p_dHeading;
+64     }
+65 }
+.fi
+.SS "void setHeight (doublep_dHeight)"
+
+.PP
+\fBRPA\fP height setter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_dHeading\fP new heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+68 {
+69     m_dHeight = p_dHeight;
+70 }
+.fi
+.SS "void updateHeading (doublep_pValue)\fC [slot]\fP"
+
+.PP
+'real' heading update slot 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP 'real' heading value double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+101 {
+102     setHeading(p_pValue);
+103 }
+.fi
+.SS "void updateHeight (doublep_pValue)\fC [slot]\fP"
+
+.PP
+Height (from ground) update slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP 'real' heading value double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+106 {
+107     setHeight(p_pValue);
+108 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "double m_dAltitude\fC [private]\fP"
+
+.SS "double m_dHeading\fC [private]\fP"
+
+.SS "double m_dHeight\fC [private]\fP"
+
+.SS "\fBLatLongCoord\fP* m_pPosition\fC [private]\fP"
+
+.SS "\fBRPA\fP * singleton = NULL\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d84/a00097" kind="struct" prot="public">
+    <compoundname>DIPROPCPOINTS</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d84/a00097_1a19f51a3f9633b843d2324e45f9aa93c4" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d79/a00051" kindref="compound">CPOINT</ref></type>
+        <definition>CPOINT cp[MAXCPOINTSNUM]</definition>
+        <argsstring>[MAXCPOINTSNUM]</argsstring>
+        <name>cp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1117" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00097_1a7010842dfbdaa5bb4357503558202537" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d61/a00100" kindref="compound">DIPROPHEADER</ref></type>
+        <definition>DIPROPHEADER diph</definition>
+        <argsstring></argsstring>
+        <name>diph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1115" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00097_1a03dae485499a864d4ec3cf6a4af0962d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwCPointsNum</definition>
+        <argsstring></argsstring>
+        <name>dwCPointsNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1116" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="111">
+        <label>LPDIPROPCPOINTS</label>
+        <link refid="d1/d84/a00097"/>
+        <childnode refid="112" relation="usage">
+          <edgelabel>diph</edgelabel>
+        </childnode>
+        <childnode refid="113" relation="usage">
+          <edgelabel>cp</edgelabel>
+        </childnode>
+      </node>
+      <node id="113">
+        <label>PCPOINT</label>
+        <link refid="d2/d79/a00051"/>
+      </node>
+      <node id="112">
+        <label>LPDIPROPHEADER</label>
+        <link refid="d0/d61/a00100"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1114" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1114" bodyend="1118"/>
+    <listofallmembers>
+      <member refid="d1/d84/a00097_1a19f51a3f9633b843d2324e45f9aa93c4" prot="public" virt="non-virtual"><scope>DIPROPCPOINTS</scope><name>cp</name></member>
+      <member refid="d1/d84/a00097_1a7010842dfbdaa5bb4357503558202537" prot="public" virt="non-virtual"><scope>DIPROPCPOINTS</scope><name>diph</name></member>
+      <member refid="d1/d84/a00097_1a03dae485499a864d4ec3cf6a4af0962d" prot="public" virt="non-virtual"><scope>DIPROPCPOINTS</scope><name>dwCPointsNum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

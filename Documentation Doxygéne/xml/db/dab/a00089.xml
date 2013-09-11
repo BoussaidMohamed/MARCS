@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="db/dab/a00089" kind="struct" prot="public">
+    <compoundname>DIJOYSTATE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/dab/a00089_1ae787bcbafe0c743edb3cc7908a9ec614" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRx</definition>
+        <argsstring></argsstring>
+        <name>lRx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2215" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1a224cc5c8c3276d717e40adb86bca63af" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRy</definition>
+        <argsstring></argsstring>
+        <name>lRy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2216" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1af3ec962f9ea47f6a29972d2991c971d7" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRz</definition>
+        <argsstring></argsstring>
+        <name>lRz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2217" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1a5caab2f62348491c05eb56720be4ed99" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lX</definition>
+        <argsstring></argsstring>
+        <name>lX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2212" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1ae174db734839eb185acdb0cd79b9ba24" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lY</definition>
+        <argsstring></argsstring>
+        <name>lY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2213" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lZ</definition>
+        <argsstring></argsstring>
+        <name>lZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2214" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1aaf96f3fe3fcadcb6549bcac3fdd6a326" prot="public" static="no" mutable="no">
+        <type>BYTE</type>
+        <definition>BYTE rgbButtons[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>rgbButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2220" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1ae49cd858af76a488ea366d4b7b6be542" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD rgdwPOV[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>rgdwPOV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2219" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dab/a00089_1ae16b25838a30c01d12eb11b79ca68018" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG rglSlider[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>rglSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2218" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2218" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2211" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2211" bodyend="2221"/>
+    <listofallmembers>
+      <member refid="db/dab/a00089_1ae787bcbafe0c743edb3cc7908a9ec614" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lRx</name></member>
+      <member refid="db/dab/a00089_1a224cc5c8c3276d717e40adb86bca63af" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lRy</name></member>
+      <member refid="db/dab/a00089_1af3ec962f9ea47f6a29972d2991c971d7" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lRz</name></member>
+      <member refid="db/dab/a00089_1a5caab2f62348491c05eb56720be4ed99" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lX</name></member>
+      <member refid="db/dab/a00089_1ae174db734839eb185acdb0cd79b9ba24" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lY</name></member>
+      <member refid="db/dab/a00089_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>lZ</name></member>
+      <member refid="db/dab/a00089_1aaf96f3fe3fcadcb6549bcac3fdd6a326" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>rgbButtons</name></member>
+      <member refid="db/dab/a00089_1ae49cd858af76a488ea366d4b7b6be542" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>rgdwPOV</name></member>
+      <member refid="db/dab/a00089_1ae16b25838a30c01d12eb11b79ca68018" prot="public" virt="non-virtual"><scope>DIJOYSTATE</scope><name>rglSlider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

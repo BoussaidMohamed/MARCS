@@ -1,0 +1,46 @@
+.TH "JoystickGrabber.cpp" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JoystickGrabber.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+.SH "Function Documentation"
+.PP 
+.SS "\fBBOOL\fP CALLBACK CreateDeviceCallback (\fBLPCDIDEVICEINSTANCE\fPinstance, \fBLPVOID\fPreference)"
+
+.PP
+.nf
+20 {
+21    /*
+22     //Peripheral creation
+23     result = direct_input_object->CreateDevice(instance->guidInstance, &joypad, NULL);
+24 
+25     //Error management
+26     if(FAILED( result )) 
+27     {
+28         //Fail
+29         return DIENUM_CONTINUE; 
+30     }
+31 
+32     //Success
+33     return DIENUM_STOP;
+34         */
+35 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "\fBLPDIRECTINPUT8\fP direct_input_object = NULL"
+
+.SS "HINSTANCE instance = NULL"
+
+.SS "\fBLPDIRECTINPUTDEVICE8\fP joypad = NULL"
+
+.SS "HRESULT result"
+
+.SS "\fBDIJOYSTATE\fP state"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

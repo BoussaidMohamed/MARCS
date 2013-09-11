@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d3/dfe/a00025" kind="file">
+    <compoundname>LogReplayControl.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d5b/a00026" kindref="compound">LogReplayControl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref>*<sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">LogReplayControl::singleton</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" refkind="member"><highlight class="normal"><ref refid="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" kindref="member">LogReplayControl::LogReplayControl</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*m_pStartPause<sp/>=<sp/>new<sp/>ToggleButton();</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>m_pIncSpeed<sp/>=<sp/>new<sp/>QPushButton();</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/>m_pDecSpeed<sp/>=<sp/>new<sp/>QPushButton();</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>m_pStop<sp/>=<sp/>new<sp/>QPushButton();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>connect(&amp;<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>,<sp/>SIGNAL(timeout()),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>SLOT(<ref refid="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" kindref="member">replay</ref>()));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="de/d5e/a00007_1aae9d52caad9fb2892deeb25596cfd2ab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1aae9d52caad9fb2892deeb25596cfd2ab" kindref="member">LogReplayControl::kill</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="de/d5e/a00007_1a9a1182668244140773a52ee54723c8fd" refkind="member"><highlight class="normal"><ref refid="de/d5e/a00007_1a9a1182668244140773a52ee54723c8fd" kindref="member">LogReplayControl::~LogReplayControl</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="de/d5e/a00007_1adb2b1b18fad4caaafde371f991525f38" refkind="member"><highlight class="normal"><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref>*<sp/><ref refid="de/d5e/a00007_1adb2b1b18fad4caaafde371f991525f38" kindref="member">LogReplayControl::getInstance</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" kindref="member">LogReplayControl</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="de/d5e/a00007_1a60de64d75454385b23995437f1d72669" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a60de64d75454385b23995437f1d72669" kindref="member">LogReplayControl::start</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.start(200);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d84/a00001_1afebd43c1f2afd7ec0eb35f99e50f0964" kindref="member">CommunicationControl::getInstance</ref>()-&gt;<ref refid="d8/d84/a00001_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="de/d5e/a00007_1a7167f5c196fc5e167bfabde1a730e81d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a7167f5c196fc5e167bfabde1a730e81d" kindref="member">LogReplayControl::pause</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.stop();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">LogReplayControl::stop</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.stop();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="de/d5e/a00007_1a7de2a543986e45b9083c69f6138bf079" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a7de2a543986e45b9083c69f6138bf079" kindref="member">LogReplayControl::forward</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>+<sp/>50);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>-<sp/>50);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(50);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="de/d5e/a00007_1a9b83f0fc7f06bee951213dd4b22e0e93" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a9b83f0fc7f06bee951213dd4b22e0e93" kindref="member">LogReplayControl::backward</ref>()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>+<sp/>50);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>-<sp/>50);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.interval()<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>.setInterval(50);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" kindref="member">LogReplayControl::replay</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>&gt;<sp/><ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>.length())</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>&lt;<sp/><ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>.length())</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="de/d5e/a00007_1ac64f2ec114d4ab8dd8ed8dd31f243454" kindref="member">geolocation</ref>(<ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>[<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref>],<sp/><ref refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" kindref="member">m_aLongitude</ref>[m_iData],<sp/><ref refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" kindref="member">m_aAltitude</ref>[m_iData],<sp/>0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="de/d5e/a00007_1aa3c54f0958638486df2b69a9b53c5d7f" kindref="member">updateHeading</ref>(<ref refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" kindref="member">m_aHeading</ref>[m_iData]);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_iData++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref><sp/>&lt;<sp/><ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>.length())</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="de/d5e/a00007_1ac64f2ec114d4ab8dd8ed8dd31f243454" kindref="member">geolocation</ref>(<ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>[<ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref>],<sp/><ref refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" kindref="member">m_aLongitude</ref>[m_iData],<sp/><ref refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" kindref="member">m_aAltitude</ref>[m_iData],<sp/>0);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="de/d5e/a00007_1aa3c54f0958638486df2b69a9b53c5d7f" kindref="member">updateHeading</ref>(<ref refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" kindref="member">m_aHeading</ref>[m_iData]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_iData--;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="de/d5e/a00007_1a2d8621c7c4f4531bee805e91595b6b76" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a2d8621c7c4f4531bee805e91595b6b76" kindref="member">LogReplayControl::openLog</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//QString<sp/>name<sp/>=<sp/>QFileDialog::getOpenFileName(NULL,<sp/>ResourceControl::getText(&quot;selectLogTitle&quot;),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;&quot;,<sp/>&quot;Data<sp/>log<sp/>files<sp/>(*.csv)&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Hola&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(name<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QString<sp/>line;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QStringList<sp/>lineSplit;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QFile<sp/>file(name);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file.open(QIODevice::ReadOnly))</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QTextStream<sp/>textStream(&amp;file);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line<sp/>=<sp/>textStream.readLine();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!textStream.atEnd())</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line<sp/>=<sp/>textStream.readLine();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lineSplit<sp/>=<sp/>line.split(</highlight><highlight class="stringliteral">&quot;;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>.push_back(lineSplit.at(1).toDouble());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" kindref="member">m_aLongitude</ref>.push_back(lineSplit.at(2).toDouble());</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" kindref="member">m_aAltitude</ref>.push_back(lineSplit.at(3).toDouble());</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" kindref="member">m_aHeading</ref>.push_back(lineSplit.at(4).toDouble());</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp"/>
+  </compounddef>
+</doxygen>

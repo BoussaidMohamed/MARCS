@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/dea/a00054" kind="union" prot="public">
+    <compoundname>DIACTIONA.__unnamed__</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/dea/a00054_1a306924baa797b5e48dc1e53cd5fa6e58" prot="public" static="no" mutable="no">
+        <type>LPCSTR</type>
+        <definition></definition>
+        <argsstring></argsstring>
+        <name>lptszActionName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="653" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dea/a00054_1a218c793f10200f6283aa0d41c3626ffc" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition></definition>
+        <argsstring></argsstring>
+        <name>uResIdString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="654" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="652" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="652" bodyend="655"/>
+    <listofallmembers>
+      <member refid="d1/dea/a00054_1a306924baa797b5e48dc1e53cd5fa6e58" prot="public" virt="non-virtual"><scope>DIACTIONA.__unnamed__</scope><name>lptszActionName</name></member>
+      <member refid="d1/dea/a00054_1a218c793f10200f6283aa0d41c3626ffc" prot="public" virt="non-virtual"><scope>DIACTIONA.__unnamed__</scope><name>uResIdString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,342 @@
+\hypertarget{a00009}{\section{mission Class Reference}
+\label{a00009}\index{mission@{mission}}
+}
+
+
+{\ttfamily \#include \char`\"{}mission.\-h\char`\"{}}
+
+\subsection*{Public Member Functions}
+\subsection*{Data Fields}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00009_a2bc38f229852fad59a5d3c1add1e3ea3}{\index{mission@{mission}!mission@{mission}}
+\index{mission@{mission}!mission@{mission}}
+\subsubsection[{mission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mission} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00009_a2bc38f229852fad59a5d3c1add1e3ea3}
+
+\begin{DoxyCode}
+21 \{
+22 
+23 \}
+\end{DoxyCode}
+\hypertarget{a00009_af9e7cd1856847fe227e5fbce8a7e4c73}{\index{mission@{mission}!mission@{mission}}
+\index{mission@{mission}!mission@{mission}}
+\subsubsection[{mission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mission} (
+\begin{DoxyParamCaption}
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{a00009_af9e7cd1856847fe227e5fbce8a7e4c73}
+
+\begin{DoxyCode}
+24                        : \hyperlink{a00009_a3676e27abf87db4ad6d4aec72b049efd}{n\_mission}(num)
+25 \{
+26 
+27 
+28 \}
+\end{DoxyCode}
+\hypertarget{a00009_a98ca623d084c7cb213a3cf85614aa5d7}{\index{mission@{mission}!$\sim$mission@{$\sim$mission}}
+\index{$\sim$mission@{$\sim$mission}!mission@{mission}}
+\subsubsection[{$\sim$mission}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf mission} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00009_a98ca623d084c7cb213a3cf85614aa5d7}
+
+\begin{DoxyCode}
+30 \{
+31     \hyperlink{a00009_a9d16159daf0b07b53c085e967131380a}{myMission}.~QList();
+32 
+33 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00009_a5d06a1578648c9b23746188891b01aae}{\index{mission@{mission}!get\-Num@{get\-Num}}
+\index{get\-Num@{get\-Num}!mission@{mission}}
+\subsubsection[{get\-Num}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00009_a5d06a1578648c9b23746188891b01aae}
+
+\begin{DoxyCode}
+35                    \{
+36     \textcolor{keywordflow}{return} \hyperlink{a00009_a3676e27abf87db4ad6d4aec72b049efd}{n\_mission} ;
+37 \}
+\end{DoxyCode}
+\hypertarget{a00009_a4788e93bd0bed6d7fd53cff1840a7f5b}{\index{mission@{mission}!get\-Waypoint\-List@{get\-Waypoint\-List}}
+\index{get\-Waypoint\-List@{get\-Waypoint\-List}!mission@{mission}}
+\subsubsection[{get\-Waypoint\-List}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf waypoint} $\ast$ $>$ get\-Waypoint\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00009_a4788e93bd0bed6d7fd53cff1840a7f5b}
+
+\begin{DoxyCode}
+228                                           \{
+229     \textcolor{keywordflow}{return} \hyperlink{a00009_a9d16159daf0b07b53c085e967131380a}{myMission};
+230 \}
+\end{DoxyCode}
+\hypertarget{a00009_af307fc09e3c8e4303ff16324d681213a}{\index{mission@{mission}!load\-Mission@{load\-Mission}}
+\index{load\-Mission@{load\-Mission}!mission@{mission}}
+\subsubsection[{load\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf waypoint} $\ast$ $>$ load\-Mission (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{filename}
+\end{DoxyParamCaption}
+)}}\label{a00009_af307fc09e3c8e4303ff16324d681213a}
+
+\begin{DoxyCode}
+90                                                         \{
+91 
+92 
+93         QList < waypoint* > wpList ;
+94     \textcolor{comment}{/* We'll parse the filename */}
+95         QFile* file = \textcolor{keyword}{new} QFile(filename);
+96         \textcolor{keywordtype}{int} num  ;
+97         \textcolor{keywordtype}{double} lon , lat ,alt , hdg ;
+98         \textcolor{keywordtype}{int} time, type ;
+99         \textcolor{keywordtype}{bool} ok = false ;
+100 
+101 
+102         \textcolor{comment}{/* If we can't open it, let's show an error message. */}
+103         \textcolor{keywordflow}{if} (!file->open(QIODevice::ReadOnly | QIODevice::Text)) \{
+104 
+105         \}
+106         \textcolor{comment}{/* QXmlStreamReader takes any QIODevice. */}
+107         QXmlStreamReader xml(file);
+108         \textcolor{comment}{/* We'll parse the XML until we reach end of it.*/}
+109         \textcolor{keywordflow}{while}(!xml.atEnd() && !xml.hasError()) \{
+110             \textcolor{comment}{/* Read next element.*/}
+111             QXmlStreamReader::TokenType token = xml.readNext();
+112             \textcolor{comment}{/* If token is just StartDocument, we'll go to next.*/}
+113             \textcolor{keywordflow}{if}(token == QXmlStreamReader::StartDocument) \{
+114                 \textcolor{keywordflow}{continue};
+115             \}
+116             \textcolor{comment}{/* If token is StartElement, we'll see if we can read it.*/}
+117             \textcolor{keywordflow}{if}(token == QXmlStreamReader::StartElement) \{
+118                 \textcolor{comment}{/* If it's named Mission, we'll go to the next.*/}
+119                 \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Mission"}) \{
+120                     \textcolor{keywordflow}{continue};
+121                 \}
+122                 \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Mission\_Number"}) \{
+123                     \textcolor{keywordflow}{continue};
+124                 \}
+125                 \textcolor{comment}{/* If it's named Waypoint, we'll dig the information from there.*/}
+126                 \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Waypoint"}) \{
+127 
+128                     \textcolor{comment}{/* Next element... */}
+129                     xml.readNext();
+130                     \textcolor{comment}{/*}
+131 \textcolor{comment}{                     * We're going to loop over the things because the order might change.}
+132 \textcolor{comment}{                     * We'll continue the loop until we hit an EndElement named Waypoint.}
+133 \textcolor{comment}{                     */}
+134 
+135                     \textcolor{keywordflow}{while}(!(xml.tokenType() == QXmlStreamReader::EndElement && xml.name() == \textcolor{stringliteral}{"Waypoint"})) \{
+136 
+137 
+138 
+139                         \textcolor{keywordflow}{if}(xml.tokenType() == QXmlStreamReader::StartElement) \{
+140                             \textcolor{comment}{/* We've found Number. */}
+141                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Number"}) \{
+142                                 num = xml.readElementText().toInt(&ok,10);
+143                             \}
+144                             \textcolor{comment}{/* We've found Longitude. */}
+145                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Longitude"}) \{
+146                                 lon = xml.readElementText().toDouble(&ok);
+147 
+148                             \}
+149                             \textcolor{comment}{/* We've found Latitude. */}
+150                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Latitude"}) \{
+151                                 lat = xml.readElementText().toDouble(&ok);
+152 
+153                             \}
+154                             \textcolor{comment}{/* We've found Altitude. */}
+155                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Altitude"}) \{
+156                                 alt=xml.readElementText().toDouble(&ok);
+157                             \}
+158 
+159                             \textcolor{comment}{/* We've found Heading. */}
+160                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Heading"}) \{
+161                                 hdg = xml.readElementText().toDouble(&ok);
+162 
+163                             \}
+164                             \textcolor{comment}{/* We've found Time. */}
+165                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Time"}) \{
+166                                 time = xml.readElementText().toInt(&ok,10);
+167 
+168                            \}
+169                             \textcolor{comment}{/* We've found Type. */}
+170                             \textcolor{keywordflow}{if}(xml.name() == \textcolor{stringliteral}{"Type"}) \{
+171                                 type=xml.readElementText().toInt(&ok,10);
+172                             \}
+173                         \}
+174                         \textcolor{comment}{/* ...and next... */}
+175                         xml.readNext();
+176                     \}
+177                     wpList.append(\textcolor{keyword}{new} \hyperlink{a00016}{waypoint}(num,lon,lat,alt,hdg,time,type,0));
+178 
+179                 \}
+180             \}
+181         \}
+182         \textcolor{comment}{/* Error handling. */}
+183         \textcolor{keywordflow}{if}(xml.hasError()) \{
+184 
+185         \}
+186         \textcolor{comment}{/* Removes any device() or data from the reader}
+187 \textcolor{comment}{         * and resets its internal state to the initial state. */}
+188         file->close();
+189         xml.clear();
+190 
+191        \textcolor{keywordflow}{return} wpList;
+192        \textcolor{keyword}{delete} file ;
+193    \}
+\end{DoxyCode}
+\hypertarget{a00009_a4c40423028a4cfdf1bbbea8945cb696b}{\index{mission@{mission}!save\-Mission@{save\-Mission}}
+\index{save\-Mission@{save\-Mission}!mission@{mission}}
+\subsubsection[{save\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Mission (
+\begin{DoxyParamCaption}
+\item[{Q\-List$<$ {\bf waypoint} $\ast$ $>$}]{wp\-List, }
+\item[{Q\-String}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{a00009_a4c40423028a4cfdf1bbbea8945cb696b}
+
+\begin{DoxyCode}
+43                                                                       \{
+44 
+45       time\_t now1 = time (0);
+46       \textcolor{keyword}{struct }tm * now2 = localtime( & now1);
+47       \textcolor{keywordtype}{string} \hyperlink{a00042_a57c52213e1c32a667a5963a122e0a23b}{temp} ;
+48       \textcolor{keywordtype}{char}* time\_mission = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[32];
+49       QString qs ;
+50 
+51       sprintf(time\_mission,\textcolor{stringliteral}{"%d\_%d\_%d\_%d\_%d"},(now2->tm\_year + 1900 ) ,(now2->tm\_mon+1), (now2->tm\_mday),(
+      now2->tm\_hour), (now2->tm\_min));
+52       temp = string(time\_mission);
+53        \textcolor{keywordtype}{string} time\_mission\_temp = \textcolor{stringliteral}{""} + \hyperlink{a00042_a57c52213e1c32a667a5963a122e0a23b}{temp} ;
+54       qs = QString::fromStdString(time\_mission\_temp);
+55 
+56          QFile file(filename);
+57          file.open(QIODevice::WriteOnly);
+58 
+59          QXmlStreamWriter xmlWriter(&file);
+60          xmlWriter.setAutoFormatting(\textcolor{keyword}{true});
+61          xmlWriter.writeStartDocument();
+62 
+63          xmlWriter.writeStartElement(\textcolor{stringliteral}{"Mission"});
+64          xmlWriter.writeTextElement(\textcolor{stringliteral}{"Mission\_Number"},qs);
+65 
+66          \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0 ; i < wpList.size(); i++ ) \{
+67 
+68         xmlWriter.writeStartElement(\textcolor{stringliteral}{"Waypoint"});
+69         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Number"},QString::number(wpList[i]->\hyperlink{a00009_a5d06a1578648c9b23746188891b01aae}{getNum}()));
+70         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Longitude"},QString::number(wpList[i]->getLong(),\textcolor{charliteral}{'g'},6));
+71         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Latitude"},QString::number(wpList[i]->getLat(),\textcolor{charliteral}{'g'},6));
+72         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Altitude"},QString::number(wpList[i]->getAlt()));
+73         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Heading"},QString::number(wpList[i]->getHdg()));
+74         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Time"},QString::number(wpList[i]->getTime()));
+75         xmlWriter.writeTextElement(\textcolor{stringliteral}{"Type"},QString::number(wpList[i]->getType()));
+76         xmlWriter.writeEndElement();
+77 
+78          \}
+79 
+80          xmlWriter.writeEndElement();
+81          xmlWriter.writeEndDocument();
+82 
+83          file.close();
+84 
+85          \textcolor{keyword}{delete}[] time\_mission;
+86 
+87 \}
+\end{DoxyCode}
+\hypertarget{a00009_a378e572221c084c413a947adec25183b}{\index{mission@{mission}!save\-Mission\-Kml@{save\-Mission\-Kml}}
+\index{save\-Mission\-Kml@{save\-Mission\-Kml}!mission@{mission}}
+\subsubsection[{save\-Mission\-Kml}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Mission\-Kml (
+\begin{DoxyParamCaption}
+\item[{Q\-List$<$ {\bf waypoint} $\ast$ $>$}]{wp\-List, }
+\item[{Q\-String}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{a00009_a378e572221c084c413a947adec25183b}
+
+\begin{DoxyCode}
+195                                                                       \{
+196 
+197     QFile file(fileName);
+198     file.open(QIODevice::WriteOnly);
+199 
+200     QXmlStreamWriter xmlWriter(&file);
+201     xmlWriter.setAutoFormatting(\textcolor{keyword}{true});
+202     xmlWriter.writeStartDocument();
+203 
+204     xmlWriter.writeStartElement(\textcolor{stringliteral}{"kml"});
+205     xmlWriter.writeAttribute(\textcolor{stringliteral}{"xmlns"},\textcolor{stringliteral}{"http://earth.google.com/kml/2.2"});
+206     xmlWriter.writeStartElement(\textcolor{stringliteral}{"Folder"});
+207     xmlWriter.writeTextElement(\textcolor{stringliteral}{"name"},\textcolor{stringliteral}{"Mission MARCS"});
+208 
+209     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0 ; i < wpList.size(); i++ ) \{
+210 
+211    xmlWriter.writeStartElement(\textcolor{stringliteral}{"Placemark"});
+212    xmlWriter.writeTextElement(\textcolor{stringliteral}{"name"},QString::number(wpList[i]->\hyperlink{a00009_a5d06a1578648c9b23746188891b01aae}{getNum}()));
+213    xmlWriter.writeStartElement(\textcolor{stringliteral}{"Point"});
+214    xmlWriter.writeTextElement(\textcolor{stringliteral}{"coordinates"},QString::number(wpList[i]->getLong(),\textcolor{charliteral}{'g'},6)+\textcolor{stringliteral}{","}+QString::number
+      (wpList[i]->getLat(),\textcolor{charliteral}{'g'},6));
+215     xmlWriter.writeEndElement();
+216     xmlWriter.writeEndElement();
+217     \}
+218 
+219     xmlWriter.writeEndElement();
+220     xmlWriter.writeEndElement();
+221     xmlWriter.writeEndDocument();
+222 
+223     file.close();
+224 
+225 
+226 \}
+\end{DoxyCode}
+\hypertarget{a00009_a14c494edc171ceb9b2934855efa3d994}{\index{mission@{mission}!set\-Num@{set\-Num}}
+\index{set\-Num@{set\-Num}!mission@{mission}}
+\subsubsection[{set\-Num}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Num (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{a00009_a14c494edc171ceb9b2934855efa3d994}
+
+\begin{DoxyCode}
+39                          \{
+40     \hyperlink{a00009_a3676e27abf87db4ad6d4aec72b049efd}{n\_mission} = n ;
+41 \}
+\end{DoxyCode}
+\hypertarget{a00009_a22c390047351019cdcf09e1f38b66784}{\index{mission@{mission}!set\-Waypoint\-List@{set\-Waypoint\-List}}
+\index{set\-Waypoint\-List@{set\-Waypoint\-List}!mission@{mission}}
+\subsubsection[{set\-Waypoint\-List}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Waypoint\-List (
+\begin{DoxyParamCaption}
+\item[{Q\-List$<$ {\bf waypoint} $\ast$ $>$}]{mission}
+\end{DoxyParamCaption}
+)}}\label{a00009_a22c390047351019cdcf09e1f38b66784}
+
+\begin{DoxyCode}
+232                                                       \{
+233     \hyperlink{a00009_a9d16159daf0b07b53c085e967131380a}{myMission} = \hyperlink{a00009_a2bc38f229852fad59a5d3c1add1e3ea3}{mission};
+234 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00009_a9d16159daf0b07b53c085e967131380a}{\index{mission@{mission}!my\-Mission@{my\-Mission}}
+\index{my\-Mission@{my\-Mission}!mission@{mission}}
+\subsubsection[{my\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<${\bf waypoint}$\ast$ $>$ my\-Mission}}\label{a00009_a9d16159daf0b07b53c085e967131380a}
+\hypertarget{a00009_a3676e27abf87db4ad6d4aec72b049efd}{\index{mission@{mission}!n\-\_\-mission@{n\-\_\-mission}}
+\index{n\-\_\-mission@{n\-\_\-mission}!mission@{mission}}
+\subsubsection[{n\-\_\-mission}]{\setlength{\rightskip}{0pt plus 5cm}int n\-\_\-mission}}\label{a00009_a3676e27abf87db4ad6d4aec72b049efd}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00031}{mission.\-h}\item 
+\hyperlink{a00030}{mission.\-cpp}\end{DoxyCompactItemize}

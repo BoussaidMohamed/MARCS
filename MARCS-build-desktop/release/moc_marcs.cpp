@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'marcs.h'
 **
-** Created: Mon 9. Sep 10:24:05 2013
+** Created: Wed 11. Sep 10:53:16 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -72,20 +72,20 @@ static const uint qt_meta_data_MARCS[] = {
      867,    6,    6,    6, 0x0a,
      885,  877,    6,    6, 0x0a,
      908,  899,    6,    6, 0x0a,
-     941,  927,    6,    6, 0x0a,
-     975,    6,    6,    6, 0x0a,
-     989,    6,    6,    6, 0x0a,
-     999,    6,    6,    6, 0x0a,
-    1007,    6,    6,    6, 0x08,
-    1033,    6,    6,    6, 0x08,
-    1069,    6,    6,    6, 0x08,
-    1112, 1106,    6,    6, 0x08,
-    1162,    6,    6,    6, 0x08,
-    1194, 1189,    6,    6, 0x08,
-    1233,    6,    6,    6, 0x08,
-    1260,    6,    6,    6, 0x08,
-    1288,    6,    6,    6, 0x08,
-    1321,    6,    6,    6, 0x08,
+     927,    6,    6,    6, 0x0a,
+     934,    6,    6,    6, 0x0a,
+     948,    6,    6,    6, 0x0a,
+     958,    6,    6,    6, 0x0a,
+     966,    6,    6,    6, 0x08,
+     992,    6,    6,    6, 0x08,
+    1028,    6,    6,    6, 0x08,
+    1071, 1065,    6,    6, 0x08,
+    1121,    6,    6,    6, 0x08,
+    1153, 1148,    6,    6, 0x08,
+    1192,    6,    6,    6, 0x08,
+    1219,    6,    6,    6, 0x08,
+    1247,    6,    6,    6, 0x08,
+    1280,    6,    6,    6, 0x08,
 
        0        // eod
 };
@@ -115,10 +115,8 @@ static const char qt_meta_stringdata_MARCS[] = {
     "p_dHeight\0setHeight(double)\0fly()\0"
     "XbeeDisconnect()\0XbeeConnect()\0stopFly()\0"
     "p_value\0GPSLevel(int)\0p_cValue\0"
-    "updateMotors(char)\0lon,lat,alt,n\0"
-    "goTo(double,double,double,double)\0"
-    "setTableRPA()\0showLog()\0close()\0"
-    "on_start_button_clicked()\0"
+    "updateMotors(char)\0goTo()\0setTableRPA()\0"
+    "showLog()\0close()\0on_start_button_clicked()\0"
     "on_lineEdit_HDG_textEdited(QString)\0"
     "on_lineEdit_Alt_textChanged(QString)\0"
     "index\0on_comboBox_ListWaypoint_currentIndexChanged(int)\0"
@@ -198,7 +196,7 @@ int MARCS::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 36: stopFly(); break;
         case 37: GPSLevel((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 38: updateMotors((*reinterpret_cast< char(*)>(_a[1]))); break;
-        case 39: goTo((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3])),(*reinterpret_cast< double(*)>(_a[4]))); break;
+        case 39: goTo(); break;
         case 40: setTableRPA(); break;
         case 41: showLog(); break;
         case 42: close(); break;

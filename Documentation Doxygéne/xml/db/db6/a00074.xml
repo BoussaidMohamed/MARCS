@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="db/db6/a00074" kind="struct" prot="public">
+    <compoundname>DIDEVICEINSTANCEA</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/db6/a00074_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDevType</definition>
+        <argsstring></argsstring>
+        <name>dwDevType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1262" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1259" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a62f782d9ced1e758acfba8f1dfe6906b" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidFFDriver</definition>
+        <argsstring></argsstring>
+        <name>guidFFDriver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1266" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a7fba3dbe50344a5643d4b3c3ae186576" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidInstance</definition>
+        <argsstring></argsstring>
+        <name>guidInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1260" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a30bf31754fdd016b11557bf6a75bfc87" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidProduct</definition>
+        <argsstring></argsstring>
+        <name>guidProduct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1261" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a0c2016d4a69c9474b7cdf714abb66217" prot="public" static="no" mutable="no">
+        <type>CHAR</type>
+        <definition>CHAR tszInstanceName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszInstanceName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1263" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1ace2ea209eb411d1e909d9bb3e326d5bb" prot="public" static="no" mutable="no">
+        <type>CHAR</type>
+        <definition>CHAR tszProductName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszProductName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1264" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a0d3e1ceaeb1960389350277978573941" prot="public" static="no" mutable="no">
+        <type>WORD</type>
+        <definition>WORD wUsage</definition>
+        <argsstring></argsstring>
+        <name>wUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1268" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1ab55ab386802010c34f363f9a2615be89" prot="public" static="no" mutable="no">
+        <type>WORD</type>
+        <definition>WORD wUsagePage</definition>
+        <argsstring></argsstring>
+        <name>wUsagePage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1267" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1267" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1258" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1258" bodyend="1270"/>
+    <listofallmembers>
+      <member refid="db/db6/a00074_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>dwDevType</name></member>
+      <member refid="db/db6/a00074_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>dwSize</name></member>
+      <member refid="db/db6/a00074_1a62f782d9ced1e758acfba8f1dfe6906b" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>guidFFDriver</name></member>
+      <member refid="db/db6/a00074_1a7fba3dbe50344a5643d4b3c3ae186576" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>guidInstance</name></member>
+      <member refid="db/db6/a00074_1a30bf31754fdd016b11557bf6a75bfc87" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>guidProduct</name></member>
+      <member refid="db/db6/a00074_1a0c2016d4a69c9474b7cdf714abb66217" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>tszInstanceName</name></member>
+      <member refid="db/db6/a00074_1ace2ea209eb411d1e909d9bb3e326d5bb" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>tszProductName</name></member>
+      <member refid="db/db6/a00074_1a0d3e1ceaeb1960389350277978573941" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>wUsage</name></member>
+      <member refid="db/db6/a00074_1ab55ab386802010c34f363f9a2615be89" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCEA</scope><name>wUsagePage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

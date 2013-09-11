@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d3/d8b/a00059" kind="struct" prot="public">
+    <compoundname>DICOLORSET</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d8b/a00059_1a198aee943eef9b9734785bcf4629ff86" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cAreaFill</definition>
+        <argsstring></argsstring>
+        <name>cAreaFill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="790" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="790" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a36f5a9696c6eebfcffbe3799f1f2057f" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cBorder</definition>
+        <argsstring></argsstring>
+        <name>cBorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="787" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="787" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a49cef7d919ed0c27bec6bc97b0473055" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cCalloutHighlight</definition>
+        <argsstring></argsstring>
+        <name>cCalloutHighlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="786" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="786" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1aa54df6e294fec825e2cee5fa8bd69998" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cCalloutLine</definition>
+        <argsstring></argsstring>
+        <name>cCalloutLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="785" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="785" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a41448f3bb3998655e6296b77da2f9d82" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cControlFill</definition>
+        <argsstring></argsstring>
+        <name>cControlFill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="788" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="788" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a6717a3893a9865533e4886735894ec8a" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cHighlightFill</definition>
+        <argsstring></argsstring>
+        <name>cHighlightFill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="789" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="789" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a0ce9121862024dfd8ee6a23a254512cb" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cTextFore</definition>
+        <argsstring></argsstring>
+        <name>cTextFore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="783" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="783" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a85530ddf9ea55b5cec04b5e3766c5925" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ac8e0e7c9369d051cd9882da44531c42c" kindref="member">D3DCOLOR</ref></type>
+        <definition>D3DCOLOR cTextHighlight</definition>
+        <argsstring></argsstring>
+        <name>cTextHighlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="784" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="784" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d8b/a00059_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="782" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="782" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="781" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="781" bodyend="791"/>
+    <listofallmembers>
+      <member refid="d3/d8b/a00059_1a198aee943eef9b9734785bcf4629ff86" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cAreaFill</name></member>
+      <member refid="d3/d8b/a00059_1a36f5a9696c6eebfcffbe3799f1f2057f" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cBorder</name></member>
+      <member refid="d3/d8b/a00059_1a49cef7d919ed0c27bec6bc97b0473055" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cCalloutHighlight</name></member>
+      <member refid="d3/d8b/a00059_1aa54df6e294fec825e2cee5fa8bd69998" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cCalloutLine</name></member>
+      <member refid="d3/d8b/a00059_1a41448f3bb3998655e6296b77da2f9d82" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cControlFill</name></member>
+      <member refid="d3/d8b/a00059_1a6717a3893a9865533e4886735894ec8a" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cHighlightFill</name></member>
+      <member refid="d3/d8b/a00059_1a0ce9121862024dfd8ee6a23a254512cb" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cTextFore</name></member>
+      <member refid="d3/d8b/a00059_1a85530ddf9ea55b5cec04b5e3766c5925" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>cTextHighlight</name></member>
+      <member refid="d3/d8b/a00059_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DICOLORSET</scope><name>dwSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

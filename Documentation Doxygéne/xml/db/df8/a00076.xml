@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="db/df8/a00076" kind="struct" prot="public">
+    <compoundname>DIDEVICEOBJECTDATA</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/df8/a00076_1ad38b92af7d164a277eb2d30b5e65a489" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwData</definition>
+        <argsstring></argsstring>
+        <name>dwData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1208" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/df8/a00076_1a2f0da10f0bff2a910138cc1b5715cdd5" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwOfs</definition>
+        <argsstring></argsstring>
+        <name>dwOfs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1207" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/df8/a00076_1a62ab582c7122462282999b7ee4e41e09" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSequence</definition>
+        <argsstring></argsstring>
+        <name>dwSequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1210" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/df8/a00076_1a0c07d43e437af5d01b1f043f0744d598" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwTimeStamp</definition>
+        <argsstring></argsstring>
+        <name>dwTimeStamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1209" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/df8/a00076_1ac83b0c009034bac2df91a2c0bed20494" prot="public" static="no" mutable="no">
+        <type>UINT_PTR</type>
+        <definition>UINT_PTR uAppData</definition>
+        <argsstring></argsstring>
+        <name>uAppData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1212" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1206" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1206" bodyend="1214"/>
+    <listofallmembers>
+      <member refid="db/df8/a00076_1ad38b92af7d164a277eb2d30b5e65a489" prot="public" virt="non-virtual"><scope>DIDEVICEOBJECTDATA</scope><name>dwData</name></member>
+      <member refid="db/df8/a00076_1a2f0da10f0bff2a910138cc1b5715cdd5" prot="public" virt="non-virtual"><scope>DIDEVICEOBJECTDATA</scope><name>dwOfs</name></member>
+      <member refid="db/df8/a00076_1a62ab582c7122462282999b7ee4e41e09" prot="public" virt="non-virtual"><scope>DIDEVICEOBJECTDATA</scope><name>dwSequence</name></member>
+      <member refid="db/df8/a00076_1a0c07d43e437af5d01b1f043f0744d598" prot="public" virt="non-virtual"><scope>DIDEVICEOBJECTDATA</scope><name>dwTimeStamp</name></member>
+      <member refid="db/df8/a00076_1ac83b0c009034bac2df91a2c0bed20494" prot="public" virt="non-virtual"><scope>DIDEVICEOBJECTDATA</scope><name>uAppData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dd/d32/a00041" kind="file">
+    <compoundname>UAVLogger.h</compoundname>
+    <innerclass refid="d2/de7/a00014" prot="public">UAVLogger</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__LOGGER</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__LOGGER</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTextStream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d2/de7/a00014" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d2/de7/a00014" kindref="compound">UAVLogger</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Prefix<sp/><sp/>Meaning<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Variable<sp/>Type</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Array<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Table</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logic</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>precision<sp/>float</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dw<sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>Word<sp/><sp/><sp/><sp/><sp/>Unsigned<sp/>32<sp/>bits<sp/>word</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>index</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>value</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>stream<sp/><sp/><sp/>Stringstream</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Attributes<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d2/de7/a00014_1af915a8ab61a55c6cc5564aa9f79cea25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTextStream*<sp/><ref refid="d2/de7/a00014_1af915a8ab61a55c6cc5564aa9f79cea25" kindref="member">sysLog</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//System<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d2/de7/a00014_1a9d49b9bb8b1be68fb2b96cb96c9a39e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTextStream*<sp/><ref refid="d2/de7/a00014_1a9d49b9bb8b1be68fb2b96cb96c9a39e6" kindref="member">pollLog</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//Data<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d2/de7/a00014_1a0813d5e71c0c333ade9260e2a236b7ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QFile*<sp/><ref refid="d2/de7/a00014_1a0813d5e71c0c333ade9260e2a236b7ed" kindref="member">dataFile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//System<sp/>log<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d2/de7/a00014_1ade1d12dae61eb3386722e7ad2c79518e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QFile*<sp/><ref refid="d2/de7/a00014_1ade1d12dae61eb3386722e7ad2c79518e" kindref="member">sysFile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Data<sp/>log<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de7/a00014_1a4fcbf4323f603bd19d67a2b78495d915" kindref="member">UAVLogger</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de7/a00014_1adf64e3a6a7ca71e188fb891a4daf730a" kindref="member">~UAVLogger</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>QTextStream*<sp/><ref refid="d2/de7/a00014_1abfd62a1f4f4f584858b758c0800e9b70" kindref="member">getSystemLoggerStream</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>QTextStream*<sp/><ref refid="d2/de7/a00014_1aeabc1d456526485e8c922a94b4bfa22d" kindref="member">getDataLoggerStream</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h"/>
+  </compounddef>
+</doxygen>

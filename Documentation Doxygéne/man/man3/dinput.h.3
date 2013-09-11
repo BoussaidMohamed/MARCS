@@ -1,0 +1,2404 @@
+.TH "dinput.h" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dinput.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPCPOINT\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIACTIONA\fP"
+.br
+.ti -1c
+.RI "union \fBDIACTIONA\&.__unnamed__\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIACTIONFORMATA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIACTIONFORMATW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIACTIONW\fP"
+.br
+.ti -1c
+.RI "union \fBDIACTIONW\&.__unnamed__\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICOLORSET\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICONDITION\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICONFIGUREDEVICESPARAMSA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICONFIGUREDEVICESPARAMSW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICONSTANTFORCE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDICUSTOMFORCE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDATAFORMAT\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVCAPS\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVCAPS_DX3\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEIMAGEINFOA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEIMAGEINFOHEADERA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEIMAGEINFOHEADERW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEIMAGEINFOW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEINSTANCE_DX3A\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEINSTANCE_DX3W\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEINSTANCEA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEINSTANCEW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTDATA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTDATA_DX3\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTINSTANCE_DX3A\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTINSTANCE_DX3W\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTINSTANCEA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIDEVICEOBJECTINSTANCEW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIEFFECT\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIEFFECT_DX5\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIEFFECTINFOA\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIEFFECTINFOW\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIEFFESCAPE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIENVELOPE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIFILEEFFECT\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIJOYSTATE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIJOYSTATE2\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIMOUSESTATE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIMOUSESTATE2\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIOBJECTDATAFORMAT\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPERIODIC\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPCAL\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPCALPOV\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPCPOINTS\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPDWORD\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPGUIDANDPATH\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPHEADER\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPPOINTER\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPRANGE\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIPROPSTRING\fP"
+.br
+.ti -1c
+.RI "struct \fBLPDIRAMPFORCE\fP"
+.br
+.in -1c
+.SH "Data Type Documentation"
+.PP 
+.SH "struct CPOINT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwLog\fP 
+.br
+.PP
+LONG \fIlP\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIACTIONA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBOPTIONAL union DIACTIONA\fP \fI__unnamed__\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwHow\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwObjID\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSemantic\fP 
+.br
+.PP
+OPTIONAL GUID \fIguidInstance\fP 
+.br
+.PP
+UINT_PTR \fIuAppData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "union DIACTIONA\&.__unnamed__"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LPCSTR \fIlptszActionName\fP 
+.br
+.PP
+UINT \fIuResIdString\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIACTIONFORMATA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwActionSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwBufferSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwCRC\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDataSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwGenre\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwNumActions\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+FILETIME \fIftTimeStamp\fP 
+.br
+.PP
+GUID \fIguidActionMap\fP 
+.br
+.PP
+OPTIONAL HINSTANCE \fIhInstString\fP 
+.br
+.PP
+OPTIONAL LONG \fIlAxisMax\fP 
+.br
+.PP
+OPTIONAL LONG \fIlAxisMin\fP 
+.br
+.PP
+LPDIACTIONA \fIrgoAction\fP 
+.br
+.PP
+CHAR \fItszActionMap[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIACTIONFORMATW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwActionSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwBufferSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwCRC\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDataSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwGenre\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwNumActions\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+FILETIME \fIftTimeStamp\fP 
+.br
+.PP
+GUID \fIguidActionMap\fP 
+.br
+.PP
+OPTIONAL HINSTANCE \fIhInstString\fP 
+.br
+.PP
+OPTIONAL LONG \fIlAxisMax\fP 
+.br
+.PP
+OPTIONAL LONG \fIlAxisMin\fP 
+.br
+.PP
+LPDIACTIONW \fIrgoAction\fP 
+.br
+.PP
+WCHAR \fItszActionMap[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIACTIONW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBOPTIONAL union DIACTIONW\fP \fI__unnamed__\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwHow\fP 
+.br
+.PP
+OPTIONAL \fBDWORD\fP \fIdwObjID\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSemantic\fP 
+.br
+.PP
+OPTIONAL GUID \fIguidInstance\fP 
+.br
+.PP
+UINT_PTR \fIuAppData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "union DIACTIONW\&.__unnamed__"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LPCWSTR \fIlptszActionName\fP 
+.br
+.PP
+UINT \fIuResIdString\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICOLORSET"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBD3DCOLOR\fP \fIcAreaFill\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcBorder\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcCalloutHighlight\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcCalloutLine\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcControlFill\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcHighlightFill\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcTextFore\fP 
+.br
+.PP
+\fBD3DCOLOR\fP \fIcTextHighlight\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICONDITION"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwNegativeSaturation\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwPositiveSaturation\fP 
+.br
+.PP
+LONG \fIlDeadBand\fP 
+.br
+.PP
+LONG \fIlNegativeCoefficient\fP 
+.br
+.PP
+LONG \fIlOffset\fP 
+.br
+.PP
+LONG \fIlPositiveCoefficient\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICONFIGUREDEVICESPARAMSA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDICOLORSET\fP \fIdics\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcFormats\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcUsers\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+HWND \fIhwnd\fP 
+.br
+.PP
+LPDIACTIONFORMATA \fIlprgFormats\fP 
+.br
+.PP
+LPSTR \fIlptszUserNames\fP 
+.br
+.PP
+IUnknown FAR * \fIlpUnkDDSTarget\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICONFIGUREDEVICESPARAMSW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDICOLORSET\fP \fIdics\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcFormats\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcUsers\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+HWND \fIhwnd\fP 
+.br
+.PP
+LPDIACTIONFORMATW \fIlprgFormats\fP 
+.br
+.PP
+LPWSTR \fIlptszUserNames\fP 
+.br
+.PP
+IUnknown FAR * \fIlpUnkDDSTarget\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICONSTANTFORCE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlMagnitude\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DICUSTOMFORCE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIcChannels\fP 
+.br
+.PP
+\fBDWORD\fP \fIcSamples\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSamplePeriod\fP 
+.br
+.PP
+LPLONG \fIrglForceData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDATAFORMAT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDataSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwNumObjs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwObjSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+LPDIOBJECTDATAFORMAT \fIrgodf\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVCAPS"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwButtons\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFDriverVersion\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFMinTimeResolution\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFSamplePeriod\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFirmwareRevision\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwHardwareRevision\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwPOVs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVCAPS_DX3"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwButtons\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwPOVs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEIMAGEINFOA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwcValidPts\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwObjID\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTextAlign\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwViewID\fP 
+.br
+.PP
+RECT \fIrcCalloutRect\fP 
+.br
+.PP
+RECT \fIrcOverlay\fP 
+.br
+.PP
+POINT \fIrgptCalloutLine[5]\fP 
+.br
+.PP
+CHAR \fItszImagePath[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEIMAGEINFOHEADERA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwBufferSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwBufferUsed\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcButtons\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcPOVs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcViews\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSizeImageInfo\fP 
+.br
+.PP
+LPDIDEVICEIMAGEINFOA \fIlprgImageInfoArray\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEIMAGEINFOHEADERW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwBufferSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwBufferUsed\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcButtons\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcPOVs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwcViews\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSizeImageInfo\fP 
+.br
+.PP
+LPDIDEVICEIMAGEINFOW \fIlprgImageInfoArray\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEIMAGEINFOW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwcValidPts\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwObjID\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTextAlign\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwViewID\fP 
+.br
+.PP
+RECT \fIrcCalloutRect\fP 
+.br
+.PP
+RECT \fIrcOverlay\fP 
+.br
+.PP
+POINT \fIrgptCalloutLine[5]\fP 
+.br
+.PP
+WCHAR \fItszImagePath[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEINSTANCE_DX3A"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+GUID \fIguidInstance\fP 
+.br
+.PP
+GUID \fIguidProduct\fP 
+.br
+.PP
+CHAR \fItszInstanceName[MAX_PATH]\fP 
+.br
+.PP
+CHAR \fItszProductName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEINSTANCE_DX3W"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+GUID \fIguidInstance\fP 
+.br
+.PP
+GUID \fIguidProduct\fP 
+.br
+.PP
+WCHAR \fItszInstanceName[MAX_PATH]\fP 
+.br
+.PP
+WCHAR \fItszProductName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEINSTANCEA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+GUID \fIguidFFDriver\fP 
+.br
+.PP
+GUID \fIguidInstance\fP 
+.br
+.PP
+GUID \fIguidProduct\fP 
+.br
+.PP
+CHAR \fItszInstanceName[MAX_PATH]\fP 
+.br
+.PP
+CHAR \fItszProductName[MAX_PATH]\fP 
+.br
+.PP
+WORD \fIwUsage\fP 
+.br
+.PP
+WORD \fIwUsagePage\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEINSTANCEW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDevType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+GUID \fIguidFFDriver\fP 
+.br
+.PP
+GUID \fIguidInstance\fP 
+.br
+.PP
+GUID \fIguidProduct\fP 
+.br
+.PP
+WCHAR \fItszInstanceName[MAX_PATH]\fP 
+.br
+.PP
+WCHAR \fItszProductName[MAX_PATH]\fP 
+.br
+.PP
+WORD \fIwUsage\fP 
+.br
+.PP
+WORD \fIwUsagePage\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTDATA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwData\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSequence\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTimeStamp\fP 
+.br
+.PP
+UINT_PTR \fIuAppData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTDATA_DX3"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwData\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSequence\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTimeStamp\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTINSTANCE_DX3A"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwType\fP 
+.br
+.PP
+GUID \fIguidType\fP 
+.br
+.PP
+CHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTINSTANCE_DX3W"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwType\fP 
+.br
+.PP
+GUID \fIguidType\fP 
+.br
+.PP
+WCHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTINSTANCEA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDimension\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFForceResolution\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFMaxForce\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwType\fP 
+.br
+.PP
+GUID \fIguidType\fP 
+.br
+.PP
+CHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+WORD \fIwCollectionNumber\fP 
+.br
+.PP
+WORD \fIwDesignatorIndex\fP 
+.br
+.PP
+WORD \fIwExponent\fP 
+.br
+.PP
+WORD \fIwReportId\fP 
+.br
+.PP
+WORD \fIwUsage\fP 
+.br
+.PP
+WORD \fIwUsagePage\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIDEVICEOBJECTINSTANCEW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDimension\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFForceResolution\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFFMaxForce\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwType\fP 
+.br
+.PP
+GUID \fIguidType\fP 
+.br
+.PP
+WCHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+WORD \fIwCollectionNumber\fP 
+.br
+.PP
+WORD \fIwDesignatorIndex\fP 
+.br
+.PP
+WORD \fIwExponent\fP 
+.br
+.PP
+WORD \fIwReportId\fP 
+.br
+.PP
+WORD \fIwUsage\fP 
+.br
+.PP
+WORD \fIwUsagePage\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIEFFECT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIcAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIcbTypeSpecificParams\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDuration\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwGain\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSamplePeriod\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwStartDelay\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTriggerButton\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTriggerRepeatInterval\fP 
+.br
+.PP
+LPDIENVELOPE \fIlpEnvelope\fP 
+.br
+.PP
+\fBLPVOID\fP \fIlpvTypeSpecificParams\fP 
+.br
+.PP
+LPDWORD \fIrgdwAxes\fP 
+.br
+.PP
+LPLONG \fIrglDirection\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIEFFECT_DX5"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIcAxes\fP 
+.br
+.PP
+\fBDWORD\fP \fIcbTypeSpecificParams\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwDuration\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwGain\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSamplePeriod\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTriggerButton\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwTriggerRepeatInterval\fP 
+.br
+.PP
+LPDIENVELOPE \fIlpEnvelope\fP 
+.br
+.PP
+\fBLPVOID\fP \fIlpvTypeSpecificParams\fP 
+.br
+.PP
+LPDWORD \fIrgdwAxes\fP 
+.br
+.PP
+LPLONG \fIrglDirection\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIEFFECTINFOA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDynamicParams\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwEffType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwStaticParams\fP 
+.br
+.PP
+GUID \fIguid\fP 
+.br
+.PP
+CHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIEFFECTINFOW"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwDynamicParams\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwEffType\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwStaticParams\fP 
+.br
+.PP
+GUID \fIguid\fP 
+.br
+.PP
+WCHAR \fItszName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIEFFESCAPE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIcbInBuffer\fP 
+.br
+.PP
+\fBDWORD\fP \fIcbOutBuffer\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwCommand\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+\fBLPVOID\fP \fIlpvInBuffer\fP 
+.br
+.PP
+\fBLPVOID\fP \fIlpvOutBuffer\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIENVELOPE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwAttackLevel\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwAttackTime\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFadeLevel\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwFadeTime\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIFILEEFFECT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+GUID \fIGuidEffect\fP 
+.br
+.PP
+\fBLPCDIEFFECT\fP \fIlpDiEffect\fP 
+.br
+.PP
+CHAR \fIszFriendlyName[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIJOYSTATE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlRx\fP 
+.br
+.PP
+LONG \fIlRy\fP 
+.br
+.PP
+LONG \fIlRz\fP 
+.br
+.PP
+LONG \fIlX\fP 
+.br
+.PP
+LONG \fIlY\fP 
+.br
+.PP
+LONG \fIlZ\fP 
+.br
+.PP
+BYTE \fIrgbButtons[32]\fP 
+.br
+.PP
+\fBDWORD\fP \fIrgdwPOV[4]\fP 
+.br
+.PP
+LONG \fIrglSlider[2]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIJOYSTATE2"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlARx\fP 
+.br
+.PP
+LONG \fIlARy\fP 
+.br
+.PP
+LONG \fIlARz\fP 
+.br
+.PP
+LONG \fIlAX\fP 
+.br
+.PP
+LONG \fIlAY\fP 
+.br
+.PP
+LONG \fIlAZ\fP 
+.br
+.PP
+LONG \fIlFRx\fP 
+.br
+.PP
+LONG \fIlFRy\fP 
+.br
+.PP
+LONG \fIlFRz\fP 
+.br
+.PP
+LONG \fIlFX\fP 
+.br
+.PP
+LONG \fIlFY\fP 
+.br
+.PP
+LONG \fIlFZ\fP 
+.br
+.PP
+LONG \fIlRx\fP 
+.br
+.PP
+LONG \fIlRy\fP 
+.br
+.PP
+LONG \fIlRz\fP 
+.br
+.PP
+LONG \fIlVRx\fP 
+.br
+.PP
+LONG \fIlVRy\fP 
+.br
+.PP
+LONG \fIlVRz\fP 
+.br
+.PP
+LONG \fIlVX\fP 
+.br
+.PP
+LONG \fIlVY\fP 
+.br
+.PP
+LONG \fIlVZ\fP 
+.br
+.PP
+LONG \fIlX\fP 
+.br
+.PP
+LONG \fIlY\fP 
+.br
+.PP
+LONG \fIlZ\fP 
+.br
+.PP
+BYTE \fIrgbButtons[128]\fP 
+.br
+.PP
+\fBDWORD\fP \fIrgdwPOV[4]\fP 
+.br
+.PP
+LONG \fIrglASlider[2]\fP 
+.br
+.PP
+LONG \fIrglFSlider[2]\fP 
+.br
+.PP
+LONG \fIrglSlider[2]\fP 
+.br
+.PP
+LONG \fIrglVSlider[2]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIMOUSESTATE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlX\fP 
+.br
+.PP
+LONG \fIlY\fP 
+.br
+.PP
+LONG \fIlZ\fP 
+.br
+.PP
+BYTE \fIrgbButtons[4]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIMOUSESTATE2"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlX\fP 
+.br
+.PP
+LONG \fIlY\fP 
+.br
+.PP
+LONG \fIlZ\fP 
+.br
+.PP
+BYTE \fIrgbButtons[8]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIOBJECTDATAFORMAT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwFlags\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwOfs\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwType\fP 
+.br
+.PP
+const GUID * \fIpguid\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPERIODIC"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwMagnitude\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwPeriod\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwPhase\fP 
+.br
+.PP
+LONG \fIlOffset\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPCAL"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+LONG \fIlCenter\fP 
+.br
+.PP
+LONG \fIlMax\fP 
+.br
+.PP
+LONG \fIlMin\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPCALPOV"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+LONG \fIlMax[5]\fP 
+.br
+.PP
+LONG \fIlMin[5]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPCPOINTS"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBCPOINT\fP \fIcp[MAXCPOINTSNUM]\fP 
+.br
+.PP
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwCPointsNum\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPDWORD"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPGUIDANDPATH"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+GUID \fIguidClass\fP 
+.br
+.PP
+WCHAR \fIwszPath[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPHEADER"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDWORD\fP \fIdwHeaderSize\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwHow\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwObj\fP 
+.br
+.PP
+\fBDWORD\fP \fIdwSize\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPPOINTER"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+UINT_PTR \fIuData\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPRANGE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+LONG \fIlMax\fP 
+.br
+.PP
+LONG \fIlMin\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIPROPSTRING"
+.PP 
+\fBData Fields:\fP
+.RS 4
+\fBDIPROPHEADER\fP \fIdiph\fP 
+.br
+.PP
+WCHAR \fIwsz[MAX_PATH]\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct DIRAMPFORCE"
+.PP 
+\fBData Fields:\fP
+.RS 4
+LONG \fIlEnd\fP 
+.br
+.PP
+LONG \fIlStart\fP 
+.br
+.PP
+.RE
+.PP
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBDWORD\fP D3DCOLOR"
+
+.SS "typedef \fBDIACTIONA\fP DIACTION"
+
+.SS "typedef \fBDIACTIONFORMATA\fP DIACTIONFORMAT"
+
+.SS "typedef \fBDICONFIGUREDEVICESPARAMSA\fP DICONFIGUREDEVICESPARAMS"
+
+.SS "typedef \fBDIDEVICEIMAGEINFOA\fP DIDEVICEIMAGEINFO"
+
+.SS "typedef \fBDIDEVICEIMAGEINFOHEADERA\fP DIDEVICEIMAGEINFOHEADER"
+
+.SS "typedef \fBDIDEVICEINSTANCEA\fP DIDEVICEINSTANCE"
+
+.SS "typedef \fBDIDEVICEINSTANCE_DX3A\fP DIDEVICEINSTANCE_DX3"
+
+.SS "typedef \fBDIDEVICEOBJECTINSTANCEA\fP DIDEVICEOBJECTINSTANCE"
+
+.SS "typedef \fBDIDEVICEOBJECTINSTANCE_DX3A\fP DIDEVICEOBJECTINSTANCE_DX3"
+
+.SS "typedef \fBDIEFFECT\fP DIEFFECT_DX6"
+
+.SS "typedef \fBDIEFFECTINFOA\fP DIEFFECTINFO"
+
+.SS "typedef const \fBDIACTION\fP * LPCDIACTION"
+
+.SS "typedef const \fBDIACTIONA\fP* LPCDIACTIONA"
+
+.SS "typedef const \fBDIACTIONFORMAT\fP * LPCDIACTIONFORMAT"
+
+.SS "typedef const \fBDIACTIONFORMATA\fP* LPCDIACTIONFORMATA"
+
+.SS "typedef const \fBDIACTIONFORMATW\fP* LPCDIACTIONFORMATW"
+
+.SS "typedef const \fBDIACTIONW\fP* LPCDIACTIONW"
+
+.SS "typedef const \fBDICOLORSET\fP* LPCDICOLORSET"
+
+.SS "typedef const \fBDICONDITION\fP* LPCDICONDITION"
+
+.SS "typedef const \fBDICONFIGUREDEVICESPARAMS\fP * LPCDICONFIGUREDEVICESPARAMS"
+
+.SS "typedef const \fBDICONFIGUREDEVICESPARAMSA\fP* LPCDICONFIGUREDEVICESPARAMSA"
+
+.SS "typedef const \fBDICONFIGUREDEVICESPARAMSW\fP* LPCDICONFIGUREDEVICESPARAMSW"
+
+.SS "typedef const \fBDICONSTANTFORCE\fP* LPCDICONSTANTFORCE"
+
+.SS "typedef const \fBDICUSTOMFORCE\fP* LPCDICUSTOMFORCE"
+
+.SS "typedef const \fBDIDATAFORMAT\fP* LPCDIDATAFORMAT"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFO\fP * LPCDIDEVICEIMAGEINFO"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFOA\fP* LPCDIDEVICEIMAGEINFOA"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFOHEADER\fP * LPCDIDEVICEIMAGEINFOHEADER"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFOHEADERA\fP* LPCDIDEVICEIMAGEINFOHEADERA"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFOHEADERW\fP* LPCDIDEVICEIMAGEINFOHEADERW"
+
+.SS "typedef const \fBDIDEVICEIMAGEINFOW\fP* LPCDIDEVICEIMAGEINFOW"
+
+.SS "typedef const \fBDIDEVICEINSTANCE\fP * LPCDIDEVICEINSTANCE"
+
+.SS "typedef const \fBDIDEVICEINSTANCE_DX3\fP* LPCDIDEVICEINSTANCE_DX3"
+
+.SS "typedef const \fBDIDEVICEINSTANCE_DX3A\fP* LPCDIDEVICEINSTANCE_DX3A"
+
+.SS "typedef const \fBDIDEVICEINSTANCE_DX3W\fP* LPCDIDEVICEINSTANCE_DX3W"
+
+.SS "typedef const \fBDIDEVICEINSTANCEA\fP* LPCDIDEVICEINSTANCEA"
+
+.SS "typedef const \fBDIDEVICEINSTANCEW\fP* LPCDIDEVICEINSTANCEW"
+
+.SS "typedef const \fBDIDEVICEOBJECTDATA\fP* LPCDIDEVICEOBJECTDATA"
+
+.SS "typedef const \fBDIDEVICEOBJECTDATA_DX3\fP* LPCDIDEVICEOBJECTDATA_DX"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCE\fP* LPCDIDEVICEOBJECTINSTANCE"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCE_DX3\fP* LPCDIDEVICEOBJECTINSTANCE_DX3"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCE_DX3A\fP* LPCDIDEVICEOBJECTINSTANCE_DX3A"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCE_DX3W\fP* LPCDIDEVICEOBJECTINSTANCE_DX3W"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCEA\fP* LPCDIDEVICEOBJECTINSTANCEA"
+
+.SS "typedef const \fBDIDEVICEOBJECTINSTANCEW\fP* LPCDIDEVICEOBJECTINSTANCEW"
+
+.SS "typedef const \fBDIEFFECT\fP* LPCDIEFFECT"
+
+.SS "typedef const \fBDIEFFECT_DX5\fP* LPCDIEFFECT_DX5"
+
+.SS "typedef const \fBDIEFFECTINFO\fP* LPCDIEFFECTINFO"
+
+.SS "typedef const \fBDIEFFECTINFOA\fP* LPCDIEFFECTINFOA"
+
+.SS "typedef const \fBDIEFFECTINFOW\fP* LPCDIEFFECTINFOW"
+
+.SS "typedef const \fBDIENVELOPE\fP* LPCDIENVELOPE"
+
+.SS "typedef const \fBDIFILEEFFECT\fP* LPCDIFILEEFFECT"
+
+.SS "typedef const \fBDIOBJECTDATAFORMAT\fP* LPCDIOBJECTDATAFORMAT"
+
+.SS "typedef const \fBDIPERIODIC\fP* LPCDIPERIODIC"
+
+.SS "typedef const \fBDIPROPCAL\fP* LPCDIPROPCAL"
+
+.SS "typedef const \fBDIPROPCALPOV\fP* LPCDIPROPCALPOV"
+
+.SS "typedef const \fBDIPROPCPOINTS\fP* LPCDIPROPCPOINTS"
+
+.SS "typedef const \fBDIPROPDWORD\fP* LPCDIPROPDWORD"
+
+.SS "typedef const \fBDIPROPGUIDANDPATH\fP* LPCDIPROPGUIDANDPATH"
+
+.SS "typedef const \fBDIPROPHEADER\fP* LPCDIPROPHEADER"
+
+.SS "typedef const \fBDIPROPPOINTER\fP* LPCDIPROPPOINTER"
+
+.SS "typedef const \fBDIPROPRANGE\fP* LPCDIPROPRANGE"
+
+.SS "typedef const \fBDIPROPSTRING\fP* LPCDIPROPSTRING"
+
+.SS "typedef const \fBDIRAMPFORCE\fP* LPCDIRAMPFORCE"
+
+.SS "typedef LPDIACTIONA LPDIACTION"
+
+.SS "typedef LPDIACTIONFORMATA LPDIACTIONFORMAT"
+
+.SS "typedef LPDICONFIGUREDEVICESPARAMSA LPDICONFIGUREDEVICESPARAMS"
+
+.SS "typedef LPDIDEVICEIMAGEINFOA LPDIDEVICEIMAGEINFO"
+
+.SS "typedef LPDIDEVICEIMAGEINFOHEADERA LPDIDEVICEIMAGEINFOHEADER"
+
+.SS "typedef LPDIDEVICEINSTANCEA LPDIDEVICEINSTANCE"
+
+.SS "typedef LPDIDEVICEINSTANCE_DX3A LPDIDEVICEINSTANCE_DX3"
+
+.SS "typedef LPDIDEVICEOBJECTINSTANCEA LPDIDEVICEOBJECTINSTANCE"
+
+.SS "typedef LPDIDEVICEOBJECTINSTANCE_DX3A LPDIDEVICEOBJECTINSTANCE_DX3"
+
+.SS "typedef LPDIEFFECT LPDIEFFECT_DX6"
+
+.SS "typedef LPDIEFFECTINFOA LPDIEFFECTINFO"
+
+.SS "typedef struct IDirectInput* LPDIRECTINPUT"
+
+.SS "typedef struct IDirectInput2* LPDIRECTINPUT2"
+
+.SS "typedef struct IDirectInput2A* LPDIRECTINPUT2A"
+
+.SS "typedef struct IDirectInput2W* LPDIRECTINPUT2W"
+
+.SS "typedef struct IDirectInput7* LPDIRECTINPUT7"
+
+.SS "typedef struct IDirectInput7A* LPDIRECTINPUT7A"
+
+.SS "typedef struct IDirectInput7W* LPDIRECTINPUT7W"
+
+.SS "typedef struct IDirectInput8* LPDIRECTINPUT8"
+
+.SS "typedef struct IDirectInput8A* LPDIRECTINPUT8A"
+
+.SS "typedef struct IDirectInput8W* LPDIRECTINPUT8W"
+
+.SS "typedef struct IDirectInputA* LPDIRECTINPUTA"
+
+.SS "typedef struct IDirectInputDevice* LPDIRECTINPUTDEVICE"
+
+.SS "typedef struct IDirectInputDevice2* LPDIRECTINPUTDEVICE2"
+
+.SS "typedef struct IDirectInputDevice2A* LPDIRECTINPUTDEVICE2A"
+
+.SS "typedef struct IDirectInputDevice2W* LPDIRECTINPUTDEVICE2W"
+
+.SS "typedef struct IDirectInputDevice7* LPDIRECTINPUTDEVICE7"
+
+.SS "typedef struct IDirectInputDevice7A* LPDIRECTINPUTDEVICE7A"
+
+.SS "typedef struct IDirectInputDevice7W* LPDIRECTINPUTDEVICE7W"
+
+.SS "typedef struct IDirectInputDevice8* LPDIRECTINPUTDEVICE8"
+
+.SS "typedef LPDIRECTINPUTDEVICE8A"
+
+.SS "typedef LPDIRECTINPUTDEVICE8W"
+
+.SS "typedef struct IDirectInputDeviceA* LPDIRECTINPUTDEVICEA"
+
+.SS "typedef struct IDirectInputDeviceW* LPDIRECTINPUTDEVICEW"
+
+.SS "typedef struct IDirectInputEffect* LPDIRECTINPUTEFFECT"
+
+.SS "typedef struct IDirectInputW* LPDIRECTINPUTW"
+
+.SS "typedef void(WINAPI* LPFNSHOWJOYCPL)(HWND hWnd)"
+
+.SH "Function Documentation"
+.PP 
+.SS "typedef BOOL (FAR PASCAL *LPDIENUMEFFECTSINFILECALLBACK)"
+
+.SS "DECLARE_INTERFACE_ (IDirectInputEffect, IUnknown)"
+
+.PP
+.nf
+325 {
+326     /*** IUnknown methods ***/
+327     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+328     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+329     STDMETHOD_(ULONG,Release)(THIS) PURE;
+330 
+331     /*** IDirectInputEffect methods ***/
+332     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+333     STDMETHOD(GetEffectGuid)(THIS_ LPGUID) PURE;
+334     STDMETHOD(GetParameters)(THIS_ LPDIEFFECT,DWORD) PURE;
+335     STDMETHOD(SetParameters)(THIS_ LPCDIEFFECT,DWORD) PURE;
+336     STDMETHOD(Start)(THIS_ DWORD,DWORD) PURE;
+337     STDMETHOD(Stop)(THIS) PURE;
+338     STDMETHOD(GetEffectStatus)(THIS_ LPDWORD) PURE;
+339     STDMETHOD(Download)(THIS) PURE;
+340     STDMETHOD(Unload)(THIS) PURE;
+341     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+342 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDeviceW, IUnknown)"
+
+.PP
+.nf
+1307 {
+1308     /*** IUnknown methods ***/
+1309     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1310     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1311     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1312 
+1313     /*** IDirectInputDeviceW methods ***/
+1314     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1315     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKW,LPVOID,DWORD) PURE;
+1316     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1317     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1318     STDMETHOD(Acquire)(THIS) PURE;
+1319     STDMETHOD(Unacquire)(THIS) PURE;
+1320     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1321     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1322     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1323     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1324     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1325     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEW,DWORD,DWORD) PURE;
+1326     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEW) PURE;
+1327     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1328     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1329 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDeviceA, IUnknown)"
+
+.PP
+.nf
+1337 {
+1338     /*** IUnknown methods ***/
+1339     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1340     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1341     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1342 
+1343     /*** IDirectInputDeviceA methods ***/
+1344     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1345     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKA,LPVOID,DWORD) PURE;
+1346     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1347     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1348     STDMETHOD(Acquire)(THIS) PURE;
+1349     STDMETHOD(Unacquire)(THIS) PURE;
+1350     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1351     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1352     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1353     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1354     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1355     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEA,DWORD,DWORD) PURE;
+1356     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEA) PURE;
+1357     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1358     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1359 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice2W, IDirectInputDeviceW)"
+
+.PP
+.nf
+1483 {
+1484     /*** IUnknown methods ***/
+1485     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1486     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1487     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1488 
+1489     /*** IDirectInputDeviceW methods ***/
+1490     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1491     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKW,LPVOID,DWORD) PURE;
+1492     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1493     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1494     STDMETHOD(Acquire)(THIS) PURE;
+1495     STDMETHOD(Unacquire)(THIS) PURE;
+1496     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1497     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1498     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1499     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1500     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1501     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEW,DWORD,DWORD) PURE;
+1502     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEW) PURE;
+1503     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1504     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1505 
+1506     /*** IDirectInputDevice2W methods ***/
+1507     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1508     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKW,LPVOID,DWORD) PURE;
+1509     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOW,REFGUID) PURE;
+1510     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1511     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1512     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1513     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1514     STDMETHOD(Poll)(THIS) PURE;
+1515     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1516 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice2A, IDirectInputDeviceA)"
+
+.PP
+.nf
+1524 {
+1525     /*** IUnknown methods ***/
+1526     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1527     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1528     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1529 
+1530     /*** IDirectInputDeviceA methods ***/
+1531     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1532     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKA,LPVOID,DWORD) PURE;
+1533     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1534     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1535     STDMETHOD(Acquire)(THIS) PURE;
+1536     STDMETHOD(Unacquire)(THIS) PURE;
+1537     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1538     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1539     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1540     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1541     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1542     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEA,DWORD,DWORD) PURE;
+1543     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEA) PURE;
+1544     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1545     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1546 
+1547     /*** IDirectInputDevice2A methods ***/
+1548     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1549     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKA,LPVOID,DWORD) PURE;
+1550     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOA,REFGUID) PURE;
+1551     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1552     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1553     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1554     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1555     STDMETHOD(Poll)(THIS) PURE;
+1556     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1557 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice7W, IDirectInputDevice2W)"
+
+.PP
+.nf
+1645 {
+1646     /*** IUnknown methods ***/
+1647     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1648     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1649     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1650 
+1651     /*** IDirectInputDevice2W methods ***/
+1652     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1653     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKW,LPVOID,DWORD) PURE;
+1654     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1655     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1656     STDMETHOD(Acquire)(THIS) PURE;
+1657     STDMETHOD(Unacquire)(THIS) PURE;
+1658     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1659     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1660     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1661     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1662     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1663     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEW,DWORD,DWORD) PURE;
+1664     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEW) PURE;
+1665     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1666     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1667     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1668     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKW,LPVOID,DWORD) PURE;
+1669     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOW,REFGUID) PURE;
+1670     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1671     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1672     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1673     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1674     STDMETHOD(Poll)(THIS) PURE;
+1675     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1676 
+1677     /*** IDirectInputDevice7W methods ***/
+1678     STDMETHOD(EnumEffectsInFile)(THIS_ LPCWSTR,LPDIENUMEFFECTSINFILECALLBACK,LPVOID,DWORD) PURE;
+1679     STDMETHOD(WriteEffectToFile)(THIS_ LPCWSTR,DWORD,LPDIFILEEFFECT,DWORD) PURE;
+1680 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice7A, IDirectInputDevice2A)"
+
+.PP
+.nf
+1688 {
+1689     /*** IUnknown methods ***/
+1690     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1691     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1692     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1693 
+1694     /*** IDirectInputDevice2A methods ***/
+1695     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1696     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKA,LPVOID,DWORD) PURE;
+1697     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1698     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1699     STDMETHOD(Acquire)(THIS) PURE;
+1700     STDMETHOD(Unacquire)(THIS) PURE;
+1701     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1702     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1703     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1704     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1705     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1706     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEA,DWORD,DWORD) PURE;
+1707     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEA) PURE;
+1708     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1709     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1710     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1711     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKA,LPVOID,DWORD) PURE;
+1712     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOA,REFGUID) PURE;
+1713     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1714     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1715     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1716     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1717     STDMETHOD(Poll)(THIS) PURE;
+1718     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1719 
+1720     /*** IDirectInputDevice7A methods ***/
+1721     STDMETHOD(EnumEffectsInFile)(THIS_ LPCSTR,LPDIENUMEFFECTSINFILECALLBACK,LPVOID,DWORD) PURE;
+1722     STDMETHOD(WriteEffectToFile)(THIS_ LPCSTR,DWORD,LPDIFILEEFFECT,DWORD) PURE;
+1723 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice8W, IUnknown)"
+
+.PP
+.nf
+1812 {
+1813     /*** IUnknown methods ***/
+1814     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1815     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1816     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1817 
+1818     /*** IDirectInputDevice8W methods ***/
+1819     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1820     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKW,LPVOID,DWORD) PURE;
+1821     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1822     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1823     STDMETHOD(Acquire)(THIS) PURE;
+1824     STDMETHOD(Unacquire)(THIS) PURE;
+1825     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1826     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1827     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1828     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1829     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1830     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEW,DWORD,DWORD) PURE;
+1831     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEW) PURE;
+1832     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1833     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1834     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1835     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKW,LPVOID,DWORD) PURE;
+1836     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOW,REFGUID) PURE;
+1837     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1838     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1839     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1840     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1841     STDMETHOD(Poll)(THIS) PURE;
+1842     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1843     STDMETHOD(EnumEffectsInFile)(THIS_ LPCWSTR,LPDIENUMEFFECTSINFILECALLBACK,LPVOID,DWORD) PURE;
+1844     STDMETHOD(WriteEffectToFile)(THIS_ LPCWSTR,DWORD,LPDIFILEEFFECT,DWORD) PURE;
+1845     STDMETHOD(BuildActionMap)(THIS_ LPDIACTIONFORMATW,LPCWSTR,DWORD) PURE;
+1846     STDMETHOD(SetActionMap)(THIS_ LPDIACTIONFORMATW,LPCWSTR,DWORD) PURE;
+1847     STDMETHOD(GetImageInfo)(THIS_ LPDIDEVICEIMAGEINFOHEADERW) PURE;
+1848 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputDevice8A, IUnknown)"
+
+.PP
+.nf
+1856 {
+1857     /*** IUnknown methods ***/
+1858     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+1859     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+1860     STDMETHOD_(ULONG,Release)(THIS) PURE;
+1861 
+1862     /*** IDirectInputDevice8A methods ***/
+1863     STDMETHOD(GetCapabilities)(THIS_ LPDIDEVCAPS) PURE;
+1864     STDMETHOD(EnumObjects)(THIS_ LPDIENUMDEVICEOBJECTSCALLBACKA,LPVOID,DWORD) PURE;
+1865     STDMETHOD(GetProperty)(THIS_ REFGUID,LPDIPROPHEADER) PURE;
+1866     STDMETHOD(SetProperty)(THIS_ REFGUID,LPCDIPROPHEADER) PURE;
+1867     STDMETHOD(Acquire)(THIS) PURE;
+1868     STDMETHOD(Unacquire)(THIS) PURE;
+1869     STDMETHOD(GetDeviceState)(THIS_ DWORD,LPVOID) PURE;
+1870     STDMETHOD(GetDeviceData)(THIS_ DWORD,LPDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1871     STDMETHOD(SetDataFormat)(THIS_ LPCDIDATAFORMAT) PURE;
+1872     STDMETHOD(SetEventNotification)(THIS_ HANDLE) PURE;
+1873     STDMETHOD(SetCooperativeLevel)(THIS_ HWND,DWORD) PURE;
+1874     STDMETHOD(GetObjectInfo)(THIS_ LPDIDEVICEOBJECTINSTANCEA,DWORD,DWORD) PURE;
+1875     STDMETHOD(GetDeviceInfo)(THIS_ LPDIDEVICEINSTANCEA) PURE;
+1876     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+1877     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD,REFGUID) PURE;
+1878     STDMETHOD(CreateEffect)(THIS_ REFGUID,LPCDIEFFECT,LPDIRECTINPUTEFFECT *,LPUNKNOWN) PURE;
+1879     STDMETHOD(EnumEffects)(THIS_ LPDIENUMEFFECTSCALLBACKA,LPVOID,DWORD) PURE;
+1880     STDMETHOD(GetEffectInfo)(THIS_ LPDIEFFECTINFOA,REFGUID) PURE;
+1881     STDMETHOD(GetForceFeedbackState)(THIS_ LPDWORD) PURE;
+1882     STDMETHOD(SendForceFeedbackCommand)(THIS_ DWORD) PURE;
+1883     STDMETHOD(EnumCreatedEffectObjects)(THIS_ LPDIENUMCREATEDEFFECTOBJECTSCALLBACK,LPVOID,DWORD) PURE;
+1884     STDMETHOD(Escape)(THIS_ LPDIEFFESCAPE) PURE;
+1885     STDMETHOD(Poll)(THIS) PURE;
+1886     STDMETHOD(SendDeviceData)(THIS_ DWORD,LPCDIDEVICEOBJECTDATA,LPDWORD,DWORD) PURE;
+1887     STDMETHOD(EnumEffectsInFile)(THIS_ LPCSTR,LPDIENUMEFFECTSINFILECALLBACK,LPVOID,DWORD) PURE;
+1888     STDMETHOD(WriteEffectToFile)(THIS_ LPCSTR,DWORD,LPDIFILEEFFECT,DWORD) PURE;
+1889     STDMETHOD(BuildActionMap)(THIS_ LPDIACTIONFORMATA,LPCSTR,DWORD) PURE;
+1890     STDMETHOD(SetActionMap)(THIS_ LPDIACTIONFORMATA,LPCSTR,DWORD) PURE;
+1891     STDMETHOD(GetImageInfo)(THIS_ LPDIDEVICEIMAGEINFOHEADERA) PURE;
+1892 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputW, IUnknown)"
+
+.PP
+.nf
+2368 {
+2369     /*** IUnknown methods ***/
+2370     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2371     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2372     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2373 
+2374     /*** IDirectInputW methods ***/
+2375     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEW *,LPUNKNOWN) PURE;
+2376     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKW,LPVOID,DWORD) PURE;
+2377     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2378     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2379     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2380 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInputA, IUnknown)"
+
+.PP
+.nf
+2388 {
+2389     /*** IUnknown methods ***/
+2390     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2391     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2392     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2393 
+2394     /*** IDirectInputA methods ***/
+2395     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEA *,LPUNKNOWN) PURE;
+2396     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKA,LPVOID,DWORD) PURE;
+2397     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2398     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2399     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2400 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput2W, IDirectInputW)"
+
+.PP
+.nf
+2439 {
+2440     /*** IUnknown methods ***/
+2441     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2442     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2443     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2444 
+2445     /*** IDirectInputW methods ***/
+2446     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEW *,LPUNKNOWN) PURE;
+2447     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKW,LPVOID,DWORD) PURE;
+2448     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2449     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2450     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2451 
+2452     /*** IDirectInput2W methods ***/
+2453     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCWSTR,LPGUID) PURE;
+2454 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput2A, IDirectInputA)"
+
+.PP
+.nf
+2462 {
+2463     /*** IUnknown methods ***/
+2464     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2465     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2466     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2467 
+2468     /*** IDirectInputA methods ***/
+2469     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEA *,LPUNKNOWN) PURE;
+2470     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKA,LPVOID,DWORD) PURE;
+2471     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2472     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2473     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2474 
+2475     /*** IDirectInput2A methods ***/
+2476     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCSTR,LPGUID) PURE;
+2477 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput7W, IDirectInput2W)"
+
+.PP
+.nf
+2519 {
+2520     /*** IUnknown methods ***/
+2521     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2522     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2523     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2524 
+2525     /*** IDirectInput2W methods ***/
+2526     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEW *,LPUNKNOWN) PURE;
+2527     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKW,LPVOID,DWORD) PURE;
+2528     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2529     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2530     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2531     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCWSTR,LPGUID) PURE;
+2532 
+2533     /*** IDirectInput7W methods ***/
+2534     STDMETHOD(CreateDeviceEx)(THIS_ REFGUID,REFIID,LPVOID *,LPUNKNOWN) PURE;
+2535 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput7A, IDirectInput2A)"
+
+.PP
+.nf
+2543 {
+2544     /*** IUnknown methods ***/
+2545     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2546     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2547     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2548 
+2549     /*** IDirectInput2A methods ***/
+2550     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICEA *,LPUNKNOWN) PURE;
+2551     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKA,LPVOID,DWORD) PURE;
+2552     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2553     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2554     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2555     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCSTR,LPGUID) PURE;
+2556 
+2557     /*** IDirectInput7A methods ***/
+2558     STDMETHOD(CreateDeviceEx)(THIS_ REFGUID,REFIID,LPVOID *,LPUNKNOWN) PURE;
+2559 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput8W, IUnknown)"
+
+.PP
+.nf
+2603 {
+2604     /*** IUnknown methods ***/
+2605     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2606     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2607     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2608 
+2609     /*** IDirectInput8W methods ***/
+2610     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICE8W *,LPUNKNOWN) PURE;
+2611     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKW,LPVOID,DWORD) PURE;
+2612     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2613     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2614     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2615     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCWSTR,LPGUID) PURE;
+2616     STDMETHOD(EnumDevicesBySemantics)(THIS_ LPCWSTR,LPDIACTIONFORMATW,LPDIENUMDEVICESBYSEMANTICSCBW,LPVOID,DWORD) PURE;
+2617     STDMETHOD(ConfigureDevices)(THIS_ LPDICONFIGUREDEVICESCALLBACK,LPDICONFIGUREDEVICESPARAMSW,DWORD,LPVOID) PURE;
+2618 };
+.fi
+.SS "DECLARE_INTERFACE_ (IDirectInput8A, IUnknown)"
+
+.PP
+.nf
+2626 {
+2627     /*** IUnknown methods ***/
+2628     STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
+2629     STDMETHOD_(ULONG,AddRef)(THIS) PURE;
+2630     STDMETHOD_(ULONG,Release)(THIS) PURE;
+2631 
+2632     /*** IDirectInput8A methods ***/
+2633     STDMETHOD(CreateDevice)(THIS_ REFGUID,LPDIRECTINPUTDEVICE8A *,LPUNKNOWN) PURE;
+2634     STDMETHOD(EnumDevices)(THIS_ DWORD,LPDIENUMDEVICESCALLBACKA,LPVOID,DWORD) PURE;
+2635     STDMETHOD(GetDeviceStatus)(THIS_ REFGUID) PURE;
+2636     STDMETHOD(RunControlPanel)(THIS_ HWND,DWORD) PURE;
+2637     STDMETHOD(Initialize)(THIS_ HINSTANCE,DWORD) PURE;
+2638     STDMETHOD(FindDevice)(THIS_ REFGUID,LPCSTR,LPGUID) PURE;
+2639     STDMETHOD(EnumDevicesBySemantics)(THIS_ LPCSTR,LPDIACTIONFORMATA,LPDIENUMDEVICESBYSEMANTICSCBA,LPVOID,DWORD) PURE;
+2640     STDMETHOD(ConfigureDevices)(THIS_ LPDICONFIGUREDEVICESCALLBACK,LPDICONFIGUREDEVICESPARAMSA,DWORD,LPVOID) PURE;
+2641 };
+.fi
+.SS "DEFINE_GUID (CLSID_DirectInput, 0x25E609E0, 0xB259, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (CLSID_DirectInputDevice, 0x25E609E1, 0xB259, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (CLSID_DirectInput8, 0x25E609E4, 0xB259, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (CLSID_DirectInputDevice8, 0x25E609E5, 0xB259, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputA, 0x89521360, 0xAA8A, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputW, 0x89521361, 0xAA8A, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInput2A, 0x5944E662, 0xAA8A, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInput2W, 0x5944E663, 0xAA8A, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInput7A, 0x9A4CB684, 0x236D, 0x11D3, 0x8E, 0x9D, 0x00, 0xC0, 0x4F, 0x68, 0x44, 0xAE)"
+
+.SS "DEFINE_GUID (IID_IDirectInput7W, 0x9A4CB685, 0x236D, 0x11D3, 0x8E, 0x9D, 0x00, 0xC0, 0x4F, 0x68, 0x44, 0xAE)"
+
+.SS "DEFINE_GUID (IID_IDirectInput8A, 0xBF798030, 0x483A, 0x4DA2, 0xAA, 0x99, 0x5D, 0x64, 0xED, 0x36, 0x97, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInput8W, 0xBF798031, 0x483A, 0x4DA2, 0xAA, 0x99, 0x5D, 0x64, 0xED, 0x36, 0x97, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDeviceA, 0x5944E680, 0xC92E, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDeviceW, 0x5944E681, 0xC92E, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice2A, 0x5944E682, 0xC92E, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice2W, 0x5944E683, 0xC92E, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice7A, 0x57D7C6BC, 0x2356, 0x11D3, 0x8E, 0x9D, 0x00, 0xC0, 0x4F, 0x68, 0x44, 0xAE)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice7W, 0x57D7C6BD, 0x2356, 0x11D3, 0x8E, 0x9D, 0x00, 0xC0, 0x4F, 0x68, 0x44, 0xAE)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice8A, 0x54D41080, 0xDC15, 0x4833, 0xA4, 0x1B, 0x74, 0x8F, 0x73, 0xA3, 0x81, 0x79)"
+
+.SS "DEFINE_GUID (IID_IDirectInputDevice8W, 0x54D41081, 0xDC15, 0x4833, 0xA4, 0x1B, 0x74, 0x8F, 0x73, 0xA3, 0x81, 0x79)"
+
+.SS "DEFINE_GUID (IID_IDirectInputEffect, 0xE7E1F7C0, 0x88D2, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_XAxis, 0xA36D02E0, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_YAxis, 0xA36D02E1, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_ZAxis, 0xA36D02E2, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_RxAxis, 0xA36D02F4, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_RyAxis, 0xA36D02F5, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_RzAxis, 0xA36D02E3, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_Slider, 0xA36D02E4, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_Button, 0xA36D02F0, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_Key, 0x55728220, 0xD33C, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_POV, 0xA36D02F2, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_Unknown, 0xA36D02F3, 0xC9F3, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysMouse, 0x6F1D2B60, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysKeyboard, 0x6F1D2B61, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_Joystick, 0x6F1D2B70, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysMouseEm, 0x6F1D2B80, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysMouseEm2, 0x6F1D2B81, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysKeyboardEm, 0x6F1D2B82, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_SysKeyboardEm2, 0x6F1D2B83, 0xD5A0, 0x11CF, 0xBF, 0xC7, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00)"
+
+.SS "DEFINE_GUID (GUID_ConstantForce, 0x13541C20, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_RampForce, 0x13541C21, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Square, 0x13541C22, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Sine, 0x13541C23, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Triangle, 0x13541C24, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_SawtoothUp, 0x13541C25, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_SawtoothDown, 0x13541C26, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Spring, 0x13541C27, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Damper, 0x13541C28, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Inertia, 0x13541C29, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_Friction, 0x13541C2A, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "DEFINE_GUID (GUID_CustomForce, 0x13541C2B, 0x8E33, 0x11D0, 0x9A, 0xD0, 0x00, 0xA0, 0xC9, 0xA0, 0x6E, 0x35)"
+
+.SS "HRESULT WINAPI DirectInput8Create (HINSTANCEhinst, \fBDWORD\fPdwVersion, REFIIDriidltf, \fBLPVOID\fP *ppvOut, LPUNKNOWNpunkOuter)"
+
+.SS "HRESULT WINAPI DirectInputCreateA (HINSTANCEhinst, \fBDWORD\fPdwVersion, \fBLPDIRECTINPUTA\fP *ppDI, LPUNKNOWNpunkOuter)"
+
+.SS "HRESULT WINAPI DirectInputCreateEx (HINSTANCEhinst, \fBDWORD\fPdwVersion, REFIIDriidltf, \fBLPVOID\fP *ppvOut, LPUNKNOWNpunkOuter)"
+
+.SS "HRESULT WINAPI DirectInputCreateW (HINSTANCEhinst, \fBDWORD\fPdwVersion, \fBLPDIRECTINPUTW\fP *ppDI, LPUNKNOWNpunkOuter)"
+
+.SS "WINMMAPI MMRESULT WINAPI joyConfigChanged (\fBDWORD\fPdwFlags)"
+
+.SS "void WINAPI ShowJoyCPL (HWNDhWnd)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBDIDATAFORMAT\fP c_dfDIJoystick"
+
+.SS "const \fBDIDATAFORMAT\fP c_dfDIJoystick2"
+
+.SS "const \fBDIDATAFORMAT\fP c_dfDIKeyboard"
+
+.SS "const \fBDIDATAFORMAT\fP c_dfDIMouse"
+
+.SS "const \fBDIDATAFORMAT\fP c_dfDIMouse2"
+
+.SS "typedef DWORD"
+
+.SS "typedef LPVOID"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

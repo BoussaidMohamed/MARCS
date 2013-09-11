@@ -1,0 +1,51 @@
+\hypertarget{a00021}{\section{Joystick\-Grabber.\-cpp File Reference}
+\label{a00021}\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}}
+}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00021_a0723aed160d8be459df870f19482e583}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!Create\-Device\-Callback@{Create\-Device\-Callback}}
+\index{Create\-Device\-Callback@{Create\-Device\-Callback}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{Create\-Device\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} C\-A\-L\-L\-B\-A\-C\-K Create\-Device\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-P\-C\-D\-I\-D\-E\-V\-I\-C\-E\-I\-N\-S\-T\-A\-N\-C\-E}}]{instance, }
+\item[{{\bf L\-P\-V\-O\-I\-D}}]{reference}
+\end{DoxyParamCaption}
+)}}\label{a00021_a0723aed160d8be459df870f19482e583}
+
+\begin{DoxyCode}
+20 \{
+21    \textcolor{comment}{/*}
+22 \textcolor{comment}{    //Peripheral creation}
+23 \textcolor{comment}{    result = direct\_input\_object->CreateDevice(instance->guidInstance, &joypad, NULL);}
+24 \textcolor{comment}{}
+25 \textcolor{comment}{    //Error management}
+26 \textcolor{comment}{    if(FAILED( result )) }
+27 \textcolor{comment}{    \{}
+28 \textcolor{comment}{        //Fail}
+29 \textcolor{comment}{        return DIENUM\_CONTINUE; }
+30 \textcolor{comment}{    \}}
+31 \textcolor{comment}{}
+32 \textcolor{comment}{    //Success}
+33 \textcolor{comment}{    return DIENUM\_STOP;}
+34 \textcolor{comment}{        */}
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00021_a5d8f0ccba4cd123c1c1374f1e43eb06a}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!direct\-\_\-input\-\_\-object@{direct\-\_\-input\-\_\-object}}
+\index{direct\-\_\-input\-\_\-object@{direct\-\_\-input\-\_\-object}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{direct\-\_\-input\-\_\-object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-P\-D\-I\-R\-E\-C\-T\-I\-N\-P\-U\-T8} direct\-\_\-input\-\_\-object = N\-U\-L\-L}}\label{a00021_a5d8f0ccba4cd123c1c1374f1e43eb06a}
+\hypertarget{a00021_a5ae1a16d779669f219cb6b77cf56b81a}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!instance@{instance}}
+\index{instance@{instance}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}H\-I\-N\-S\-T\-A\-N\-C\-E instance = N\-U\-L\-L}}\label{a00021_a5ae1a16d779669f219cb6b77cf56b81a}
+\hypertarget{a00021_a44430ddf3d769f6bcddc69fe7807a71c}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!joypad@{joypad}}
+\index{joypad@{joypad}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{joypad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-P\-D\-I\-R\-E\-C\-T\-I\-N\-P\-U\-T\-D\-E\-V\-I\-C\-E8} joypad = N\-U\-L\-L}}\label{a00021_a44430ddf3d769f6bcddc69fe7807a71c}
+\hypertarget{a00021_acc166c0d64947b77b6d51c612f660422}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!result@{result}}
+\index{result@{result}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{result}]{\setlength{\rightskip}{0pt plus 5cm}H\-R\-E\-S\-U\-L\-T result}}\label{a00021_acc166c0d64947b77b6d51c612f660422}
+\hypertarget{a00021_a0eac3b9a806be1f5f00f0d6346303ed3}{\index{Joystick\-Grabber.\-cpp@{Joystick\-Grabber.\-cpp}!state@{state}}
+\index{state@{state}!JoystickGrabber.cpp@{Joystick\-Grabber.\-cpp}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-I\-J\-O\-Y\-S\-T\-A\-T\-E} state}}\label{a00021_a0eac3b9a806be1f5f00f0d6346303ed3}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dc/de2/a00024" kind="file">
+    <compoundname>LatLongCoord.h</compoundname>
+    <innerclass refid="de/d21/a00006" prot="public">LatLongCoord</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__LATLONGCOORD</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__LATLONGCOORD</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/qmath.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="de/d21/a00006" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>Prefix<sp/><sp/>Meaning<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Variable<sp/>Type</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>a<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Array<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Table</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>b<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logic</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>d<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>precision<sp/>float</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>dw<sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>Word<sp/><sp/><sp/><sp/><sp/>Unsigned<sp/>32<sp/>bits<sp/>word</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>index</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>n<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>value</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>p<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/>ss<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>stream<sp/><sp/><sp/>Stringstream</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Attributes<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="de/d21/a00006_1a1cdacb6dc826cc93ec04bba718cf834e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1a1cdacb6dc826cc93ec04bba718cf834e" kindref="member">m_dLatitude</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Latitude<sp/>in<sp/>decimal<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="de/d21/a00006_1a0b4613cfb4daeaf293a64de8ed38638b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1a0b4613cfb4daeaf293a64de8ed38638b" kindref="member">m_dLongitude</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Longitude<sp/>in<sp/>decimal<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7" kindref="member">LatLongCoord</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7" kindref="member">LatLongCoord</ref>(<ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>*<sp/>p_pCoordinates);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7" kindref="member">LatLongCoord</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dLatitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dLongitude);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1aceb619fe57529d898748a11e4fc4985d" kindref="member">setCoordinates</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dLatitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dLongitude);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9" kindref="member">getLatitude</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf" kindref="member">getLongitude</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7" kindref="member">getDistance</ref>(<ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>*<sp/>p_pCoordinate);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Operators<sp/>================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006_1a9a0e03b92332e6020d8b9f587cde06cd" kindref="member">operator == </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>&amp;<sp/>p_pLatLong);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h"/>
+  </compounddef>
+</doxygen>

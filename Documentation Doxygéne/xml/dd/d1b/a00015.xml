@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dd/d1b/a00015" kind="class" prot="public">
+    <compoundname>video</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="d6/d42/a00043" local="yes">video.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/d1b/a00015_1a8bd377d858dd541faf8108389a13e5ed" prot="private" static="no" mutable="no">
+        <type><ref refid="da/da0/a00009" kindref="compound">mission</ref></type>
+        <definition>mission myMission</definition>
+        <argsstring></argsstring>
+        <name>myMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="44" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d1b/a00015_1a34b772573db9a14b1acb61b24709ae73" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="43" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d1b/a00015_1a4f4e978b71511ee6fcb91ef1a4e3c17c" prot="private" static="no" mutable="no">
+        <type>Ui::video *</type>
+        <definition>Ui::video* ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="42" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d1b/a00015_1af7ccf696656e3145c9396f15bcd91695" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>video</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>video</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="19" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="65" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d1b/a00015_1ad13b02e319297aac06bde53ec8a4b167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~video</definition>
+        <argsstring>()</argsstring>
+        <name>~video</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="20" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="dd/d1b/a00015_1a1d75cd9cd7e205209d38efc1b47ecb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void activateAddingPoint</definition>
+        <argsstring>()</argsstring>
+        <name>activateAddingPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="33" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a070a5570eaeac36ef13715ca18be3ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addPoint</definition>
+        <argsstring>(qreal lon, qreal lat, GeoDataCoordinates::Unit)</argsstring>
+        <name>addPoint</name>
+        <param>
+          <type>qreal</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>GeoDataCoordinates::Unit</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="31" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="268" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1ad0f7d75c8390ef3bfcc62ad26098dacc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficheList</definition>
+        <argsstring>()</argsstring>
+        <name>afficheList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="28" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="169" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1ac413685926a24cbbde53d1f3706a3093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearMission</definition>
+        <argsstring>()</argsstring>
+        <name>clearMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="32" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a5ae591df94fc66ccb85cbb6565368bca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="39" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="339" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a67857e604fad85ea53503c492a77a5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drawMission</definition>
+        <argsstring>()</argsstring>
+        <name>drawMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="38" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="372" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a9231d60467923911b4ba0d167004588d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void editWaypoint</definition>
+        <argsstring>()</argsstring>
+        <name>editWaypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="407" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a7e07a9d88a66fadd639dec3139cf9f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void finishEditData</definition>
+        <argsstring>()</argsstring>
+        <name>finishEditData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="37" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="504" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a3ba779451a386238417fbab60f0d4db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadData</definition>
+        <argsstring>()</argsstring>
+        <name>loadData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="433" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a489b8f1d983d32ae8b2e5d9e29aff63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openMission</definition>
+        <argsstring>()</argsstring>
+        <name>openMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="29" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="183" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a7225d8cbcace3eaee988a9d7724c0dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewMap</definition>
+        <argsstring>()</argsstring>
+        <name>openNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="26" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="345" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a7d0835d5762ca85bc460aeeabca018c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowData</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="24" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="311" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a688b7983c0da36424d5b4d10a0c007f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowMain</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowMain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="23" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="297" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a03f5e63773125e14f1e32c94420ff7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowVideo</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowVideo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="25" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="325" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a14a8662407eb95fe2c478c0cee351de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveEditData</definition>
+        <argsstring>()</argsstring>
+        <name>saveEditData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="476" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1a816a9f0cf14cf70a29662387914071f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveMission</definition>
+        <argsstring>()</argsstring>
+        <name>saveMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="30" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="235" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="slot" id="dd/d1b/a00015_1ab8446a0b12406c07562af271392ab19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void switchToMap</definition>
+        <argsstring>()</argsstring>
+        <name>switchToMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="27" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp" bodystart="359" bodyend="370"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="170">
+        <label>mission</label>
+        <link refid="da/da0/a00009"/>
+      </node>
+      <node id="169">
+        <label>video</label>
+        <link refid="dd/d1b/a00015"/>
+        <childnode refid="170" relation="usage">
+          <edgelabel>myMission</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" line="15" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.h" bodystart="14" bodyend="48"/>
+    <listofallmembers>
+      <member refid="dd/d1b/a00015_1a1d75cd9cd7e205209d38efc1b47ecb13" prot="public" virt="non-virtual"><scope>video</scope><name>activateAddingPoint</name></member>
+      <member refid="dd/d1b/a00015_1a070a5570eaeac36ef13715ca18be3ec9" prot="public" virt="non-virtual"><scope>video</scope><name>addPoint</name></member>
+      <member refid="dd/d1b/a00015_1ad0f7d75c8390ef3bfcc62ad26098dacc" prot="public" virt="non-virtual"><scope>video</scope><name>afficheList</name></member>
+      <member refid="dd/d1b/a00015_1ac413685926a24cbbde53d1f3706a3093" prot="public" virt="non-virtual"><scope>video</scope><name>clearMission</name></member>
+      <member refid="dd/d1b/a00015_1a5ae591df94fc66ccb85cbb6565368bca" prot="public" virt="non-virtual"><scope>video</scope><name>close</name></member>
+      <member refid="dd/d1b/a00015_1a67857e604fad85ea53503c492a77a5a9" prot="public" virt="non-virtual"><scope>video</scope><name>drawMission</name></member>
+      <member refid="dd/d1b/a00015_1a9231d60467923911b4ba0d167004588d" prot="public" virt="non-virtual"><scope>video</scope><name>editWaypoint</name></member>
+      <member refid="dd/d1b/a00015_1a7e07a9d88a66fadd639dec3139cf9f4c" prot="public" virt="non-virtual"><scope>video</scope><name>finishEditData</name></member>
+      <member refid="dd/d1b/a00015_1a3ba779451a386238417fbab60f0d4db0" prot="public" virt="non-virtual"><scope>video</scope><name>loadData</name></member>
+      <member refid="dd/d1b/a00015_1a8bd377d858dd541faf8108389a13e5ed" prot="private" virt="non-virtual"><scope>video</scope><name>myMission</name></member>
+      <member refid="dd/d1b/a00015_1a489b8f1d983d32ae8b2e5d9e29aff63a" prot="public" virt="non-virtual"><scope>video</scope><name>openMission</name></member>
+      <member refid="dd/d1b/a00015_1a7225d8cbcace3eaee988a9d7724c0dbd" prot="public" virt="non-virtual"><scope>video</scope><name>openNewMap</name></member>
+      <member refid="dd/d1b/a00015_1a7d0835d5762ca85bc460aeeabca018c7" prot="public" virt="non-virtual"><scope>video</scope><name>openNewWindowData</name></member>
+      <member refid="dd/d1b/a00015_1a688b7983c0da36424d5b4d10a0c007f7" prot="public" virt="non-virtual"><scope>video</scope><name>openNewWindowMain</name></member>
+      <member refid="dd/d1b/a00015_1a03f5e63773125e14f1e32c94420ff7bf" prot="public" virt="non-virtual"><scope>video</scope><name>openNewWindowVideo</name></member>
+      <member refid="dd/d1b/a00015_1a34b772573db9a14b1acb61b24709ae73" prot="private" virt="non-virtual"><scope>video</scope><name>path</name></member>
+      <member refid="dd/d1b/a00015_1a14a8662407eb95fe2c478c0cee351de5" prot="public" virt="non-virtual"><scope>video</scope><name>saveEditData</name></member>
+      <member refid="dd/d1b/a00015_1a816a9f0cf14cf70a29662387914071f5" prot="public" virt="non-virtual"><scope>video</scope><name>saveMission</name></member>
+      <member refid="dd/d1b/a00015_1ab8446a0b12406c07562af271392ab19b" prot="public" virt="non-virtual"><scope>video</scope><name>switchToMap</name></member>
+      <member refid="dd/d1b/a00015_1a4f4e978b71511ee6fcb91ef1a4e3c17c" prot="private" virt="non-virtual"><scope>video</scope><name>ui</name></member>
+      <member refid="dd/d1b/a00015_1af7ccf696656e3145c9396f15bcd91695" prot="public" virt="non-virtual"><scope>video</scope><name>video</name></member>
+      <member refid="dd/d1b/a00015_1ad13b02e319297aac06bde53ec8a4b167" prot="public" virt="non-virtual"><scope>video</scope><name>~video</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d5f/a00064" kind="struct" prot="public">
+    <compoundname>DICUSTOMFORCE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d5f/a00064_1a419d8e9792981764d69cdd3aa3340cdf" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cChannels</definition>
+        <argsstring></argsstring>
+        <name>cChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="205" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5f/a00064_1ae5a228ef62625d86ee614691e9e75b57" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cSamples</definition>
+        <argsstring></argsstring>
+        <name>cSamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="207" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5f/a00064_1a37f869306a4c4735b1e637b7f9bd5e44" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSamplePeriod</definition>
+        <argsstring></argsstring>
+        <name>dwSamplePeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="206" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5f/a00064_1a412b3c218909975ae7291435157f407f" prot="public" static="no" mutable="no">
+        <type>LPLONG</type>
+        <definition>LPLONG rglForceData</definition>
+        <argsstring></argsstring>
+        <name>rglForceData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="208" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="204" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="204" bodyend="209"/>
+    <listofallmembers>
+      <member refid="df/d5f/a00064_1a419d8e9792981764d69cdd3aa3340cdf" prot="public" virt="non-virtual"><scope>DICUSTOMFORCE</scope><name>cChannels</name></member>
+      <member refid="df/d5f/a00064_1ae5a228ef62625d86ee614691e9e75b57" prot="public" virt="non-virtual"><scope>DICUSTOMFORCE</scope><name>cSamples</name></member>
+      <member refid="df/d5f/a00064_1a37f869306a4c4735b1e637b7f9bd5e44" prot="public" virt="non-virtual"><scope>DICUSTOMFORCE</scope><name>dwSamplePeriod</name></member>
+      <member refid="df/d5f/a00064_1a412b3c218909975ae7291435157f407f" prot="public" virt="non-virtual"><scope>DICUSTOMFORCE</scope><name>rglForceData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

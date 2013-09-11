@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d5d/a00084" kind="struct" prot="public">
+    <compoundname>DIEFFECTINFOA</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d5d/a00084_1a5960d079753d3d096fda2e06cde63909" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDynamicParams</definition>
+        <argsstring></argsstring>
+        <name>dwDynamicParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1446" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5d/a00084_1a86d5a8965ff03b83984c7906513d9efc" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwEffType</definition>
+        <argsstring></argsstring>
+        <name>dwEffType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1444" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5d/a00084_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1442" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5d/a00084_1ac14d49a005b6a47ff12cfa947c1bc413" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwStaticParams</definition>
+        <argsstring></argsstring>
+        <name>dwStaticParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1445" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5d/a00084_1a251f3e458e214b6e3ffde1171e658f78" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guid</definition>
+        <argsstring></argsstring>
+        <name>guid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1443" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d5d/a00084_1a4b0a3dc31e4378c7de85eaa6654bcabb" prot="public" static="no" mutable="no">
+        <type>CHAR</type>
+        <definition>CHAR tszName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1447" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1447" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1441" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1441" bodyend="1448"/>
+    <listofallmembers>
+      <member refid="df/d5d/a00084_1a5960d079753d3d096fda2e06cde63909" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>dwDynamicParams</name></member>
+      <member refid="df/d5d/a00084_1a86d5a8965ff03b83984c7906513d9efc" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>dwEffType</name></member>
+      <member refid="df/d5d/a00084_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>dwSize</name></member>
+      <member refid="df/d5d/a00084_1ac14d49a005b6a47ff12cfa947c1bc413" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>dwStaticParams</name></member>
+      <member refid="df/d5d/a00084_1a251f3e458e214b6e3ffde1171e658f78" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>guid</name></member>
+      <member refid="df/d5d/a00084_1a4b0a3dc31e4378c7de85eaa6654bcabb" prot="public" virt="non-virtual"><scope>DIEFFECTINFOA</scope><name>tszName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="da/d2a/a00086" kind="struct" prot="public">
+    <compoundname>DIEFFESCAPE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/d2a/a00086_1a154a0518b084fff4c66d8681cbdb23ed" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cbInBuffer</definition>
+        <argsstring></argsstring>
+        <name>cbInBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="314" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2a/a00086_1af5f9476202f79af43fdd352f910f8eab" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cbOutBuffer</definition>
+        <argsstring></argsstring>
+        <name>cbOutBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="316" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2a/a00086_1a86724ebbcd6f909422e2bb99dadaee29" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwCommand</definition>
+        <argsstring></argsstring>
+        <name>dwCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="312" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2a/a00086_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="311" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2a/a00086_1af460e3b5abfab6f3fa87a8ede67a2053" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61" kindref="member">LPVOID</ref></type>
+        <definition>LPVOID lpvInBuffer</definition>
+        <argsstring></argsstring>
+        <name>lpvInBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="313" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2a/a00086_1ada548391e365516430e666bb84be9afe" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61" kindref="member">LPVOID</ref></type>
+        <definition>LPVOID lpvOutBuffer</definition>
+        <argsstring></argsstring>
+        <name>lpvOutBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="315" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="310" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="310" bodyend="317"/>
+    <listofallmembers>
+      <member refid="da/d2a/a00086_1a154a0518b084fff4c66d8681cbdb23ed" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>cbInBuffer</name></member>
+      <member refid="da/d2a/a00086_1af5f9476202f79af43fdd352f910f8eab" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>cbOutBuffer</name></member>
+      <member refid="da/d2a/a00086_1a86724ebbcd6f909422e2bb99dadaee29" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>dwCommand</name></member>
+      <member refid="da/d2a/a00086_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>dwSize</name></member>
+      <member refid="da/d2a/a00086_1af460e3b5abfab6f3fa87a8ede67a2053" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>lpvInBuffer</name></member>
+      <member refid="da/d2a/a00086_1ada548391e365516430e666bb84be9afe" prot="public" virt="non-virtual"><scope>DIEFFESCAPE</scope><name>lpvOutBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

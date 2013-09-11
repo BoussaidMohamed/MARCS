@@ -1,0 +1,545 @@
+.TH "video" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+video \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'video\&.h'\fP
+.PP
+Inherits QMainWindow\&.
+.SS "Public Slots"
+.SS "Public Member Functions"
+.SS "Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBvideo\fP (QWidget *parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+.nf
+65                             :
+66     QMainWindow(parent),
+67     ui(new Ui::video)
+68 {
+69     affichageList = false ;//etat d'affichage de la liste du log
+70     ui->setupUi(this);
+71     place =  new GeoDataPlacemark( "" );
+72     document = new GeoDataDocument();
+73 
+74 
+75     //config marble
+76     ui->MarbleWidget_smallView->setShowOverviewMap(false);
+77     ui->MarbleWidget_plan->setShowOverviewMap(false);
+78     ui->MarbleWidget_smallView->setShowScaleBar(false);
+79     ui->MarbleWidget_smallView->setShowCompass(false);
+80     ui->MarbleWidget_smallView->hide();
+81 
+82 
+83     //initialisation de l'intreface
+84     ui->tableWidget->hide();
+85     ui->snapShoot_button->hide();
+86     ui->actionFlight_plan->setEnabled(false);
+87     ui->actionFlight_data->setEnabled(true);
+88     ui->actionVideo->setEnabled(true);
+89     ui->listLog->hide();
+90     ui->actionClear_mission->setEnabled(false);
+91     ui->label_Alt->hide();
+92     ui->label_HDG->hide();
+93     ui->label_Num_Waypoint->hide();
+94     ui->label_Time->hide();
+95     ui->lineEdit_HDG->hide();
+96     ui->lineEdit_Alt->hide();
+97     ui->timeEdit_Mission->hide();
+98     ui->line_2->hide();
+99     ui->SaveEdit_button->hide();
+100     ui->LoadData_button->hide();
+101     ui->comboBox_ListWaypoint->hide();
+102     ui->FinishEdit_button_2->hide();
+103 
+104 
+105 
+106     //signal&&slot de l'application
+107     connect(ui->actionFlight_plan,SIGNAL(triggered()),this,SLOT(openNewWindowMain()));
+108     connect(ui->actionFlight_data,SIGNAL(triggered()),this,SLOT(openNewWindowData()));
+109     connect(ui->actionVideo,SIGNAL(triggered()),this,SLOT(openNewWindowVideo()));
+110     connect(ui->actionLoad_map,SIGNAL(triggered()),this,SLOT(openNewMap()));
+111     connect(ui->actionLoad_mission,SIGNAL(triggered()),this,SLOT(openMission()));
+112     connect(ui->actionClose,SIGNAL(triggered()),this,SLOT(close()));
+113     connect(ui->MarbleWidget_smallView,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(switchToMap()));
+114     connect(ui->status_button,SIGNAL(clicked()),this,SLOT(afficheList()));
+115     connect(ui->led_button,SIGNAL(clicked()),this,SLOT(afficheList()));
+116     connect(ui->actionSave_mission,SIGNAL(triggered()),this,SLOT(saveMission()));
+117     connect(ui->actionClear_mission,SIGNAL(triggered()),this,SLOT(clearMission()));
+118     connect(ui->actionStart_planning,SIGNAL(triggered()),this,SLOT(activateAddingPoint()));
+119     connect(ui->actionEdit_waypoint,SIGNAL(triggered()),this,SLOT(editWaypoint()));
+120 
+121     QPaintDevice *paintDevice = this;
+122    // QPaintEvent *evt ;
+123     QImage image;
+124     if (!isEnabled())
+125     {
+126         // If the globe covers fully the screen then we can use the faster
+127         // RGB32 as there are no translucent areas involved\&.
+128         QImage::Format imageFormat = ( ui->MarbleWidget_plan->viewport()->mapCoversViewport() )
+129                                      ? QImage::Format_RGB32
+130                                      : QImage::Format_ARGB32_Premultiplied;
+131         // Paint to an intermediate image
+132         image = QImage( rect()\&.size(), imageFormat );
+133 
+134         image\&.fill( Qt::transparent );
+135         paintDevice = &image;
+136 
+137     }
+138 
+139 
+140 gp = new GeoPainter ( paintDevice, ui->MarbleWidget_plan->viewport(), ui->MarbleWidget_plan->mapQuality() );
+141 //ui->MarbleWidget_plan->paint( gp, evt->rect() );
+142 drawMission();
+143 
+144 }
+.fi
+.SS "~\fBvideo\fP ()"
+
+.PP
+.nf
+147 {
+148     delete ui;
+149 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void activateAddingPoint ()\fC [slot]\fP"
+
+.PP
+.nf
+162                                {
+163     ui->actionSave_mission->setEnabled(true);
+164     connect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
+165     ui->actionStart_planning->setEnabled(false);
+166 }
+.fi
+.SS "void addPoint (qreallon, qreallat, GeoDataCoordinates::Unit)\fC [slot]\fP"
+
+.PP
+.nf
+268                                                                 {
+269 
+270 
+271   sprintf(numWpText,"%d",num_waypoint);
+272   temp = string(numWpText);
+273   textNumWaypoint = "# " + temp ;
+274   qstr = QString::fromStdString(textNumWaypoint);
+275 
+276   // Access the shared route request (start, destination and parameters)
+277   manager = ui->MarbleWidget_plan->model()->routingManager();
+278   manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
+279   request = manager->routeRequest();
+280   request_smallMap = manager_smallMap->routeRequest();
+281 
+282   tempo = new GeoDataCoordinates(lon,lat,0\&.0,GeoDataCoordinates::Radian);
+283 
+284  // add point to map
+285  request->append( GeoDataCoordinates( lon, lat, 0\&.0, GeoDataCoordinates::Radian ) );
+286  request->setName(num_waypoint,qstr);
+287  request_smallMap->append(GeoDataCoordinates( lon, lat, 0\&.0, GeoDataCoordinates::Radian ));
+288  request_smallMap->setName(num_waypoint,qstr);
+289  wpListSave\&.append(new waypoint(num_waypoint,tempo->longitude(GeoDataCoordinates::Degree),tempo->latitude(GeoDataCoordinates::Degree),100\&.0,90\&.0,60,1,1));
+290  num_waypoint++ ;
+291 
+292  ui->actionEdit_waypoint->setEnabled(true);
+293  open = false ;
+294 }
+.fi
+.SS "void afficheList ()\fC [slot]\fP"
+
+.PP
+.nf
+170 {
+171     if (affichageList==false){
+172         ui->listLog->show();
+173         affichageList = true ;
+174     }
+175     else {
+176         ui->listLog->hide();
+177         affichageList = false ;
+178     }
+179 
+180 }
+.fi
+.SS "void clearMission ()\fC [slot]\fP"
+
+.PP
+.nf
+153                         {
+154 
+155     ui->MarbleWidget_plan->model()->removeGeoData(lastMission);
+156     ui->actionClear_mission->setEnabled(false);
+157     ui->actionSave_mission->setEnabled(false);
+158 
+159 }
+.fi
+.SS "void close ()\fC [slot]\fP"
+
+.PP
+.nf
+340 {
+341     exit(0);
+342 }
+.fi
+.SS "void drawMission ()\fC [slot]\fP"
+
+.PP
+.nf
+372                        {
+373 
+374     GeoDataCoordinates France( 2\&.2, 48\&.52, 0\&.0, GeoDataCoordinates::Degree );
+375     gp->setPen( QColor( 0, 0, 0 ) );
+376     gp->drawText( France, "France" );
+377 
+378     GeoDataCoordinates Canada( -77\&.02, 48\&.52, 0\&.0, GeoDataCoordinates::Degree );
+379     gp->setPen( QColor( 0, 0, 0 ) );
+380     gp->drawText( Canada, "Canada" );
+381 
+382     //A line from France to Canada without tessellation
+383 
+384     GeoDataLineString shapeNoTessellation( NoTessellation );
+385     shapeNoTessellation << France << Canada;
+386 
+387     gp->setPen( oxygenSkyBlue4 );
+388     gp->drawPolyline( shapeNoTessellation );
+389 
+390     //The same line, but with tessellation
+391 
+392     GeoDataLineString shapeTessellate( Tessellate );
+393     shapeTessellate << France << Canada;
+394 
+395     gp->setPen( oxygenBrickRed4 );
+396     gp->drawPolyline( shapeTessellate );
+397 
+398     //Now following the latitude circles
+399 
+400     GeoDataLineString shapeLatitudeCircle( RespectLatitudeCircle | Tessellate );
+401     shapeLatitudeCircle << France << Canada;
+402 
+403     gp->setPen( oxygenForestGreen4 );
+404     gp->drawPolyline( shapeLatitudeCircle );
+405 }
+.fi
+.SS "void editWaypoint ()\fC [slot]\fP"
+
+.PP
+.nf
+407                         {
+408     ui->comboBox_ListWaypoint->show();
+409     ui->LoadData_button->show();
+410     ui->label_Num_Waypoint->show();
+411 
+412     ui->actionEdit_waypoint->setEnabled(false);
+413     ui->comboBox_ListWaypoint->clear();
+414 
+415     if ( open == false){
+416 
+417         for ( int i = 0 ; i < wpListSave\&.size(); i++){
+418             ui->comboBox_ListWaypoint->addItem(QString::number(i+1));
+419         }
+420     }
+421     else {
+422         for ( int i = 0 ; i < wpListOpen\&.size(); i++){
+423             ui->comboBox_ListWaypoint->addItem(QString::number(i+1));
+424         }
+425 
+426     }
+427 
+428     connect(ui->LoadData_button,SIGNAL(clicked()),this,SLOT(loadData()));
+429 
+430 
+431 }
+.fi
+.SS "void finishEditData ()\fC [slot]\fP"
+
+.PP
+.nf
+504                           {
+505 
+506 
+507     ui->label_Alt->hide();
+508     ui->label_HDG->hide();
+509     ui->label_Num_Waypoint->hide();
+510     ui->label_Time->hide();
+511     ui->lineEdit_HDG->hide();
+512     ui->lineEdit_Alt->hide();
+513     ui->timeEdit_Mission->hide();
+514     ui->line_2->hide();
+515     ui->SaveEdit_button->hide();
+516     ui->LoadData_button->hide();
+517     ui->comboBox_ListWaypoint->hide();
+518     ui->FinishEdit_button_2->hide();
+519     ui->actionEdit_waypoint->setEnabled(true);
+520 
+521 
+522 }
+.fi
+.SS "void loadData ()\fC [slot]\fP"
+
+.PP
+.nf
+433                     {
+434     int h ;
+435     int m ;
+436     int s ;
+437 
+438     ui->label_Alt->show();
+439     ui->label_HDG->show();
+440     ui->label_Time->show();
+441     ui->lineEdit_Alt->show();
+442     ui->lineEdit_HDG->show();
+443     ui->timeEdit_Mission->show();
+444     ui->line_2->show();
+445     ui->SaveEdit_button->show();
+446     ui->FinishEdit_button_2->show();
+447     ui->SaveEdit_button->setEnabled(true);
+448 
+449     if ( open == false){
+450         h = wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+451         m = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+452         s = (wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+453 
+454        ui->lineEdit_Alt->setText(QString::number(wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getAlt()));
+455        ui->lineEdit_HDG->setText(QString::number(wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->getHdg()));
+456        ui->timeEdit_Mission->setTime(QTime(h,m,s,00));
+457 
+458     }
+459 
+460     else {
+461         h = wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() / 3600 ;
+462         m = (wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)/60 ;
+463         s = (wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getTime() % 3600)%60  ;
+464 
+465        ui->lineEdit_Alt->setText(QString::number(wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getAlt()));
+466        ui->lineEdit_HDG->setText(QString::number(wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->getHdg()));
+467        ui->timeEdit_Mission->setTime(QTime(h,m,s,00));
+468 
+469     }
+470 
+471     connect(ui->SaveEdit_button,SIGNAL(clicked()),this,SLOT(saveEditData()));
+472     connect(ui->FinishEdit_button_2,SIGNAL(clicked()),this,SLOT(finishEditData()));
+473 
+474    }
+.fi
+.SS "void openMission ()\fC [slot]\fP"
+
+.PP
+.nf
+183                        {
+184 
+185    disconnect(ui->MarbleWidget_plan,SIGNAL(mouseClickGeoPosition(qreal,qreal,GeoDataCoordinates::Unit)),this,SLOT(addPoint(qreal,qreal,GeoDataCoordinates::Unit)));
+186 
+187     path = QFileDialog::getOpenFileName(this, "Load a mission", "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission", "KML (*\&.kml)");
+188     QFileInfo inputFile(path);
+189     QString file ;
+190     file = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/testParse\&.xml";
+191 
+192     string m ;
+193     string nameFileOpen;
+194 
+195 
+196     m = path\&.toUtf8()\&.constData();
+197     size_t pos = m\&.find_last_of("/");
+198     if(pos != std::string::npos){
+199 
+200         nameFileOpen\&.assign(m\&.begin() + pos + 1, m\&.end()-4);
+201     }
+202       else
+203     {
+204       nameFileOpen = m;
+205   }
+206     string fileNameTempOpen = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/" + nameFileOpen +"\&.xml" ;
+207     fileOpened =  QString::fromStdString(fileNameTempOpen);
+208 
+209     // Access the shared route request (start, destination and parameters)
+210     manager = ui->MarbleWidget_plan->model()->routingManager();
+211     manager_smallMap = ui->MarbleWidget_smallView->model()->routingManager();
+212     request = manager->routeRequest();
+213     request_smallMap = manager_smallMap->routeRequest();
+214     request->append( GeoDataCoordinates( 0\&.0, 1\&.0, 0\&.0, GeoDataCoordinates::Radian ) );
+215     request_smallMap->append(GeoDataCoordinates( 0\&.0, 4\&.0, 0\&.0, GeoDataCoordinates::Radian ));
+216 
+217     request->clear();
+218     request_smallMap->clear();
+219     ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile\&.absoluteFilePath() );
+220     ui->MarbleWidget_plan->repaint();
+221     ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile\&.absoluteFilePath() );
+222     lastMission = inputFile\&.absoluteFilePath();
+223     ui->actionClear_mission->setEnabled(true);
+224     lastMission = inputFile\&.absoluteFilePath();
+225     ui->actionStart_planning->setEnabled(true);
+226 
+227      wpListOpen = myMission\&.loadMission(wpListOpen,fileOpened);
+228     ui->actionEdit_waypoint->setEnabled(true);
+229     open = true ;
+230 
+231 
+232 }
+.fi
+.SS "void openNewMap ()\fC [slot]\fP"
+
+.PP
+.nf
+347 {
+348     path = QFileDialog::getOpenFileName(this, "Load a map","C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/map", "OSM (*\&.osm)");
+349     QFileInfo inputFile(path);
+350 
+351         ui->MarbleWidget_plan->model()->removeGeoData(lastMap);
+352         ui->MarbleWidget_plan->model()->addGeoDataFile( inputFile\&.absoluteFilePath() );
+353         ui->MarbleWidget_smallView->model()->addGeoDataFile( inputFile\&.absoluteFilePath() );
+354         lastMap = inputFile\&.absoluteFilePath();
+355 
+356 }
+.fi
+.SS "void openNewWindowData ()\fC [slot]\fP"
+
+.PP
+.nf
+312 {
+313     ui->MarbleWidget_plan->hide();
+314     ui->MarbleWidget_smallView->hide();
+315     ui->tableWidget->show();
+316     ui->snapShoot_button->hide();
+317     ui->addMark_button->hide();
+318     ui->actionFlight_plan->setEnabled(true);
+319     ui->actionFlight_data->setEnabled(false);
+320     ui->actionVideo->setEnabled(true);
+321 
+322 }
+.fi
+.SS "void openNewWindowMain ()\fC [slot]\fP"
+
+.PP
+.nf
+298 {
+299     ui->MarbleWidget_plan->show();
+300     ui->MarbleWidget_smallView->hide();
+301     ui->tableWidget->hide();
+302     ui->snapShoot_button->hide();
+303     ui->addMark_button->show();
+304     ui->actionFlight_plan->setEnabled(false);
+305     ui->actionFlight_data->setEnabled(true);
+306     ui->actionVideo->setEnabled(true);
+307 
+308 }
+.fi
+.SS "void openNewWindowVideo ()\fC [slot]\fP"
+
+.PP
+.nf
+326 {
+327     ui->MarbleWidget_plan->hide();
+328     ui->MarbleWidget_smallView->show();
+329     ui->tableWidget->hide();
+330     ui->snapShoot_button->show();
+331     ui->addMark_button->show();
+332     ui->actionFlight_plan->setEnabled(true);
+333     ui->actionFlight_data->setEnabled(true);
+334     ui->actionVideo->setEnabled(false);
+335 
+336 }
+.fi
+.SS "void saveEditData ()\fC [slot]\fP"
+
+.PP
+.nf
+476                         {
+477     bool ok = false ;
+478     QTime tempo = ui->timeEdit_Mission->time();
+479     int time = tempo\&.hour() * 3600 + tempo\&.minute() * 60 + tempo\&.second() ;
+480 
+481     if ( open == false){
+482 
+483         wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setAlt(ui->lineEdit_Alt->text()\&.toDouble(&ok));
+484         wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setHdg(ui->lineEdit_HDG->text()\&.toDouble(&ok));
+485         wpListSave[ui->comboBox_ListWaypoint->currentIndex()]->setTime(time);
+486 
+487     }
+488 
+489     else {
+490 
+491 
+492         wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setAlt(ui->lineEdit_Alt->text()\&.toDouble(&ok));
+493         wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setHdg(ui->lineEdit_HDG->text()\&.toDouble(&ok));
+494         wpListOpen[ui->comboBox_ListWaypoint->currentIndex()]->setTime(time);
+495         myMission\&.saveMission(wpListOpen,fileOpened);
+496 
+497     }
+498 
+499 
+500     ui->SaveEdit_button->setEnabled(false);
+501 
+502 }
+.fi
+.SS "void saveMission ()\fC [slot]\fP"
+
+.PP
+.nf
+235                        {
+236     QString  fileName = QFileDialog::getSaveFileName( this,  "Save a mission" , "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/FILES/mission",  "KML files (*\&.kml)"  );
+237     string m ;
+238     string nameFile;
+239     QString hideFile ;
+240 
+241 
+242     m = fileName\&.toUtf8()\&.constData();
+243     size_t pos = m\&.find_last_of("/");
+244     if(pos != std::string::npos){
+245 
+246         nameFile\&.assign(m\&.begin() + pos + 1, m\&.end()-4);
+247     }
+248       else
+249     {
+250       nameFile = m;
+251   }
+252     string fileNameTemp = "C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionXML/" + nameFile +"\&.xml" ;
+253     hideFile =  QString::fromStdString(fileNameTemp);
+254 
+255       if ( !fileName\&.isEmpty() ) {
+256           manager->saveRoute(fileName);
+257 
+258        }
+259 
+260     myMission\&.saveMission(wpListSave,hideFile);
+261 
+262     ui->actionSave_mission->setEnabled(false);
+263 
+264 }
+.fi
+.SS "void switchToMap ()\fC [slot]\fP"
+
+.PP
+.nf
+360 {
+361 
+362     ui->MarbleWidget_plan->show();
+363     ui->MarbleWidget_smallView->hide();
+364     ui->tableWidget->hide();
+365     ui->snapShoot_button->hide();
+366     ui->addMark_button->show();
+367     ui->actionFlight_plan->setEnabled(false);
+368     ui->actionFlight_data->setEnabled(true);
+369     ui->actionVideo->setEnabled(true);
+370 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "\fBmission\fP myMission\fC [private]\fP"
+
+.SS "QString path\fC [private]\fP"
+
+.SS "Ui::video* ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d6/d5b/a00026" kind="file">
+    <compoundname>LogReplayControl.h</compoundname>
+    <innerclass refid="de/d5e/a00007" prot="public">LogReplayControl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__LOGREPLAYCONTROL</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__LOGREPLAYCONTROL</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGui/QFileDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;ResourceControl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/da2/a00019" kindref="compound">CommunicationControl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="de/d5e/a00007" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Prefix<sp/><sp/>Meaning<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Variable<sp/>Type</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Array<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Table</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logic</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>precision<sp/>float</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dw<sp/><sp/><sp/><sp/><sp/><sp/>Double<sp/>Word<sp/><sp/><sp/><sp/><sp/>Unsigned<sp/>32<sp/>bits<sp/>word</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>index</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>used<sp/>as<sp/>value</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pointer</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>stream<sp/><sp/><sp/>Stringstream</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Attributes<sp/>===============</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref>*<sp/><ref refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" kindref="member">singleton</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Lone<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTimer<sp/><ref refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" kindref="member">m_pReplayTimer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Waypoint<sp/>sent<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" kindref="member">m_iData</ref>;</highlight></codeline>
+<codeline lineno="31" refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" kindref="member">m_bReverse</ref>;</highlight></codeline>
+<codeline lineno="32" refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;double&gt;<sp/><ref refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" kindref="member">m_aLatitude</ref>;</highlight></codeline>
+<codeline lineno="33" refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;double&gt;<sp/><ref refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" kindref="member">m_aLongitude</ref>;</highlight></codeline>
+<codeline lineno="34" refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;double&gt;<sp/><ref refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" kindref="member">m_aAltitude</ref>;</highlight></codeline>
+<codeline lineno="35" refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;double&gt;<sp/><ref refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" kindref="member">m_aHeading</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*ToggleButton*<sp/>m_pStartPause;</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>QPushButton*<sp/>m_pIncSpeed;</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/>QPushButton*<sp/>m_pDecSpeed;</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>QPushButton*<sp/>m_pStop;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" kindref="member">LogReplayControl</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d5e/a00007_1a9a1182668244140773a52ee54723c8fd" kindref="member">~LogReplayControl</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Methods<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref>*<sp/><ref refid="de/d5e/a00007_1adb2b1b18fad4caaafde371f991525f38" kindref="member">getInstance</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1aae9d52caad9fb2892deeb25596cfd2ab" kindref="member">kill</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Signals<sp/>==================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1aa3c54f0958638486df2b69a9b53c5d7f" kindref="member">updateHeading</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_pValue);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1ac64f2ec114d4ab8dd8ed8dd31f243454" kindref="member">geolocation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>latitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>longitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>heading);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//=============<sp/>Slots<sp/>====================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a7167f5c196fc5e167bfabde1a730e81d" kindref="member">pause</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a9b83f0fc7f06bee951213dd4b22e0e93" kindref="member">backward</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a7de2a543986e45b9083c69f6138bf079" kindref="member">forward</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" kindref="member">replay</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="de/d5e/a00007_1a2d8621c7c4f4531bee805e91595b6b76" kindref="member">openLog</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h"/>
+  </compounddef>
+</doxygen>

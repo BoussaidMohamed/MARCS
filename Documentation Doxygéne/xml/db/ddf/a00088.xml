@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="db/ddf/a00088" kind="struct" prot="public">
+    <compoundname>DIFILEEFFECT</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/ddf/a00088_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="267" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/a00088_1a62607312d96a8c6351fdd1d79d635ae0" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID GuidEffect</definition>
+        <argsstring></argsstring>
+        <name>GuidEffect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="268" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/a00088_1a68e54984c1e1c2be070bc4fd8b41eb35" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a7913240b16286bfdcb811a35a982b236" kindref="member">LPCDIEFFECT</ref></type>
+        <definition>LPCDIEFFECT lpDiEffect</definition>
+        <argsstring></argsstring>
+        <name>lpDiEffect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="269" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/a00088_1aeffa4fb29494d7afc9573440dacb0e8c" prot="public" static="no" mutable="no">
+        <type>CHAR</type>
+        <definition>CHAR szFriendlyName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>szFriendlyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="270" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="90">
+        <label>LPDIFILEEFFECT</label>
+        <link refid="db/ddf/a00088"/>
+        <childnode refid="91" relation="usage">
+          <edgelabel>lpDiEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="91">
+        <label>LPDIEFFECT</label>
+        <link refid="d4/d63/a00082"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="266" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="266" bodyend="271"/>
+    <listofallmembers>
+      <member refid="db/ddf/a00088_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIFILEEFFECT</scope><name>dwSize</name></member>
+      <member refid="db/ddf/a00088_1a62607312d96a8c6351fdd1d79d635ae0" prot="public" virt="non-virtual"><scope>DIFILEEFFECT</scope><name>GuidEffect</name></member>
+      <member refid="db/ddf/a00088_1a68e54984c1e1c2be070bc4fd8b41eb35" prot="public" virt="non-virtual"><scope>DIFILEEFFECT</scope><name>lpDiEffect</name></member>
+      <member refid="db/ddf/a00088_1aeffa4fb29494d7afc9573440dacb0e8c" prot="public" virt="non-virtual"><scope>DIFILEEFFECT</scope><name>szFriendlyName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

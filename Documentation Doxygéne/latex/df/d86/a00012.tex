@@ -1,0 +1,569 @@
+\hypertarget{a00012}{\section{R\-P\-A Class Reference}
+\label{a00012}\index{R\-P\-A@{R\-P\-A}}
+}
+
+
+{\ttfamily \#include \char`\"{}R\-P\-A.\-h\char`\"{}}
+
+Inheritance diagram for R\-P\-A\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{df/d86/a00012}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Public Member Functions}
+\subsection*{Static Public Member Functions}
+\subsection*{Private Member Functions}
+\subsection*{Private Attributes}
+\subsection*{Static Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00012_abe9ae8f14b57b3de791786e7c0852b1a}{\index{R\-P\-A@{R\-P\-A}!R\-P\-A@{R\-P\-A}}
+\index{R\-P\-A@{R\-P\-A}!RPA@{R\-P\-A}}
+\subsubsection[{R\-P\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-P\-A} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_abe9ae8f14b57b3de791786e7c0852b1a}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00012}{R\-P\-A} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     \hyperlink{a00012_a0af541d1b4b8c59e4385c003e377b746}{m\_pPosition} = \textcolor{keyword}{new} \hyperlink{a00006}{LatLongCoord}();
+8     \hyperlink{a00012_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = 0;
+9     \hyperlink{a00012_a610bb35047703e6c2c0176285cd09312}{m\_dHeading} = 0;
+10 
+11     connect(\hyperlink{a00007_adb2b1b18fad4caaafde371f991525f38}{LogReplayControl::getInstance}(), SIGNAL(
+      \hyperlink{a00012_a04e801b333f118c8877267b1797cfe24}{geolocation}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+12         \textcolor{keyword}{this}, SLOT(\hyperlink{a00012_a04e801b333f118c8877267b1797cfe24}{geolocation}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+13     connect(\hyperlink{a00007_adb2b1b18fad4caaafde371f991525f38}{LogReplayControl::getInstance}(), SIGNAL(
+      \hyperlink{a00012_aa3c54f0958638486df2b69a9b53c5d7f}{updateHeading}(\textcolor{keywordtype}{double})), \textcolor{keyword}{this}, SLOT(\hyperlink{a00012_aa3c54f0958638486df2b69a9b53c5d7f}{updateHeading}(\textcolor{keywordtype}{double})));
+14 \}
+\end{DoxyCode}
+\hypertarget{a00012_a4043fd156cb502931774dc35bc00fdde}{\index{R\-P\-A@{R\-P\-A}!$\sim$\-R\-P\-A@{$\sim$\-R\-P\-A}}
+\index{$\sim$\-R\-P\-A@{$\sim$\-R\-P\-A}!RPA@{R\-P\-A}}
+\subsubsection[{$\sim$\-R\-P\-A}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf R\-P\-A} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_a4043fd156cb502931774dc35bc00fdde}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{keyword}{delete} \hyperlink{a00012_a0af541d1b4b8c59e4385c003e377b746}{m\_pPosition};
+28 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00012_a04e801b333f118c8877267b1797cfe24}{\index{R\-P\-A@{R\-P\-A}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!RPA@{R\-P\-A}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-f\-Latitude, }
+\item[{double}]{p\-\_\-f\-Longitude, }
+\item[{double}]{p\-\_\-f\-Altitude, }
+\item[{double}]{p\-\_\-f\-Heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00012_a04e801b333f118c8877267b1797cfe24}
+
+
+geolocation update slot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-f\-Latitude} & latitude double \\
+\hline
+{\em p\-\_\-f\-Longitude} & longitude double \\
+\hline
+{\em p\-\_\-f\-Altitude} & altitude double \\
+\hline
+{\em p\-\_\-f\-Heading} & \char`\"{}false\char`\"{} heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+93 \{
+94     \hyperlink{a00012_ac967c692f2002391c7210139dae74c9b}{setAltitude}(p\_fAltitude);
+95     \hyperlink{a00012_ad4a7c4bae5c3e6d868a9441afbc1269a}{setCoordinates}(\textcolor{keyword}{new} \hyperlink{a00006}{LatLongCoord}(p\_fLatitude, p\_fLongitude));
+96 
+97     emit \hyperlink{a00012_aefff1faa5888fec11aae0f1039cf2cad}{positionChanged}();
+98 \}
+\end{DoxyCode}
+\hypertarget{a00012_a6f20aa9c433a4f132a1720becc864a2b}{\index{R\-P\-A@{R\-P\-A}!get\-Altitude@{get\-Altitude}}
+\index{get\-Altitude@{get\-Altitude}!RPA@{R\-P\-A}}
+\subsubsection[{get\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00012_a6f20aa9c433a4f132a1720becc864a2b}
+
+
+\hyperlink{a00012}{R\-P\-A} altitude getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+altitude in meters double 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{keywordflow}{return} \hyperlink{a00012_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude};
+80 \}
+\end{DoxyCode}
+\hypertarget{a00012_a8aaef3ba118d70f729ec23dee71755a7}{\index{R\-P\-A@{R\-P\-A}!get\-Coordinates@{get\-Coordinates}}
+\index{get\-Coordinates@{get\-Coordinates}!RPA@{R\-P\-A}}
+\subsubsection[{get\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} $\ast$ get\-Coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00012_a8aaef3ba118d70f729ec23dee71755a7}
+
+
+\hyperlink{a00012}{R\-P\-A} coordinates getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+latitude / longitude coordinates in decimal degrees Lat\-Long\-Coord$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{keywordflow}{return} \hyperlink{a00012_a0af541d1b4b8c59e4385c003e377b746}{m\_pPosition};
+75 \}
+\end{DoxyCode}
+\hypertarget{a00012_a8c56441519ab3fa6a971bc898106adc4}{\index{R\-P\-A@{R\-P\-A}!get\-Heading@{get\-Heading}}
+\index{get\-Heading@{get\-Heading}!RPA@{R\-P\-A}}
+\subsubsection[{get\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00012_a8c56441519ab3fa6a971bc898106adc4}
+
+
+\hyperlink{a00012}{R\-P\-A} heading getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+heading in degrees double 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+83 \{
+84     \textcolor{keywordflow}{return} \hyperlink{a00012_a610bb35047703e6c2c0176285cd09312}{m\_dHeading};
+85 \}
+\end{DoxyCode}
+\hypertarget{a00012_ae1d662c26106ff9692252346d578e8fa}{\index{R\-P\-A@{R\-P\-A}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!RPA@{R\-P\-A}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00012_ae1d662c26106ff9692252346d578e8fa}
+
+
+\hyperlink{a00012}{R\-P\-A} height getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+heading in degrees double 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+88 \{
+89     \textcolor{keywordflow}{return} \hyperlink{a00012_a56427301298e19fe48b131d43376abce}{m\_dHeight};
+90 \}
+\end{DoxyCode}
+\hypertarget{a00012_a40277d38c94caf6125045994ba06f18f}{\index{R\-P\-A@{R\-P\-A}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!RPA@{R\-P\-A}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-P\-A} $\ast$ get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00012_a40277d38c94caf6125045994ba06f18f}
+
+
+\hyperlink{a00012}{R\-P\-A} instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00012}{R\-P\-A} pointer R\-P\-A$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+31 \{
+32     \textcolor{keywordflow}{if} (\hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton} == NULL)
+33     \{
+34         \hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton} = \textcolor{keyword}{new} \hyperlink{a00012_abe9ae8f14b57b3de791786e7c0852b1a}{RPA}();
+35     \}
+36 
+37     \textcolor{keywordflow}{return} \hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton};
+38 \}
+\end{DoxyCode}
+\hypertarget{a00012_aae9d52caad9fb2892deeb25596cfd2ab}{\index{R\-P\-A@{R\-P\-A}!kill@{kill}}
+\index{kill@{kill}!RPA@{R\-P\-A}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00012_aae9d52caad9fb2892deeb25596cfd2ab}
+
+
+\hyperlink{a00012}{R\-P\-A} instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+17 \{
+18     \textcolor{keywordflow}{if} (\hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton} != NULL)
+19     \{
+20         \textcolor{keyword}{delete} \hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton};
+21         \hyperlink{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{singleton} = NULL;
+22     \}
+23 \}
+\end{DoxyCode}
+\hypertarget{a00012_aefff1faa5888fec11aae0f1039cf2cad}{\index{R\-P\-A@{R\-P\-A}!position\-Changed@{position\-Changed}}
+\index{position\-Changed@{position\-Changed}!RPA@{R\-P\-A}}
+\subsubsection[{position\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void position\-Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00012_aefff1faa5888fec11aae0f1039cf2cad}
+
+
+Position changed event signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00012_ac967c692f2002391c7210139dae74c9b}{\index{R\-P\-A@{R\-P\-A}!set\-Altitude@{set\-Altitude}}
+\index{set\-Altitude@{set\-Altitude}!RPA@{R\-P\-A}}
+\subsubsection[{set\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Altitude (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Altitude}
+\end{DoxyParamCaption}
+)}}\label{a00012_ac967c692f2002391c7210139dae74c9b}
+
+
+\hyperlink{a00012}{R\-P\-A} altitude setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Altitude} & new altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+47 \{
+48     \hyperlink{a00012_a79a2bd07a373f3b0042e6c2dc0e51fc0}{m\_dAltitude} = p\_dAltitude;
+49 \}
+\end{DoxyCode}
+\hypertarget{a00012_ad4a7c4bae5c3e6d868a9441afbc1269a}{\index{R\-P\-A@{R\-P\-A}!set\-Coordinates@{set\-Coordinates}}
+\index{set\-Coordinates@{set\-Coordinates}!RPA@{R\-P\-A}}
+\subsubsection[{set\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Coordinates (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Position}
+\end{DoxyParamCaption}
+)}}\label{a00012_ad4a7c4bae5c3e6d868a9441afbc1269a}
+
+
+\hyperlink{a00012}{R\-P\-A} coordinates setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Position} & new G\-P\-S coordinates Lat\-Long\-Coord$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+41 \{
+42     \hyperlink{a00012_a0af541d1b4b8c59e4385c003e377b746}{m\_pPosition}->\hyperlink{a00006_aceb619fe57529d898748a11e4fc4985d}{setCoordinates}(p\_pPosition->
+      \hyperlink{a00006_a555fe9c52a678f22d66b31358566cfe9}{getLatitude}(), p\_pPosition->\hyperlink{a00006_aeca2669cb6715159606e844ab6a77bbf}{getLongitude}());
+43     emit \hyperlink{a00012_aefff1faa5888fec11aae0f1039cf2cad}{positionChanged}();
+44 \}
+\end{DoxyCode}
+\hypertarget{a00012_a7d62e844db7219c9230c5a65377ae8a4}{\index{R\-P\-A@{R\-P\-A}!set\-Heading@{set\-Heading}}
+\index{set\-Heading@{set\-Heading}!RPA@{R\-P\-A}}
+\subsubsection[{set\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Heading}
+\end{DoxyParamCaption}
+)}}\label{a00012_a7d62e844db7219c9230c5a65377ae8a4}
+
+
+\hyperlink{a00012}{R\-P\-A} heading setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Heading} & new heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{keywordflow}{if}(p\_dHeading > 360)
+54     \{
+55         \hyperlink{a00012_a610bb35047703e6c2c0176285cd09312}{m\_dHeading} = p\_dHeading - 360;
+56     \}
+57     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (p\_dHeading < 0)
+58     \{
+59         \hyperlink{a00012_a610bb35047703e6c2c0176285cd09312}{m\_dHeading} = 360 + p\_dHeading;
+60     \}
+61     \textcolor{keywordflow}{else}
+62     \{
+63         \hyperlink{a00012_a610bb35047703e6c2c0176285cd09312}{m\_dHeading} = p\_dHeading;
+64     \}
+65 \}
+\end{DoxyCode}
+\hypertarget{a00012_af5b10f1aa2f28ed0c42d4f47efb693e9}{\index{R\-P\-A@{R\-P\-A}!set\-Height@{set\-Height}}
+\index{set\-Height@{set\-Height}!RPA@{R\-P\-A}}
+\subsubsection[{set\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Height}
+\end{DoxyParamCaption}
+)}}\label{a00012_af5b10f1aa2f28ed0c42d4f47efb693e9}
+
+
+\hyperlink{a00012}{R\-P\-A} height setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Heading} & new heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+68 \{
+69     \hyperlink{a00012_a56427301298e19fe48b131d43376abce}{m\_dHeight} = p\_dHeight;
+70 \}
+\end{DoxyCode}
+\hypertarget{a00012_aa3c54f0958638486df2b69a9b53c5d7f}{\index{R\-P\-A@{R\-P\-A}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!RPA@{R\-P\-A}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00012_aa3c54f0958638486df2b69a9b53c5d7f}
+
+
+\char`\"{}real\char`\"{} heading update slot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & \char`\"{}real\char`\"{} heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+101 \{
+102     \hyperlink{a00012_a7d62e844db7219c9230c5a65377ae8a4}{setHeading}(p\_pValue);
+103 \}
+\end{DoxyCode}
+\hypertarget{a00012_a5114b66563f0437e0f1eac070557cb4c}{\index{R\-P\-A@{R\-P\-A}!update\-Height@{update\-Height}}
+\index{update\-Height@{update\-Height}!RPA@{R\-P\-A}}
+\subsubsection[{update\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00012_a5114b66563f0437e0f1eac070557cb4c}
+
+
+Height (from ground) update slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & \char`\"{}real\char`\"{} heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+106 \{
+107     \hyperlink{a00012_af5b10f1aa2f28ed0c42d4f47efb693e9}{setHeight}(p\_pValue);
+108 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00012_a79a2bd07a373f3b0042e6c2dc0e51fc0}{\index{R\-P\-A@{R\-P\-A}!m\-\_\-d\-Altitude@{m\-\_\-d\-Altitude}}
+\index{m\-\_\-d\-Altitude@{m\-\_\-d\-Altitude}!RPA@{R\-P\-A}}
+\subsubsection[{m\-\_\-d\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Altitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_a79a2bd07a373f3b0042e6c2dc0e51fc0}
+\hypertarget{a00012_a610bb35047703e6c2c0176285cd09312}{\index{R\-P\-A@{R\-P\-A}!m\-\_\-d\-Heading@{m\-\_\-d\-Heading}}
+\index{m\-\_\-d\-Heading@{m\-\_\-d\-Heading}!RPA@{R\-P\-A}}
+\subsubsection[{m\-\_\-d\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Heading\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_a610bb35047703e6c2c0176285cd09312}
+\hypertarget{a00012_a56427301298e19fe48b131d43376abce}{\index{R\-P\-A@{R\-P\-A}!m\-\_\-d\-Height@{m\-\_\-d\-Height}}
+\index{m\-\_\-d\-Height@{m\-\_\-d\-Height}!RPA@{R\-P\-A}}
+\subsubsection[{m\-\_\-d\-Height}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Height\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_a56427301298e19fe48b131d43376abce}
+\hypertarget{a00012_a0af541d1b4b8c59e4385c003e377b746}{\index{R\-P\-A@{R\-P\-A}!m\-\_\-p\-Position@{m\-\_\-p\-Position}}
+\index{m\-\_\-p\-Position@{m\-\_\-p\-Position}!RPA@{R\-P\-A}}
+\subsubsection[{m\-\_\-p\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord}$\ast$ m\-\_\-p\-Position\hspace{0.3cm}{\ttfamily [private]}}}\label{a00012_a0af541d1b4b8c59e4385c003e377b746}
+\hypertarget{a00012_a90cad5e82f2f5e5e963848285d59a3f9}{\index{R\-P\-A@{R\-P\-A}!singleton@{singleton}}
+\index{singleton@{singleton}!RPA@{R\-P\-A}}
+\subsubsection[{singleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-P\-A} $\ast$ singleton = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{a00012_a90cad5e82f2f5e5e963848285d59a3f9}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00037}{R\-P\-A.\-h}\item 
+\hyperlink{a00036}{R\-P\-A.\-cpp}\end{DoxyCompactItemize}

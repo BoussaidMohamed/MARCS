@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d03/a00062" kind="struct" prot="public">
+    <compoundname>DICONFIGUREDEVICESPARAMSW</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d03/a00062_1a1877b79618926362653fbfec34a6321a" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d8b/a00059" kindref="compound">DICOLORSET</ref></type>
+        <definition>DICOLORSET dics</definition>
+        <argsstring></argsstring>
+        <name>dics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="812" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1ae3a71581f53b592af8910ac6a9f867f7" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwcFormats</definition>
+        <argsstring></argsstring>
+        <name>dwcFormats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="809" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="809" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1ade21eb3ea47100f8f2a53b9c9ed0a16e" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwcUsers</definition>
+        <argsstring></argsstring>
+        <name>dwcUsers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="807" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="806" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="806" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1aa72255e7356d612ad72bb45def01fcbb" prot="public" static="no" mutable="no">
+        <type>HWND</type>
+        <definition>HWND hwnd</definition>
+        <argsstring></argsstring>
+        <name>hwnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="811" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="811" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1a2e911f0ccc9fc27bad1a49a4891fdd5d" prot="public" static="no" mutable="no">
+        <type>LPDIACTIONFORMATW</type>
+        <definition>LPDIACTIONFORMATW lprgFormats</definition>
+        <argsstring></argsstring>
+        <name>lprgFormats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="810" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="810" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1a5083f9ab0fdae83a94473ebb76593ca5" prot="public" static="no" mutable="no">
+        <type>LPWSTR</type>
+        <definition>LPWSTR lptszUserNames</definition>
+        <argsstring></argsstring>
+        <name>lptszUserNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="808" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d03/a00062_1a6e6e41b251e9d9f1871531c9d8c07e09" prot="public" static="no" mutable="no">
+        <type>IUnknown FAR *</type>
+        <definition>IUnknown FAR* lpUnkDDSTarget</definition>
+        <argsstring></argsstring>
+        <name>lpUnkDDSTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="813" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="813" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="37">
+        <label>LPDICONFIGUREDEVICESPARAMSW</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>dics</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>LPDICOLORSET</label>
+        <link refid="d3/d8b/a00059"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="805" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="805" bodyend="814"/>
+    <listofallmembers>
+      <member refid="df/d03/a00062_1a1877b79618926362653fbfec34a6321a" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>dics</name></member>
+      <member refid="df/d03/a00062_1ae3a71581f53b592af8910ac6a9f867f7" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>dwcFormats</name></member>
+      <member refid="df/d03/a00062_1ade21eb3ea47100f8f2a53b9c9ed0a16e" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>dwcUsers</name></member>
+      <member refid="df/d03/a00062_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>dwSize</name></member>
+      <member refid="df/d03/a00062_1aa72255e7356d612ad72bb45def01fcbb" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>hwnd</name></member>
+      <member refid="df/d03/a00062_1a2e911f0ccc9fc27bad1a49a4891fdd5d" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>lprgFormats</name></member>
+      <member refid="df/d03/a00062_1a5083f9ab0fdae83a94473ebb76593ca5" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>lptszUserNames</name></member>
+      <member refid="df/d03/a00062_1a6e6e41b251e9d9f1871531c9d8c07e09" prot="public" virt="non-virtual"><scope>DICONFIGUREDEVICESPARAMSW</scope><name>lpUnkDDSTarget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

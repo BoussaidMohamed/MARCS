@@ -1,0 +1,299 @@
+.TH "ComThread.h" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ComThread.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBComThread\fP"
+.br
+.ti -1c
+.RI "struct \fBCURRENT_WAY\fP"
+.br
+.ti -1c
+.RI "struct \fBGPS_DATA_ADVANCED\fP"
+.br
+.ti -1c
+.RI "struct \fBIMU_CALCDATA\fP"
+.br
+.ti -1c
+.RI "struct \fBLL_STATUS\fP"
+.br
+.ti -1c
+.RI "struct \fBRC_DATA\fP"
+.br
+.ti -1c
+.RI "struct \fBWAYPOINT\fP"
+.br
+.in -1c
+.SH "Data Type Documentation"
+.PP 
+.SH "struct CURRENT_WAY"
+.PP 
+\fBData Fields:\fP
+.RS 4
+unsigned char \fIcurrent_wp\fP 
+.br
+.PP
+unsigned char \fIcurrent_wp_memlocation\fP 
+.br
+.PP
+unsigned short \fIdistance_to_wp\fP 
+.br
+.PP
+unsigned char \fIdummy1\fP 
+.br
+.PP
+unsigned char \fIdummy2\fP 
+.br
+.PP
+unsigned short \fInavigation_status\fP 
+.br
+.PP
+unsigned short \fInr_of_wp\fP 
+.br
+.PP
+unsigned char \fIproperties\fP 
+.br
+.PP
+unsigned char \fIstatus\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct GPS_DATA_ADVANCED"
+.PP 
+\fBData Fields:\fP
+.RS 4
+int \fIheading\fP 
+.br
+.PP
+int \fIheight\fP 
+.br
+.PP
+unsigned int \fIhorizontal_accuracy\fP 
+.br
+.PP
+int \fIlatitude\fP 
+.br
+.PP
+int \fIlatitude_best_estimate\fP 
+.br
+.PP
+int \fIlongitude\fP 
+.br
+.PP
+int \fIlongitude_best_estimate\fP 
+.br
+.PP
+unsigned int \fInumSV\fP 
+.br
+.PP
+unsigned int \fIspeed_accuracy\fP 
+.br
+.PP
+int \fIspeed_x\fP 
+.br
+.PP
+int \fIspeed_x_best_estimate\fP 
+.br
+.PP
+int \fIspeed_y\fP 
+.br
+.PP
+int \fIspeed_y_best_estimate\fP 
+.br
+.PP
+int \fIstatus\fP 
+.br
+.PP
+unsigned int \fIvertical_accuracy\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct IMU_CALCDATA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+int \fIacc_absolute_value\fP 
+.br
+.PP
+int \fIacc_angle_nick\fP 
+.br
+.PP
+int \fIacc_angle_roll\fP 
+.br
+.PP
+short \fIacc_x\fP 
+.br
+.PP
+short \fIacc_x_calib\fP 
+.br
+.PP
+short \fIacc_y\fP 
+.br
+.PP
+short \fIacc_y_calib\fP 
+.br
+.PP
+short \fIacc_z\fP 
+.br
+.PP
+short \fIacc_z_calib\fP 
+.br
+.PP
+int \fIangle_nick\fP 
+.br
+.PP
+int \fIangle_roll\fP 
+.br
+.PP
+int \fIangle_yaw\fP 
+.br
+.PP
+int \fIangvel_nick\fP 
+.br
+.PP
+int \fIangvel_roll\fP 
+.br
+.PP
+int \fIangvel_yaw\fP 
+.br
+.PP
+int \fIdheight\fP 
+.br
+.PP
+int \fIdheight_reference\fP 
+.br
+.PP
+int \fIheight\fP 
+.br
+.PP
+int \fIheight_reference\fP 
+.br
+.PP
+int \fIHx\fP 
+.br
+.PP
+int \fIHy\fP 
+.br
+.PP
+int \fIHz\fP 
+.br
+.PP
+int \fImag_heading\fP 
+.br
+.PP
+int \fIspeed_x\fP 
+.br
+.PP
+int \fIspeed_y\fP 
+.br
+.PP
+int \fIspeed_z\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct LL_STATUS"
+.PP 
+\fBData Fields:\fP
+.RS 4
+short \fIbattery_voltage_1\fP 
+.br
+.PP
+short \fIbattery_voltage_2\fP 
+.br
+.PP
+char \fIchksum_error\fP 
+.br
+.PP
+char \fIcompass_enabled\fP 
+.br
+.PP
+short \fIcpu_load\fP 
+.br
+.PP
+short \fIflightMode\fP 
+.br
+.PP
+char \fIflying\fP 
+.br
+.PP
+char \fImotors_on\fP 
+.br
+.PP
+short \fIstatus\fP 
+.br
+.PP
+short \fIup_time\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct RC_DATA"
+.PP 
+\fBData Fields:\fP
+.RS 4
+unsigned short \fIchannels_in[8]\fP 
+.br
+.PP
+unsigned short \fIchannels_out[8]\fP 
+.br
+.PP
+unsigned char \fIlock\fP 
+.br
+.PP
+.RE
+.PP
+.SH "struct WAYPOINT"
+.PP 
+\fBData Fields:\fP
+.RS 4
+short \fIchksum\fP 
+.br
+.PP
+unsigned char \fIdummy_1\fP 
+.br
+.PP
+unsigned short \fIdummy_2\fP 
+.br
+.PP
+int \fIheight\fP 
+.br
+.PP
+unsigned char \fImax_speed\fP 
+.br
+.PP
+unsigned short \fIpos_acc\fP 
+.br
+.PP
+unsigned char \fIproperties\fP 
+.br
+.PP
+unsigned short \fItime\fP 
+.br
+.PP
+unsigned char \fIwp_number\fP 
+.br
+.PP
+int \fIX\fP 
+.br
+.PP
+int \fIY\fP 
+.br
+.PP
+int \fIyaw\fP 
+.br
+.PP
+.RE
+.PP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

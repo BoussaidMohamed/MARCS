@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d5/db6/a00042">
+    <title>video.cpp File Reference</title>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d5/db6/a00042_1aef1d7c2fea653fb1d729b2f40b2c2c53">affichageList</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeoDataDocument * <link linkend="d5/db6/a00042_1a8b0f68f97ddd8c30ad31efa6919778ee">document</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QString <link linkend="d5/db6/a00042_1ae55f476d1700ade204b3038b8c37f8ba">fileOpened</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeoPainter * <link linkend="d5/db6/a00042_1a6db9a27632d51962600fe2f1debbb678">gp</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QString <link linkend="d5/db6/a00042_1ade9b9dbbdedb4e80abbaa2201ba82d05">lastMap</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QString <link linkend="d5/db6/a00042_1a3de39ae285a10e6655db42a1dd146c69">lastMission</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QListView * <link linkend="d5/db6/a00042_1aaf37d61f155139509050cfaefd1a1c3d">m_listView</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RoutingManager * <link linkend="d5/db6/a00042_1a02d3f124c170b0126dab54f6e5a18dae">manager</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RoutingManager * <link linkend="d5/db6/a00042_1aca10b4dc402bfe3d17f1fcba33544252">manager_smallMap</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d5/db6/a00042_1ab5b110200d9f08e5d10a2549f54073c9">num_waypoint</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * <link linkend="d5/db6/a00042_1aad93f0b04d6ea6ac097124ef453bef9d">numWpText</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d5/db6/a00042_1a8c7e45250b1eb6821dd59fb2a9a016d7">open</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeoDataPlacemark * <link linkend="d5/db6/a00042_1ab78e87803316b7303d0f8697c7c0f253">place</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QString <link linkend="d5/db6/a00042_1add3cc0473ea4a2ff453620e16ac24056">qstr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RouteRequest * <link linkend="d5/db6/a00042_1ade0ea03ae98566eaed4f7a1f331f237a">request</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>RouteRequest * <link linkend="d5/db6/a00042_1aeae2fdde26f8ed9003c0cf66a1f25662">request_smallMap</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d5/db6/a00042_1a57c52213e1c32a667a5963a122e0a23b">temp</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>GeoDataCoordinates * <link linkend="d5/db6/a00042_1a99347d1261cfb39396fdc4965d16f515">tempo</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="d5/db6/a00042_1aa6011e6576184fcd9e0841fdffbaa826">textNumWaypoint</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; <link linkend="d5/db6/a00042_1a5d3a9439b166172c9c871c9a723eac19">wpListOpen</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; <link linkend="d5/db6/a00042_1afe5800195fe7a91ea1bad152ba9113b5">wpListSave</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/video.cpp</para>
+    </simplesect>
+</section>

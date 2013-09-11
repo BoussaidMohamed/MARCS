@@ -1,0 +1,765 @@
+.TH "ComThread" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ComThread \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'ComThread\&.h'\fP
+.PP
+Inherits QThread\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Public Member Functions"
+.SS "Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBComThread\fP ()"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBComThread\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+8 {
+9     handle = NULL;
+10 
+11     dcb\&.DCBlength = sizeof(DCB);
+12     dcb\&.BaudRate = CBR_57600;   /*  vitesse */
+13         dcb\&.fBinary = true;
+14     dcb\&.fParity = false;
+15     dcb\&.fOutxCtsFlow = false;
+16     dcb\&.fOutxDsrFlow = false;
+17     dcb\&.fDtrControl = DTR_CONTROL_ENABLE;
+18     dcb\&.fDsrSensitivity = false;
+19     dcb\&.fTXContinueOnXoff = false;
+20     dcb\&.fOutX = false;
+21     dcb\&.fInX = false;
+22     dcb\&.fErrorChar = false;
+23     dcb\&.fNull = false;
+24     dcb\&.fRtsControl = RTS_CONTROL_ENABLE;
+25     dcb\&.fAbortOnError = false;
+26     dcb\&.fDummy2 = 0;
+27     dcb\&.wReserved = 0;
+28     dcb\&.XonLim = 0x100;
+29     dcb\&.XoffLim = 0x100;
+30     dcb\&.ByteSize = 8 ; /* nombre de bits */
+31     dcb\&.Parity = NOPARITY;
+32     dcb\&.StopBits = ONESTOPBIT;
+33     dcb\&.XonChar = 0x11;
+34     dcb\&.XoffChar = 0x13;
+35     dcb\&.ErrorChar = '?';
+36     dcb\&.EofChar = 0x1a;
+37     dcb\&.EvtChar = 0x10;
+38 
+39     failed = false;
+40     failNoticed = false;
+41 }
+.fi
+.SS "~\fBComThread\fP ()"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+44 {
+45 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void clearCounters ()"
+
+.PP
+Reset all counters\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+301 {
+302     sizeWrite = 0;
+303     sizeRead = 0;
+304     sizePoll = 0;
+305 }
+.fi
+.SS "void createCom (QStringp_sCom)"
+
+.PP
+Create the COM port handler\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_sCom\fP COM port name QString 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+48 {
+49 
+50 
+51     handle = CreateFile((LPCWSTR)p_sCom\&.constData(), GENERIC_READ|GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_SYSTEM, NULL);
+52 
+53     if (handle == INVALID_HANDLE_VALUE)
+54     {
+55         handle = NULL;
+56     }
+57     else if (failed)
+58     {
+59         emit XBeeReconnected();
+60         failNoticed = false;
+61         failed = false;
+62     }
+63 
+64     COMMTIMEOUTS g_cto =
+65     {
+66         READ_INTERVAL,      /* ReadIntervalTimeOut          */
+67         READ_MULTIPLIER,    /* ReadTotalTimeOutMultiplier   */
+68         MAX_WAIT_READ,      /* ReadTotalTimeOutConstant     */
+69         0,                  /* WriteTotalTimeOutMultiplier  */
+70         0                   /* WriteTotalTimeOutConstant    */
+71     };
+72 
+73     SetupComm(handle, RX_SIZE, TX_SIZE);
+74 
+75     if(!SetCommTimeouts(handle, &g_cto) || !SetCommState(handle, &dcb))
+76     {
+77         CloseHandle(handle);
+78         handle = NULL;
+79     }
+80 
+81     PurgeComm(handle, PURGE_TXCLEAR|PURGE_RXCLEAR|PURGE_TXABORT|PURGE_RXABORT);
+82     EscapeCommFunction(handle, SETDTR);
+83 
+84 }
+.fi
+.SS "void dataReceived (char *buffer, intlength)\fC [signal]\fP"
+
+.PP
+Data received event signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP reception buffer char* 
+.br
+\fIlength\fP number of received char int 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void poll (unsigned shortpDataToPoll)\fC [slot]\fP"
+
+.PP
+Poll data slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpDataToPoll\fP data packet to poll descriptor unsigned short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+265 {
+266     memcpy((void*)dataToPoll, ">*>p", 4);
+267     memcpy((void*)&dataToPoll[4], &pDataToPoll, sizeof(short));
+268     sizePoll = 4 + sizeof(short);
+269     sizeRead = 0;
+270     mustPoll = true;
+271 
+272     mustRead = true;
+273 
+274     if (pDataToPoll & STATUS_PACKET)
+275     {
+276         sizeRead += sizeof(">*>") - 1 +  sizeof(short) + sizeof(char) + sizeof(LL_STATUS) + sizeof(short) + sizeof("<#<") - 1;
+277     }
+278 
+279     if (pDataToPoll & GPS_PACKET)
+280     {
+281         sizeRead += sizeof(">*>") - 1 +  sizeof(short) + sizeof(char) + sizeof(GPS_DATA_ADVANCED) + sizeof(short) + sizeof("<#<") - 1;
+282     }
+283 
+284     if (pDataToPoll & CURRENT_WAY_PACKET)
+285     {
+286         sizeRead += sizeof(">*>") - 1 +  sizeof(short) + sizeof(char) + sizeof(CURRENT_WAY) + sizeof(short) + sizeof("<#<") - 1;
+287     }
+288 
+289     if (pDataToPoll & IMU_CALCDATA_PACKET)
+290     {
+291         sizeRead += sizeof(">*>") - 1 +  sizeof(short) + sizeof(char) + sizeof(IMU_CALCDATA) + sizeof(short) + sizeof("<#<") - 1;
+292     }
+293 
+294     if (pDataToPoll & RC_DATA_PACKET)
+295     {
+296         sizeRead += sizeof(">*>") - 1 +  sizeof(short) + sizeof(char) + sizeof(RC_DATA) + sizeof(short) + sizeof("<#<") - 1;
+297     }
+298 }
+.fi
+.SS "void releaseCom ()"
+
+.PP
+Destruct the COM port handler\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+87 {
+88     CloseHandle(handle);
+89     handle = NULL;
+90 }
+.fi
+.SS "void run ()"
+
+.PP
+QThread run override\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+93 {
+94     DWORD nbReceived = 0;
+95     DWORD nbWritten = 0;
+96     sizeWrite = 0;
+97     sizeRead = 0;
+98 
+99     while (1)
+100     {
+101         if (handle != NULL)
+102         {
+103             if (mustWrite == true)
+104             {
+105                 if (WriteFile(handle, command, sizeWrite, &nbWritten, NULL) == true)
+106                 {
+107                                         mustWrite = false;
+108                 }
+109                 else
+110                 {
+111                                         failed = true;
+112                 }
+113             }
+114 
+115             if (mustPoll == true)
+116             {
+117                 if (WriteFile(handle, dataToPoll, sizePoll, &nbWritten, NULL) == true)
+118                 {
+119                                         mustPoll = false;
+120                 }
+121                 else
+122                 {
+123                                         failed = true;
+124                 }
+125             }
+126 
+127             if (mustRead == true)
+128             {
+129                 if (ReadFile(handle, buffer, sizeRead, &nbReceived, NULL) == true)
+130                 {
+131                     PurgeComm(handle, PURGE_RXCLEAR);
+132                     sizeRead = 0;
+133                                         mustRead = false;
+134                 }
+135                 else
+136                 {
+137                                         failed = true;
+138                 }
+139             }
+140 
+141             if (nbReceived >= sizeRead && nbReceived != 0)
+142             {
+143                 emit dataReceived(buffer, nbReceived);
+144                                 nbReceived = 0;
+145             }
+146 
+147             if (failed && !failNoticed)
+148             {
+149                 emit XBeeDisconnected();
+150                                 failNoticed = true;
+151             }
+152         }
+153         QThread::msleep(10);
+154     }
+155 }
+.fi
+.SS "void sendGoTo ()\fC [slot]\fP"
+
+.PP
+Send go to order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+188 {
+189     memcpy((void*)command, ">*>wg", sizeof(">*>wg") - 1);
+190     sizeWrite = sizeof(">*>wg") - 1;
+191     mustWrite = true;
+192 
+193     mustRead = true;
+194     sizeRead += 5;
+195 }
+.fi
+.SS "void sendHome ()\fC [slot]\fP"
+
+.PP
+Send come home order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+158 {
+159     memcpy((void*)command, ">*>wh", sizeof(">*>wh") - 1);
+160     sizeWrite = sizeof(">*>wh") - 1;
+161     mustWrite = true;
+162 
+163     mustRead = true;
+164     sizeRead += 5;
+165 }
+.fi
+.SS "void sendLand ()\fC [slot]\fP"
+
+.PP
+Send land order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+168 {
+169     memcpy((void*)command, ">*>we", sizeof(">*>we") - 1);
+170     sizeWrite = sizeof(">*>we") - 1;
+171     mustWrite = true;
+172 
+173     mustRead = true;
+174     sizeRead += 5;
+175 }
+.fi
+.SS "void sendLaunch ()\fC [slot]\fP"
+
+.PP
+Send launch (define home) order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+178 {
+179     memcpy((void*)command, ">*>wl", sizeof(">*>wl") - 1);
+180     sizeWrite = sizeof(">*>wl") - 1;
+181     mustWrite = true;
+182 
+183     mustRead = true;
+184     sizeRead += 5;
+185 }
+.fi
+.SS "void sendMotOff ()\fC [slot]\fP"
+
+.PP
+Send stop engines order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+254 {
+255     unsigned char value = 0;
+256 
+257     memcpy((void*)command, ">*>m", 4);
+258     memcpy((void*)&command[4], &value, 1);
+259     sizeWrite = 5;
+260         mustWrite = true;
+261 
+262 }
+.fi
+.SS "void sendMotOn ()\fC [slot]\fP"
+
+.PP
+Send start engines order slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+245 {
+246     unsigned char value = 1;
+247     memcpy((void*)command, ">*>m", 4);
+248     memcpy((void*)&command[4], &value, 1);
+249     sizeWrite = 5;
+250         mustWrite = true;
+251    }
+.fi
+.SS "void sendMove (doublex, doubley, doublez, doubleyaw)\fC [slot]\fP"
+
+.PP
+Send relative waypoint slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP x axe move reference double 
+.br
+\fIy\fP y axe move reference double 
+.br
+\fIz\fP z axe move reference double 
+.br
+\fIyaw\fP heading reference double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+222 {
+223     wp\&.wp_number = 1;
+224     wp\&.pos_acc = 10000;
+225     wp\&.time = 0;
+226     wp\&.max_speed = 100;
+227     wp\&.properties = WPPROP_HEIGHTENABLED | WPPROP_YAWENABLED | WPPROP_AUTOMATICGOTO;
+228     wp\&.X = x * 1000;
+229     wp\&.Y = y * 1000;
+230     wp\&.height = z * 1000;
+231     wp\&.yaw = yaw * 1000;
+232     wp\&.chksum = 0xAAAA + wp\&.yaw + wp\&.height + wp\&.time + wp\&.X + wp\&.Y + wp\&.max_speed + wp\&.pos_acc + wp\&.properties + wp\&.wp_number;
+233 
+234     memcpy((void*)command, ">*>ws", sizeof(">*>ws") - 1);
+235     memcpy((void*)&command[sizeWrite], &wp, sizeof(WAYPOINT));
+236     sizeWrite = sizeof(">*>ws") - 1;
+237     sizeWrite += sizeof(WAYPOINT);
+238     mustWrite = true;
+239 
+240     mustRead = true;
+241     sizeRead += 5;
+242 }
+.fi
+.SS "void sendWaypoint (doublex, doubley, doublez, doublenumber)\fC [slot]\fP"
+
+.PP
+Send waypoint slot\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP longitude reference double 
+.br
+\fIy\fP latitude reference double 
+.br
+\fIz\fP altitude reference double 
+.br
+\fInumber\fP waypoint number double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+198 {
+199     wp\&.wp_number = number;
+200     wp\&.pos_acc = 10000;
+201     wp\&.time = 0;
+202     wp\&.max_speed = 100;
+203     wp\&.properties = WPPROP_ABSCOORDS | WPPROP_HEIGHTENABLED | WPPROP_YAWENABLED;
+204     wp\&.X = x * 10000000;
+205     wp\&.Y = y * 10000000;
+206     wp\&.height = z * 1000;
+207     wp\&.yaw = 0;
+208     wp\&.chksum = 0xAAAA + wp\&.yaw + wp\&.height + wp\&.time + wp\&.X + wp\&.Y + wp\&.max_speed + wp\&.pos_acc + wp\&.properties + wp\&.wp_number;
+209 
+210     memcpy((void*)command, ">*>ws", sizeof(">*>ws") - 1);
+211     memcpy((void*)&command[sizeWrite], &wp, sizeof(WAYPOINT));
+212     sizeWrite = sizeof(">*>ws") - 1;
+213     sizeWrite += sizeof(WAYPOINT);
+214     mustWrite = true;
+215 
+216     mustRead = true;
+217     sizeRead += 5;
+218     qDebug()<<"send it ";
+219 }
+.fi
+.SS "void XBeeDisconnected ()\fC [signal]\fP"
+
+.PP
+XBee physically disconnected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void XBeeReconnected ()\fC [signal]\fP"
+
+.PP
+XBee physically reconnected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SH "Field Documentation"
+.PP 
+.SS "char buffer[RX_SIZE]\fC [private]\fP"
+
+.SS "char command[TX_SIZE]\fC [private]\fP"
+
+.SS "char dataToPoll[10]\fC [private]\fP"
+
+.SS "DCB dcb\fC [private]\fP"
+
+.SS "bool failed\fC [private]\fP"
+
+.SS "bool failNoticed\fC [private]\fP"
+
+.SS "HANDLE handle\fC [private]\fP"
+
+.SS "bool mustPoll\fC [private]\fP"
+
+.SS "bool mustRead\fC [private]\fP"
+
+.SS "bool mustWrite\fC [private]\fP"
+
+.SS "int sizePoll\fC [private]\fP"
+
+.SS "unsigned long sizeRead\fC [private]\fP"
+
+.SS "int sizeWrite\fC [private]\fP"
+
+.SS "QTimer timerFail\fC [private]\fP"
+
+.SS "\fBWAYPOINT\fP wp\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

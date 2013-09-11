@@ -1,0 +1,860 @@
+\hypertarget{a00002}{\section{Com\-Thread Class Reference}
+\label{a00002}\index{Com\-Thread@{Com\-Thread}}
+}
+
+
+{\ttfamily \#include \char`\"{}Com\-Thread.\-h\char`\"{}}
+
+Inheritance diagram for Com\-Thread\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/d46/a00002}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Public Member Functions}
+\subsection*{Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00002_ab24bebbd2ca81a9931aa0184366c9ba2}{\index{Com\-Thread@{Com\-Thread}!Com\-Thread@{Com\-Thread}}
+\index{Com\-Thread@{Com\-Thread}!ComThread@{Com\-Thread}}
+\subsubsection[{Com\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Com\-Thread} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00002_ab24bebbd2ca81a9931aa0184366c9ba2}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00002}{Com\-Thread} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+8 \{
+9     \hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} = NULL;
+10 
+11     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.DCBlength = \textcolor{keyword}{sizeof}(DCB);
+12     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.BaudRate = CBR\_57600;   \textcolor{comment}{/*  vitesse */}
+13         \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fBinary = \textcolor{keyword}{true};
+14     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fParity = \textcolor{keyword}{false};
+15     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fOutxCtsFlow = \textcolor{keyword}{false};
+16     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fOutxDsrFlow = \textcolor{keyword}{false};
+17     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fDtrControl = DTR\_CONTROL\_ENABLE;
+18     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fDsrSensitivity = \textcolor{keyword}{false};
+19     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fTXContinueOnXoff = \textcolor{keyword}{false};
+20     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fOutX = \textcolor{keyword}{false};
+21     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fInX = \textcolor{keyword}{false};
+22     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fErrorChar = \textcolor{keyword}{false};
+23     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fNull = \textcolor{keyword}{false};
+24     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fRtsControl = RTS\_CONTROL\_ENABLE;
+25     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fAbortOnError = \textcolor{keyword}{false};
+26     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.fDummy2 = 0;
+27     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.wReserved = 0;
+28     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.XonLim = 0x100;
+29     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.XoffLim = 0x100;
+30     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.ByteSize = 8 ; \textcolor{comment}{/* nombre de bits */}
+31     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.Parity = NOPARITY;
+32     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.StopBits = ONESTOPBIT;
+33     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.XonChar = 0x11;
+34     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.XoffChar = 0x13;
+35     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.ErrorChar = \textcolor{charliteral}{'?'};
+36     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.EofChar = 0x1a;
+37     \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}.EvtChar = 0x10;
+38 
+39     \hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} = \textcolor{keyword}{false};
+40     \hyperlink{a00002_a8e19c465f25509158341edd459c119b1}{failNoticed} = \textcolor{keyword}{false};
+41 \}
+\end{DoxyCode}
+\hypertarget{a00002_acbe0fd6d9516075ea60fb81b8a323461}{\index{Com\-Thread@{Com\-Thread}!$\sim$\-Com\-Thread@{$\sim$\-Com\-Thread}}
+\index{$\sim$\-Com\-Thread@{$\sim$\-Com\-Thread}!ComThread@{Com\-Thread}}
+\subsubsection[{$\sim$\-Com\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Com\-Thread} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00002_acbe0fd6d9516075ea60fb81b8a323461}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+44 \{
+45 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00002_a34bd4298c27ce53379ec5eb23db83601}{\index{Com\-Thread@{Com\-Thread}!clear\-Counters@{clear\-Counters}}
+\index{clear\-Counters@{clear\-Counters}!ComThread@{Com\-Thread}}
+\subsubsection[{clear\-Counters}]{\setlength{\rightskip}{0pt plus 5cm}void clear\-Counters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00002_a34bd4298c27ce53379ec5eb23db83601}
+
+
+Reset all counters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+301 \{
+302     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = 0;
+303     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} = 0;
+304     \hyperlink{a00002_a608be86b18e15c3309a1b50794a2115c}{sizePoll} = 0;
+305 \}
+\end{DoxyCode}
+\hypertarget{a00002_a665582c4fbc3a48be815747e26dd6a02}{\index{Com\-Thread@{Com\-Thread}!create\-Com@{create\-Com}}
+\index{create\-Com@{create\-Com}!ComThread@{Com\-Thread}}
+\subsubsection[{create\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void create\-Com (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{p\-\_\-s\-Com}
+\end{DoxyParamCaption}
+)}}\label{a00002_a665582c4fbc3a48be815747e26dd6a02}
+
+
+Create the C\-O\-M port handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-s\-Com} & C\-O\-M port name Q\-String \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+48 \{
+49 
+50 
+51     \hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} = CreateFile((LPCWSTR)p\_sCom.constData(), GENERIC\_READ|GENERIC\_WRITE, 0, NULL, 
+      OPEN\_EXISTING, FILE\_ATTRIBUTE\_SYSTEM, NULL);
+52 
+53     \textcolor{keywordflow}{if} (\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} == INVALID\_HANDLE\_VALUE)
+54     \{
+55         \hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} = NULL;
+56     \}
+57     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed})
+58     \{
+59         emit \hyperlink{a00002_afb47495b5727dae0e7a5bac62098cb1e}{XBeeReconnected}();
+60         \hyperlink{a00002_a8e19c465f25509158341edd459c119b1}{failNoticed} = \textcolor{keyword}{false};
+61         \hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} = \textcolor{keyword}{false};
+62     \}
+63 
+64     COMMTIMEOUTS g\_cto =
+65     \{
+66         READ\_INTERVAL,      \textcolor{comment}{/* ReadIntervalTimeOut          */}
+67         READ\_MULTIPLIER,    \textcolor{comment}{/* ReadTotalTimeOutMultiplier   */}
+68         MAX\_WAIT\_READ,      \textcolor{comment}{/* ReadTotalTimeOutConstant     */}
+69         0,                  \textcolor{comment}{/* WriteTotalTimeOutMultiplier  */}
+70         0                   \textcolor{comment}{/* WriteTotalTimeOutConstant    */}
+71     \};
+72 
+73     SetupComm(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, RX\_SIZE, TX\_SIZE);
+74 
+75     \textcolor{keywordflow}{if}(!SetCommTimeouts(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, &g\_cto) || !SetCommState(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, &
+      \hyperlink{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{dcb}))
+76     \{
+77         CloseHandle(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle});
+78         \hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} = NULL;
+79     \}
+80 
+81     PurgeComm(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, PURGE\_TXCLEAR|PURGE\_RXCLEAR|PURGE\_TXABORT|PURGE\_RXABORT);
+82     EscapeCommFunction(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, SETDTR);
+83 
+84 \}
+\end{DoxyCode}
+\hypertarget{a00002_a406892b365248cd6b35030378d1d4310}{\index{Com\-Thread@{Com\-Thread}!data\-Received@{data\-Received}}
+\index{data\-Received@{data\-Received}!ComThread@{Com\-Thread}}
+\subsubsection[{data\-Received}]{\setlength{\rightskip}{0pt plus 5cm}void data\-Received (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00002_a406892b365248cd6b35030378d1d4310}
+
+
+Data received event signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & reception buffer char$\ast$ \\
+\hline
+{\em length} & number of received char int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00002_a8a8485f38f2aef24f1fd53c31949876b}{\index{Com\-Thread@{Com\-Thread}!poll@{poll}}
+\index{poll@{poll}!ComThread@{Com\-Thread}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}void poll (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Data\-To\-Poll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_a8a8485f38f2aef24f1fd53c31949876b}
+
+
+Poll data slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Data\-To\-Poll} & data packet to poll descriptor unsigned short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+265 \{
+266     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a581ac8ca710cda078fd8ddb8e50954eb}{dataToPoll}, \textcolor{stringliteral}{">*>p"}, 4);
+267     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00002_a581ac8ca710cda078fd8ddb8e50954eb}{dataToPoll}[4], &pDataToPoll, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));
+268     \hyperlink{a00002_a608be86b18e15c3309a1b50794a2115c}{sizePoll} = 4 + \textcolor{keyword}{sizeof}(short);
+269     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} = 0;
+270     \hyperlink{a00002_a21713484042dd9404528d9cec57ebe87}{mustPoll} = \textcolor{keyword}{true};
+271 
+272     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+273 
+274     \textcolor{keywordflow}{if} (pDataToPoll & STATUS\_PACKET)
+275     \{
+276         \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 +  \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char) + \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_df/d98/a00107}{LL\_STATUS}) + \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+277     \}
+278 
+279     \textcolor{keywordflow}{if} (pDataToPoll & GPS\_PACKET)
+280     \{
+281         \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 +  \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char) + \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d3/d32/a00105}{GPS\_DATA\_ADVANCED}) + \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+282     \}
+283 
+284     \textcolor{keywordflow}{if} (pDataToPoll & CURRENT\_WAY\_PACKET)
+285     \{
+286         \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 +  \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char) + \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d1/d84/a00052}{CURRENT\_WAY}) + \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+287     \}
+288 
+289     \textcolor{keywordflow}{if} (pDataToPoll & IMU\_CALCDATA\_PACKET)
+290     \{
+291         \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 +  \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char) + \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d7/d70/a00106}{IMU\_CALCDATA}) + \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+292     \}
+293 
+294     \textcolor{keywordflow}{if} (pDataToPoll & RC\_DATA\_PACKET)
+295     \{
+296         \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>"}) - 1 +  \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}) + \textcolor{keyword}{sizeof}(char) + \textcolor{keyword}{sizeof}(
+      \hyperlink{a00004_d1/dd6/a00108}{RC\_DATA}) + \textcolor{keyword}{sizeof}(short) + \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{"<#<"}) - 1;
+297     \}
+298 \}
+\end{DoxyCode}
+\hypertarget{a00002_a681ba4ec7299214b9bb86e660fe22701}{\index{Com\-Thread@{Com\-Thread}!release\-Com@{release\-Com}}
+\index{release\-Com@{release\-Com}!ComThread@{Com\-Thread}}
+\subsubsection[{release\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void release\-Com (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00002_a681ba4ec7299214b9bb86e660fe22701}
+
+
+Destruct the C\-O\-M port handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+87 \{
+88     CloseHandle(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle});
+89     \hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} = NULL;
+90 \}
+\end{DoxyCode}
+\hypertarget{a00002_a13a43e6d814de94978c515cb084873b1}{\index{Com\-Thread@{Com\-Thread}!run@{run}}
+\index{run@{run}!ComThread@{Com\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00002_a13a43e6d814de94978c515cb084873b1}
+
+
+Q\-Thread run override. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+93 \{
+94     \hyperlink{a00003_a50e15ae51c87ae06ab29c8148cb5f36c}{DWORD} nbReceived = 0;
+95     \hyperlink{a00003_a50e15ae51c87ae06ab29c8148cb5f36c}{DWORD} nbWritten = 0;
+96     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = 0;
+97     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} = 0;
+98 
+99     \textcolor{keywordflow}{while} (1)
+100     \{
+101         \textcolor{keywordflow}{if} (\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle} != NULL)
+102         \{
+103             \textcolor{keywordflow}{if} (\hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} == \textcolor{keyword}{true})
+104             \{
+105                 \textcolor{keywordflow}{if} (WriteFile(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, \hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite}, &nbWritten, NULL) == \textcolor{keyword}{true})
+106                 \{
+107                                         \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{false};
+108                 \}
+109                 \textcolor{keywordflow}{else}
+110                 \{
+111                                         \hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} = \textcolor{keyword}{true};
+112                 \}
+113             \}
+114 
+115             \textcolor{keywordflow}{if} (\hyperlink{a00002_a21713484042dd9404528d9cec57ebe87}{mustPoll} == \textcolor{keyword}{true})
+116             \{
+117                 \textcolor{keywordflow}{if} (WriteFile(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, \hyperlink{a00002_a581ac8ca710cda078fd8ddb8e50954eb}{dataToPoll}, \hyperlink{a00002_a608be86b18e15c3309a1b50794a2115c}{sizePoll}, &nbWritten, NULL) == \textcolor{keyword}{
+      true})
+118                 \{
+119                                         \hyperlink{a00002_a21713484042dd9404528d9cec57ebe87}{mustPoll} = \textcolor{keyword}{false};
+120                 \}
+121                 \textcolor{keywordflow}{else}
+122                 \{
+123                                         \hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} = \textcolor{keyword}{true};
+124                 \}
+125             \}
+126 
+127             \textcolor{keywordflow}{if} (\hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} == \textcolor{keyword}{true})
+128             \{
+129                 \textcolor{keywordflow}{if} (ReadFile(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, \hyperlink{a00002_a9bfec7969db289b67014513bcabba47f}{buffer}, \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead}, &nbReceived, NULL) == \textcolor{keyword}{true})
+130                 \{
+131                     PurgeComm(\hyperlink{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{handle}, PURGE\_RXCLEAR);
+132                     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} = 0;
+133                                         \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{false};
+134                 \}
+135                 \textcolor{keywordflow}{else}
+136                 \{
+137                                         \hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} = \textcolor{keyword}{true};
+138                 \}
+139             \}
+140 
+141             \textcolor{keywordflow}{if} (nbReceived >= \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} && nbReceived != 0)
+142             \{
+143                 emit \hyperlink{a00002_a406892b365248cd6b35030378d1d4310}{dataReceived}(\hyperlink{a00002_a9bfec7969db289b67014513bcabba47f}{buffer}, nbReceived);
+144                                 nbReceived = 0;
+145             \}
+146 
+147             \textcolor{keywordflow}{if} (\hyperlink{a00002_a53794d9466be19cb9c0b65f87090e237}{failed} && !\hyperlink{a00002_a8e19c465f25509158341edd459c119b1}{failNoticed})
+148             \{
+149                 emit \hyperlink{a00002_a289c96805ddb1941fe330931d73321a0}{XBeeDisconnected}();
+150                                 \hyperlink{a00002_a8e19c465f25509158341edd459c119b1}{failNoticed} = \textcolor{keyword}{true};
+151             \}
+152         \}
+153         QThread::msleep(10);
+154     \}
+155 \}
+\end{DoxyCode}
+\hypertarget{a00002_a26c718e7e95e398ee9368434c23d0622}{\index{Com\-Thread@{Com\-Thread}!send\-Go\-To@{send\-Go\-To}}
+\index{send\-Go\-To@{send\-Go\-To}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Go\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_a26c718e7e95e398ee9368434c23d0622}
+
+
+Send go to order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+188 \{
+189     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>wg"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wg"}) - 1);
+190     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wg"}) - 1;
+191     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+192 
+193     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+194     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+195 \}
+\end{DoxyCode}
+\hypertarget{a00002_ac898a9141e335cfee3e6c9ebb6815411}{\index{Com\-Thread@{Com\-Thread}!send\-Home@{send\-Home}}
+\index{send\-Home@{send\-Home}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Home}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_ac898a9141e335cfee3e6c9ebb6815411}
+
+
+Send come home order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+158 \{
+159     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>wh"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wh"}) - 1);
+160     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wh"}) - 1;
+161     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+162 
+163     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+164     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+165 \}
+\end{DoxyCode}
+\hypertarget{a00002_a2664ee66ff3ea7ed8cdca604bce4be33}{\index{Com\-Thread@{Com\-Thread}!send\-Land@{send\-Land}}
+\index{send\-Land@{send\-Land}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Land}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Land (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_a2664ee66ff3ea7ed8cdca604bce4be33}
+
+
+Send land order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+168 \{
+169     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>we"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>we"}) - 1);
+170     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>we"}) - 1;
+171     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+172 
+173     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+174     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+175 \}
+\end{DoxyCode}
+\hypertarget{a00002_a38513372e1af4752cee2e2d046c98821}{\index{Com\-Thread@{Com\-Thread}!send\-Launch@{send\-Launch}}
+\index{send\-Launch@{send\-Launch}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Launch}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Launch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_a38513372e1af4752cee2e2d046c98821}
+
+
+Send launch (define home) order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+178 \{
+179     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>wl"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wl"}) - 1);
+180     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>wl"}) - 1;
+181     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+182 
+183     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+184     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+185 \}
+\end{DoxyCode}
+\hypertarget{a00002_a01a812308fc692593b9abcab86bf003d}{\index{Com\-Thread@{Com\-Thread}!send\-Mot\-Off@{send\-Mot\-Off}}
+\index{send\-Mot\-Off@{send\-Mot\-Off}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Mot\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mot\-Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_a01a812308fc692593b9abcab86bf003d}
+
+
+Send stop engines order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+254 \{
+255     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value = 0;
+256 
+257     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>m"}, 4);
+258     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}[4], &value, 1);
+259     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = 5;
+260         \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+261 
+262 \}
+\end{DoxyCode}
+\hypertarget{a00002_ad6b67904e4b30f5a26bef654f8a3c4a6}{\index{Com\-Thread@{Com\-Thread}!send\-Mot\-On@{send\-Mot\-On}}
+\index{send\-Mot\-On@{send\-Mot\-On}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Mot\-On}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mot\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_ad6b67904e4b30f5a26bef654f8a3c4a6}
+
+
+Send start engines order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+245 \{
+246     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value = 1;
+247     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>m"}, 4);
+248     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}[4], &value, 1);
+249     \hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite} = 5;
+250         \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+251    \}
+\end{DoxyCode}
+\hypertarget{a00002_afeec69b8ef45da950fab78df4a1584e3}{\index{Com\-Thread@{Com\-Thread}!send\-Move@{send\-Move}}
+\index{send\-Move@{send\-Move}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_afeec69b8ef45da950fab78df4a1584e3}
+
+
+Send relative waypoint slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x axe move reference double \\
+\hline
+{\em y} & y axe move reference double \\
+\hline
+{\em z} & z axe move reference double \\
+\hline
+{\em yaw} & heading reference double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+222 \{
+223     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a66219f3f331762fb4a8d21c1f01d1105}{wp\_number} = 1;
+224     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a702e933b2034a3d94950c39bfdcd3052}{pos\_acc} = 10000;
+225     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a9e291d833ba33b59d6063a0cd586a86b}{time} = 0;
+226     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a38184c087a13ec7e1b887656d9ccf848}{max\_speed} = 100;
+227     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a78b61a2d452301b80cd56942bfc362e0}{properties} = WPPROP\_HEIGHTENABLED | WPPROP\_YAWENABLED | WPPROP\_AUTOMATICGOTO;
+228     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a80c0944640e62d3ed6c5419c1bcc0c88}{X} = x * 1000;
+229     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_aa482c4cc86a24474e4fb19b5b5978778}{Y} = y * 1000;
+230     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} = z * 1000;
+231     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a7d2cd970242d8b46e019dd7653588b30}{yaw} = yaw * 1000;
+232     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a8191d25c9e9667de75b852aa1b3cd7b7}{chksum} = 0xAAAA + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a7d2cd970242d8b46e019dd7653588b30}{yaw} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a9e291d833ba33b59d6063a0cd586a86b}{time} + 
+      \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a80c0944640e62d3ed6c5419c1bcc0c88}{X} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_aa482c4cc86a24474e4fb19b5b5978778}{Y} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a38184c087a13ec7e1b887656d9ccf848}{max\_speed} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a702e933b2034a3d94950c39bfdcd3052}{pos\_acc} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.
+      \hyperlink{a00004_a78b61a2d452301b80cd56942bfc362e0}{properties} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a66219f3f331762fb4a8d21c1f01d1105}{wp\_number};
+233 
+234     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>ws"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>ws"}) - 1);
+235     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}[\hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite}], &\hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_dd/d42/a00109}{WAYPOINT}));
+236     sizeWrite = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>ws"}) - 1;
+237     sizeWrite += \textcolor{keyword}{sizeof}(\hyperlink{a00004_dd/d42/a00109}{WAYPOINT});
+238     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+239 
+240     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+241     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+242 \}
+\end{DoxyCode}
+\hypertarget{a00002_adbfad4ea4f6a7fbd059e2d8ec65f1539}{\index{Com\-Thread@{Com\-Thread}!send\-Waypoint@{send\-Waypoint}}
+\index{send\-Waypoint@{send\-Waypoint}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00002_adbfad4ea4f6a7fbd059e2d8ec65f1539}
+
+
+Send waypoint slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude reference double \\
+\hline
+{\em y} & latitude reference double \\
+\hline
+{\em z} & altitude reference double \\
+\hline
+{\em number} & waypoint number double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+198 \{
+199     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a66219f3f331762fb4a8d21c1f01d1105}{wp\_number} = number;
+200     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a702e933b2034a3d94950c39bfdcd3052}{pos\_acc} = 10000;
+201     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a9e291d833ba33b59d6063a0cd586a86b}{time} = 0;
+202     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a38184c087a13ec7e1b887656d9ccf848}{max\_speed} = 100;
+203     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a78b61a2d452301b80cd56942bfc362e0}{properties} = WPPROP\_ABSCOORDS | WPPROP\_HEIGHTENABLED | WPPROP\_YAWENABLED;
+204     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a80c0944640e62d3ed6c5419c1bcc0c88}{X} = x * 10000000;
+205     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_aa482c4cc86a24474e4fb19b5b5978778}{Y} = y * 10000000;
+206     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} = z * 1000;
+207     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a7d2cd970242d8b46e019dd7653588b30}{yaw} = 0;
+208     \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a8191d25c9e9667de75b852aa1b3cd7b7}{chksum} = 0xAAAA + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a7d2cd970242d8b46e019dd7653588b30}{yaw} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_ad12fc34ce789bce6c8a05d8a17138534}{height} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a9e291d833ba33b59d6063a0cd586a86b}{time} + 
+      \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a80c0944640e62d3ed6c5419c1bcc0c88}{X} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_aa482c4cc86a24474e4fb19b5b5978778}{Y} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a38184c087a13ec7e1b887656d9ccf848}{max\_speed} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a702e933b2034a3d94950c39bfdcd3052}{pos\_acc} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.
+      \hyperlink{a00004_a78b61a2d452301b80cd56942bfc362e0}{properties} + \hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}.\hyperlink{a00004_a66219f3f331762fb4a8d21c1f01d1105}{wp\_number};
+209 
+210     memcpy((\textcolor{keywordtype}{void}*)\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}, \textcolor{stringliteral}{">*>ws"}, \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>ws"}) - 1);
+211     memcpy((\textcolor{keywordtype}{void}*)&\hyperlink{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{command}[\hyperlink{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{sizeWrite}], &\hyperlink{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{wp}, \textcolor{keyword}{sizeof}(\hyperlink{a00004_dd/d42/a00109}{WAYPOINT}));
+212     sizeWrite = \textcolor{keyword}{sizeof}(\textcolor{stringliteral}{">*>ws"}) - 1;
+213     sizeWrite += \textcolor{keyword}{sizeof}(\hyperlink{a00004_dd/d42/a00109}{WAYPOINT});
+214     \hyperlink{a00002_a951ec1a18196d806edaf6d3fb517a239}{mustWrite} = \textcolor{keyword}{true};
+215 
+216     \hyperlink{a00002_a129a62f35fc57084ceccbdc82794d9c1}{mustRead} = \textcolor{keyword}{true};
+217     \hyperlink{a00002_ad9f5381795006f1f187538296368cd11}{sizeRead} += 5;
+218     qDebug()<<\textcolor{stringliteral}{"send it "};
+219 \}
+\end{DoxyCode}
+\hypertarget{a00002_a289c96805ddb1941fe330931d73321a0}{\index{Com\-Thread@{Com\-Thread}!X\-Bee\-Disconnected@{X\-Bee\-Disconnected}}
+\index{X\-Bee\-Disconnected@{X\-Bee\-Disconnected}!ComThread@{Com\-Thread}}
+\subsubsection[{X\-Bee\-Disconnected}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00002_a289c96805ddb1941fe330931d73321a0}
+
+
+X\-Bee physically disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00002_afb47495b5727dae0e7a5bac62098cb1e}{\index{Com\-Thread@{Com\-Thread}!X\-Bee\-Reconnected@{X\-Bee\-Reconnected}}
+\index{X\-Bee\-Reconnected@{X\-Bee\-Reconnected}!ComThread@{Com\-Thread}}
+\subsubsection[{X\-Bee\-Reconnected}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Reconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00002_afb47495b5727dae0e7a5bac62098cb1e}
+
+
+X\-Bee physically reconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00002_a9bfec7969db289b67014513bcabba47f}{\index{Com\-Thread@{Com\-Thread}!buffer@{buffer}}
+\index{buffer@{buffer}!ComThread@{Com\-Thread}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}char buffer\mbox{[}R\-X\-\_\-\-S\-I\-Z\-E\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a9bfec7969db289b67014513bcabba47f}
+\hypertarget{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}{\index{Com\-Thread@{Com\-Thread}!command@{command}}
+\index{command@{command}!ComThread@{Com\-Thread}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}char command\mbox{[}T\-X\-\_\-\-S\-I\-Z\-E\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5}
+\hypertarget{a00002_a581ac8ca710cda078fd8ddb8e50954eb}{\index{Com\-Thread@{Com\-Thread}!data\-To\-Poll@{data\-To\-Poll}}
+\index{data\-To\-Poll@{data\-To\-Poll}!ComThread@{Com\-Thread}}
+\subsubsection[{data\-To\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}char data\-To\-Poll\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a581ac8ca710cda078fd8ddb8e50954eb}
+\hypertarget{a00002_a9954a8d34e6014302ae1d99cf5714cc9}{\index{Com\-Thread@{Com\-Thread}!dcb@{dcb}}
+\index{dcb@{dcb}!ComThread@{Com\-Thread}}
+\subsubsection[{dcb}]{\setlength{\rightskip}{0pt plus 5cm}D\-C\-B dcb\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a9954a8d34e6014302ae1d99cf5714cc9}
+\hypertarget{a00002_a53794d9466be19cb9c0b65f87090e237}{\index{Com\-Thread@{Com\-Thread}!failed@{failed}}
+\index{failed@{failed}!ComThread@{Com\-Thread}}
+\subsubsection[{failed}]{\setlength{\rightskip}{0pt plus 5cm}bool failed\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a53794d9466be19cb9c0b65f87090e237}
+\hypertarget{a00002_a8e19c465f25509158341edd459c119b1}{\index{Com\-Thread@{Com\-Thread}!fail\-Noticed@{fail\-Noticed}}
+\index{fail\-Noticed@{fail\-Noticed}!ComThread@{Com\-Thread}}
+\subsubsection[{fail\-Noticed}]{\setlength{\rightskip}{0pt plus 5cm}bool fail\-Noticed\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a8e19c465f25509158341edd459c119b1}
+\hypertarget{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}{\index{Com\-Thread@{Com\-Thread}!handle@{handle}}
+\index{handle@{handle}!ComThread@{Com\-Thread}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}H\-A\-N\-D\-L\-E handle\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a07ff1fa563f3d58110ce80c3c1796f9b}
+\hypertarget{a00002_a21713484042dd9404528d9cec57ebe87}{\index{Com\-Thread@{Com\-Thread}!must\-Poll@{must\-Poll}}
+\index{must\-Poll@{must\-Poll}!ComThread@{Com\-Thread}}
+\subsubsection[{must\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}bool must\-Poll\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a21713484042dd9404528d9cec57ebe87}
+\hypertarget{a00002_a129a62f35fc57084ceccbdc82794d9c1}{\index{Com\-Thread@{Com\-Thread}!must\-Read@{must\-Read}}
+\index{must\-Read@{must\-Read}!ComThread@{Com\-Thread}}
+\subsubsection[{must\-Read}]{\setlength{\rightskip}{0pt plus 5cm}bool must\-Read\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a129a62f35fc57084ceccbdc82794d9c1}
+\hypertarget{a00002_a951ec1a18196d806edaf6d3fb517a239}{\index{Com\-Thread@{Com\-Thread}!must\-Write@{must\-Write}}
+\index{must\-Write@{must\-Write}!ComThread@{Com\-Thread}}
+\subsubsection[{must\-Write}]{\setlength{\rightskip}{0pt plus 5cm}bool must\-Write\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a951ec1a18196d806edaf6d3fb517a239}
+\hypertarget{a00002_a608be86b18e15c3309a1b50794a2115c}{\index{Com\-Thread@{Com\-Thread}!size\-Poll@{size\-Poll}}
+\index{size\-Poll@{size\-Poll}!ComThread@{Com\-Thread}}
+\subsubsection[{size\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}int size\-Poll\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a608be86b18e15c3309a1b50794a2115c}
+\hypertarget{a00002_ad9f5381795006f1f187538296368cd11}{\index{Com\-Thread@{Com\-Thread}!size\-Read@{size\-Read}}
+\index{size\-Read@{size\-Read}!ComThread@{Com\-Thread}}
+\subsubsection[{size\-Read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long size\-Read\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_ad9f5381795006f1f187538296368cd11}
+\hypertarget{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}{\index{Com\-Thread@{Com\-Thread}!size\-Write@{size\-Write}}
+\index{size\-Write@{size\-Write}!ComThread@{Com\-Thread}}
+\subsubsection[{size\-Write}]{\setlength{\rightskip}{0pt plus 5cm}int size\-Write\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d}
+\hypertarget{a00002_a578f5ec7742dce06b86799b36f1d138c}{\index{Com\-Thread@{Com\-Thread}!timer\-Fail@{timer\-Fail}}
+\index{timer\-Fail@{timer\-Fail}!ComThread@{Com\-Thread}}
+\subsubsection[{timer\-Fail}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer timer\-Fail\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a578f5ec7742dce06b86799b36f1d138c}
+\hypertarget{a00002_a0dff6629133ecc492d6b9ab44b60cb80}{\index{Com\-Thread@{Com\-Thread}!wp@{wp}}
+\index{wp@{wp}!ComThread@{Com\-Thread}}
+\subsubsection[{wp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-A\-Y\-P\-O\-I\-N\-T} wp\hspace{0.3cm}{\ttfamily [private]}}}\label{a00002_a0dff6629133ecc492d6b9ab44b60cb80}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00004}{Com\-Thread.\-h}\item 
+\hyperlink{a00020}{Com\-Thread.\-cpp}\end{DoxyCompactItemize}

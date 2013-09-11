@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d6/d97/a00045" kind="file">
+    <compoundname>waypoint.h</compoundname>
+    <innerclass refid="d7/d7a/a00016" prot="public">waypoint</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WAYPOINT_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WAYPOINT_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtGlobal&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d7/d7a/a00016" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1" kindref="member">waypoint</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1" kindref="member">waypoint</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>,<sp/>qreal<sp/>longitude,qreal<sp/>latitude,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/>hdg,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>time,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numMission);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><ref refid="d7/d7a/a00016_1af0e2cbb0d9e04c2ddbb6f22859fcde9e" kindref="member">~waypoint</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a14c494edc171ceb9b2934855efa3d994" kindref="member">setNum</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1aaa12873d55502d21104ba3e24f6588c2" kindref="member">setLong</ref><sp/>(<sp/>qreal<sp/>lon);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a8cc659fa52b3b0849781fb9056345773" kindref="member">setLat</ref><sp/>(<sp/>qreal<sp/>lat);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1ae85a2033b8fb23b94e8fa1f5dd2cec32" kindref="member">setAlt</ref><sp/>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alt);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a34ff0642ba4c90e91effc59033cd1e02" kindref="member">setHdg</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>hd);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1ae1e31b142a535161c64e72c116edbe25" kindref="member">setTime</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ti);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a96792b488b10a7c3305c7f573074f935" kindref="member">setType</ref><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ty);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1ab5de576a96c5363dc724aa46e28c614c" kindref="member">setMission</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numMission);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a5d06a1578648c9b23746188891b01aae" kindref="member">getNum</ref><sp/>()<sp/><sp/>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a634c5702fb39fae6c792ae8215b24e96" kindref="member">getMission</ref>()<sp/><sp/>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="d7/d7a/a00016_1adbb7cce87647d82df57979083101d052" kindref="member">getLong</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="d7/d7a/a00016_1a5459e1c9c7c5acd86670578bd885d93b" kindref="member">getLat</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1afed4a0eed0e6adfc5415466c03b4f04d" kindref="member">getAlt</ref>()<sp/><sp/>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a1291ed46506a9b586c2302ce6035c4e8" kindref="member">getHdg</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a140cd6eb747b445398503dedfd51785f" kindref="member">getTime</ref>()<sp/><sp/>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1aec389cbe6ac7aff8ce7196e7dbc007df" kindref="member">getType</ref>()<sp/><sp/>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="d7/d7a/a00016_1afb18581adf1a5fb2143293d611e47a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1afb18581adf1a5fb2143293d611e47a36" kindref="member">numW</ref><sp/>;</highlight></codeline>
+<codeline lineno="34" refid="d7/d7a/a00016_1a6a9eb024341a6e94cc5229efccfa074d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>qreal<sp/><ref refid="d7/d7a/a00016_1a6a9eb024341a6e94cc5229efccfa074d" kindref="member">longitudeW</ref>,<sp/><ref refid="d7/d7a/a00016_1a58bed7fe1b447e0ed1b0a3610b779000" kindref="member">latitudeW</ref><sp/>;</highlight></codeline>
+<codeline lineno="35" refid="d7/d7a/a00016_1a82bc3e4657acf92c82314c400f82cc56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="d7/d7a/a00016_1a9483998f15b9a29e462c98259a8d46ba" kindref="member">altitudeW</ref>,<sp/><ref refid="d7/d7a/a00016_1a82bc3e4657acf92c82314c400f82cc56" kindref="member">hdgW</ref><sp/>;</highlight></codeline>
+<codeline lineno="36" refid="d7/d7a/a00016_1a68b799c80d746b250ae6aa7ff5df52db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d7a/a00016_1a9b8846f46bee60510747bd5c64dc4c8c" kindref="member">timeW</ref>,<sp/><ref refid="d7/d7a/a00016_1a68b799c80d746b250ae6aa7ff5df52db" kindref="member">typeW</ref><sp/>,<sp/><ref refid="d7/d7a/a00016_1ae4ae92f7b356cdff8b7d8f460da2a3bf" kindref="member">numMissionW</ref><sp/>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>WAYPOINT_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h"/>
+  </compounddef>
+</doxygen>

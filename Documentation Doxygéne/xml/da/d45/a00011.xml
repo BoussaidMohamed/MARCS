@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="da/d45/a00011" kind="class" prot="public">
+    <compoundname>PeripheralController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="d4/d8c/a00035" local="yes">PeripheralController.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d45/a00011_1a5f850b41f8d146c95fa4fcb5c118ba83" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bMouseMode</definition>
+        <argsstring></argsstring>
+        <name>m_bMouseMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="32" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1a25f6095115a8ff95c4db48ae47b82211" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bWaitRelease</definition>
+        <argsstring></argsstring>
+        <name>m_bWaitRelease</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="33" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1ad746a6b65e92b161871379fccca76759" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bWaitReleaseMode</definition>
+        <argsstring></argsstring>
+        <name>m_bWaitReleaseMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1aa2bc3dbc15db0a044829d4a20ba08f56" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bWaitReleaseRight</definition>
+        <argsstring></argsstring>
+        <name>m_bWaitReleaseRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1a2e34a37152be9b74f82195ddd044b40e" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/dad/a00005" kindref="compound">JoystickGrabber</ref> *</type>
+        <definition>JoystickGrabber* m_pJoystick</definition>
+        <argsstring></argsstring>
+        <name>m_pJoystick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="37" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1a8ba25017352f50469eddacb322dea1ea" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d45/a00011_1aeda9d6618a0c455de69329344070cfe4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool problemDetected</definition>
+        <argsstring></argsstring>
+        <name>problemDetected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="31" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="da/d45/a00011_1a4c732b19b7b708ba880e1a7dd193d4b2" prot="private" static="yes" mutable="no">
+        <type><ref refid="da/d45/a00011" kindref="compound">PeripheralController</ref> *</type>
+        <definition>PeripheralController * singleton</definition>
+        <argsstring></argsstring>
+        <name>singleton</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="38" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="da/d45/a00011_1a458a87530aff37dfe6f31899599aea2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PeripheralController</definition>
+        <argsstring>()</argsstring>
+        <name>PeripheralController</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="da/d45/a00011" kindref="compound">PeripheralController</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="48" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="5" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d45/a00011_1a74f9f7dba0d6aee9d6ca60746ff37441" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~PeripheralController</definition>
+        <argsstring>()</argsstring>
+        <name>~PeripheralController</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="56" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d45/a00011_1a2869d5a0199756d4d4f2bcf2889320cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controlMode</definition>
+        <argsstring>()</argsstring>
+        <name>controlMode</name>
+        <briefdescription>
+<para>MUAV control management. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="72" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="152" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d45/a00011_1a80b77ca519ad5f2104e456dc862f431a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mouseMode</definition>
+        <argsstring>()</argsstring>
+        <name>mouseMode</name>
+        <briefdescription>
+<para>Mouse mode management. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="64" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="83" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="da/d45/a00011_1a81bd14f0b39bba2433355ec26f833270" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d45/a00011" kindref="compound">PeripheralController</ref> *</type>
+        <definition>PeripheralController * getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para>Get the lone instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="da/d45/a00011" kindref="compound">PeripheralController</ref> instance PeripheralController* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="83" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d45/a00011_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>()</argsstring>
+        <name>kill</name>
+        <briefdescription>
+<para>Lone instance killer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="91" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d45/a00011_1adf02fcb4d0f62c09a87788789f30a0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isMouseMode</definition>
+        <argsstring>()</argsstring>
+        <name>isMouseMode</name>
+        <briefdescription>
+<para>Mouse mode activated indicator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>In mouse mode bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="107" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d45/a00011_1a8928745e5087fc002cf95365e70eec25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void startControllerGrab</definition>
+        <argsstring>(int p_nTime)</argsstring>
+        <name>startControllerGrab</name>
+        <param>
+          <type>int</type>
+          <declname>p_nTime</declname>
+        </param>
+        <briefdescription>
+<para>Start grab timer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_nTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interval time in ms for grab int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="99" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="da/d45/a00011_1a35163b56af81dc0f09dc69e92161f4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controllerConnected</definition>
+        <argsstring>()</argsstring>
+        <name>controllerConnected</name>
+        <briefdescription>
+<para>Controller connected event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1aff3131ad09d602487d9a2eddf9c10152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controllerControlMode</definition>
+        <argsstring>()</argsstring>
+        <name>controllerControlMode</name>
+        <briefdescription>
+<para>Controller control mode event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1ae805875db5d4bed3c7ae8b42ea448c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controllerMouseMode</definition>
+        <argsstring>()</argsstring>
+        <name>controllerMouseMode</name>
+        <briefdescription>
+<para>Controller mouse mode event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1aa6bfaa413ce18461ac71e75248460700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dataFormatProblem</definition>
+        <argsstring>()</argsstring>
+        <name>dataFormatProblem</name>
+        <briefdescription>
+<para>Direct X data format problem. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1a51a5a6418d902f49aa198a8d3ae923f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deviceEnumProblem</definition>
+        <argsstring>()</argsstring>
+        <name>deviceEnumProblem</name>
+        <briefdescription>
+<para>Device emumeration problem. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1a10733eb4d9bf54f33699a23fe0e0c4f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void directInputProblem</definition>
+        <argsstring>()</argsstring>
+        <name>directInputProblem</name>
+        <briefdescription>
+<para>Direct Input problem. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1a2359b3e182aa100a1c8da8c5d05155fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void joystickProblem</definition>
+        <argsstring>()</argsstring>
+        <name>joystickProblem</name>
+        <briefdescription>
+<para>Game controller device state get problem. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1aa90a20f7c02554ca9335896cbc476ffc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mouseEvent</definition>
+        <argsstring>(Qt::MouseButton button, bool waitRelease)</argsstring>
+        <name>mouseEvent</name>
+        <param>
+          <type>Qt::MouseButton</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>waitRelease</declname>
+        </param>
+        <briefdescription>
+<para>Mouse event reagrding actions on gamepad. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>emulated pressed button Qt::MouseButton </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>waitRelease</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>button already pressed bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1a44769de90c2ec83d360149f4b36ea8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void move</definition>
+        <argsstring>(double x, double y, double z, double yaw)</argsstring>
+        <name>move</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> to send. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="194" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="da/d45/a00011_1ad70a13ae9071262fc324babf6254d6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void noJoystick</definition>
+        <argsstring>()</argsstring>
+        <name>noJoystick</name>
+        <briefdescription>
+<para>No joystick event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="135" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="da/d45/a00011_1a4c891561d67bf6739511e3896eba6fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void useController</definition>
+        <argsstring>()</argsstring>
+        <name>useController</name>
+        <briefdescription>
+<para>Controller handle slot (timed by another software controller) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="205" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.cpp" bodystart="52" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="156">
+        <label>PeripheralController</label>
+        <link refid="da/d45/a00011"/>
+        <childnode refid="156" relation="usage">
+          <edgelabel>singleton</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>m_pJoystick</edgelabel>
+        </childnode>
+      </node>
+      <node id="157">
+        <label>JoystickGrabber</label>
+        <link refid="dd/dad/a00005"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" line="12" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/PeripheralController.h" bodystart="11" bodyend="206"/>
+    <listofallmembers>
+      <member refid="da/d45/a00011_1a35163b56af81dc0f09dc69e92161f4b9" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>controllerConnected</name></member>
+      <member refid="da/d45/a00011_1aff3131ad09d602487d9a2eddf9c10152" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>controllerControlMode</name></member>
+      <member refid="da/d45/a00011_1ae805875db5d4bed3c7ae8b42ea448c1f" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>controllerMouseMode</name></member>
+      <member refid="da/d45/a00011_1a2869d5a0199756d4d4f2bcf2889320cf" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>controlMode</name></member>
+      <member refid="da/d45/a00011_1aa6bfaa413ce18461ac71e75248460700" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>dataFormatProblem</name></member>
+      <member refid="da/d45/a00011_1a51a5a6418d902f49aa198a8d3ae923f6" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>deviceEnumProblem</name></member>
+      <member refid="da/d45/a00011_1a10733eb4d9bf54f33699a23fe0e0c4f8" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>directInputProblem</name></member>
+      <member refid="da/d45/a00011_1a81bd14f0b39bba2433355ec26f833270" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>getInstance</name></member>
+      <member refid="da/d45/a00011_1adf02fcb4d0f62c09a87788789f30a0f4" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>isMouseMode</name></member>
+      <member refid="da/d45/a00011_1a2359b3e182aa100a1c8da8c5d05155fe" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>joystickProblem</name></member>
+      <member refid="da/d45/a00011_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>kill</name></member>
+      <member refid="da/d45/a00011_1a5f850b41f8d146c95fa4fcb5c118ba83" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_bMouseMode</name></member>
+      <member refid="da/d45/a00011_1a25f6095115a8ff95c4db48ae47b82211" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_bWaitRelease</name></member>
+      <member refid="da/d45/a00011_1ad746a6b65e92b161871379fccca76759" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_bWaitReleaseMode</name></member>
+      <member refid="da/d45/a00011_1aa2bc3dbc15db0a044829d4a20ba08f56" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_bWaitReleaseRight</name></member>
+      <member refid="da/d45/a00011_1a2e34a37152be9b74f82195ddd044b40e" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_pJoystick</name></member>
+      <member refid="da/d45/a00011_1a8ba25017352f50469eddacb322dea1ea" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>m_pTimer</name></member>
+      <member refid="da/d45/a00011_1aa90a20f7c02554ca9335896cbc476ffc" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>mouseEvent</name></member>
+      <member refid="da/d45/a00011_1a80b77ca519ad5f2104e456dc862f431a" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>mouseMode</name></member>
+      <member refid="da/d45/a00011_1a44769de90c2ec83d360149f4b36ea8da" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>move</name></member>
+      <member refid="da/d45/a00011_1ad70a13ae9071262fc324babf6254d6ea" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>noJoystick</name></member>
+      <member refid="da/d45/a00011_1a458a87530aff37dfe6f31899599aea2f" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>PeripheralController</name></member>
+      <member refid="da/d45/a00011_1aeda9d6618a0c455de69329344070cfe4" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>problemDetected</name></member>
+      <member refid="da/d45/a00011_1a4c732b19b7b708ba880e1a7dd193d4b2" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>singleton</name></member>
+      <member refid="da/d45/a00011_1a8928745e5087fc002cf95365e70eec25" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>startControllerGrab</name></member>
+      <member refid="da/d45/a00011_1a4c891561d67bf6739511e3896eba6fb4" prot="public" virt="non-virtual"><scope>PeripheralController</scope><name>useController</name></member>
+      <member refid="da/d45/a00011_1a74f9f7dba0d6aee9d6ca60746ff37441" prot="private" virt="non-virtual"><scope>PeripheralController</scope><name>~PeripheralController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

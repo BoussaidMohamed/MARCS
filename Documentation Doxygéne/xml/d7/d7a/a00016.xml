@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d7/d7a/a00016" kind="class" prot="public">
+    <compoundname>waypoint</compoundname>
+    <includes refid="d6/d97/a00045" local="yes">waypoint.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d7a/a00016_1a9483998f15b9a29e462c98259a8d46ba" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double altitudeW</definition>
+        <argsstring></argsstring>
+        <name>altitudeW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1a82bc3e4657acf92c82314c400f82cc56" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double hdgW</definition>
+        <argsstring></argsstring>
+        <name>hdgW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1a58bed7fe1b447e0ed1b0a3610b779000" prot="public" static="no" mutable="no">
+        <type>qreal</type>
+        <definition>qreal latitudeW</definition>
+        <argsstring></argsstring>
+        <name>latitudeW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1a6a9eb024341a6e94cc5229efccfa074d" prot="public" static="no" mutable="no">
+        <type>qreal</type>
+        <definition>qreal longitudeW</definition>
+        <argsstring></argsstring>
+        <name>longitudeW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1ae4ae92f7b356cdff8b7d8f460da2a3bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int numMissionW</definition>
+        <argsstring></argsstring>
+        <name>numMissionW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1afb18581adf1a5fb2143293d611e47a36" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int numW</definition>
+        <argsstring></argsstring>
+        <name>numW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="33" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1a9b8846f46bee60510747bd5c64dc4c8c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int timeW</definition>
+        <argsstring></argsstring>
+        <name>timeW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d7a/a00016_1a68b799c80d746b250ae6aa7ff5df52db" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int typeW</definition>
+        <argsstring></argsstring>
+        <name>typeW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>waypoint</definition>
+        <argsstring>()</argsstring>
+        <name>waypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="8" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a9d74c4b4910b2a7ad9c8a10090f4c507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>waypoint</definition>
+        <argsstring>(int num, qreal longitude, qreal latitude, double altitude, double hdg, int time, int type, int numMission)</argsstring>
+        <name>waypoint</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>longitude</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>latitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>hdg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numMission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="9" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1af0e2cbb0d9e04c2ddbb6f22859fcde9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~waypoint</definition>
+        <argsstring>()</argsstring>
+        <name>~waypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="10" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1afed4a0eed0e6adfc5415466c03b4f04d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getAlt</definition>
+        <argsstring>()</argsstring>
+        <name>getAlt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="25" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a1291ed46506a9b586c2302ce6035c4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getHdg</definition>
+        <argsstring>()</argsstring>
+        <name>getHdg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="26" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a5459e1c9c7c5acd86670578bd885d93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>qreal</type>
+        <definition>qreal getLat</definition>
+        <argsstring>()</argsstring>
+        <name>getLat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="24" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1adbb7cce87647d82df57979083101d052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>qreal</type>
+        <definition>qreal getLong</definition>
+        <argsstring>()</argsstring>
+        <name>getLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="23" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a634c5702fb39fae6c792ae8215b24e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getMission</definition>
+        <argsstring>()</argsstring>
+        <name>getMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="22" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a5d06a1578648c9b23746188891b01aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getNum</definition>
+        <argsstring>()</argsstring>
+        <name>getNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="21" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a140cd6eb747b445398503dedfd51785f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="27" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1aec389cbe6ac7aff8ce7196e7dbc007df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="28" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1ae85a2033b8fb23b94e8fa1f5dd2cec32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAlt</definition>
+        <argsstring>(double alt)</argsstring>
+        <name>setAlt</name>
+        <param>
+          <type>double</type>
+          <declname>alt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="15" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a34ff0642ba4c90e91effc59033cd1e02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHdg</definition>
+        <argsstring>(double hd)</argsstring>
+        <name>setHdg</name>
+        <param>
+          <type>double</type>
+          <declname>hd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="16" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a8cc659fa52b3b0849781fb9056345773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setLat</definition>
+        <argsstring>(qreal lat)</argsstring>
+        <name>setLat</name>
+        <param>
+          <type>qreal</type>
+          <declname>lat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="14" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1aaa12873d55502d21104ba3e24f6588c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setLong</definition>
+        <argsstring>(qreal lon)</argsstring>
+        <name>setLong</name>
+        <param>
+          <type>qreal</type>
+          <declname>lon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="13" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1ab5de576a96c5363dc724aa46e28c614c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setMission</definition>
+        <argsstring>(int numMission)</argsstring>
+        <name>setMission</name>
+        <param>
+          <type>int</type>
+          <declname>numMission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="19" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a14c494edc171ceb9b2934855efa3d994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setNum</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setNum</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="12" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1ae1e31b142a535161c64e72c116edbe25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setTime</definition>
+        <argsstring>(int ti)</argsstring>
+        <name>setTime</name>
+        <param>
+          <type>int</type>
+          <declname>ti</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="17" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d7a/a00016_1a96792b488b10a7c3305c7f573074f935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setType</definition>
+        <argsstring>(int ty)</argsstring>
+        <name>setType</name>
+        <param>
+          <type>int</type>
+          <declname>ty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="18" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" line="6" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/waypoint.h" bodystart="5" bodyend="40"/>
+    <listofallmembers>
+      <member refid="d7/d7a/a00016_1a9483998f15b9a29e462c98259a8d46ba" prot="public" virt="non-virtual"><scope>waypoint</scope><name>altitudeW</name></member>
+      <member refid="d7/d7a/a00016_1afed4a0eed0e6adfc5415466c03b4f04d" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getAlt</name></member>
+      <member refid="d7/d7a/a00016_1a1291ed46506a9b586c2302ce6035c4e8" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getHdg</name></member>
+      <member refid="d7/d7a/a00016_1a5459e1c9c7c5acd86670578bd885d93b" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getLat</name></member>
+      <member refid="d7/d7a/a00016_1adbb7cce87647d82df57979083101d052" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getLong</name></member>
+      <member refid="d7/d7a/a00016_1a634c5702fb39fae6c792ae8215b24e96" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getMission</name></member>
+      <member refid="d7/d7a/a00016_1a5d06a1578648c9b23746188891b01aae" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getNum</name></member>
+      <member refid="d7/d7a/a00016_1a140cd6eb747b445398503dedfd51785f" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getTime</name></member>
+      <member refid="d7/d7a/a00016_1aec389cbe6ac7aff8ce7196e7dbc007df" prot="public" virt="non-virtual"><scope>waypoint</scope><name>getType</name></member>
+      <member refid="d7/d7a/a00016_1a82bc3e4657acf92c82314c400f82cc56" prot="public" virt="non-virtual"><scope>waypoint</scope><name>hdgW</name></member>
+      <member refid="d7/d7a/a00016_1a58bed7fe1b447e0ed1b0a3610b779000" prot="public" virt="non-virtual"><scope>waypoint</scope><name>latitudeW</name></member>
+      <member refid="d7/d7a/a00016_1a6a9eb024341a6e94cc5229efccfa074d" prot="public" virt="non-virtual"><scope>waypoint</scope><name>longitudeW</name></member>
+      <member refid="d7/d7a/a00016_1ae4ae92f7b356cdff8b7d8f460da2a3bf" prot="public" virt="non-virtual"><scope>waypoint</scope><name>numMissionW</name></member>
+      <member refid="d7/d7a/a00016_1afb18581adf1a5fb2143293d611e47a36" prot="public" virt="non-virtual"><scope>waypoint</scope><name>numW</name></member>
+      <member refid="d7/d7a/a00016_1ae85a2033b8fb23b94e8fa1f5dd2cec32" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setAlt</name></member>
+      <member refid="d7/d7a/a00016_1a34ff0642ba4c90e91effc59033cd1e02" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setHdg</name></member>
+      <member refid="d7/d7a/a00016_1a8cc659fa52b3b0849781fb9056345773" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setLat</name></member>
+      <member refid="d7/d7a/a00016_1aaa12873d55502d21104ba3e24f6588c2" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setLong</name></member>
+      <member refid="d7/d7a/a00016_1ab5de576a96c5363dc724aa46e28c614c" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setMission</name></member>
+      <member refid="d7/d7a/a00016_1a14c494edc171ceb9b2934855efa3d994" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setNum</name></member>
+      <member refid="d7/d7a/a00016_1ae1e31b142a535161c64e72c116edbe25" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setTime</name></member>
+      <member refid="d7/d7a/a00016_1a96792b488b10a7c3305c7f573074f935" prot="public" virt="non-virtual"><scope>waypoint</scope><name>setType</name></member>
+      <member refid="d7/d7a/a00016_1a9b8846f46bee60510747bd5c64dc4c8c" prot="public" virt="non-virtual"><scope>waypoint</scope><name>timeW</name></member>
+      <member refid="d7/d7a/a00016_1a68b799c80d746b250ae6aa7ff5df52db" prot="public" virt="non-virtual"><scope>waypoint</scope><name>typeW</name></member>
+      <member refid="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1" prot="public" virt="non-virtual"><scope>waypoint</scope><name>waypoint</name></member>
+      <member refid="d7/d7a/a00016_1a9d74c4b4910b2a7ad9c8a10090f4c507" prot="public" virt="non-virtual"><scope>waypoint</scope><name>waypoint</name></member>
+      <member refid="d7/d7a/a00016_1af0e2cbb0d9e04c2ddbb6f22859fcde9e" prot="public" virt="non-virtual"><scope>waypoint</scope><name>~waypoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

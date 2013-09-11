@@ -306,7 +306,7 @@ public slots:
     */
     void GPSLevel(int p_value);
     void updateMotors(char p_cValue);
-    void goTo(double lon,double lat,double alt,double n);
+    void goTo();
     /**
     * @brief add information to RPA table
     * @param none
@@ -373,6 +373,7 @@ private:
     bool gps4;
     bool gps5;
     bool missionOpned;
+    bool connected;
     char* numWpText;
     QTableWidgetItem *ItemLon ;
     QTableWidgetItem *ItemLat ;
@@ -414,6 +415,7 @@ private:
     QIcon iconTakeOff;
     QIcon iconLand;
     QTableWidgetItem* item;
+    ofstream fichier;
 
 private slots:
     void on_start_button_clicked();

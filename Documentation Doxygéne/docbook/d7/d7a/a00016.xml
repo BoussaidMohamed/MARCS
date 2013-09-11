@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d7/d7a/a00016">
+<title>waypoint class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d6/d97/a00045">&quot;waypoint.h&quot;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double altitudeW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double hdgW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>qreal latitudeW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>qreal longitudeW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int numMissionW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int numW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int timeW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int typeW</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1">waypoint</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/d7a/a00016_1a9d74c4b4910b2a7ad9c8a10090f4c507">waypoint</link> (
+int num, qreal longitude, qreal latitude, double altitude, double hdg, int time, int type, int numMission)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d7/d7a/a00016_1af0e2cbb0d9e04c2ddbb6f22859fcde9e">~waypoint</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="d7/d7a/a00016_1afed4a0eed0e6adfc5415466c03b4f04d">getAlt</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="d7/d7a/a00016_1a1291ed46506a9b586c2302ce6035c4e8">getHdg</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>qreal <link linkend="d7/d7a/a00016_1a5459e1c9c7c5acd86670578bd885d93b">getLat</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>qreal <link linkend="d7/d7a/a00016_1adbb7cce87647d82df57979083101d052">getLong</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d7/d7a/a00016_1a634c5702fb39fae6c792ae8215b24e96">getMission</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d7/d7a/a00016_1a5d06a1578648c9b23746188891b01aae">getNum</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d7/d7a/a00016_1a140cd6eb747b445398503dedfd51785f">getTime</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d7/d7a/a00016_1aec389cbe6ac7aff8ce7196e7dbc007df">getType</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1ae85a2033b8fb23b94e8fa1f5dd2cec32">setAlt</link> (
+double alt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1a34ff0642ba4c90e91effc59033cd1e02">setHdg</link> (
+double hd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1a8cc659fa52b3b0849781fb9056345773">setLat</link> (
+qreal lat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1aaa12873d55502d21104ba3e24f6588c2">setLong</link> (
+qreal lon)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1ab5de576a96c5363dc724aa46e28c614c">setMission</link> (
+int numMission)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1a14c494edc171ceb9b2934855efa3d994">setNum</link> (
+int n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1ae1e31b142a535161c64e72c116edbe25">setTime</link> (
+int ti)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d7/d7a/a00016_1a96792b488b10a7c3305c7f573074f935">setType</link> (
+int ty)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="d7/d7a/a00016_1a80548dc6f2f17ac10a35a745a5193ee1">
+                <title>waypoint ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a9d74c4b4910b2a7ad9c8a10090f4c507">
+                <title>waypoint (int num, qreal longitude, qreal latitude, double altitude, double hdg, int time, int type, int numMission)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1af0e2cbb0d9e04c2ddbb6f22859fcde9e">
+                <title>~waypoint ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1afed4a0eed0e6adfc5415466c03b4f04d">
+                <title>double getAlt ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a1291ed46506a9b586c2302ce6035c4e8">
+                <title>double getHdg ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a5459e1c9c7c5acd86670578bd885d93b">
+                <title>qreal getLat ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1adbb7cce87647d82df57979083101d052">
+                <title>qreal getLong ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a634c5702fb39fae6c792ae8215b24e96">
+                <title>int getMission ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a5d06a1578648c9b23746188891b01aae">
+                <title>int getNum ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a140cd6eb747b445398503dedfd51785f">
+                <title>int getTime ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1aec389cbe6ac7aff8ce7196e7dbc007df">
+                <title>int getType ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1ae85a2033b8fb23b94e8fa1f5dd2cec32">
+                <title>void setAlt (double alt)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a34ff0642ba4c90e91effc59033cd1e02">
+                <title>void setHdg (double hd)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a8cc659fa52b3b0849781fb9056345773">
+                <title>void setLat (qreal lat)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1aaa12873d55502d21104ba3e24f6588c2">
+                <title>void setLong (qreal lon)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1ab5de576a96c5363dc724aa46e28c614c">
+                <title>void setMission (int numMission)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a14c494edc171ceb9b2934855efa3d994">
+                <title>void setNum (int n)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1ae1e31b142a535161c64e72c116edbe25">
+                <title>void setTime (int ti)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d7/d7a/a00016_1a96792b488b10a7c3305c7f573074f935">
+                <title>void setType (int ty)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

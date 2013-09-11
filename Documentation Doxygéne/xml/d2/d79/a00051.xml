@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d2/d79/a00051" kind="struct" prot="public">
+    <compoundname>CPOINT</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/d79/a00051_1acc646aee00e4e486e35024c324cf4567" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwLog</definition>
+        <argsstring></argsstring>
+        <name>dwLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1111" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d79/a00051_1a0e786ef8e7aebd5c006f4819d4c6d72c" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lP</definition>
+        <argsstring></argsstring>
+        <name>lP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1110" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1109" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1108" bodyend="1112"/>
+    <listofallmembers>
+      <member refid="d2/d79/a00051_1acc646aee00e4e486e35024c324cf4567" prot="public" virt="non-virtual"><scope>CPOINT</scope><name>dwLog</name></member>
+      <member refid="d2/d79/a00051_1a0e786ef8e7aebd5c006f4819d4c6d72c" prot="public" virt="non-virtual"><scope>CPOINT</scope><name>lP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

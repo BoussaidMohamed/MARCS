@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d9/dcc/a00102" kind="struct" prot="public">
+    <compoundname>DIPROPRANGE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/dcc/a00102_1a7010842dfbdaa5bb4357503558202537" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d61/a00100" kindref="compound">DIPROPHEADER</ref></type>
+        <definition>DIPROPHEADER diph</definition>
+        <argsstring></argsstring>
+        <name>diph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1065" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dcc/a00102_1a373c13e8e98fe384db9be83136ac5c04" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lMax</definition>
+        <argsstring></argsstring>
+        <name>lMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1067" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dcc/a00102_1a10b99c2e16e80d932b8c67ff9239ecb9" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lMin</definition>
+        <argsstring></argsstring>
+        <name>lMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1066" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1066" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="126">
+        <label>LPDIPROPRANGE</label>
+        <link refid="d9/dcc/a00102"/>
+        <childnode refid="127" relation="usage">
+          <edgelabel>diph</edgelabel>
+        </childnode>
+      </node>
+      <node id="127">
+        <label>LPDIPROPHEADER</label>
+        <link refid="d0/d61/a00100"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1064" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1064" bodyend="1068"/>
+    <listofallmembers>
+      <member refid="d9/dcc/a00102_1a7010842dfbdaa5bb4357503558202537" prot="public" virt="non-virtual"><scope>DIPROPRANGE</scope><name>diph</name></member>
+      <member refid="d9/dcc/a00102_1a373c13e8e98fe384db9be83136ac5c04" prot="public" virt="non-virtual"><scope>DIPROPRANGE</scope><name>lMax</name></member>
+      <member refid="d9/dcc/a00102_1a10b99c2e16e80d932b8c67ff9239ecb9" prot="public" virt="non-virtual"><scope>DIPROPRANGE</scope><name>lMin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

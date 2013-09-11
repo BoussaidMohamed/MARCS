@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d4/d3a/a00101" kind="struct" prot="public">
+    <compoundname>DIPROPPOINTER</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/d3a/a00101_1a7010842dfbdaa5bb4357503558202537" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d61/a00100" kindref="compound">DIPROPHEADER</ref></type>
+        <definition>DIPROPHEADER diph</definition>
+        <argsstring></argsstring>
+        <name>diph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1058" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1058" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d3a/a00101_1ab3c0940c60b9041e59f7b6e8d4609542" prot="public" static="no" mutable="no">
+        <type>UINT_PTR</type>
+        <definition>UINT_PTR uData</definition>
+        <argsstring></argsstring>
+        <name>uData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1059" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1059" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="123">
+        <label>LPDIPROPPOINTER</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="124" relation="usage">
+          <edgelabel>diph</edgelabel>
+        </childnode>
+      </node>
+      <node id="124">
+        <label>LPDIPROPHEADER</label>
+        <link refid="d0/d61/a00100"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1057" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1057" bodyend="1060"/>
+    <listofallmembers>
+      <member refid="d4/d3a/a00101_1a7010842dfbdaa5bb4357503558202537" prot="public" virt="non-virtual"><scope>DIPROPPOINTER</scope><name>diph</name></member>
+      <member refid="d4/d3a/a00101_1ab3c0940c60b9041e59f7b6e8d4609542" prot="public" virt="non-virtual"><scope>DIPROPPOINTER</scope><name>uData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

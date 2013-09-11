@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/dc1/a00092" kind="struct" prot="public">
+    <compoundname>DIMOUSESTATE2</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/dc1/a00092_1a5caab2f62348491c05eb56720be4ed99" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lX</definition>
+        <argsstring></argsstring>
+        <name>lX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1996" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/a00092_1ae174db734839eb185acdb0cd79b9ba24" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lY</definition>
+        <argsstring></argsstring>
+        <name>lY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1997" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/a00092_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lZ</definition>
+        <argsstring></argsstring>
+        <name>lZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1998" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1998" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/a00092_1ab6a10dfc57c62fd5c19647c1bbc8eb9f" prot="public" static="no" mutable="no">
+        <type>BYTE</type>
+        <definition>BYTE rgbButtons[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>rgbButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1999" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1999" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1995" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1995" bodyend="2000"/>
+    <listofallmembers>
+      <member refid="d1/dc1/a00092_1a5caab2f62348491c05eb56720be4ed99" prot="public" virt="non-virtual"><scope>DIMOUSESTATE2</scope><name>lX</name></member>
+      <member refid="d1/dc1/a00092_1ae174db734839eb185acdb0cd79b9ba24" prot="public" virt="non-virtual"><scope>DIMOUSESTATE2</scope><name>lY</name></member>
+      <member refid="d1/dc1/a00092_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" virt="non-virtual"><scope>DIMOUSESTATE2</scope><name>lZ</name></member>
+      <member refid="d1/dc1/a00092_1ab6a10dfc57c62fd5c19647c1bbc8eb9f" prot="public" virt="non-virtual"><scope>DIMOUSESTATE2</scope><name>rgbButtons</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

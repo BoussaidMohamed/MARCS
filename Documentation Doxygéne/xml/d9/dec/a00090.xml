@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d9/dec/a00090" kind="struct" prot="public">
+    <compoundname>DIJOYSTATE2</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/dec/a00090_1a0ac37e3d83b8360fdccd83cf36b317f4" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lARx</definition>
+        <argsstring></argsstring>
+        <name>lARx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2243" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a3dbf43d5bdf8902d25c0b55c08fe561b" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lARy</definition>
+        <argsstring></argsstring>
+        <name>lARy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2244" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1adc7300f31088eabfaf0e926178657736" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lARz</definition>
+        <argsstring></argsstring>
+        <name>lARz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2245" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1aade5d3e17809f602875b927a4d38ea4d" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lAX</definition>
+        <argsstring></argsstring>
+        <name>lAX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2240" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a829af37369c40dfa112567f2b9ef308c" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lAY</definition>
+        <argsstring></argsstring>
+        <name>lAY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2241" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1aafe199a9f9f3f021a3a2eda5d1e4c6c1" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lAZ</definition>
+        <argsstring></argsstring>
+        <name>lAZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2242" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a31d0b5d66e1b1e0e8e99cd396e9414e4" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFRx</definition>
+        <argsstring></argsstring>
+        <name>lFRx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2250" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ab674194faa664872a3620443b5135995" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFRy</definition>
+        <argsstring></argsstring>
+        <name>lFRy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2251" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1abdded1fe53ce961e721d8555e972b426" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFRz</definition>
+        <argsstring></argsstring>
+        <name>lFRz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2252" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1aed7e0f3d42f1dfc1d69376ccdcac1b72" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFX</definition>
+        <argsstring></argsstring>
+        <name>lFX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2247" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1af60858b65f33c4f60e90753c9167a912" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFY</definition>
+        <argsstring></argsstring>
+        <name>lFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2248" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ad3033b18f8c66ccaf31fa27a6d6cca3e" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lFZ</definition>
+        <argsstring></argsstring>
+        <name>lFZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2249" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ae787bcbafe0c743edb3cc7908a9ec614" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRx</definition>
+        <argsstring></argsstring>
+        <name>lRx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2227" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a224cc5c8c3276d717e40adb86bca63af" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRy</definition>
+        <argsstring></argsstring>
+        <name>lRy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2228" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1af3ec962f9ea47f6a29972d2991c971d7" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lRz</definition>
+        <argsstring></argsstring>
+        <name>lRz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2229" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a2b5e8522323e8dac798ca548f055f8bd" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVRx</definition>
+        <argsstring></argsstring>
+        <name>lVRx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2236" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a74b58b91e1d6808316dd8a60ae57cbca" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVRy</definition>
+        <argsstring></argsstring>
+        <name>lVRy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2237" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ae4c41cb011e9a243a50954ed8ea9fa04" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVRz</definition>
+        <argsstring></argsstring>
+        <name>lVRz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2238" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1aadcdcdc65ce7b2b05875413b9862460c" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVX</definition>
+        <argsstring></argsstring>
+        <name>lVX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2233" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a779ed3695f55672305134072192a8c6e" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVY</definition>
+        <argsstring></argsstring>
+        <name>lVY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2234" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a0f245ad715d328a60d1a33244f98afa8" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lVZ</definition>
+        <argsstring></argsstring>
+        <name>lVZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2235" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a5caab2f62348491c05eb56720be4ed99" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lX</definition>
+        <argsstring></argsstring>
+        <name>lX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2224" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ae174db734839eb185acdb0cd79b9ba24" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lY</definition>
+        <argsstring></argsstring>
+        <name>lY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2225" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lZ</definition>
+        <argsstring></argsstring>
+        <name>lZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2226" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a67d8ad707a967fceb3d5e7269cde97af" prot="public" static="no" mutable="no">
+        <type>BYTE</type>
+        <definition>BYTE rgbButtons[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>rgbButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2232" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ae49cd858af76a488ea366d4b7b6be542" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD rgdwPOV[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>rgdwPOV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2231" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1a9db4519a25550dc275ab24f42d0b7cfa" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG rglASlider[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>rglASlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2246" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ad5fb1955f98b4f8fc9b6822431d53637" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG rglFSlider[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>rglFSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2253" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1ae16b25838a30c01d12eb11b79ca68018" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG rglSlider[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>rglSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2230" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dec/a00090_1aa60eefdeb4d2fcd914535ee4766c77e1" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG rglVSlider[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>rglVSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2239" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2239" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="2223" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="2223" bodyend="2254"/>
+    <listofallmembers>
+      <member refid="d9/dec/a00090_1a0ac37e3d83b8360fdccd83cf36b317f4" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lARx</name></member>
+      <member refid="d9/dec/a00090_1a3dbf43d5bdf8902d25c0b55c08fe561b" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lARy</name></member>
+      <member refid="d9/dec/a00090_1adc7300f31088eabfaf0e926178657736" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lARz</name></member>
+      <member refid="d9/dec/a00090_1aade5d3e17809f602875b927a4d38ea4d" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lAX</name></member>
+      <member refid="d9/dec/a00090_1a829af37369c40dfa112567f2b9ef308c" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lAY</name></member>
+      <member refid="d9/dec/a00090_1aafe199a9f9f3f021a3a2eda5d1e4c6c1" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lAZ</name></member>
+      <member refid="d9/dec/a00090_1a31d0b5d66e1b1e0e8e99cd396e9414e4" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFRx</name></member>
+      <member refid="d9/dec/a00090_1ab674194faa664872a3620443b5135995" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFRy</name></member>
+      <member refid="d9/dec/a00090_1abdded1fe53ce961e721d8555e972b426" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFRz</name></member>
+      <member refid="d9/dec/a00090_1aed7e0f3d42f1dfc1d69376ccdcac1b72" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFX</name></member>
+      <member refid="d9/dec/a00090_1af60858b65f33c4f60e90753c9167a912" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFY</name></member>
+      <member refid="d9/dec/a00090_1ad3033b18f8c66ccaf31fa27a6d6cca3e" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lFZ</name></member>
+      <member refid="d9/dec/a00090_1ae787bcbafe0c743edb3cc7908a9ec614" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lRx</name></member>
+      <member refid="d9/dec/a00090_1a224cc5c8c3276d717e40adb86bca63af" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lRy</name></member>
+      <member refid="d9/dec/a00090_1af3ec962f9ea47f6a29972d2991c971d7" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lRz</name></member>
+      <member refid="d9/dec/a00090_1a2b5e8522323e8dac798ca548f055f8bd" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVRx</name></member>
+      <member refid="d9/dec/a00090_1a74b58b91e1d6808316dd8a60ae57cbca" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVRy</name></member>
+      <member refid="d9/dec/a00090_1ae4c41cb011e9a243a50954ed8ea9fa04" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVRz</name></member>
+      <member refid="d9/dec/a00090_1aadcdcdc65ce7b2b05875413b9862460c" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVX</name></member>
+      <member refid="d9/dec/a00090_1a779ed3695f55672305134072192a8c6e" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVY</name></member>
+      <member refid="d9/dec/a00090_1a0f245ad715d328a60d1a33244f98afa8" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lVZ</name></member>
+      <member refid="d9/dec/a00090_1a5caab2f62348491c05eb56720be4ed99" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lX</name></member>
+      <member refid="d9/dec/a00090_1ae174db734839eb185acdb0cd79b9ba24" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lY</name></member>
+      <member refid="d9/dec/a00090_1a7dd7142cab803f67cdcda10d1eb720fd" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>lZ</name></member>
+      <member refid="d9/dec/a00090_1a67d8ad707a967fceb3d5e7269cde97af" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rgbButtons</name></member>
+      <member refid="d9/dec/a00090_1ae49cd858af76a488ea366d4b7b6be542" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rgdwPOV</name></member>
+      <member refid="d9/dec/a00090_1a9db4519a25550dc275ab24f42d0b7cfa" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rglASlider</name></member>
+      <member refid="d9/dec/a00090_1ad5fb1955f98b4f8fc9b6822431d53637" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rglFSlider</name></member>
+      <member refid="d9/dec/a00090_1ae16b25838a30c01d12eb11b79ca68018" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rglSlider</name></member>
+      <member refid="d9/dec/a00090_1aa60eefdeb4d2fcd914535ee4766c77e1" prot="public" virt="non-virtual"><scope>DIJOYSTATE2</scope><name>rglVSlider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

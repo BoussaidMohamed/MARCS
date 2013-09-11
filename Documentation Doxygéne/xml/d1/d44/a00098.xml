@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d44/a00098" kind="struct" prot="public">
+    <compoundname>DIPROPDWORD</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d44/a00098_1a7010842dfbdaa5bb4357503558202537" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d61/a00100" kindref="compound">DIPROPHEADER</ref></type>
+        <definition>DIPROPHEADER diph</definition>
+        <argsstring></argsstring>
+        <name>diph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1051" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1051" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/a00098_1ad38b92af7d164a277eb2d30b5e65a489" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwData</definition>
+        <argsstring></argsstring>
+        <name>dwData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1052" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1052" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="115">
+        <label>LPDIPROPDWORD</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="116" relation="usage">
+          <edgelabel>diph</edgelabel>
+        </childnode>
+      </node>
+      <node id="116">
+        <label>LPDIPROPHEADER</label>
+        <link refid="d0/d61/a00100"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1050" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1050" bodyend="1053"/>
+    <listofallmembers>
+      <member refid="d1/d44/a00098_1a7010842dfbdaa5bb4357503558202537" prot="public" virt="non-virtual"><scope>DIPROPDWORD</scope><name>diph</name></member>
+      <member refid="d1/d44/a00098_1ad38b92af7d164a277eb2d30b5e65a489" prot="public" virt="non-virtual"><scope>DIPROPDWORD</scope><name>dwData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

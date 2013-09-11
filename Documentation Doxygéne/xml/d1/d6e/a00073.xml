@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d6e/a00073" kind="struct" prot="public">
+    <compoundname>DIDEVICEINSTANCE_DX3W</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d6e/a00073_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDevType</definition>
+        <argsstring></argsstring>
+        <name>dwDevType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1242" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d6e/a00073_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1239" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d6e/a00073_1a7fba3dbe50344a5643d4b3c3ae186576" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidInstance</definition>
+        <argsstring></argsstring>
+        <name>guidInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1240" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d6e/a00073_1a30bf31754fdd016b11557bf6a75bfc87" prot="public" static="no" mutable="no">
+        <type>GUID</type>
+        <definition>GUID guidProduct</definition>
+        <argsstring></argsstring>
+        <name>guidProduct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1241" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d6e/a00073_1a5b995e3d8db75f43f25f02007bdfd7d9" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR tszInstanceName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszInstanceName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1243" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d6e/a00073_1a0f804540b5c2e9c037fca76b898bcff7" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR tszProductName[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszProductName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1244" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1238" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1238" bodyend="1245"/>
+    <listofallmembers>
+      <member refid="d1/d6e/a00073_1a2bdaf065880c5cb7fa08be0bf17027a6" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>dwDevType</name></member>
+      <member refid="d1/d6e/a00073_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>dwSize</name></member>
+      <member refid="d1/d6e/a00073_1a7fba3dbe50344a5643d4b3c3ae186576" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>guidInstance</name></member>
+      <member refid="d1/d6e/a00073_1a30bf31754fdd016b11557bf6a75bfc87" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>guidProduct</name></member>
+      <member refid="d1/d6e/a00073_1a5b995e3d8db75f43f25f02007bdfd7d9" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>tszInstanceName</name></member>
+      <member refid="d1/d6e/a00073_1a0f804540b5c2e9c037fca76b898bcff7" prot="public" virt="non-virtual"><scope>DIDEVICEINSTANCE_DX3W</scope><name>tszProductName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

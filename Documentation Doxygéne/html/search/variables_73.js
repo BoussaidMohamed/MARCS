@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['singleton',['singleton',['../d8/d84/a00001.html#aee0300254b12ae17cc030042d51787c4',1,'CommunicationControl::singleton()'],['../de/d5e/a00007.html#a72df5eacd5c7ea6c052e02000643fd7e',1,'LogReplayControl::singleton()'],['../d7/dec/a00010.html#a05b55b7963750cd3d108e76c1250d477',1,'MissionControl::singleton()'],['../da/d45/a00011.html#a4c732b19b7b708ba880e1a7dd193d4b2',1,'PeripheralController::singleton()'],['../df/d86/a00012.html#a90cad5e82f2f5e5e963848285d59a3f9',1,'RPA::singleton()'],['../d7/dd4/a00013.html#a07b6432074b71e811b0b6eb21b94e835',1,'UAV::singleton()']]],
+  ['sizepoll',['sizePoll',['../d7/d46/a00002.html#a608be86b18e15c3309a1b50794a2115c',1,'ComThread']]],
+  ['sizeread',['sizeRead',['../d7/d46/a00002.html#ad9f5381795006f1f187538296368cd11',1,'ComThread']]],
+  ['sizewrite',['sizeWrite',['../d7/d46/a00002.html#ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d',1,'ComThread']]],
+  ['speed_5faccuracy',['speed_accuracy',['../d0/d0b/a00004.html#ac5e7fd2a3a590e4b18a47ec291c52004',1,'GPS_DATA_ADVANCED']]],
+  ['speed_5fx',['speed_x',['../d0/d0b/a00004.html#a20fcaf3d7d5effa75ca571510f53a6cc',1,'GPS_DATA_ADVANCED::speed_x()'],['../d0/d0b/a00004.html#a20fcaf3d7d5effa75ca571510f53a6cc',1,'IMU_CALCDATA::speed_x()']]],
+  ['speed_5fx_5fbest_5festimate',['speed_x_best_estimate',['../d0/d0b/a00004.html#a755d2852a14612e5e2b07fe2efce8e31',1,'GPS_DATA_ADVANCED']]],
+  ['speed_5fy',['speed_y',['../d0/d0b/a00004.html#a3abd5cb27c81871612651aee8a0476ba',1,'GPS_DATA_ADVANCED::speed_y()'],['../d0/d0b/a00004.html#a3abd5cb27c81871612651aee8a0476ba',1,'IMU_CALCDATA::speed_y()']]],
+  ['speed_5fy_5fbest_5festimate',['speed_y_best_estimate',['../d0/d0b/a00004.html#abde97a528a4ffec3463df5f0f86cdbd2',1,'GPS_DATA_ADVANCED']]],
+  ['speed_5fz',['speed_z',['../d0/d0b/a00004.html#a8699fea0a4e28198c556231ab49ffcf5',1,'IMU_CALCDATA']]],
+  ['st',['st',['../d8/d84/a00001.html#aab0e6d0ec390cd7a3094356a2bc5354e',1,'CommunicationControl']]],
+  ['state',['state',['../de/d11/a00021.html#a0eac3b9a806be1f5f00f0d6346303ed3',1,'JoystickGrabber.cpp']]],
+  ['status',['status',['../d0/d0b/a00004.html#a54849a1c58ce64ba16a055ad9555a027',1,'CURRENT_WAY::status()'],['../d0/d0b/a00004.html#a6e27f49150e9a14580fb313cc2777e00',1,'GPS_DATA_ADVANCED::status()'],['../d0/d0b/a00004.html#aab78832eca253df36aafa204d68e4bac',1,'LL_STATUS::status()']]],
+  ['stream',['stream',['../dc/d3c/a00028.html#a345cf940396976355b8d6a8248bc17dc',1,'marcs.cpp']]],
+  ['stylearchhome',['styleArchHome',['../d4/dee/a00008.html#a06e86babaf03affa3f647a3650df417e',1,'MARCS']]],
+  ['stylearchmark',['styleArchMark',['../d4/dee/a00008.html#ab3cb2d82e21852d6e82932d21a1b3f41',1,'MARCS']]],
+  ['stylearchrpa',['styleArchRPA',['../d4/dee/a00008.html#a3ccaefd3393a3447a3a10d94ab67b0f9',1,'MARCS']]],
+  ['sysfile',['sysFile',['../d2/de7/a00014.html#ade1d12dae61eb3386722e7ad2c79518e',1,'UAVLogger']]],
+  ['syslog',['sysLog',['../d2/de7/a00014.html#af915a8ab61a55c6cc5564aa9f79cea25',1,'UAVLogger']]],
+  ['szfriendlyname',['szFriendlyName',['../d1/d7c/a00003.html#aeffa4fb29494d7afc9573440dacb0e8c',1,'DIFILEEFFECT']]]
+];

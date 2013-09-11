@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d84/a00052" kind="struct" prot="public">
+    <compoundname>CURRENT_WAY</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d84/a00052_1a62b91a02c0e7c93551d2875c725ad883" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char current_wp</definition>
+        <argsstring></argsstring>
+        <name>current_wp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="94" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1aa2932e7efac44e0261ffb6ca5ae02d75" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char current_wp_memlocation</definition>
+        <argsstring></argsstring>
+        <name>current_wp_memlocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="95" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1adba24dc812335f36e8793c535dc6e8bf" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short distance_to_wp</definition>
+        <argsstring></argsstring>
+        <name>distance_to_wp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="101" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1ac5cfc788ccc5ab799064b736f3dde3f7" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dummy1</definition>
+        <argsstring></argsstring>
+        <name>dummy1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="90" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1aaee8edca880b2c0e1cc3fb223964aac2" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dummy2</definition>
+        <argsstring></argsstring>
+        <name>dummy2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="98" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1a820db34ea9303c6b8f6266107b434058" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short navigation_status</definition>
+        <argsstring></argsstring>
+        <name>navigation_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="100" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1a3218be4f5f6d95cd25f617d5cde2450c" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short nr_of_wp</definition>
+        <argsstring></argsstring>
+        <name>nr_of_wp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="92" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1a78b61a2d452301b80cd56942bfc362e0" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="91" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/a00052_1a54849a1c58ce64ba16a055ad9555a027" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="97" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="89" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="88" bodyend="102"/>
+    <listofallmembers>
+      <member refid="d1/d84/a00052_1a62b91a02c0e7c93551d2875c725ad883" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>current_wp</name></member>
+      <member refid="d1/d84/a00052_1aa2932e7efac44e0261ffb6ca5ae02d75" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>current_wp_memlocation</name></member>
+      <member refid="d1/d84/a00052_1adba24dc812335f36e8793c535dc6e8bf" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>distance_to_wp</name></member>
+      <member refid="d1/d84/a00052_1ac5cfc788ccc5ab799064b736f3dde3f7" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>dummy1</name></member>
+      <member refid="d1/d84/a00052_1aaee8edca880b2c0e1cc3fb223964aac2" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>dummy2</name></member>
+      <member refid="d1/d84/a00052_1a820db34ea9303c6b8f6266107b434058" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>navigation_status</name></member>
+      <member refid="d1/d84/a00052_1a3218be4f5f6d95cd25f617d5cde2450c" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>nr_of_wp</name></member>
+      <member refid="d1/d84/a00052_1a78b61a2d452301b80cd56942bfc362e0" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>properties</name></member>
+      <member refid="d1/d84/a00052_1a54849a1c58ce64ba16a055ad9555a027" prot="public" virt="non-virtual"><scope>CURRENT_WAY</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

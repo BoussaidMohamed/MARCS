@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d22/a00057" kind="struct" prot="public">
+    <compoundname>DIACTIONW</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d22/a00057_1ad79a61ec14737041ce43bfc890b0d2d2" prot="public" static="no" mutable="no">
+        <type>OPTIONAL union DIACTIONW::@2</type>
+        <definition>OPTIONAL union DIACTIONW::@2 @3</definition>
+        <argsstring></argsstring>
+        <name>@3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="667" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1a1badbf389e47c0cd33257c97bd671136" prot="public" static="no" mutable="no">
+        <type>OPTIONAL <ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>OPTIONAL DWORD dwFlags</definition>
+        <argsstring></argsstring>
+        <name>dwFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="663" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1a16b081e3e54c30045be9fc209e1240ae" prot="public" static="no" mutable="no">
+        <type>OPTIONAL <ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>OPTIONAL DWORD dwHow</definition>
+        <argsstring></argsstring>
+        <name>dwHow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="670" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1a731348d40f8359f7188f74164a32151e" prot="public" static="no" mutable="no">
+        <type>OPTIONAL <ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>OPTIONAL DWORD dwObjID</definition>
+        <argsstring></argsstring>
+        <name>dwObjID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="669" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1a772667ec2df141333fc822a8debf3224" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSemantic</definition>
+        <argsstring></argsstring>
+        <name>dwSemantic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="662" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1a1c98d4f639357b7eec7791319541ba8c" prot="public" static="no" mutable="no">
+        <type>OPTIONAL GUID</type>
+        <definition>OPTIONAL GUID guidInstance</definition>
+        <argsstring></argsstring>
+        <name>guidInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="668" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d22/a00057_1ac83b0c009034bac2df91a2c0bed20494" prot="public" static="no" mutable="no">
+        <type>UINT_PTR</type>
+        <definition>UINT_PTR uAppData</definition>
+        <argsstring></argsstring>
+        <name>uAppData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="661" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="660" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="660" bodyend="671"/>
+    <listofallmembers>
+      <member refid="d1/d22/a00057_1a1badbf389e47c0cd33257c97bd671136" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>dwFlags</name></member>
+      <member refid="d1/d22/a00057_1a16b081e3e54c30045be9fc209e1240ae" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>dwHow</name></member>
+      <member refid="d1/d22/a00057_1a731348d40f8359f7188f74164a32151e" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>dwObjID</name></member>
+      <member refid="d1/d22/a00057_1a772667ec2df141333fc822a8debf3224" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>dwSemantic</name></member>
+      <member refid="d1/d22/a00057_1a1c98d4f639357b7eec7791319541ba8c" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>guidInstance</name></member>
+      <member refid="d1/d22/a00057_1ac83b0c009034bac2df91a2c0bed20494" prot="public" virt="non-virtual"><scope>DIACTIONW</scope><name>uAppData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

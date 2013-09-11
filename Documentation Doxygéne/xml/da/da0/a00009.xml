@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="da/da0/a00009" kind="class" prot="public">
+    <compoundname>mission</compoundname>
+    <includes refid="df/d61/a00031" local="yes">mission.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/da0/a00009_1a9d16159daf0b07b53c085e967131380a" prot="public" static="no" mutable="no">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt;waypoint* &gt; myMission</definition>
+        <argsstring></argsstring>
+        <name>myMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="29" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da0/a00009_1a3676e27abf87db4ad6d4aec72b049efd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int n_mission</definition>
+        <argsstring></argsstring>
+        <name>n_mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="28" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mission</definition>
+        <argsstring>()</argsstring>
+        <name>mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="12" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1af9e7cd1856847fe227e5fbce8a7e4c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mission</definition>
+        <argsstring>(int num)</argsstring>
+        <name>mission</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="13" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a98ca623d084c7cb213a3cf85614aa5d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~mission</definition>
+        <argsstring>()</argsstring>
+        <name>~mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="14" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a5d06a1578648c9b23746188891b01aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getNum</definition>
+        <argsstring>()</argsstring>
+        <name>getNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="16" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a4788e93bd0bed6d7fd53cff1840a7f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt; waypoint * &gt; getWaypointList</definition>
+        <argsstring>()</argsstring>
+        <name>getWaypointList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="23" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="228" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1af307fc09e3c8e4303ff16324d681213a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt; waypoint * &gt; loadMission</definition>
+        <argsstring>(QString filename)</argsstring>
+        <name>loadMission</name>
+        <param>
+          <type>QString</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="22" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="90" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a4c40423028a4cfdf1bbbea8945cb696b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveMission</definition>
+        <argsstring>(QList&lt; waypoint * &gt; wpList, QString fileName)</argsstring>
+        <name>saveMission</name>
+        <param>
+          <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+          <declname>wpList</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="19" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="43" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a378e572221c084c413a947adec25183b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveMissionKml</definition>
+        <argsstring>(QList&lt; waypoint * &gt; wpList, QString fileName)</argsstring>
+        <name>saveMissionKml</name>
+        <param>
+          <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+          <declname>wpList</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="20" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="195" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a14c494edc171ceb9b2934855efa3d994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setNum</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setNum</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="18" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da0/a00009_1a22c390047351019cdcf09e1f38b66784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setWaypointList</definition>
+        <argsstring>(QList&lt; waypoint * &gt; mission)</argsstring>
+        <name>setWaypointList</name>
+        <param>
+          <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+          <declname>mission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="21" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.cpp" bodystart="232" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" line="10" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/mission.h" bodystart="9" bodyend="31"/>
+    <listofallmembers>
+      <member refid="da/da0/a00009_1a5d06a1578648c9b23746188891b01aae" prot="public" virt="non-virtual"><scope>mission</scope><name>getNum</name></member>
+      <member refid="da/da0/a00009_1a4788e93bd0bed6d7fd53cff1840a7f5b" prot="public" virt="non-virtual"><scope>mission</scope><name>getWaypointList</name></member>
+      <member refid="da/da0/a00009_1af307fc09e3c8e4303ff16324d681213a" prot="public" virt="non-virtual"><scope>mission</scope><name>loadMission</name></member>
+      <member refid="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3" prot="public" virt="non-virtual"><scope>mission</scope><name>mission</name></member>
+      <member refid="da/da0/a00009_1af9e7cd1856847fe227e5fbce8a7e4c73" prot="public" virt="non-virtual"><scope>mission</scope><name>mission</name></member>
+      <member refid="da/da0/a00009_1a9d16159daf0b07b53c085e967131380a" prot="public" virt="non-virtual"><scope>mission</scope><name>myMission</name></member>
+      <member refid="da/da0/a00009_1a3676e27abf87db4ad6d4aec72b049efd" prot="public" virt="non-virtual"><scope>mission</scope><name>n_mission</name></member>
+      <member refid="da/da0/a00009_1a4c40423028a4cfdf1bbbea8945cb696b" prot="public" virt="non-virtual"><scope>mission</scope><name>saveMission</name></member>
+      <member refid="da/da0/a00009_1a378e572221c084c413a947adec25183b" prot="public" virt="non-virtual"><scope>mission</scope><name>saveMissionKml</name></member>
+      <member refid="da/da0/a00009_1a14c494edc171ceb9b2934855efa3d994" prot="public" virt="non-virtual"><scope>mission</scope><name>setNum</name></member>
+      <member refid="da/da0/a00009_1a22c390047351019cdcf09e1f38b66784" prot="public" virt="non-virtual"><scope>mission</scope><name>setWaypointList</name></member>
+      <member refid="da/da0/a00009_1a98ca623d084c7cb213a3cf85614aa5d7" prot="public" virt="non-virtual"><scope>mission</scope><name>~mission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

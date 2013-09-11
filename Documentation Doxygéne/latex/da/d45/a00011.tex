@@ -1,0 +1,773 @@
+\hypertarget{a00011}{\section{Peripheral\-Controller Class Reference}
+\label{a00011}\index{Peripheral\-Controller@{Peripheral\-Controller}}
+}
+
+
+{\ttfamily \#include \char`\"{}Peripheral\-Controller.\-h\char`\"{}}
+
+Inheritance diagram for Peripheral\-Controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d45/a00011}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Public Member Functions}
+\subsection*{Static Public Member Functions}
+\subsection*{Private Member Functions}
+\subsection*{Private Attributes}
+\subsection*{Static Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00011_a458a87530aff37dfe6f31899599aea2f}{\index{Peripheral\-Controller@{Peripheral\-Controller}!Peripheral\-Controller@{Peripheral\-Controller}}
+\index{Peripheral\-Controller@{Peripheral\-Controller}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{Peripheral\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peripheral\-Controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a458a87530aff37dfe6f31899599aea2f}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00011}{Peripheral\-Controller} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick} = \textcolor{keyword}{new} \hyperlink{a00005}{JoystickGrabber}();
+8 
+9     \hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode} = \textcolor{keyword}{true};
+10     \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease} = \textcolor{keyword}{false};
+11     \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight} = \textcolor{keyword}{false};
+12     \hyperlink{a00011_ad746a6b65e92b161871379fccca76759}{m\_bWaitReleaseMode} = \textcolor{keyword}{false};
+13 
+14     connect(&\hyperlink{a00011_a8ba25017352f50469eddacb322dea1ea}{m\_pTimer}, SIGNAL(timeout()), \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SLOT(grab()));
+15     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(dataComputed()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00011_a4c891561d67bf6739511e3896eba6fb4}{useController}()));
+16     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(dataComputed()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_a35163b56af81dc0f09dc69e92161f4b9}{controllerConnected}()));
+17     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(\hyperlink{a00011_ad70a13ae9071262fc324babf6254d6ea}{noJoystick}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_ad70a13ae9071262fc324babf6254d6ea}{noJoystick}()));
+18     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(\hyperlink{a00011_a10733eb4d9bf54f33699a23fe0e0c4f8}{directInputProblem}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_a10733eb4d9bf54f33699a23fe0e0c4f8}{directInputProblem}()));
+19     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(\hyperlink{a00011_aa6bfaa413ce18461ac71e75248460700}{dataFormatProblem}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_aa6bfaa413ce18461ac71e75248460700}{dataFormatProblem}()));
+20     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(\hyperlink{a00011_a2359b3e182aa100a1c8da8c5d05155fe}{joystickProblem}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_a2359b3e182aa100a1c8da8c5d05155fe}{joystickProblem}()));
+21     connect(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}, SIGNAL(\hyperlink{a00011_a51a5a6418d902f49aa198a8d3ae923f6}{deviceEnumProblem}()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00011_a51a5a6418d902f49aa198a8d3ae923f6}{deviceEnumProblem}()));
+22 \}
+\end{DoxyCode}
+\hypertarget{a00011_a74f9f7dba0d6aee9d6ca60746ff37441}{\index{Peripheral\-Controller@{Peripheral\-Controller}!$\sim$\-Peripheral\-Controller@{$\sim$\-Peripheral\-Controller}}
+\index{$\sim$\-Peripheral\-Controller@{$\sim$\-Peripheral\-Controller}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{$\sim$\-Peripheral\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Peripheral\-Controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a74f9f7dba0d6aee9d6ca60746ff37441}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+44 \{
+45 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00011_a35163b56af81dc0f09dc69e92161f4b9}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Connected@{controller\-Connected}}
+\index{controller\-Connected@{controller\-Connected}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}void controller\-Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_a35163b56af81dc0f09dc69e92161f4b9}
+
+
+Controller connected event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_aff3131ad09d602487d9a2eddf9c10152}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Control\-Mode@{controller\-Control\-Mode}}
+\index{controller\-Control\-Mode@{controller\-Control\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void controller\-Control\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_aff3131ad09d602487d9a2eddf9c10152}
+
+
+Controller control mode event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_ae805875db5d4bed3c7ae8b42ea448c1f}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Mouse\-Mode@{controller\-Mouse\-Mode}}
+\index{controller\-Mouse\-Mode@{controller\-Mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void controller\-Mouse\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_ae805875db5d4bed3c7ae8b42ea448c1f}
+
+
+Controller mouse mode event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a2869d5a0199756d4d4f2bcf2889320cf}{\index{Peripheral\-Controller@{Peripheral\-Controller}!control\-Mode@{control\-Mode}}
+\index{control\-Mode@{control\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void control\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a2869d5a0199756d4d4f2bcf2889320cf}
+
+
+M\-U\-A\-V control management. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+153 \{
+154     \textcolor{keywordtype}{double} x = 0, y = 0, z = 0, yaw = 0, height = 0;
+155     \textcolor{keywordtype}{bool} bSend = \textcolor{keyword}{false};
+156 
+157     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} < -0.5)
+158     \{
+159         x = 10;
+160         bSend = \textcolor{keyword}{true};
+161     \}
+162     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} > 0.5)
+163     \{
+164         x = -10;
+165         bSend = \textcolor{keyword}{true};
+166     \}
+167 
+168     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} < -0.5)
+169     \{
+170         y = 10;
+171         bSend = \textcolor{keyword}{true};
+172     \}
+173     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} > 0.5)
+174     \{
+175         y = -10;
+176         bSend = \textcolor{keyword}{true};
+177     \}
+178 
+179     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_af0881450f92ff4ebb21414f6c6f124df}{rightStickX} < -0.5)
+180     \{
+181         yaw = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_a8c56441519ab3fa6a971bc898106adc4}{getHeading}() - 10;
+182         bSend = \textcolor{keyword}{true};
+183 
+184         \textcolor{keywordflow}{if} (yaw < 0)
+185         \{
+186             yaw = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_a8c56441519ab3fa6a971bc898106adc4}{getHeading}() - 10 + 360;
+187         \}
+188     \}
+189     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_af0881450f92ff4ebb21414f6c6f124df}{rightStickX} > 0.5)
+190     \{   
+191         yaw = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_a8c56441519ab3fa6a971bc898106adc4}{getHeading}() + 10;
+192         bSend = \textcolor{keyword}{true};
+193 
+194         \textcolor{keywordflow}{if} (yaw > 360)
+195         \{
+196             yaw = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_a8c56441519ab3fa6a971bc898106adc4}{getHeading}() + 10 - 360;
+197         \}
+198     \}
+199 
+200     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3010a64bd66ee481f2f6c94f368993ef}{topTrigger} < -0.5)
+201     \{
+202         height = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_ae1d662c26106ff9692252346d578e8fa}{getHeight}() + 10;
+203         bSend = \textcolor{keyword}{true};
+204     \}
+205     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3010a64bd66ee481f2f6c94f368993ef}{topTrigger} > 0.5)
+206     \{
+207         height = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->\hyperlink{a00012_ae1d662c26106ff9692252346d578e8fa}{getHeight}() - 10;
+208         bSend = \textcolor{keyword}{true};
+209     \}
+210 
+211     \textcolor{keywordflow}{if} (bSend)
+212     \{
+213         emit \hyperlink{a00011_a44769de90c2ec83d360149f4b36ea8da}{move}(x, y, height, yaw);
+214     \}
+215 \}
+\end{DoxyCode}
+\hypertarget{a00011_aa6bfaa413ce18461ac71e75248460700}{\index{Peripheral\-Controller@{Peripheral\-Controller}!data\-Format\-Problem@{data\-Format\-Problem}}
+\index{data\-Format\-Problem@{data\-Format\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{data\-Format\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void data\-Format\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_aa6bfaa413ce18461ac71e75248460700}
+
+
+Direct X data format problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a51a5a6418d902f49aa198a8d3ae923f6}{\index{Peripheral\-Controller@{Peripheral\-Controller}!device\-Enum\-Problem@{device\-Enum\-Problem}}
+\index{device\-Enum\-Problem@{device\-Enum\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{device\-Enum\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void device\-Enum\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_a51a5a6418d902f49aa198a8d3ae923f6}
+
+
+Device emumeration problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a10733eb4d9bf54f33699a23fe0e0c4f8}{\index{Peripheral\-Controller@{Peripheral\-Controller}!direct\-Input\-Problem@{direct\-Input\-Problem}}
+\index{direct\-Input\-Problem@{direct\-Input\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{direct\-Input\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void direct\-Input\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_a10733eb4d9bf54f33699a23fe0e0c4f8}
+
+
+Direct Input problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a81bd14f0b39bba2433355ec26f833270}{\index{Peripheral\-Controller@{Peripheral\-Controller}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peripheral\-Controller} $\ast$ get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00011_a81bd14f0b39bba2433355ec26f833270}
+
+
+Get the lone instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00011}{Peripheral\-Controller} instance Peripheral\-Controller$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keywordflow}{if} (\hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton} == NULL)
+27     \{
+28         \hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton} = \textcolor{keyword}{new} \hyperlink{a00011_a458a87530aff37dfe6f31899599aea2f}{PeripheralController}();
+29     \}
+30 
+31     \textcolor{keywordflow}{return} \hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton};
+32 \}
+\end{DoxyCode}
+\hypertarget{a00011_adf02fcb4d0f62c09a87788789f30a0f4}{\index{Peripheral\-Controller@{Peripheral\-Controller}!is\-Mouse\-Mode@{is\-Mouse\-Mode}}
+\index{is\-Mouse\-Mode@{is\-Mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{is\-Mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Mouse\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00011_adf02fcb4d0f62c09a87788789f30a0f4}
+
+
+Mouse mode activated indicator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+In mouse mode bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+218 \{
+219     \textcolor{keywordflow}{return} \hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode};
+220 \}
+\end{DoxyCode}
+\hypertarget{a00011_a2359b3e182aa100a1c8da8c5d05155fe}{\index{Peripheral\-Controller@{Peripheral\-Controller}!joystick\-Problem@{joystick\-Problem}}
+\index{joystick\-Problem@{joystick\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{joystick\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void joystick\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_a2359b3e182aa100a1c8da8c5d05155fe}
+
+
+Game controller device state get problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_aae9d52caad9fb2892deeb25596cfd2ab}{\index{Peripheral\-Controller@{Peripheral\-Controller}!kill@{kill}}
+\index{kill@{kill}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00011_aae9d52caad9fb2892deeb25596cfd2ab}
+
+
+Lone instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{keywordflow}{if} (\hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton} != NULL)
+37     \{
+38         \textcolor{keyword}{delete} \hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton};
+39         \hyperlink{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{singleton} = NULL;
+40     \}
+41 \}
+\end{DoxyCode}
+\hypertarget{a00011_aa90a20f7c02554ca9335896cbc476ffc}{\index{Peripheral\-Controller@{Peripheral\-Controller}!mouse\-Event@{mouse\-Event}}
+\index{mouse\-Event@{mouse\-Event}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{mouse\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void mouse\-Event (
+\begin{DoxyParamCaption}
+\item[{Qt\-::\-Mouse\-Button}]{button, }
+\item[{bool}]{wait\-Release}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_aa90a20f7c02554ca9335896cbc476ffc}
+
+
+Mouse event reagrding actions on gamepad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & emulated pressed button Qt\-::\-Mouse\-Button \\
+\hline
+{\em wait\-Release} & button already pressed bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a80b77ca519ad5f2104e456dc862f431a}{\index{Peripheral\-Controller@{Peripheral\-Controller}!mouse\-Mode@{mouse\-Mode}}
+\index{mouse\-Mode@{mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void mouse\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a80b77ca519ad5f2104e456dc862f431a}
+
+
+Mouse mode management. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+84 \{
+85     \textcolor{keywordtype}{bool} modified = \textcolor{keyword}{false};
+86     \textcolor{keywordtype}{int} x, y;
+87     QPoint position = QCursor::pos();
+88 
+89     x = position.x();
+90     y = position.y();
+91 
+92     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} < -0.7 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} > 0.7)
+93     \{
+94         modified = \textcolor{keyword}{true};
+95         x = position.x() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} * 50);
+96     \}
+97     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} < -0.4 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} > 0.4)
+98     \{
+99         modified = \textcolor{keyword}{true};
+100         x = position.x() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} * 20);
+101     \}
+102     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} < -0.2 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} > 0.2)
+103     \{
+104         modified = \textcolor{keyword}{true};
+105         x = position.x() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_ab182c34f8588348767de30e37ac6c659}{leftStickX} * 10);
+106     \}
+107 
+108     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} < -0.7 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} > 0.7)
+109     \{
+110         modified = \textcolor{keyword}{true};
+111         y = position.y() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} * 50);
+112     \}
+113     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} < -0.4 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} > 0.4)
+114     \{
+115         modified = \textcolor{keyword}{true};
+116         y = position.y() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} * 20);
+117     \}
+118     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} < -0.2 || \hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->
+      \hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} > 0.2)
+119     \{
+120         modified = \textcolor{keyword}{true};
+121         y = position.y() + (int)(\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a3db012f463d24f44cefdfef69c495a0e}{leftStickY} * 10);
+122     \}
+123 
+124     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[0] == \textcolor{keyword}{true} && !\hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease})
+125     \{ 
+126         emit \hyperlink{a00011_aa90a20f7c02554ca9335896cbc476ffc}{mouseEvent}(Qt::LeftButton, \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease});
+127         \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease} = \textcolor{keyword}{true};
+128     \}
+129     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[0] == \textcolor{keyword}{false} && 
+      \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease} == \textcolor{keyword}{true})
+130     \{
+131         emit \hyperlink{a00011_aa90a20f7c02554ca9335896cbc476ffc}{mouseEvent}(Qt::LeftButton, \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease});
+132         \hyperlink{a00011_a25f6095115a8ff95c4db48ae47b82211}{m\_bWaitRelease} = \textcolor{keyword}{false};
+133     \}
+134 
+135     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[1] == \textcolor{keyword}{true} && !
+      \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight})
+136     \{ 
+137         emit \hyperlink{a00011_aa90a20f7c02554ca9335896cbc476ffc}{mouseEvent}(Qt::RightButton, \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight});
+138         \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight} = \textcolor{keyword}{true};
+139     \}
+140     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[1] == \textcolor{keyword}{false} && 
+      \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight} == \textcolor{keyword}{true})
+141     \{
+142         emit \hyperlink{a00011_aa90a20f7c02554ca9335896cbc476ffc}{mouseEvent}(Qt::RightButton, \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight});
+143         \hyperlink{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{m\_bWaitReleaseRight} = \textcolor{keyword}{false};
+144     \}
+145 
+146     \textcolor{keywordflow}{if} (modified)
+147     \{
+148         QCursor::setPos(x, y);
+149     \}
+150 \}
+\end{DoxyCode}
+\hypertarget{a00011_a44769de90c2ec83d360149f4b36ea8da}{\index{Peripheral\-Controller@{Peripheral\-Controller}!move@{move}}
+\index{move@{move}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_a44769de90c2ec83d360149f4b36ea8da}
+
+
+\hyperlink{a00017}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & in meters double \\
+\hline
+{\em y} & in meters double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_ad70a13ae9071262fc324babf6254d6ea}{\index{Peripheral\-Controller@{Peripheral\-Controller}!no\-Joystick@{no\-Joystick}}
+\index{no\-Joystick@{no\-Joystick}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{no\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}void no\-Joystick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00011_ad70a13ae9071262fc324babf6254d6ea}
+
+
+No joystick event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00011_a8928745e5087fc002cf95365e70eec25}{\index{Peripheral\-Controller@{Peripheral\-Controller}!start\-Controller\-Grab@{start\-Controller\-Grab}}
+\index{start\-Controller\-Grab@{start\-Controller\-Grab}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{start\-Controller\-Grab}]{\setlength{\rightskip}{0pt plus 5cm}void start\-Controller\-Grab (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-n\-Time}
+\end{DoxyParamCaption}
+)}}\label{a00011_a8928745e5087fc002cf95365e70eec25}
+
+
+Start grab timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-n\-Time} & interval time in ms for grab int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+48 \{
+49     \hyperlink{a00011_a8ba25017352f50469eddacb322dea1ea}{m\_pTimer}.start(p\_nTime);
+50 \}
+\end{DoxyCode}
+\hypertarget{a00011_a4c891561d67bf6739511e3896eba6fb4}{\index{Peripheral\-Controller@{Peripheral\-Controller}!use\-Controller@{use\-Controller}}
+\index{use\-Controller@{use\-Controller}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{use\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}void use\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00011_a4c891561d67bf6739511e3896eba6fb4}
+
+
+Controller handle slot (timed by another software controller) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[5] == \textcolor{keyword}{true} && !\hyperlink{a00011_ad746a6b65e92b161871379fccca76759}{m\_bWaitReleaseMode})
+55     \{
+56         \hyperlink{a00011_ad746a6b65e92b161871379fccca76759}{m\_bWaitReleaseMode} = \textcolor{keyword}{true};
+57         \hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode} = !\hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode};
+58 
+59         \textcolor{keywordflow}{if} (\hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode})
+60         \{
+61             emit \hyperlink{a00011_ae805875db5d4bed3c7ae8b42ea448c1f}{controllerMouseMode}();
+62         \}
+63         \textcolor{keywordflow}{else}
+64         \{
+65             emit \hyperlink{a00011_aff3131ad09d602487d9a2eddf9c10152}{controllerControlMode}();
+66         \}
+67     \}
+68     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{a00011_a2e34a37152be9b74f82195ddd044b40e}{m\_pJoystick}->\hyperlink{a00005_a79f4acbf0893aed36f0bf600410b9fde}{buttons}[5] == \textcolor{keyword}{false} && 
+      \hyperlink{a00011_ad746a6b65e92b161871379fccca76759}{m\_bWaitReleaseMode})
+69     \{
+70         \hyperlink{a00011_ad746a6b65e92b161871379fccca76759}{m\_bWaitReleaseMode} = \textcolor{keyword}{false};
+71     \}
+72 
+73     \textcolor{keywordflow}{if} (\hyperlink{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{m\_bMouseMode})
+74     \{
+75         \hyperlink{a00011_a80b77ca519ad5f2104e456dc862f431a}{mouseMode}();
+76     \}
+77     \textcolor{keywordflow}{else}
+78     \{
+79         \hyperlink{a00011_a2869d5a0199756d4d4f2bcf2889320cf}{controlMode}();
+80     \}
+81 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-b\-Mouse\-Mode@{m\-\_\-b\-Mouse\-Mode}}
+\index{m\-\_\-b\-Mouse\-Mode@{m\-\_\-b\-Mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-b\-Mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Mouse\-Mode\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a5f850b41f8d146c95fa4fcb5c118ba83}
+\hypertarget{a00011_a25f6095115a8ff95c4db48ae47b82211}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-b\-Wait\-Release@{m\-\_\-b\-Wait\-Release}}
+\index{m\-\_\-b\-Wait\-Release@{m\-\_\-b\-Wait\-Release}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-b\-Wait\-Release}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Wait\-Release\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a25f6095115a8ff95c4db48ae47b82211}
+\hypertarget{a00011_ad746a6b65e92b161871379fccca76759}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-b\-Wait\-Release\-Mode@{m\-\_\-b\-Wait\-Release\-Mode}}
+\index{m\-\_\-b\-Wait\-Release\-Mode@{m\-\_\-b\-Wait\-Release\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-b\-Wait\-Release\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Wait\-Release\-Mode\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_ad746a6b65e92b161871379fccca76759}
+\hypertarget{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-b\-Wait\-Release\-Right@{m\-\_\-b\-Wait\-Release\-Right}}
+\index{m\-\_\-b\-Wait\-Release\-Right@{m\-\_\-b\-Wait\-Release\-Right}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-b\-Wait\-Release\-Right}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Wait\-Release\-Right\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_aa2bc3dbc15db0a044829d4a20ba08f56}
+\hypertarget{a00011_a2e34a37152be9b74f82195ddd044b40e}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-p\-Joystick@{m\-\_\-p\-Joystick}}
+\index{m\-\_\-p\-Joystick@{m\-\_\-p\-Joystick}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-p\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Joystick\-Grabber}$\ast$ m\-\_\-p\-Joystick\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a2e34a37152be9b74f82195ddd044b40e}
+\hypertarget{a00011_a8ba25017352f50469eddacb322dea1ea}{\index{Peripheral\-Controller@{Peripheral\-Controller}!m\-\_\-p\-Timer@{m\-\_\-p\-Timer}}
+\index{m\-\_\-p\-Timer@{m\-\_\-p\-Timer}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{m\-\_\-p\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_a8ba25017352f50469eddacb322dea1ea}
+\hypertarget{a00011_aeda9d6618a0c455de69329344070cfe4}{\index{Peripheral\-Controller@{Peripheral\-Controller}!problem\-Detected@{problem\-Detected}}
+\index{problem\-Detected@{problem\-Detected}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{problem\-Detected}]{\setlength{\rightskip}{0pt plus 5cm}bool problem\-Detected\hspace{0.3cm}{\ttfamily [private]}}}\label{a00011_aeda9d6618a0c455de69329344070cfe4}
+\hypertarget{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}{\index{Peripheral\-Controller@{Peripheral\-Controller}!singleton@{singleton}}
+\index{singleton@{singleton}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{singleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peripheral\-Controller} $\ast$ singleton = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{a00011_a4c732b19b7b708ba880e1a7dd193d4b2}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00035}{Peripheral\-Controller.\-h}\item 
+\hyperlink{a00034}{Peripheral\-Controller.\-cpp}\end{DoxyCompactItemize}

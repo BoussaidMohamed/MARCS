@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d0/d89/a00071" kind="struct" prot="public">
+    <compoundname>DIDEVICEIMAGEINFOW</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/d89/a00071_1af9858cc24e795ccd4ca036d6eff605c5" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwcValidPts</definition>
+        <argsstring></argsstring>
+        <name>dwcValidPts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="863" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFlags</definition>
+        <argsstring></argsstring>
+        <name>dwFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="858" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1aa3e360cabf4f9859e8b8af2111846936" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwObjID</definition>
+        <argsstring></argsstring>
+        <name>dwObjID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="862" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="862" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a47f3a9ec63e7a4ba7849c1b68cc943db" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwTextAlign</definition>
+        <argsstring></argsstring>
+        <name>dwTextAlign</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="866" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a56443b33966d84bee297c53ce5d6485f" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwViewID</definition>
+        <argsstring></argsstring>
+        <name>dwViewID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="860" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a72a60e5a6f70b986db5ab21a21e74541" prot="public" static="no" mutable="no">
+        <type>RECT</type>
+        <definition>RECT rcCalloutRect</definition>
+        <argsstring></argsstring>
+        <name>rcCalloutRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="865" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="865" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a8770661a12d52276cdd2b6c00fa20023" prot="public" static="no" mutable="no">
+        <type>RECT</type>
+        <definition>RECT rcOverlay</definition>
+        <argsstring></argsstring>
+        <name>rcOverlay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="861" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a136480dcf2273292cd4126ee415744df" prot="public" static="no" mutable="no">
+        <type>POINT</type>
+        <definition>POINT rgptCalloutLine[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>rgptCalloutLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="864" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="864" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d89/a00071_1a2e113217fd6165f21c08101f19ef9dcb" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR tszImagePath[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>tszImagePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="857" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="857" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="856" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="856" bodyend="867"/>
+    <listofallmembers>
+      <member refid="d0/d89/a00071_1af9858cc24e795ccd4ca036d6eff605c5" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>dwcValidPts</name></member>
+      <member refid="d0/d89/a00071_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>dwFlags</name></member>
+      <member refid="d0/d89/a00071_1aa3e360cabf4f9859e8b8af2111846936" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>dwObjID</name></member>
+      <member refid="d0/d89/a00071_1a47f3a9ec63e7a4ba7849c1b68cc943db" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>dwTextAlign</name></member>
+      <member refid="d0/d89/a00071_1a56443b33966d84bee297c53ce5d6485f" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>dwViewID</name></member>
+      <member refid="d0/d89/a00071_1a72a60e5a6f70b986db5ab21a21e74541" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>rcCalloutRect</name></member>
+      <member refid="d0/d89/a00071_1a8770661a12d52276cdd2b6c00fa20023" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>rcOverlay</name></member>
+      <member refid="d0/d89/a00071_1a136480dcf2273292cd4126ee415744df" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>rgptCalloutLine</name></member>
+      <member refid="d0/d89/a00071_1a2e113217fd6165f21c08101f19ef9dcb" prot="public" virt="non-virtual"><scope>DIDEVICEIMAGEINFOW</scope><name>tszImagePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

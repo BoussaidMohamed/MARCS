@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/dd6/a00108" kind="struct" prot="public">
+    <compoundname>RC_DATA</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/dd6/a00108_1a64c9aef9bf2d42d83cb05d250ab4ec3a" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short channels_in[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>channels_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="200" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd6/a00108_1a9ece938051bc16291613a2bdccd52bec" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short channels_out[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>channels_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="202" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd6/a00108_1a6ae861576031be7ecfd4d6c9e870fb99" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="204" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="198" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="197" bodyend="205"/>
+    <listofallmembers>
+      <member refid="d1/dd6/a00108_1a64c9aef9bf2d42d83cb05d250ab4ec3a" prot="public" virt="non-virtual"><scope>RC_DATA</scope><name>channels_in</name></member>
+      <member refid="d1/dd6/a00108_1a9ece938051bc16291613a2bdccd52bec" prot="public" virt="non-virtual"><scope>RC_DATA</scope><name>channels_out</name></member>
+      <member refid="d1/dd6/a00108_1a6ae861576031be7ecfd4d6c9e870fb99" prot="public" virt="non-virtual"><scope>RC_DATA</scope><name>lock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d3/dea/a00046" kind="file">
+    <compoundname>Waypoints.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/d97/a00045" kindref="compound">Waypoint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" refkind="member"><highlight class="normal"><ref refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" kindref="member">Waypoint::Waypoint</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" kindref="member">m_iNumber</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Action();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d4/d51/a00017_1a41f77c8ec61a3dcbc767a65857490ea0" refkind="member"><highlight class="normal"><ref refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" kindref="member">Waypoint::Waypoint</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p_iNumber)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" kindref="member">m_iNumber</ref><sp/>=<sp/>p_iNumber;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Action();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="d4/d51/a00017_1a89d9cbfd30e47222560175a96c52b9ad" refkind="member"><highlight class="normal"><ref refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" kindref="member">Waypoint::Waypoint</ref>(<ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref>*<sp/>p_pWaypoint):m_dAltitude(p_pWaypoint-&gt;m_dAltitude),<sp/>m_iNumber(p_pWaypoint-&gt;m_iNumber)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>(p_pWaypoint-&gt;<ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Action(p_pWaypoint-&gt;<ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="d4/d51/a00017_1a51fe298375fa476fec251da51e1506c0" refkind="member"><highlight class="normal"><ref refid="d4/d51/a00017_1a229fe7945d9a40d753377e317a4dffef" kindref="member">Waypoint::Waypoint</ref>(<ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>*<sp/>p_pCoordinates,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dAltitude)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" kindref="member">m_iNumber</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>=<sp/>p_pCoordinates;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>=<sp/>p_dAltitude;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Action();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d4/d51/a00017_1a21095cdf6dcd661854161cb0bb6205f8" refkind="member"><highlight class="normal"><ref refid="d4/d51/a00017_1a21095cdf6dcd661854161cb0bb6205f8" kindref="member">Waypoint::~Waypoint</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d4/d51/a00017_1adb5609c93db8958dd1c279b69b40c404" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1adb5609c93db8958dd1c279b69b40c404" kindref="member">Waypoint::setCoordinates</ref>(<ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>*<sp/>p_pCoordinates,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dAltitude)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>=<sp/>p_pCoordinates;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>=<sp/>p_dAltitude;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="d4/d51/a00017_1ac967c692f2002391c7210139dae74c9b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1ac967c692f2002391c7210139dae74c9b" kindref="member">Waypoint::setAltitude</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p_dAltitude)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>=<sp/>p_dAltitude;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="d4/d51/a00017_1ab4199a04816b77f70145835eab31b68a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1ab4199a04816b77f70145835eab31b68a" kindref="member">Waypoint::setAction</ref>(Action*<sp/>p_pAction)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>=<sp/>p_pAction;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="d4/d51/a00017_1a113cd241668e0eed0a745c438eb55b7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1ab4199a04816b77f70145835eab31b68a" kindref="member">Waypoint::setAction</ref>(QString<sp/>p_pAction)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>-&gt;setType(p_pAction);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="d4/d51/a00017_1aa3624d2fcca357ce2981bf1ab1685243" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1aa3624d2fcca357ce2981bf1ab1685243" kindref="member">Waypoint::setNumber</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p_iNumber)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" kindref="member">m_iNumber</ref><sp/>=<sp/>p_iNumber;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="d4/d51/a00017_1a8aaef3ba118d70f729ec23dee71755a7" refkind="member"><highlight class="normal"><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>*<sp/><ref refid="d4/d51/a00017_1a8aaef3ba118d70f729ec23dee71755a7" kindref="member">Waypoint::getCoordinates</ref>()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="d4/d51/a00017_1a6f20aa9c433a4f132a1720becc864a2b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a6f20aa9c433a4f132a1720becc864a2b" kindref="member">Waypoint::getAltitude</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="d4/d51/a00017_1abba463025419dde5992dbae2251d9e64" refkind="member"><highlight class="normal">Action*<sp/><ref refid="d4/d51/a00017_1abba463025419dde5992dbae2251d9e64" kindref="member">Waypoint::getAction</ref>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="d4/d51/a00017_1a3983021e2dfb69abb22ef299fd4fb078" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a3983021e2dfb69abb22ef299fd4fb078" kindref="member">Waypoint::getDistance</ref>(<ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref>*<sp/>p_pWaypoint)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>-&gt;<ref refid="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7" kindref="member">getDistance</ref>(p_pWaypoint-&gt;<ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="d4/d51/a00017_1a26b2bb379b3e56aedd0bd8846ed6aa7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a26b2bb379b3e56aedd0bd8846ed6aa7b" kindref="member">Waypoint::getNumber</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a9fb4f1b5ca39cdbcb7142c90feb5f38f" kindref="member">m_iNumber</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="d4/d51/a00017_1a53f0be2b77075cdad9e551ce42a147b1" refkind="member"><highlight class="normal">QDomElement<sp/><ref refid="d4/d51/a00017_1a53f0be2b77075cdad9e551ce42a147b1" kindref="member">Waypoint::toXML</ref>(QDomDocument<sp/>p_pDocument)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>QDomElement<sp/>pWaypoint<sp/>=<sp/>p_pDocument.createElement(</highlight><highlight class="stringliteral">&quot;waypoint&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>QDomElement<sp/>pLocation<sp/>=<sp/>p_pDocument.createElement(</highlight><highlight class="stringliteral">&quot;location&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>pLocation.setAttribute(</highlight><highlight class="stringliteral">&quot;longitude&quot;</highlight><highlight class="normal">,<sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>-&gt;<ref refid="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf" kindref="member">getLongitude</ref>());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>pLocation.setAttribute(</highlight><highlight class="stringliteral">&quot;latitude&quot;</highlight><highlight class="normal">,<sp/><ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>-&gt;<ref refid="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9" kindref="member">getLatitude</ref>());</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>pLocation.setAttribute(</highlight><highlight class="stringliteral">&quot;altitude&quot;</highlight><highlight class="normal">,<sp/><ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>QDomElement<sp/>pAction<sp/>=<sp/>p_pDocument.createElement(</highlight><highlight class="stringliteral">&quot;action&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>pAction.setAttribute(</highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/><ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>-&gt;getTypeString());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>pWaypoint.appendChild(pLocation);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>pWaypoint.appendChild(pAction);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pWaypoint;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="d4/d51/a00017_1a81f0758a888d209474d3b7235b5d4d64" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017_1a81f0758a888d209474d3b7235b5d4d64" kindref="member">Waypoint::operator == </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref>&amp;<sp/>p_pWaypoint)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bCoordinates<sp/>=<sp/>*this-&gt;<ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref><sp/>==<sp/>*p_pWaypoint.<ref refid="d4/d51/a00017_1a1900c34e2c85593efdee3d7436c508b3" kindref="member">m_pCoordinates</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bAltitude<sp/>=<sp/>this-&gt;<ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref><sp/>==<sp/>p_pWaypoint.<ref refid="d4/d51/a00017_1a79a2bd07a373f3b0042e6c2dc0e51fc0" kindref="member">m_dAltitude</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bAction<sp/>=<sp/>*this-&gt;<ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref><sp/>==<sp/>*p_pWaypoint.<ref refid="d4/d51/a00017_1a63916589fa097ccd19239948429b55f7" kindref="member">m_pAction</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bCoordinates<sp/>&amp;&amp;<sp/>bAltitude<sp/>&amp;&amp;<sp/>bAction;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/Waypoints.cpp"/>
+  </compounddef>
+</doxygen>

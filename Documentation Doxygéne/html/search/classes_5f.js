@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['_5fcpoint',['_CPOINT',['../struct___c_p_o_i_n_t.html',1,'']]],
+  ['_5fdiactiona',['_DIACTIONA',['../struct___d_i_a_c_t_i_o_n_a.html',1,'']]],
+  ['_5fdiactionformata',['_DIACTIONFORMATA',['../struct___d_i_a_c_t_i_o_n_f_o_r_m_a_t_a.html',1,'']]],
+  ['_5fdiactionformatw',['_DIACTIONFORMATW',['../struct___d_i_a_c_t_i_o_n_f_o_r_m_a_t_w.html',1,'']]],
+  ['_5fdiactionw',['_DIACTIONW',['../struct___d_i_a_c_t_i_o_n_w.html',1,'']]],
+  ['_5fdicolorset',['_DICOLORSET',['../struct___d_i_c_o_l_o_r_s_e_t.html',1,'']]],
+  ['_5fdiconfiguredevicesparamsa',['_DICONFIGUREDEVICESPARAMSA',['../struct___d_i_c_o_n_f_i_g_u_r_e_d_e_v_i_c_e_s_p_a_r_a_m_s_a.html',1,'']]],
+  ['_5fdiconfiguredevicesparamsw',['_DICONFIGUREDEVICESPARAMSW',['../struct___d_i_c_o_n_f_i_g_u_r_e_d_e_v_i_c_e_s_p_a_r_a_m_s_w.html',1,'']]],
+  ['_5fdidataformat',['_DIDATAFORMAT',['../struct___d_i_d_a_t_a_f_o_r_m_a_t.html',1,'']]],
+  ['_5fdideviceimageinfoa',['_DIDEVICEIMAGEINFOA',['../struct___d_i_d_e_v_i_c_e_i_m_a_g_e_i_n_f_o_a.html',1,'']]],
+  ['_5fdideviceimageinfoheadera',['_DIDEVICEIMAGEINFOHEADERA',['../struct___d_i_d_e_v_i_c_e_i_m_a_g_e_i_n_f_o_h_e_a_d_e_r_a.html',1,'']]],
+  ['_5fdideviceimageinfoheaderw',['_DIDEVICEIMAGEINFOHEADERW',['../struct___d_i_d_e_v_i_c_e_i_m_a_g_e_i_n_f_o_h_e_a_d_e_r_w.html',1,'']]],
+  ['_5fdideviceimageinfow',['_DIDEVICEIMAGEINFOW',['../struct___d_i_d_e_v_i_c_e_i_m_a_g_e_i_n_f_o_w.html',1,'']]],
+  ['_5fdimousestate',['_DIMOUSESTATE',['../struct___d_i_m_o_u_s_e_s_t_a_t_e.html',1,'']]],
+  ['_5fdimousestate2',['_DIMOUSESTATE2',['../struct___d_i_m_o_u_s_e_s_t_a_t_e2.html',1,'']]],
+  ['_5fdiobjectdataformat',['_DIOBJECTDATAFORMAT',['../struct___d_i_o_b_j_e_c_t_d_a_t_a_f_o_r_m_a_t.html',1,'']]]
+];

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d5/d1e/a00103" kind="struct" prot="public">
+    <compoundname>DIPROPSTRING</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d1e/a00103_1a7010842dfbdaa5bb4357503558202537" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d61/a00100" kindref="compound">DIPROPHEADER</ref></type>
+        <definition>DIPROPHEADER diph</definition>
+        <argsstring></argsstring>
+        <name>diph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1098" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1098" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d1e/a00103_1a395f03f595de3a960a2d670a88a2beb4" prot="public" static="no" mutable="no">
+        <type>WCHAR</type>
+        <definition>WCHAR wsz[MAX_PATH]</definition>
+        <argsstring>[MAX_PATH]</argsstring>
+        <name>wsz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1099" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1099" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="129">
+        <label>LPDIPROPSTRING</label>
+        <link refid="d5/d1e/a00103"/>
+        <childnode refid="130" relation="usage">
+          <edgelabel>diph</edgelabel>
+        </childnode>
+      </node>
+      <node id="130">
+        <label>LPDIPROPHEADER</label>
+        <link refid="d0/d61/a00100"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="1097" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="1097" bodyend="1100"/>
+    <listofallmembers>
+      <member refid="d5/d1e/a00103_1a7010842dfbdaa5bb4357503558202537" prot="public" virt="non-virtual"><scope>DIPROPSTRING</scope><name>diph</name></member>
+      <member refid="d5/d1e/a00103_1a395f03f595de3a960a2d670a88a2beb4" prot="public" virt="non-virtual"><scope>DIPROPSTRING</scope><name>wsz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

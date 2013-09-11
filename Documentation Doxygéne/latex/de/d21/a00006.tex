@@ -1,0 +1,293 @@
+\hypertarget{a00006}{\section{Lat\-Long\-Coord Class Reference}
+\label{a00006}\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}}
+}
+
+
+{\ttfamily \#include \char`\"{}Lat\-Long\-Coord.\-h\char`\"{}}
+
+\subsection*{Public Member Functions}
+\subsection*{Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00006_aa3c4ed98093ee0b6fe88d9c3e17015e7}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!Lat\-Long\-Coord@{Lat\-Long\-Coord}}
+\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{Lat\-Long\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00006_aa3c4ed98093ee0b6fe88d9c3e17015e7}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00006}{Lat\-Long\-Coord} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} = std::numeric\_limits<double>::infinity();
+6     \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} = std::numeric\_limits<double>::infinity();
+7 \}
+\end{DoxyCode}
+\hypertarget{a00006_a68cd3f1afef9932f4492a9bc24b1cd3c}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!Lat\-Long\-Coord@{Lat\-Long\-Coord}}
+\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{Lat\-Long\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Coordinates}
+\end{DoxyParamCaption}
+)}}\label{a00006_a68cd3f1afef9932f4492a9bc24b1cd3c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Coordinates} & latitude / longitude coordinates Lat\-Long\-Coord$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00006}{Lat\-Long\-Coord} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+10 \{
+11     \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} = p\_pCoordinates->\hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude};
+12     \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} = p\_pCoordinates->\hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude};
+13 \}
+\end{DoxyCode}
+\hypertarget{a00006_acbe0f5cc43c2fdbd81e13c5250f02c06}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!Lat\-Long\-Coord@{Lat\-Long\-Coord}}
+\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{Lat\-Long\-Coord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Latitude, }
+\item[{double}]{p\-\_\-d\-Longitude}
+\end{DoxyParamCaption}
+)}}\label{a00006_acbe0f5cc43c2fdbd81e13c5250f02c06}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Latitude} & latitude in decimal degrees double \\
+\hline
+{\em p\-\_\-d\-Longitude} & longitude in decimal degrees double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00006}{Lat\-Long\-Coord} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+16 \{
+17     \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} = p\_dLatitude;
+18     \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} = p\_dLongitude;
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00006_a972909f70c7e244c9440fee2500c12c7}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Coordinate}
+\end{DoxyParamCaption}
+)}}\label{a00006_a972909f70c7e244c9440fee2500c12c7}
+
+
+Compute distance between 2 latitude / longitude coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Coordinate} & second coordinates model Lat\-Long\-Coord$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordtype}{int} raver = 6378137;
+40 
+41     \textcolor{keywordtype}{double} longRad = p\_pCoordinates->getLongitude() * M\_PI / 180.;
+42     \textcolor{keywordtype}{double} latRad = p\_pCoordinates->getLatitude() * M\_PI / 180.;
+43     \textcolor{keywordtype}{double} destLatRad = \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} * M\_PI / 180.;
+44     \textcolor{keywordtype}{double} destLongRad = \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} * M\_PI / 180.;
+45 
+46     \textcolor{keywordflow}{return} raver * qAcos((qCos(latRad) * qCos(destLatRad) * qCos(longRad - destLongRad)) + (qSin(latRad) * 
+      qSin(destLatRad)));
+47 \}
+\end{DoxyCode}
+\hypertarget{a00006_a555fe9c52a678f22d66b31358566cfe9}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!get\-Latitude@{get\-Latitude}}
+\index{get\-Latitude@{get\-Latitude}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{get\-Latitude}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00006_a555fe9c52a678f22d66b31358566cfe9}
+
+
+Latitude getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Latitude in decimal degrees double 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordflow}{return} \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude};
+30 \}
+\end{DoxyCode}
+\hypertarget{a00006_aeca2669cb6715159606e844ab6a77bbf}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!get\-Longitude@{get\-Longitude}}
+\index{get\-Longitude@{get\-Longitude}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{get\-Longitude}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00006_aeca2669cb6715159606e844ab6a77bbf}
+
+
+Longitude getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Latitude in decimal degrees double 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{return} \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude};
+35 \}
+\end{DoxyCode}
+\hypertarget{a00006_a9a0e03b92332e6020d8b9f587cde06cd}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!operator==@{operator==}}
+\index{operator==@{operator==}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lat\-Long\-Coord} \&}]{p\-\_\-p\-Lat\-Long}
+\end{DoxyParamCaption}
+)}}\label{a00006_a9a0e03b92332e6020d8b9f587cde06cd}
+
+
+Comparaison operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Lat\-Long} & second coordinates model \hyperlink{a00006}{Lat\-Long\-Coord}\& \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Equality between the 2 models bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{keywordtype}{bool} bLatitude = this->\hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} == p\_pLatLong.\hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude};
+52     \textcolor{keywordtype}{bool} bLongitude = this->\hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} == p\_pLatLong.\hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude};
+53 
+54     \textcolor{keywordflow}{return} bLatitude && bLongitude;
+55 \}\end{DoxyCode}
+\hypertarget{a00006_aceb619fe57529d898748a11e4fc4985d}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!set\-Coordinates@{set\-Coordinates}}
+\index{set\-Coordinates@{set\-Coordinates}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{set\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Coordinates (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Latitude, }
+\item[{double}]{p\-\_\-d\-Longitude}
+\end{DoxyParamCaption}
+)}}\label{a00006_aceb619fe57529d898748a11e4fc4985d}
+
+
+Coordinates setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Latitude} & latitude in decimal degrees double \\
+\hline
+{\em p\-\_\-d\-Longitude} & longitude in decimal degrees double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+22 \{
+23     \hyperlink{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{m\_dLatitude} = p\_dLatitude;
+24     \hyperlink{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{m\_dLongitude} = p\_dLongitude;
+25 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00006_a1cdacb6dc826cc93ec04bba718cf834e}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!m\-\_\-d\-Latitude@{m\-\_\-d\-Latitude}}
+\index{m\-\_\-d\-Latitude@{m\-\_\-d\-Latitude}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{m\-\_\-d\-Latitude}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Latitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00006_a1cdacb6dc826cc93ec04bba718cf834e}
+\hypertarget{a00006_a0b4613cfb4daeaf293a64de8ed38638b}{\index{Lat\-Long\-Coord@{Lat\-Long\-Coord}!m\-\_\-d\-Longitude@{m\-\_\-d\-Longitude}}
+\index{m\-\_\-d\-Longitude@{m\-\_\-d\-Longitude}!LatLongCoord@{Lat\-Long\-Coord}}
+\subsubsection[{m\-\_\-d\-Longitude}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Longitude\hspace{0.3cm}{\ttfamily [private]}}}\label{a00006_a0b4613cfb4daeaf293a64de8ed38638b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00024}{Lat\-Long\-Coord.\-h}\item 
+\hyperlink{a00023}{Lat\-Long\-Coord.\-cpp}\end{DoxyCompactItemize}

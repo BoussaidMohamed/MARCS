@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="de/d21/a00006" kind="class" prot="public">
+    <compoundname>LatLongCoord</compoundname>
+    <includes refid="dc/de2/a00024" local="yes">LatLongCoord.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d21/a00006_1a1cdacb6dc826cc93ec04bba718cf834e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dLatitude</definition>
+        <argsstring></argsstring>
+        <name>m_dLatitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="25" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d21/a00006_1a0b4613cfb4daeaf293a64de8ed38638b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dLongitude</definition>
+        <argsstring></argsstring>
+        <name>m_dLongitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="26" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LatLongCoord</definition>
+        <argsstring>()</argsstring>
+        <name>LatLongCoord</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="37" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1a68cd3f1afef9932f4492a9bc24b1cd3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LatLongCoord</definition>
+        <argsstring>(LatLongCoord *p_pCoordinates)</argsstring>
+        <name>LatLongCoord</name>
+        <param>
+          <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+          <declname>p_pCoordinates</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pCoordinates</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude / longitude coordinates LatLongCoord* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="45" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1acbe0f5cc43c2fdbd81e13c5250f02c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LatLongCoord</definition>
+        <argsstring>(double p_dLatitude, double p_dLongitude)</argsstring>
+        <name>LatLongCoord</name>
+        <param>
+          <type>double</type>
+          <declname>p_dLatitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_dLongitude</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dLatitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude in decimal degrees double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_dLongitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude in decimal degrees double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="54" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getDistance</definition>
+        <argsstring>(LatLongCoord *p_pCoordinate)</argsstring>
+        <name>getDistance</name>
+        <param>
+          <type><ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> *</type>
+          <declname>p_pCoordinate</declname>
+        </param>
+        <briefdescription>
+<para>Compute distance between 2 latitude / longitude coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pCoordinate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second coordinates model LatLongCoord* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="87" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="37" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getLatitude</definition>
+        <argsstring>()</argsstring>
+        <name>getLatitude</name>
+        <briefdescription>
+<para>Latitude getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Latitude in decimal degrees double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="71" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getLongitude</definition>
+        <argsstring>()</argsstring>
+        <name>getLongitude</name>
+        <briefdescription>
+<para>Longitude getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Latitude in decimal degrees double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="79" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1a9a0e03b92332e6020d8b9f587cde06cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const LatLongCoord &amp;p_pLatLong)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref> &amp;</type>
+          <declname>p_pLatLong</declname>
+        </param>
+        <briefdescription>
+<para>Comparaison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pLatLong</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second coordinates model <ref refid="de/d21/a00006" kindref="compound">LatLongCoord</ref>&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Equality between the 2 models bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="97" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/a00006_1aceb619fe57529d898748a11e4fc4985d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setCoordinates</definition>
+        <argsstring>(double p_dLatitude, double p_dLongitude)</argsstring>
+        <name>setCoordinates</name>
+        <param>
+          <type>double</type>
+          <declname>p_dLatitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_dLongitude</declname>
+        </param>
+        <briefdescription>
+<para>Coordinates setter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dLatitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude in decimal degrees double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_dLongitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude in decimal degrees double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="63" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" line="8" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LatLongCoord.h" bodystart="7" bodyend="98"/>
+    <listofallmembers>
+      <member refid="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>getDistance</name></member>
+      <member refid="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>getLatitude</name></member>
+      <member refid="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>getLongitude</name></member>
+      <member refid="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>LatLongCoord</name></member>
+      <member refid="de/d21/a00006_1a68cd3f1afef9932f4492a9bc24b1cd3c" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>LatLongCoord</name></member>
+      <member refid="de/d21/a00006_1acbe0f5cc43c2fdbd81e13c5250f02c06" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>LatLongCoord</name></member>
+      <member refid="de/d21/a00006_1a1cdacb6dc826cc93ec04bba718cf834e" prot="private" virt="non-virtual"><scope>LatLongCoord</scope><name>m_dLatitude</name></member>
+      <member refid="de/d21/a00006_1a0b4613cfb4daeaf293a64de8ed38638b" prot="private" virt="non-virtual"><scope>LatLongCoord</scope><name>m_dLongitude</name></member>
+      <member refid="de/d21/a00006_1a9a0e03b92332e6020d8b9f587cde06cd" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>operator==</name></member>
+      <member refid="de/d21/a00006_1aceb619fe57529d898748a11e4fc4985d" prot="public" virt="non-virtual"><scope>LatLongCoord</scope><name>setCoordinates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

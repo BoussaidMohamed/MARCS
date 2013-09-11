@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="de/d5e/a00007" kind="class" prot="public">
+    <compoundname>LogReplayControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="d6/d5b/a00026" local="yes">LogReplayControl.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" prot="private" static="yes" mutable="no">
+        <type><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref> *</type>
+        <definition>LogReplayControl * singleton</definition>
+        <argsstring></argsstring>
+        <name>singleton</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="28" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" prot="private" static="no" mutable="no">
+        <type>QList&lt; double &gt;</type>
+        <definition>QList&lt;double&gt; m_aAltitude</definition>
+        <argsstring></argsstring>
+        <name>m_aAltitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="34" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" prot="private" static="no" mutable="no">
+        <type>QList&lt; double &gt;</type>
+        <definition>QList&lt;double&gt; m_aHeading</definition>
+        <argsstring></argsstring>
+        <name>m_aHeading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="35" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" prot="private" static="no" mutable="no">
+        <type>QList&lt; double &gt;</type>
+        <definition>QList&lt;double&gt; m_aLatitude</definition>
+        <argsstring></argsstring>
+        <name>m_aLatitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="32" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" prot="private" static="no" mutable="no">
+        <type>QList&lt; double &gt;</type>
+        <definition>QList&lt;double&gt; m_aLongitude</definition>
+        <argsstring></argsstring>
+        <name>m_aLongitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="33" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bReverse</definition>
+        <argsstring></argsstring>
+        <name>m_bReverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="31" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_iData</definition>
+        <argsstring></argsstring>
+        <name>m_iData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="30" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pReplayTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pReplayTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="29" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogReplayControl</definition>
+        <argsstring>()</argsstring>
+        <name>LogReplayControl</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="49" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="5" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d5e/a00007_1a9a1182668244140773a52ee54723c8fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~LogReplayControl</definition>
+        <argsstring>()</argsstring>
+        <name>~LogReplayControl</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="57" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="de/d5e/a00007_1adb2b1b18fad4caaafde371f991525f38" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref> *</type>
+        <definition>LogReplayControl * getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para><ref refid="de/d5e/a00007" kindref="compound">LogReplayControl</ref> lone instance getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lone instance MissionControl* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="68" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d5e/a00007_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>()</argsstring>
+        <name>kill</name>
+        <briefdescription>
+<para>Instance killer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="76" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="16" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="de/d5e/a00007_1ac64f2ec114d4ab8dd8ed8dd31f243454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void geolocation</definition>
+        <argsstring>(double latitude, double longitude, double altitude, double heading)</argsstring>
+        <name>geolocation</name>
+        <param>
+          <type>double</type>
+          <declname>latitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>longitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>heading</declname>
+        </param>
+        <briefdescription>
+<para>Update MUAV geolocation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="de/d5e/a00007_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateHeading</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateHeading</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Update heading value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading value double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="87" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="de/d5e/a00007_1a9b83f0fc7f06bee951213dd4b22e0e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void backward</definition>
+        <argsstring>()</argsstring>
+        <name>backward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="109" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="76" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1a7de2a543986e45b9083c69f6138bf079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void forward</definition>
+        <argsstring>()</argsstring>
+        <name>forward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="111" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="58" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1a2d8621c7c4f4531bee805e91595b6b76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openLog</definition>
+        <argsstring>()</argsstring>
+        <name>openLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="115" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="134" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1a7167f5c196fc5e167bfabde1a730e81d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="105" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void replay</definition>
+        <argsstring>()</argsstring>
+        <name>replay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="113" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="94" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1a60de64d75454385b23995437f1d72669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="103" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="slot" id="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="107" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.cpp" bodystart="50" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="144">
+        <label>LogReplayControl</label>
+        <link refid="de/d5e/a00007"/>
+        <childnode refid="144" relation="usage">
+          <edgelabel>singleton</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" line="9" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/LogReplayControl.h" bodystart="8" bodyend="116"/>
+    <listofallmembers>
+      <member refid="de/d5e/a00007_1a9b83f0fc7f06bee951213dd4b22e0e93" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>backward</name></member>
+      <member refid="de/d5e/a00007_1a7de2a543986e45b9083c69f6138bf079" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>forward</name></member>
+      <member refid="de/d5e/a00007_1ac64f2ec114d4ab8dd8ed8dd31f243454" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>geolocation</name></member>
+      <member refid="de/d5e/a00007_1adb2b1b18fad4caaafde371f991525f38" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>getInstance</name></member>
+      <member refid="de/d5e/a00007_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>kill</name></member>
+      <member refid="de/d5e/a00007_1ab0b79423b2b67162e12b82b5458610c6" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>LogReplayControl</name></member>
+      <member refid="de/d5e/a00007_1a9d1929fdd4a8b1a587c97688bc91037b" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_aAltitude</name></member>
+      <member refid="de/d5e/a00007_1a9eed7e988005e7291b4e9d401c678693" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_aHeading</name></member>
+      <member refid="de/d5e/a00007_1a684fa381f2a0f0098edcbc7c7b3ea93d" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_aLatitude</name></member>
+      <member refid="de/d5e/a00007_1aa900c1e4f1eea660e8f52de1e2109bad" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_aLongitude</name></member>
+      <member refid="de/d5e/a00007_1a9b60d9b0fc5bc08efbad926439d7933c" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_bReverse</name></member>
+      <member refid="de/d5e/a00007_1ae4449bc255d96573e420df2efe33e83e" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_iData</name></member>
+      <member refid="de/d5e/a00007_1a751177401fcce70c122d30de758b05a0" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>m_pReplayTimer</name></member>
+      <member refid="de/d5e/a00007_1a2d8621c7c4f4531bee805e91595b6b76" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>openLog</name></member>
+      <member refid="de/d5e/a00007_1a7167f5c196fc5e167bfabde1a730e81d" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>pause</name></member>
+      <member refid="de/d5e/a00007_1aa4dbf9e6f1a5549a0444ad2995e8748b" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>replay</name></member>
+      <member refid="de/d5e/a00007_1a72df5eacd5c7ea6c052e02000643fd7e" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>singleton</name></member>
+      <member refid="de/d5e/a00007_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>start</name></member>
+      <member refid="de/d5e/a00007_1a8c528baf37154d347366083f0f816846" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>stop</name></member>
+      <member refid="de/d5e/a00007_1aa3c54f0958638486df2b69a9b53c5d7f" prot="public" virt="non-virtual"><scope>LogReplayControl</scope><name>updateHeading</name></member>
+      <member refid="de/d5e/a00007_1a9a1182668244140773a52ee54723c8fd" prot="private" virt="non-virtual"><scope>LogReplayControl</scope><name>~LogReplayControl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

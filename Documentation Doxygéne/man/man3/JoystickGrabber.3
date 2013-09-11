@@ -1,0 +1,506 @@
+.TH "JoystickGrabber" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JoystickGrabber \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'JoystickGrabber\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Public Member Functions"
+.SS "Data Fields"
+.SS "Private Member Functions"
+.SS "Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBJoystickGrabber\fP ()"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBJoystickGrabber\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+38 {
+39     /*
+40     instance = GetModuleHandle(NULL);
+41     m_bDeviceNotCreated = true;
+42     createDevice();
+43 
+44     m_bNoJoystick = false;
+45     m_bDirectInputProblem = false;
+46     m_bDataFormatProblem = false;
+47     m_bJoystickProblem = false;
+48     m_bDeviceEnumProblem = false;
+49 
+50     connect(&m_pTimer, SIGNAL(timeout()), SLOT(sendAcknowledge()));
+51         */
+52 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void computeData (\fBDIJOYSTATE\fPstate)\fC [private]\fP"
+
+.PP
+Compute datat from game controller grab\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+112 {
+113     /*
+114     leftStickX = (state\&.lX - 32767) / 32767\&.;
+115     leftStickY = (state\&.lY - 32767) / 32767\&.;
+116     topTrigger = (state\&.lZ - 32767) / 32767\&.;
+117     rightStickX = (state\&.lRx - 32767) / 32767\&.;
+118     rightStickY = (state\&.lRy - 32767) / 32767\&.;
+119 
+120     for (int i = 0; i < 32; i++)
+121     {
+122         buttons[i] = (state\&.rgbButtons[i] != 0);
+123     }
+124 
+125     for (int i = 0; i < 4; i++)
+126     {
+127         pov[i] = (state\&.rgdwPOV[i] != -1);
+128     }
+129 
+130     emit dataComputed();
+131         */
+132 }
+.fi
+.SS "void createDevice ()"
+
+.PP
+Create the Direct X device\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+55 {
+56     /*
+57     //DirectInput object creation
+58     result = DirectInput8Create(instance, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&direct_input_object, NULL); 
+59 
+60     //Error management
+61     if(FAILED(result))
+62     {
+63         //Cannot create instance
+64         //Possible errors : DIERR_BETADIRECTINPUTVERSION, DIERR_INVALIDPARAM, DIERR_OLDDIRECTINPUTVERSION, DIERR_OUTOFMEMORY
+65         m_bDirectInputProblem = true;
+66         return;
+67     }
+68 
+69     m_bDirectInputProblem = false;
+70 
+71     //Enumerate peripherals
+72     result  = direct_input_object->EnumDevices(DI8DEVCLASS_GAMECTRL, &CreateDeviceCallback, NULL, DIEDFL_ATTACHEDONLY);
+73 
+74     //Error management
+75     if(FAILED(result))
+76     {
+77         //Cannot create joypad
+78         //possible errors : DIERR_INVALIDPARAM, DIERR_NOTINITIALIZED
+79         m_bDeviceEnumProblem = true;
+80         return;
+81     }
+82     m_bDeviceEnumProblem = false;
+83 
+84     if (joypad)
+85     {
+86         //Data format used definition
+87         result = joypad->SetDataFormat(&c_dfDIJoystick); 
+88 
+89         //Error management
+90         if(FAILED(result))
+91         { 
+92             //Cannot initialize data format
+93             //Possible errors : DIERR_ACQUIRED, DIERR_INVALIDPARAM, DIERR_NOTINITIALIZED
+94             m_bDataFormatProblem = true;
+95             return;
+96         }
+97 
+98         m_bDataFormatProblem = false;
+99         m_bNoJoystick = false;
+100         m_bDeviceNotCreated = false;
+101 
+102         joypad->Acquire();
+103     }
+104     else
+105     {
+106         m_bNoJoystick = true;
+107     }
+108         */
+109 }
+.fi
+.SS "void dataComputed ()\fC [signal]\fP"
+
+.PP
+Data computed signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void dataFormatProblem ()\fC [signal]\fP"
+
+.PP
+Data format for controller problem signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void deviceEnumProblem ()\fC [signal]\fP"
+
+.PP
+Enumeration of devices problem signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void directInputProblem ()\fC [signal]\fP"
+
+.PP
+Direct Input problem signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void Finalize (void)\fC [private]\fP"
+
+.PP
+Finalize the game controller handle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+135 {
+136     /*
+137     if (direct_input_object) 
+138     { 
+139         //Finalize peripheral
+140         if (joypad) 
+141         { 
+142             joypad->Unacquire(); 
+143             joypad->Release();
+144             joypad = NULL; 
+145         } 
+146 
+147         //Finalize DirectInput
+148         direct_input_object->Release();
+149         direct_input_object = NULL; 
+150     }
+151         */
+152 }
+.fi
+.SS "void grab ()\fC [slot]\fP"
+
+.PP
+Grab information one time\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+155 {
+156     /*
+157     if (m_pTimer\&.isActive() == false)
+158     {
+159         m_pTimer\&.start(300);
+160     }
+161 
+162     if (m_bDeviceNotCreated)
+163     {
+164         createDevice();
+165     }
+166 
+167     if (m_bDeviceNotCreated == false)
+168     {
+169         result = joypad->Poll(); 
+170 
+171         //Error management
+172         if(FAILED(result))
+173         { 
+174             m_bDeviceNotCreated = true;
+175             m_bJoystickProblem = true;
+176             return;
+177         }
+178 
+179         result = joypad->GetDeviceState(sizeof(state), (LPVOID)&state); 
+180 
+181         //Error management
+182         if(FAILED(result))
+183         { 
+184             //Cannot get device state
+185             //Possible errors : DIERR_INPUTLOST, DIERR_INVALIDPARAM, DIERR_NOTACQUIRED, DIERR_NOTINITIALIZED, E_PENDING
+186             m_bJoystickProblem = true;
+187             return;
+188         }
+189         
+190         m_bJoystickProblem = false;
+191         computeData(state);
+192     }
+193         */
+194 }
+.fi
+.SS "void joystickProblem ()\fC [signal]\fP"
+
+.PP
+Joystick access problem signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void noJoystick ()\fC [signal]\fP"
+
+.PP
+No joystick or gamepad connected signal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendAcknowledge ()\fC [slot]\fP"
+
+.PP
+Send errors each time interval of the timer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+197 {
+198     /*
+199     if (m_bNoJoystick)
+200     {
+201         emit noJoystick();
+202     }
+203 
+204     if (m_bDirectInputProblem)
+205     {
+206         emit directInputProblem();
+207     }
+208 
+209     if (m_bDataFormatProblem)
+210     {
+211         emit dataFormatProblem();
+212     }
+213 
+214     if (m_bJoystickProblem)
+215     {
+216         emit joystickProblem();
+217     }
+218 
+219     if (m_bDeviceEnumProblem)
+220     {
+221         emit deviceEnumProblem();
+222     }
+223 
+224         */
+225 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "bool buttons[32]"
+
+.SS "double leftStickX"
+
+.SS "double leftStickY"
+
+.SS "bool m_bDataFormatProblem\fC [private]\fP"
+
+.SS "bool m_bDeviceEnumProblem\fC [private]\fP"
+
+.SS "bool m_bDeviceNotCreated\fC [private]\fP"
+
+.SS "bool m_bDirectInputProblem\fC [private]\fP"
+
+.SS "bool m_bJoystickProblem\fC [private]\fP"
+
+.SS "bool m_bNoJoystick\fC [private]\fP"
+
+.SS "QTimer m_pTimer\fC [private]\fP"
+
+.SS "bool pov[4]"
+
+.SS "double rightStickX"
+
+.SS "double rightStickY"
+
+.SS "double topTrigger"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

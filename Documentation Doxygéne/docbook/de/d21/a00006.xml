@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/d21/a00006">
+<title>LatLongCoord class Reference</title>
+<para>
+    <programlisting>#include <link linkend="dc/de2/a00024">&quot;LatLongCoord.h&quot;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_dLatitude</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double m_dLongitude</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7">LatLongCoord</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/d21/a00006_1a68cd3f1afef9932f4492a9bc24b1cd3c">LatLongCoord</link> (
+<link linkend="de/d21/a00006">LatLongCoord</link> * p_pCoordinates)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/d21/a00006_1acbe0f5cc43c2fdbd81e13c5250f02c06">LatLongCoord</link> (
+double p_dLatitude, double p_dLongitude)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7">getDistance</link> (
+<link linkend="de/d21/a00006">LatLongCoord</link> * p_pCoordinate)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9">getLatitude</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf">getLongitude</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="de/d21/a00006_1a9a0e03b92332e6020d8b9f587cde06cd">operator==</link> (
+const <link linkend="de/d21/a00006">LatLongCoord</link> &amp; p_pLatLong)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d21/a00006_1aceb619fe57529d898748a11e4fc4985d">setCoordinates</link> (
+double p_dLatitude, double p_dLongitude)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="de/d21/a00006_1aa3c4ed98093ee0b6fe88d9c3e17015e7">
+                <title>LatLongCoord ()</title> <emphasis>Constructor.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="de/d21/a00006">LatLongCoord</link> instance </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1a68cd3f1afef9932f4492a9bc24b1cd3c">
+                <title>LatLongCoord (LatLongCoord *p_pCoordinates)</title> <emphasis>Constructor.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>p_pCoordinates</entry>
+                                <entry>
+<para>latitude / longitude coordinates LatLongCoord* </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="de/d21/a00006">LatLongCoord</link> instance </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1acbe0f5cc43c2fdbd81e13c5250f02c06">
+                <title>LatLongCoord (double p_dLatitude, double p_dLongitude)</title> <emphasis>Constructor.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>p_dLatitude</entry>
+                                <entry>
+<para>latitude in decimal degrees double </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>p_dLongitude</entry>
+                                <entry>
+<para>longitude in decimal degrees double </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="de/d21/a00006">LatLongCoord</link> instance </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1a972909f70c7e244c9440fee2500c12c7">
+                <title>double getDistance (LatLongCoord *p_pCoordinate)</title> <emphasis>Compute distance between 2 latitude / longitude coordinates.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>p_pCoordinate</entry>
+                                <entry>
+<para>second coordinates model LatLongCoord* </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>none </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1a555fe9c52a678f22d66b31358566cfe9">
+                <title>double getLatitude ()</title> <emphasis>Latitude getter.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>Latitude in decimal degrees double </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1aeca2669cb6715159606e844ab6a77bbf">
+                <title>double getLongitude ()</title> <emphasis>Longitude getter.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>Latitude in decimal degrees double </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1a9a0e03b92332e6020d8b9f587cde06cd">
+                <title>bool operator== (const LatLongCoord &amp;p_pLatLong)</title> <emphasis>Comparaison operator.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>p_pLatLong</entry>
+                                <entry>
+<para>second coordinates model <link linkend="de/d21/a00006">LatLongCoord</link>&amp; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>Equality between the 2 models bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d21/a00006_1aceb619fe57529d898748a11e4fc4985d">
+                <title>void setCoordinates (double p_dLatitude, double p_dLongitude)</title> <emphasis>Coordinates setter.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>p_dLatitude</entry>
+                                <entry>
+<para>latitude in decimal degrees double </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>p_dLongitude</entry>
+                                <entry>
+<para>longitude in decimal degrees double </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                exception                            <row>
+                                <entry>none</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>none </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,1598 @@
+\hypertarget{a00010}{\section{Mission\-Control Class Reference}
+\label{a00010}\index{Mission\-Control@{Mission\-Control}}
+}
+
+
+{\ttfamily \#include \char`\"{}Mission\-Control.\-h\char`\"{}}
+
+Inheritance diagram for Mission\-Control\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/dec/a00010}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\subsection*{Signals}
+\subsection*{Static Public Member Functions}
+\subsection*{Private Member Functions}
+\subsection*{Private Attributes}
+\subsection*{Static Private Attributes}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00010_a4d1fa31327a8451df46c12f7f4a152a4}{\index{Mission\-Control@{Mission\-Control}!Mission\-Control@{Mission\-Control}}
+\index{Mission\-Control@{Mission\-Control}!MissionControl@{Mission\-Control}}
+\subsubsection[{Mission\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mission\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a4d1fa31327a8451df46c12f7f4a152a4}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{a00010}{Mission\-Control} instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7         \textcolor{comment}{//m\_pPlan = new FlightPlan();}
+8         \textcolor{comment}{//m\_pMap = new Map();}
+9         \textcolor{comment}{//m\_pMap->setFlightPlan(m\_pPlan);}
+10 
+11     \hyperlink{a00010_ab3860e046790d0106c5c59d2947c4a24}{m\_pLaunchTimer}.setInterval(1000);
+12 
+13     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(XBeeStatus(\textcolor{keywordtype}{bool})),
+       \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_af5f2c7705408cb9400ff6f2d64eabf26}{updateXBee}(\textcolor{keywordtype}{bool})));
+14     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(directInputProblem
+      ()), \textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a1ce8df6c21f65fcfbeb3f6852600349e}{directXProblem}()));
+15     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(dataFormatProblem(
+      )), \textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a1ce8df6c21f65fcfbeb3f6852600349e}{directXProblem}()));
+16     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(deviceEnumProblem(
+      )), \textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a1ce8df6c21f65fcfbeb3f6852600349e}{directXProblem}()));
+17     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(joystickProblem())
+      , \textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_acda62f445580e9296041e59a2d81fc77}{controllerProblem}()));
+18     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(noJoystick()), \textcolor{keyword}{
+      this}, SIGNAL(\hyperlink{a00010_acda62f445580e9296041e59a2d81fc77}{controllerProblem}()));
+19     connect(\hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}(), SIGNAL(
+      \hyperlink{a00010_a35163b56af81dc0f09dc69e92161f4b9}{controllerConnected}()), \textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a35163b56af81dc0f09dc69e92161f4b9}{controllerConnected}()));
+20 
+21     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(geolocation(\textcolor{keywordtype}{double}
+      , \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+22         \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}(), SLOT(geolocation(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+23     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(updateHeading(\textcolor{keywordtype}{
+      double})), \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}(), SLOT(updateHeading(\textcolor{keywordtype}{double})));
+24     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(updateHeight(\textcolor{keywordtype}{
+      double})), \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}(), SLOT(updateHeight(\textcolor{keywordtype}{double})));
+25     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(updateGPSQuality(\textcolor{keywordtype}{
+      int})), \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_ae5330168c77c9c4d13fba5b918845ef7}{updateGPS}(\textcolor{keywordtype}{int})));
+26     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(
+      \hyperlink{a00010_afa417655857cee8564cd3f54b1491e98}{batteryLevel}(\textcolor{keywordtype}{double})), \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_a80fb0b930e406eedf15162edccc726c3}{updateBattery}(\textcolor{keywordtype}{double})));
+27     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(updateStatus(\textcolor{keywordtype}{short}
+      )), \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_aaf70dd1f6eda48599f92fe2c4426006b}{updateRadiocommand}(\textcolor{keywordtype}{short})));
+28     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(
+      \hyperlink{a00010_a5f730a9a91784cbf28d39ab22e4d7fec}{inFlight}(\textcolor{keywordtype}{char})), \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_a5f730a9a91784cbf28d39ab22e4d7fec}{inFlight}(\textcolor{keywordtype}{char})));
+29     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(waypointNAVInfo(\textcolor{keywordtype}{
+      char}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short})), 
+30         \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_ab3cda15293ced458cbd11c5740c1c099}{updateNAV}(\textcolor{keywordtype}{char}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short})));
+31     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(
+      \hyperlink{a00010_a30bbdc9e8db693b8e568e732fe8bca2e}{rcData}(\textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{char})), 
+32         \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_a30bbdc9e8db693b8e568e732fe8bca2e}{rcData}(\textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{short}, \textcolor{keywordtype}{char})));
+33 
+34     connect(\hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}(), SIGNAL(positionChanged()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00010_a161bfdf95298fba69f2227c64a1cbc4c}{updateDigression}()));
+35     connect(&\hyperlink{a00010_aa2212ccd53682c3c29395c0012e88979}{m\_pWaypointTimer}, SIGNAL(timeout()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{a00010_a2d1e5a21fd2b1b542b454f72c6fe5bf3}{sendWaypoint}()));
+36     connect(&\hyperlink{a00010_ab3860e046790d0106c5c59d2947c4a24}{m\_pLaunchTimer}, SIGNAL(timeout()), \textcolor{keyword}{this}, SIGNAL(
+      \hyperlink{a00010_a38513372e1af4752cee2e2d046c98821}{sendLaunch}()));
+37 
+38     connect(\hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(displayAck(\textcolor{keywordtype}{char}*))
+      , \textcolor{keyword}{this}, SLOT(\hyperlink{a00010_ad15969fb4bfd40eedb8ceaa6c7a8d1f4}{acknowledge}(\textcolor{keywordtype}{char}*)));
+39     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a38513372e1af4752cee2e2d046c98821}{sendLaunch}()), 
+      \hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), SIGNAL(
+      \hyperlink{a00010_a38513372e1af4752cee2e2d046c98821}{sendLaunch}()));
+40     connect(\textcolor{keyword}{this}, SIGNAL(\hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})), 
+      \hyperlink{a00001_afebd43c1f2afd7ec0eb35f99e50f0964}{CommunicationControl::getInstance}(), 
+41         SIGNAL(sendMove(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{double})));
+42 
+43     \hyperlink{a00010_a093bf32870b9511dce24b7c98b420e9d}{m\_bFirstWaypoint} = \textcolor{keyword}{true};
+44     \hyperlink{a00010_ae57780eab0475346a816a8e16e291cd7}{m\_bNextSent} = \textcolor{keyword}{false};
+45     \hyperlink{a00010_a23791e7a57e50ca179b551e458922309}{m\_bFPLaunched} = \textcolor{keyword}{false};
+46     \hyperlink{a00010_ae0092dd7bee4055937aafc0f9c9eeb17}{m\_bFirstRC} = \textcolor{keyword}{true};
+47 \}
+\end{DoxyCode}
+\hypertarget{a00010_a6841d96310bc959e9bed4f06e0c258dd}{\index{Mission\-Control@{Mission\-Control}!$\sim$\-Mission\-Control@{$\sim$\-Mission\-Control}}
+\index{$\sim$\-Mission\-Control@{$\sim$\-Mission\-Control}!MissionControl@{Mission\-Control}}
+\subsubsection[{$\sim$\-Mission\-Control}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Mission\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a6841d96310bc959e9bed4f06e0c258dd}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+59 \{
+60 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00010_ad15969fb4bfd40eedb8ceaa6c7a8d1f4}{\index{Mission\-Control@{Mission\-Control}!acknowledge@{acknowledge}}
+\index{acknowledge@{acknowledge}!MissionControl@{Mission\-Control}}
+\subsubsection[{acknowledge}]{\setlength{\rightskip}{0pt plus 5cm}void acknowledge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{m\-\_\-p\-Ack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_ad15969fb4bfd40eedb8ceaa6c7a8d1f4}
+
+
+Receive M\-U\-A\-V acknowledge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\-\_\-p\-Ack} & acknowledge string char$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+185 \{
+186     QString ack(m\_pAck);
+187 
+188     \textcolor{keywordflow}{if} (ack == WAYPOINT\_ACK)
+189     \{
+190         \hyperlink{a00010_aa2212ccd53682c3c29395c0012e88979}{m\_pWaypointTimer}.stop();
+191     \}
+192     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ack == DEFINE\_HOME\_ACK)
+193     \{
+194         \hyperlink{a00010_ab3860e046790d0106c5c59d2947c4a24}{m\_pLaunchTimer}.stop();
+195     \}
+196 \}
+\end{DoxyCode}
+\hypertarget{a00010_a48a7112262ba65d18ca31b7419a81ac1}{\index{Mission\-Control@{Mission\-Control}!add\-Mark@{add\-Mark}}
+\index{add\-Mark@{add\-Mark}!MissionControl@{Mission\-Control}}
+\subsubsection[{add\-Mark}]{\setlength{\rightskip}{0pt plus 5cm}void add\-Mark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a48a7112262ba65d18ca31b7419a81ac1}
+
+\begin{DoxyCode}
+313 \{
+314         \textcolor{comment}{//Waypoint* pWaypoint = new Waypoint(RPA::getInstance()->getCoordinates(),
+       RPA::getInstance()->getHeight());}
+315         \textcolor{comment}{//pWaypoint->setNumber(MissionControl::getInstance()->getPlan()->getWaypointList().size() +}
+316         \textcolor{comment}{//  MissionControl::getInstance()->getPlan()->getMarkList().size() + 1);}
+317         \textcolor{comment}{//pWaypoint->setAction(new Action(GOTO));}
+318 
+319         \textcolor{comment}{//MissionControl::getInstance()->getPlan()->addMark(pWaypoint);}
+320 \}
+\end{DoxyCode}
+\hypertarget{a00010_afa417655857cee8564cd3f54b1491e98}{\index{Mission\-Control@{Mission\-Control}!battery\-Level@{battery\-Level}}
+\index{battery\-Level@{battery\-Level}!MissionControl@{Mission\-Control}}
+\subsubsection[{battery\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void battery\-Level (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_afa417655857cee8564cd3f54b1491e98}
+
+
+Battery level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_ab84abdda4808cd9ca3f154e9d8f0b133}{\index{Mission\-Control@{Mission\-Control}!cannot\-Launch\-F\-P@{cannot\-Launch\-F\-P}}
+\index{cannot\-Launch\-F\-P@{cannot\-Launch\-F\-P}!MissionControl@{Mission\-Control}}
+\subsubsection[{cannot\-Launch\-F\-P}]{\setlength{\rightskip}{0pt plus 5cm}void cannot\-Launch\-F\-P (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-b\-Battery, }
+\item[{bool}]{p\-\_\-b\-G\-P\-S, }
+\item[{bool}]{p\-\_\-b\-X\-Bee, }
+\item[{bool}]{p\-\_\-b\-Status, }
+\item[{bool}]{p\-\_\-b\-Flight\-Plan, }
+\item[{bool}]{p\-\_\-b\-Engine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_ab84abdda4808cd9ca3f154e9d8f0b133}
+
+
+Cannot launch flight plan event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-b\-Battery} & battery level above low bool \\
+\hline
+{\em p\-\_\-b\-G\-P\-S} & enough satellites bool \\
+\hline
+{\em p\-\_\-b\-X\-Bee} & link through X\-Bee bool \\
+\hline
+{\em p\-\_\-b\-Status} & M\-U\-A\-V in G\-P\-S mode bool \\
+\hline
+{\em p\-\_\-b\-Flight\-Plan} & flight plan loaded bool \\
+\hline
+{\em p\-\_\-b\-Engine} & engines started bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a35163b56af81dc0f09dc69e92161f4b9}{\index{Mission\-Control@{Mission\-Control}!controller\-Connected@{controller\-Connected}}
+\index{controller\-Connected@{controller\-Connected}!MissionControl@{Mission\-Control}}
+\subsubsection[{controller\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}void controller\-Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a35163b56af81dc0f09dc69e92161f4b9}
+
+
+Controller connected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_acda62f445580e9296041e59a2d81fc77}{\index{Mission\-Control@{Mission\-Control}!controller\-Problem@{controller\-Problem}}
+\index{controller\-Problem@{controller\-Problem}!MissionControl@{Mission\-Control}}
+\subsubsection[{controller\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void controller\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_acda62f445580e9296041e59a2d81fc77}
+
+
+Problem with the game controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_ab767c53cb52cd34736797a11063e05b7}{\index{Mission\-Control@{Mission\-Control}!digression@{digression}}
+\index{digression@{digression}!MissionControl@{Mission\-Control}}
+\subsubsection[{digression}]{\setlength{\rightskip}{0pt plus 5cm}void digression (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_ab767c53cb52cd34736797a11063e05b7}
+
+
+Digression value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a1ce8df6c21f65fcfbeb3f6852600349e}{\index{Mission\-Control@{Mission\-Control}!direct\-X\-Problem@{direct\-X\-Problem}}
+\index{direct\-X\-Problem@{direct\-X\-Problem}!MissionControl@{Mission\-Control}}
+\subsubsection[{direct\-X\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void direct\-X\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a1ce8df6c21f65fcfbeb3f6852600349e}
+
+
+Direct X problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a6663cf1e20c2f8162d29d31c8f6324e6}{\index{Mission\-Control@{Mission\-Control}!down@{down}}
+\index{down@{down}!MissionControl@{Mission\-Control}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}void down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a6663cf1e20c2f8162d29d31c8f6324e6}
+
+
+Decrease altitude command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+308 \{
+309     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude() - 10, 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+310 \}
+\end{DoxyCode}
+\hypertarget{a00010_a65673b3acf5f5593d90cc2cb8f1b78f9}{\index{Mission\-Control@{Mission\-Control}!end\-Flight\-Plan@{end\-Flight\-Plan}}
+\index{end\-Flight\-Plan@{end\-Flight\-Plan}!MissionControl@{Mission\-Control}}
+\subsubsection[{end\-Flight\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}void end\-Flight\-Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a65673b3acf5f5593d90cc2cb8f1b78f9}
+
+
+End of flight plan event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a03472851679eb075b2fad51e1ef61f2e}{\index{Mission\-Control@{Mission\-Control}!flight\-Plan\-Launched@{flight\-Plan\-Launched}}
+\index{flight\-Plan\-Launched@{flight\-Plan\-Launched}!MissionControl@{Mission\-Control}}
+\subsubsection[{flight\-Plan\-Launched}]{\setlength{\rightskip}{0pt plus 5cm}void flight\-Plan\-Launched (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a03472851679eb075b2fad51e1ef61f2e}
+
+
+Flight plan launched acknowledge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a0ec34c9f235c87920390dd2425a8a162}{\index{Mission\-Control@{Mission\-Control}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!MissionControl@{Mission\-Control}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mission\-Control} $\ast$ get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00010_a0ec34c9f235c87920390dd2425a8a162}
+
+
+\hyperlink{a00010}{Mission\-Control} lone instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+lone instance Mission\-Control$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordflow}{if} (\hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton} == NULL)
+65     \{
+66         \hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton} = \textcolor{keyword}{new} \hyperlink{a00010_a4d1fa31327a8451df46c12f7f4a152a4}{MissionControl}();
+67     \}
+68 
+69     \textcolor{keywordflow}{return} \hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton};
+70 \}
+\end{DoxyCode}
+\hypertarget{a00010_ab333658b290f86625babfe23d9148bc5}{\index{Mission\-Control@{Mission\-Control}!G\-P\-S\-Level@{G\-P\-S\-Level}}
+\index{G\-P\-S\-Level@{G\-P\-S\-Level}!MissionControl@{Mission\-Control}}
+\subsubsection[{G\-P\-S\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void G\-P\-S\-Level (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_ab333658b290f86625babfe23d9148bc5}
+
+
+G\-P\-S reception level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a5f730a9a91784cbf28d39ab22e4d7fec}{\index{Mission\-Control@{Mission\-Control}!in\-Flight@{in\-Flight}}
+\index{in\-Flight@{in\-Flight}!MissionControl@{Mission\-Control}}
+\subsubsection[{in\-Flight}]{\setlength{\rightskip}{0pt plus 5cm}void in\-Flight (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a5f730a9a91784cbf28d39ab22e4d7fec}
+
+
+Define if the M\-U\-A\-V has its engines started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+268 \{
+269     \hyperlink{a00010_a4becef68fb68fff5f845aff02c8a4b7a}{m\_cEngine} = p\_cValue;
+270 \}
+\end{DoxyCode}
+\hypertarget{a00010_aae9d52caad9fb2892deeb25596cfd2ab}{\index{Mission\-Control@{Mission\-Control}!kill@{kill}}
+\index{kill@{kill}!MissionControl@{Mission\-Control}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{a00010_aae9d52caad9fb2892deeb25596cfd2ab}
+
+
+Instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{keywordflow}{if} (\hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton} != NULL)
+52     \{
+53         \textcolor{keyword}{delete} \hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton};
+54         \hyperlink{a00010_a05b55b7963750cd3d108e76c1250d477}{singleton} = NULL;
+55     \}
+56 \}
+\end{DoxyCode}
+\hypertarget{a00010_aa638de738a43a5d84d5cc765a9ca87c5}{\index{Mission\-Control@{Mission\-Control}!launch\-Flight\-Plan@{launch\-Flight\-Plan}}
+\index{launch\-Flight\-Plan@{launch\-Flight\-Plan}!MissionControl@{Mission\-Control}}
+\subsubsection[{launch\-Flight\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}void launch\-Flight\-Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_aa638de738a43a5d84d5cc765a9ca87c5}
+
+
+Launch the flight plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em indicate} & if cannot launch (bad parameters) \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+199 \{
+200         \textcolor{comment}{//bool bFlightPlanDefined = m\_pPlan->getWaypointList().size() != 0;}
+201 
+202         \textcolor{comment}{//if (m\_dBattery > batteryVeryLow && /*m\_nGPS > GPSVeryLow &&*/ m\_bXBee}
+203         \textcolor{comment}{//  && (m\_nStatus & GPS) && bFlightPlanDefined && m\_cEngine == 1)}
+204     \textcolor{keywordflow}{if} (\textcolor{keyword}{true})
+205     \{
+206         \hyperlink{a00010_a23791e7a57e50ca179b551e458922309}{m\_bFPLaunched} = \textcolor{keyword}{true};
+207         emit \hyperlink{a00010_a03472851679eb075b2fad51e1ef61f2e}{flightPlanLaunched}();
+208     \}
+209     \textcolor{keywordflow}{else}
+210     \{
+211                 \textcolor{comment}{//emit cannotLaunchFP(m\_dBattery > batteryVeryLow, m\_nGPS > GPSVeryLow, m\_bXBee,}
+212                 \textcolor{comment}{//  m\_nStatus & GPS, bFlightPlanDefined, m\_cEngine == 1);}
+213     \}
+214 \}
+\end{DoxyCode}
+\hypertarget{a00010_a44769de90c2ec83d360149f4b36ea8da}{\index{Mission\-Control@{Mission\-Control}!move@{move}}
+\index{move@{move}!MissionControl@{Mission\-Control}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a44769de90c2ec83d360149f4b36ea8da}
+
+
+\hyperlink{a00017}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & in meters double \\
+\hline
+{\em y} & in meters double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a39321c04c34c4c2e46ed14803bdddd39}{\index{Mission\-Control@{Mission\-Control}!move\-Backward@{move\-Backward}}
+\index{move\-Backward@{move\-Backward}!MissionControl@{Mission\-Control}}
+\subsubsection[{move\-Backward}]{\setlength{\rightskip}{0pt plus 5cm}void move\-Backward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a39321c04c34c4c2e46ed14803bdddd39}
+
+
+Move backward command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+278 \{
+279     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(-10, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+280 \}
+\end{DoxyCode}
+\hypertarget{a00010_a618d986e214be5b102686274ac420be0}{\index{Mission\-Control@{Mission\-Control}!move\-Forward@{move\-Forward}}
+\index{move\-Forward@{move\-Forward}!MissionControl@{Mission\-Control}}
+\subsubsection[{move\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void move\-Forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a618d986e214be5b102686274ac420be0}
+
+
+Move forward command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+273 \{
+274     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(10, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+275 \}
+\end{DoxyCode}
+\hypertarget{a00010_a7a5379770a3d9a90ee4d827046d26eb0}{\index{Mission\-Control@{Mission\-Control}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!MissionControl@{Mission\-Control}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void move\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a7a5379770a3d9a90ee4d827046d26eb0}
+
+
+Move left command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+283 \{
+284     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, 10, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+285 \}
+\end{DoxyCode}
+\hypertarget{a00010_a8f1aff0fabeb87f42932d5ce436f4d5c}{\index{Mission\-Control@{Mission\-Control}!move\-Right@{move\-Right}}
+\index{move\-Right@{move\-Right}!MissionControl@{Mission\-Control}}
+\subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void move\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a8f1aff0fabeb87f42932d5ce436f4d5c}
+
+
+Move right command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+288 \{
+289     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, -10, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+290 \}
+\end{DoxyCode}
+\hypertarget{a00010_a8fb230ae2937902d2f3f70505b5c08d0}{\index{Mission\-Control@{Mission\-Control}!next\-Waypoint@{next\-Waypoint}}
+\index{next\-Waypoint@{next\-Waypoint}!MissionControl@{Mission\-Control}}
+\subsubsection[{next\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}bool next\-Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a8fb230ae2937902d2f3f70505b5c08d0}
+
+
+Next waypoint index increment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+end of flight plan reached 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{keywordtype}{bool} ret = \textcolor{keyword}{false};
+135         \textcolor{comment}{//int index = m\_pPlan->getNextWaypointIndex();}
+136 
+137         \textcolor{comment}{//if (index < m\_pPlan->getWaypointList().size())}
+138         \textcolor{keywordflow}{if}(\textcolor{keyword}{true})
+139     \{
+140         \textcolor{comment}{//  m\_pPlan->setNextWaypointIndex(index + 1);}
+141         ret = \textcolor{keyword}{true};
+142     \}
+143     \textcolor{keywordflow}{else}
+144     \{
+145         ret = \textcolor{keyword}{false};
+146     \}
+147 
+148         \textcolor{comment}{//m\_pMap->displayWaypoints();}
+149     emit \hyperlink{a00010_a5da6fbcca696f2541c3d121ca0fe9e85}{resetWaypointNotification}();
+150 
+151     \textcolor{keywordflow}{return} ret;
+152 \}
+\end{DoxyCode}
+\hypertarget{a00010_a1d4b9f41f5f619c4ef938ab08265fce4}{\index{Mission\-Control@{Mission\-Control}!pause\-Flight\-Plan@{pause\-Flight\-Plan}}
+\index{pause\-Flight\-Plan@{pause\-Flight\-Plan}!MissionControl@{Mission\-Control}}
+\subsubsection[{pause\-Flight\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}void pause\-Flight\-Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a1d4b9f41f5f619c4ef938ab08265fce4}
+
+
+Pause flight plan (no reset of next waypoint index) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+224 \{
+225     \hyperlink{a00010_a23791e7a57e50ca179b551e458922309}{m\_bFPLaunched} = \textcolor{keyword}{false};
+226 \}
+\end{DoxyCode}
+\hypertarget{a00010_a45f0ce9c30deececbfdab8cc03d50eab}{\index{Mission\-Control@{Mission\-Control}!radiocommand\-Connection@{radiocommand\-Connection}}
+\index{radiocommand\-Connection@{radiocommand\-Connection}!MissionControl@{Mission\-Control}}
+\subsubsection[{radiocommand\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void radiocommand\-Connection (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a45f0ce9c30deececbfdab8cc03d50eab}
+
+
+Radiocommand connection state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a30bbdc9e8db693b8e568e732fe8bca2e}{\index{Mission\-Control@{Mission\-Control}!rc\-Data@{rc\-Data}}
+\index{rc\-Data@{rc\-Data}!MissionControl@{Mission\-Control}}
+\subsubsection[{rc\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void rc\-Data (
+\begin{DoxyParamCaption}
+\item[{short}]{p\-\_\-n\-Yaw, }
+\item[{short}]{p\-\_\-n\-Pitch, }
+\item[{short}]{p\-\_\-n\-Roll, }
+\item[{short}]{p\-\_\-n\-Thrust, }
+\item[{short}]{p\-\_\-n\-Serial, }
+\item[{short}]{p\-\_\-n\-G\-P\-S\-Height\-Control, }
+\item[{char}]{p\-\_\-c\-Valid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a30bbdc9e8db693b8e568e732fe8bca2e}
+
+
+Define if remote control values changed and update them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & short \\
+\hline
+{\em pitch} & short \\
+\hline
+{\em roll} & short \\
+\hline
+{\em thrust} & short \\
+\hline
+{\em serial} & short \\
+\hline
+{\em G\-P\-S\-Height\-Control} & short \\
+\hline
+{\em valid} & char \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+241 \{
+242     \textcolor{keywordflow}{if} (p\_cValid)
+243     \{
+244         \textcolor{keywordflow}{if} (!\hyperlink{a00010_ae0092dd7bee4055937aafc0f9c9eeb17}{m\_bFirstRC} && \hyperlink{a00011_a81bd14f0b39bba2433355ec26f833270}{PeripheralController::getInstance}()->
+      isMouseMode())
+245         \{
+246             \textcolor{keywordflow}{if} (\hyperlink{a00010_a3156a3f666d6691390fe845a9c28c40d}{m\_pPreviousYawRC} != p\_nYaw || \hyperlink{a00010_a1c95c212ff083bed4a5ff651e39837de}{m\_pPreviousPitchRC} != 
+      p\_nPitch
+247                 || \hyperlink{a00010_a1a6d2ee64c0380d556c8d16f21241493}{m\_pPreviousRollRC} != p\_nRoll || 
+      \hyperlink{a00010_a5ce9c2712c259fa2004b16421b891b2b}{m\_pPreviousThrustRC} != p\_nThrust
+248                 || \hyperlink{a00010_ae4629b3de032de49ef686d0a7fc3904e}{m\_pPreviousSerialRC} != p\_nSerial || 
+      \hyperlink{a00010_a9cd9caa80b9e3f0c4c7c89f721fb12ab}{m\_pPreviousGPSHeightControlRC} != p\_nGPSHeightControl)
+249             \{
+250                 emit \hyperlink{a00010_a2780ef8954a3ec68cdc55d312e2e06ce}{RCDataChanged}();
+251 
+252                 \hyperlink{a00010_a3156a3f666d6691390fe845a9c28c40d}{m\_pPreviousYawRC} = p\_nYaw;
+253                 \hyperlink{a00010_a1c95c212ff083bed4a5ff651e39837de}{m\_pPreviousPitchRC} = p\_nPitch;
+254                 \hyperlink{a00010_a1a6d2ee64c0380d556c8d16f21241493}{m\_pPreviousRollRC} = p\_nRoll;
+255                 \hyperlink{a00010_a5ce9c2712c259fa2004b16421b891b2b}{m\_pPreviousThrustRC} = p\_nThrust;
+256                 \hyperlink{a00010_ae4629b3de032de49ef686d0a7fc3904e}{m\_pPreviousSerialRC} = p\_nSerial;
+257                 \hyperlink{a00010_a9cd9caa80b9e3f0c4c7c89f721fb12ab}{m\_pPreviousGPSHeightControlRC} = p\_nGPSHeightControl;
+258             \}
+259         \}
+260         \textcolor{keywordflow}{else}
+261         \{
+262             \hyperlink{a00010_ae0092dd7bee4055937aafc0f9c9eeb17}{m\_bFirstRC} = \textcolor{keyword}{false};
+263         \}
+264     \}
+265 \}
+\end{DoxyCode}
+\hypertarget{a00010_a2780ef8954a3ec68cdc55d312e2e06ce}{\index{Mission\-Control@{Mission\-Control}!R\-C\-Data\-Changed@{R\-C\-Data\-Changed}}
+\index{R\-C\-Data\-Changed@{R\-C\-Data\-Changed}!MissionControl@{Mission\-Control}}
+\subsubsection[{R\-C\-Data\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void R\-C\-Data\-Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a2780ef8954a3ec68cdc55d312e2e06ce}
+
+
+Remote control values changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a5da6fbcca696f2541c3d121ca0fe9e85}{\index{Mission\-Control@{Mission\-Control}!reset\-Waypoint\-Notification@{reset\-Waypoint\-Notification}}
+\index{reset\-Waypoint\-Notification@{reset\-Waypoint\-Notification}!MissionControl@{Mission\-Control}}
+\subsubsection[{reset\-Waypoint\-Notification}]{\setlength{\rightskip}{0pt plus 5cm}void reset\-Waypoint\-Notification (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a5da6fbcca696f2541c3d121ca0fe9e85}
+
+
+Change next waypoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a38513372e1af4752cee2e2d046c98821}{\index{Mission\-Control@{Mission\-Control}!send\-Launch@{send\-Launch}}
+\index{send\-Launch@{send\-Launch}!MissionControl@{Mission\-Control}}
+\subsubsection[{send\-Launch}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Launch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a38513372e1af4752cee2e2d046c98821}
+
+
+Send launch order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a2d1e5a21fd2b1b542b454f72c6fe5bf3}{\index{Mission\-Control@{Mission\-Control}!send\-Waypoint@{send\-Waypoint}}
+\index{send\-Waypoint@{send\-Waypoint}!MissionControl@{Mission\-Control}}
+\subsubsection[{send\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Waypoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a2d1e5a21fd2b1b542b454f72c6fe5bf3}
+
+
+Send waypoint order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+120 \{
+121         \textcolor{comment}{//if (m\_pPlan->getWaypointList().size() > 0)}
+122     \{
+123                 \textcolor{comment}{//Waypoint* pWaypoint = m\_pPlan->getWaypointList()[m\_pPlan->getNextWaypointIndex()];}
+124                 \textcolor{comment}{//LatLongCoord pCoordinates = pWaypoint->getCoordinates();}
+125 
+126                 \textcolor{comment}{//emit waypoint(pCoordinates.getLongitude(), pCoordinates.getLatitude(),
+       pWaypoint->getAltitude(), pWaypoint->getNumber());}
+127 
+128     \}
+129 \hyperlink{a00010_aa2212ccd53682c3c29395c0012e88979}{m\_pWaypointTimer}.start(1000);
+130 \}
+\end{DoxyCode}
+\hypertarget{a00010_a42d570c71f526b655bbd64932ad6fd5a}{\index{Mission\-Control@{Mission\-Control}!stop\-Flight\-Plan@{stop\-Flight\-Plan}}
+\index{stop\-Flight\-Plan@{stop\-Flight\-Plan}!MissionControl@{Mission\-Control}}
+\subsubsection[{stop\-Flight\-Plan}]{\setlength{\rightskip}{0pt plus 5cm}void stop\-Flight\-Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a42d570c71f526b655bbd64932ad6fd5a}
+
+
+Stop flight plan (reset of next waypoint index) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+217 \{
+218     \hyperlink{a00010_a23791e7a57e50ca179b551e458922309}{m\_bFPLaunched} = \textcolor{keyword}{false};
+219         \textcolor{comment}{//m\_pPlan->setNextWaypointIndex(0);}
+220     \hyperlink{a00010_a093bf32870b9511dce24b7c98b420e9d}{m\_bFirstWaypoint} = \textcolor{keyword}{true};
+221 \}
+\end{DoxyCode}
+\hypertarget{a00010_adaf487f84c38e060c84f3cb829e70f2b}{\index{Mission\-Control@{Mission\-Control}!turn\-Left@{turn\-Left}}
+\index{turn\-Left@{turn\-Left}!MissionControl@{Mission\-Control}}
+\subsubsection[{turn\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void turn\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_adaf487f84c38e060c84f3cb829e70f2b}
+
+
+Turn left command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+293 \{
+294     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading() - 10);
+295 \}
+\end{DoxyCode}
+\hypertarget{a00010_acf4fa5da14085c3a9a170f9de29d2755}{\index{Mission\-Control@{Mission\-Control}!turn\-Right@{turn\-Right}}
+\index{turn\-Right@{turn\-Right}!MissionControl@{Mission\-Control}}
+\subsubsection[{turn\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void turn\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_acf4fa5da14085c3a9a170f9de29d2755}
+
+
+Turn right command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+298 \{
+299     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude(), 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading() + 10);
+300 \}
+\end{DoxyCode}
+\hypertarget{a00010_a0a1d932d49dd1079cfd0964b11adc7a0}{\index{Mission\-Control@{Mission\-Control}!up@{up}}
+\index{up@{up}!MissionControl@{Mission\-Control}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}void up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a0a1d932d49dd1079cfd0964b11adc7a0}
+
+
+Increase altitude command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+303 \{
+304     emit \hyperlink{a00010_a44769de90c2ec83d360149f4b36ea8da}{move}(0, 0, \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getAltitude() + 10, 
+      \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->getHeading());
+305 \}
+\end{DoxyCode}
+\hypertarget{a00010_a80fb0b930e406eedf15162edccc726c3}{\index{Mission\-Control@{Mission\-Control}!update\-Battery@{update\-Battery}}
+\index{update\-Battery@{update\-Battery}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-Battery}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Battery (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a80fb0b930e406eedf15162edccc726c3}
+
+
+Battery level update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & battery level double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+77 \{
+78     emit \hyperlink{a00010_afa417655857cee8564cd3f54b1491e98}{batteryLevel}(p\_pValue);
+79     \hyperlink{a00010_a1ce5c64dc3d39ae09fde1ee64187088a}{m\_dBattery} = p\_pValue;
+80 \}
+\end{DoxyCode}
+\hypertarget{a00010_a161bfdf95298fba69f2227c64a1cbc4c}{\index{Mission\-Control@{Mission\-Control}!update\-Digression@{update\-Digression}}
+\index{update\-Digression@{update\-Digression}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-Digression}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Digression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a161bfdf95298fba69f2227c64a1cbc4c}
+
+
+Compute the digression value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+89 \{
+90     \hyperlink{a00006}{LatLongCoord}* p\_pPosition = \hyperlink{a00012_a40277d38c94caf6125045994ba06f18f}{RPA::getInstance}()->
+      \hyperlink{a00012_a8aaef3ba118d70f729ec23dee71755a7}{getCoordinates}();
+91 
+92         \textcolor{comment}{//if (m\_pPlan->getNextWaypointIndex() < m\_pPlan->getWaypointList().size() &&
+       m\_pPlan->getNextWaypointIndex() > 0)}
+93     \{
+94                 \textcolor{comment}{//Waypoint* pFirstWaypoint = m\_pPlan->getWaypointList()[m\_pPlan->getNextWaypointIndex() -
+       1];}
+95                 \textcolor{comment}{//Waypoint* pSecondWaypoint = m\_pPlan->getWaypointList()[m\_pPlan->getNextWaypointIndex()];}
+96 
+97                 \textcolor{comment}{//if (pFirstWaypoint != NULL && pSecondWaypoint != NULL)}
+98                     \textcolor{keywordflow}{if} (\textcolor{keyword}{true})
+99         \{
+100                         \textcolor{comment}{//LatLongCoord* p\_pFirstWaypointPosition = pFirstWaypoint->getCoordinates();}
+101                         \textcolor{comment}{//LatLongCoord* p\_pSecondWaypointPosition = pSecondWaypoint->getCoordinates();}
+102                         \textcolor{comment}{//emit digression(m\_pMap->distanceFromLeg(p\_pPosition, p\_pFirstWaypointPosition,
+       p\_pSecondWaypointPosition));}
+103         \}
+104     \}
+105 \}
+\end{DoxyCode}
+\hypertarget{a00010_ae5330168c77c9c4d13fba5b918845ef7}{\index{Mission\-Control@{Mission\-Control}!update\-G\-P\-S@{update\-G\-P\-S}}
+\index{update\-G\-P\-S@{update\-G\-P\-S}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-G\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}void update\-G\-P\-S (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_ae5330168c77c9c4d13fba5b918845ef7}
+
+
+G\-P\-S satellite number update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & number of satellite double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+83 \{
+84     emit \hyperlink{a00010_ab333658b290f86625babfe23d9148bc5}{GPSLevel}(p\_pValue);
+85     \hyperlink{a00010_a95434291b0e4b2ac8903a5ce3f27b4ab}{m\_nGPS} = p\_pValue;
+86 \}
+\end{DoxyCode}
+\hypertarget{a00010_ab3cda15293ced458cbd11c5740c1c099}{\index{Mission\-Control@{Mission\-Control}!update\-N\-A\-V@{update\-N\-A\-V}}
+\index{update\-N\-A\-V@{update\-N\-A\-V}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-N\-A\-V}]{\setlength{\rightskip}{0pt plus 5cm}void update\-N\-A\-V (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Waypoint\-Number, }
+\item[{short}]{p\-\_\-n\-Distance, }
+\item[{short}]{p\-\_\-c\-Status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_ab3cda15293ced458cbd11c5740c1c099}
+
+
+Update the mission state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Waypoint\-Number} & waypoint number char \\
+\hline
+{\em p\-\_\-n\-Distance} & waypoint / M\-U\-A\-V distance short \\
+\hline
+{\em p\-\_\-c\-Status} & navigation status short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+155 \{
+156     \textcolor{keywordflow}{if} (\hyperlink{a00010_a23791e7a57e50ca179b551e458922309}{m\_bFPLaunched})
+157     \{
+158         \textcolor{keywordflow}{if} (\hyperlink{a00010_a093bf32870b9511dce24b7c98b420e9d}{m\_bFirstWaypoint} == \textcolor{keyword}{true})
+159         \{
+160             \hyperlink{a00010_a38513372e1af4752cee2e2d046c98821}{sendLaunch}();
+161             \hyperlink{a00010_a2d1e5a21fd2b1b542b454f72c6fe5bf3}{sendWaypoint}();
+162             \hyperlink{a00010_a093bf32870b9511dce24b7c98b420e9d}{m\_bFirstWaypoint} = \textcolor{keyword}{false};
+163             \hyperlink{a00010_ab3860e046790d0106c5c59d2947c4a24}{m\_pLaunchTimer}.start();
+164         \}
+165         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (p\_cStatus == WP\_NAVSTAT\_REACHED\_POS && \hyperlink{a00010_ae57780eab0475346a816a8e16e291cd7}{m\_bNextSent} == \textcolor{keyword}{false})
+166         \{
+167             \textcolor{keywordflow}{if} (\hyperlink{a00010_a8fb230ae2937902d2f3f70505b5c08d0}{nextWaypoint}())
+168             \{
+169                 \hyperlink{a00010_a2d1e5a21fd2b1b542b454f72c6fe5bf3}{sendWaypoint}();
+170                 \hyperlink{a00010_ae57780eab0475346a816a8e16e291cd7}{m\_bNextSent} = \textcolor{keyword}{true};
+171             \}
+172             \textcolor{keywordflow}{else}
+173             \{
+174                 emit \hyperlink{a00010_a65673b3acf5f5593d90cc2cb8f1b78f9}{endFlightPlan}();
+175             \}
+176         \}
+177         \textcolor{keywordflow}{else}
+178         \{
+179             \hyperlink{a00010_ae57780eab0475346a816a8e16e291cd7}{m\_bNextSent} = \textcolor{keyword}{false};
+180         \}
+181     \}
+182 \}
+\end{DoxyCode}
+\hypertarget{a00010_aaf70dd1f6eda48599f92fe2c4426006b}{\index{Mission\-Control@{Mission\-Control}!update\-Radiocommand@{update\-Radiocommand}}
+\index{update\-Radiocommand@{update\-Radiocommand}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-Radiocommand}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Radiocommand (
+\begin{DoxyParamCaption}
+\item[{short}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_aaf70dd1f6eda48599f92fe2c4426006b}
+
+
+Remote control connection update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & remote control link state short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+114 \{
+115     emit \hyperlink{a00010_a45f0ce9c30deececbfdab8cc03d50eab}{radiocommandConnection}(!(p\_pValue & EMERGENCY));
+116     \hyperlink{a00010_af33bf47349db881ffb444984ec6af73e}{m\_nStatus} = p\_pValue;
+117 \}
+\end{DoxyCode}
+\hypertarget{a00010_a04c6f8771c6f34f993a95d2e02a53449}{\index{Mission\-Control@{Mission\-Control}!update\-Way\-Status@{update\-Way\-Status}}
+\index{update\-Way\-Status@{update\-Way\-Status}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-Way\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Way\-Status (
+\begin{DoxyParamCaption}
+\item[{char}]{p\-\_\-c\-Waypoint\-Number, }
+\item[{short}]{p\-\_\-n\-Distance, }
+\item[{short}]{p\-\_\-n\-Nav\-Status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_a04c6f8771c6f34f993a95d2e02a53449}
+
+
+Define if waypoint reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-c\-Waypoint\-Number} & don't care char \\
+\hline
+{\em p\-\_\-n\-Distance} & don't care short \\
+\hline
+{\em p\-\_\-n\-Nav\-Status} & don't care short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+229 \{
+230     \textcolor{keywordflow}{if} (p\_nNavStatus == (WP\_NAVSTAT\_REACHED\_POS\_TIME | WP\_NAVSTAT\_REACHED\_POS | WP\_NAVSTAT\_20M))
+231     \{
+232         \textcolor{comment}{//  if (m\_pPlan->getNextWaypointIndex() < m\_pPlan->getWaypointList().size() - 1)}
+233         \{
+234             emit \hyperlink{a00010_a2d77e39235b464d52cdfd6d046dd6e3b}{waypointReached}();
+235         \}
+236     \}
+237 \}
+\end{DoxyCode}
+\hypertarget{a00010_af5f2c7705408cb9400ff6f2d64eabf26}{\index{Mission\-Control@{Mission\-Control}!update\-X\-Bee@{update\-X\-Bee}}
+\index{update\-X\-Bee@{update\-X\-Bee}!MissionControl@{Mission\-Control}}
+\subsubsection[{update\-X\-Bee}]{\setlength{\rightskip}{0pt plus 5cm}void update\-X\-Bee (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{a00010_af5f2c7705408cb9400ff6f2d64eabf26}
+
+
+X\-Bee connection state update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & connection state bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+108 \{
+109     emit \hyperlink{a00010_aab6ba445d4266f026f1864ce097998c6}{XBeeConnection}(p\_pValue);
+110     \hyperlink{a00010_ad806696ae09d85979347c7dd2f4bf9c6}{m\_bXBee} = p\_pValue;
+111 \}
+\end{DoxyCode}
+\hypertarget{a00010_a8eedc5a648c9f864a820f836fd6bfe96}{\index{Mission\-Control@{Mission\-Control}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!MissionControl@{Mission\-Control}}
+\subsubsection[{waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf waypoint} (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a8eedc5a648c9f864a820f836fd6bfe96}
+
+
+\hyperlink{a00017}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em number} & waypoint number double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_a2d77e39235b464d52cdfd6d046dd6e3b}{\index{Mission\-Control@{Mission\-Control}!waypoint\-Reached@{waypoint\-Reached}}
+\index{waypoint\-Reached@{waypoint\-Reached}!MissionControl@{Mission\-Control}}
+\subsubsection[{waypoint\-Reached}]{\setlength{\rightskip}{0pt plus 5cm}void waypoint\-Reached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_a2d77e39235b464d52cdfd6d046dd6e3b}
+
+
+\hyperlink{a00017}{Waypoint} reached event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{a00010_aab6ba445d4266f026f1864ce097998c6}{\index{Mission\-Control@{Mission\-Control}!X\-Bee\-Connection@{X\-Bee\-Connection}}
+\index{X\-Bee\-Connection@{X\-Bee\-Connection}!MissionControl@{Mission\-Control}}
+\subsubsection[{X\-Bee\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}void X\-Bee\-Connection (
+\begin{DoxyParamCaption}
+\item[{bool}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{a00010_aab6ba445d4266f026f1864ce097998c6}
+
+
+X\-Bee connection state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00010_ae0092dd7bee4055937aafc0f9c9eeb17}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-b\-First\-R\-C@{m\-\_\-b\-First\-R\-C}}
+\index{m\-\_\-b\-First\-R\-C@{m\-\_\-b\-First\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-b\-First\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-First\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_ae0092dd7bee4055937aafc0f9c9eeb17}
+\hypertarget{a00010_a093bf32870b9511dce24b7c98b420e9d}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-b\-First\-Waypoint@{m\-\_\-b\-First\-Waypoint}}
+\index{m\-\_\-b\-First\-Waypoint@{m\-\_\-b\-First\-Waypoint}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-b\-First\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-First\-Waypoint\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a093bf32870b9511dce24b7c98b420e9d}
+\hypertarget{a00010_a23791e7a57e50ca179b551e458922309}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-b\-F\-P\-Launched@{m\-\_\-b\-F\-P\-Launched}}
+\index{m\-\_\-b\-F\-P\-Launched@{m\-\_\-b\-F\-P\-Launched}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-b\-F\-P\-Launched}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-F\-P\-Launched\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a23791e7a57e50ca179b551e458922309}
+\hypertarget{a00010_ae57780eab0475346a816a8e16e291cd7}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-b\-Next\-Sent@{m\-\_\-b\-Next\-Sent}}
+\index{m\-\_\-b\-Next\-Sent@{m\-\_\-b\-Next\-Sent}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-b\-Next\-Sent}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-Next\-Sent\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_ae57780eab0475346a816a8e16e291cd7}
+\hypertarget{a00010_ad806696ae09d85979347c7dd2f4bf9c6}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-b\-X\-Bee@{m\-\_\-b\-X\-Bee}}
+\index{m\-\_\-b\-X\-Bee@{m\-\_\-b\-X\-Bee}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-b\-X\-Bee}]{\setlength{\rightskip}{0pt plus 5cm}bool m\-\_\-b\-X\-Bee\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_ad806696ae09d85979347c7dd2f4bf9c6}
+\hypertarget{a00010_a4becef68fb68fff5f845aff02c8a4b7a}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-c\-Engine@{m\-\_\-c\-Engine}}
+\index{m\-\_\-c\-Engine@{m\-\_\-c\-Engine}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-c\-Engine}]{\setlength{\rightskip}{0pt plus 5cm}char m\-\_\-c\-Engine\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a4becef68fb68fff5f845aff02c8a4b7a}
+\hypertarget{a00010_a1ce5c64dc3d39ae09fde1ee64187088a}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-d\-Battery@{m\-\_\-d\-Battery}}
+\index{m\-\_\-d\-Battery@{m\-\_\-d\-Battery}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-d\-Battery}]{\setlength{\rightskip}{0pt plus 5cm}double m\-\_\-d\-Battery\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a1ce5c64dc3d39ae09fde1ee64187088a}
+\hypertarget{a00010_a95434291b0e4b2ac8903a5ce3f27b4ab}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-n\-G\-P\-S@{m\-\_\-n\-G\-P\-S}}
+\index{m\-\_\-n\-G\-P\-S@{m\-\_\-n\-G\-P\-S}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-n\-G\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}int m\-\_\-n\-G\-P\-S\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a95434291b0e4b2ac8903a5ce3f27b4ab}
+\hypertarget{a00010_af33bf47349db881ffb444984ec6af73e}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-n\-Status@{m\-\_\-n\-Status}}
+\index{m\-\_\-n\-Status@{m\-\_\-n\-Status}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-n\-Status}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-n\-Status\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_af33bf47349db881ffb444984ec6af73e}
+\hypertarget{a00010_ab3860e046790d0106c5c59d2947c4a24}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Launch\-Timer@{m\-\_\-p\-Launch\-Timer}}
+\index{m\-\_\-p\-Launch\-Timer@{m\-\_\-p\-Launch\-Timer}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Launch\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Launch\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_ab3860e046790d0106c5c59d2947c4a24}
+\hypertarget{a00010_a9cd9caa80b9e3f0c4c7c89f721fb12ab}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C@{m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C}}
+\index{m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C@{m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-G\-P\-S\-Height\-Control\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a9cd9caa80b9e3f0c4c7c89f721fb12ab}
+\hypertarget{a00010_a1c95c212ff083bed4a5ff651e39837de}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-Pitch\-R\-C@{m\-\_\-p\-Previous\-Pitch\-R\-C}}
+\index{m\-\_\-p\-Previous\-Pitch\-R\-C@{m\-\_\-p\-Previous\-Pitch\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-Pitch\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-Pitch\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a1c95c212ff083bed4a5ff651e39837de}
+\hypertarget{a00010_a1a6d2ee64c0380d556c8d16f21241493}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-Roll\-R\-C@{m\-\_\-p\-Previous\-Roll\-R\-C}}
+\index{m\-\_\-p\-Previous\-Roll\-R\-C@{m\-\_\-p\-Previous\-Roll\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-Roll\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-Roll\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a1a6d2ee64c0380d556c8d16f21241493}
+\hypertarget{a00010_ae4629b3de032de49ef686d0a7fc3904e}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-Serial\-R\-C@{m\-\_\-p\-Previous\-Serial\-R\-C}}
+\index{m\-\_\-p\-Previous\-Serial\-R\-C@{m\-\_\-p\-Previous\-Serial\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-Serial\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-Serial\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_ae4629b3de032de49ef686d0a7fc3904e}
+\hypertarget{a00010_a5ce9c2712c259fa2004b16421b891b2b}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-Thrust\-R\-C@{m\-\_\-p\-Previous\-Thrust\-R\-C}}
+\index{m\-\_\-p\-Previous\-Thrust\-R\-C@{m\-\_\-p\-Previous\-Thrust\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-Thrust\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-Thrust\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a5ce9c2712c259fa2004b16421b891b2b}
+\hypertarget{a00010_a3156a3f666d6691390fe845a9c28c40d}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Previous\-Yaw\-R\-C@{m\-\_\-p\-Previous\-Yaw\-R\-C}}
+\index{m\-\_\-p\-Previous\-Yaw\-R\-C@{m\-\_\-p\-Previous\-Yaw\-R\-C}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Previous\-Yaw\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}short m\-\_\-p\-Previous\-Yaw\-R\-C\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_a3156a3f666d6691390fe845a9c28c40d}
+\hypertarget{a00010_aa2212ccd53682c3c29395c0012e88979}{\index{Mission\-Control@{Mission\-Control}!m\-\_\-p\-Waypoint\-Timer@{m\-\_\-p\-Waypoint\-Timer}}
+\index{m\-\_\-p\-Waypoint\-Timer@{m\-\_\-p\-Waypoint\-Timer}!MissionControl@{Mission\-Control}}
+\subsubsection[{m\-\_\-p\-Waypoint\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer m\-\_\-p\-Waypoint\-Timer\hspace{0.3cm}{\ttfamily [private]}}}\label{a00010_aa2212ccd53682c3c29395c0012e88979}
+\hypertarget{a00010_a05b55b7963750cd3d108e76c1250d477}{\index{Mission\-Control@{Mission\-Control}!singleton@{singleton}}
+\index{singleton@{singleton}!MissionControl@{Mission\-Control}}
+\subsubsection[{singleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mission\-Control} $\ast$ singleton = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{a00010_a05b55b7963750cd3d108e76c1250d477}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00033}{Mission\-Control.\-h}\item 
+\hyperlink{a00032}{Mission\-Control.\-cpp}\end{DoxyCompactItemize}

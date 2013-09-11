@@ -1,0 +1,161 @@
+\hypertarget{class_log_replay_control}{\section{Log\-Replay\-Control Class Reference}
+\label{class_log_replay_control}\index{Log\-Replay\-Control@{Log\-Replay\-Control}}
+}
+Inheritance diagram for Log\-Replay\-Control\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_log_replay_control}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_log_replay_control_a87347e3c52b61940d60c4a255e6c2173}{void {\bfseries start} ()}\label{class_log_replay_control_a87347e3c52b61940d60c4a255e6c2173}
+
+\item 
+\hypertarget{class_log_replay_control_abf14471473ecc4adf6077517ff32ad68}{void {\bfseries pause} ()}\label{class_log_replay_control_abf14471473ecc4adf6077517ff32ad68}
+
+\item 
+\hypertarget{class_log_replay_control_acf3e5271561368519a090e6a79c8bbb4}{void {\bfseries stop} ()}\label{class_log_replay_control_acf3e5271561368519a090e6a79c8bbb4}
+
+\item 
+\hypertarget{class_log_replay_control_a3e2887cd54614692a191bb951ca3ae06}{void {\bfseries backward} ()}\label{class_log_replay_control_a3e2887cd54614692a191bb951ca3ae06}
+
+\item 
+\hypertarget{class_log_replay_control_a8cad7de34d084c13b8009b8e22c9455c}{void {\bfseries forward} ()}\label{class_log_replay_control_a8cad7de34d084c13b8009b8e22c9455c}
+
+\item 
+\hypertarget{class_log_replay_control_a126f327ce4d43e70a6b0183b34201924}{void {\bfseries replay} ()}\label{class_log_replay_control_a126f327ce4d43e70a6b0183b34201924}
+
+\item 
+\hypertarget{class_log_replay_control_a5edfc122c0276a3c37814551c9df7fff}{void {\bfseries open\-Log} ()}\label{class_log_replay_control_a5edfc122c0276a3c37814551c9df7fff}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_log_replay_control_a4a8c428f2f729fea4b2681fe04183359}{update\-Heading} (double p\-\_\-p\-Value)
+\begin{DoxyCompactList}\small\item\em Update heading value. \end{DoxyCompactList}\item 
+void \hyperlink{class_log_replay_control_aa078de7895fc0e85f1e17d870279d558}{geolocation} (double latitude, double longitude, double altitude, double heading)
+\begin{DoxyCompactList}\small\item\em Update M\-U\-A\-V geolocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_log_replay_control}{Log\-Replay\-Control} $\ast$ \hyperlink{class_log_replay_control_ab02cd47b56389bf7d7f6ecf2ded62372}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_log_replay_control}{Log\-Replay\-Control} lone instance getter. \end{DoxyCompactList}\item 
+static void \hyperlink{class_log_replay_control_a26685a60794a8677f19743ed370af7ee}{kill} ()
+\begin{DoxyCompactList}\small\item\em Instance killer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_log_replay_control_aa078de7895fc0e85f1e17d870279d558}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-Replay\-Control\-::geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{double}]{altitude, }
+\item[{double}]{heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_log_replay_control_aa078de7895fc0e85f1e17d870279d558}
+
+
+Update M\-U\-A\-V geolocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude double \\
+\hline
+{\em y} & latitude double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_log_replay_control_ab02cd47b56389bf7d7f6ecf2ded62372}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\-Replay\-Control} $\ast$ Log\-Replay\-Control\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_log_replay_control_ab02cd47b56389bf7d7f6ecf2ded62372}
+
+
+\hyperlink{class_log_replay_control}{Log\-Replay\-Control} lone instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+lone instance Mission\-Control$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_log_replay_control_a26685a60794a8677f19743ed370af7ee}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!kill@{kill}}
+\index{kill@{kill}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-Replay\-Control\-::kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_log_replay_control_a26685a60794a8677f19743ed370af7ee}
+
+
+Instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_log_replay_control_a4a8c428f2f729fea4b2681fe04183359}{\index{Log\-Replay\-Control@{Log\-Replay\-Control}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!LogReplayControl@{Log\-Replay\-Control}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-Replay\-Control\-::update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_log_replay_control_a4a8c428f2f729fea4b2681fe04183359}
+
+
+Update heading value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Log\-Replay\-Control.\-h\item 
+Log\-Replay\-Control.\-cpp\end{DoxyCompactItemize}

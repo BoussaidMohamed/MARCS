@@ -1,0 +1,1374 @@
+.TH "MissionControl" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MissionControl \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'MissionControl\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+.SS "Signals"
+.SS "Static Public Member Functions"
+.SS "Private Member Functions"
+.SS "Private Attributes"
+.SS "Static Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBMissionControl\fP ()\fC [private]\fP"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMissionControl\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+6 {
+7         //m_pPlan = new FlightPlan();
+8         //m_pMap = new Map();
+9         //m_pMap->setFlightPlan(m_pPlan);
+10 
+11     m_pLaunchTimer\&.setInterval(1000);
+12 
+13     connect(CommunicationControl::getInstance(), SIGNAL(XBeeStatus(bool)), this, SLOT(updateXBee(bool)));
+14     connect(PeripheralController::getInstance(), SIGNAL(directInputProblem()), this, SIGNAL(directXProblem()));
+15     connect(PeripheralController::getInstance(), SIGNAL(dataFormatProblem()), this, SIGNAL(directXProblem()));
+16     connect(PeripheralController::getInstance(), SIGNAL(deviceEnumProblem()), this, SIGNAL(directXProblem()));
+17     connect(PeripheralController::getInstance(), SIGNAL(joystickProblem()), this, SIGNAL(controllerProblem()));
+18     connect(PeripheralController::getInstance(), SIGNAL(noJoystick()), this, SIGNAL(controllerProblem()));
+19     connect(PeripheralController::getInstance(), SIGNAL(controllerConnected()), this, SIGNAL(controllerConnected()));
+20 
+21     connect(CommunicationControl::getInstance(), SIGNAL(geolocation(double, double, double, double)), 
+22         RPA::getInstance(), SLOT(geolocation(double, double, double, double)));
+23     connect(CommunicationControl::getInstance(), SIGNAL(updateHeading(double)), RPA::getInstance(), SLOT(updateHeading(double)));
+24     connect(CommunicationControl::getInstance(), SIGNAL(updateHeight(double)), RPA::getInstance(), SLOT(updateHeight(double)));
+25     connect(CommunicationControl::getInstance(), SIGNAL(updateGPSQuality(int)), this, SLOT(updateGPS(int)));
+26     connect(CommunicationControl::getInstance(), SIGNAL(batteryLevel(double)), this, SLOT(updateBattery(double)));
+27     connect(CommunicationControl::getInstance(), SIGNAL(updateStatus(short)), this, SLOT(updateRadiocommand(short)));
+28     connect(CommunicationControl::getInstance(), SIGNAL(inFlight(char)), this, SLOT(inFlight(char)));
+29     connect(CommunicationControl::getInstance(), SIGNAL(waypointNAVInfo(char, short, short)), 
+30         this, SLOT(updateNAV(char, short, short)));
+31     connect(CommunicationControl::getInstance(), SIGNAL(rcData(short, short, short, short, short, short, char)), 
+32         this, SLOT(rcData(short, short, short, short, short, short, char)));
+33 
+34     connect(RPA::getInstance(), SIGNAL(positionChanged()), this, SLOT(updateDigression()));
+35     connect(&m_pWaypointTimer, SIGNAL(timeout()), this, SLOT(sendWaypoint()));
+36     connect(&m_pLaunchTimer, SIGNAL(timeout()), this, SIGNAL(sendLaunch()));
+37 
+38     connect(CommunicationControl::getInstance(), SIGNAL(displayAck(char*)), this, SLOT(acknowledge(char*)));
+39     connect(this, SIGNAL(sendLaunch()), CommunicationControl::getInstance(), SIGNAL(sendLaunch()));
+40     connect(this, SIGNAL(move(double, double, double, double)), CommunicationControl::getInstance(), 
+41         SIGNAL(sendMove(double, double, double, double)));
+42 
+43     m_bFirstWaypoint = true;
+44     m_bNextSent = false;
+45     m_bFPLaunched = false;
+46     m_bFirstRC = true;
+47 }
+.fi
+.SS "~\fBMissionControl\fP ()\fC [private]\fP"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+59 {
+60 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void acknowledge (char *m_pAck)\fC [slot]\fP"
+
+.PP
+Receive MUAV acknowledge\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIm_pAck\fP acknowledge string char* 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+185 {
+186     QString ack(m_pAck);
+187 
+188     if (ack == WAYPOINT_ACK)
+189     {
+190         m_pWaypointTimer\&.stop();
+191     }
+192     else if (ack == DEFINE_HOME_ACK)
+193     {
+194         m_pLaunchTimer\&.stop();
+195     }
+196 }
+.fi
+.SS "void addMark ()\fC [slot]\fP"
+
+.PP
+.nf
+313 {
+314         //Waypoint* pWaypoint = new Waypoint(RPA::getInstance()->getCoordinates(), RPA::getInstance()->getHeight());
+315         //pWaypoint->setNumber(MissionControl::getInstance()->getPlan()->getWaypointList()\&.size() +
+316         //  MissionControl::getInstance()->getPlan()->getMarkList()\&.size() + 1);
+317         //pWaypoint->setAction(new Action(GOTO));
+318 
+319         //MissionControl::getInstance()->getPlan()->addMark(pWaypoint);
+320 }
+.fi
+.SS "void batteryLevel (doublep_pValue)\fC [signal]\fP"
+
+.PP
+Battery level\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void cannotLaunchFP (boolp_bBattery, boolp_bGPS, boolp_bXBee, boolp_bStatus, boolp_bFlightPlan, boolp_bEngine)\fC [signal]\fP"
+
+.PP
+Cannot launch flight plan event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_bBattery\fP battery level above low bool 
+.br
+\fIp_bGPS\fP enough satellites bool 
+.br
+\fIp_bXBee\fP link through XBee bool 
+.br
+\fIp_bStatus\fP MUAV in GPS mode bool 
+.br
+\fIp_bFlightPlan\fP flight plan loaded bool 
+.br
+\fIp_bEngine\fP engines started bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void controllerConnected ()\fC [signal]\fP"
+
+.PP
+Controller connected\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void controllerProblem ()\fC [signal]\fP"
+
+.PP
+Problem with the game controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void digression (doublep_pValue)\fC [signal]\fP"
+
+.PP
+Digression value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void directXProblem ()\fC [signal]\fP"
+
+.PP
+Direct X problem\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void down ()\fC [slot]\fP"
+
+.PP
+Decrease altitude command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+308 {
+309     emit move(0, 0, RPA::getInstance()->getAltitude() - 10, RPA::getInstance()->getHeading());
+310 }
+.fi
+.SS "void endFlightPlan ()\fC [signal]\fP"
+
+.PP
+End of flight plan event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void flightPlanLaunched ()\fC [signal]\fP"
+
+.PP
+Flight plan launched acknowledge\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "\fBMissionControl\fP * getInstance ()\fC [static]\fP"
+
+.PP
+\fBMissionControl\fP lone instance getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+lone instance MissionControl* 
+.RE
+.PP
+
+.PP
+.nf
+63 {
+64     if (singleton == NULL)
+65     {
+66         singleton = new MissionControl();
+67     }
+68 
+69     return singleton;
+70 }
+.fi
+.SS "void GPSLevel (intp_pValue)\fC [signal]\fP"
+
+.PP
+GPS reception level\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void inFlight (charp_cValue)\fC [slot]\fP"
+
+.PP
+Define if the MUAV has its engines started\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+268 {
+269     m_cEngine = p_cValue;
+270 }
+.fi
+.SS "void kill ()\fC [static]\fP"
+
+.PP
+Instance killer\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+50 {
+51     if (singleton != NULL)
+52     {
+53         delete singleton;
+54         singleton = NULL;
+55     }
+56 }
+.fi
+.SS "void launchFlightPlan ()\fC [slot]\fP"
+
+.PP
+Launch the flight plan\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIindicate\fP if cannot launch (bad parameters) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+199 {
+200         //bool bFlightPlanDefined = m_pPlan->getWaypointList()\&.size() != 0;
+201 
+202         //if (m_dBattery > batteryVeryLow && /*m_nGPS > GPSVeryLow &&*/ m_bXBee
+203         //  && (m_nStatus & GPS) && bFlightPlanDefined && m_cEngine == 1)
+204     if (true)
+205     {
+206         m_bFPLaunched = true;
+207         emit flightPlanLaunched();
+208     }
+209     else
+210     {
+211                 //emit cannotLaunchFP(m_dBattery > batteryVeryLow, m_nGPS > GPSVeryLow, m_bXBee,
+212                 //  m_nStatus & GPS, bFlightPlanDefined, m_cEngine == 1);
+213     }
+214 }
+.fi
+.SS "void move (doublex, doubley, doublez, doubleyaw)\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP to send\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP in meters double 
+.br
+\fIy\fP in meters double 
+.br
+\fIz\fP altitude double 
+.br
+\fIyaw\fP heading double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void moveBackward ()\fC [slot]\fP"
+
+.PP
+Move backward command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+278 {
+279     emit move(-10, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
+280 }
+.fi
+.SS "void moveForward ()\fC [slot]\fP"
+
+.PP
+Move forward command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+273 {
+274     emit move(10, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
+275 }
+.fi
+.SS "void moveLeft ()\fC [slot]\fP"
+
+.PP
+Move left command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+283 {
+284     emit move(0, 10, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
+285 }
+.fi
+.SS "void moveRight ()\fC [slot]\fP"
+
+.PP
+Move right command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+288 {
+289     emit move(0, -10, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading());
+290 }
+.fi
+.SS "bool nextWaypoint ()\fC [slot]\fP"
+
+.PP
+Next waypoint index increment\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+end of flight plan reached 
+.RE
+.PP
+
+.PP
+.nf
+133 {
+134     bool ret = false;
+135         //int index = m_pPlan->getNextWaypointIndex();
+136 
+137         //if (index < m_pPlan->getWaypointList()\&.size())
+138         if(true)
+139     {
+140         //  m_pPlan->setNextWaypointIndex(index + 1);
+141         ret = true;
+142     }
+143     else
+144     {
+145         ret = false;
+146     }
+147 
+148         //m_pMap->displayWaypoints();
+149     emit resetWaypointNotification();
+150 
+151     return ret;
+152 }
+.fi
+.SS "void pauseFlightPlan ()\fC [slot]\fP"
+
+.PP
+Pause flight plan (no reset of next waypoint index) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+224 {
+225     m_bFPLaunched = false;
+226 }
+.fi
+.SS "void radiocommandConnection (boolp_pValue)\fC [signal]\fP"
+
+.PP
+Radiocommand connection state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void rcData (shortp_nYaw, shortp_nPitch, shortp_nRoll, shortp_nThrust, shortp_nSerial, shortp_nGPSHeightControl, charp_cValid)\fC [slot]\fP"
+
+.PP
+Define if remote control values changed and update them\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIyaw\fP short 
+.br
+\fIpitch\fP short 
+.br
+\fIroll\fP short 
+.br
+\fIthrust\fP short 
+.br
+\fIserial\fP short 
+.br
+\fIGPSHeightControl\fP short 
+.br
+\fIvalid\fP char 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+241 {
+242     if (p_cValid)
+243     {
+244         if (!m_bFirstRC && PeripheralController::getInstance()->isMouseMode())
+245         {
+246             if (m_pPreviousYawRC != p_nYaw || m_pPreviousPitchRC != p_nPitch
+247                 || m_pPreviousRollRC != p_nRoll || m_pPreviousThrustRC != p_nThrust
+248                 || m_pPreviousSerialRC != p_nSerial || m_pPreviousGPSHeightControlRC != p_nGPSHeightControl)
+249             {
+250                 emit RCDataChanged();
+251 
+252                 m_pPreviousYawRC = p_nYaw;
+253                 m_pPreviousPitchRC = p_nPitch;
+254                 m_pPreviousRollRC = p_nRoll;
+255                 m_pPreviousThrustRC = p_nThrust;
+256                 m_pPreviousSerialRC = p_nSerial;
+257                 m_pPreviousGPSHeightControlRC = p_nGPSHeightControl;
+258             }
+259         }
+260         else
+261         {
+262             m_bFirstRC = false;
+263         }
+264     }
+265 }
+.fi
+.SS "void RCDataChanged ()\fC [signal]\fP"
+
+.PP
+Remote control values changed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void resetWaypointNotification ()\fC [signal]\fP"
+
+.PP
+Change next waypoint\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendLaunch ()\fC [signal]\fP"
+
+.PP
+Send launch order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void sendWaypoint ()\fC [slot]\fP"
+
+.PP
+Send waypoint order\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+120 {
+121         //if (m_pPlan->getWaypointList()\&.size() > 0)
+122     {
+123                 //Waypoint* pWaypoint = m_pPlan->getWaypointList()[m_pPlan->getNextWaypointIndex()];
+124                 //LatLongCoord pCoordinates = pWaypoint->getCoordinates();
+125 
+126                 //emit waypoint(pCoordinates\&.getLongitude(), pCoordinates\&.getLatitude(), pWaypoint->getAltitude(), pWaypoint->getNumber());
+127 
+128     }
+129 m_pWaypointTimer\&.start(1000);
+130 }
+.fi
+.SS "void stopFlightPlan ()\fC [slot]\fP"
+
+.PP
+Stop flight plan (reset of next waypoint index) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+217 {
+218     m_bFPLaunched = false;
+219         //m_pPlan->setNextWaypointIndex(0);
+220     m_bFirstWaypoint = true;
+221 }
+.fi
+.SS "void turnLeft ()\fC [slot]\fP"
+
+.PP
+Turn left command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+293 {
+294     emit move(0, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading() - 10);
+295 }
+.fi
+.SS "void turnRight ()\fC [slot]\fP"
+
+.PP
+Turn right command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+298 {
+299     emit move(0, 0, RPA::getInstance()->getAltitude(), RPA::getInstance()->getHeading() + 10);
+300 }
+.fi
+.SS "void up ()\fC [slot]\fP"
+
+.PP
+Increase altitude command\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+303 {
+304     emit move(0, 0, RPA::getInstance()->getAltitude() + 10, RPA::getInstance()->getHeading());
+305 }
+.fi
+.SS "void updateBattery (doublep_pValue)\fC [slot]\fP"
+
+.PP
+Battery level update\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP battery level double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+77 {
+78     emit batteryLevel(p_pValue);
+79     m_dBattery = p_pValue;
+80 }
+.fi
+.SS "void updateDigression ()\fC [slot]\fP"
+
+.PP
+Compute the digression value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+89 {
+90     LatLongCoord* p_pPosition = RPA::getInstance()->getCoordinates();
+91 
+92         //if (m_pPlan->getNextWaypointIndex() < m_pPlan->getWaypointList()\&.size() && m_pPlan->getNextWaypointIndex() > 0)
+93     {
+94                 //Waypoint* pFirstWaypoint = m_pPlan->getWaypointList()[m_pPlan->getNextWaypointIndex() - 1];
+95                 //Waypoint* pSecondWaypoint = m_pPlan->getWaypointList()[m_pPlan->getNextWaypointIndex()];
+96 
+97                 //if (pFirstWaypoint != NULL && pSecondWaypoint != NULL)
+98                     if (true)
+99         {
+100                         //LatLongCoord* p_pFirstWaypointPosition = pFirstWaypoint->getCoordinates();
+101                         //LatLongCoord* p_pSecondWaypointPosition = pSecondWaypoint->getCoordinates();
+102                         //emit digression(m_pMap->distanceFromLeg(p_pPosition, p_pFirstWaypointPosition, p_pSecondWaypointPosition));
+103         }
+104     }
+105 }
+.fi
+.SS "void updateGPS (intp_pValue)\fC [slot]\fP"
+
+.PP
+GPS satellite number update\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP number of satellite double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+83 {
+84     emit GPSLevel(p_pValue);
+85     m_nGPS = p_pValue;
+86 }
+.fi
+.SS "void updateNAV (charp_cWaypointNumber, shortp_nDistance, shortp_cStatus)\fC [slot]\fP"
+
+.PP
+Update the mission state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_cWaypointNumber\fP waypoint number char 
+.br
+\fIp_nDistance\fP waypoint / MUAV distance short 
+.br
+\fIp_cStatus\fP navigation status short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+155 {
+156     if (m_bFPLaunched)
+157     {
+158         if (m_bFirstWaypoint == true)
+159         {
+160             sendLaunch();
+161             sendWaypoint();
+162             m_bFirstWaypoint = false;
+163             m_pLaunchTimer\&.start();
+164         }
+165         else if (p_cStatus == WP_NAVSTAT_REACHED_POS && m_bNextSent == false)
+166         {
+167             if (nextWaypoint())
+168             {
+169                 sendWaypoint();
+170                 m_bNextSent = true;
+171             }
+172             else
+173             {
+174                 emit endFlightPlan();
+175             }
+176         }
+177         else
+178         {
+179             m_bNextSent = false;
+180         }
+181     }
+182 }
+.fi
+.SS "void updateRadiocommand (shortp_pValue)\fC [slot]\fP"
+
+.PP
+Remote control connection update\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP remote control link state short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+114 {
+115     emit radiocommandConnection(!(p_pValue & EMERGENCY));
+116     m_nStatus = p_pValue;
+117 }
+.fi
+.SS "void updateWayStatus (charp_cWaypointNumber, shortp_nDistance, shortp_nNavStatus)\fC [slot]\fP"
+
+.PP
+Define if waypoint reached\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_cWaypointNumber\fP don't care char 
+.br
+\fIp_nDistance\fP don't care short 
+.br
+\fIp_nNavStatus\fP don't care short 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+229 {
+230     if (p_nNavStatus == (WP_NAVSTAT_REACHED_POS_TIME | WP_NAVSTAT_REACHED_POS | WP_NAVSTAT_20M))
+231     {
+232         //  if (m_pPlan->getNextWaypointIndex() < m_pPlan->getWaypointList()\&.size() - 1)
+233         {
+234             emit waypointReached();
+235         }
+236     }
+237 }
+.fi
+.SS "void updateXBee (boolp_pValue)\fC [slot]\fP"
+
+.PP
+XBee connection state update\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp_pValue\fP connection state bool 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+108 {
+109     emit XBeeConnection(p_pValue);
+110     m_bXBee = p_pValue;
+111 }
+.fi
+.SS "void \fBwaypoint\fP (doublex, doubley, doublez, doublenumber)\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP to send\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP longitude double 
+.br
+\fIy\fP latitude double 
+.br
+\fIz\fP altitude double 
+.br
+\fInumber\fP waypoint number double 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void waypointReached ()\fC [signal]\fP"
+
+.PP
+\fBWaypoint\fP reached event\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void XBeeConnection (boolp_pValue)\fC [signal]\fP"
+
+.PP
+XBee connection state\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SH "Field Documentation"
+.PP 
+.SS "bool m_bFirstRC\fC [private]\fP"
+
+.SS "bool m_bFirstWaypoint\fC [private]\fP"
+
+.SS "bool m_bFPLaunched\fC [private]\fP"
+
+.SS "bool m_bNextSent\fC [private]\fP"
+
+.SS "bool m_bXBee\fC [private]\fP"
+
+.SS "char m_cEngine\fC [private]\fP"
+
+.SS "double m_dBattery\fC [private]\fP"
+
+.SS "int m_nGPS\fC [private]\fP"
+
+.SS "short m_nStatus\fC [private]\fP"
+
+.SS "QTimer m_pLaunchTimer\fC [private]\fP"
+
+.SS "short m_pPreviousGPSHeightControlRC\fC [private]\fP"
+
+.SS "short m_pPreviousPitchRC\fC [private]\fP"
+
+.SS "short m_pPreviousRollRC\fC [private]\fP"
+
+.SS "short m_pPreviousSerialRC\fC [private]\fP"
+
+.SS "short m_pPreviousThrustRC\fC [private]\fP"
+
+.SS "short m_pPreviousYawRC\fC [private]\fP"
+
+.SS "QTimer m_pWaypointTimer\fC [private]\fP"
+
+.SS "\fBMissionControl\fP * singleton = NULL\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

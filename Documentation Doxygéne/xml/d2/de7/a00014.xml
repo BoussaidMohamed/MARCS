@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d2/de7/a00014" kind="class" prot="public">
+    <compoundname>UAVLogger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="dd/d32/a00041" local="yes">UAVLogger.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d2/de7/a00014_1a0813d5e71c0c333ade9260e2a236b7ed" prot="private" static="no" mutable="no">
+        <type>QFile *</type>
+        <definition>QFile* dataFile</definition>
+        <argsstring></argsstring>
+        <name>dataFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="30" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/de7/a00014_1a9d49b9bb8b1be68fb2b96cb96c9a39e6" prot="private" static="no" mutable="no">
+        <type>QTextStream *</type>
+        <definition>QTextStream* pollLog</definition>
+        <argsstring></argsstring>
+        <name>pollLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="29" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/de7/a00014_1ade1d12dae61eb3386722e7ad2c79518e" prot="private" static="no" mutable="no">
+        <type>QFile *</type>
+        <definition>QFile* sysFile</definition>
+        <argsstring></argsstring>
+        <name>sysFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="31" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/de7/a00014_1af915a8ab61a55c6cc5564aa9f79cea25" prot="private" static="no" mutable="no">
+        <type>QTextStream *</type>
+        <definition>QTextStream* sysLog</definition>
+        <argsstring></argsstring>
+        <name>sysLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="28" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/de7/a00014_1a4fcbf4323f603bd19d67a2b78495d915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UAVLogger</definition>
+        <argsstring>()</argsstring>
+        <name>UAVLogger</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d2/de7/a00014" kindref="compound">UAVLogger</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="42" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.cpp" bodystart="4" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/de7/a00014_1adf64e3a6a7ca71e188fb891a4daf730a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~UAVLogger</definition>
+        <argsstring>()</argsstring>
+        <name>~UAVLogger</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="50" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.cpp" bodystart="18" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/de7/a00014_1aeabc1d456526485e8c922a94b4bfa22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QTextStream *</type>
+        <definition>QTextStream * getDataLoggerStream</definition>
+        <argsstring>()</argsstring>
+        <name>getDataLoggerStream</name>
+        <briefdescription>
+<para>Data logger getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CCardDetection QTextStream* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="66" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/de7/a00014_1abfd62a1f4f4f584858b758c0800e9b70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QTextStream *</type>
+        <definition>QTextStream * getSystemLoggerStream</definition>
+        <argsstring>()</argsstring>
+        <name>getSystemLoggerStream</name>
+        <briefdescription>
+<para>System logger getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>System logger pointer QTextStream* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="58" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" line="9" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/UAVLogger.h" bodystart="8" bodyend="67"/>
+    <listofallmembers>
+      <member refid="d2/de7/a00014_1a0813d5e71c0c333ade9260e2a236b7ed" prot="private" virt="non-virtual"><scope>UAVLogger</scope><name>dataFile</name></member>
+      <member refid="d2/de7/a00014_1aeabc1d456526485e8c922a94b4bfa22d" prot="public" virt="non-virtual"><scope>UAVLogger</scope><name>getDataLoggerStream</name></member>
+      <member refid="d2/de7/a00014_1abfd62a1f4f4f584858b758c0800e9b70" prot="public" virt="non-virtual"><scope>UAVLogger</scope><name>getSystemLoggerStream</name></member>
+      <member refid="d2/de7/a00014_1a9d49b9bb8b1be68fb2b96cb96c9a39e6" prot="private" virt="non-virtual"><scope>UAVLogger</scope><name>pollLog</name></member>
+      <member refid="d2/de7/a00014_1ade1d12dae61eb3386722e7ad2c79518e" prot="private" virt="non-virtual"><scope>UAVLogger</scope><name>sysFile</name></member>
+      <member refid="d2/de7/a00014_1af915a8ab61a55c6cc5564aa9f79cea25" prot="private" virt="non-virtual"><scope>UAVLogger</scope><name>sysLog</name></member>
+      <member refid="d2/de7/a00014_1a4fcbf4323f603bd19d67a2b78495d915" prot="public" virt="non-virtual"><scope>UAVLogger</scope><name>UAVLogger</name></member>
+      <member refid="d2/de7/a00014_1adf64e3a6a7ca71e188fb891a4daf730a" prot="public" virt="non-virtual"><scope>UAVLogger</scope><name>~UAVLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

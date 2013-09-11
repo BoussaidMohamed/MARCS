@@ -1,0 +1,309 @@
+\hypertarget{a00016}{\section{waypoint Class Reference}
+\label{a00016}\index{waypoint@{waypoint}}
+}
+
+
+{\ttfamily \#include \char`\"{}waypoint.\-h\char`\"{}}
+
+\subsection*{Public Member Functions}
+\subsection*{Data Fields}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{a00016_a80548dc6f2f17ac10a35a745a5193ee1}{\index{waypoint@{waypoint}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!waypoint@{waypoint}}
+\subsubsection[{waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf waypoint} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a80548dc6f2f17ac10a35a745a5193ee1}
+
+\begin{DoxyCode}
+4 \{
+5 
+6 \}
+\end{DoxyCode}
+\hypertarget{a00016_a9d74c4b4910b2a7ad9c8a10090f4c507}{\index{waypoint@{waypoint}!waypoint@{waypoint}}
+\index{waypoint@{waypoint}!waypoint@{waypoint}}
+\subsubsection[{waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf waypoint} (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{qreal}]{longitude, }
+\item[{qreal}]{latitude, }
+\item[{double}]{altitude, }
+\item[{double}]{hdg, }
+\item[{int}]{time, }
+\item[{int}]{type, }
+\item[{int}]{num\-Mission}
+\end{DoxyParamCaption}
+)}}\label{a00016_a9d74c4b4910b2a7ad9c8a10090f4c507}
+
+\begin{DoxyCode}
+7                                                                                                            
+                       : \hyperlink{a00016_afb18581adf1a5fb2143293d611e47a36}{numW}(num) , \hyperlink{a00016_a6a9eb024341a6e94cc5229efccfa074d}{longitudeW}(longitude), \hyperlink{a00016_a58bed7fe1b447e0ed1b0a3610b779000}{latitudeW}(latitude), 
+      \hyperlink{a00016_a9483998f15b9a29e462c98259a8d46ba}{altitudeW}(altitude),\hyperlink{a00016_a82bc3e4657acf92c82314c400f82cc56}{hdgW}(hdg),\hyperlink{a00016_a9b8846f46bee60510747bd5c64dc4c8c}{timeW}(time),\hyperlink{a00016_a68b799c80d746b250ae6aa7ff5df52db}{typeW}(type), 
+      \hyperlink{a00016_ae4ae92f7b356cdff8b7d8f460da2a3bf}{numMissionW}(numMission)
+8 \{
+9 
+10 \}
+\end{DoxyCode}
+\hypertarget{a00016_af0e2cbb0d9e04c2ddbb6f22859fcde9e}{\index{waypoint@{waypoint}!$\sim$waypoint@{$\sim$waypoint}}
+\index{$\sim$waypoint@{$\sim$waypoint}!waypoint@{waypoint}}
+\subsubsection[{$\sim$waypoint}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf waypoint} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_af0e2cbb0d9e04c2ddbb6f22859fcde9e}
+
+\begin{DoxyCode}
+13 \{
+14 
+15 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{a00016_afed4a0eed0e6adfc5415466c03b4f04d}{\index{waypoint@{waypoint}!get\-Alt@{get\-Alt}}
+\index{get\-Alt@{get\-Alt}!waypoint@{waypoint}}
+\subsubsection[{get\-Alt}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Alt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_afed4a0eed0e6adfc5415466c03b4f04d}
+
+\begin{DoxyCode}
+17                        \{
+18     \textcolor{keywordflow}{return} \hyperlink{a00016_a9483998f15b9a29e462c98259a8d46ba}{altitudeW} ;
+19 \}
+\end{DoxyCode}
+\hypertarget{a00016_a1291ed46506a9b586c2302ce6035c4e8}{\index{waypoint@{waypoint}!get\-Hdg@{get\-Hdg}}
+\index{get\-Hdg@{get\-Hdg}!waypoint@{waypoint}}
+\subsubsection[{get\-Hdg}]{\setlength{\rightskip}{0pt plus 5cm}double get\-Hdg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a1291ed46506a9b586c2302ce6035c4e8}
+
+\begin{DoxyCode}
+20                        \{
+21     \textcolor{keywordflow}{return} \hyperlink{a00016_a82bc3e4657acf92c82314c400f82cc56}{hdgW} ;
+22 \}
+\end{DoxyCode}
+\hypertarget{a00016_a5459e1c9c7c5acd86670578bd885d93b}{\index{waypoint@{waypoint}!get\-Lat@{get\-Lat}}
+\index{get\-Lat@{get\-Lat}!waypoint@{waypoint}}
+\subsubsection[{get\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}qreal get\-Lat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a5459e1c9c7c5acd86670578bd885d93b}
+
+\begin{DoxyCode}
+23                       \{
+24     \textcolor{keywordflow}{return} \hyperlink{a00016_a58bed7fe1b447e0ed1b0a3610b779000}{latitudeW} ;
+25 \}
+\end{DoxyCode}
+\hypertarget{a00016_adbb7cce87647d82df57979083101d052}{\index{waypoint@{waypoint}!get\-Long@{get\-Long}}
+\index{get\-Long@{get\-Long}!waypoint@{waypoint}}
+\subsubsection[{get\-Long}]{\setlength{\rightskip}{0pt plus 5cm}qreal get\-Long (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_adbb7cce87647d82df57979083101d052}
+
+\begin{DoxyCode}
+26                        \{
+27     \textcolor{keywordflow}{return} \hyperlink{a00016_a6a9eb024341a6e94cc5229efccfa074d}{longitudeW} ;
+28 \}
+\end{DoxyCode}
+\hypertarget{a00016_a634c5702fb39fae6c792ae8215b24e96}{\index{waypoint@{waypoint}!get\-Mission@{get\-Mission}}
+\index{get\-Mission@{get\-Mission}!waypoint@{waypoint}}
+\subsubsection[{get\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Mission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a634c5702fb39fae6c792ae8215b24e96}
+
+\begin{DoxyCode}
+39                         \{
+40     \textcolor{keywordflow}{return} \hyperlink{a00016_ae4ae92f7b356cdff8b7d8f460da2a3bf}{numMissionW};
+41 \}
+\end{DoxyCode}
+\hypertarget{a00016_a5d06a1578648c9b23746188891b01aae}{\index{waypoint@{waypoint}!get\-Num@{get\-Num}}
+\index{get\-Num@{get\-Num}!waypoint@{waypoint}}
+\subsubsection[{get\-Num}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a5d06a1578648c9b23746188891b01aae}
+
+\begin{DoxyCode}
+30                     \{
+31     \textcolor{keywordflow}{return} \hyperlink{a00016_afb18581adf1a5fb2143293d611e47a36}{numW} ;
+32 \}
+\end{DoxyCode}
+\hypertarget{a00016_a140cd6eb747b445398503dedfd51785f}{\index{waypoint@{waypoint}!get\-Time@{get\-Time}}
+\index{get\-Time@{get\-Time}!waypoint@{waypoint}}
+\subsubsection[{get\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_a140cd6eb747b445398503dedfd51785f}
+
+\begin{DoxyCode}
+33                      \{
+34     \textcolor{keywordflow}{return} \hyperlink{a00016_a9b8846f46bee60510747bd5c64dc4c8c}{timeW};
+35 \}
+\end{DoxyCode}
+\hypertarget{a00016_aec389cbe6ac7aff8ce7196e7dbc007df}{\index{waypoint@{waypoint}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!waypoint@{waypoint}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00016_aec389cbe6ac7aff8ce7196e7dbc007df}
+
+\begin{DoxyCode}
+36                      \{
+37     \textcolor{keywordflow}{return} \hyperlink{a00016_a68b799c80d746b250ae6aa7ff5df52db}{typeW};
+38 \}
+\end{DoxyCode}
+\hypertarget{a00016_ae85a2033b8fb23b94e8fa1f5dd2cec32}{\index{waypoint@{waypoint}!set\-Alt@{set\-Alt}}
+\index{set\-Alt@{set\-Alt}!waypoint@{waypoint}}
+\subsubsection[{set\-Alt}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Alt (
+\begin{DoxyParamCaption}
+\item[{double}]{alt}
+\end{DoxyParamCaption}
+)}}\label{a00016_ae85a2033b8fb23b94e8fa1f5dd2cec32}
+
+\begin{DoxyCode}
+44                                \{
+45     \hyperlink{a00016_a9483998f15b9a29e462c98259a8d46ba}{altitudeW} = alt ;
+46 \}
+\end{DoxyCode}
+\hypertarget{a00016_a34ff0642ba4c90e91effc59033cd1e02}{\index{waypoint@{waypoint}!set\-Hdg@{set\-Hdg}}
+\index{set\-Hdg@{set\-Hdg}!waypoint@{waypoint}}
+\subsubsection[{set\-Hdg}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Hdg (
+\begin{DoxyParamCaption}
+\item[{double}]{hd}
+\end{DoxyParamCaption}
+)}}\label{a00016_a34ff0642ba4c90e91effc59033cd1e02}
+
+\begin{DoxyCode}
+49                               \{
+50     \hyperlink{a00016_a82bc3e4657acf92c82314c400f82cc56}{hdgW} = hd ;
+51 \}
+\end{DoxyCode}
+\hypertarget{a00016_a8cc659fa52b3b0849781fb9056345773}{\index{waypoint@{waypoint}!set\-Lat@{set\-Lat}}
+\index{set\-Lat@{set\-Lat}!waypoint@{waypoint}}
+\subsubsection[{set\-Lat}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Lat (
+\begin{DoxyParamCaption}
+\item[{qreal}]{lat}
+\end{DoxyParamCaption}
+)}}\label{a00016_a8cc659fa52b3b0849781fb9056345773}
+
+\begin{DoxyCode}
+54                               \{
+55     \hyperlink{a00016_a58bed7fe1b447e0ed1b0a3610b779000}{latitudeW} = lat ;
+56 \}
+\end{DoxyCode}
+\hypertarget{a00016_aaa12873d55502d21104ba3e24f6588c2}{\index{waypoint@{waypoint}!set\-Long@{set\-Long}}
+\index{set\-Long@{set\-Long}!waypoint@{waypoint}}
+\subsubsection[{set\-Long}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Long (
+\begin{DoxyParamCaption}
+\item[{qreal}]{lon}
+\end{DoxyParamCaption}
+)}}\label{a00016_aaa12873d55502d21104ba3e24f6588c2}
+
+\begin{DoxyCode}
+59                                \{
+60     \hyperlink{a00016_a6a9eb024341a6e94cc5229efccfa074d}{longitudeW} = lon ;
+61 \}
+\end{DoxyCode}
+\hypertarget{a00016_ab5de576a96c5363dc724aa46e28c614c}{\index{waypoint@{waypoint}!set\-Mission@{set\-Mission}}
+\index{set\-Mission@{set\-Mission}!waypoint@{waypoint}}
+\subsubsection[{set\-Mission}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Mission (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Mission}
+\end{DoxyParamCaption}
+)}}\label{a00016_ab5de576a96c5363dc724aa46e28c614c}
+
+\begin{DoxyCode}
+75                                        \{
+76     \hyperlink{a00016_ae4ae92f7b356cdff8b7d8f460da2a3bf}{numMissionW} = numMission;
+77 \}
+\end{DoxyCode}
+\hypertarget{a00016_a14c494edc171ceb9b2934855efa3d994}{\index{waypoint@{waypoint}!set\-Num@{set\-Num}}
+\index{set\-Num@{set\-Num}!waypoint@{waypoint}}
+\subsubsection[{set\-Num}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Num (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{a00016_a14c494edc171ceb9b2934855efa3d994}
+
+\begin{DoxyCode}
+64                           \{
+65     \hyperlink{a00016_afb18581adf1a5fb2143293d611e47a36}{numW} = n ;
+66 \}
+\end{DoxyCode}
+\hypertarget{a00016_ae1e31b142a535161c64e72c116edbe25}{\index{waypoint@{waypoint}!set\-Time@{set\-Time}}
+\index{set\-Time@{set\-Time}!waypoint@{waypoint}}
+\subsubsection[{set\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Time (
+\begin{DoxyParamCaption}
+\item[{int}]{ti}
+\end{DoxyParamCaption}
+)}}\label{a00016_ae1e31b142a535161c64e72c116edbe25}
+
+\begin{DoxyCode}
+68                             \{
+69     \hyperlink{a00016_a9b8846f46bee60510747bd5c64dc4c8c}{timeW} = ti ;
+70 \}
+\end{DoxyCode}
+\hypertarget{a00016_a96792b488b10a7c3305c7f573074f935}{\index{waypoint@{waypoint}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!waypoint@{waypoint}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Type (
+\begin{DoxyParamCaption}
+\item[{int}]{ty}
+\end{DoxyParamCaption}
+)}}\label{a00016_a96792b488b10a7c3305c7f573074f935}
+
+\begin{DoxyCode}
+71                             \{
+72     \hyperlink{a00016_a68b799c80d746b250ae6aa7ff5df52db}{typeW} = ty ;
+73 \}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{a00016_a9483998f15b9a29e462c98259a8d46ba}{\index{waypoint@{waypoint}!altitude\-W@{altitude\-W}}
+\index{altitude\-W@{altitude\-W}!waypoint@{waypoint}}
+\subsubsection[{altitude\-W}]{\setlength{\rightskip}{0pt plus 5cm}double altitude\-W}}\label{a00016_a9483998f15b9a29e462c98259a8d46ba}
+\hypertarget{a00016_a82bc3e4657acf92c82314c400f82cc56}{\index{waypoint@{waypoint}!hdg\-W@{hdg\-W}}
+\index{hdg\-W@{hdg\-W}!waypoint@{waypoint}}
+\subsubsection[{hdg\-W}]{\setlength{\rightskip}{0pt plus 5cm}double hdg\-W}}\label{a00016_a82bc3e4657acf92c82314c400f82cc56}
+\hypertarget{a00016_a58bed7fe1b447e0ed1b0a3610b779000}{\index{waypoint@{waypoint}!latitude\-W@{latitude\-W}}
+\index{latitude\-W@{latitude\-W}!waypoint@{waypoint}}
+\subsubsection[{latitude\-W}]{\setlength{\rightskip}{0pt plus 5cm}qreal latitude\-W}}\label{a00016_a58bed7fe1b447e0ed1b0a3610b779000}
+\hypertarget{a00016_a6a9eb024341a6e94cc5229efccfa074d}{\index{waypoint@{waypoint}!longitude\-W@{longitude\-W}}
+\index{longitude\-W@{longitude\-W}!waypoint@{waypoint}}
+\subsubsection[{longitude\-W}]{\setlength{\rightskip}{0pt plus 5cm}qreal longitude\-W}}\label{a00016_a6a9eb024341a6e94cc5229efccfa074d}
+\hypertarget{a00016_ae4ae92f7b356cdff8b7d8f460da2a3bf}{\index{waypoint@{waypoint}!num\-Mission\-W@{num\-Mission\-W}}
+\index{num\-Mission\-W@{num\-Mission\-W}!waypoint@{waypoint}}
+\subsubsection[{num\-Mission\-W}]{\setlength{\rightskip}{0pt plus 5cm}int num\-Mission\-W}}\label{a00016_ae4ae92f7b356cdff8b7d8f460da2a3bf}
+\hypertarget{a00016_afb18581adf1a5fb2143293d611e47a36}{\index{waypoint@{waypoint}!num\-W@{num\-W}}
+\index{num\-W@{num\-W}!waypoint@{waypoint}}
+\subsubsection[{num\-W}]{\setlength{\rightskip}{0pt plus 5cm}int num\-W}}\label{a00016_afb18581adf1a5fb2143293d611e47a36}
+\hypertarget{a00016_a9b8846f46bee60510747bd5c64dc4c8c}{\index{waypoint@{waypoint}!time\-W@{time\-W}}
+\index{time\-W@{time\-W}!waypoint@{waypoint}}
+\subsubsection[{time\-W}]{\setlength{\rightskip}{0pt plus 5cm}int time\-W}}\label{a00016_a9b8846f46bee60510747bd5c64dc4c8c}
+\hypertarget{a00016_a68b799c80d746b250ae6aa7ff5df52db}{\index{waypoint@{waypoint}!type\-W@{type\-W}}
+\index{type\-W@{type\-W}!waypoint@{waypoint}}
+\subsubsection[{type\-W}]{\setlength{\rightskip}{0pt plus 5cm}int type\-W}}\label{a00016_a68b799c80d746b250ae6aa7ff5df52db}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00045}{waypoint.\-h}\item 
+\hyperlink{a00044}{waypoint.\-cpp}\end{DoxyCompactItemize}

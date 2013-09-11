@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/d11/a00021">
+    <title>JoystickGrabber.cpp File Reference</title>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d1/d7c/a00003_1a00f84f5b8317b505deb4709eb2e2400a">LPDIRECTINPUT8</link> <link linkend="de/d11/a00021_1a5d8f0ccba4cd123c1c1374f1e43eb06a">direct_input_object</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HINSTANCE <link linkend="de/d11/a00021_1a5ae1a16d779669f219cb6b77cf56b81a">instance</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d1/d7c/a00003_1af376786795f5bddb9df4f7ea154151d1">LPDIRECTINPUTDEVICE8</link> <link linkend="de/d11/a00021_1a44430ddf3d769f6bcddc69fe7807a71c">joypad</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>HRESULT <link linkend="de/d11/a00021_1acc166c0d64947b77b6d51c612f660422">result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d1/d7c/a00003_1db/dab/a00089">DIJOYSTATE</link> <link linkend="de/d11/a00021_1a0eac3b9a806be1f5f00f0d6346303ed3">state</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d1/d7c/a00003_1aa329482e9480267b328989972b606a2b">BOOL</link> CALLBACK <link linkend="de/d11/a00021_1a0723aed160d8be459df870f19482e583">CreateDeviceCallback</link> (
+<link linkend="d1/d7c/a00003_1a647892d9a904252334406b4edc80d32c">LPCDIDEVICEINSTANCE</link> instance, <link linkend="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61">LPVOID</link> reference)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/JoystickGrabber.cpp</para>
+    </simplesect>
+</section>

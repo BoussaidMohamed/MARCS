@@ -1,0 +1,519 @@
+\hypertarget{class_com_thread}{\section{Com\-Thread Class Reference}
+\label{class_com_thread}\index{Com\-Thread@{Com\-Thread}}
+}
+Inheritance diagram for Com\-Thread\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_com_thread}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_com_thread_adbaa9d0f6ef504d9b3fdb0adc3c38fa4}{send\-Waypoint} (double x, double y, double z, double number)
+\begin{DoxyCompactList}\small\item\em Send waypoint slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a6e177274e563316924bf02724e18afa5}{send\-Move} (double x, double y, double z, double yaw)
+\begin{DoxyCompactList}\small\item\em Send relative waypoint slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_ade0627af051e02bc3ffedc745bf2f3d3}{send\-Go\-To} ()
+\begin{DoxyCompactList}\small\item\em Send go to order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_ac80e7f519d40afdb97ea3d5295bdde2d}{send\-Launch} ()
+\begin{DoxyCompactList}\small\item\em Send launch (define home) order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_ac7fc3760cac1918a70f3bf229d1331a6}{send\-Land} ()
+\begin{DoxyCompactList}\small\item\em Send land order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_ac0e1ae3106b257f907045ecc0437a236}{send\-Home} ()
+\begin{DoxyCompactList}\small\item\em Send come home order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a43cbfa5b9a0a7e40c60d51c2eff20cf6}{send\-Mot\-On} ()
+\begin{DoxyCompactList}\small\item\em Send start engines order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a97dc07c272f14895ad88a366047fb945}{send\-Mot\-Off} ()
+\begin{DoxyCompactList}\small\item\em Send stop engines order slot. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_af86a575e117f152922f1fcb6f11c654c}{poll} (unsigned short p\-Data\-To\-Poll)
+\begin{DoxyCompactList}\small\item\em Poll data slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_com_thread_ac19d5b77bcf03b75691351f7f101fcd9}{data\-Received} (char $\ast$buffer, int length)
+\begin{DoxyCompactList}\small\item\em Data received event signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_aae9d4c55c9d0bee44356ce8a56faa8da}{X\-Bee\-Disconnected} ()
+\begin{DoxyCompactList}\small\item\em X\-Bee physically disconnected. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a01fda5f9535c7472c77d9a98bfbe38f8}{X\-Bee\-Reconnected} ()
+\begin{DoxyCompactList}\small\item\em X\-Bee physically reconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_com_thread_a30f36ef50be0d64db511629101ccda70}{Com\-Thread} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_com_thread_a5615a9c28e1aabe47211e38656233b65}{$\sim$\-Com\-Thread} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a21a60cfca5b923ad3c420b37f8253267}{run} ()
+\begin{DoxyCompactList}\small\item\em Q\-Thread run override. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a8ab972c8b5c5a79b0107913cf243b10a}{create\-Com} (Q\-String p\-\_\-s\-Com)
+\begin{DoxyCompactList}\small\item\em Create the C\-O\-M port handler. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_a82959beeb67305aaa677d06394d1214c}{release\-Com} ()
+\begin{DoxyCompactList}\small\item\em Destruct the C\-O\-M port handler. \end{DoxyCompactList}\item 
+void \hyperlink{class_com_thread_acefea81f4bea42c7fd7c12c782e2d6d3}{clear\-Counters} ()
+\begin{DoxyCompactList}\small\item\em Reset all counters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_com_thread_a30f36ef50be0d64db511629101ccda70}{\index{Com\-Thread@{Com\-Thread}!Com\-Thread@{Com\-Thread}}
+\index{Com\-Thread@{Com\-Thread}!ComThread@{Com\-Thread}}
+\subsubsection[{Com\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Com\-Thread\-::\-Com\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_a30f36ef50be0d64db511629101ccda70}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_com_thread}{Com\-Thread} instance 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a5615a9c28e1aabe47211e38656233b65}{\index{Com\-Thread@{Com\-Thread}!$\sim$\-Com\-Thread@{$\sim$\-Com\-Thread}}
+\index{$\sim$\-Com\-Thread@{$\sim$\-Com\-Thread}!ComThread@{Com\-Thread}}
+\subsubsection[{$\sim$\-Com\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Com\-Thread\-::$\sim$\-Com\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_a5615a9c28e1aabe47211e38656233b65}
+
+
+Destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_com_thread_acefea81f4bea42c7fd7c12c782e2d6d3}{\index{Com\-Thread@{Com\-Thread}!clear\-Counters@{clear\-Counters}}
+\index{clear\-Counters@{clear\-Counters}!ComThread@{Com\-Thread}}
+\subsubsection[{clear\-Counters}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::clear\-Counters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_acefea81f4bea42c7fd7c12c782e2d6d3}
+
+
+Reset all counters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a8ab972c8b5c5a79b0107913cf243b10a}{\index{Com\-Thread@{Com\-Thread}!create\-Com@{create\-Com}}
+\index{create\-Com@{create\-Com}!ComThread@{Com\-Thread}}
+\subsubsection[{create\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::create\-Com (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{p\-\_\-s\-Com}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_a8ab972c8b5c5a79b0107913cf243b10a}
+
+
+Create the C\-O\-M port handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-s\-Com} & C\-O\-M port name Q\-String \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_ac19d5b77bcf03b75691351f7f101fcd9}{\index{Com\-Thread@{Com\-Thread}!data\-Received@{data\-Received}}
+\index{data\-Received@{data\-Received}!ComThread@{Com\-Thread}}
+\subsubsection[{data\-Received}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::data\-Received (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_com_thread_ac19d5b77bcf03b75691351f7f101fcd9}
+
+
+Data received event signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & reception buffer char$\ast$ \\
+\hline
+{\em length} & number of received char int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_af86a575e117f152922f1fcb6f11c654c}{\index{Com\-Thread@{Com\-Thread}!poll@{poll}}
+\index{poll@{poll}!ComThread@{Com\-Thread}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::poll (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Data\-To\-Poll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_af86a575e117f152922f1fcb6f11c654c}
+
+
+Poll data slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-Data\-To\-Poll} & data packet to poll descriptor unsigned short \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a82959beeb67305aaa677d06394d1214c}{\index{Com\-Thread@{Com\-Thread}!release\-Com@{release\-Com}}
+\index{release\-Com@{release\-Com}!ComThread@{Com\-Thread}}
+\subsubsection[{release\-Com}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::release\-Com (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_a82959beeb67305aaa677d06394d1214c}
+
+
+Destruct the C\-O\-M port handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a21a60cfca5b923ad3c420b37f8253267}{\index{Com\-Thread@{Com\-Thread}!run@{run}}
+\index{run@{run}!ComThread@{Com\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_com_thread_a21a60cfca5b923ad3c420b37f8253267}
+
+
+Q\-Thread run override. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_ade0627af051e02bc3ffedc745bf2f3d3}{\index{Com\-Thread@{Com\-Thread}!send\-Go\-To@{send\-Go\-To}}
+\index{send\-Go\-To@{send\-Go\-To}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Go\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_ade0627af051e02bc3ffedc745bf2f3d3}
+
+
+Send go to order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_ac0e1ae3106b257f907045ecc0437a236}{\index{Com\-Thread@{Com\-Thread}!send\-Home@{send\-Home}}
+\index{send\-Home@{send\-Home}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Home}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_ac0e1ae3106b257f907045ecc0437a236}
+
+
+Send come home order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_ac7fc3760cac1918a70f3bf229d1331a6}{\index{Com\-Thread@{Com\-Thread}!send\-Land@{send\-Land}}
+\index{send\-Land@{send\-Land}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Land}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Land (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_ac7fc3760cac1918a70f3bf229d1331a6}
+
+
+Send land order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_ac80e7f519d40afdb97ea3d5295bdde2d}{\index{Com\-Thread@{Com\-Thread}!send\-Launch@{send\-Launch}}
+\index{send\-Launch@{send\-Launch}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Launch}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Launch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_ac80e7f519d40afdb97ea3d5295bdde2d}
+
+
+Send launch (define home) order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a97dc07c272f14895ad88a366047fb945}{\index{Com\-Thread@{Com\-Thread}!send\-Mot\-Off@{send\-Mot\-Off}}
+\index{send\-Mot\-Off@{send\-Mot\-Off}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Mot\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Mot\-Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_a97dc07c272f14895ad88a366047fb945}
+
+
+Send stop engines order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a43cbfa5b9a0a7e40c60d51c2eff20cf6}{\index{Com\-Thread@{Com\-Thread}!send\-Mot\-On@{send\-Mot\-On}}
+\index{send\-Mot\-On@{send\-Mot\-On}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Mot\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Mot\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_a43cbfa5b9a0a7e40c60d51c2eff20cf6}
+
+
+Send start engines order slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a6e177274e563316924bf02724e18afa5}{\index{Com\-Thread@{Com\-Thread}!send\-Move@{send\-Move}}
+\index{send\-Move@{send\-Move}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_a6e177274e563316924bf02724e18afa5}
+
+
+Send relative waypoint slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x axe move reference double \\
+\hline
+{\em y} & y axe move reference double \\
+\hline
+{\em z} & z axe move reference double \\
+\hline
+{\em yaw} & heading reference double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_adbaa9d0f6ef504d9b3fdb0adc3c38fa4}{\index{Com\-Thread@{Com\-Thread}!send\-Waypoint@{send\-Waypoint}}
+\index{send\-Waypoint@{send\-Waypoint}!ComThread@{Com\-Thread}}
+\subsubsection[{send\-Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::send\-Waypoint (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_com_thread_adbaa9d0f6ef504d9b3fdb0adc3c38fa4}
+
+
+Send waypoint slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & longitude reference double \\
+\hline
+{\em y} & latitude reference double \\
+\hline
+{\em z} & altitude reference double \\
+\hline
+{\em number} & waypoint number double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_aae9d4c55c9d0bee44356ce8a56faa8da}{\index{Com\-Thread@{Com\-Thread}!X\-Bee\-Disconnected@{X\-Bee\-Disconnected}}
+\index{X\-Bee\-Disconnected@{X\-Bee\-Disconnected}!ComThread@{Com\-Thread}}
+\subsubsection[{X\-Bee\-Disconnected}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::\-X\-Bee\-Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_com_thread_aae9d4c55c9d0bee44356ce8a56faa8da}
+
+
+X\-Bee physically disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_com_thread_a01fda5f9535c7472c77d9a98bfbe38f8}{\index{Com\-Thread@{Com\-Thread}!X\-Bee\-Reconnected@{X\-Bee\-Reconnected}}
+\index{X\-Bee\-Reconnected@{X\-Bee\-Reconnected}!ComThread@{Com\-Thread}}
+\subsubsection[{X\-Bee\-Reconnected}]{\setlength{\rightskip}{0pt plus 5cm}void Com\-Thread\-::\-X\-Bee\-Reconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_com_thread_a01fda5f9535c7472c77d9a98bfbe38f8}
+
+
+X\-Bee physically reconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Com\-Thread.\-h\item 
+Com\-Thread.\-cpp\end{DoxyCompactItemize}

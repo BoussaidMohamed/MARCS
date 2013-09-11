@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d2/d1f/a00083" kind="struct" prot="public">
+    <compoundname>DIEFFECT_DX5</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/d1f/a00083_1a6ef1227420cb5a1a48ac004d53480756" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cAxes</definition>
+        <argsstring></argsstring>
+        <name>cAxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="232" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1ac6a9b2f7eb98cf2babca1b1dff163459" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD cbTypeSpecificParams</definition>
+        <argsstring></argsstring>
+        <name>cbTypeSpecificParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="236" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a7aeace215439e67e8676bb3d6455c37e" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwDuration</definition>
+        <argsstring></argsstring>
+        <name>dwDuration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="227" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwFlags</definition>
+        <argsstring></argsstring>
+        <name>dwFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="226" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a9c764fcd1d75a20ee67a859f0b15631a" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwGain</definition>
+        <argsstring></argsstring>
+        <name>dwGain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="229" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a37f869306a4c4735b1e637b7f9bd5e44" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSamplePeriod</definition>
+        <argsstring></argsstring>
+        <name>dwSamplePeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="228" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwSize</definition>
+        <argsstring></argsstring>
+        <name>dwSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="225" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a12e2027336e025cd2bd5cfe30cea5292" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwTriggerButton</definition>
+        <argsstring></argsstring>
+        <name>dwTriggerButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="230" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1aa07fcd7eccd253435edb652aba5d870b" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1a50e15ae51c87ae06ab29c8148cb5f36c" kindref="member">DWORD</ref></type>
+        <definition>DWORD dwTriggerRepeatInterval</definition>
+        <argsstring></argsstring>
+        <name>dwTriggerRepeatInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="231" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1aeaa5ded44711a1ab7389a50398409257" prot="public" static="no" mutable="no">
+        <type>LPDIENVELOPE</type>
+        <definition>LPDIENVELOPE lpEnvelope</definition>
+        <argsstring></argsstring>
+        <name>lpEnvelope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="235" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a572a543576acf167d723bb3142294829" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d7c/a00003_1ae611cd6871649dbfe37273a0253d5e61" kindref="member">LPVOID</ref></type>
+        <definition>LPVOID lpvTypeSpecificParams</definition>
+        <argsstring></argsstring>
+        <name>lpvTypeSpecificParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="237" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1aedfe5b9ab695e3587226f7f17e96f133" prot="public" static="no" mutable="no">
+        <type>LPDWORD</type>
+        <definition>LPDWORD rgdwAxes</definition>
+        <argsstring></argsstring>
+        <name>rgdwAxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="233" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/a00083_1a200e86194693b7b818ccc0f892292e31" prot="public" static="no" mutable="no">
+        <type>LPLONG</type>
+        <definition>LPLONG rglDirection</definition>
+        <argsstring></argsstring>
+        <name>rglDirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="234" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="224" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="224" bodyend="238"/>
+    <listofallmembers>
+      <member refid="d2/d1f/a00083_1a6ef1227420cb5a1a48ac004d53480756" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>cAxes</name></member>
+      <member refid="d2/d1f/a00083_1ac6a9b2f7eb98cf2babca1b1dff163459" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>cbTypeSpecificParams</name></member>
+      <member refid="d2/d1f/a00083_1a7aeace215439e67e8676bb3d6455c37e" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwDuration</name></member>
+      <member refid="d2/d1f/a00083_1a4d2f405b1141000eb2af256e0fc8b98b" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwFlags</name></member>
+      <member refid="d2/d1f/a00083_1a9c764fcd1d75a20ee67a859f0b15631a" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwGain</name></member>
+      <member refid="d2/d1f/a00083_1a37f869306a4c4735b1e637b7f9bd5e44" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwSamplePeriod</name></member>
+      <member refid="d2/d1f/a00083_1a669c5a85f5a9eb97e64ad880fadaaa2d" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwSize</name></member>
+      <member refid="d2/d1f/a00083_1a12e2027336e025cd2bd5cfe30cea5292" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwTriggerButton</name></member>
+      <member refid="d2/d1f/a00083_1aa07fcd7eccd253435edb652aba5d870b" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>dwTriggerRepeatInterval</name></member>
+      <member refid="d2/d1f/a00083_1aeaa5ded44711a1ab7389a50398409257" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>lpEnvelope</name></member>
+      <member refid="d2/d1f/a00083_1a572a543576acf167d723bb3142294829" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>lpvTypeSpecificParams</name></member>
+      <member refid="d2/d1f/a00083_1aedfe5b9ab695e3587226f7f17e96f133" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>rgdwAxes</name></member>
+      <member refid="d2/d1f/a00083_1a200e86194693b7b818ccc0f892292e31" prot="public" virt="non-virtual"><scope>DIEFFECT_DX5</scope><name>rglDirection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

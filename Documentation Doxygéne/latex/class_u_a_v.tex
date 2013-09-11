@@ -1,0 +1,403 @@
+\hypertarget{class_u_a_v}{\section{U\-A\-V Class Reference}
+\label{class_u_a_v}\index{U\-A\-V@{U\-A\-V}}
+}
+Inheritance diagram for U\-A\-V\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_a_v}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_u_a_v_aebcf8ed8f6b28185ffcb09a55b0093ed}{geolocation} (double p\-\_\-f\-Latitude, double p\-\_\-f\-Longitude, double p\-\_\-f\-Altitude, double p\-\_\-f\-Heading)
+\begin{DoxyCompactList}\small\item\em geolocation update slot \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_v_ae27e7c862addff35df70ff932798c136}{update\-Heading} (double p\-\_\-p\-Value)
+\begin{DoxyCompactList}\small\item\em \char`\"{}real\char`\"{} heading update slot \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_v_a76a1b64dfb1f7ee7d3f0ce8ce62ee00a}{update\-Height} (double p\-\_\-p\-Value)
+\begin{DoxyCompactList}\small\item\em Height (from ground) update slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_u_a_v_a3c17671f5fe290fc57c6b493a5fcda4b}{position\-Changed} ()
+\begin{DoxyCompactList}\small\item\em Position changed event signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_u_a_v_ae2edf06ff37375b5ed09fabddabc7f45}{set\-Coordinates} (\hyperlink{class_lat_long_coord}{Lat\-Long\-Coord} $\ast$p\-\_\-p\-Position)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} coordinates setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_v_a64a208c62f67f6c3cdc2cb6c803bb47f}{set\-Altitude} (double p\-\_\-d\-Altitude)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} altitude setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_v_a34eaae9ab7fc208724971ec306ca79de}{set\-Heading} (double p\-\_\-d\-Heading)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} heading setter. \end{DoxyCompactList}\item 
+void \hyperlink{class_u_a_v_addc18f8ddfdd6066f5001c4f682b45c0}{set\-Height} (double p\-\_\-d\-Height)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} height setter. \end{DoxyCompactList}\item 
+\hyperlink{class_lat_long_coord}{Lat\-Long\-Coord} $\ast$ \hyperlink{class_u_a_v_a7223e5681ab9a59ad2f5466b7db2da27}{get\-Coordinates} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} coordinates getter. \end{DoxyCompactList}\item 
+double \hyperlink{class_u_a_v_ab73508cd3027919e06e18d9ef3e88131}{get\-Altitude} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} altitude getter. \end{DoxyCompactList}\item 
+double \hyperlink{class_u_a_v_a42928d41570e1f0e0eba674806940eca}{get\-Heading} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} heading getter. \end{DoxyCompactList}\item 
+double \hyperlink{class_u_a_v_a786a321d2638b6a035ddcb01d99e6a2a}{get\-Height} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} height getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_u_a_v}{U\-A\-V} $\ast$ \hyperlink{class_u_a_v_a823afc0afebc77656dab0f111c48d828}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} instance getter. \end{DoxyCompactList}\item 
+static void \hyperlink{class_u_a_v_ad169c83b080e901cb5cef35f472cc3ff}{kill} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_u_a_v}{U\-A\-V} instance killer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_u_a_v_aebcf8ed8f6b28185ffcb09a55b0093ed}{\index{U\-A\-V@{U\-A\-V}!geolocation@{geolocation}}
+\index{geolocation@{geolocation}!UAV@{U\-A\-V}}
+\subsubsection[{geolocation}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::geolocation (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-f\-Latitude, }
+\item[{double}]{p\-\_\-f\-Longitude, }
+\item[{double}]{p\-\_\-f\-Altitude, }
+\item[{double}]{p\-\_\-f\-Heading}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_u_a_v_aebcf8ed8f6b28185ffcb09a55b0093ed}
+
+
+geolocation update slot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-f\-Latitude} & latitude double \\
+\hline
+{\em p\-\_\-f\-Longitude} & longitude double \\
+\hline
+{\em p\-\_\-f\-Altitude} & altitude double \\
+\hline
+{\em p\-\_\-f\-Heading} & \char`\"{}false\char`\"{} heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_ab73508cd3027919e06e18d9ef3e88131}{\index{U\-A\-V@{U\-A\-V}!get\-Altitude@{get\-Altitude}}
+\index{get\-Altitude@{get\-Altitude}!UAV@{U\-A\-V}}
+\subsubsection[{get\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}double U\-A\-V\-::get\-Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_ab73508cd3027919e06e18d9ef3e88131}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} altitude getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+altitude in meters double 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a7223e5681ab9a59ad2f5466b7db2da27}{\index{U\-A\-V@{U\-A\-V}!get\-Coordinates@{get\-Coordinates}}
+\index{get\-Coordinates@{get\-Coordinates}!UAV@{U\-A\-V}}
+\subsubsection[{get\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\-Long\-Coord} $\ast$ U\-A\-V\-::get\-Coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_a7223e5681ab9a59ad2f5466b7db2da27}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} coordinates getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+latitude / longitude coordinates in decimal degrees Lat\-Long\-Coord$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a42928d41570e1f0e0eba674806940eca}{\index{U\-A\-V@{U\-A\-V}!get\-Heading@{get\-Heading}}
+\index{get\-Heading@{get\-Heading}!UAV@{U\-A\-V}}
+\subsubsection[{get\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}double U\-A\-V\-::get\-Heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_a42928d41570e1f0e0eba674806940eca}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} heading getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+heading in degrees double 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a786a321d2638b6a035ddcb01d99e6a2a}{\index{U\-A\-V@{U\-A\-V}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!UAV@{U\-A\-V}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}double U\-A\-V\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_a786a321d2638b6a035ddcb01d99e6a2a}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} height getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+heading in degrees double 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a823afc0afebc77656dab0f111c48d828}{\index{U\-A\-V@{U\-A\-V}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!UAV@{U\-A\-V}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-A\-V} $\ast$ U\-A\-V\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_u_a_v_a823afc0afebc77656dab0f111c48d828}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} instance getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_u_a_v}{U\-A\-V} pointer U\-A\-V$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_ad169c83b080e901cb5cef35f472cc3ff}{\index{U\-A\-V@{U\-A\-V}!kill@{kill}}
+\index{kill@{kill}!UAV@{U\-A\-V}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_u_a_v_ad169c83b080e901cb5cef35f472cc3ff}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a3c17671f5fe290fc57c6b493a5fcda4b}{\index{U\-A\-V@{U\-A\-V}!position\-Changed@{position\-Changed}}
+\index{position\-Changed@{position\-Changed}!UAV@{U\-A\-V}}
+\subsubsection[{position\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::position\-Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_u_a_v_a3c17671f5fe290fc57c6b493a5fcda4b}
+
+
+Position changed event signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a64a208c62f67f6c3cdc2cb6c803bb47f}{\index{U\-A\-V@{U\-A\-V}!set\-Altitude@{set\-Altitude}}
+\index{set\-Altitude@{set\-Altitude}!UAV@{U\-A\-V}}
+\subsubsection[{set\-Altitude}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::set\-Altitude (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Altitude}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_a64a208c62f67f6c3cdc2cb6c803bb47f}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} altitude setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Altitude} & new altitude double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_ae2edf06ff37375b5ed09fabddabc7f45}{\index{U\-A\-V@{U\-A\-V}!set\-Coordinates@{set\-Coordinates}}
+\index{set\-Coordinates@{set\-Coordinates}!UAV@{U\-A\-V}}
+\subsubsection[{set\-Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::set\-Coordinates (
+\begin{DoxyParamCaption}
+\item[{{\bf Lat\-Long\-Coord} $\ast$}]{p\-\_\-p\-Position}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_ae2edf06ff37375b5ed09fabddabc7f45}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} coordinates setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Position} & new G\-P\-S coordinates Lat\-Long\-Coord$\ast$ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a34eaae9ab7fc208724971ec306ca79de}{\index{U\-A\-V@{U\-A\-V}!set\-Heading@{set\-Heading}}
+\index{set\-Heading@{set\-Heading}!UAV@{U\-A\-V}}
+\subsubsection[{set\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::set\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Heading}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_a34eaae9ab7fc208724971ec306ca79de}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} heading setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Heading} & new heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_addc18f8ddfdd6066f5001c4f682b45c0}{\index{U\-A\-V@{U\-A\-V}!set\-Height@{set\-Height}}
+\index{set\-Height@{set\-Height}!UAV@{U\-A\-V}}
+\subsubsection[{set\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::set\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-d\-Height}
+\end{DoxyParamCaption}
+)}}\label{class_u_a_v_addc18f8ddfdd6066f5001c4f682b45c0}
+
+
+\hyperlink{class_u_a_v}{U\-A\-V} height setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-d\-Heading} & new heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_ae27e7c862addff35df70ff932798c136}{\index{U\-A\-V@{U\-A\-V}!update\-Heading@{update\-Heading}}
+\index{update\-Heading@{update\-Heading}!UAV@{U\-A\-V}}
+\subsubsection[{update\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::update\-Heading (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_u_a_v_ae27e7c862addff35df70ff932798c136}
+
+
+\char`\"{}real\char`\"{} heading update slot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & \char`\"{}real\char`\"{} heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_u_a_v_a76a1b64dfb1f7ee7d3f0ce8ce62ee00a}{\index{U\-A\-V@{U\-A\-V}!update\-Height@{update\-Height}}
+\index{update\-Height@{update\-Height}!UAV@{U\-A\-V}}
+\subsubsection[{update\-Height}]{\setlength{\rightskip}{0pt plus 5cm}void U\-A\-V\-::update\-Height (
+\begin{DoxyParamCaption}
+\item[{double}]{p\-\_\-p\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_u_a_v_a76a1b64dfb1f7ee7d3f0ce8ce62ee00a}
+
+
+Height (from ground) update slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-p\-Value} & \char`\"{}real\char`\"{} heading value double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+U\-A\-V.\-h\item 
+U\-A\-V.\-cpp\end{DoxyCompactItemize}

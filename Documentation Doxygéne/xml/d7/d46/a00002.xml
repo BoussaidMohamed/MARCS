@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d7/d46/a00002" kind="class" prot="public">
+    <compoundname>ComThread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QThread</basecompoundref>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/d46/a00002_1a9bfec7969db289b67014513bcabba47f" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char buffer[RX_SIZE]</definition>
+        <argsstring>[RX_SIZE]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="235" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char command[TX_SIZE]</definition>
+        <argsstring>[TX_SIZE]</argsstring>
+        <name>command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="233" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a581ac8ca710cda078fd8ddb8e50954eb" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dataToPoll[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>dataToPoll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="234" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a9954a8d34e6014302ae1d99cf5714cc9" prot="private" static="no" mutable="no">
+        <type>DCB</type>
+        <definition>DCB dcb</definition>
+        <argsstring></argsstring>
+        <name>dcb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="228" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a53794d9466be19cb9c0b65f87090e237" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool failed</definition>
+        <argsstring></argsstring>
+        <name>failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="240" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a8e19c465f25509158341edd459c119b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool failNoticed</definition>
+        <argsstring></argsstring>
+        <name>failNoticed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="241" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a07ff1fa563f3d58110ce80c3c1796f9b" prot="private" static="no" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="227" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a21713484042dd9404528d9cec57ebe87" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mustPoll</definition>
+        <argsstring></argsstring>
+        <name>mustPoll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="232" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a129a62f35fc57084ceccbdc82794d9c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mustRead</definition>
+        <argsstring></argsstring>
+        <name>mustRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="231" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a951ec1a18196d806edaf6d3fb517a239" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mustWrite</definition>
+        <argsstring></argsstring>
+        <name>mustWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="230" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a608be86b18e15c3309a1b50794a2115c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sizePoll</definition>
+        <argsstring></argsstring>
+        <name>sizePoll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="238" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1ad9f5381795006f1f187538296368cd11" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long sizeRead</definition>
+        <argsstring></argsstring>
+        <name>sizeRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="237" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sizeWrite</definition>
+        <argsstring></argsstring>
+        <name>sizeWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="236" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a578f5ec7742dce06b86799b36f1d138c" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer timerFail</definition>
+        <argsstring></argsstring>
+        <name>timerFail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="239" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d46/a00002_1a0dff6629133ecc492d6b9ab44b60cb80" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d42/a00109" kindref="compound">WAYPOINT</ref></type>
+        <definition>WAYPOINT wp</definition>
+        <argsstring></argsstring>
+        <name>wp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="229" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d46/a00002_1ab24bebbd2ca81a9931aa0184366c9ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ComThread</definition>
+        <argsstring>()</argsstring>
+        <name>ComThread</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d7/d46/a00002" kindref="compound">ComThread</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="252" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="7" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d46/a00002_1acbe0fd6d9516075ea60fb81b8a323461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ComThread</definition>
+        <argsstring>()</argsstring>
+        <name>~ComThread</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="260" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d46/a00002_1a34bd4298c27ce53379ec5eb23db83601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearCounters</definition>
+        <argsstring>()</argsstring>
+        <name>clearCounters</name>
+        <briefdescription>
+<para>Reset all counters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="292" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="300" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d46/a00002_1a665582c4fbc3a48be815747e26dd6a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createCom</definition>
+        <argsstring>(QString p_sCom)</argsstring>
+        <name>createCom</name>
+        <param>
+          <type>QString</type>
+          <declname>p_sCom</declname>
+        </param>
+        <briefdescription>
+<para>Create the COM port handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_sCom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>COM port name QString </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="276" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="47" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d46/a00002_1a681ba4ec7299214b9bb86e660fe22701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void releaseCom</definition>
+        <argsstring>()</argsstring>
+        <name>releaseCom</name>
+        <briefdescription>
+<para>Destruct the COM port handler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="284" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d46/a00002_1a13a43e6d814de94978c515cb084873b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+<para>QThread run override. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="268" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="92" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="d7/d46/a00002_1a406892b365248cd6b35030378d1d4310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dataReceived</definition>
+        <argsstring>(char *buffer, int length)</argsstring>
+        <name>dataReceived</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Data received event signal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reception buffer char* </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of received char int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/d46/a00002_1a289c96805ddb1941fe330931d73321a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeDisconnected</definition>
+        <argsstring>()</argsstring>
+        <name>XBeeDisconnected</name>
+        <briefdescription>
+<para>XBee physically disconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="312" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/d46/a00002_1afb47495b5727dae0e7a5bac62098cb1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeReconnected</definition>
+        <argsstring>()</argsstring>
+        <name>XBeeReconnected</name>
+        <briefdescription>
+<para>XBee physically reconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="320" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="d7/d46/a00002_1a8a8485f38f2aef24f1fd53c31949876b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void poll</definition>
+        <argsstring>(unsigned short pDataToPoll)</argsstring>
+        <name>poll</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>pDataToPoll</declname>
+        </param>
+        <briefdescription>
+<para>Poll data slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pDataToPoll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data packet to poll descriptor unsigned short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="401" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="264" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1a26c718e7e95e398ee9368434c23d0622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendGoTo</definition>
+        <argsstring>()</argsstring>
+        <name>sendGoTo</name>
+        <briefdescription>
+<para>Send go to order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="353" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="187" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1ac898a9141e335cfee3e6c9ebb6815411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendHome</definition>
+        <argsstring>()</argsstring>
+        <name>sendHome</name>
+        <briefdescription>
+<para>Send come home order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="377" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="157" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1a2664ee66ff3ea7ed8cdca604bce4be33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendLand</definition>
+        <argsstring>()</argsstring>
+        <name>sendLand</name>
+        <briefdescription>
+<para>Send land order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="369" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="167" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1a38513372e1af4752cee2e2d046c98821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendLaunch</definition>
+        <argsstring>()</argsstring>
+        <name>sendLaunch</name>
+        <briefdescription>
+<para>Send launch (define home) order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="361" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="177" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1a01a812308fc692593b9abcab86bf003d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMotOff</definition>
+        <argsstring>()</argsstring>
+        <name>sendMotOff</name>
+        <briefdescription>
+<para>Send stop engines order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="393" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="253" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1ad6b67904e4b30f5a26bef654f8a3c4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMotOn</definition>
+        <argsstring>()</argsstring>
+        <name>sendMotOn</name>
+        <briefdescription>
+<para>Send start engines order slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="385" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="244" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1afeec69b8ef45da950fab78df4a1584e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMove</definition>
+        <argsstring>(double x, double y, double z, double yaw)</argsstring>
+        <name>sendMove</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para>Send relative waypoint slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x axe move reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y axe move reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z axe move reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading reference double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="345" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="221" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/d46/a00002_1adbfad4ea4f6a7fbd059e2d8ec65f1539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendWaypoint</definition>
+        <argsstring>(double x, double y, double z, double number)</argsstring>
+        <name>sendWaypoint</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Send waypoint slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude reference double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="334" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.cpp" bodystart="197" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>ComThread</label>
+        <link refid="d7/d46/a00002"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>wp</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>WAYPOINT</label>
+        <link refid="dd/d42/a00109"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="208" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="207" bodyend="402"/>
+    <listofallmembers>
+      <member refid="d7/d46/a00002_1a9bfec7969db289b67014513bcabba47f" prot="private" virt="non-virtual"><scope>ComThread</scope><name>buffer</name></member>
+      <member refid="d7/d46/a00002_1a34bd4298c27ce53379ec5eb23db83601" prot="public" virt="non-virtual"><scope>ComThread</scope><name>clearCounters</name></member>
+      <member refid="d7/d46/a00002_1a8e3c3dbe1da8cc4b648ab2a6d7ddb7c5" prot="private" virt="non-virtual"><scope>ComThread</scope><name>command</name></member>
+      <member refid="d7/d46/a00002_1ab24bebbd2ca81a9931aa0184366c9ba2" prot="public" virt="non-virtual"><scope>ComThread</scope><name>ComThread</name></member>
+      <member refid="d7/d46/a00002_1a665582c4fbc3a48be815747e26dd6a02" prot="public" virt="non-virtual"><scope>ComThread</scope><name>createCom</name></member>
+      <member refid="d7/d46/a00002_1a406892b365248cd6b35030378d1d4310" prot="public" virt="non-virtual"><scope>ComThread</scope><name>dataReceived</name></member>
+      <member refid="d7/d46/a00002_1a581ac8ca710cda078fd8ddb8e50954eb" prot="private" virt="non-virtual"><scope>ComThread</scope><name>dataToPoll</name></member>
+      <member refid="d7/d46/a00002_1a9954a8d34e6014302ae1d99cf5714cc9" prot="private" virt="non-virtual"><scope>ComThread</scope><name>dcb</name></member>
+      <member refid="d7/d46/a00002_1a53794d9466be19cb9c0b65f87090e237" prot="private" virt="non-virtual"><scope>ComThread</scope><name>failed</name></member>
+      <member refid="d7/d46/a00002_1a8e19c465f25509158341edd459c119b1" prot="private" virt="non-virtual"><scope>ComThread</scope><name>failNoticed</name></member>
+      <member refid="d7/d46/a00002_1a07ff1fa563f3d58110ce80c3c1796f9b" prot="private" virt="non-virtual"><scope>ComThread</scope><name>handle</name></member>
+      <member refid="d7/d46/a00002_1a21713484042dd9404528d9cec57ebe87" prot="private" virt="non-virtual"><scope>ComThread</scope><name>mustPoll</name></member>
+      <member refid="d7/d46/a00002_1a129a62f35fc57084ceccbdc82794d9c1" prot="private" virt="non-virtual"><scope>ComThread</scope><name>mustRead</name></member>
+      <member refid="d7/d46/a00002_1a951ec1a18196d806edaf6d3fb517a239" prot="private" virt="non-virtual"><scope>ComThread</scope><name>mustWrite</name></member>
+      <member refid="d7/d46/a00002_1a8a8485f38f2aef24f1fd53c31949876b" prot="public" virt="non-virtual"><scope>ComThread</scope><name>poll</name></member>
+      <member refid="d7/d46/a00002_1a681ba4ec7299214b9bb86e660fe22701" prot="public" virt="non-virtual"><scope>ComThread</scope><name>releaseCom</name></member>
+      <member refid="d7/d46/a00002_1a13a43e6d814de94978c515cb084873b1" prot="public" virt="non-virtual"><scope>ComThread</scope><name>run</name></member>
+      <member refid="d7/d46/a00002_1a26c718e7e95e398ee9368434c23d0622" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendGoTo</name></member>
+      <member refid="d7/d46/a00002_1ac898a9141e335cfee3e6c9ebb6815411" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendHome</name></member>
+      <member refid="d7/d46/a00002_1a2664ee66ff3ea7ed8cdca604bce4be33" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendLand</name></member>
+      <member refid="d7/d46/a00002_1a38513372e1af4752cee2e2d046c98821" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendLaunch</name></member>
+      <member refid="d7/d46/a00002_1a01a812308fc692593b9abcab86bf003d" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendMotOff</name></member>
+      <member refid="d7/d46/a00002_1ad6b67904e4b30f5a26bef654f8a3c4a6" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendMotOn</name></member>
+      <member refid="d7/d46/a00002_1afeec69b8ef45da950fab78df4a1584e3" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendMove</name></member>
+      <member refid="d7/d46/a00002_1adbfad4ea4f6a7fbd059e2d8ec65f1539" prot="public" virt="non-virtual"><scope>ComThread</scope><name>sendWaypoint</name></member>
+      <member refid="d7/d46/a00002_1a608be86b18e15c3309a1b50794a2115c" prot="private" virt="non-virtual"><scope>ComThread</scope><name>sizePoll</name></member>
+      <member refid="d7/d46/a00002_1ad9f5381795006f1f187538296368cd11" prot="private" virt="non-virtual"><scope>ComThread</scope><name>sizeRead</name></member>
+      <member refid="d7/d46/a00002_1ad1e1c4a0c8bb235b5e26ec9c5d1c3f0d" prot="private" virt="non-virtual"><scope>ComThread</scope><name>sizeWrite</name></member>
+      <member refid="d7/d46/a00002_1a578f5ec7742dce06b86799b36f1d138c" prot="private" virt="non-virtual"><scope>ComThread</scope><name>timerFail</name></member>
+      <member refid="d7/d46/a00002_1a0dff6629133ecc492d6b9ab44b60cb80" prot="private" virt="non-virtual"><scope>ComThread</scope><name>wp</name></member>
+      <member refid="d7/d46/a00002_1a289c96805ddb1941fe330931d73321a0" prot="public" virt="non-virtual"><scope>ComThread</scope><name>XBeeDisconnected</name></member>
+      <member refid="d7/d46/a00002_1afb47495b5727dae0e7a5bac62098cb1e" prot="public" virt="non-virtual"><scope>ComThread</scope><name>XBeeReconnected</name></member>
+      <member refid="d7/d46/a00002_1acbe0fd6d9516075ea60fb81b8a323461" prot="public" virt="non-virtual"><scope>ComThread</scope><name>~ComThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

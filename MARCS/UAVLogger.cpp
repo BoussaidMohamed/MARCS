@@ -1,15 +1,18 @@
 #include "UAVLogger.h"
+#include "QDir"
 
 UAVLogger::UAVLogger()
 {
-	sysFile = new QFile("system.log");
-	dataFile = new QFile("data_log.csv");
+    sysFile = new QFile(QDir::currentPath()+"/Logs/system.log");
+    dataFile = new QFile(QDir::currentPath()+"/Logs/data_RPA.csv");
 
 	sysFile->open(QIODevice::WriteOnly | QIODevice::Text);
 	dataFile->open(QIODevice::WriteOnly | QIODevice::Text);
 
 	sysLog = new QTextStream(sysFile);
 	pollLog = new QTextStream(dataFile);
+
+
 }
 
 UAVLogger::~UAVLogger()

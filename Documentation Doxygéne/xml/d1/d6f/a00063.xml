@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d1/d6f/a00063" kind="struct" prot="public">
+    <compoundname>DICONSTANTFORCE</compoundname>
+    <includes refid="d1/d7c/a00003" local="yes">dinput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d6f/a00063_1adf9440090100aaa93b6c66b8fb78e5b5" prot="public" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG lMagnitude</definition>
+        <argsstring></argsstring>
+        <name>lMagnitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="176" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" line="175" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/dinput.h" bodystart="175" bodyend="177"/>
+    <listofallmembers>
+      <member refid="d1/d6f/a00063_1adf9440090100aaa93b6c66b8fb78e5b5" prot="public" virt="non-virtual"><scope>DICONSTANTFORCE</scope><name>lMagnitude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

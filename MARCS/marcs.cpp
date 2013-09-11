@@ -84,6 +84,9 @@ MARCS::MARCS(QWidget *parent) :
     ui->labelNext->setStyleSheet("* { color: rgb(0,100,0) }");
     ui->labelNow->setStyleSheet("* { color: rgb(255,0,255) }");
     ui->ListLogFinal->setStyleSheet("* { background-color: rgb(240,240,240) }");
+    ui->NextWaypoint_button->hide();
+    ui->labelNext->hide();
+    ui->labelNow->hide();
     showEditWaypoint(false);
 
     //signal&&slot de l'application
@@ -115,7 +118,7 @@ MARCS::MARCS(QWidget *parent) :
     connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(GPSLevel(int)));
     connect(MissionControl::getInstance(), SIGNAL(GPSLevel(int)), this, SLOT(setTableRPA()));
     connect(this,SIGNAL(next(double,double,double,double)),CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)));
-    connect(CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)),this,SLOT(goTo(double,double,double,double)));
+    connect(CommunicationControl::getInstance(),SIGNAL(sendWaypoint(double,double,double,double)),this,SLOT(goTo()));
     connect(ui->actionLog,SIGNAL(triggered()),this,SLOT(showLog()));
     connect(CommunicationControl::getInstance(),SIGNAL(XBeeDisconnected()),this,SLOT(XbeeDisconnect()));
     connect(CommunicationControl::getInstance(),SIGNAL(XBeeReconnected()),this,SLOT(XbeeConnect()));
@@ -152,6 +155,7 @@ MARCS::MARCS(QWidget *parent) :
     gps5 = false;
     missionOpned = false ;
     motorTurn = false ;
+    connected = false ;
 }
 MARCS::~MARCS()
 {
@@ -901,20 +905,17 @@ void MARCS::on_start_button_clicked()
     if ( motorOn == false ){
         emit clickOn();
         motorOn = true ;
-        qDebug()<<"MotorOn";
     }
     else {
         emit clickOff();
         motorOn = false ;
-        qDebug()<<"MotorOff";
     }
 }
 //Save the serial port
 void MARCS::validCom(){
-    ui->start_button->setEnabled(true);
-    widget->hide();
     CommunicationControl::getInstance()->start(m_pComList->currentText());
-
+    widget->hide();
+    ui->start_button->setEnabled(true);
 }
 //start motor of the RPA
 void MARCS::startMotors(){
@@ -931,17 +932,19 @@ void MARCS::startMotors(){
             nbClickMotors++;
         }
 
-    ui->excute_button->setEnabled(true);
+    if (connected == true){
+        ui->excute_button->setEnabled(true);
+    }
+    else{
+        ui->excute_button->setEnabled(false);
+    }
     home->setNum(0);
     home->setLong(RPA::getInstance()->getCoordinates()->getLongitude());
     home->setLat(RPA::getInstance()->getCoordinates()->getLatitude());
     home->setAlt(RPA::getInstance()->getHeight());
     home->setHdg(RPA::getInstance()->getHeading());
     createHomeMark(RPA::getInstance()->getCoordinates()->getLongitude(),RPA::getInstance()->getCoordinates()->getLatitude(),GeoDataCoordinates::Degree);
-
-   connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
-   qDebug()<<"StartMotors";
-
+    connect(this,SIGNAL(clickOff()),CommunicationControl::getInstance(),SIGNAL(sendMotOff()));
 }
 //stop the motor of the RPA
 void MARCS::stopMotors(){
@@ -957,13 +960,9 @@ void MARCS::stopMotors(){
         ui->label_Altitude_2->setText("0.0");
         ui->excute_button->setIcon(iconTakeOff);
         land= false ;
-       // CommunicationControl::getInstance()->stop();
         ui->NextWaypoint_button->hide();
         ui->labelNext->hide();
         ui->labelNow->hide();
-
-
-        qDebug()<<"StopMotors";
 }
 //get the batteryLevel
 void MARCS::batteryLevel(double p_pValue){
@@ -1539,6 +1538,7 @@ void MARCS::GPSLevel(int p_value){
 
         ui->led_button->setStyleSheet("* { background-color: rgb(255,0,0) }");
         gps0 = true ;
+        connected = false;
 
     }
     else if (p_value == 1 && gps1 == false){
@@ -1558,6 +1558,9 @@ void MARCS::GPSLevel(int p_value){
         gps4 = false ;
         gps5 = false ;
 
+
+        connected = false;
+
     }else if (p_value == 2 && gps2 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
         pItem->setTextColor(QColor::fromRgb(255,0,0));
@@ -1574,6 +1577,8 @@ void MARCS::GPSLevel(int p_value){
         gps4 = false ;
         gps5 = false ;
 
+        connected = false;
+
     }else if (p_value == 3 && gps3 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
         pItem->setTextColor(QColor::fromRgb(255,0,0));
@@ -1589,6 +1594,8 @@ void MARCS::GPSLevel(int p_value){
         gps3 = true ;
         gps4 = false ;
         gps5 = false ;
+
+        connected = false;
 
     }else if (p_value == 4 && gps4 == false){
         QListWidgetItem* pItem =new QListWidgetItem("Low GPS Signal :"+ QString::number(p_value)+ "/7");
@@ -1607,6 +1614,7 @@ void MARCS::GPSLevel(int p_value){
         gps5 = false ;
 
 
+        connected = false;
     }
     else if (p_value > 4 && gps5 == false) {
         QListWidgetItem* pItem =new QListWidgetItem("GPS Signal :"+ QString::number(p_value)+ "/7");
@@ -1623,6 +1631,9 @@ void MARCS::GPSLevel(int p_value){
         gps3 = false ;
         gps4 = false ;
         gps5 = true ;
+
+
+        connected = true;
     }
 
     delete[] time_mission;
@@ -1783,7 +1794,7 @@ void MARCS::updateMotors(char p_cValue){
 
             ui->start_button->setIcon(iconOn);
             ui->start_button->setIconSize(QSize(61, 151));
-            ui->excute_button->setEnabled(true);
+           // ui->excute_button->setEnabled(true);
             home->setNum(0);
             home->setLong(RPA::getInstance()->getCoordinates()->getLongitude());
             home->setLat(RPA::getInstance()->getCoordinates()->getLatitude());
@@ -1802,6 +1813,6 @@ void MARCS::updateMotors(char p_cValue){
     }
 }
 
-void MARCS::goTo(double lon, double lat, double alt, double n){
+void MARCS::goTo(){
     myCom->sendGoTo();
 }

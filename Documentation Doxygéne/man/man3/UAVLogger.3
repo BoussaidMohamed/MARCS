@@ -1,0 +1,157 @@
+.TH "UAVLogger" 3 "Wed Sep 11 2013" "MARCS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UAVLogger \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'UAVLogger\&.h'\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+.SS "Private Attributes"
+.SH "Detailed Description"
+.PP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBUAVLogger\fP ()"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBUAVLogger\fP instance 
+.RE
+.PP
+
+.PP
+.nf
+5 {
+6     sysFile = new QFile(QDir::currentPath()+"/Logs/system\&.log");
+7     dataFile = new QFile(QDir::currentPath()+"/Logs/data_RPA\&.csv");
+8 
+9     sysFile->open(QIODevice::WriteOnly | QIODevice::Text);
+10     dataFile->open(QIODevice::WriteOnly | QIODevice::Text);
+11 
+12     sysLog = new QTextStream(sysFile);
+13     pollLog = new QTextStream(dataFile);
+14 
+15 
+16 }
+.fi
+.SS "~\fBUAVLogger\fP ()"
+
+.PP
+Destructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+.nf
+19 {
+20     sysFile->close();
+21     dataFile->close();
+22 
+23     delete sysLog;
+24     delete pollLog;
+25     delete dataFile;
+26     delete sysFile;
+27 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "QTextStream * getDataLoggerStream ()"
+
+.PP
+Data logger getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+CCardDetection QTextStream* 
+.RE
+.PP
+
+.PP
+.nf
+35 {
+36     return pollLog;
+37 }
+.fi
+.SS "QTextStream * getSystemLoggerStream ()"
+
+.PP
+System logger getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+System logger pointer QTextStream* 
+.RE
+.PP
+
+.PP
+.nf
+30 {
+31     return sysLog;
+32 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "QFile* dataFile\fC [private]\fP"
+
+.SS "QTextStream* pollLog\fC [private]\fP"
+
+.SS "QFile* sysFile\fC [private]\fP"
+
+.SS "QTextStream* sysLog\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MARCS from the source code\&.

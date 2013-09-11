@@ -1,0 +1,432 @@
+\hypertarget{class_peripheral_controller}{\section{Peripheral\-Controller Class Reference}
+\label{class_peripheral_controller}\index{Peripheral\-Controller@{Peripheral\-Controller}}
+}
+Inheritance diagram for Peripheral\-Controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_peripheral_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_peripheral_controller_a87a5573968219bcf9633943fe0204d52}{use\-Controller} ()
+\begin{DoxyCompactList}\small\item\em Controller handle slot (timed by another software controller) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_peripheral_controller_a3d3823d5a0d7ee0c8177af2680bd6b20}{mouse\-Event} (Qt\-::\-Mouse\-Button button, bool wait\-Release)
+\begin{DoxyCompactList}\small\item\em Mouse event reagrding actions on gamepad. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a3d137d0d682fdff57874d84dd30d1402}{controller\-Connected} ()
+\begin{DoxyCompactList}\small\item\em Controller connected event. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_ad02bcbe44c33e4604a8fdc7408e95eb3}{no\-Joystick} ()
+\begin{DoxyCompactList}\small\item\em No joystick event. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a18bfa7068e897f4387996c8965560a16}{direct\-Input\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Direct Input problem. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a89e97bf7e6a3f549a3071cce03d30023}{data\-Format\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Direct X data format problem. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_afcb9cd91ec05f215875678e157dd8f6a}{joystick\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Game controller device state get problem. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a92c4f3c1723444e89ebd0b847a199c90}{device\-Enum\-Problem} ()
+\begin{DoxyCompactList}\small\item\em Device emumeration problem. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a1bafe7b58e0b2785a542534e3b5ff293}{controller\-Mouse\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Controller mouse mode event. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_afa2379d5970f0d439be7f4021cc97a29}{controller\-Control\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Controller control mode event. \end{DoxyCompactList}\item 
+void \hyperlink{class_peripheral_controller_a067b986809255b519175c8e72d97a029}{move} (double x, double y, double z, double yaw)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_waypoint}{Waypoint} to send. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_peripheral_controller_a4195fba9672f05a4b2ffdcf6279c6f15}{start\-Controller\-Grab} (int p\-\_\-n\-Time)
+\begin{DoxyCompactList}\small\item\em Start grab timer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_peripheral_controller_ac9a475ad175890c215d7a4dac3d85a9b}{is\-Mouse\-Mode} ()
+\begin{DoxyCompactList}\small\item\em Mouse mode activated indicator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_peripheral_controller}{Peripheral\-Controller} $\ast$ \hyperlink{class_peripheral_controller_abaec1d8c98895893b294da5208e8742e}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Get the lone instance. \end{DoxyCompactList}\item 
+static void \hyperlink{class_peripheral_controller_ac75c5a8295b60d0707f28a405db86032}{kill} ()
+\begin{DoxyCompactList}\small\item\em Lone instance killer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_peripheral_controller_a3d137d0d682fdff57874d84dd30d1402}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Connected@{controller\-Connected}}
+\index{controller\-Connected@{controller\-Connected}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::controller\-Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a3d137d0d682fdff57874d84dd30d1402}
+
+
+Controller connected event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_afa2379d5970f0d439be7f4021cc97a29}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Control\-Mode@{controller\-Control\-Mode}}
+\index{controller\-Control\-Mode@{controller\-Control\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::controller\-Control\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_afa2379d5970f0d439be7f4021cc97a29}
+
+
+Controller control mode event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a1bafe7b58e0b2785a542534e3b5ff293}{\index{Peripheral\-Controller@{Peripheral\-Controller}!controller\-Mouse\-Mode@{controller\-Mouse\-Mode}}
+\index{controller\-Mouse\-Mode@{controller\-Mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{controller\-Mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::controller\-Mouse\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a1bafe7b58e0b2785a542534e3b5ff293}
+
+
+Controller mouse mode event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a89e97bf7e6a3f549a3071cce03d30023}{\index{Peripheral\-Controller@{Peripheral\-Controller}!data\-Format\-Problem@{data\-Format\-Problem}}
+\index{data\-Format\-Problem@{data\-Format\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{data\-Format\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::data\-Format\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a89e97bf7e6a3f549a3071cce03d30023}
+
+
+Direct X data format problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a92c4f3c1723444e89ebd0b847a199c90}{\index{Peripheral\-Controller@{Peripheral\-Controller}!device\-Enum\-Problem@{device\-Enum\-Problem}}
+\index{device\-Enum\-Problem@{device\-Enum\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{device\-Enum\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::device\-Enum\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a92c4f3c1723444e89ebd0b847a199c90}
+
+
+Device emumeration problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a18bfa7068e897f4387996c8965560a16}{\index{Peripheral\-Controller@{Peripheral\-Controller}!direct\-Input\-Problem@{direct\-Input\-Problem}}
+\index{direct\-Input\-Problem@{direct\-Input\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{direct\-Input\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::direct\-Input\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a18bfa7068e897f4387996c8965560a16}
+
+
+Direct Input problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_abaec1d8c98895893b294da5208e8742e}{\index{Peripheral\-Controller@{Peripheral\-Controller}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Peripheral\-Controller} $\ast$ Peripheral\-Controller\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_peripheral_controller_abaec1d8c98895893b294da5208e8742e}
+
+
+Get the lone instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_peripheral_controller}{Peripheral\-Controller} instance Peripheral\-Controller$\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_ac9a475ad175890c215d7a4dac3d85a9b}{\index{Peripheral\-Controller@{Peripheral\-Controller}!is\-Mouse\-Mode@{is\-Mouse\-Mode}}
+\index{is\-Mouse\-Mode@{is\-Mouse\-Mode}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{is\-Mouse\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Peripheral\-Controller\-::is\-Mouse\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_peripheral_controller_ac9a475ad175890c215d7a4dac3d85a9b}
+
+
+Mouse mode activated indicator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+In mouse mode bool 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_afcb9cd91ec05f215875678e157dd8f6a}{\index{Peripheral\-Controller@{Peripheral\-Controller}!joystick\-Problem@{joystick\-Problem}}
+\index{joystick\-Problem@{joystick\-Problem}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{joystick\-Problem}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::joystick\-Problem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_afcb9cd91ec05f215875678e157dd8f6a}
+
+
+Game controller device state get problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_ac75c5a8295b60d0707f28a405db86032}{\index{Peripheral\-Controller@{Peripheral\-Controller}!kill@{kill}}
+\index{kill@{kill}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::kill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_peripheral_controller_ac75c5a8295b60d0707f28a405db86032}
+
+
+Lone instance killer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a3d3823d5a0d7ee0c8177af2680bd6b20}{\index{Peripheral\-Controller@{Peripheral\-Controller}!mouse\-Event@{mouse\-Event}}
+\index{mouse\-Event@{mouse\-Event}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{mouse\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::mouse\-Event (
+\begin{DoxyParamCaption}
+\item[{Qt\-::\-Mouse\-Button}]{button, }
+\item[{bool}]{wait\-Release}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a3d3823d5a0d7ee0c8177af2680bd6b20}
+
+
+Mouse event reagrding actions on gamepad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & emulated pressed button Qt\-::\-Mouse\-Button \\
+\hline
+{\em wait\-Release} & button already pressed bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a067b986809255b519175c8e72d97a029}{\index{Peripheral\-Controller@{Peripheral\-Controller}!move@{move}}
+\index{move@{move}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_a067b986809255b519175c8e72d97a029}
+
+
+\hyperlink{class_waypoint}{Waypoint} to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & in meters double \\
+\hline
+{\em y} & in meters double \\
+\hline
+{\em z} & altitude double \\
+\hline
+{\em yaw} & heading double \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_ad02bcbe44c33e4604a8fdc7408e95eb3}{\index{Peripheral\-Controller@{Peripheral\-Controller}!no\-Joystick@{no\-Joystick}}
+\index{no\-Joystick@{no\-Joystick}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{no\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::no\-Joystick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_peripheral_controller_ad02bcbe44c33e4604a8fdc7408e95eb3}
+
+
+No joystick event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a4195fba9672f05a4b2ffdcf6279c6f15}{\index{Peripheral\-Controller@{Peripheral\-Controller}!start\-Controller\-Grab@{start\-Controller\-Grab}}
+\index{start\-Controller\-Grab@{start\-Controller\-Grab}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{start\-Controller\-Grab}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::start\-Controller\-Grab (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-\_\-n\-Time}
+\end{DoxyParamCaption}
+)}}\label{class_peripheral_controller_a4195fba9672f05a4b2ffdcf6279c6f15}
+
+
+Start grab timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-n\-Time} & interval time in ms for grab int \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\hypertarget{class_peripheral_controller_a87a5573968219bcf9633943fe0204d52}{\index{Peripheral\-Controller@{Peripheral\-Controller}!use\-Controller@{use\-Controller}}
+\index{use\-Controller@{use\-Controller}!PeripheralController@{Peripheral\-Controller}}
+\subsubsection[{use\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}void Peripheral\-Controller\-::use\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_peripheral_controller_a87a5573968219bcf9633943fe0204d52}
+
+
+Controller handle slot (timed by another software controller) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Peripheral\-Controller.\-h\item 
+Peripheral\-Controller.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d3/d32/a00105" kind="struct" prot="public">
+    <compoundname>GPS_DATA_ADVANCED</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d32/a00105_1aa0a9c2882aad6535e52a6d429f1d42da" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="116" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="111" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a2c6f1022b2ac45d5e6238951dc81d77a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int horizontal_accuracy</definition>
+        <argsstring></argsstring>
+        <name>horizontal_accuracy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="118" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a5bf9aac20fe4e7a73cd1a9fc30d7ae00" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int latitude</definition>
+        <argsstring></argsstring>
+        <name>latitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="108" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a82a31c4bd32fdcea78aeeee679a04b25" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int latitude_best_estimate</definition>
+        <argsstring></argsstring>
+        <name>latitude_best_estimate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="126" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a17963aafb9acb082fcc06c90195cb4fa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int longitude</definition>
+        <argsstring></argsstring>
+        <name>longitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="109" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a70d64913a348198bfa17a4c00de2c3b0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int longitude_best_estimate</definition>
+        <argsstring></argsstring>
+        <name>longitude_best_estimate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="127" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a9390419b61f0e0bae53f5f094ce82b93" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int numSV</definition>
+        <argsstring></argsstring>
+        <name>numSV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="122" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1ac5e7fd2a3a590e4b18a47ec291c52004" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int speed_accuracy</definition>
+        <argsstring></argsstring>
+        <name>speed_accuracy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="120" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a20fcaf3d7d5effa75ca571510f53a6cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_x</definition>
+        <argsstring></argsstring>
+        <name>speed_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="113" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a755d2852a14612e5e2b07fe2efce8e31" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_x_best_estimate</definition>
+        <argsstring></argsstring>
+        <name>speed_x_best_estimate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="129" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a3abd5cb27c81871612651aee8a0476ba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_y</definition>
+        <argsstring></argsstring>
+        <name>speed_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="114" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1abde97a528a4ffec3463df5f0f86cdbd2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int speed_y_best_estimate</definition>
+        <argsstring></argsstring>
+        <name>speed_y_best_estimate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="130" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a6e27f49150e9a14580fb313cc2777e00" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="124" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d32/a00105_1a7db3f1dc8cddb85428225e000e94c5f3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int vertical_accuracy</definition>
+        <argsstring></argsstring>
+        <name>vertical_accuracy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="119" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="106" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="105" bodyend="131"/>
+    <listofallmembers>
+      <member refid="d3/d32/a00105_1aa0a9c2882aad6535e52a6d429f1d42da" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>heading</name></member>
+      <member refid="d3/d32/a00105_1ad12fc34ce789bce6c8a05d8a17138534" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>height</name></member>
+      <member refid="d3/d32/a00105_1a2c6f1022b2ac45d5e6238951dc81d77a" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>horizontal_accuracy</name></member>
+      <member refid="d3/d32/a00105_1a5bf9aac20fe4e7a73cd1a9fc30d7ae00" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>latitude</name></member>
+      <member refid="d3/d32/a00105_1a82a31c4bd32fdcea78aeeee679a04b25" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>latitude_best_estimate</name></member>
+      <member refid="d3/d32/a00105_1a17963aafb9acb082fcc06c90195cb4fa" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>longitude</name></member>
+      <member refid="d3/d32/a00105_1a70d64913a348198bfa17a4c00de2c3b0" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>longitude_best_estimate</name></member>
+      <member refid="d3/d32/a00105_1a9390419b61f0e0bae53f5f094ce82b93" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>numSV</name></member>
+      <member refid="d3/d32/a00105_1ac5e7fd2a3a590e4b18a47ec291c52004" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>speed_accuracy</name></member>
+      <member refid="d3/d32/a00105_1a20fcaf3d7d5effa75ca571510f53a6cc" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>speed_x</name></member>
+      <member refid="d3/d32/a00105_1a755d2852a14612e5e2b07fe2efce8e31" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>speed_x_best_estimate</name></member>
+      <member refid="d3/d32/a00105_1a3abd5cb27c81871612651aee8a0476ba" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>speed_y</name></member>
+      <member refid="d3/d32/a00105_1abde97a528a4ffec3463df5f0f86cdbd2" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>speed_y_best_estimate</name></member>
+      <member refid="d3/d32/a00105_1a6e27f49150e9a14580fb313cc2777e00" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>status</name></member>
+      <member refid="d3/d32/a00105_1a7db3f1dc8cddb85428225e000e94c5f3" prot="public" virt="non-virtual"><scope>GPS_DATA_ADVANCED</scope><name>vertical_accuracy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

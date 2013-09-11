@@ -1,0 +1,1966 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d7/dec/a00010" kind="class" prot="public">
+    <compoundname>MissionControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="d0/dc0/a00033" local="yes">MissionControl.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d7/dec/a00010_1a05b55b7963750cd3d108e76c1250d477" prot="private" static="yes" mutable="no">
+        <type><ref refid="d7/dec/a00010" kindref="compound">MissionControl</ref> *</type>
+        <definition>MissionControl * singleton</definition>
+        <argsstring></argsstring>
+        <name>singleton</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="36" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d7/dec/a00010_1ae0092dd7bee4055937aafc0f9c9eeb17" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bFirstRC</definition>
+        <argsstring></argsstring>
+        <name>m_bFirstRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="48" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a093bf32870b9511dce24b7c98b420e9d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bFirstWaypoint</definition>
+        <argsstring></argsstring>
+        <name>m_bFirstWaypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="38" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a23791e7a57e50ca179b551e458922309" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bFPLaunched</definition>
+        <argsstring></argsstring>
+        <name>m_bFPLaunched</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="39" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1ae57780eab0475346a816a8e16e291cd7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bNextSent</definition>
+        <argsstring></argsstring>
+        <name>m_bNextSent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="37" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1ad806696ae09d85979347c7dd2f4bf9c6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_bXBee</definition>
+        <argsstring></argsstring>
+        <name>m_bXBee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="51" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a4becef68fb68fff5f845aff02c8a4b7a" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char m_cEngine</definition>
+        <argsstring></argsstring>
+        <name>m_cEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="53" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a1ce5c64dc3d39ae09fde1ee64187088a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double m_dBattery</definition>
+        <argsstring></argsstring>
+        <name>m_dBattery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="49" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a95434291b0e4b2ac8903a5ce3f27b4ab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_nGPS</definition>
+        <argsstring></argsstring>
+        <name>m_nGPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="50" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1af33bf47349db881ffb444984ec6af73e" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_nStatus</definition>
+        <argsstring></argsstring>
+        <name>m_nStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="52" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1ab3860e046790d0106c5c59d2947c4a24" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pLaunchTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pLaunchTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="41" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a9cd9caa80b9e3f0c4c7c89f721fb12ab" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousGPSHeightControlRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousGPSHeightControlRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="47" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a1c95c212ff083bed4a5ff651e39837de" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousPitchRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousPitchRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="43" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a1a6d2ee64c0380d556c8d16f21241493" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousRollRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousRollRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="44" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1ae4629b3de032de49ef686d0a7fc3904e" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousSerialRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousSerialRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="46" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a5ce9c2712c259fa2004b16421b891b2b" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousThrustRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousThrustRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="45" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1a3156a3f666d6691390fe845a9c28c40d" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short m_pPreviousYawRC</definition>
+        <argsstring></argsstring>
+        <name>m_pPreviousYawRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="42" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/dec/a00010_1aa2212ccd53682c3c29395c0012e88979" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer m_pWaypointTimer</definition>
+        <argsstring></argsstring>
+        <name>m_pWaypointTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="40" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d7/dec/a00010_1a4d1fa31327a8451df46c12f7f4a152a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MissionControl</definition>
+        <argsstring>()</argsstring>
+        <name>MissionControl</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d7/dec/a00010" kindref="compound">MissionControl</ref> instance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="63" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="5" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dec/a00010_1a6841d96310bc959e9bed4f06e0c258dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MissionControl</definition>
+        <argsstring>()</argsstring>
+        <name>~MissionControl</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="71" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d7/dec/a00010_1a0ec34c9f235c87920390dd2425a8a162" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/dec/a00010" kindref="compound">MissionControl</ref> *</type>
+        <definition>MissionControl * getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+<para><ref refid="d7/dec/a00010" kindref="compound">MissionControl</ref> lone instance getter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lone instance MissionControl* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="82" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dec/a00010_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kill</definition>
+        <argsstring>()</argsstring>
+        <name>kill</name>
+        <briefdescription>
+<para>Instance killer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="90" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="49" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="d7/dec/a00010_1afa417655857cee8564cd3f54b1491e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void batteryLevel</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>batteryLevel</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Battery level. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1ab84abdda4808cd9ca3f154e9d8f0b133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cannotLaunchFP</definition>
+        <argsstring>(bool p_bBattery, bool p_bGPS, bool p_bXBee, bool p_bStatus, bool p_bFlightPlan, bool p_bEngine)</argsstring>
+        <name>cannotLaunchFP</name>
+        <param>
+          <type>bool</type>
+          <declname>p_bBattery</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_bGPS</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_bXBee</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_bStatus</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_bFlightPlan</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>p_bEngine</declname>
+        </param>
+        <briefdescription>
+<para>Cannot launch flight plan event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_bBattery</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>battery level above low bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_bGPS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enough satellites bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_bXBee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>link through XBee bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_bStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MUAV in GPS mode bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_bFlightPlan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flight plan loaded bool </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_bEngine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>engines started bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a35163b56af81dc0f09dc69e92161f4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controllerConnected</definition>
+        <argsstring>()</argsstring>
+        <name>controllerConnected</name>
+        <briefdescription>
+<para>Controller connected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1acda62f445580e9296041e59a2d81fc77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void controllerProblem</definition>
+        <argsstring>()</argsstring>
+        <name>controllerProblem</name>
+        <briefdescription>
+<para>Problem with the game controller. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1ab767c53cb52cd34736797a11063e05b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digression</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>digression</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Digression value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a1ce8df6c21f65fcfbeb3f6852600349e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void directXProblem</definition>
+        <argsstring>()</argsstring>
+        <name>directXProblem</name>
+        <briefdescription>
+<para>Direct X problem. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a65673b3acf5f5593d90cc2cb8f1b78f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endFlightPlan</definition>
+        <argsstring>()</argsstring>
+        <name>endFlightPlan</name>
+        <briefdescription>
+<para>End of flight plan event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a03472851679eb075b2fad51e1ef61f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void flightPlanLaunched</definition>
+        <argsstring>()</argsstring>
+        <name>flightPlanLaunched</name>
+        <briefdescription>
+<para>Flight plan launched acknowledge. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1ab333658b290f86625babfe23d9148bc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPSLevel</definition>
+        <argsstring>(int p_pValue)</argsstring>
+        <name>GPSLevel</name>
+        <param>
+          <type>int</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>GPS reception level. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a44769de90c2ec83d360149f4b36ea8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void move</definition>
+        <argsstring>(double x, double y, double z, double yaw)</argsstring>
+        <name>move</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> to send. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in meters double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heading double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a45f0ce9c30deececbfdab8cc03d50eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void radiocommandConnection</definition>
+        <argsstring>(bool p_pValue)</argsstring>
+        <name>radiocommandConnection</name>
+        <param>
+          <type>bool</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Radiocommand connection state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a2780ef8954a3ec68cdc55d312e2e06ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCDataChanged</definition>
+        <argsstring>()</argsstring>
+        <name>RCDataChanged</name>
+        <briefdescription>
+<para>Remote control values changed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a5da6fbcca696f2541c3d121ca0fe9e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetWaypointNotification</definition>
+        <argsstring>()</argsstring>
+        <name>resetWaypointNotification</name>
+        <briefdescription>
+<para>Change next waypoint. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a38513372e1af4752cee2e2d046c98821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendLaunch</definition>
+        <argsstring>()</argsstring>
+        <name>sendLaunch</name>
+        <briefdescription>
+<para>Send launch order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a8eedc5a648c9f864a820f836fd6bfe96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void waypoint</definition>
+        <argsstring>(double x, double y, double z, double number)</argsstring>
+        <name>waypoint</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> to send. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>longitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>latitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altitude double </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1a2d77e39235b464d52cdfd6d046dd6e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void waypointReached</definition>
+        <argsstring>()</argsstring>
+        <name>waypointReached</name>
+        <briefdescription>
+<para><ref refid="d4/d51/a00017" kindref="compound">Waypoint</ref> reached event. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d7/dec/a00010_1aab6ba445d4266f026f1864ce097998c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XBeeConnection</definition>
+        <argsstring>(bool p_pValue)</argsstring>
+        <name>XBeeConnection</name>
+        <param>
+          <type>bool</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>XBee connection state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="126" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="d7/dec/a00010_1ad15969fb4bfd40eedb8ceaa6c7a8d1f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void acknowledge</definition>
+        <argsstring>(char *m_pAck)</argsstring>
+        <name>acknowledge</name>
+        <param>
+          <type>char *</type>
+          <declname>m_pAck</declname>
+        </param>
+        <briefdescription>
+<para>Receive MUAV acknowledge. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_pAck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>acknowledge string char* </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="320" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="184" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a48a7112262ba65d18ca31b7419a81ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addMark</definition>
+        <argsstring>()</argsstring>
+        <name>addMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="443" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="312" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a6663cf1e20c2f8162d29d31c8f6324e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void down</definition>
+        <argsstring>()</argsstring>
+        <name>down</name>
+        <briefdescription>
+<para>Decrease altitude command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="441" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a5f730a9a91784cbf28d39ab22e4d7fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void inFlight</definition>
+        <argsstring>(char p_cValue)</argsstring>
+        <name>inFlight</name>
+        <param>
+          <type>char</type>
+          <declname>p_cValue</declname>
+        </param>
+        <briefdescription>
+<para>Define if the MUAV has its engines started. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="377" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1aa638de738a43a5d84d5cc765a9ca87c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void launchFlightPlan</definition>
+        <argsstring>()</argsstring>
+        <name>launchFlightPlan</name>
+        <briefdescription>
+<para>Launch the flight plan. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>indicate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if cannot launch (bad parameters) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="328" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="198" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a39321c04c34c4c2e46ed14803bdddd39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void moveBackward</definition>
+        <argsstring>()</argsstring>
+        <name>moveBackward</name>
+        <briefdescription>
+<para>Move backward command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="393" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a618d986e214be5b102686274ac420be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void moveForward</definition>
+        <argsstring>()</argsstring>
+        <name>moveForward</name>
+        <briefdescription>
+<para>Move forward command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="385" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a7a5379770a3d9a90ee4d827046d26eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void moveLeft</definition>
+        <argsstring>()</argsstring>
+        <name>moveLeft</name>
+        <briefdescription>
+<para>Move left command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="401" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a8f1aff0fabeb87f42932d5ce436f4d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void moveRight</definition>
+        <argsstring>()</argsstring>
+        <name>moveRight</name>
+        <briefdescription>
+<para>Move right command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="409" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a8fb230ae2937902d2f3f70505b5c08d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nextWaypoint</definition>
+        <argsstring>()</argsstring>
+        <name>nextWaypoint</name>
+        <briefdescription>
+<para>Next waypoint index increment. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>end of flight plan reached </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="302" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="132" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a1d4b9f41f5f619c4ef938ab08265fce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pauseFlightPlan</definition>
+        <argsstring>()</argsstring>
+        <name>pauseFlightPlan</name>
+        <briefdescription>
+<para>Pause flight plan (no reset of next waypoint index) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="344" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a30bbdc9e8db693b8e568e732fe8bca2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rcData</definition>
+        <argsstring>(short p_nYaw, short p_nPitch, short p_nRoll, short p_nThrust, short p_nSerial, short p_nGPSHeightControl, char p_cValid)</argsstring>
+        <name>rcData</name>
+        <param>
+          <type>short</type>
+          <declname>p_nYaw</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nPitch</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nRoll</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nThrust</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nSerial</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nGPSHeightControl</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>p_cValid</declname>
+        </param>
+        <briefdescription>
+<para>Define if remote control values changed and update them. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thrust</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>GPSHeightControl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="368" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="239" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a2d1e5a21fd2b1b542b454f72c6fe5bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendWaypoint</definition>
+        <argsstring>()</argsstring>
+        <name>sendWaypoint</name>
+        <briefdescription>
+<para>Send waypoint order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="294" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="119" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a42d570c71f526b655bbd64932ad6fd5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stopFlightPlan</definition>
+        <argsstring>()</argsstring>
+        <name>stopFlightPlan</name>
+        <briefdescription>
+<para>Stop flight plan (reset of next waypoint index) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="336" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1adaf487f84c38e060c84f3cb829e70f2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnLeft</definition>
+        <argsstring>()</argsstring>
+        <name>turnLeft</name>
+        <briefdescription>
+<para>Turn left command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="417" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1acf4fa5da14085c3a9a170f9de29d2755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void turnRight</definition>
+        <argsstring>()</argsstring>
+        <name>turnRight</name>
+        <briefdescription>
+<para>Turn right command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="425" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="297" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a0a1d932d49dd1079cfd0964b11adc7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void up</definition>
+        <argsstring>()</argsstring>
+        <name>up</name>
+        <briefdescription>
+<para>Increase altitude command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="433" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a80fb0b930e406eedf15162edccc726c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateBattery</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>updateBattery</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Battery level update. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>battery level double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="253" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a161bfdf95298fba69f2227c64a1cbc4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateDigression</definition>
+        <argsstring>()</argsstring>
+        <name>updateDigression</name>
+        <briefdescription>
+<para>Compute the digression value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="269" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="88" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1ae5330168c77c9c4d13fba5b918845ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateGPS</definition>
+        <argsstring>(int p_pValue)</argsstring>
+        <name>updateGPS</name>
+        <param>
+          <type>int</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>GPS satellite number update. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of satellite double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="261" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1ab3cda15293ced458cbd11c5740c1c099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateNAV</definition>
+        <argsstring>(char p_cWaypointNumber, short p_nDistance, short p_cStatus)</argsstring>
+        <name>updateNAV</name>
+        <param>
+          <type>char</type>
+          <declname>p_cWaypointNumber</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nDistance</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_cStatus</declname>
+        </param>
+        <briefdescription>
+<para>Update the mission state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_cWaypointNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint number char </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_nDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>waypoint / MUAV distance short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_cStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>navigation status short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="312" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="154" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1aaf70dd1f6eda48599f92fe2c4426006b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateRadiocommand</definition>
+        <argsstring>(short p_pValue)</argsstring>
+        <name>updateRadiocommand</name>
+        <param>
+          <type>short</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>Remote control connection update. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>remote control link state short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="285" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="113" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1a04c6f8771c6f34f993a95d2e02a53449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateWayStatus</definition>
+        <argsstring>(char p_cWaypointNumber, short p_nDistance, short p_nNavStatus)</argsstring>
+        <name>updateWayStatus</name>
+        <param>
+          <type>char</type>
+          <declname>p_cWaypointNumber</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nDistance</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>p_nNavStatus</declname>
+        </param>
+        <briefdescription>
+<para>Define if waypoint reached. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_cWaypointNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>don&apos;t care char </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_nDistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>don&apos;t care short </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_nNavStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>don&apos;t care short </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="354" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="228" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="slot" id="d7/dec/a00010_1af5f2c7705408cb9400ff6f2d64eabf26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateXBee</definition>
+        <argsstring>(bool p_pValue)</argsstring>
+        <name>updateXBee</name>
+        <param>
+          <type>bool</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>XBee connection state update. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>connection state bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="277" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.cpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="154">
+        <label>MissionControl</label>
+        <link refid="d7/dec/a00010"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>singleton</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" line="17" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/MissionControl.h" bodystart="16" bodyend="444"/>
+    <listofallmembers>
+      <member refid="d7/dec/a00010_1ad15969fb4bfd40eedb8ceaa6c7a8d1f4" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>acknowledge</name></member>
+      <member refid="d7/dec/a00010_1a48a7112262ba65d18ca31b7419a81ac1" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>addMark</name></member>
+      <member refid="d7/dec/a00010_1afa417655857cee8564cd3f54b1491e98" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>batteryLevel</name></member>
+      <member refid="d7/dec/a00010_1ab84abdda4808cd9ca3f154e9d8f0b133" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>cannotLaunchFP</name></member>
+      <member refid="d7/dec/a00010_1a35163b56af81dc0f09dc69e92161f4b9" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>controllerConnected</name></member>
+      <member refid="d7/dec/a00010_1acda62f445580e9296041e59a2d81fc77" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>controllerProblem</name></member>
+      <member refid="d7/dec/a00010_1ab767c53cb52cd34736797a11063e05b7" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>digression</name></member>
+      <member refid="d7/dec/a00010_1a1ce8df6c21f65fcfbeb3f6852600349e" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>directXProblem</name></member>
+      <member refid="d7/dec/a00010_1a6663cf1e20c2f8162d29d31c8f6324e6" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>down</name></member>
+      <member refid="d7/dec/a00010_1a65673b3acf5f5593d90cc2cb8f1b78f9" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>endFlightPlan</name></member>
+      <member refid="d7/dec/a00010_1a03472851679eb075b2fad51e1ef61f2e" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>flightPlanLaunched</name></member>
+      <member refid="d7/dec/a00010_1a0ec34c9f235c87920390dd2425a8a162" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>getInstance</name></member>
+      <member refid="d7/dec/a00010_1ab333658b290f86625babfe23d9148bc5" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>GPSLevel</name></member>
+      <member refid="d7/dec/a00010_1a5f730a9a91784cbf28d39ab22e4d7fec" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>inFlight</name></member>
+      <member refid="d7/dec/a00010_1aae9d52caad9fb2892deeb25596cfd2ab" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>kill</name></member>
+      <member refid="d7/dec/a00010_1aa638de738a43a5d84d5cc765a9ca87c5" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>launchFlightPlan</name></member>
+      <member refid="d7/dec/a00010_1ae0092dd7bee4055937aafc0f9c9eeb17" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_bFirstRC</name></member>
+      <member refid="d7/dec/a00010_1a093bf32870b9511dce24b7c98b420e9d" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_bFirstWaypoint</name></member>
+      <member refid="d7/dec/a00010_1a23791e7a57e50ca179b551e458922309" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_bFPLaunched</name></member>
+      <member refid="d7/dec/a00010_1ae57780eab0475346a816a8e16e291cd7" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_bNextSent</name></member>
+      <member refid="d7/dec/a00010_1ad806696ae09d85979347c7dd2f4bf9c6" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_bXBee</name></member>
+      <member refid="d7/dec/a00010_1a4becef68fb68fff5f845aff02c8a4b7a" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_cEngine</name></member>
+      <member refid="d7/dec/a00010_1a1ce5c64dc3d39ae09fde1ee64187088a" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_dBattery</name></member>
+      <member refid="d7/dec/a00010_1a95434291b0e4b2ac8903a5ce3f27b4ab" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_nGPS</name></member>
+      <member refid="d7/dec/a00010_1af33bf47349db881ffb444984ec6af73e" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_nStatus</name></member>
+      <member refid="d7/dec/a00010_1ab3860e046790d0106c5c59d2947c4a24" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pLaunchTimer</name></member>
+      <member refid="d7/dec/a00010_1a9cd9caa80b9e3f0c4c7c89f721fb12ab" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousGPSHeightControlRC</name></member>
+      <member refid="d7/dec/a00010_1a1c95c212ff083bed4a5ff651e39837de" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousPitchRC</name></member>
+      <member refid="d7/dec/a00010_1a1a6d2ee64c0380d556c8d16f21241493" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousRollRC</name></member>
+      <member refid="d7/dec/a00010_1ae4629b3de032de49ef686d0a7fc3904e" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousSerialRC</name></member>
+      <member refid="d7/dec/a00010_1a5ce9c2712c259fa2004b16421b891b2b" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousThrustRC</name></member>
+      <member refid="d7/dec/a00010_1a3156a3f666d6691390fe845a9c28c40d" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pPreviousYawRC</name></member>
+      <member refid="d7/dec/a00010_1aa2212ccd53682c3c29395c0012e88979" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>m_pWaypointTimer</name></member>
+      <member refid="d7/dec/a00010_1a4d1fa31327a8451df46c12f7f4a152a4" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>MissionControl</name></member>
+      <member refid="d7/dec/a00010_1a44769de90c2ec83d360149f4b36ea8da" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>move</name></member>
+      <member refid="d7/dec/a00010_1a39321c04c34c4c2e46ed14803bdddd39" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>moveBackward</name></member>
+      <member refid="d7/dec/a00010_1a618d986e214be5b102686274ac420be0" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>moveForward</name></member>
+      <member refid="d7/dec/a00010_1a7a5379770a3d9a90ee4d827046d26eb0" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>moveLeft</name></member>
+      <member refid="d7/dec/a00010_1a8f1aff0fabeb87f42932d5ce436f4d5c" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>moveRight</name></member>
+      <member refid="d7/dec/a00010_1a8fb230ae2937902d2f3f70505b5c08d0" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>nextWaypoint</name></member>
+      <member refid="d7/dec/a00010_1a1d4b9f41f5f619c4ef938ab08265fce4" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>pauseFlightPlan</name></member>
+      <member refid="d7/dec/a00010_1a45f0ce9c30deececbfdab8cc03d50eab" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>radiocommandConnection</name></member>
+      <member refid="d7/dec/a00010_1a30bbdc9e8db693b8e568e732fe8bca2e" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>rcData</name></member>
+      <member refid="d7/dec/a00010_1a2780ef8954a3ec68cdc55d312e2e06ce" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>RCDataChanged</name></member>
+      <member refid="d7/dec/a00010_1a5da6fbcca696f2541c3d121ca0fe9e85" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>resetWaypointNotification</name></member>
+      <member refid="d7/dec/a00010_1a38513372e1af4752cee2e2d046c98821" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>sendLaunch</name></member>
+      <member refid="d7/dec/a00010_1a2d1e5a21fd2b1b542b454f72c6fe5bf3" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>sendWaypoint</name></member>
+      <member refid="d7/dec/a00010_1a05b55b7963750cd3d108e76c1250d477" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>singleton</name></member>
+      <member refid="d7/dec/a00010_1a42d570c71f526b655bbd64932ad6fd5a" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>stopFlightPlan</name></member>
+      <member refid="d7/dec/a00010_1adaf487f84c38e060c84f3cb829e70f2b" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>turnLeft</name></member>
+      <member refid="d7/dec/a00010_1acf4fa5da14085c3a9a170f9de29d2755" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>turnRight</name></member>
+      <member refid="d7/dec/a00010_1a0a1d932d49dd1079cfd0964b11adc7a0" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>up</name></member>
+      <member refid="d7/dec/a00010_1a80fb0b930e406eedf15162edccc726c3" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateBattery</name></member>
+      <member refid="d7/dec/a00010_1a161bfdf95298fba69f2227c64a1cbc4c" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateDigression</name></member>
+      <member refid="d7/dec/a00010_1ae5330168c77c9c4d13fba5b918845ef7" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateGPS</name></member>
+      <member refid="d7/dec/a00010_1ab3cda15293ced458cbd11c5740c1c099" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateNAV</name></member>
+      <member refid="d7/dec/a00010_1aaf70dd1f6eda48599f92fe2c4426006b" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateRadiocommand</name></member>
+      <member refid="d7/dec/a00010_1a04c6f8771c6f34f993a95d2e02a53449" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateWayStatus</name></member>
+      <member refid="d7/dec/a00010_1af5f2c7705408cb9400ff6f2d64eabf26" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>updateXBee</name></member>
+      <member refid="d7/dec/a00010_1a8eedc5a648c9f864a820f836fd6bfe96" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>waypoint</name></member>
+      <member refid="d7/dec/a00010_1a2d77e39235b464d52cdfd6d046dd6e3b" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>waypointReached</name></member>
+      <member refid="d7/dec/a00010_1aab6ba445d4266f026f1864ce097998c6" prot="public" virt="non-virtual"><scope>MissionControl</scope><name>XBeeConnection</name></member>
+      <member refid="d7/dec/a00010_1a6841d96310bc959e9bed4f06e0c258dd" prot="private" virt="non-virtual"><scope>MissionControl</scope><name>~MissionControl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

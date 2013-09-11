@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="df/d98/a00107" kind="struct" prot="public">
+    <compoundname>LL_STATUS</compoundname>
+    <includes refid="d0/d0b/a00004" local="yes">ComThread.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d98/a00107_1a459f77aee98b6bebbd3c2d54f2ab6667" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short battery_voltage_1</definition>
+        <argsstring></argsstring>
+        <name>battery_voltage_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="180" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1a5e4eeb8bd1ab20465f6008fbebbbedce" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short battery_voltage_2</definition>
+        <argsstring></argsstring>
+        <name>battery_voltage_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="181" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1aac75399e9f68d442064c7d78f5f2fa73" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char chksum_error</definition>
+        <argsstring></argsstring>
+        <name>chksum_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="188" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1ad1d096bb5ed60c0f259c3adca79c103f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char compass_enabled</definition>
+        <argsstring></argsstring>
+        <name>compass_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="187" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1adb812fe651007f02ed6d18ddad64d29b" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short cpu_load</definition>
+        <argsstring></argsstring>
+        <name>cpu_load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="185" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1a3a9b579ed098eba7a5107adb32a9375a" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short flightMode</definition>
+        <argsstring></argsstring>
+        <name>flightMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="191" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1af2fb6251c4d6d896f8b035e3b0f20f62" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char flying</definition>
+        <argsstring></argsstring>
+        <name>flying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="189" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1aab9b23de5d0dbb9425a558ca5ffff3df" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char motors_on</definition>
+        <argsstring></argsstring>
+        <name>motors_on</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="190" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1aab78832eca253df36aafa204d68e4bac" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="183" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d98/a00107_1aaee9038f6196d496f2539741c95e0f9b" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short up_time</definition>
+        <argsstring></argsstring>
+        <name>up_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="193" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" line="178" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/ComThread.h" bodystart="177" bodyend="194"/>
+    <listofallmembers>
+      <member refid="df/d98/a00107_1a459f77aee98b6bebbd3c2d54f2ab6667" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>battery_voltage_1</name></member>
+      <member refid="df/d98/a00107_1a5e4eeb8bd1ab20465f6008fbebbbedce" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>battery_voltage_2</name></member>
+      <member refid="df/d98/a00107_1aac75399e9f68d442064c7d78f5f2fa73" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>chksum_error</name></member>
+      <member refid="df/d98/a00107_1ad1d096bb5ed60c0f259c3adca79c103f" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>compass_enabled</name></member>
+      <member refid="df/d98/a00107_1adb812fe651007f02ed6d18ddad64d29b" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>cpu_load</name></member>
+      <member refid="df/d98/a00107_1a3a9b579ed098eba7a5107adb32a9375a" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>flightMode</name></member>
+      <member refid="df/d98/a00107_1af2fb6251c4d6d896f8b035e3b0f20f62" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>flying</name></member>
+      <member refid="df/d98/a00107_1aab9b23de5d0dbb9425a558ca5ffff3df" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>motors_on</name></member>
+      <member refid="df/d98/a00107_1aab78832eca253df36aafa204d68e4bac" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>status</name></member>
+      <member refid="df/d98/a00107_1aaee9038f6196d496f2539741c95e0f9b" prot="public" virt="non-virtual"><scope>LL_STATUS</scope><name>up_time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

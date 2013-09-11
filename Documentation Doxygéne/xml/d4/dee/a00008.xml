@@ -1,0 +1,2754 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="d4/dee/a00008" kind="class" prot="public">
+    <compoundname>MARCS</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="d5/d16/a00029" local="yes">marcs.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/dee/a00008_1aef1d7c2fea653fb1d729b2f40b2c2c53" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool affichageList</definition>
+        <argsstring></argsstring>
+        <name>affichageList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="362" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a4ea0f7bc01af5b4359d7be6998600e13" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool clear_mission</definition>
+        <argsstring></argsstring>
+        <name>clear_mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="356" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab36823025f12a809217f7771125658c2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool connected</definition>
+        <argsstring></argsstring>
+        <name>connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="376" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8b0f68f97ddd8c30ad31efa6919778ee" prot="private" static="no" mutable="no">
+        <type>GeoDataDocument *</type>
+        <definition>GeoDataDocument* document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="397" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5485f3186e5ee43d5cb40af7a555bb7e" prot="private" static="no" mutable="no">
+        <type>GeoDataDocument *</type>
+        <definition>GeoDataDocument* documentHome</definition>
+        <argsstring></argsstring>
+        <name>documentHome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="399" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a9480c34bf64d45bdea5c4d162eb2bfd4" prot="private" static="no" mutable="no">
+        <type>GeoDataDocument *</type>
+        <definition>GeoDataDocument* documentMark</definition>
+        <argsstring></argsstring>
+        <name>documentMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="400" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab48a9573e6326f95a2bd888734fa7827" prot="private" static="no" mutable="no">
+        <type>GeoDataDocument *</type>
+        <definition>GeoDataDocument* documentRPA</definition>
+        <argsstring></argsstring>
+        <name>documentRPA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="398" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ad4e491eb87f63d7a4b84571827bd6aed" prot="private" static="no" mutable="no">
+        <type>ofstream</type>
+        <definition>ofstream fichier</definition>
+        <argsstring></argsstring>
+        <name>fichier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="418" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ae55f476d1700ade204b3038b8c37f8ba" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString fileOpened</definition>
+        <argsstring></argsstring>
+        <name>fileOpened</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="345" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ae4bd1023a83b82ebd7a9d6687813ffce" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps0</definition>
+        <argsstring></argsstring>
+        <name>gps0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="369" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a937eca780523827d07c23d8199f5034c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps1</definition>
+        <argsstring></argsstring>
+        <name>gps1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="370" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5999aa93a3f88a1982f3a87c59f1fd98" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps2</definition>
+        <argsstring></argsstring>
+        <name>gps2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="371" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8bc76fea83b1435f743bc2aeb7f6dc4f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps3</definition>
+        <argsstring></argsstring>
+        <name>gps3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="372" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ac887c9acf42ed7f7c3688152440af6c7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps4</definition>
+        <argsstring></argsstring>
+        <name>gps4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="373" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a130b1f6fe6bc3f128b648457df10b010" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gps5</definition>
+        <argsstring></argsstring>
+        <name>gps5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="374" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aff3d8bd7b2da805cc51487a7b3f7b6dd" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> *</type>
+        <definition>waypoint* home</definition>
+        <argsstring></argsstring>
+        <name>home</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="355" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a57668e9aeca7df485eb788b228568d06" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool homeShow</definition>
+        <argsstring></argsstring>
+        <name>homeShow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="361" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a2f2a3f2df70bdcdde196ec849469359c" prot="private" static="no" mutable="no">
+        <type>QIcon</type>
+        <definition>QIcon iconLand</definition>
+        <argsstring></argsstring>
+        <name>iconLand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="416" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8b9cd945dedf4c271116b676b3ca723f" prot="private" static="no" mutable="no">
+        <type>QIcon</type>
+        <definition>QIcon iconOff</definition>
+        <argsstring></argsstring>
+        <name>iconOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="413" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1afa3cdab37d8290f081abb0c5fb137230" prot="private" static="no" mutable="no">
+        <type>QIcon</type>
+        <definition>QIcon iconOn</definition>
+        <argsstring></argsstring>
+        <name>iconOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="414" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a0bf2452bb61d9523e3c8e53a28969dca" prot="private" static="no" mutable="no">
+        <type>QIcon</type>
+        <definition>QIcon iconTakeOff</definition>
+        <argsstring></argsstring>
+        <name>iconTakeOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="415" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5c01e4e2c721a7a21f38613839bec7b5" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* item</definition>
+        <argsstring></argsstring>
+        <name>item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="417" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a115144783225aa4ada70742197268579" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemAlt</definition>
+        <argsstring></argsstring>
+        <name>ItemAlt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="380" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a19ad1cbb017398e3607b99248ad0098e" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemHdg</definition>
+        <argsstring></argsstring>
+        <name>ItemHdg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="381" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a4d1885cf51ba7e0ad51da1563a8e956e" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemLat</definition>
+        <argsstring></argsstring>
+        <name>ItemLat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="379" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1af75d5c0cb380ae793706dd041af8469a" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemLon</definition>
+        <argsstring></argsstring>
+        <name>ItemLon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="378" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a0dfc989df25831d61f32925ac130d65d" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemMarkAlt</definition>
+        <argsstring></argsstring>
+        <name>ItemMarkAlt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="385" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aba4af01dc350023f13a5b2733213bcbf" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemMarkHdg</definition>
+        <argsstring></argsstring>
+        <name>ItemMarkHdg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="386" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a180185f28d7e25ea00f4ba8ceab18683" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemMarkLat</definition>
+        <argsstring></argsstring>
+        <name>ItemMarkLat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="384" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5d50927e21149ddeb88d4a8673c66bcd" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemMarkLon</definition>
+        <argsstring></argsstring>
+        <name>ItemMarkLon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="383" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a64a4c8982cd17f0be916f6b5f5f6054f" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemMarkNum</definition>
+        <argsstring></argsstring>
+        <name>ItemMarkNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="387" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1acf2c8407d4d41ac02f8a408056b0b4b9" prot="private" static="no" mutable="no">
+        <type>QTableWidgetItem *</type>
+        <definition>QTableWidgetItem* ItemName</definition>
+        <argsstring></argsstring>
+        <name>ItemName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="382" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1afb2ef99700e51ae71e5a92a102d32ddd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool land</definition>
+        <argsstring></argsstring>
+        <name>land</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="366" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ade9b9dbbdedb4e80abbaa2201ba82d05" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString lastMap</definition>
+        <argsstring></argsstring>
+        <name>lastMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="344" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a3de39ae285a10e6655db42a1dd146c69" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString lastMission</definition>
+        <argsstring></argsstring>
+        <name>lastMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="343" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a3dcd7d9704d0284fd91442e4cc1ec721" prot="private" static="no" mutable="no">
+        <type>QGridLayout *</type>
+        <definition>QGridLayout* layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="409" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a3745ca16b8b48ceefc6ea9a809ecb6f1" prot="private" static="no" mutable="no">
+        <type>QList&lt; GeoDataPlacemark * &gt;</type>
+        <definition>QList&lt;GeoDataPlacemark*&gt; listPlaceMark</definition>
+        <argsstring></argsstring>
+        <name>listPlaceMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="342" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a9a99ef269d152d9109dc5ec3365a0c4f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool logShow10</definition>
+        <argsstring></argsstring>
+        <name>logShow10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="360" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aaa75290829eb1659effdf2bb7d0b0122" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool logShow20</definition>
+        <argsstring></argsstring>
+        <name>logShow20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="359" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1adc5f0ca2ddba7e52119b6f23ec7c7922" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool logShow30</definition>
+        <argsstring></argsstring>
+        <name>logShow30</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="358" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a69c10d3146f1a21e3a2291d272872b3e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool logShow40</definition>
+        <argsstring></argsstring>
+        <name>logShow40</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="357" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1abd98d48200b778114566cf554b7bfc20" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_cMotorValue</definition>
+        <argsstring></argsstring>
+        <name>m_cMotorValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="354" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aaf37d61f155139509050cfaefd1a1c3d" prot="private" static="no" mutable="no">
+        <type>QListView *</type>
+        <definition>QListView* m_listView</definition>
+        <argsstring></argsstring>
+        <name>m_listView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="337" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a77a82109f09ca80aeb7c059ef6f8542d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_map</definition>
+        <argsstring></argsstring>
+        <name>m_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="349" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1abe44ff3e7525f2a803ac3cbce2fe7ba6" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt;waypoint* &gt; m_mission</definition>
+        <argsstring></argsstring>
+        <name>m_mission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="341" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a701fe8b63e4569ef364331319c38d6dd" prot="private" static="no" mutable="no">
+        <type>QComboBox *</type>
+        <definition>QComboBox* m_pComList</definition>
+        <argsstring></argsstring>
+        <name>m_pComList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="406" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8ea0fa63ef52288523cbe2d67e5ace69" prot="private" static="no" mutable="no">
+        <type>QMainWindow *</type>
+        <definition>QMainWindow* m_pComWindow</definition>
+        <argsstring></argsstring>
+        <name>m_pComWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="407" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab216d58a00329023c2ded930bc085ff1" prot="private" static="no" mutable="no">
+        <type>QLabel *</type>
+        <definition>QLabel* m_pLabel</definition>
+        <argsstring></argsstring>
+        <name>m_pLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="411" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a6cc0e75acee9ad59ae06de6371fa3c14" prot="private" static="no" mutable="no">
+        <type>QPushButton *</type>
+        <definition>QPushButton* m_pValidCom</definition>
+        <argsstring></argsstring>
+        <name>m_pValidCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="408" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a02d3f124c170b0126dab54f6e5a18dae" prot="private" static="no" mutable="no">
+        <type>RoutingManager *</type>
+        <definition>RoutingManager* manager</definition>
+        <argsstring></argsstring>
+        <name>manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="402" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aca10b4dc402bfe3d17f1fcba33544252" prot="private" static="no" mutable="no">
+        <type>RoutingManager *</type>
+        <definition>RoutingManager* manager_smallMap</definition>
+        <argsstring></argsstring>
+        <name>manager_smallMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="404" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aca4d1bee0b4e0f4f21192f73f4053ac7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool missionOpned</definition>
+        <argsstring></argsstring>
+        <name>missionOpned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="375" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1acfbe2d728c783e901976703da6ee72f8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool motorOn</definition>
+        <argsstring></argsstring>
+        <name>motorOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="364" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a67c2dd046c9c4c210cc892e5ac6e1d8b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool motorTurn</definition>
+        <argsstring></argsstring>
+        <name>motorTurn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="365" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a92b8cb43df3f03b62d33cd4e04550941" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d46/a00002" kindref="compound">ComThread</ref> *</type>
+        <definition>ComThread* myCom</definition>
+        <argsstring></argsstring>
+        <name>myCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="412" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8bd377d858dd541faf8108389a13e5ed" prot="private" static="no" mutable="no">
+        <type><ref refid="da/da0/a00009" kindref="compound">mission</ref></type>
+        <definition>mission myMission</definition>
+        <argsstring></argsstring>
+        <name>myMission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="336" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a76f11d9a0a47b94f72c2d0e77fb32240" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="353" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a3e763e8c98add9ad72c168941a42c3da" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbClickMotors</definition>
+        <argsstring></argsstring>
+        <name>nbClickMotors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="350" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab5863d8a21b807194483df01b9c48314" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool nextIsShowing</definition>
+        <argsstring></argsstring>
+        <name>nextIsShowing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="367" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a0a7415ab9ef5e631521f52e9488a57bb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int num_add_waypoint</definition>
+        <argsstring></argsstring>
+        <name>num_add_waypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="351" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab5b110200d9f08e5d10a2549f54073c9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int num_waypoint</definition>
+        <argsstring></argsstring>
+        <name>num_waypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="347" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a7106e2abc437ad981830d14176d15f09" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="348" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aad93f0b04d6ea6ac097124ef453bef9d" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* numWpText</definition>
+        <argsstring></argsstring>
+        <name>numWpText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="377" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a8c7e45250b1eb6821dd59fb2a9a016d7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="363" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a34b772573db9a14b1acb61b24709ae73" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="335" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab78e87803316b7303d0f8697c7c0f253" prot="private" static="no" mutable="no">
+        <type>GeoDataPlacemark *</type>
+        <definition>GeoDataPlacemark* place</definition>
+        <argsstring></argsstring>
+        <name>place</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="390" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5204b956a1ced61beed9e7db0e8289df" prot="private" static="no" mutable="no">
+        <type>GeoDataPlacemark *</type>
+        <definition>GeoDataPlacemark* placemarkHome</definition>
+        <argsstring></argsstring>
+        <name>placemarkHome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="392" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a0e901909eecb8e5845b160761528be11" prot="private" static="no" mutable="no">
+        <type>GeoDataPlacemark *</type>
+        <definition>GeoDataPlacemark* placemarkMark</definition>
+        <argsstring></argsstring>
+        <name>placemarkMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="393" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5023376f47e503f88c7ee3bb2c096bb1" prot="private" static="no" mutable="no">
+        <type>GeoDataPlacemark *</type>
+        <definition>GeoDataPlacemark* placemarkRPA</definition>
+        <argsstring></argsstring>
+        <name>placemarkRPA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="391" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1add3cc0473ea4a2ff453620e16ac24056" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString qstr</definition>
+        <argsstring></argsstring>
+        <name>qstr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="346" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ade0ea03ae98566eaed4f7a1f331f237a" prot="private" static="no" mutable="no">
+        <type>RouteRequest *</type>
+        <definition>RouteRequest* request</definition>
+        <argsstring></argsstring>
+        <name>request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="403" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aeae2fdde26f8ed9003c0cf66a1f25662" prot="private" static="no" mutable="no">
+        <type>RouteRequest *</type>
+        <definition>RouteRequest* request_smallMap</definition>
+        <argsstring></argsstring>
+        <name>request_smallMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="405" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1acd21fbe1057e371b610edb45a792322b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rowAdd</definition>
+        <argsstring></argsstring>
+        <name>rowAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="352" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a06e86babaf03affa3f647a3650df417e" prot="private" static="no" mutable="no">
+        <type>GeoDataStyle *</type>
+        <definition>GeoDataStyle* styleArchHome</definition>
+        <argsstring></argsstring>
+        <name>styleArchHome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="395" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ab3cb2d82e21852d6e82932d21a1b3f41" prot="private" static="no" mutable="no">
+        <type>GeoDataStyle *</type>
+        <definition>GeoDataStyle* styleArchMark</definition>
+        <argsstring></argsstring>
+        <name>styleArchMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="396" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a3ccaefd3393a3447a3a10d94ab67b0f9" prot="private" static="no" mutable="no">
+        <type>GeoDataStyle *</type>
+        <definition>GeoDataStyle* styleArchRPA</definition>
+        <argsstring></argsstring>
+        <name>styleArchRPA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="394" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a0112159b23e0eb0802db34fd9e9b398d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool takeOffClicked</definition>
+        <argsstring></argsstring>
+        <name>takeOffClicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="368" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a57c52213e1c32a667a5963a122e0a23b" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="389" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a99347d1261cfb39396fdc4965d16f515" prot="private" static="no" mutable="no">
+        <type>GeoDataCoordinates *</type>
+        <definition>GeoDataCoordinates* tempo</definition>
+        <argsstring></argsstring>
+        <name>tempo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="401" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1aa6011e6576184fcd9e0841fdffbaa826" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string textNumWaypoint</definition>
+        <argsstring></argsstring>
+        <name>textNumWaypoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="388" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a6dc041ef6a2ffb329928d2913e8344e6" prot="private" static="no" mutable="no">
+        <type>Ui::MARCS *</type>
+        <definition>Ui::MARCS* ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="334" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a549c5bee62879e34e9d21701730a2907" prot="private" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* widget</definition>
+        <argsstring></argsstring>
+        <name>widget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="410" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a98ca93f10581619f71df8f495b465cde" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt;waypoint* &gt; wpListAdd</definition>
+        <argsstring></argsstring>
+        <name>wpListAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="340" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1a5d3a9439b166172c9c871c9a723eac19" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt;waypoint* &gt; wpListOpen</definition>
+        <argsstring></argsstring>
+        <name>wpListOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="339" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dee/a00008_1ad11e2550a13b49086c06cf1c1dbf0a45" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="d7/d7a/a00016" kindref="compound">waypoint</ref> * &gt;</type>
+        <definition>QList&lt;waypoint* &gt; wpListSave</definition>
+        <argsstring></argsstring>
+        <name>wpListSave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="338" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/dee/a00008_1ae5f86b696629408c70e44a87d08ec5ac" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MARCS</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>MARCS</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="66" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="6" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dee/a00008_1a7b0ebe0223d450444ace06a39fb60237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MARCS</definition>
+        <argsstring>()</argsstring>
+        <name>~MARCS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="67" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="160" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="d4/dee/a00008_1ac34fbec63046ddaebc974f824ecd2fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clickOff</definition>
+        <argsstring>()</argsstring>
+        <name>clickOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d4/dee/a00008_1a42ef85a38e0a61330cd585794bf3cfaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clickOn</definition>
+        <argsstring>()</argsstring>
+        <name>clickOn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d4/dee/a00008_1ad24d2f849168e68c2a9534a017adbea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void landRPA</definition>
+        <argsstring>()</argsstring>
+        <name>landRPA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d4/dee/a00008_1a6fffddb34a63d6cbf6e9362b65391d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void next</definition>
+        <argsstring>(double lon, double lat, double alt, double num)</argsstring>
+        <name>next</name>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alt</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="d4/dee/a00008_1a0f430392f18caaad506a00497cee44e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void takeOff</definition>
+        <argsstring>()</argsstring>
+        <name>takeOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="d4/dee/a00008_1a070a5570eaeac36ef13715ca18be3ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addPoint</definition>
+        <argsstring>(qreal lon, qreal lat, GeoDataCoordinates::Unit)</argsstring>
+        <name>addPoint</name>
+        <param>
+          <type>qreal</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>GeoDataCoordinates::Unit</type>
+        </param>
+        <briefdescription>
+<para>add point to map </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>qreal , lat qreal, GeoDataCoordinates::Unit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="139" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="356" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1afa417655857cee8564cd3f54b1491e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void batteryLevel</definition>
+        <argsstring>(double p_pValue)</argsstring>
+        <name>batteryLevel</name>
+        <param>
+          <type>double</type>
+          <declname>p_pValue</declname>
+        </param>
+        <briefdescription>
+<para>get the battery Level; </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="216" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="968" bodyend="1288"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ac413685926a24cbbde53d1f3706a3093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearMission</definition>
+        <argsstring>()</argsstring>
+        <name>clearMission</name>
+        <briefdescription>
+<para>clear mission from the map view </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="146" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="199" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a5ae591df94fc66ccb85cbb6565368bca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>close the application </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="330" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="508" bodyend="511"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a5de2bd09256045c0b96e5a0be780fa85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void closeEvent</definition>
+        <argsstring>(QCloseEvent *event)</argsstring>
+        <name>closeEvent</name>
+        <param>
+          <type>QCloseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Close the window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QCloseEvent </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="202" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="898" bodyend="901"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a30cffb4d3df6db10fe0b7257fec5ad49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createAddMark</definition>
+        <argsstring>(double lon, double lat, GeoDataCoordinates::Unit)</argsstring>
+        <name>createAddMark</name>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>GeoDataCoordinates::Unit</type>
+        </param>
+        <briefdescription>
+<para>Add the Add Mark presentation on the map with position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double , lat double , GeoDataCoordinates::Unit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="265" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1420" bodyend="1444"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a53f27da4e8969707ba7e8bc95c45a440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createHomeMark</definition>
+        <argsstring>(double lon, double lat, GeoDataCoordinates::Unit)</argsstring>
+        <name>createHomeMark</name>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>GeoDataCoordinates::Unit</type>
+        </param>
+        <briefdescription>
+<para>Add the HOME presentation on the map with position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double , lat double , GeoDataCoordinates::Unit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="251" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1398" bodyend="1412"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a99152e2e9df9d3d1019a5646eb925628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createRpaMark</definition>
+        <argsstring>(double hdg, double lon, double lat, GeoDataCoordinates::Unit)</argsstring>
+        <name>createRpaMark</name>
+        <param>
+          <type>double</type>
+          <declname>hdg</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>GeoDataCoordinates::Unit</type>
+        </param>
+        <briefdescription>
+<para>Add the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> presentation on the map with heading and position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hdg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double , lon double , lat double , GeoDataCoordinates::Unit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="237" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1370" bodyend="1389"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1aa3b30bf8fcdfea266c686e066cb897e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createStyleAddMark</definition>
+        <argsstring>(GeoDataStyle *style)</argsstring>
+        <name>createStyleAddMark</name>
+        <param>
+          <type>GeoDataStyle *</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Create the Style of the Add Mark presentation on the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GeoDataStyle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="258" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1414" bodyend="1418"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1aadf95c750130ed9401f15eed3d2c1032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createStyleHome</definition>
+        <argsstring>(GeoDataStyle *style)</argsstring>
+        <name>createStyleHome</name>
+        <param>
+          <type>GeoDataStyle *</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+<para>Create the Style of the HOME presentation on the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GeoDataStyle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="244" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1392" bodyend="1396"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1aa4eac90b52f2016336a952d8b2e4f7a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createStyleRPA</definition>
+        <argsstring>(GeoDataStyle *style, double hdg)</argsstring>
+        <name>createStyleRPA</name>
+        <param>
+          <type>GeoDataStyle *</type>
+          <declname>style</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>hdg</declname>
+        </param>
+        <briefdescription>
+<para>Create the Style of the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> presentation on the map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>style</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GeoDataStyle, hdg double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="230" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1310" bodyend="1368"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a9231d60467923911b4ba0d167004588d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void editWaypoint</definition>
+        <argsstring>()</argsstring>
+        <name>editWaypoint</name>
+        <briefdescription>
+<para>open the list of the waypoints </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="153" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="540" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a7e07a9d88a66fadd639dec3139cf9f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void finishEditData</definition>
+        <argsstring>()</argsstring>
+        <name>finishEditData</name>
+        <briefdescription>
+<para>close the edit waypoints view </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="174" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="634" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a714bf5396d7a420bc74b1ee7a00cc256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fly</definition>
+        <argsstring>()</argsstring>
+        <name>fly</name>
+        <briefdescription>
+<para>take off the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="279" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1459" bodyend="1474"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a168e15b41fb3bd5c3eff1395025dafa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void goTo</definition>
+        <argsstring>()</argsstring>
+        <name>goTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="309" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1816" bodyend="1818"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a5f35f3cac94851520f34bea03bd2642b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPSLevel</definition>
+        <argsstring>(int p_value)</argsstring>
+        <name>GPSLevel</name>
+        <param>
+          <type>int</type>
+          <declname>p_value</declname>
+        </param>
+        <briefdescription>
+<para>get The GPS Level </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="307" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1516" bodyend="1641"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a3ba779451a386238417fbab60f0d4db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadData</definition>
+        <argsstring>()</argsstring>
+        <name>loadData</name>
+        <briefdescription>
+<para>load waypoint data from the index </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="160" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="575" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a489b8f1d983d32ae8b2e5d9e29aff63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openMission</definition>
+        <argsstring>()</argsstring>
+        <name>openMission</name>
+        <briefdescription>
+<para>Open new mission from Kml File. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="125" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="239" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a7225d8cbcace3eaee988a9d7724c0dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewMap</definition>
+        <argsstring>()</argsstring>
+        <name>openNewMap</name>
+        <briefdescription>
+<para>Load map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="104" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="513" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a7d0835d5762ca85bc460aeeabca018c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowData</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowData</name>
+        <briefdescription>
+<para>Show the Data window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="90" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="418" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a688b7983c0da36424d5b4d10a0c007f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowMain</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowMain</name>
+        <briefdescription>
+<para>Show the main window Map. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="83" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="387" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a03f5e63773125e14f1e32c94420ff7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openNewWindowVideo</definition>
+        <argsstring>()</argsstring>
+        <name>openNewWindowVideo</name>
+        <briefdescription>
+<para>Show the video window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="97" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="450" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a14a8662407eb95fe2c478c0cee351de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveEditData</definition>
+        <argsstring>()</argsstring>
+        <name>saveEditData</name>
+        <briefdescription>
+<para>save edition to the XML file source of the mission </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="167" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="608" bodyend="632"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a816a9f0cf14cf70a29662387914071f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveMission</definition>
+        <argsstring>()</argsstring>
+        <name>saveMission</name>
+        <briefdescription>
+<para>Save mission to Kml File. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="132" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="306" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1af5b10f1aa2f28ed0c42d4f47efb693e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHeight</definition>
+        <argsstring>(double p_dHeight)</argsstring>
+        <name>setHeight</name>
+        <param>
+          <type>double</type>
+          <declname>p_dHeight</declname>
+        </param>
+        <briefdescription>
+<para>set <ref refid="df/d86/a00012" kindref="compound">RPA</ref> height field </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_dHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="272" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1290" bodyend="1308"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ab2e99d7a9834bf18fed0102994e933d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setTableRPA</definition>
+        <argsstring>()</argsstring>
+        <name>setTableRPA</name>
+        <briefdescription>
+<para>add information to <ref refid="df/d86/a00012" kindref="compound">RPA</ref> table </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="316" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1643" bodyend="1690"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a13c530c7730eed3b343371e9212d34dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showConnectDialog</definition>
+        <argsstring>()</argsstring>
+        <name>showConnectDialog</name>
+        <briefdescription>
+<para>show the COM connect dialog </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="188" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="880" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a35f9f0904259437c4ae21b41c4f759c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showEditWaypoint</definition>
+        <argsstring>(bool show)</argsstring>
+        <name>showEditWaypoint</name>
+        <param>
+          <type>bool</type>
+          <declname>show</declname>
+        </param>
+        <briefdescription>
+<para>show the waypoint edition area </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>show</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="181" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="646" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a3bb145fd73ded645d3d83fb8c925f0f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showList</definition>
+        <argsstring>()</argsstring>
+        <name>showList</name>
+        <briefdescription>
+<para>show log list </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="118" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="226" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a5ea54df7929dde11c949bdc5b14c8e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showLog</definition>
+        <argsstring>()</argsstring>
+        <name>showLog</name>
+        <briefdescription>
+<para>show Log page </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="323" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="483" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1abadb8f70e876fb2365f2efbfb7993d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void startMotors</definition>
+        <argsstring>()</argsstring>
+        <name>startMotors</name>
+        <briefdescription>
+<para>start the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> engine </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="209" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="921" bodyend="948"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ab6d0aaa6d4db85f628c1eba5581d4c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stopFly</definition>
+        <argsstring>()</argsstring>
+        <name>stopFly</name>
+        <briefdescription>
+<para>land the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="300" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1476" bodyend="1491"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a5260da8b51f5d97f6cf2a9ba11d1aee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stopMotors</definition>
+        <argsstring>()</argsstring>
+        <name>stopMotors</name>
+        <briefdescription>
+<para>stop the <ref refid="df/d86/a00012" kindref="compound">RPA</ref> engine </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="223" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="950" bodyend="966"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ab8446a0b12406c07562af271392ab19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void switchToMap</definition>
+        <argsstring>()</argsstring>
+        <name>switchToMap</name>
+        <briefdescription>
+<para>switch view between the map and the video by clicking on map </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="111" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="535" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1af93d0e51ba16309b00d132f9d082e195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateMotors</definition>
+        <argsstring>(char p_cValue)</argsstring>
+        <name>updateMotors</name>
+        <param>
+          <type>char</type>
+          <declname>p_cValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="308" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1787" bodyend="1814"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ad278d53fa6cd8d5aa3e4d426304f5599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void validCom</definition>
+        <argsstring>()</argsstring>
+        <name>validCom</name>
+        <briefdescription>
+<para>send the Serial COM </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="195" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="915" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a63935eb4cae350a6d0c2eafc757d81a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XbeeConnect</definition>
+        <argsstring>()</argsstring>
+        <name>XbeeConnect</name>
+        <briefdescription>
+<para>Xbee reconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="293" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1739" bodyend="1761"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ac3fe13950de410cff977e0fdee01ea0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void XbeeDisconnect</definition>
+        <argsstring>()</argsstring>
+        <name>XbeeDisconnect</name>
+        <briefdescription>
+<para>Xbee disconnected. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="286" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1762" bodyend="1785"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="d4/dee/a00008_1a7423cd21351ab60d8c1595cc3507ae1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_addMark_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_addMark_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="428" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1492" bodyend="1514"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ae2262abf5379285f85c34229af42b812" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_AddToMission_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_AddToMission_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="429" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1691" bodyend="1719"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a7dbd520ddb1bbca579c37dad041d9e44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_comboBox_ListWaypoint_currentIndexChanged</definition>
+        <argsstring>(int index)</argsstring>
+        <name>on_comboBox_ListWaypoint_currentIndexChanged</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="424" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="685" bodyend="718"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a067416ef5578179bf47c3fe033a684c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_Delete_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_Delete_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="425" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="720" bodyend="836"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a169c58f3685597b7668959767cf60a6e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_excute_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_excute_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="427" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1446" bodyend="1457"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1adb602356e6ac53e3a5923867a4361f32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_lineEdit_Alt_textChanged</definition>
+        <argsstring>(QString)</argsstring>
+        <name>on_lineEdit_Alt_textChanged</name>
+        <param>
+          <type>QString</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="423" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="838" bodyend="850"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ae95e08c710f85086e80e86f852af4daa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_lineEdit_HDG_textEdited</definition>
+        <argsstring>(QString)</argsstring>
+        <name>on_lineEdit_HDG_textEdited</name>
+        <param>
+          <type>QString</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="422" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="852" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1aff2880fcc3504f9e236a903dd01cdaf7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_NextWaypoint_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_NextWaypoint_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="430" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="1720" bodyend="1738"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1ad270426ee64b4de1bbead0729c5e9e23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_start_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_start_button_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="421" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="903" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="slot" id="d4/dee/a00008_1a6589d3da677fca0d65deb54eadf179b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on_timeEdit_Mission_timeChanged</definition>
+        <argsstring>(const QTime &amp;date)</argsstring>
+        <name>on_timeEdit_Mission_timeChanged</name>
+        <param>
+          <type>const QTime &amp;</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="426" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.cpp" bodystart="866" bodyend="878"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="146">
+        <label>MARCS</label>
+        <link refid="d4/dee/a00008"/>
+        <childnode refid="147" relation="usage">
+          <edgelabel>myCom</edgelabel>
+        </childnode>
+        <childnode refid="149" relation="usage">
+          <edgelabel>home</edgelabel>
+        </childnode>
+        <childnode refid="150" relation="usage">
+          <edgelabel>myMission</edgelabel>
+        </childnode>
+      </node>
+      <node id="150">
+        <label>mission</label>
+        <link refid="da/da0/a00009"/>
+      </node>
+      <node id="149">
+        <label>waypoint</label>
+        <link refid="d7/d7a/a00016"/>
+      </node>
+      <node id="147">
+        <label>ComThread</label>
+        <link refid="d7/d46/a00002"/>
+        <childnode refid="148" relation="usage">
+          <edgelabel>wp</edgelabel>
+        </childnode>
+      </node>
+      <node id="148">
+        <label>WAYPOINT</label>
+        <link refid="dd/d42/a00109"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" line="62" column="1" bodyfile="C:/Users/mboussai/Desktop/Mohamed/Qt Projects/MARCS/marcs.h" bodystart="61" bodyend="431"/>
+    <listofallmembers>
+      <member refid="d4/dee/a00008_1a070a5570eaeac36ef13715ca18be3ec9" prot="public" virt="non-virtual"><scope>MARCS</scope><name>addPoint</name></member>
+      <member refid="d4/dee/a00008_1aef1d7c2fea653fb1d729b2f40b2c2c53" prot="private" virt="non-virtual"><scope>MARCS</scope><name>affichageList</name></member>
+      <member refid="d4/dee/a00008_1afa417655857cee8564cd3f54b1491e98" prot="public" virt="non-virtual"><scope>MARCS</scope><name>batteryLevel</name></member>
+      <member refid="d4/dee/a00008_1a4ea0f7bc01af5b4359d7be6998600e13" prot="private" virt="non-virtual"><scope>MARCS</scope><name>clear_mission</name></member>
+      <member refid="d4/dee/a00008_1ac413685926a24cbbde53d1f3706a3093" prot="public" virt="non-virtual"><scope>MARCS</scope><name>clearMission</name></member>
+      <member refid="d4/dee/a00008_1ac34fbec63046ddaebc974f824ecd2fdc" prot="public" virt="non-virtual"><scope>MARCS</scope><name>clickOff</name></member>
+      <member refid="d4/dee/a00008_1a42ef85a38e0a61330cd585794bf3cfaf" prot="public" virt="non-virtual"><scope>MARCS</scope><name>clickOn</name></member>
+      <member refid="d4/dee/a00008_1a5ae591df94fc66ccb85cbb6565368bca" prot="public" virt="non-virtual"><scope>MARCS</scope><name>close</name></member>
+      <member refid="d4/dee/a00008_1a5de2bd09256045c0b96e5a0be780fa85" prot="public" virt="non-virtual"><scope>MARCS</scope><name>closeEvent</name></member>
+      <member refid="d4/dee/a00008_1ab36823025f12a809217f7771125658c2" prot="private" virt="non-virtual"><scope>MARCS</scope><name>connected</name></member>
+      <member refid="d4/dee/a00008_1a30cffb4d3df6db10fe0b7257fec5ad49" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createAddMark</name></member>
+      <member refid="d4/dee/a00008_1a53f27da4e8969707ba7e8bc95c45a440" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createHomeMark</name></member>
+      <member refid="d4/dee/a00008_1a99152e2e9df9d3d1019a5646eb925628" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createRpaMark</name></member>
+      <member refid="d4/dee/a00008_1aa3b30bf8fcdfea266c686e066cb897e1" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createStyleAddMark</name></member>
+      <member refid="d4/dee/a00008_1aadf95c750130ed9401f15eed3d2c1032" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createStyleHome</name></member>
+      <member refid="d4/dee/a00008_1aa4eac90b52f2016336a952d8b2e4f7a1" prot="public" virt="non-virtual"><scope>MARCS</scope><name>createStyleRPA</name></member>
+      <member refid="d4/dee/a00008_1a8b0f68f97ddd8c30ad31efa6919778ee" prot="private" virt="non-virtual"><scope>MARCS</scope><name>document</name></member>
+      <member refid="d4/dee/a00008_1a5485f3186e5ee43d5cb40af7a555bb7e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>documentHome</name></member>
+      <member refid="d4/dee/a00008_1a9480c34bf64d45bdea5c4d162eb2bfd4" prot="private" virt="non-virtual"><scope>MARCS</scope><name>documentMark</name></member>
+      <member refid="d4/dee/a00008_1ab48a9573e6326f95a2bd888734fa7827" prot="private" virt="non-virtual"><scope>MARCS</scope><name>documentRPA</name></member>
+      <member refid="d4/dee/a00008_1a9231d60467923911b4ba0d167004588d" prot="public" virt="non-virtual"><scope>MARCS</scope><name>editWaypoint</name></member>
+      <member refid="d4/dee/a00008_1ad4e491eb87f63d7a4b84571827bd6aed" prot="private" virt="non-virtual"><scope>MARCS</scope><name>fichier</name></member>
+      <member refid="d4/dee/a00008_1ae55f476d1700ade204b3038b8c37f8ba" prot="private" virt="non-virtual"><scope>MARCS</scope><name>fileOpened</name></member>
+      <member refid="d4/dee/a00008_1a7e07a9d88a66fadd639dec3139cf9f4c" prot="public" virt="non-virtual"><scope>MARCS</scope><name>finishEditData</name></member>
+      <member refid="d4/dee/a00008_1a714bf5396d7a420bc74b1ee7a00cc256" prot="public" virt="non-virtual"><scope>MARCS</scope><name>fly</name></member>
+      <member refid="d4/dee/a00008_1a168e15b41fb3bd5c3eff1395025dafa9" prot="public" virt="non-virtual"><scope>MARCS</scope><name>goTo</name></member>
+      <member refid="d4/dee/a00008_1ae4bd1023a83b82ebd7a9d6687813ffce" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps0</name></member>
+      <member refid="d4/dee/a00008_1a937eca780523827d07c23d8199f5034c" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps1</name></member>
+      <member refid="d4/dee/a00008_1a5999aa93a3f88a1982f3a87c59f1fd98" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps2</name></member>
+      <member refid="d4/dee/a00008_1a8bc76fea83b1435f743bc2aeb7f6dc4f" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps3</name></member>
+      <member refid="d4/dee/a00008_1ac887c9acf42ed7f7c3688152440af6c7" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps4</name></member>
+      <member refid="d4/dee/a00008_1a130b1f6fe6bc3f128b648457df10b010" prot="private" virt="non-virtual"><scope>MARCS</scope><name>gps5</name></member>
+      <member refid="d4/dee/a00008_1a5f35f3cac94851520f34bea03bd2642b" prot="public" virt="non-virtual"><scope>MARCS</scope><name>GPSLevel</name></member>
+      <member refid="d4/dee/a00008_1aff3d8bd7b2da805cc51487a7b3f7b6dd" prot="private" virt="non-virtual"><scope>MARCS</scope><name>home</name></member>
+      <member refid="d4/dee/a00008_1a57668e9aeca7df485eb788b228568d06" prot="private" virt="non-virtual"><scope>MARCS</scope><name>homeShow</name></member>
+      <member refid="d4/dee/a00008_1a2f2a3f2df70bdcdde196ec849469359c" prot="private" virt="non-virtual"><scope>MARCS</scope><name>iconLand</name></member>
+      <member refid="d4/dee/a00008_1a8b9cd945dedf4c271116b676b3ca723f" prot="private" virt="non-virtual"><scope>MARCS</scope><name>iconOff</name></member>
+      <member refid="d4/dee/a00008_1afa3cdab37d8290f081abb0c5fb137230" prot="private" virt="non-virtual"><scope>MARCS</scope><name>iconOn</name></member>
+      <member refid="d4/dee/a00008_1a0bf2452bb61d9523e3c8e53a28969dca" prot="private" virt="non-virtual"><scope>MARCS</scope><name>iconTakeOff</name></member>
+      <member refid="d4/dee/a00008_1a5c01e4e2c721a7a21f38613839bec7b5" prot="private" virt="non-virtual"><scope>MARCS</scope><name>item</name></member>
+      <member refid="d4/dee/a00008_1a115144783225aa4ada70742197268579" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemAlt</name></member>
+      <member refid="d4/dee/a00008_1a19ad1cbb017398e3607b99248ad0098e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemHdg</name></member>
+      <member refid="d4/dee/a00008_1a4d1885cf51ba7e0ad51da1563a8e956e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemLat</name></member>
+      <member refid="d4/dee/a00008_1af75d5c0cb380ae793706dd041af8469a" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemLon</name></member>
+      <member refid="d4/dee/a00008_1a0dfc989df25831d61f32925ac130d65d" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemMarkAlt</name></member>
+      <member refid="d4/dee/a00008_1aba4af01dc350023f13a5b2733213bcbf" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemMarkHdg</name></member>
+      <member refid="d4/dee/a00008_1a180185f28d7e25ea00f4ba8ceab18683" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemMarkLat</name></member>
+      <member refid="d4/dee/a00008_1a5d50927e21149ddeb88d4a8673c66bcd" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemMarkLon</name></member>
+      <member refid="d4/dee/a00008_1a64a4c8982cd17f0be916f6b5f5f6054f" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemMarkNum</name></member>
+      <member refid="d4/dee/a00008_1acf2c8407d4d41ac02f8a408056b0b4b9" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ItemName</name></member>
+      <member refid="d4/dee/a00008_1afb2ef99700e51ae71e5a92a102d32ddd" prot="private" virt="non-virtual"><scope>MARCS</scope><name>land</name></member>
+      <member refid="d4/dee/a00008_1ad24d2f849168e68c2a9534a017adbea2" prot="public" virt="non-virtual"><scope>MARCS</scope><name>landRPA</name></member>
+      <member refid="d4/dee/a00008_1ade9b9dbbdedb4e80abbaa2201ba82d05" prot="private" virt="non-virtual"><scope>MARCS</scope><name>lastMap</name></member>
+      <member refid="d4/dee/a00008_1a3de39ae285a10e6655db42a1dd146c69" prot="private" virt="non-virtual"><scope>MARCS</scope><name>lastMission</name></member>
+      <member refid="d4/dee/a00008_1a3dcd7d9704d0284fd91442e4cc1ec721" prot="private" virt="non-virtual"><scope>MARCS</scope><name>layout</name></member>
+      <member refid="d4/dee/a00008_1a3745ca16b8b48ceefc6ea9a809ecb6f1" prot="private" virt="non-virtual"><scope>MARCS</scope><name>listPlaceMark</name></member>
+      <member refid="d4/dee/a00008_1a3ba779451a386238417fbab60f0d4db0" prot="public" virt="non-virtual"><scope>MARCS</scope><name>loadData</name></member>
+      <member refid="d4/dee/a00008_1a9a99ef269d152d9109dc5ec3365a0c4f" prot="private" virt="non-virtual"><scope>MARCS</scope><name>logShow10</name></member>
+      <member refid="d4/dee/a00008_1aaa75290829eb1659effdf2bb7d0b0122" prot="private" virt="non-virtual"><scope>MARCS</scope><name>logShow20</name></member>
+      <member refid="d4/dee/a00008_1adc5f0ca2ddba7e52119b6f23ec7c7922" prot="private" virt="non-virtual"><scope>MARCS</scope><name>logShow30</name></member>
+      <member refid="d4/dee/a00008_1a69c10d3146f1a21e3a2291d272872b3e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>logShow40</name></member>
+      <member refid="d4/dee/a00008_1abd98d48200b778114566cf554b7bfc20" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_cMotorValue</name></member>
+      <member refid="d4/dee/a00008_1aaf37d61f155139509050cfaefd1a1c3d" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_listView</name></member>
+      <member refid="d4/dee/a00008_1a77a82109f09ca80aeb7c059ef6f8542d" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_map</name></member>
+      <member refid="d4/dee/a00008_1abe44ff3e7525f2a803ac3cbce2fe7ba6" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_mission</name></member>
+      <member refid="d4/dee/a00008_1a701fe8b63e4569ef364331319c38d6dd" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_pComList</name></member>
+      <member refid="d4/dee/a00008_1a8ea0fa63ef52288523cbe2d67e5ace69" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_pComWindow</name></member>
+      <member refid="d4/dee/a00008_1ab216d58a00329023c2ded930bc085ff1" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_pLabel</name></member>
+      <member refid="d4/dee/a00008_1a6cc0e75acee9ad59ae06de6371fa3c14" prot="private" virt="non-virtual"><scope>MARCS</scope><name>m_pValidCom</name></member>
+      <member refid="d4/dee/a00008_1a02d3f124c170b0126dab54f6e5a18dae" prot="private" virt="non-virtual"><scope>MARCS</scope><name>manager</name></member>
+      <member refid="d4/dee/a00008_1aca10b4dc402bfe3d17f1fcba33544252" prot="private" virt="non-virtual"><scope>MARCS</scope><name>manager_smallMap</name></member>
+      <member refid="d4/dee/a00008_1ae5f86b696629408c70e44a87d08ec5ac" prot="public" virt="non-virtual"><scope>MARCS</scope><name>MARCS</name></member>
+      <member refid="d4/dee/a00008_1aca4d1bee0b4e0f4f21192f73f4053ac7" prot="private" virt="non-virtual"><scope>MARCS</scope><name>missionOpned</name></member>
+      <member refid="d4/dee/a00008_1acfbe2d728c783e901976703da6ee72f8" prot="private" virt="non-virtual"><scope>MARCS</scope><name>motorOn</name></member>
+      <member refid="d4/dee/a00008_1a67c2dd046c9c4c210cc892e5ac6e1d8b" prot="private" virt="non-virtual"><scope>MARCS</scope><name>motorTurn</name></member>
+      <member refid="d4/dee/a00008_1a92b8cb43df3f03b62d33cd4e04550941" prot="private" virt="non-virtual"><scope>MARCS</scope><name>myCom</name></member>
+      <member refid="d4/dee/a00008_1a8bd377d858dd541faf8108389a13e5ed" prot="private" virt="non-virtual"><scope>MARCS</scope><name>myMission</name></member>
+      <member refid="d4/dee/a00008_1a76f11d9a0a47b94f72c2d0e77fb32240" prot="private" virt="non-virtual"><scope>MARCS</scope><name>n</name></member>
+      <member refid="d4/dee/a00008_1a3e763e8c98add9ad72c168941a42c3da" prot="private" virt="non-virtual"><scope>MARCS</scope><name>nbClickMotors</name></member>
+      <member refid="d4/dee/a00008_1a6fffddb34a63d6cbf6e9362b65391d17" prot="public" virt="non-virtual"><scope>MARCS</scope><name>next</name></member>
+      <member refid="d4/dee/a00008_1ab5863d8a21b807194483df01b9c48314" prot="private" virt="non-virtual"><scope>MARCS</scope><name>nextIsShowing</name></member>
+      <member refid="d4/dee/a00008_1a0a7415ab9ef5e631521f52e9488a57bb" prot="private" virt="non-virtual"><scope>MARCS</scope><name>num_add_waypoint</name></member>
+      <member refid="d4/dee/a00008_1ab5b110200d9f08e5d10a2549f54073c9" prot="private" virt="non-virtual"><scope>MARCS</scope><name>num_waypoint</name></member>
+      <member refid="d4/dee/a00008_1a7106e2abc437ad981830d14176d15f09" prot="private" virt="non-virtual"><scope>MARCS</scope><name>number</name></member>
+      <member refid="d4/dee/a00008_1aad93f0b04d6ea6ac097124ef453bef9d" prot="private" virt="non-virtual"><scope>MARCS</scope><name>numWpText</name></member>
+      <member refid="d4/dee/a00008_1a7423cd21351ab60d8c1595cc3507ae1c" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_addMark_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1ae2262abf5379285f85c34229af42b812" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_AddToMission_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1a7dbd520ddb1bbca579c37dad041d9e44" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_comboBox_ListWaypoint_currentIndexChanged</name></member>
+      <member refid="d4/dee/a00008_1a067416ef5578179bf47c3fe033a684c1" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_Delete_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1a169c58f3685597b7668959767cf60a6e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_excute_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1adb602356e6ac53e3a5923867a4361f32" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_lineEdit_Alt_textChanged</name></member>
+      <member refid="d4/dee/a00008_1ae95e08c710f85086e80e86f852af4daa" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_lineEdit_HDG_textEdited</name></member>
+      <member refid="d4/dee/a00008_1aff2880fcc3504f9e236a903dd01cdaf7" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_NextWaypoint_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1ad270426ee64b4de1bbead0729c5e9e23" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_start_button_clicked</name></member>
+      <member refid="d4/dee/a00008_1a6589d3da677fca0d65deb54eadf179b8" prot="private" virt="non-virtual"><scope>MARCS</scope><name>on_timeEdit_Mission_timeChanged</name></member>
+      <member refid="d4/dee/a00008_1a8c7e45250b1eb6821dd59fb2a9a016d7" prot="private" virt="non-virtual"><scope>MARCS</scope><name>open</name></member>
+      <member refid="d4/dee/a00008_1a489b8f1d983d32ae8b2e5d9e29aff63a" prot="public" virt="non-virtual"><scope>MARCS</scope><name>openMission</name></member>
+      <member refid="d4/dee/a00008_1a7225d8cbcace3eaee988a9d7724c0dbd" prot="public" virt="non-virtual"><scope>MARCS</scope><name>openNewMap</name></member>
+      <member refid="d4/dee/a00008_1a7d0835d5762ca85bc460aeeabca018c7" prot="public" virt="non-virtual"><scope>MARCS</scope><name>openNewWindowData</name></member>
+      <member refid="d4/dee/a00008_1a688b7983c0da36424d5b4d10a0c007f7" prot="public" virt="non-virtual"><scope>MARCS</scope><name>openNewWindowMain</name></member>
+      <member refid="d4/dee/a00008_1a03f5e63773125e14f1e32c94420ff7bf" prot="public" virt="non-virtual"><scope>MARCS</scope><name>openNewWindowVideo</name></member>
+      <member refid="d4/dee/a00008_1a34b772573db9a14b1acb61b24709ae73" prot="private" virt="non-virtual"><scope>MARCS</scope><name>path</name></member>
+      <member refid="d4/dee/a00008_1ab78e87803316b7303d0f8697c7c0f253" prot="private" virt="non-virtual"><scope>MARCS</scope><name>place</name></member>
+      <member refid="d4/dee/a00008_1a5204b956a1ced61beed9e7db0e8289df" prot="private" virt="non-virtual"><scope>MARCS</scope><name>placemarkHome</name></member>
+      <member refid="d4/dee/a00008_1a0e901909eecb8e5845b160761528be11" prot="private" virt="non-virtual"><scope>MARCS</scope><name>placemarkMark</name></member>
+      <member refid="d4/dee/a00008_1a5023376f47e503f88c7ee3bb2c096bb1" prot="private" virt="non-virtual"><scope>MARCS</scope><name>placemarkRPA</name></member>
+      <member refid="d4/dee/a00008_1add3cc0473ea4a2ff453620e16ac24056" prot="private" virt="non-virtual"><scope>MARCS</scope><name>qstr</name></member>
+      <member refid="d4/dee/a00008_1ade0ea03ae98566eaed4f7a1f331f237a" prot="private" virt="non-virtual"><scope>MARCS</scope><name>request</name></member>
+      <member refid="d4/dee/a00008_1aeae2fdde26f8ed9003c0cf66a1f25662" prot="private" virt="non-virtual"><scope>MARCS</scope><name>request_smallMap</name></member>
+      <member refid="d4/dee/a00008_1acd21fbe1057e371b610edb45a792322b" prot="private" virt="non-virtual"><scope>MARCS</scope><name>rowAdd</name></member>
+      <member refid="d4/dee/a00008_1a14a8662407eb95fe2c478c0cee351de5" prot="public" virt="non-virtual"><scope>MARCS</scope><name>saveEditData</name></member>
+      <member refid="d4/dee/a00008_1a816a9f0cf14cf70a29662387914071f5" prot="public" virt="non-virtual"><scope>MARCS</scope><name>saveMission</name></member>
+      <member refid="d4/dee/a00008_1af5b10f1aa2f28ed0c42d4f47efb693e9" prot="public" virt="non-virtual"><scope>MARCS</scope><name>setHeight</name></member>
+      <member refid="d4/dee/a00008_1ab2e99d7a9834bf18fed0102994e933d3" prot="public" virt="non-virtual"><scope>MARCS</scope><name>setTableRPA</name></member>
+      <member refid="d4/dee/a00008_1a13c530c7730eed3b343371e9212d34dc" prot="public" virt="non-virtual"><scope>MARCS</scope><name>showConnectDialog</name></member>
+      <member refid="d4/dee/a00008_1a35f9f0904259437c4ae21b41c4f759c1" prot="public" virt="non-virtual"><scope>MARCS</scope><name>showEditWaypoint</name></member>
+      <member refid="d4/dee/a00008_1a3bb145fd73ded645d3d83fb8c925f0f8" prot="public" virt="non-virtual"><scope>MARCS</scope><name>showList</name></member>
+      <member refid="d4/dee/a00008_1a5ea54df7929dde11c949bdc5b14c8e54" prot="public" virt="non-virtual"><scope>MARCS</scope><name>showLog</name></member>
+      <member refid="d4/dee/a00008_1abadb8f70e876fb2365f2efbfb7993d57" prot="public" virt="non-virtual"><scope>MARCS</scope><name>startMotors</name></member>
+      <member refid="d4/dee/a00008_1ab6d0aaa6d4db85f628c1eba5581d4c95" prot="public" virt="non-virtual"><scope>MARCS</scope><name>stopFly</name></member>
+      <member refid="d4/dee/a00008_1a5260da8b51f5d97f6cf2a9ba11d1aee1" prot="public" virt="non-virtual"><scope>MARCS</scope><name>stopMotors</name></member>
+      <member refid="d4/dee/a00008_1a06e86babaf03affa3f647a3650df417e" prot="private" virt="non-virtual"><scope>MARCS</scope><name>styleArchHome</name></member>
+      <member refid="d4/dee/a00008_1ab3cb2d82e21852d6e82932d21a1b3f41" prot="private" virt="non-virtual"><scope>MARCS</scope><name>styleArchMark</name></member>
+      <member refid="d4/dee/a00008_1a3ccaefd3393a3447a3a10d94ab67b0f9" prot="private" virt="non-virtual"><scope>MARCS</scope><name>styleArchRPA</name></member>
+      <member refid="d4/dee/a00008_1ab8446a0b12406c07562af271392ab19b" prot="public" virt="non-virtual"><scope>MARCS</scope><name>switchToMap</name></member>
+      <member refid="d4/dee/a00008_1a0f430392f18caaad506a00497cee44e1" prot="public" virt="non-virtual"><scope>MARCS</scope><name>takeOff</name></member>
+      <member refid="d4/dee/a00008_1a0112159b23e0eb0802db34fd9e9b398d" prot="private" virt="non-virtual"><scope>MARCS</scope><name>takeOffClicked</name></member>
+      <member refid="d4/dee/a00008_1a57c52213e1c32a667a5963a122e0a23b" prot="private" virt="non-virtual"><scope>MARCS</scope><name>temp</name></member>
+      <member refid="d4/dee/a00008_1a99347d1261cfb39396fdc4965d16f515" prot="private" virt="non-virtual"><scope>MARCS</scope><name>tempo</name></member>
+      <member refid="d4/dee/a00008_1aa6011e6576184fcd9e0841fdffbaa826" prot="private" virt="non-virtual"><scope>MARCS</scope><name>textNumWaypoint</name></member>
+      <member refid="d4/dee/a00008_1a6dc041ef6a2ffb329928d2913e8344e6" prot="private" virt="non-virtual"><scope>MARCS</scope><name>ui</name></member>
+      <member refid="d4/dee/a00008_1af93d0e51ba16309b00d132f9d082e195" prot="public" virt="non-virtual"><scope>MARCS</scope><name>updateMotors</name></member>
+      <member refid="d4/dee/a00008_1ad278d53fa6cd8d5aa3e4d426304f5599" prot="public" virt="non-virtual"><scope>MARCS</scope><name>validCom</name></member>
+      <member refid="d4/dee/a00008_1a549c5bee62879e34e9d21701730a2907" prot="private" virt="non-virtual"><scope>MARCS</scope><name>widget</name></member>
+      <member refid="d4/dee/a00008_1a98ca93f10581619f71df8f495b465cde" prot="private" virt="non-virtual"><scope>MARCS</scope><name>wpListAdd</name></member>
+      <member refid="d4/dee/a00008_1a5d3a9439b166172c9c871c9a723eac19" prot="private" virt="non-virtual"><scope>MARCS</scope><name>wpListOpen</name></member>
+      <member refid="d4/dee/a00008_1ad11e2550a13b49086c06cf1c1dbf0a45" prot="private" virt="non-virtual"><scope>MARCS</scope><name>wpListSave</name></member>
+      <member refid="d4/dee/a00008_1a63935eb4cae350a6d0c2eafc757d81a9" prot="public" virt="non-virtual"><scope>MARCS</scope><name>XbeeConnect</name></member>
+      <member refid="d4/dee/a00008_1ac3fe13950de410cff977e0fdee01ea0c" prot="public" virt="non-virtual"><scope>MARCS</scope><name>XbeeDisconnect</name></member>
+      <member refid="d4/dee/a00008_1a7b0ebe0223d450444ace06a39fb60237" prot="public" virt="non-virtual"><scope>MARCS</scope><name>~MARCS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

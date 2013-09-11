@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/da0/a00009">
+<title>mission class Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d61/a00031">&quot;mission.h&quot;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QList&lt; waypoint * &gt; myMission</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int n_mission</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3">mission</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/da0/a00009_1af9e7cd1856847fe227e5fbce8a7e4c73">mission</link> (
+int num)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="da/da0/a00009_1a98ca623d084c7cb213a3cf85614aa5d7">~mission</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="da/da0/a00009_1a5d06a1578648c9b23746188891b01aae">getNum</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; <link linkend="da/da0/a00009_1a4788e93bd0bed6d7fd53cff1840a7f5b">getWaypointList</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; <link linkend="da/da0/a00009_1af307fc09e3c8e4303ff16324d681213a">loadMission</link> (
+QString filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/da0/a00009_1a4c40423028a4cfdf1bbbea8945cb696b">saveMission</link> (
+QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; wpList, QString fileName)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/da0/a00009_1a378e572221c084c413a947adec25183b">saveMissionKml</link> (
+QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; wpList, QString fileName)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/da0/a00009_1a14c494edc171ceb9b2934855efa3d994">setNum</link> (
+int n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/da0/a00009_1a22c390047351019cdcf09e1f38b66784">setWaypointList</link> (
+QList&lt; <link linkend="d7/d7a/a00016">waypoint</link> * &gt; mission)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="da/da0/a00009_1a2bc38f229852fad59a5d3c1add1e3ea3">
+                <title>mission ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1af9e7cd1856847fe227e5fbce8a7e4c73">
+                <title>mission (int num)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a98ca623d084c7cb213a3cf85614aa5d7">
+                <title>~mission ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a5d06a1578648c9b23746188891b01aae">
+                <title>int getNum ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a4788e93bd0bed6d7fd53cff1840a7f5b">
+                <title>QList&lt; waypoint * &gt; getWaypointList ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1af307fc09e3c8e4303ff16324d681213a">
+                <title>QList&lt; waypoint * &gt; loadMission (QString filename)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a4c40423028a4cfdf1bbbea8945cb696b">
+                <title>void saveMission (QList&lt; waypoint * &gt; wpList, QString fileName)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a378e572221c084c413a947adec25183b">
+                <title>void saveMissionKml (QList&lt; waypoint * &gt; wpList, QString fileName)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a14c494edc171ceb9b2934855efa3d994">
+                <title>void setNum (int n)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="da/da0/a00009_1a22c390047351019cdcf09e1f38b66784">
+                <title>void setWaypointList (QList&lt; waypoint * &gt; mission)</title> <emphasis></emphasis>
+                
+            </section>
+</section>
